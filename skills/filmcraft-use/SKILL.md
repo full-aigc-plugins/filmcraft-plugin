@@ -44,3 +44,5 @@ python3 -I -B /mnt/skills/user/filmcraft-use/scripts/bootstrap.py
 本版本正在验证独立技能首次安装后的短片、音画、字幕、素材移动及单镜头修订；完整 Harness 和插件宿主验收仍在开发中。按测试证据陈述通过范围，不能将安装成功当作插件全功能验收。
 
 首次安装或复用遇到其他安装进程时有界等待，超时保持现状并报 runtime_install_busy。参见[安装并发合同](references/installation-concurrency.md)。
+
+开发版本 dev.2 随原生与导出交付[交换损失报告](references/exchange-loss.md)。阅读 lost/observed/unknown 和导出警告；不把扁平导出、SVG 结构或 PSD 图层计数称为无损原生替代。

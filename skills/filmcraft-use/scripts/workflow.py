@@ -15,6 +15,11 @@ import subprocess
 import tempfile
 
 TICKS = 254016000000
+def exchange_report(root,outputs,warnings):
+    spec=importlib.util.spec_from_file_location('craft_exchange_loss',Path(__file__).with_name('exchange_loss.py'))
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    module.write_report(root,outputs,warnings)
+
 ALLOWED = {'asset.import', 'timeline.place', 'timeline.trim', 'timeline.move',
            'timeline.setTrack', 'timeline.select', 'clip.replaceFromBin',
            'captions.newTrack', 'captions.setStyle', 'caption.add',
@@ -300,7 +305,8 @@ def execute(plan, output, runtime_home=None, source=None):
                 for name, value in [('plan.json', plan), ('native.json', precise(reopened)), ('captions.json', precise(captions)), ('export-probe.json', precise(exported)), ('operations.json', precise(receipts))]:
                     (output / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
                 (output / 'decode.txt').write_text(decoded)
-                manifest = {'schema': 'filmcraft-delivery/v1', 'sourceProjectSha256': source_hash, 'runtimeSha256': installed['binarySha256'], 'bindings': bindings, 'assets': assets, 'files': {p.name: sha(p) for p in output.iterdir() if p.is_file()}, 'acceptance': 'requires-domain-and-visual-review', 'relocation': 'Use workflow --source; hashes checked before native media.relink.'}
+                exchange_report(output,[f'frame-{index:04d}.png' for index,_ in enumerate(plan.get('frames',['0']))]+['film.mp4']+(['captions.srt'] if captions['tracks'] else []),{})
+                manifest = {'schema': 'filmcraft-delivery/v1', 'sourceProjectSha256': source_hash, 'runtimeSha256': installed['binarySha256'], 'bindings': bindings, 'assets': assets, 'files': {p.name: sha(p) for p in output.iterdir() if p.is_file()}, 'lossReport': {'path':'exchange-loss.json','sha256':sha(output/'exchange-loss.json')}, 'acceptance': 'requires-domain-and-visual-review', 'relocation': 'Use workflow --source; hashes checked before native media.relink.'}
                 (output / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
                 return manifest
             except BaseException as error:

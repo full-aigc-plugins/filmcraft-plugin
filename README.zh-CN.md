@@ -144,3 +144,13 @@ python3 -I -B skills/filmcraft-use/scripts/workflow.py --help
 ## CLI 与场景技能体系
 
 技能源包含 11 项可独立安装的技能，分为安装、CLI 公共操作与场景任务。[架构与清单](docs/FilmCraft-Skill-Suite-Architecture.zh_CN.md)。运行时与插件版本分别维护；旧宿主证据保持原版本范围。
+
+## 场景技能的干净首次使用
+
+八项 FilmCraft 场景技能均在 macOS arm64 通过独立首次安装与真实操作：只复制当前技能，从锁定公开地址安装到新运行时目录，核对原生修改、实际音频采样和渲染像素、原工程保留与未知命令拒绝。完整回归 31 项通过、零跳过。[证据](docs/evidence/task-skill-first-use.json)。该结果只覆盖列出的操作，全部命令、GUI 和创作最终验收仍未完成。
+
+```bash
+CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unittest discover -s tests -v
+```
+
+在独立 `filmcraft-skills` 仓库执行；真实测试另需 ffmpeg、ffprobe 与 Pillow。

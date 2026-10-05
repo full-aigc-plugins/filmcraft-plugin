@@ -144,3 +144,13 @@ The current development milestone adds hash-bound exchange loss reports to nativ
 ## CLI and task skill suite
 
 The source suite contains 11 independently installable skills with setup, public CLI operations and focused tasks. [Architecture and catalogue](docs/FilmCraft-Skill-Suite-Architecture.md). Runtime and plugin versions are separate; prior host evidence retains its original version scope.
+
+## Focused task skills: clean first use
+
+All eight FilmCraft task skills passed independent first-install operations on macOS arm64, with only that skill copied and a fresh runtime downloaded from its locked public URL. Assertions cover persisted native edits, actual audio samples and rendered pixels, original-project preservation, and rejected unknown commands. The full suite passed 31 tests with no skips. [Evidence](docs/evidence/task-skill-first-use.json). This verifies the listed operations, not every command, GUI or final creative acceptance.
+
+```bash
+CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unittest discover -s tests -v
+```
+
+Run this command in the independent `filmcraft-skills` repository; live tests require ffmpeg, ffprobe and Pillow.

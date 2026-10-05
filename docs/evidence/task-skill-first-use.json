@@ -1,0 +1,94 @@
+{
+  "schema": "craft-task-skill-first-use/v1",
+  "date": "2026-10-05",
+  "pluginId": "filmcraft",
+  "platform": "darwin-arm64",
+  "runtimeVersion": "0.2.0",
+  "skillSourceRef": "v0.1.0-dev.3",
+  "skillSourceSha": "69519f1808d4be781f166899683315422e696fe8",
+  "result": "passed",
+  "taskSkills": [
+    {
+      "skill": "filmcraft-cli-project",
+      "skillSha256": "542622f1d23e30fafd3b1d27b829032c5db4380c66d2e4b669727b3fa0449b7c",
+      "result": "passed",
+      "oracle": "create and reopen native sequence and bin",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "skillSha256": "f1e03a19c8e142eb360964df16eff5bd7e57ba5aacf208bc9c55d894e304b13a",
+      "result": "passed",
+      "oracle": "probe and import existing H.264 footage without changing timeline",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "skillSha256": "e2fe5db83a3569ba31b61356a3a893050a2323e3546151cce5b1d12b5cec8e0d",
+      "result": "passed",
+      "oracle": "razor at one second, preserve audio and total duration; unknown command cannot save a project",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "skillSha256": "59d06298b23647cbbd113d73bf93a4e8a6a32cc27bfae5bf73d1ad934bc2a352",
+      "result": "passed",
+      "oracle": "persist -6 dB track gain, decode actual WAV samples, preserve video tracks",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "skillSha256": "080113bef6b530dfe2c5212fe89e792d17b6b02d40133be3af062cb8a79c8bcf",
+      "result": "passed",
+      "oracle": "persist edited text and original timing, export SRT, preserve video tracks",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "skillSha256": "12231f76dbfbd1ca405d7c3fdfec462a44a196b8a0d5d5f39c319c760586dad1",
+      "result": "passed",
+      "oracle": "custom LUT rendered after source removal and with an empty data library",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "skillSha256": "5cb460edb4a7c7e3ad6871e766fb300cc3856aa4bde704523d48d5b4e235b2df",
+      "result": "passed",
+      "oracle": "persist two position keyframes and verify different rendered frames",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "skillSha256": "dd186f56d1604c1fadf6b68fef309f78183b67a89741661563c4dbf6633f7cc3",
+      "result": "passed",
+      "oracle": "native H.264 with 24 decoded frames and audio, PNG preview and OTIO exchange",
+      "installation": "only this skill copied; fresh runtime; default public archive URL; no global CLI PATH"
+    }
+  ],
+  "regression": {
+    "tests": 31,
+    "passed": 31,
+    "skipped": 0,
+    "seconds": 71.739,
+    "flags": [
+      "CRAFT_TASK_FIRST_USE=1",
+      "CRAFT_LIVE_TEST=1",
+      "CRAFT_LIVE_SUITE=1"
+    ]
+  },
+  "testFile": "tests/test_task_skill_first_use.py",
+  "testRepository": "https://github.com/full-aigc-skills/filmcraft-skills",
+  "scope": "Eight focused task skills, one native operation family per skill; existing native workflow and isolated CLI suite also executed",
+  "harnessCorrections": [
+    "Compare native integer time fields against a native CLI baseline, not decimal-string delivery JSON",
+    "Read video probe dimensions from the video object",
+    "Save-as updates the native project name from its filename"
+  ],
+  "limits": [
+    "not every command or parameter combination executed",
+    "synthetic fixture media; not final creative review",
+    "model dispatch and GUI unverified",
+    "other four plugin task families require their own focused first-use acceptance"
+  ],
+  "testFileSha256": "7fb221d22235428e2da2add4283ea5f4505c3ffaef19c70a3d5029ca84c6635a"
+}

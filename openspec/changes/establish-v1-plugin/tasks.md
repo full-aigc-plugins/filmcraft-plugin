@@ -16,6 +16,8 @@
 - [x] 1.8 [FC-SK-003] 实现 CLI/安装/领域场景技能和自包含公开调用入口；更新双语清单与插件来源锁。责任：Skills owner；前置：1.7；产物：独立技能源、固定标签与内置快照。
 - [x] 1.9 [FC-SK-003] 验证每个单独技能的 CLI 发现与原生代表任务、旧入口回归及插件技能发现。责任：QA owner；前置：1.8；产物：docs/evidence/skill-suite.json；明确未执行的创作/GUI 场景。
 
+- [x] 1.10 [FC-SK-003] 逐项执行八类场景技能的独立首次安装及真实操作，验证保存重开、像素/音频、原工程保留与未知命令拒绝；产物：docs/evidence/task-skill-first-use.json、独立技能源 tests/test_task_skill_first_use.py；完整回归 31 项、零跳过。
+
 ## 2. runtime-distribution
 
 - [x] 2.1 [FC-RT-001] 编写能暴露“运行时来源与完整性”缺失的正向与失败测试并确认预期失败。责任：Runtime owner；前置：技能/运行时合同已确定；业务调用依赖对应适配器。产物：fixture、断言及失败日志；验证：失败原因必须是目标行为缺失。

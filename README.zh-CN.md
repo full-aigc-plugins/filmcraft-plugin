@@ -162,3 +162,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 当前固定发布的宿主核验（2026-10-06）：Codex 0.153.4 安装五个当前固定插件，加载全部 58 技能并逐项核对内容身份。本插件代表性原生工作流从实际安装路径调用，在新的原生运行时中完成创建、重开和修订检查；五工作流调用后，全部 58 个技能摘要保持不变。[证据](docs/evidence/codex-current-release-20261006.json)。显式标签生成器由 ArtCraft 统一持有。模型派发等待授权，GUI、创作与完整宿主验收仍未完成；本次 QA 维护不改变已发布技能/运行时内容或标签。
 
 开发版 dev.6 固定内置 FilmCraft 技能 dev.5（d7773c802a227368e0d0e2c02534bace21bc097f）。维护版原生 CLI 0.2.0-craft.1 修复字幕字体渲染，工作流显式开启成片烧录。公开地址单技能首次安装、中文字幕与真实配音验收通过；源码完整回归 44 项全部通过，无跳过。[证据](docs/evidence/chinese-first-use.json)。当前版本宿主发现、GUI/模型分发及 ArtCraft 新捆绑包仍需另行验收。
+
+当前固定发布矩阵（FilmCraft dev.6、EffectCraft dev.7、PhotoCraft dev.6、VectorCraft dev.6、ArtCraft dev.17）在隔离 Codex 安装后通过 58 技能发现及原生代表工作流；执行后所有技能摘要保持不变。[宿主安装内容的原生验证](docs/evidence/codex-release17-native-20261006.json)。此证据不代表模型调度、GUI 或完整创作验收。

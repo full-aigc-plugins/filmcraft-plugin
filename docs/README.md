@@ -37,3 +37,5 @@ OpenSpec is the sole behavioral authority; this documentation provides explanati
 
 
 [Domain technical design](FilmCraft-Domain-Design.md)
+
+[Current host verification / 当前宿主验证](FilmCraft-Host-Verification-Architecture.md)

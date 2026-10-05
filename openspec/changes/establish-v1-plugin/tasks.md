@@ -20,6 +20,8 @@
 - [x] 1.11 [FC-SK-003] 修正全部技能为真实加载目录调用，执行三种安装布局及含空格路径的隔离入口回归；产物：docs/evidence/installed-skill-paths.json、独立技能源 tests/test_installed_paths.py。此检查不替代完整创作验收。
 - [x] 1.12 [FC-SK-001] 修复本地来源覆盖读取工作树而非固定标签的漂移，验证脏文件保留、缓存排除和公开来源摘要一致；产物：tests/test_skill_vendor.py、docs/evidence/installed-skill-paths.json。
 
+- [x] 1.13 [FC-SK-003] 从实际固定插件 dev.6／技能源 dev.5 的安装快照逐项复制八类场景技能，以各自全新运行时缓存公开安装维护版 CLI 0.2.0-craft.1，复验原生重开、轨道保护、音频采样、字幕、LUT、动画和输出，并核对全部安装摘要不变；历史 0.2.0 证据保留。
+
 ## 2. runtime-distribution
 
 - [x] 2.1 [FC-RT-001] 编写能暴露“运行时来源与完整性”缺失的正向与失败测试并确认预期失败。责任：Runtime owner；前置：技能/运行时合同已确定；业务调用依赖对应适配器。产物：fixture、断言及失败日志；验证：失败原因必须是目标行为缺失。

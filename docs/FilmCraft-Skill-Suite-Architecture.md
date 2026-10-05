@@ -1,6 +1,6 @@
 # FilmCraft Skill Suite Architecture
 
-> Updated: 2026-10-05. Skill development version: 0.1.0-dev.4; plugin version: 0.1.0-dev.5; native/orchestration runtime: 0.2.0. Target behavior is owned by the existing OpenSpec change.
+> Updated: 2026-10-06. Current skill source: dev.5; plugin snapshot: dev.6; native runtime: 0.2.0-craft.1. Historical test checkpoints below retain their original versions. Target behavior is owned by the existing OpenSpec change.
 
 ## 1. Why a suite
 
@@ -60,3 +60,7 @@ CRAFT_LIVE_SUITE=1 python3 -B -m unittest discover -s tests -p test_skill_suite.
 ```
 
 Install one skill with `npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`; invoke its actual absolute directory, not a sibling path. Plugin packaging must bind the complete suite to a fixed source tag, commit and per-skill digest. Former tags remain immutable, and existing use/workflow payloads stay compatible.
+
+## Current maintained runtime installed-scene verification
+
+Plugin dev.6 / skill source dev.5 now have separate evidence for maintained CLI 0.2.0-craft.1: all eight project, media, timeline, audio, subtitle, color, motion and export scenes pass (43.688 seconds). Each actual installed task skill is copied alone with its own fresh public-download runtime and system-only subprocess PATH. The base project is generated separately by the installed use skill and is preserved. Native assertions include reopens, unchanged tracks, decoded gain, caption timing, embedded LUT after source removal, keyframe pixels and video/interchange export. The report binds installed skill hashes, the test driver, generated input/project fingerprints, native binary and output fingerprints. All 58 installed skill hashes remain unchanged. Default regression has 32 passes and 12 gated skips among 44 tests; it does not replace the eight native cases. Historical 0.2.0 proof remains valid only for its original version. [Evidence](evidence/maintained-runtime-task-first-use.json). No skill bytes, native release or plugin version changed for this QA increment; creative, model and actual generic installer gates remain open.

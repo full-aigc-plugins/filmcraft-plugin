@@ -164,3 +164,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 开发版 dev.6 固定内置 FilmCraft 技能 dev.5（d7773c802a227368e0d0e2c02534bace21bc097f）。维护版原生 CLI 0.2.0-craft.1 修复字幕字体渲染，工作流显式开启成片烧录。公开地址单技能首次安装、中文字幕与真实配音验收通过；源码完整回归 44 项全部通过，无跳过。[证据](docs/evidence/chinese-first-use.json)。当前版本宿主发现、GUI/模型分发及 ArtCraft 新捆绑包仍需另行验收。
 
 当前固定发布矩阵（FilmCraft dev.6、EffectCraft dev.7、PhotoCraft dev.6、VectorCraft dev.6、ArtCraft dev.17）在隔离 Codex 安装后通过 58 技能发现及原生代表工作流；执行后所有技能摘要保持不变。[宿主安装内容的原生验证](docs/evidence/codex-release17-native-20261006.json)。此证据不代表模型调度、GUI 或完整创作验收。
+
+当前实际安装的插件 dev.6／技能 dev.5 使用维护版 CLI 0.2.0-craft.1，八类独立场景冷启动全部通过（43.688 秒）。已记录输入、输出、测试驱动和原生摘要，全部 58 个安装摘要不变；补齐旧 0.2.0 场景证据的版本缺口，发行版字节不变。[证据](docs/evidence/maintained-runtime-task-first-use.json)。

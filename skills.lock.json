@@ -21,7 +21,7 @@
       ],
       "dest": "skills/",
       "sha256": {
-        "filmcraft-use": "bbae684d416ac9cbebfe0b568149ad7bc4809a0f0293b1400aab23fc615702a5",
+        "filmcraft-use": "444d765a8504aeeba76118e160cd9909a193272ad9ac38fe15b48931d4211fd7",
         "filmcraft-cli": "18bdfe95e0ac8593d7db5516b2e9a4ce222ebcf4f852e8a3fdb5233e3f9f6355",
         "filmcraft-cli-setup": "9f94ded1f8466e8cc019aa53a148c78ab7b86c618ecb7761e69b4492a7f2e7dc",
         "filmcraft-cli-project": "901d00947f7e5877ee0d18729e416f862f384b0f0e2e1e0231c3134a1f41dd28",

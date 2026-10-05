@@ -1,0 +1,49 @@
+{
+  "schema": "craft-documentation-evidence/v1",
+  "observedAt": "2026-10-05T07:37:55.385823+00:00",
+  "platform": "darwin-arm64",
+  "scope": "Installed upstream CLI and headless MCP smoke checks only; not plugin or creative workflow acceptance",
+  "runtimes": [
+    {
+      "name": "filmcraft",
+      "identity": {
+        "name": "filmcraft",
+        "version": "0.2.0",
+        "url": "https://github.com/storytold/filmcraft/releases/download/v0.2.0/filmcraft-cli-0.2.0-macos-universal.zip",
+        "archiveSha256": "3d55ff76e5c0989d8cde4ad4b7662d7164d3719850fba75fbf58d1cef1e1f797",
+        "platform": "darwin-arm64",
+        "binarySha256": "bf82f3d0afab65e5de92a57a8b730606ca5a64126676c33dd39862df44ae00d4",
+        "source": "official-github-release"
+      },
+      "versionOutput": "filmcraft-cli 0.2.0",
+      "initializePassed": true,
+      "toolCount": 14,
+      "tools": [
+        "command_list",
+        "command_run",
+        "media_import",
+        "project_inspect",
+        "render_frame",
+        "sequence_inspect",
+        "ui_click",
+        "ui_control",
+        "ui_drag",
+        "ui_elements",
+        "ui_inspect",
+        "ui_key",
+        "ui_screenshot",
+        "ui_type"
+      ],
+      "readOnlyToolCall": "project_inspect",
+      "readOnlyCallPassed": true
+    }
+  ],
+  "notVerified": [
+    "native-project-roundtrip",
+    "render-fidelity",
+    "host-plugin-installation",
+    "desktop-bridge",
+    "other-platforms",
+    "cross-plugin-orchestration"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "craft-runtime-lock/v1",
+  "artifact": "filmcraft-cli",
+  "resolvedVersion": "0.2.0",
+  "releaseRef": "v0.2.0",
+  "repository": "https://github.com/storytold/filmcraft",
+  "artifacts": {
+    "darwin-arm64": {
+      "url": "https://github.com/storytold/filmcraft/releases/download/v0.2.0/filmcraft-cli-0.2.0-macos-universal.zip",
+      "archiveSha256": "3d55ff76e5c0989d8cde4ad4b7662d7164d3719850fba75fbf58d1cef1e1f797",
+      "binarySha256": "bf82f3d0afab65e5de92a57a8b730606ca5a64126676c33dd39862df44ae00d4",
+      "evidenceScope": "headless MCP smoke only"
+    }
+  },
+  "supportedPluginWorkflows": []
+}

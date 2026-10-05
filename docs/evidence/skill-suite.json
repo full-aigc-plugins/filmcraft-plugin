@@ -26,10 +26,26 @@
     "passed": 1,
     "seconds": 6.389
   },
-  "hostDiscovery": "pending fixed release verification",
+  "hostDiscovery": {
+    "result": "passed",
+    "versions": [
+      "0.147.0",
+      "0.153.4"
+    ],
+    "suiteSkills": 58,
+    "pluginSkills": 11,
+    "loadingErrors": 0,
+    "evidence": "codex-skill-suite.json"
+  },
   "limits": [
     "not all individual command IDs executed",
     "model task dispatch and GUI remain unverified",
     "creative final acceptance and full interchange fidelity remain open"
-  ]
+  ],
+  "installedTaskWorkflow": {
+    "pluginId": "filmcraft",
+    "skill": "filmcraft-cli-timeline",
+    "result": "passed",
+    "testOutput": "test_editable_short_film_relocation_and_one_shot_revision (test_native_workflow.NativeWorkflowTests.test_editable_short_film_relocation_and_one_shot_revision) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 8.724s\n\nOK"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "status": "implementation-in-progress",
+  "status": "published-and-vendored",
   "package": "filmcraft-skills",
   "proposedRepository": "https://github.com/full-aigc-skills/filmcraft-skills",
   "skills": [
@@ -17,5 +17,7 @@
   ],
   "sourceOfTruth": "independent skills repository",
   "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums",
-  "suiteManifest": "https://github.com/full-aigc-skills/filmcraft-skills/blob/main/skill-suite.json"
+  "suiteManifest": "https://github.com/full-aigc-skills/filmcraft-skills/blob/main/skill-suite.json",
+  "sourceRef": "v0.1.0-dev.3",
+  "sourceSha": "69519f1808d4be781f166899683315422e696fe8"
 }

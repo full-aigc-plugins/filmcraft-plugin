@@ -4,14 +4,14 @@
     {
       "package": "filmcraft-skills",
       "repo": "https://github.com/full-aigc-skills/filmcraft-skills.git",
-      "ref": "v0.1.0-dev.0",
-      "sha": "e60421c95a8a1001841611e311e0dc121ef432f4",
+      "ref": "v0.1.0-dev.1",
+      "sha": "6cc10e69d419983c6383a35358c0e169a222dde7",
       "skills": [
         "filmcraft-use"
       ],
       "dest": "skills/",
       "sha256": {
-        "filmcraft-use": "ba823c90978b9965a01ab46f1e8f8f9fddbab2a5816ea52d1618ef3107cad7a8"
+        "filmcraft-use": "90171ab7a11f6cbdae423b54a02690932c053a317c0c3ed533b1bf439b869d47"
       }
     }
   ]

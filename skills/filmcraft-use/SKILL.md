@@ -42,3 +42,5 @@ python3 -I -B /mnt/skills/user/filmcraft-use/scripts/bootstrap.py
 仅修改用户指定镜头或参数。记录编辑前后的工程摘要与对象 ID；若用户同时修改工程，重新检查而非覆盖。超时不能证明副作用未发生，先检查原工程、导出文件或原任务，不盲目重新提交。保留原生工程和失败证据，明确未完成项。
 
 本版本正在验证独立技能首次安装后的短片、音画、字幕、素材移动及单镜头修订；完整 Harness 和插件宿主验收仍在开发中。按测试证据陈述通过范围，不能将安装成功当作插件全功能验收。
+
+首次安装或复用遇到其他安装进程时有界等待，超时保持现状并报 runtime_install_busy。参见[安装并发合同](references/installation-concurrency.md)。

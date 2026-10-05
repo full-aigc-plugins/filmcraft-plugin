@@ -1,0 +1,28 @@
+{
+  "observedAt": "2026-10-05",
+  "platform": "darwin-arm64",
+  "command": "CRAFT_LIVE_TEST=1 python3 -m unittest discover -s tests -v",
+  "exitCode": 0,
+  "testCount": 8,
+  "unitTestCount": 7,
+  "liveTestCount": 1,
+  "resultTail": "ok\n\n----------------------------------------------------------------------\nRan 8 tests in 13.322s\n\nOK\n",
+  "redPhase": "Initial bootstrap module absent: FileNotFoundError. Pinned version metadata regression: runtime_version_mismatch before fix.",
+  "scope": "Single isolated skill installation, native project save/reopen and caption persistence only",
+  "notVerified": [
+    "full-domain-workflow",
+    "plugin-host-installation",
+    "cross-plugin-orchestration",
+    "other-platforms"
+  ],
+  "sourcePackage": "filmcraft-skills",
+  "sourceHashes": {
+    "README.md": "0035865481b47a7ef1d8454f897989464fe6431444ff33cc98e3c1796e063706",
+    "README.zh-CN.md": "0a2e78356b1e343b2aa6fafc44428f13fbd1d9074f6a9c7cfb4b8dfcdab65299",
+    "tests/test_first_use.py": "463939b3b4a94a12fcf52e4220c6d82717622846738b7e2e5a5ebaf3663ae602",
+    "tests/test_bootstrap.py": "f34cdb1e75663141b7810c48083adf6a13f87cb42090c15a7e67abf5a478df21",
+    "skills/filmcraft-use/SKILL.md": "58401edef1b1f6c3135bc4625413108ae53097dd6b60c38b2d627c89493c6256",
+    "skills/filmcraft-use/scripts/bootstrap.py": "1c0867a919a7b81d0b971f817ba5287742c0e602cdd0b33377c65840963b856b",
+    "skills/filmcraft-use/scripts/runtime.lock.json": "92aa2ac6fbe89c57b141b112743581a6e26aabfab69f57717eccc04afad17401"
+  }
+}

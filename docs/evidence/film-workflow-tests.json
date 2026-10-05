@@ -1,0 +1,48 @@
+{
+  "observedAt": "2026-10-05",
+  "platform": "darwin-arm64",
+  "command": "CRAFT_LIVE_TEST=1 /opt/anaconda3/bin/python3 -m unittest discover -s full-aigc-skills-repositories/filmcraft-skills/tests -v",
+  "exitCode": 0,
+  "testCount": 14,
+  "resultTail": "trap.BootstrapTests.test_pinned_build_metadata_is_accepted) ... ok\ntest_symlink_archive_rejected (test_bootstrap.BootstrapTests.test_symlink_archive_rejected) ... ok\ntest_tampered_installed_binary_is_not_overwritten (test_bootstrap.BootstrapTests.test_tampered_installed_binary_is_not_overwritten) ... ok\ntest_traversal_rejected_before_extract (test_bootstrap.BootstrapTests.test_traversal_rejected_before_extract) ... ok\ntest_unknown_platform_fails_without_download (test_bootstrap.BootstrapTests.test_unknown_platform_fails_without_download) ... ok\ntest_isolated_skill_install_save_reopen_and_reuse (test_first_use.FirstUseTests.test_isolated_skill_install_save_reopen_and_reuse) ... ok\ntest_editable_short_film_relocation_and_one_shot_revision (test_native_workflow.NativeWorkflowTests.test_editable_short_film_relocation_and_one_shot_revision) ... ok\ntest_duplicate_alias_rejected (test_workflow.WorkflowTests.test_duplicate_alias_rejected) ... ok\ntest_revision_output_preserves_existing_directory (test_workflow.WorkflowTests.test_revision_output_preserves_existing_directory) ... ok\ntest_side_effect_command_rejected (test_workflow.WorkflowTests.test_side_effect_command_rejected) ... ok\ntest_ticks_are_decimal_strings (test_workflow.WorkflowTests.test_ticks_are_decimal_strings) ... ok\ntest_unresolved_reference_rejected (test_workflow.WorkflowTests.test_unresolved_reference_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 14.281s\n\nOK\n",
+  "scope": [
+    "isolated single-skill clean runtime automatic installation",
+    "native media import and collection",
+    "exact tick strings and rational sequence timebase",
+    "native project save and reopen",
+    "two independent video clips and voice track",
+    "caption style, time, SRT and preview pixels",
+    "H264 decode dimensions/rate/24 frames",
+    "audio onset within one-frame tolerance",
+    "delivery moved and original inputs deleted before relinking",
+    "replace one shot while other shot, captions and audio remain unchanged",
+    "invalid hash, stale revision, missing font, source bounds and caption bounds rejected"
+  ],
+  "redPhase": "workflow module absent; initial live revision failed until native timeline and project selection were explicitly set; session selection excluded from persisted-content comparison.",
+  "notVerified": [
+    "full Harness ledger and recovery state machine",
+    "plugin host installation",
+    "GUI auto-relink",
+    "broader export formats",
+    "creative visual acceptance",
+    "other platforms"
+  ],
+  "sourcePackage": "filmcraft-skills",
+  "sourceHashes": {
+    ".gitignore": "60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672",
+    "LICENSE": "f51b5b32a3b7c3df50ef7153f4dd46233221574f07384d2cf99c6fae08c59f03",
+    "README.md": "84fc4540106b070e0d10b51a28ad595774b66632620612dbc56130357475b9d9",
+    "README.zh-CN.md": "27aecbdcab0804a2d6b76a29a7f64815b5122d72495ca1aacd31b87f04c9364a",
+    "skills/filmcraft-use/SKILL.md": "0a598fbcc4b0dd3f67fa612fb29fd7be752f6729e227b955fab4313175608d07",
+    "skills/filmcraft-use/examples/short-film.json": "01ceb137983bde7be8c1a9eac9fbdce9f4f49ec58c59b9ace8acedd7307c0223",
+    "skills/filmcraft-use/references/workflow.md": "602ff957ad0b96435e7644e63a8ee2e7e15eaa13c51c60d99e9185ea2095a02b",
+    "skills/filmcraft-use/scripts/bootstrap.py": "1c0867a919a7b81d0b971f817ba5287742c0e602cdd0b33377c65840963b856b",
+    "skills/filmcraft-use/scripts/mcp_session.py": "2f1e6de76d1fe12917933f4967a40c827ba80994a8441e47cb68f212b00160a4",
+    "skills/filmcraft-use/scripts/runtime.lock.json": "92aa2ac6fbe89c57b141b112743581a6e26aabfab69f57717eccc04afad17401",
+    "skills/filmcraft-use/scripts/workflow.py": "4a4606c7f41be21781c58f0282bf144cf13c258ccbd7a1b421c4bcbf909ce668",
+    "tests/test_bootstrap.py": "f34cdb1e75663141b7810c48083adf6a13f87cb42090c15a7e67abf5a478df21",
+    "tests/test_first_use.py": "463939b3b4a94a12fcf52e4220c6d82717622846738b7e2e5a5ebaf3663ae602",
+    "tests/test_native_workflow.py": "07667b8c51dd2e1b108ac5827db4b778782c60b2d0792e675a09b3406bacfacb",
+    "tests/test_workflow.py": "cc170985f866c285f4a91a3901bbb5e6c2ab99fc999846ba20ebb9f323191e21"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "craft-development-publication/v1",
+  "observedAt": "2026-10-05T11:41:49.204736+00:00",
+  "status": "development-prerelease",
+  "sources": [
+    {
+      "package": "filmcraft-skills",
+      "repo": "https://github.com/full-aigc-skills/filmcraft-skills.git",
+      "ref": "v0.1.0-dev.0",
+      "sha": "e60421c95a8a1001841611e311e0dc121ef432f4",
+      "skills": [
+        "filmcraft-use"
+      ],
+      "dest": "skills/",
+      "sha256": {
+        "filmcraft-use": "ba823c90978b9965a01ab46f1e8f8f9fddbab2a5816ea52d1618ef3107cad7a8"
+      }
+    }
+  ],
+  "checks": {
+    "vendorUnitTests": {
+      "passed": 3,
+      "command": "python3 -B -m unittest discover -s tests -p test_skill_vendor.py"
+    },
+    "vendorOnlineCheck": {
+      "result": "passed",
+      "command": "python3 -B scripts/vendor/skill_vendor.py check"
+    }
+  },
+  "excludedEvidence": [
+    "plugin-host installation",
+    "GUI acceptance",
+    "full domain coverage",
+    "creative quality",
+    "production release"
+  ]
+}

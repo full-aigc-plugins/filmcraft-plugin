@@ -4,7 +4,9 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-> 当前是文档与 OpenSpec 规格基线，不是可安装的功能版本。插件功能和技能包尚未实现或发布。
+> 当前已进入实施阶段，尚未完成可安装插件版本的验收；独立技能与运行时集成正在开发。
+
+独立技能包已进入实施，单技能隔离安装已在 macOS arm64 实测；完整创作流程与插件宿主验收仍未完成。[证据](docs/evidence/bootstrap-tests.json)
 
 ## 定位
 
@@ -16,8 +18,8 @@
 
 ```text
 Intent + assets
-  -> independent Skills (planned)
-  -> plugin Harness (planned)
+  -> independent Skills (pinned development release)
+  -> public skill workflow / ArtCraft adapter
   -> verified runtime / child adapter
   -> native project + preview + export + evidence
 ```
@@ -25,8 +27,8 @@ Intent + assets
 | :--- | :--- |
 | Plugin ID | filmcraft |
 | Metadata version | 0.1.0-dev.0 |
-| Stage | documentation-baseline |
-| Skills source | filmcraft-skills (planned) |
+| Stage | implementation-in-progress |
+| Skills source | filmcraft-skills / v0.1.0-dev.0 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | NOT_RUN |
 | License | Apache-2.0 (original repository content) |
@@ -36,12 +38,12 @@ Intent + assets
 
 | 能力 | 行为边界 | 状态 |
 | :--- | :--- | :--- |
-| 素材导入与关联 | 登记视频、图片和音频的哈希、流信息、时长与引用，导入前检查缺失文件；素材移动后以哈希验证重关联。 | 计划中 |
-| 精确时间线编排 | 使用整数 ticks 与有理数时间基准记录入出点、轨道和片段顺序；JSON 中的大整数使用十进制字符串；拒绝越界片段。 | 计划中 |
-| 音画与配音组织 | 保持配音、音乐、原始音轨的独立身份与增益；验证输出音轨存在及同步；没有授权时不生成或上传声音。 | 计划中 |
-| 字幕时间与版式 | 保存字幕文本、语言、起止时间及样式；拒绝时间越界；缺少字体时报告替代影响，不悄悄更换。 | 计划中 |
-| 工程保存与局部修订 | 保存 .fcproj、重新打开并核对时间线；根据稳定片段 ID 修改单镜头，保留其他轨道与素材引用。 | 计划中 |
-| 预览与正式输出 | 区分代理预览与原生导出；正式输出必须解码验证尺寸、帧率、时长和音轨；不把 FFmpeg 替代输出标为原生导出。 | 计划中 |
+| 素材导入与关联 | 登记视频、图片和音频的哈希、流信息、时长与引用，导入前检查缺失文件；素材移动后以哈希验证重关联。 | 待完整验收 |
+| 精确时间线编排 | 使用整数 ticks 与有理数时间基准记录入出点、轨道和片段顺序；JSON 中的大整数使用十进制字符串；拒绝越界片段。 | 待完整验收 |
+| 音画与配音组织 | 保持配音、音乐、原始音轨的独立身份与增益；验证输出音轨存在及同步；没有授权时不生成或上传声音。 | 待完整验收 |
+| 字幕时间与版式 | 保存字幕文本、语言、起止时间及样式；拒绝时间越界；缺少字体时报告替代影响，不悄悄更换。 | 待完整验收 |
+| 工程保存与局部修订 | 保存 .fcproj、重新打开并核对时间线；根据稳定片段 ID 修改单镜头，保留其他轨道与素材引用。 | 待完整验收 |
+| 预览与正式输出 | 区分代理预览与原生导出；正式输出必须解码验证尺寸、帧率、时长和音轨；不把 FFmpeg 替代输出标为原生导出。 | 待完整验收 |
 
 不重写上游编辑引擎，不暗中改变原生交付格式，不宣称 GUI 或跨平台验收完成。
 
@@ -70,11 +72,11 @@ openspec validate establish-v1-plugin --strict --no-interactive
 filmcraft-cli --version
 ```
 
-本次记录结果为 0.2.0。插件 setup、技能安装命令与宿主安装说明将在对应任务完成后发布，当前不提供虚构的安装入口。
+本次记录结果为 0.2.0。独立技能的 bootstrap 与 workflow 是当前开发版入口；插件宿主安装仍待验收。
 
 ## 配置与运行时
 
-目标配置包含 CLI 路径、允许读写根目录、运行模式、预算、超时与输出目录；配置 schema 尚待实现。技能锁文件 sources 为空，避免误报技能已发布。运行时锁文件中的摘要来自真实官方制品，只证明已记录平台的基础运行。
+目标配置包含 CLI 路径、允许读写根目录、运行模式、预算、超时与输出目录；配置 schema 尚待实现。技能锁文件固定已发布的独立技能源提交与内容摘要。运行时锁文件中的摘要来自真实官方制品，只证明已记录平台的基础运行。
 
 ## 可靠性与安全
 
@@ -87,8 +89,8 @@ filmcraft-cli --version
 | 层面 | 状态 |
 | :--- | :--- |
 | 上游 CLI 与只读 MCP | 已观察，仅 macOS arm64 |
-| 业务技能与插件 Harness | PLANNED |
-| 原生工程与创作验收 | NOT_RUN |
+| 独立技能与适配器 | 技术工作流已验证；完整 Harness 待完成 |
+| 原生工程与创作验收 | 原生技术用例通过；创作质量待验收 |
 | 目标宿主安装 | NOT_RUN |
 
 
@@ -109,3 +111,18 @@ filmcraft-cli --version
 原创内容遵循 [Apache-2.0](LICENSE)。这是第三方集成规划，不代表上游背书。四款应用的代码许可与 ArtCraft/Services 的受限许可分别处理；不复制上游 ArtCraft/Services 代码或品牌资产。
 
 [Upstream FilmCraft](https://github.com/storytold/filmcraft) · [Issues](https://github.com/full-aigc-plugins/filmcraft-plugin/issues)
+
+独立技能已通过原生短片工作流验证：隔离首次安装、工程重开、素材收集、音频与字幕，以及交付目录移动后的单镜头修订（14 项测试）。参见[运行证据](docs/evidence/film-workflow-tests.json)。完整 Harness、插件宿主和创意验收仍未完成。
+
+独立技能现已绑定已发布的开发标签 `v0.1.0-dev.0`，`skills.lock.json` 固定来源提交与整个技能摘要。使用 `python3 scripts/vendor/skill_vendor.py check` 核对。技能源快照发布不代表宿主验收或生产完成。
+
+## 开发版独立技能安装与使用
+
+安装独立技能：`npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-use`。安装技能后，从其真实目录运行公开入口；插件快照也包含相同技能。
+
+```bash
+python3 -I -B skills/filmcraft-use/scripts/bootstrap.py
+python3 -I -B skills/filmcraft-use/scripts/workflow.py --help
+```
+
+首次入口会安装锁定官方 CLI 到用户数据目录；要求 macOS arm64 与 Python 3.11+。使用技能内示例计划并提供真实素材；交付与修订合同见技能的 SKILL.md。[来源与校验证据](docs/evidence/skill-publication.json)。

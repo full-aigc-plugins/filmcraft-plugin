@@ -4,7 +4,9 @@ Independent-skills-driven Editable video editing and audiovisual assembly.
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-> This is a documentation and OpenSpec baseline, not an installable functional release. Plugin behavior and skill packages are not implemented or published.
+> Implementation is in progress. This is not yet a validated, installable plugin release; independent skills and runtime integration are being developed.
+
+Implementation has started in the independent skills package. The isolated first-use installer is tested on macOS arm64; complete creative workflows and plugin host acceptance remain pending. [Evidence](docs/evidence/bootstrap-tests.json)
 
 ## Positioning
 
@@ -16,8 +18,8 @@ For creators who need editable native projects, repeatable revisions and reliabl
 
 ```text
 Intent + assets
-  -> independent Skills (planned)
-  -> plugin Harness (planned)
+  -> independent Skills (pinned development release)
+  -> public skill workflow / ArtCraft adapter
   -> verified runtime / child adapter
   -> native project + preview + export + evidence
 ```
@@ -25,8 +27,8 @@ Intent + assets
 | :--- | :--- |
 | Plugin ID | filmcraft |
 | Metadata version | 0.1.0-dev.0 |
-| Stage | documentation-baseline |
-| Skills source | filmcraft-skills (planned) |
+| Stage | implementation-in-progress |
+| Skills source | filmcraft-skills / v0.1.0-dev.0 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | NOT_RUN |
 | License | Apache-2.0 (original repository content) |
@@ -36,12 +38,12 @@ Intent + assets
 
 | Capability | Behavioral boundary | Status |
 | :--- | :--- | :--- |
-| Media import and relinking | Register hashes, streams, duration and references for video, images and audio; detect missing files before import and verify hashes when relinking moved assets. | Planned |
-| Exact timeline assembly | Represent in/out points, tracks and ordering with integer ticks and rational timebases; serialize large integers as decimal strings and reject out-of-range clips. | Planned |
-| Audio and voice-over assembly | Preserve separate identities and gains for voice-over, music and source audio; verify output audio and sync; do not synthesize or upload voices without authorization. | Planned |
-| Caption timing and layout | Preserve caption text, language, time ranges and style; reject invalid timing and report font substitution impacts instead of changing fonts silently. | Planned |
-| Project round-trip and local revision | Save and reopen .fcproj, inspect the timeline and revise one shot by stable clip ID without changing other tracks or asset references. | Planned |
-| Preview and final output | Separate proxy preview from native export; decode final outputs and verify dimensions, frame rate, duration and audio; never label an FFmpeg substitute as native export. | Planned |
+| Media import and relinking | Register hashes, streams, duration and references for video, images and audio; detect missing files before import and verify hashes when relinking moved assets. | Full scope pending |
+| Exact timeline assembly | Represent in/out points, tracks and ordering with integer ticks and rational timebases; serialize large integers as decimal strings and reject out-of-range clips. | Full scope pending |
+| Audio and voice-over assembly | Preserve separate identities and gains for voice-over, music and source audio; verify output audio and sync; do not synthesize or upload voices without authorization. | Full scope pending |
+| Caption timing and layout | Preserve caption text, language, time ranges and style; reject invalid timing and report font substitution impacts instead of changing fonts silently. | Full scope pending |
+| Project round-trip and local revision | Save and reopen .fcproj, inspect the timeline and revise one shot by stable clip ID without changing other tracks or asset references. | Full scope pending |
+| Preview and final output | Separate proxy preview from native export; decode final outputs and verify dimensions, frame rate, duration and audio; never label an FFmpeg substitute as native export. | Full scope pending |
 
 Does not rewrite upstream editors, silently change native deliverable formats, or claim GUI/cross-platform acceptance.
 
@@ -70,11 +72,11 @@ After installing the official CLI, perform a basic check:
 filmcraft-cli --version
 ```
 
-The recorded result is 0.2.0. Plugin setup, skill installation and host installation instructions will ship after their tasks are implemented; no fictional installation command is provided now.
+The recorded result is 0.2.0. The public independent-skill bootstrap and workflow are development entry points; plugin-host installation remains unverified.
 
 ## Configuration and runtime
 
-Target configuration includes CLI paths, allowed read/write roots, execution mode, budget, timeout and output directory; the configuration schema is not implemented yet. Empty skill-lock sources avoid claiming unpublished skills. Runtime lock hashes identify real official artifacts and establish only the recorded platform’s smoke evidence.
+Target configuration includes CLI paths, allowed read/write roots, execution mode, budget, timeout and output directory; the configuration schema is not implemented yet. The skills lock pins the published source commit and whole-skill digest. Runtime lock hashes identify real official artifacts and establish only the recorded platform’s smoke evidence.
 
 ## Reliability and security
 
@@ -87,8 +89,8 @@ Planned safeguards include project write locks, revision preconditions, persiste
 | Layer | Status |
 | :--- | :--- |
 | Upstream CLI and read-only MCP | Observed on macOS arm64 only |
-| Business skills and plugin harness | PLANNED |
-| Native project and creative acceptance | NOT_RUN |
+| Independent skill and adapter | Technical workflow tested; full harness pending |
+| Native project and creative acceptance | Native technical cases pass; creative acceptance pending |
 | Target host installation | NOT_RUN |
 
 
@@ -109,3 +111,18 @@ Change OpenSpec before behavior; check a task only after actual acceptance. Main
 Original content uses [Apache-2.0](LICENSE). This is a third-party integration design, not upstream endorsement. Treat the four apps’ code licenses separately from ArtCraft/Services restrictions; do not copy restricted source or brand assets.
 
 [Upstream FilmCraft](https://github.com/storytold/filmcraft) · [Issues](https://github.com/full-aigc-plugins/filmcraft-plugin/issues)
+
+The independent skill now has a native short-film workflow with isolated first-use installation, editable project reopening, media collection, audio/caption verification and one-shot revisions after moving the delivery folder (14 tests). See [runtime evidence](docs/evidence/film-workflow-tests.json). Full Harness, plugin-host and creative acceptance remain pending.
+
+Independent skills are now pinned at the published development tag `v0.1.0-dev.0`, including the exact source commit and whole-skill digest in `skills.lock.json`. Verify using `python3 scripts/vendor/skill_vendor.py check`. These source snapshots do not establish plugin-host acceptance or production readiness.
+
+## Development skill installation and use
+
+Install the independent skill: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-use`. Run the public entry from the actual installed directory; this plugin snapshot includes the same skill.
+
+```bash
+python3 -I -B skills/filmcraft-use/scripts/bootstrap.py
+python3 -I -B skills/filmcraft-use/scripts/workflow.py --help
+```
+
+First use installs the pinned official CLI into user-level storage. Requires macOS arm64 and Python 3.11+. Use the bundled example with real input assets; consult SKILL.md for delivery and revision contracts. [Source verification](docs/evidence/skill-publication.json).

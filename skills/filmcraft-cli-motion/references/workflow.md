@@ -10,9 +10,11 @@ The helper bootstraps the pinned official CLI, imports and arranges media in a p
 
 The example produces a two-second 320×180 film at 12 fps. Input footage and voice audio must be at least two seconds long. Adjust the plan to the actual request.
 
+以下 `SKILL_DIR` 沿用本技能 `SKILL.md` 的实际加载目录，脚本和示例均来自同一技能。
+
 ```bash
-python3 /mnt/skills/user/filmcraft-cli-motion/scripts/workflow.py \
-  /mnt/skills/user/filmcraft-cli-motion/examples/short-film.json \
+python3 "$SKILL_DIR/scripts/workflow.py" \
+  "$SKILL_DIR/examples/short-film.json" \
   --asset shot=/absolute/path/shot.mp4 \
   --asset voice=/absolute/path/voice.wav \
   --output /absolute/path/film-v1

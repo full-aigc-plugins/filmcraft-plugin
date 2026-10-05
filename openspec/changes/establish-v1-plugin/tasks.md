@@ -17,6 +17,7 @@
 - [x] 1.9 [FC-SK-003] 验证每个单独技能的 CLI 发现与原生代表任务、旧入口回归及插件技能发现。责任：QA owner；前置：1.8；产物：docs/evidence/skill-suite.json；明确未执行的创作/GUI 场景。
 
 - [x] 1.10 [FC-SK-003] 逐项执行八类场景技能的独立首次安装及真实操作，验证保存重开、像素/音频、原工程保留与未知命令拒绝；产物：docs/evidence/task-skill-first-use.json、独立技能源 tests/test_task_skill_first_use.py；完整回归 31 项、零跳过。
+- [x] 1.11 [FC-SK-003] 修正全部技能为真实加载目录调用，执行三种安装布局及含空格路径的隔离入口回归；产物：docs/evidence/installed-skill-paths.json、独立技能源 tests/test_installed_paths.py。此检查不替代完整创作验收。
 
 ## 2. runtime-distribution
 

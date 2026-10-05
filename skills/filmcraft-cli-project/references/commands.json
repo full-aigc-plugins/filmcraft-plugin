@@ -1,0 +1,796 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "file.newProject",
+      "label": "Project…",
+      "params": "{\"name\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.openDemoProject",
+      "label": "Demo Project",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newSequence",
+      "label": "Sequence…",
+      "params": "{\"name\":str,\"width\":u32=1920,\"height\":u32=1080,\"fps\":f64=23.976,\"sampleRate\":u32=48000,\"video\":n=3,\"audio\":n=3,\"mix\":\"Stereo|Mono|5.1|Adaptive\"?,\"trackType\":\"Standard|Mono|5.1|Adaptive\"?,\"fromItem\":itemId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newSequenceFromClip",
+      "label": "Sequence From Clip",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.newBin",
+      "label": "Bin",
+      "params": "{\"name\":str,\"parent\":binId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newBinFromSelection",
+      "label": "Bin From Selection",
+      "params": "{\"items\":[id]?,\"name\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.newSearchBin",
+      "label": "Search Bin",
+      "params": "{\"name\":str?,\"column\":str?,\"operator\":str?,\"text\":str?,\"rows\":[..]?,\"matchAll\":bool?,\"caseSensitive\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newOfflineFile",
+      "label": "Offline File…",
+      "params": "{\"name\":str?,\"fileName\":str?,\"tapeName\":str?,\"video\":bool=true,\"audio\":bool=true,\"width\":u32?,\"height\":u32?,\"fps\":f64?,\"sampleRate\":u32=48000,\"channels\":u32=2,\"timecode\":\"HH:MM:SS:FF\"?,\"seconds\":f64=10,\"description\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newAdjustmentLayer",
+      "label": "Adjustment Layer…",
+      "params": "{\"seconds\":f64=5}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newBarsAndTone",
+      "label": "Bars and Tone…",
+      "params": "{\"seconds\":f64=10}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newBlackVideo",
+      "label": "Black Video…",
+      "params": "{\"seconds\":f64}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newColorMatte",
+      "label": "Color Matte…",
+      "params": "{\"color\":\"#rrggbb\",\"seconds\":f64}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newCountingLeader",
+      "label": "Universal Counting Leader…",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newTransparentVideo",
+      "label": "Transparent Video…",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.importDemoFootage",
+      "label": "Demo Footage",
+      "params": "{\"scene\":\"OceanSunset|Aurora|CityNight|Dunes|Plasma|Forest\"}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.exportInterchange",
+      "label": "Export Interchange",
+      "params": "{\"format\":\"edl|xml|fcpxml|otio\",\"path\":str,\"sequence\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportEdl",
+      "label": "EDL…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportSelectionProject",
+      "label": "Selection as FilmCraft Project…",
+      "params": "{\"path\":str,\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportAle",
+      "label": "Avid Log Exchange…",
+      "params": "{\"path\":str,\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportOtio",
+      "label": "OpenTimelineIO…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportFcp7Xml",
+      "label": "Final Cut Pro XML…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportFcpxml",
+      "label": "FCPXML…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportAaf",
+      "label": "AAF…",
+      "params": "{\"path\":str,\"sequence\":id?,\"mixdownVideo\":bool?,\"mixdownFormat\":\"mov|mxf\"?,\"breakoutToMono\":bool?,\"audio\":\"embedded|separate|linked\"?,\"audioFormat\":\"wav|aiff|mxf\"?,\"sampleRate\":int?,\"bitDepth\":\"16|24\"?,\"trimAudio\":bool?,\"handles\":frames?,\"renderAudioEffects\":bool?,\"smallSectors\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportOmf",
+      "label": "OMF…",
+      "params": "{\"path\":str,\"sequence\":id?,\"title\":str?,\"audio\":\"embedded|separate\"?,\"audioFormat\":\"wav|aiff\"?,\"sampleRate\":int?,\"bitDepth\":\"16|24\"?,\"trimAudio\":bool?,\"handles\":frames?,\"renderAudioEffects\":bool?,\"breakoutToMono\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.importAaf",
+      "label": "Import AAF…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.open",
+      "label": "Open Project…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.close",
+      "label": "Close",
+      "params": "{\"item\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.closeProject",
+      "label": "Close Project",
+      "params": "{\"force\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.closeAllProjects",
+      "label": "Close All Projects",
+      "params": "{\"force\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.closeAllOtherProjects",
+      "label": "Close All Other Projects",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.save",
+      "label": "Save",
+      "params": "{\"path\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.saveAs",
+      "label": "Save As…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.saveCopy",
+      "label": "Save a Copy…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.saveAsTemplate",
+      "label": "Save as Template…",
+      "params": "{\"name\":str?,\"path\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.saveAll",
+      "label": "Save All",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.revert",
+      "label": "Revert",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.recover",
+      "label": "Recover Unsaved Changes…",
+      "params": "{\"id\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.discardRecovery",
+      "label": "Discard Unsaved Changes",
+      "params": "{\"id\":str?,\"all\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.recoveryList",
+      "label": "List Recoverable Sessions",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.autoSaveNow",
+      "label": "Auto Save Now",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.autoSaveStatus",
+      "label": "Auto Save Status",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.listAutoSaves",
+      "label": "Browse Auto-Saves",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.exportMedia",
+      "label": "Media…",
+      "params": "{\"path\":str,\"preset\":str?,\"settings\":ExportSettings?,\"format\":\"h264|prores|dnxhr|mjpeg|mxf-op1a|mxf-opatom|png|tiff|bmp|gif|wav|aiff\"?,\"width\":u32?,\"height\":u32?,\"fps\":f64?,\"bitrateKbps\":u32?,\"bitrateMode\":\"cbr|vbr1Pass|vbr2Pass\"?,\"scale\":f32=1,\"audio\":bool=true,\"quality\":0..100,\"burnCaptions\":bool=false,\"captionSidecar\":\"srt|vtt\"?,\"loudnessLufs\":f64?,\"proresProfile\":\"proxy|lt|standard|hq\"?,\"dnxProfile\":\"lb|sq|hq|hqx\"?,\"mxfVideoCodec\":\"dnxhr|proRes|h264\"?,\"sequence\":id?,\"range\":\"entire|inOut|workArea|custom\"?,\"startSeconds\":f64?,\"endSeconds\":f64?,\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.open",
+      "label": "Open in Timeline",
+      "params": "{\"item\":id}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "sequence.close",
+      "label": "Close Sequence",
+      "params": "{\"item\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.settings",
+      "label": "Sequence Settings…",
+      "params": "{\"width\":u32?,\"height\":u32?,\"fps\":f64?,\"name\":str?,\"sampleRate\":u32?,\"mix\":\"Stereo|Mono|5.1|Adaptive\"?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.renderEffectsInToOut",
+      "label": "Render Effects In to Out",
+      "params": "{\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.renderInToOut",
+      "label": "Render In to Out",
+      "params": "{\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.renderSelection",
+      "label": "Render Selection",
+      "params": "{\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.renderAudio",
+      "label": "Render Audio",
+      "params": "{\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.deleteRenderFiles",
+      "label": "Delete Render Files",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.deleteRenderFilesInToOut",
+      "label": "Delete Render Files In to Out",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.matchFrame",
+      "label": "Match Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.reverseMatchFrame",
+      "label": "Reverse Match Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.addEdit",
+      "label": "Add Edit",
+      "params": "{\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.addEditAllTracks",
+      "label": "Add Edit to All Tracks",
+      "params": "{\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.applyVideoTransition",
+      "label": "Apply Video Transition",
+      "params": "{\"clip\":id?,\"effect\":\"cross_dissolve|Cross Dissolve|…\"?,\"frames\":i64?,\"edge\":\"in\"|\"out\"?,\"params\":{param:value}?,\"reverse\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.applyAudioTransition",
+      "label": "Apply Audio Transition",
+      "params": "{\"clip\":id?,\"effect\":str?,\"frames\":i64?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.lift",
+      "label": "Lift",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.extract",
+      "label": "Extract",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.closeGap",
+      "label": "Close Gap",
+      "params": "{\"track\":\"V1\"|id,\"time\":ticks}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.goToNextGap",
+      "label": "Next in Sequence",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.goToPrevGap",
+      "label": "Previous in Sequence",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.goToNextGapInTrack",
+      "label": "Next in Track",
+      "params": "{\"track\":\"V1\"|id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.goToPrevGapInTrack",
+      "label": "Previous in Track",
+      "params": "{\"track\":\"V1\"|id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.snap",
+      "label": "Snap in Timeline",
+      "params": "{\"on\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "sequence.linkedSelection",
+      "label": "Linked Selection",
+      "params": "{\"on\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "sequence.selectionFollowsPlayhead",
+      "label": "Selection Follows Playhead",
+      "params": "{\"on\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "sequence.showThroughEdits",
+      "label": "Show Through Edits",
+      "params": "{\"on\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "sequence.normalizeMixTrack",
+      "label": "Normalize Mix Track…",
+      "params": "{\"db\":f64=0}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.makeSubsequence",
+      "label": "Make Subsequence",
+      "params": "{\"name\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.transcribe",
+      "label": "Transcribe Sequence…",
+      "params": "{\"track\":\"mix\"|\"A1\"|id?,\"language\":\"en|auto\"?,\"diarize\":bool?,\"maxSpeakers\":n?,\"model\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.simplify",
+      "label": "Simplify Sequence…",
+      "params": "{\"name\":str?,\"removeDisabled\":bool=true,\"removeEmptyTracks\":bool=true,\"closeGaps\":bool=false,\"moveClipsDown\":bool=false,\"removeVideoEffects\":bool=false,\"removeAudioEffects\":bool=false,\"removeText\":bool=false,\"keep\":\"both|video|audio\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.addTracks",
+      "label": "Add Tracks…",
+      "params": "{\"video\":n=1,\"audio\":n=0}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.deleteTracks",
+      "label": "Delete Tracks…",
+      "params": "{\"video\":\"empty\"|\"V2\"|id?,\"audio\":\"empty\"|\"A2\"|id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.colorSettings",
+      "label": "Color Management…",
+      "params": "{\"workingSpace\":\"rec709\"|\"rec2100-pq\"|\"rec2100-hlg\"?,\"wideGamut\":bool?,\"autoToneMap\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.setTransition",
+      "label": "Edit Transition Settings",
+      "params": "{\"transition\":id,\"params\":{param:value}?,\"reverse\":bool?,\"reset\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.joinThroughEdits",
+      "label": "Join Through Edits",
+      "params": "{\"clips\":[id]?,\"all\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.throughEdits",
+      "label": "List Through Edits",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "sequence.deleteTrack",
+      "label": "Delete Track",
+      "params": "{\"track\":\"V3\"|id}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.renderBar",
+      "label": "Render Bar",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.select",
+      "label": "Select Project Items",
+      "params": "{\"items\":[id]}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.delete",
+      "label": "Clear",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "project.moveToBin",
+      "label": "Move to Bin",
+      "params": "{\"items\":[id]?,\"bin\":binId|null}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.setMarks",
+      "label": "Set Source In/Out",
+      "params": "{\"item\":id,\"in\":ticks?|null,\"out\":ticks?|null}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.inspect",
+      "label": "Inspect Project",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "sequence.inspect",
+      "label": "Inspect Sequence",
+      "params": "{\"item\":id?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.exportGraphicsTemplate",
+      "label": "Motion Graphics Template…",
+      "params": "as graphics.template.export",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.replaceFonts",
+      "label": "Replace Fonts in Projects…",
+      "params": "{\"from\":family|{\"family\",\"style\"?},\"to\":family|{\"family\",\"style\"?},\"toStyle\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.importFromMediaBrowser",
+      "label": "Import from Media Browser",
+      "params": "{\"paths\":[str]?,\"imageSequence\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.import",
+      "label": "Import…",
+      "params": "{\"paths\":[str],\"bin\":binId?,\"imageSequence\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.importImageSequence",
+      "label": "Import Image Sequence…",
+      "params": "{\"path\":str,\"bin\":binId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.mediaPropertiesFile",
+      "label": "File…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.mediaProperties",
+      "label": "Selection…",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.projectSettings.general",
+      "label": "General…",
+      "params": "{\"renderer\":\"gpu|software\"?,\"videoDisplay\":\"timecode|feet35|feet16|frames\"?,\"audioDisplay\":\"samples|milliseconds\"?,\"captureFormat\":\"DV|HDV\"?,\"titleSafe\":[h,v]?,\"actionSafe\":[h,v]?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.projectSettings.scratchDisks",
+      "label": "Scratch Disks…",
+      "params": "{\"captured\":path|null?,\"videoPreviews\":path|null?,\"audioPreviews\":path|null?,\"autoSave\":path|null?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.ingestSettings",
+      "label": "Ingest Settings…",
+      "params": "{\"enabled\":bool?,\"action\":\"copy|transcode|createProxies|copyAndCreateProxies\"?,\"destination\":str?,\"preset\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.projectManager",
+      "label": "Project Manager…",
+      "params": "{\"destination\":str,\"mode\":\"collect|consolidate\",\"sequences\":[id]?,\"excludeUnused\":bool=true,\"handles\":frames=30,\"preset\":\"prores_lt|prores_hq|h264|…\",\"includeProxies\":bool,\"includePreviews\":bool=false,\"projectName\":str?,\"dryRun\":bool=false,\"overwrite\":bool=false,\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "sequence.revealNested",
+      "label": "Reveal Nested Sequence",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportFrame",
+      "label": "Export Frame",
+      "params": "{\"path\":str?,\"format\":\"png|tiff|bmp\"?,\"import\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "project.view.get",
+      "label": "Project Panel View",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.view.set",
+      "label": "Set Project Panel View",
+      "params": "{\"view\":\"list|icon|freeform\"?,\"iconSize\":f32?,\"fontSize\":\"small|medium|large|extraLarge\"?,\"previewArea\":bool?,\"thumbnails\":bool?,\"thumbnailsShowEffects\":bool?,\"hoverScrub\":bool?,\"thumbnailControlsAllDevices\":bool?,\"iconSort\":column|{\"column\":str,\"descending\":bool}?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.columns.list",
+      "label": "List Project Columns",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.columns.set",
+      "label": "Metadata Display",
+      "params": "{\"columns\":[name|{\"name\":str,\"width\":f32}]}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.columns.resize",
+      "label": "Resize Column",
+      "params": "{\"column\":str,\"width\":f32}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.sort",
+      "label": "Sort Project Items",
+      "params": "{\"column\":str,\"descending\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.items",
+      "label": "List Project Panel Rows",
+      "params": "{\"bin\":binId?,\"recursive\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.viewPreset.list",
+      "label": "List View Presets",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.viewPreset.save",
+      "label": "Save Current View Preset",
+      "params": "{\"slot\":1..10?,\"name\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "project.viewPreset.saveAs",
+      "label": "Save As New View Preset",
+      "params": "{\"name\":str?,\"slot\":1..10?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.viewPreset.restore",
+      "label": "Restore View Preset",
+      "params": "{\"slot\":1..10}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "project.viewPreset.rename",
+      "label": "Rename View Preset",
+      "params": "{\"slot\":1..10,\"name\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "project.viewPreset.delete",
+      "label": "Delete View Preset",
+      "params": "{\"slot\":1..10}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "project.freeform.layout",
+      "label": "Freeform Layout",
+      "params": "{\"bin\":binId?,\"width\":f32?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.move",
+      "label": "Move Clip Cards",
+      "params": "{\"items\":[id]?,\"x\":f32,\"y\":f32,\"snap\":bool?} | {\"positions\":{\"<id>\":[x,y]}}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.resize",
+      "label": "Clip Size",
+      "params": "{\"items\":[id]?,\"size\":f32?,\"step\":1|-1?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.alignToGrid",
+      "label": "Align to Grid",
+      "params": "{\"bin\":binId?,\"grid\":f32?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.reset",
+      "label": "Reset to Grid",
+      "params": "{\"bin\":binId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.stack",
+      "label": "Stack Clips",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.unstack",
+      "label": "Unstack Clips",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.saveArrangement",
+      "label": "Save Arrangement",
+      "params": "{\"name\":str,\"bin\":binId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.restoreArrangement",
+      "label": "Restore Arrangement",
+      "params": "{\"name\":str,\"bin\":binId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.deleteArrangement",
+      "label": "Delete Arrangement",
+      "params": "{\"name\":str,\"bin\":binId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.arrangements",
+      "label": "List Arrangements",
+      "params": "{\"bin\":binId?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.freeform.options",
+      "label": "Freeform View Options…",
+      "params": "{\"grid\":f32?,\"snap\":bool?,\"showNames\":bool?,\"showDurations\":bool?,\"cardSize\":f32?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.renameBin",
+      "label": "Rename Bin",
+      "params": "{\"bin\":binId,\"name\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.searchBinItems",
+      "label": "Search Bin Contents",
+      "params": "{\"bin\":id}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.editSearchBin",
+      "label": "Edit Search Bin",
+      "params": "{\"bin\":id,\"name\":str?,\"column\":str?,\"operator\":str?,\"text\":str?,\"rows\":[..]?,\"matchAll\":bool?,\"caseSensitive\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "project.deleteSearchBin",
+      "label": "Delete Search Bin",
+      "params": "{\"bin\":id}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.templates",
+      "label": "List Project Templates",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.newProjectFromTemplate",
+      "label": "New Project from Template",
+      "params": "{\"template\":name|path,\"name\":str?}",
+      "enabledAtEmptySession": true
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "file.exportInterchange",
+      "label": "Export Interchange",
+      "params": "{\"format\":\"edl|xml|fcpxml|otio\",\"path\":str,\"sequence\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportEdl",
+      "label": "EDL…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportSelectionProject",
+      "label": "Selection as FilmCraft Project…",
+      "params": "{\"path\":str,\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportAle",
+      "label": "Avid Log Exchange…",
+      "params": "{\"path\":str,\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportOtio",
+      "label": "OpenTimelineIO…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportFcp7Xml",
+      "label": "Final Cut Pro XML…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportFcpxml",
+      "label": "FCPXML…",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportAaf",
+      "label": "AAF…",
+      "params": "{\"path\":str,\"sequence\":id?,\"mixdownVideo\":bool?,\"mixdownFormat\":\"mov|mxf\"?,\"breakoutToMono\":bool?,\"audio\":\"embedded|separate|linked\"?,\"audioFormat\":\"wav|aiff|mxf\"?,\"sampleRate\":int?,\"bitDepth\":\"16|24\"?,\"trimAudio\":bool?,\"handles\":frames?,\"renderAudioEffects\":bool?,\"smallSectors\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportOmf",
+      "label": "OMF…",
+      "params": "{\"path\":str,\"sequence\":id?,\"title\":str?,\"audio\":\"embedded|separate\"?,\"audioFormat\":\"wav|aiff\"?,\"sampleRate\":int?,\"bitDepth\":\"16|24\"?,\"trimAudio\":bool?,\"handles\":frames?,\"renderAudioEffects\":bool?,\"breakoutToMono\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportMedia",
+      "label": "Media…",
+      "params": "{\"path\":str,\"preset\":str?,\"settings\":ExportSettings?,\"format\":\"h264|prores|dnxhr|mjpeg|mxf-op1a|mxf-opatom|png|tiff|bmp|gif|wav|aiff\"?,\"width\":u32?,\"height\":u32?,\"fps\":f64?,\"bitrateKbps\":u32?,\"bitrateMode\":\"cbr|vbr1Pass|vbr2Pass\"?,\"scale\":f32=1,\"audio\":bool=true,\"quality\":0..100,\"burnCaptions\":bool=false,\"captionSidecar\":\"srt|vtt\"?,\"loudnessLufs\":f64?,\"proresProfile\":\"proxy|lt|standard|hq\"?,\"dnxProfile\":\"lb|sq|hq|hqx\"?,\"mxfVideoCodec\":\"dnxhr|proRes|h264\"?,\"sequence\":id?,\"range\":\"entire|inOut|workArea|custom\"?,\"startSeconds\":f64?,\"endSeconds\":f64?,\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "jobs.list",
+      "label": "List Jobs",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "jobs.cancel",
+      "label": "Cancel Job",
+      "params": "{\"job\":id}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "file.exportGraphicsTemplate",
+      "label": "Motion Graphics Template…",
+      "params": "as graphics.template.export",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "export.presets.list",
+      "label": "List Export Presets",
+      "params": "{\"query\":str?,\"category\":str?,\"format\":str?,\"favorites\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.presets.get",
+      "label": "Get Export Preset",
+      "params": "{\"name\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.presets.save",
+      "label": "Save Export Preset",
+      "params": "{\"name\":str,\"from\":str?,\"settings\":ExportSettings?,\"category\":str?,\"description\":str?,\"overwrite\":bool=true, …flat overrides}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.presets.delete",
+      "label": "Delete Export Preset",
+      "params": "{\"name\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.presets.favorite",
+      "label": "Favorite Export Preset",
+      "params": "{\"name\":str,\"favorite\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.presets.import",
+      "label": "Import Export Presets",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.presets.export",
+      "label": "Export Export Presets",
+      "params": "{\"path\":str,\"names\":[str]?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.formats",
+      "label": "List Export Formats",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.resolve",
+      "label": "Resolve Export Settings",
+      "params": "{…settings params, \"path\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "export.queue.add",
+      "label": "Send to Export Queue",
+      "params": "{…settings params,\"path\":str|dir?,\"sequences\":[id]?,\"ranges\":[range]?,\"start\":bool?,\"wait\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "export.queue.list",
+      "label": "List Export Queue",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.queue.start",
+      "label": "Start Export Queue",
+      "params": "{\"wait\":bool=false}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.queue.stop",
+      "label": "Stop Export Queue",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.queue.cancel",
+      "label": "Cancel Queued Export",
+      "params": "{\"id\":id?,\"wait\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.queue.retry",
+      "label": "Retry Queued Export",
+      "params": "{\"id\":id,\"start\":bool?,\"wait\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.queue.remove",
+      "label": "Remove Queued Export",
+      "params": "{\"id\":id}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.queue.move",
+      "label": "Reorder Queued Export",
+      "params": "{\"id\":id,\"to\":index?,\"by\":int?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.queue.clear",
+      "label": "Clear Finished Exports",
+      "params": "{\"all\":bool=false}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "export.quick",
+      "label": "Quick Export",
+      "params": "{\"preset\":str?,\"path\":str?,\"wait\":bool?, …settings params}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "file.exportFrame",
+      "label": "Export Frame",
+      "params": "{\"path\":str?,\"format\":\"png|tiff|bmp\"?,\"import\":bool?}",
+      "enabledAtEmptySession": false
+    }
+  ]
+}

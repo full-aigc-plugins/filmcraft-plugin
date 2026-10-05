@@ -1,0 +1,142 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "captions.newTrack",
+      "label": "Add New Caption Track…",
+      "params": "{\"format\":\"Subtitle|CEA-608|CEA-708|Teletext\",\"name\":str?,\"language\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.deleteTrack",
+      "label": "Delete Caption Track",
+      "params": "{\"track\":id|\"C1\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.setTrack",
+      "label": "Caption Track Settings",
+      "params": "{\"track\":id|\"C1\",\"name\":str?,\"format\":str?,\"language\":str?,\"enabled\":bool?,\"locked\":bool?,\"syncLock\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.setStyle",
+      "label": "Caption Track Style",
+      "params": "{\"track\":id|\"C1\",\"font\":str?,\"size\":f32?,\"color\":\"#rrggbb[aa]\"?,\"background\":bool?,\"backgroundColor\":\"#rrggbbaa\"?,\"align\":\"left|center|right\"?,\"anchor\":\"top|middle|bottom\"?,\"margin\":0..0.45 (fraction of frame height)?,\"lineSpacing\":f32?,\"outline\":f32?,\"outlineColor\":str?,\"reset\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.add",
+      "label": "Add Caption at Playhead",
+      "params": "{\"track\":id|\"C1\"?,\"text\":str?,\"time\":ticks?,\"seconds\":f64?,\"durationSeconds\":f64=3}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.split",
+      "label": "Split Caption",
+      "params": "{\"caption\":id?,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.merge",
+      "label": "Merge Captions",
+      "params": "{\"captions\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.setText",
+      "label": "Edit Caption Text",
+      "params": "{\"caption\":id?,\"text\":str?,\"speaker\":str|null?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.setTimes",
+      "label": "Set Caption In/Out",
+      "params": "{\"caption\":id?,\"startTime|startFrame|startSeconds|startTimecode\":…,\"endTime|endFrame|endSeconds|endTimecode\":…}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.trim",
+      "label": "Trim Caption",
+      "params": "{\"caption\":id,\"edge\":\"in|out\",\"delta\":ticks|\"deltaFrames\":i64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.move",
+      "label": "Move Captions",
+      "params": "{\"captions\":[id]?,\"delta\":ticks|\"deltaFrames\":i64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.delete",
+      "label": "Delete Captions",
+      "params": "{\"captions\":[id]?,\"ripple\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.select",
+      "label": "Select Captions",
+      "params": "{\"captions\":[id],\"add\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.goTo",
+      "label": "Go to Caption",
+      "params": "{\"caption\":id}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.next",
+      "label": "Go to Next Caption Segment",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.previous",
+      "label": "Go to Previous Caption Segment",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.showAll",
+      "label": "Show All Caption Tracks",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.showActiveOnly",
+      "label": "Show Active Caption Tracks Only",
+      "params": "{\"track\":id|\"C1\"?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.hideAll",
+      "label": "Hide All Caption Tracks",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.import",
+      "label": "Import Captions…",
+      "params": "{\"path\":str,\"name\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "captions.export",
+      "label": "Captions…",
+      "params": "{\"path\":str,\"format\":\"srt|vtt|scc|mcc|stl|ttml|dfxp\"? (default: from the extension),\"track\":id|\"C1\"?,\"dropFrame\":bool=true}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "captions.list",
+      "label": "List Captions",
+      "params": "{\"track\":id|\"C1\"?}",
+      "enabledAtEmptySession": true
+    }
+  ]
+}

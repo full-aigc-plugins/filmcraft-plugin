@@ -1,0 +1,196 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "source.open",
+      "label": "Open in Source Monitor",
+      "params": "{\"item\":id?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "source.setPlayhead",
+      "label": "Set Source Playhead",
+      "params": "{\"time\":ticks|\"frame\":i64|\"seconds\":f64}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "source.inspect",
+      "label": "Inspect Source Monitor",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "source.insert",
+      "label": "Insert",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "source.overwrite",
+      "label": "Overwrite",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "media.colorInfo",
+      "label": "Media Colour Info",
+      "params": "{\"item\":id}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.findMissing",
+      "label": "Find Missing Media",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.status",
+      "label": "Media Status",
+      "params": "{\"item\":id?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.linkMedia",
+      "label": "Link Media…",
+      "params": "{}  (opens the Link Media dialog; agents use media.relink / media.autoRelink)",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.relink",
+      "label": "Relink Media",
+      "params": "{\"item\":id,\"path\":str,\"force\":bool=false,\"relinkOthers\":bool=true,\"alignTimecode\":bool=false,\"match\":{\"fileName\":bool,\"extension\":bool,\"clipId\":bool,\"duration\":bool,\"mediaStart\":bool,\"metadata\":bool}?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.replaceFootage",
+      "label": "Replace Footage…",
+      "params": "{\"item\":id,\"path\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.autoRelink",
+      "label": "Relink Moved Media",
+      "params": "{\"from\":str,\"to\":str}|{\"folder\":str} + match options",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.search",
+      "label": "Search for Media",
+      "params": "{\"folder\":str,\"item\":id?,\"exactName\":bool=true}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.makeOffline",
+      "label": "Make Offline…",
+      "params": "{\"items\":[id]?,\"deleteFiles\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "media.offlineAll",
+      "label": "Offline All",
+      "params": "{}  (leave every missing file offline and close the Link Media dialog)",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.createProxies",
+      "label": "Create Proxies…",
+      "params": "{\"items\":[id]?,\"preset\":\"prores_proxy_quarter|prores_proxy_half|prores_lt_half|h264_quarter|h264_half\",\"destination\":str?,\"attach\":bool=true,\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "media.attachProxies",
+      "label": "Attach Proxies…",
+      "params": "{\"item\":id,\"path\":str}|{\"items\":[id],\"paths\":[str]},\"force\":bool=false",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "media.detachProxies",
+      "label": "Detach Proxies",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "media.reconnectFullRes",
+      "label": "Reconnect Full Resolution Media…",
+      "params": "{\"item\":id,\"path\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "media.toggleProxies",
+      "label": "Toggle Proxies",
+      "params": "{\"enabled\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "media.proxyPresets",
+      "label": "Proxy Presets",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.roots",
+      "label": "Media Browser Locations",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.list",
+      "label": "List Directory",
+      "params": "{\"path\":str?,\"fileTypes\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.navigate",
+      "label": "Go to Directory",
+      "params": "{\"path\":str} | {\"back\":true} | {\"forward\":true} | {\"up\":true}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.select",
+      "label": "Select Files",
+      "params": "{\"paths\":[str]}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.favorite",
+      "label": "Add to Favorites",
+      "params": "{\"path\":str?,\"remove\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.clearRecent",
+      "label": "Clear Recent Directories",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.settings",
+      "label": "Media Browser Settings",
+      "params": "{\"fileTypes\":\"all|video|audio|image|project|caption|<ext>\"?,\"view\":\"list|thumbnails\"?,\"columns\":[str]?,\"importAsImageSequence\":bool?,\"hoverScrub\":bool?,\"thumbnailSize\":f32?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.import",
+      "label": "Import",
+      "params": "{\"paths\":[str]?,\"bin\":binId?,\"imageSequence\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.openInSource",
+      "label": "Open In Source Monitor",
+      "params": "{\"path\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mediaBrowser.probe",
+      "label": "Media File Properties",
+      "params": "{\"path\":str}",
+      "enabledAtEmptySession": true
+    }
+  ]
+}

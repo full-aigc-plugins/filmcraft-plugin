@@ -1,0 +1,820 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "clip.rename",
+      "label": "Rename…",
+      "params": "{\"clip\":id?,\"item\":id?,\"name\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "clip.makeSubclip",
+      "label": "Make Subclip…",
+      "params": "{\"item\":id?,\"clip\":id?,\"name\":str?,\"start\":ticks?,\"end\":ticks?,\"startFrame\":i64?,\"endFrame\":i64?,\"restrictTrims\":bool=true}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.editSubclip",
+      "label": "Edit Subclip…",
+      "params": "{\"item\":id?,\"start\":ticks?,\"end\":ticks?,\"startFrame\":i64?,\"endFrame\":i64?,\"restrictTrims\":bool?,\"convertToMaster\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.editOffline",
+      "label": "Edit Offline…",
+      "params": "{\"item\":id?,\"mediaName\":str?,\"tapeName\":str?,\"description\":str?,\"scene\":str?,\"shot\":str?,\"logNote\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.sourceSettings",
+      "label": "Source Settings…",
+      "params": "{\"item\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.audioChannels",
+      "label": "Audio Channels…",
+      "params": "{\"items\":[id]?,\"format\":\"mono|stereo|5.1|adaptive\",\"clips\":[[channel]]?,\"channels\":[channel]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.interpretFootage",
+      "label": "Interpret Footage…",
+      "params": "{\"items\":[id]?,\"colorSpace\":\"auto\"|\"<color space id>\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.modifyTimecode",
+      "label": "Timecode…",
+      "params": "{\"item\":id?,\"timecode\":\"HH:MM:SS:FF\"?,\"frame\":i64?,\"tapeName\":str?,\"reset\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.frameHoldOptions",
+      "label": "Frame Hold Options…",
+      "params": "{\"clips\":[id]?,\"enabled\":bool=true,\"holdOn\":\"sourceTimecode|sequenceTime|in|out|playhead\",\"time\":ticks?,\"timecode\":str?,\"holdFilters\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.frameHold",
+      "label": "Add Frame Hold",
+      "params": "{\"clips\":[id]?,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.insertFrameHoldSegment",
+      "label": "Insert Frame Hold Segment",
+      "params": "{\"clip\":id?,\"time\":ticks?,\"seconds\":f64=2}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.fieldOptions",
+      "label": "Field Options…",
+      "params": "{\"clips\":[id]?,\"reverseFieldDominance\":bool=false,\"processing\":\"none|alwaysDeinterlace|flickerRemoval\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.timeInterpolation.frameSampling",
+      "label": "Frame Sampling",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.timeInterpolation.frameBlending",
+      "label": "Frame Blending",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.timeInterpolation.opticalFlow",
+      "label": "Optical Flow",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.scaleToFrameSize",
+      "label": "Scale to Frame Size",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.fitToFrame",
+      "label": "Fit to frame",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.fillFrame",
+      "label": "Fill frame",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.audioGain",
+      "label": "Audio Gain…",
+      "params": "{\"mode\":\"set|adjust|normalizeMax|normalizeAll\"?,\"db\":f64,\"relative\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.breakoutToMono",
+      "label": "Breakout to Mono",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.extractAudio",
+      "label": "Extract Audio",
+      "params": "{\"items\":[id]?,\"dir\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.speedDuration",
+      "label": "Speed/Duration…",
+      "params": "{\"clips\":[id]?,\"speed\":percent=100,\"reverse\":bool,\"ripple\":bool,\"interpolation\":\"frameSampling|frameBlending|opticalFlow\"?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.sceneEditDetection",
+      "label": "Scene Edit Detection…",
+      "params": "{\"clips\":[id]?,\"sensitivity\":0..100=50,\"minShotFrames\":n=6,\"applyCuts\":bool=true,\"createSubclips\":bool=false,\"generateMarkers\":bool=false,\"wait\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.enable",
+      "label": "Enable",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.link",
+      "label": "Link",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.group",
+      "label": "Group",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.ungroup",
+      "label": "Ungroup",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.audioPeak",
+      "label": "Audio Clip Peak Amplitude",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "clip.nest",
+      "label": "Nest…",
+      "params": "{\"name\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.edit",
+      "label": "Trim Edit",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.applyDefaultTransition",
+      "label": "Apply Default Transitions to Selection",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.replaceFromSource",
+      "label": "From Source Monitor",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.replaceFromSourceMatchFrame",
+      "label": "From Source Monitor, Match Frame",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.replaceFromBin",
+      "label": "From Bin",
+      "params": "{\"clips\":[id]?,\"item\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.restoreCaptionsFromSource",
+      "label": "Restore Captions from Source Clip",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.updateMetadata",
+      "label": "Update Metadata…",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.generateAudioWaveform",
+      "label": "Generate Audio Waveform",
+      "params": "{\"items\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.automateToSequence",
+      "label": "Automate to Sequence…",
+      "params": "{\"items\":[id]?,\"ordering\":\"sort|selection\",\"placement\":\"sequentially|unnumberedMarkers\",\"method\":\"insert|overwrite\",\"overlapFrames\":n=30,\"stillFrames\":n?,\"videoTransition\":bool=true,\"audioTransition\":bool=true,\"ignoreAudio\":bool=false,\"ignoreVideo\":bool=false}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.place",
+      "label": "Place Clip",
+      "params": "{\"item\":id,\"track\":\"V1\"|id?,\"audioTrack\":\"A1\"|id?,\"time\":ticks|\"frame\":i64|\"seconds\":f64,\"insert\":bool,\"sourceIn\":ticks?,\"duration\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.select",
+      "label": "Select Clips",
+      "params": "{\"clips\":[id],\"add\":bool,\"toggle\":bool}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.move",
+      "label": "Move Clips",
+      "params": "{\"moves\":[{\"clip\":id,\"track\":id|\"V2\",\"time\":ticks}],\"insert\":bool}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.trim",
+      "label": "Trim Edit",
+      "params": "{\"clip\":id,\"edge\":\"in|out\",\"mode\":\"regular|ripple\",\"delta\":ticks|\"deltaFrames\":i64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.selectEditPoint",
+      "label": "Select Edit Point",
+      "params": "{\"clip\":id,\"edge\":\"in|out\",\"kind\":\"trim|ripple|roll\",\"add\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.selectNearest",
+      "label": "Select Nearest Edit Point",
+      "params": "{\"kind\":\"rippleIn|rippleOut|roll|trimIn|trimOut\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.clear",
+      "label": "Clear Edit Point Selection",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.toggleType",
+      "label": "Toggle Trim Type",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.backward",
+      "label": "Trim Backward",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.forward",
+      "label": "Trim Forward",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.backwardMany",
+      "label": "Trim Backward Many",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.forwardMany",
+      "label": "Trim Forward Many",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.shuttle",
+      "label": "Dynamic Trim (Shuttle)",
+      "params": "{\"direction\":\"forward|reverse\",\"slow\":bool?,\"clock\":seconds}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.shuttleStop",
+      "label": "Dynamic Trim Stop",
+      "params": "{\"clock\":seconds?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.cancelDynamic",
+      "label": "Cancel Dynamic Trim",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.playAround",
+      "label": "Play Around Edit",
+      "params": "{\"clock\":seconds,\"loop\":bool=true,\"toggle\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.tick",
+      "label": "Advance Trim Playback",
+      "params": "{\"clock\":seconds}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.monitor",
+      "label": "Trim Monitor State",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "trim.nudge",
+      "label": "Trim by Frames",
+      "params": "{\"frames\":i64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.extendToPlayhead",
+      "label": "Extend Selected Edit to Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.ripplePrevious",
+      "label": "Ripple Trim Previous Edit to Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.rippleNext",
+      "label": "Ripple Trim Next Edit to Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.previous",
+      "label": "Trim Previous Edit to Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.next",
+      "label": "Trim Next Edit to Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.roll",
+      "label": "Rolling Edit",
+      "params": "{\"left\":id,\"right\":id,\"delta\":ticks|\"deltaFrames\":i64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slip",
+      "label": "Slip",
+      "params": "{\"clip\":id,\"delta\":ticks|\"deltaFrames\":i64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slide",
+      "label": "Slide",
+      "params": "{\"clip\":id,\"delta\":ticks|\"deltaFrames\":i64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.rateStretch",
+      "label": "Rate Stretch",
+      "params": "{\"clip\":id,\"edge\":\"in|out\",\"delta\":ticks}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.razor",
+      "label": "Razor",
+      "params": "{\"time\":ticks,\"track\":\"V1\"|id?,\"clip\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.setTrack",
+      "label": "Track Settings",
+      "params": "{\"track\":\"V1\"|id,\"locked\":bool?,\"syncLock\":bool?,\"enabled\":bool?,\"muted\":bool?,\"solo\":bool?,\"name\":str?,\"volumeDb\":f64?,\"pan\":f64?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.setTargeting",
+      "label": "Track Targeting",
+      "params": "{\"track\":\"V1\"|id,\"targeted\":bool?,\"sourcePatch\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.synchronize",
+      "label": "Synchronize…",
+      "params": "{\"method\":\"in|out|timecode|marker|audio\",\"clips\":[id]?,\"reference\":clip?,\"track\":\"V1\"|\"A1\"?,\"ignoreHours\":bool?,\"marker\":str?,\"offset\":frames?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.mergeClips",
+      "label": "Merge Clips…",
+      "params": "{\"items\":[id]?,\"method\":\"in|out|timecode|marker|audio\",\"name\":str?,\"removeVideoAudio\":bool?,\"ignoreHours\":bool?,\"marker\":str?,\"offset\":frames?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.createMulticam",
+      "label": "Create Multi-Camera Source Sequence…",
+      "params": "{\"items\":[id]?,\"name\":str?,\"method\":\"in|out|timecode|marker|audio\",\"ignoreHours\":bool?,\"marker\":str?,\"offset\":frames?,\"audio\":\"camera1|all|switch\",\"cameraNames\":\"clip|track|metadata\",\"processedBin\":bool?,\"reference\":item?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.multicamEnable",
+      "label": "Enable",
+      "params": "{\"clips\":[id]?,\"enabled\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.multicamFlatten",
+      "label": "Flatten",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.remix.enable",
+      "label": "Enable Remix",
+      "params": "{\"clip\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.remix.properties",
+      "label": "Remix Properties…",
+      "params": "{\"clip\":id?,\"duration\":ticks?,\"seconds\":f64?,\"frame\":n?,\"timecode\":str?,\"segments\":0..100?,\"variations\":0..100?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.remix.revert",
+      "label": "Revert Remix",
+      "params": "{\"clip\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.remix",
+      "label": "Remix",
+      "params": "{\"clip\":id?,\"duration\":ticks?,\"seconds\":f64?,\"frame\":n?,\"timecode\":str?,\"segments\":0..100?,\"variations\":0..100?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.selectClipAtPlayhead",
+      "label": "Select Clip at Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.selectNextClip",
+      "label": "Select Next Clip",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.selectPrevClip",
+      "label": "Select Previous Clip",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.extendPreviousEdit",
+      "label": "Extend Previous Edit To Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "trim.extendNextEdit",
+      "label": "Extend Next Edit To Playhead",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.nudgeLeft",
+      "label": "Nudge Clip Selection Left One Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.nudgeRight",
+      "label": "Nudge Clip Selection Right One Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.nudgeLeft5",
+      "label": "Nudge Clip Selection Left Five Frames",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.nudgeRight5",
+      "label": "Nudge Clip Selection Right Five Frames",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.nudgeUp",
+      "label": "Nudge Clip Selection Up",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.nudgeDown",
+      "label": "Nudge Clip Selection Down",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slipLeft",
+      "label": "Slip Clip Selection Left One Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slipRight",
+      "label": "Slip Clip Selection Right One Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slipLeft5",
+      "label": "Slip Clip Selection Left Five Frames",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slipRight5",
+      "label": "Slip Clip Selection Right Five Frames",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slideLeft",
+      "label": "Slide Clip Selection Left One Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slideRight",
+      "label": "Slide Clip Selection Right One Frame",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slideLeft5",
+      "label": "Slide Clip Selection Left Five Frames",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.slideRight5",
+      "label": "Slide Clip Selection Right Five Frames",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleAllVideoTargets",
+      "label": "Toggle All Video Targets",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleAllAudioTargets",
+      "label": "Toggle All Audio Targets",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleAllSourceVideo",
+      "label": "Toggle All Source Video",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleAllSourceAudio",
+      "label": "Toggle All Source Audio",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.moveVideoTargetsUp",
+      "label": "Move All Video Targets Up",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.moveVideoTargetsDown",
+      "label": "Move All Video Targets Down",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.moveAudioTargetsUp",
+      "label": "Move All Audio Targets Up",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.moveAudioTargetsDown",
+      "label": "Move All Audio Targets Down",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleMuteTargetedAudio",
+      "label": "Toggle Mute for All Targeted Audio Tracks",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleSoloTargetedAudio",
+      "label": "Toggle Solo for All Targeted Audio Tracks",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleOutputTargetedVideo",
+      "label": "Toggle Track Output for All Targeted Video Tracks",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.volumeUp",
+      "label": "Increase Clip Volume",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.volumeDown",
+      "label": "Decrease Clip Volume",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.volumeUpMany",
+      "label": "Increase Clip Volume Many",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.volumeDownMany",
+      "label": "Decrease Clip Volume Many",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.nudgeVolumeUp1",
+      "label": "Nudge Volume +1dB",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.nudgeVolumeUp3",
+      "label": "Nudge Volume +3dB",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.nudgeVolumeDown1",
+      "label": "Nudge Volume -1dB",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.nudgeVolumeDown3",
+      "label": "Nudge Volume -3dB",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.setPosterFrame",
+      "label": "Set Poster Frame",
+      "params": "{\"item\":id?,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.clearPosterFrame",
+      "label": "Clear Poster Frame",
+      "params": "{\"item\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV1",
+      "label": "Toggle Target Video 1",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV2",
+      "label": "Toggle Target Video 2",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV3",
+      "label": "Toggle Target Video 3",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV4",
+      "label": "Toggle Target Video 4",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV5",
+      "label": "Toggle Target Video 5",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV6",
+      "label": "Toggle Target Video 6",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV7",
+      "label": "Toggle Target Video 7",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetV8",
+      "label": "Toggle Target Video 8",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA1",
+      "label": "Toggle Target Audio 1",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA2",
+      "label": "Toggle Target Audio 2",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA3",
+      "label": "Toggle Target Audio 3",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA4",
+      "label": "Toggle Target Audio 4",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA5",
+      "label": "Toggle Target Audio 5",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA6",
+      "label": "Toggle Target Audio 6",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA7",
+      "label": "Toggle Target Audio 7",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "timeline.toggleTargetA8",
+      "label": "Toggle Target Audio 8",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clip.setTimeInterpolation",
+      "label": "Set Time Interpolation",
+      "params": "{\"clips\":[id]?,\"mode\":\"frameSampling|frameBlending|opticalFlow\"}",
+      "enabledAtEmptySession": false
+    }
+  ]
+}

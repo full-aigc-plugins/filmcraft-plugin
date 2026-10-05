@@ -46,3 +46,20 @@ python3 -I -B /mnt/skills/user/filmcraft-use/scripts/bootstrap.py
 首次安装或复用遇到其他安装进程时有界等待，超时保持现状并报 runtime_install_busy。参见[安装并发合同](references/installation-concurrency.md)。
 
 开发版本 dev.2 随原生与导出交付[交换损失报告](references/exchange-loss.md)。阅读 lost/observed/unknown 和导出警告；不把扁平导出、SVG 结构或 PSD 图层计数称为无损原生替代。
+
+## 按任务选择独立技能
+
+| 技能 | 触发任务 |
+| :--- | :--- |
+| **filmcraft-cli** | 查询实际命令参数和能力，调用公开 CLI、MCP 与诊断 |
+| **filmcraft-cli-setup** | 首次安装、摘要校验、版本检查与缺失运行时排障 |
+| **filmcraft-cli-project** | 创建、打开、保存 fcproj 和组织序列、素材箱 |
+| **filmcraft-cli-media** | 检查已有音视频、图片和素材引用，导入并收集或重关联素材 |
+| **filmcraft-cli-timeline** | 排序、裁切、移动镜头，组织轨道与单镜头修改 |
+| **filmcraft-cli-audio** | 组织已有配音和音乐、增益、混音与音画同步 |
+| **filmcraft-cli-subtitles** | 导入、创建、修改字幕文本、时间、样式并交付 SRT |
+| **filmcraft-cli-color** | 调整镜头色彩、使用许可明确的 LUT 与颜色预设 |
+| **filmcraft-cli-motion** | 创建文字图形、效果参数与镜头关键帧 |
+| **filmcraft-cli-export** | 导出预览帧、成片、交换文件与输出验证 |
+
+缺少技能：`npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`。每项自带安装与执行资源；直接执行本技能 `scripts/cli.py` 也可查询当前 CLI，不依赖兄弟路径。

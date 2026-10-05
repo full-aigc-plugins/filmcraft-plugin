@@ -1,0 +1,640 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "effects.apply",
+      "label": "Apply Effect",
+      "params": "{\"clips\":[id]?,\"effect\":\"gaussian_blur|Gaussian Blur|…\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.remove",
+      "label": "Remove Effect",
+      "params": "{\"clip\":id,\"index\":n}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.setParam",
+      "label": "Set Effect Parameter",
+      "params": "{\"clip\":id,\"effect\":\"motion\"|index,\"param\":str,\"mask\":n?,\"value\":num|[x,y]|\"#rrggbb\"|bool|path,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.toggleAnimation",
+      "label": "Toggle Animation",
+      "params": "{\"clip\":id,\"effect\":str|index,\"param\":str,\"mask\":n?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.toggleEnabled",
+      "label": "Toggle Effect",
+      "params": "{\"clip\":id,\"index\":n}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.reset",
+      "label": "Reset Effect",
+      "params": "{\"clip\":id,\"index\":n}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.addKeyframe",
+      "label": "Add/Remove Keyframe",
+      "params": "{\"clip\":id,\"effect\":str|index,\"param\":str,\"mask\":n?,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.deleteKeyframe",
+      "label": "Delete Keyframe",
+      "params": "{\"clip\":id,\"effect\":str|index,\"param\":str,\"mediaTime\":ticks}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.moveKeyframe",
+      "label": "Move Keyframe",
+      "params": "{\"clip\":id,\"effect\":str|index,\"param\":str,\"mediaTime\":ticks,\"to\":ticks}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.setInterpolation",
+      "label": "Keyframe Interpolation",
+      "params": "{\"clip\":id,\"effect\":str|index,\"param\":str,\"mediaTime\":ticks,\"interpolation\":\"linear|bezier|autoBezier|continuousBezier|hold|easeIn|easeOut\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.setKeyframe",
+      "label": "Edit Keyframe",
+      "params": "{\"clip\":id,\"effect\":str|index,\"param\":str,\"mediaTime\":ticks,\"value\":any?,\"inInfluence\":0..1?,\"outInfluence\":0..1?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "effects.list",
+      "label": "List Effects",
+      "params": "{\"kind\":\"Video\"|\"Audio\"|\"VideoTransition\"|\"AudioTransition\"?,\"folder\":\"Video Transitions/Wipe\"?,\"detail\":bool?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "effects.setDefaultTransition",
+      "label": "Set Selected as Default Transition",
+      "params": "{\"effect\":\"constant_power|constant_gain|exponential_fade|<video transition>\"}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "graphics.newText",
+      "label": "Text",
+      "params": "{\"text\":str=\"New Text\",\"position\":[x,y]?,\"clip\":id?,\"newClip\":bool?,\"vertical\":bool=false,\"size\":px=100,\"font\":str?,\"fontStyle\":str?,\"seconds\":f64=5,\"track\":index?,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.newShape",
+      "label": "Shape",
+      "params": "{\"shape\":\"rectangle|ellipse|polygon|path\",\"position\":[x,y]?,\"size\":[w,h]=[400,200],\"points\":[[x,y],…]?,\"clip\":id?,\"seconds\":f64=5}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.setText",
+      "label": "Edit Text",
+      "params": "{\"clip\":id?,\"layer\":n|name?,\"text\":str,\"merge\":bool? (coalesce with the previous Edit Text undo step)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.set",
+      "label": "Set Graphic Properties",
+      "params": "{\"clip\":id?,\"layer\":n|name?,\"props\":{\"font\":\"Inter\",\"font_style\":\"Bold\",\"size\":120,\"align\":\"center\",\"tracking\":50,\"leading\":0,\"fill_color\":\"#ffcc00\",\"stroke\":true,\"stroke_width\":6,\"background\":true,\"shadow\":true,\"position\":[x,y],\"scale\":100,\"rotation\":0,\"opacity\":100,…},\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.selectLayer",
+      "label": "Select Graphic Layer",
+      "params": "{\"clip\":id?,\"layers\":[n]}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.deleteLayer",
+      "label": "Delete Graphic Layer",
+      "params": "{\"clip\":id?,\"layer\":n?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.arrangeLayer",
+      "label": "Arrange Graphic Layer",
+      "params": "{\"clip\":id?,\"layer\":n?,\"to\":\"front|back|forward|backward\"|index}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.align",
+      "label": "Align Layers",
+      "params": "{\"clip\":id?,\"layers\":[n]?,\"align\":\"left|hcenter|right|top|vcenter|bottom\",\"to\":\"frame|group|selection\"=\"frame\" (frame: each layer; group: the layers' union; one layer always aligns to the frame)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.distribute",
+      "label": "Distribute Layers",
+      "params": "{\"clip\":id?,\"layers\":[n] (3 or more)?,\"axis\":\"horizontal|vertical\",\"space\":bool=false (equal gaps instead of equal centre spacing)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.list",
+      "label": "List Graphic Layers",
+      "params": "{\"clip\":id?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "graphics.newVerticalText",
+      "label": "Vertical Text",
+      "params": "{\"text\":str=\"New Text\",\"position\":[x,y]?,\"clip\":id?,\"size\":px=100,\"seconds\":f64=5,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.newRectangle",
+      "label": "Rectangle",
+      "params": "{\"position\":[x,y]?,\"size\":[w,h]=[400,200],\"clip\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.newEllipse",
+      "label": "Ellipse",
+      "params": "{\"position\":[x,y]?,\"size\":[w,h]=[400,200],\"clip\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.newPolygon",
+      "label": "Polygon",
+      "params": "{\"position\":[x,y]?,\"size\":[w,h]=[300,300],\"sides\":n=6,\"clip\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.newFromFile",
+      "label": "From file…",
+      "params": "{\"path\":str,\"time\":ticks?,\"track\":index?} (imports the image or video and places it above the clips at the playhead)",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignFrame.left",
+      "label": "Left",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignFrame.hcenter",
+      "label": "Center Horizontally",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignFrame.right",
+      "label": "Right",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignFrame.top",
+      "label": "Top",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignFrame.vcenter",
+      "label": "Center Vertically",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignFrame.bottom",
+      "label": "Bottom",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignGroup.left",
+      "label": "Left",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignGroup.hcenter",
+      "label": "Center Horizontally",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignGroup.right",
+      "label": "Right",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignGroup.top",
+      "label": "Top",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignGroup.vcenter",
+      "label": "Center Vertically",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignGroup.bottom",
+      "label": "Bottom",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignSelection.left",
+      "label": "Left",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignSelection.hcenter",
+      "label": "Center Horizontally",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignSelection.right",
+      "label": "Right",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignSelection.top",
+      "label": "Top",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignSelection.vcenter",
+      "label": "Center Vertically",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignSelection.bottom",
+      "label": "Bottom",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.distributeVertically",
+      "label": "Distribute Vertically",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.distributeSpaceVertically",
+      "label": "Distribute Space Vertically",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.distributeHorizontally",
+      "label": "Distribute Horizontally",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.distributeSpaceHorizontally",
+      "label": "Distribute Space Horizontally",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.bringToFront",
+      "label": "Bring to Front",
+      "params": "{\"clip\":id?,\"layer\":n?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.bringForward",
+      "label": "Bring Forward",
+      "params": "{\"clip\":id?,\"layer\":n?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.sendBackward",
+      "label": "Send Backward",
+      "params": "{\"clip\":id?,\"layer\":n?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.sendToBack",
+      "label": "Send to Back",
+      "params": "{\"clip\":id?,\"layer\":n?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.selectNextGraphic",
+      "label": "Select Next Graphic",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.selectPreviousGraphic",
+      "label": "Select Previous Graphic",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.selectNextLayer",
+      "label": "Select Next Layer",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.selectPreviousLayer",
+      "label": "Select Previous Layer",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.resetAllParameters",
+      "label": "Reset All Parameters",
+      "params": "{\"clip\":id?,\"layers\":[n]? (default: the selected layers, else all)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.resetDuration",
+      "label": "Reset Duration",
+      "params": "{\"clip\":id?,\"seconds\":f64=5 (the default graphic duration; limited by the next clip on the track)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.template.list",
+      "label": "List Graphics Templates",
+      "params": "{\"query\":str? (search names, categories, descriptions, tags),\"category\":str?,\"source\":\"builtin|user\"?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "graphics.template.apply",
+      "label": "Apply Graphics Template",
+      "params": "{\"template\":id|name|path,\"values\":{control id or name: value}?,\"time\":ticks?,\"track\":index?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.template.export",
+      "label": "Export As Motion Graphics Template…",
+      "params": "{\"clip\":id?,\"name\":str,\"category\":str=\"My Templates\",\"description\":str?,\"controls\":[{\"layer\":n|name,\"param\":\"text|fill_color|size|font|position|enabled|…\",\"name\":str?,\"kind\":\"text|color|slider|checkbox|font|position\"?,\"min\":f64?,\"max\":f64?,\"id\":str?}]? (default: each text layer's text),\"path\":str? (default: the user templates folder),\"embedFonts\":bool=false,\"fontLicense\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.template.install",
+      "label": "Install Motion Graphics Template…",
+      "params": "{\"path\":str (a .fcgt file; Adobe .mogrt files are refused)}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "graphics.template.remove",
+      "label": "Remove Graphics Template",
+      "params": "{\"template\":id|name (a user template)}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "graphics.template.set",
+      "label": "Set Template Property",
+      "params": "{\"clip\":id?,\"control\":id|name,\"value\":any} or {\"clip\":id?,\"values\":{control: value}}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.template.controls",
+      "label": "List Template Properties",
+      "params": "{\"clip\":id?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "graphics.template.thumbnail",
+      "label": "Graphics Template Thumbnail",
+      "params": "{\"template\":id|name|path,\"width\":px=320,\"path\":str? (write a PNG there; else returned as pngBase64)}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "graphics.setRoll",
+      "label": "Roll/Crawl Options",
+      "params": "{\"clip\":id?,\"mode\":\"off|roll|crawlLeft|crawlRight\"?,\"startOffScreen\":bool?,\"endOffScreen\":bool?,\"prerollFrames\":n?,\"easeInFrames\":n?,\"easeOutFrames\":n?,\"postrollFrames\":n? (or …Seconds, or ticks as preroll/easeIn/easeOut/postroll)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.setResponsiveTime",
+      "label": "Responsive Design - Time",
+      "params": "{\"clip\":id?,\"introFrames\":n?,\"outroFrames\":n? (or introSeconds / outroSeconds, or ticks as intro / outro)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.pin",
+      "label": "Responsive Design - Position",
+      "params": "{\"clip\":id?,\"layer\":n|name?,\"to\":\"frame\"|\"none\"|layer index|layer name,\"edges\":[\"left\",\"top\",\"right\",\"bottom\"]|\"all\"=\"all\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.setCharStyle",
+      "label": "Character Style",
+      "params": "{\"clip\":id?,\"layer\":n|name?,\"start\":char=0,\"end\":char=len,\"style\":{\"font\":str,\"fontStyle\":str,\"size\":px,\"color\":\"#rrggbb\",\"bold\":bool,\"italic\":bool,\"underline\":bool,\"tracking\":n,\"baselineShift\":px,\"caps\":\"normal|all caps|small caps\"},\"clear\":bool? (remove styles from the range)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.upgradeCaption",
+      "label": "Upgrade Caption to Graphic",
+      "params": "{\"captions\":[id]? (default: the selected captions, else the one under the playhead)}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.upgradeToSourceGraphic",
+      "label": "Upgrade to Source Graphic",
+      "params": "{\"clip\":id?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.fonts.used",
+      "label": "List Fonts Used",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "masks.add",
+      "label": "Create Mask",
+      "params": "{\"clip\":id?,\"effect\":index|id?=\"opacity\",\"shape\":\"ellipse\"|\"polygon\"|\"bezier\",\"path\":[[x,y]…]|{vertices}?,\"center\":[x,y]?,\"size\":[w,h]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.remove",
+      "label": "Delete Mask",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.set",
+      "label": "Change Mask",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?,\"name\":str?,\"inverted\":bool?,\"mode\":\"none|add|subtract|intersect|lighten|darken|difference\"?,\"trackMethod\":\"position|positionRotation|positionScaleRotation\"?,\"feather\":px?,\"opacity\":pct?,\"expansion\":px?,\"path\":path?,\"time\":ticks?,\"merge\":key?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.moveVertex",
+      "label": "Move Mask Vertex",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?,\"vertex\":n,\"handle\":\"point\"|\"in\"|\"out\"?,\"to\":[x,y]?|\"delta\":[dx,dy]?,\"breakHandles\":bool?,\"merge\":key?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.translate",
+      "label": "Move Mask",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?,\"delta\":[dx,dy],\"merge\":key?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.addVertex",
+      "label": "Add Mask Vertex",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?,\"after\":n,\"at\":[x,y]}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.removeVertex",
+      "label": "Delete Mask Vertex",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?,\"vertex\":n}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.track",
+      "label": "Track Selected Mask",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?,\"direction\":\"forward\"|\"backward\"?,\"frames\":n?,\"method\":\"position|positionRotation|positionScaleRotation\"?,\"wait\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.toggleVertexSmooth",
+      "label": "Convert Mask Vertex",
+      "params": "{\"clip\":id?,\"effect\":index|id?,\"mask\":n?,\"vertex\":n}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.select",
+      "label": "Select Mask",
+      "params": "{\"clip\":id,\"effect\":index|id,\"mask\":n}|{\"none\":true}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "masks.list",
+      "label": "List Masks",
+      "params": "{\"clip\":id?,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.fontSizeUp",
+      "label": "Increase Font Size by One Unit",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.fontSizeDown",
+      "label": "Decrease Font Size by One Unit",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.fontSizeUp5",
+      "label": "Increase Font Size by Five Units",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.fontSizeDown5",
+      "label": "Decrease Font Size by Five Units",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.leadingUp",
+      "label": "Increase Leading by One Unit",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.leadingDown",
+      "label": "Decrease Leading by One Unit",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.leadingUp5",
+      "label": "Increase Leading by Five Units",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.leadingDown5",
+      "label": "Decrease Leading by Five Units",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignTextLeft",
+      "label": "Left align text",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignTextCenter",
+      "label": "Center align text",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.alignTextRight",
+      "label": "Right align text",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeLeft",
+      "label": "Nudge Selected Object to left by one",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeRight",
+      "label": "Nudge Selected Object to right by one",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeUp",
+      "label": "Nudge Selected Object up by one",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeDown",
+      "label": "Nudge Selected Object down by one",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeLeft5",
+      "label": "Nudge Selected Object to left by five",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeRight5",
+      "label": "Nudge Selected Object to right by five",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeUp5",
+      "label": "Nudge Selected Object up by five",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "graphics.nudgeDown5",
+      "label": "Nudge Selected Object down by five",
+      "params": "{}",
+      "enabledAtEmptySession": false
+    }
+  ]
+}

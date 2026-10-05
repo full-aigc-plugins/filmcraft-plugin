@@ -1,19 +1,21 @@
 {
-  "status": "planned-not-published",
+  "status": "implementation-in-progress",
   "package": "filmcraft-skills",
   "proposedRepository": "https://github.com/full-aigc-skills/filmcraft-skills",
   "skills": [
     "filmcraft-use",
-    "filmcraft-setup",
-    "filmcraft-inspect",
-    "filmcraft-media",
-    "filmcraft-timeline",
-    "filmcraft-audio",
-    "filmcraft-subtitles",
-    "filmcraft-preview",
-    "filmcraft-export",
-    "filmcraft-recover"
+    "filmcraft-cli",
+    "filmcraft-cli-setup",
+    "filmcraft-cli-project",
+    "filmcraft-cli-media",
+    "filmcraft-cli-timeline",
+    "filmcraft-cli-audio",
+    "filmcraft-cli-subtitles",
+    "filmcraft-cli-color",
+    "filmcraft-cli-motion",
+    "filmcraft-cli-export"
   ],
   "sourceOfTruth": "independent skills repository",
-  "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums"
+  "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums",
+  "suiteManifest": "https://github.com/full-aigc-skills/filmcraft-skills/blob/main/skill-suite.json"
 }

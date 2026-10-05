@@ -1,0 +1,238 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "mixer.addSubmix",
+      "label": "Add Audio Submix Track",
+      "params": "{\"name\":str?,\"channels\":\"Mono|Stereo|5.1\"?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.inspect",
+      "label": "Inspect Audio Track Mixer",
+      "params": "{\"time\":ticks?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "mixer.setStrip",
+      "label": "Track Mixer Settings",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"name\":str?,\"volumeDb\":f64?,\"pan\":f64?,\"muted\":bool?,\"solo\":bool?,\"recordArm\":bool?,\"soloSafe\":bool?,\"mode\":\"Off|Read|Latch|Touch|Write\"?,\"output\":\"Mix\"|\"S1\"?,\"inputMap\":\"Stereo|Left|Right|Swap|Mono\"?,\"channels\":\"Mono|Stereo|5.1\"?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.setValue",
+      "label": "Set Mixer Control",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":\"volume|pan|mute|send.<i>.level|fx.<slot>.<param>\",\"value\":f64,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.touch",
+      "label": "Touch Mixer Control",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":\"volume|pan|mute|send.<i>.level|fx.<slot>.<param>\",\"value\":f64,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.release",
+      "label": "Release Mixer Control",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":str?,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.recordStart",
+      "label": "Start Automation Pass",
+      "params": "{\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.recordStop",
+      "label": "Write Automation",
+      "params": "{\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clipMixer.set",
+      "label": "Audio Clip Mixer Adjust",
+      "params": "{\"clip\":id,\"effect\":\"volume\"|\"panner\",\"param\":\"level\"|\"balance\",\"value\":f64,\"keyframe\":bool?,\"time\":ticks?,\"begin\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clipMixer.setMode",
+      "label": "Audio Clip Mixer Automation Mode",
+      "params": "{\"track\":\"A1\"|id,\"mode\":\"Off|Read|Latch|Touch|Write\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clipMixer.touch",
+      "label": "Touch Clip Mixer Control",
+      "params": "{\"track\":\"A1\"|id,\"lane\":\"volume|pan\",\"value\":f64,\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "clipMixer.release",
+      "label": "Release Clip Mixer Control",
+      "params": "{\"track\":\"A1\"|id,\"lane\":\"volume|pan\",\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.deleteSubmix",
+      "label": "Delete Submix Track",
+      "params": "{\"strip\":\"S1\"|id}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.addInsert",
+      "label": "Add Track Effect",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"effect\":str,\"slot\":n?,\"postFader\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.removeInsert",
+      "label": "Remove Track Effect",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"slot\":n}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.setInsert",
+      "label": "Track Effect Settings",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"slot\":n,\"enabled\":bool?,\"postFader\":bool?,\"params\":{id:value}?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.addSend",
+      "label": "Add Send",
+      "params": "{\"strip\":\"A1\"|\"S1\"|id,\"target\":\"S1\"|id,\"levelDb\":f64?,\"preFader\":bool?,\"pan\":f64?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.setSend",
+      "label": "Send Settings",
+      "params": "{\"strip\":\"A1\"|\"S1\"|id,\"send\":n,\"levelDb\":f64?,\"pan\":f64?,\"preFader\":bool?,\"muted\":bool?,\"target\":\"S1\"?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.removeSend",
+      "label": "Remove Send",
+      "params": "{\"strip\":\"A1\"|\"S1\"|id,\"send\":n}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.setKeyframe",
+      "label": "Add Track Keyframe",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":str?,\"time\":ticks?,\"value\":f64}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.deleteKeyframe",
+      "label": "Delete Track Keyframe",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":str?,\"time\":ticks}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.moveKeyframe",
+      "label": "Move Track Keyframe",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":str?,\"time\":ticks,\"newTime\":ticks?,\"value\":f64?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.clearLane",
+      "label": "Clear Track Keyframes",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "mixer.writeAutomation",
+      "label": "Write Automation Points",
+      "params": "{\"strip\":\"A1\"|\"S1\"|\"Mix\"|id,\"lane\":str?,\"points\":[[ticks,value]],\"tolerance\":f64?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "essentialSound.inspect",
+      "label": "Inspect Essential Sound",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "essentialSound.setType",
+      "label": "Set Audio Type",
+      "params": "{\"clips\":[id]?,\"type\":\"dialogue|music|sfx|ambience\"}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "essentialSound.clearType",
+      "label": "Clear Audio Type",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "essentialSound.set",
+      "label": "Essential Sound Setting",
+      "params": "{\"clips\":[id]?,\"key\":\"repair.noise.on|repair.noise.amount|repair.humHz|clarity.eqPreset|creative.reverbPreset|ducking.reduceDb|volume.levelDb|mute|…\",\"value\":any,\"values\":{key:value}?,\"begin\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "essentialSound.applyPreset",
+      "label": "Apply Sound Preset",
+      "params": "{\"clips\":[id]?,\"preset\":str,\"type\":\"dialogue|music|sfx|ambience\"?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "essentialSound.savePreset",
+      "label": "Save Sound Preset",
+      "params": "{\"clips\":[id]?,\"name\":str}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "essentialSound.deletePreset",
+      "label": "Delete Sound Preset",
+      "params": "{\"name\":str,\"type\":\"dialogue|music|sfx|ambience\"?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "essentialSound.autoMatch",
+      "label": "Auto-Match Loudness",
+      "params": "{\"clips\":[id]?,\"target\":lufs?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "essentialSound.generateDucking",
+      "label": "Generate Ducking Keyframes",
+      "params": "{\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "audio.voiceover.settings",
+      "label": "Voice-Over Record Settings",
+      "params": "{\"source\":str?,\"inputChannel\":n?,\"name\":str?,\"countdownSoundCues\":bool?,\"prerollSeconds\":f64?,\"postrollSeconds\":f64?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "audio.voiceover.start",
+      "label": "Start Voice-over Recording",
+      "params": "{\"track\":\"A1\"|id?,\"time\":ticks?,\"preroll\":seconds?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "audio.voiceover.sync",
+      "label": "Sync Voice-over Capture",
+      "params": "{\"time\":ticks?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "audio.voiceover.stop",
+      "label": "Stop Voice-over Recording",
+      "params": "{\"time\":ticks?,\"dir\":str?,\"discard\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "audio.toggleScrubbing",
+      "label": "Toggle Audio During Scrubbing",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    }
+  ]
+}

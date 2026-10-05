@@ -1,0 +1,88 @@
+{
+  "schema": "craft-skill-command-evidence/v1",
+  "pluginId": "filmcraft",
+  "runtimeVersion": "0.2.0",
+  "upstreamRepository": "https://github.com/storytold/filmcraft",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "scope": "observed command catalogue, not capability or creative acceptance",
+  "commands": [
+    {
+      "id": "color.spaces",
+      "label": "List Colour Spaces",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "lumetri.presets",
+      "label": "List Lumetri Presets",
+      "params": "{\"folder\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "lumetri.applyPreset",
+      "label": "Apply Lumetri Preset",
+      "params": "{\"name\":str,\"clips\":[id]?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "lumetri.presetThumbnails",
+      "label": "Lumetri Preset Thumbnails",
+      "params": "{\"folder\":str?,\"names\":[str]?,\"width\":n=160,\"columns\":n=4,\"path\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "lut.import",
+      "label": "Import LUT…",
+      "params": "{\"path\":str,\"name\":str?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "lut.list",
+      "label": "List LUTs",
+      "params": "{}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "lut.remove",
+      "label": "Remove LUT",
+      "params": "{\"id\":str}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "lut.export",
+      "label": "Export LUT",
+      "params": "{\"lut\":\"lib:<id>\"|\"builtin:<id>\",\"path\":str,\"format\":\"cube\"|\"3dl\"?}",
+      "enabledAtEmptySession": true
+    },
+    {
+      "id": "lumetri.setInputLut",
+      "label": "Set Input LUT",
+      "params": "{\"clip\":id?,\"lut\":\"lib:<id>\"|\"builtin:<id>\"|\"\"?,\"path\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "lumetri.setLook",
+      "label": "Set Creative Look",
+      "params": "{\"clip\":id?,\"lut\":\"lib:<id>\"|\"builtin:<id>\"|\"\"?,\"path\":str?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "lumetri.applyMatch",
+      "label": "Apply Match",
+      "params": "{\"clip\":id?,\"referenceTime\":ticks?|\"referenceFrame\":n?|\"referenceTimecode\":str?,\"faceDetection\":bool=true}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "lumetri.setSection",
+      "label": "Toggle Lumetri Section",
+      "params": "{\"clip\":id?,\"section\":\"basic\"|\"creative\"|\"curves\"|\"wheels\"|\"hsl\"|\"vignette\",\"on\":bool?}",
+      "enabledAtEmptySession": false
+    },
+    {
+      "id": "scopes.read",
+      "label": "Read Lumetri Scopes",
+      "params": "{\"scopes\":[\"waveform\",\"parade\",\"histogram\",\"vectorscopeYuv\",\"vectorscopeHls\"]?,\"waveformType\":\"rgb|luma|yc|ycNoChroma\"?,\"paradeType\":\"rgb|yuv|rgbWhite\"?,\"colorSpace\":\"auto|601|709|2100\"?,\"clamp\":bool=true,\"columns\":n=8,\"peaks\":n=8,\"bins\":bool=true,\"scale\":0.5,\"time\":ticks?|\"frame\"|\"seconds\"|\"timecode\"}",
+      "enabledAtEmptySession": false
+    }
+  ]
+}

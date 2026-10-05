@@ -206,3 +206,7 @@ Current implementation: native deliveries include exchange-loss.json. The public
 ## Current host acceptance
 
 Snapshot `0.1.0-dev.2` has scoped installation/discovery and installed-entrypoint evidence. See [verification contracts and exclusions](FilmCraft-Host-Verification-Architecture.md). Full release tasks remain open; target design sections do not constitute implementation evidence.
+
+## CLI skill suite revision
+
+[FilmCraft CLI / setup / task suite](FilmCraft-Skill-Suite-Architecture.md)

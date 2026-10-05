@@ -24,7 +24,7 @@ FilmCraft: 可编辑视频剪辑与音画组织.
 | Skills source (planned) | full-aigc-skills/filmcraft-skills |
 | Native deliverable | .fcproj |
 | Current stage | documentation-baseline |
-| Metadata version | 0.1.0-dev.2 |
+| Metadata version | 0.1.0-dev.3 |
 
 
 ## 3. 品牌与版权边界

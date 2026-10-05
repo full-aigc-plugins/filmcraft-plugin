@@ -1,0 +1,50 @@
+{
+  "schema": "craft-caption-candidate-evidence/v1",
+  "date": "2026-10-06",
+  "result": "candidate-only-visual-and-audio-passed",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "candidateBinarySha256": "28ca9e640d6b4e8e27181ca9e05f57b5763a1ce0be72eb42d20dcdaa66b3ef9c",
+  "testFileSha256": "86e652cdd0c9f4f8f7ee708b0a80ea37ea9efd92856dd46ddf0d366f1f8af05f",
+  "officialRuntimeResult": "FAIL distinct Chinese strings rendered identical glyphs",
+  "rustRegression": {
+    "componentPassed": 36,
+    "exchangePassed": 13,
+    "targetedRedTests": 2
+  },
+  "previewReview": "Candidate preview and actual exported video frame with explicit burnCaptions=true display 新品上市，轻松剪辑。 without replacement boxes",
+  "export": {
+    "width": 640,
+    "height": 360,
+    "decodedFrames": 72,
+    "voiceCorrelation": 0.9999744911880156,
+    "samplesCompared": 144000,
+    "sha256": "c31b4a259870bf58b0f9115f653a2b905efbb533519e49092e44d8ecbf50b25d",
+    "frameSha256": "d494e1dc32a45ac0101443bb5d07bf3e6787347182fb2b5acce8f7cb630699ee",
+    "settings": {
+      "burnCaptions": true
+    }
+  },
+  "sourceProjectPreserved": true,
+  "installerLockChanged": false,
+  "scope": "Locally compiled native candidate with hash-checked relocated existing project; not published first-install acceptance",
+  "pending": [
+    "candidate fixed public release",
+    "cold single-skill installation of fixed release",
+    "full affected regression",
+    "model dispatch",
+    "GUI acceptance"
+  ],
+  "workflowFinding": "Existing workflow omitted burnCaptions; now defaults to true with enabled caption tracks, accepts explicit false and rejects nonboolean flags. Two added workflow tests failed before implementation; seven workflow tests passed after it.",
+  "workflowRegression": {
+    "tests": 37,
+    "passed": 36,
+    "skipped": 1,
+    "seconds": 81.369,
+    "skippedCase": "Chinese first-use against unpatched official runtime; separate explicit run failed glyph comparison as expected",
+    "flags": [
+      "CRAFT_TASK_FIRST_USE=1",
+      "CRAFT_LIVE_TEST=1",
+      "CRAFT_LIVE_SUITE=1"
+    ]
+  }
+}

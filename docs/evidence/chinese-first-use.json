@@ -1,0 +1,92 @@
+{
+  "schema": "craft-chinese-first-use/v1",
+  "date": "2026-10-06",
+  "result": "passed",
+  "platform": "darwin-arm64",
+  "skill": "filmcraft-cli-subtitles",
+  "skillSourceRef": "v0.1.0-dev.5",
+  "runtimeSourceRef": "runtime-v0.2.0-craft.1",
+  "runtimeSourceSha": "4afc891a4b6dd1f79f4817ec7f3e68ed142d8bc1",
+  "runtime": {
+    "schema": "craft-runtime-lock/v1",
+    "artifact": "filmcraft-cli",
+    "resolvedVersion": "0.2.0-craft.1",
+    "releaseRef": "runtime-v0.2.0-craft.1",
+    "repository": "https://github.com/full-aigc-skills/filmcraft-skills",
+    "upstreamRepository": "https://github.com/storytold/filmcraft",
+    "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+    "runtimeVariant": "maintained-caption-font-family",
+    "artifacts": {
+      "darwin-arm64": {
+        "url": "https://github.com/full-aigc-skills/filmcraft-skills/releases/download/runtime-v0.2.0-craft.1/filmcraft-cli-0.2.0-craft.1-macos-arm64.zip",
+        "archiveSha256": "99ad8fd7e926a1482793a3fadf737ef91fd1a168ba6c60284cff7dbe1089878f",
+        "binarySha256": "4bd79931912c591d1cb1b47690949512ffb4361c3ec4f57664024f9a4847ae38",
+        "provenanceSha256": "5177af4af0eac07d47fdd7fbfb4b3ed39cf324182141cd0235ee8aef55278cf0",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.1",
+        "evidenceScope": "candidate native tests; isolated public first-use acceptance pending"
+      }
+    },
+    "supportedPluginWorkflows": []
+  },
+  "installation": "Only subtitle skill copied into fresh .agents/skills; default fixed public URL; fresh runtime; no archive override or global CLI PATH",
+  "voice": "Tingting (中文（中国大陆）)",
+  "font": "Heiti SC",
+  "voiceCorrelation": 0.9999744911880156,
+  "sourceProjectSha256": "4df8ec6a27e5f69450503974495edda7ebeb06c4de09c9a0c6e6f9b26905d596",
+  "deliveryFileHashes": {
+    "plan.json": "f28ee9891f715d698acb181585e4da0f9c286734cc949b3d1e45d4a68dec2a6e",
+    "decode.txt": "bd1d5d73ba506fc691cfe5746621d1e57cb0e5cb483ab16121e539a87c204679",
+    "export-probe.json": "a1ed3393d1014e4d0006a07e291c86d4275de5375bbe3d3e27d704ebb855fea9",
+    "captions.json": "9de6f8f7f4c679983647efa95236a22c49de7a3c0bee34551b874f47d2b66fff",
+    "exchange-loss.json": "2563c6d0a4299e827bd2e646eda8076a657377ad121e471f4da1fe4c8206d60c",
+    "film.mp4": "e707b06d3e3938d0db2031c407bd9988257a8870672a1e2918ddb9d163e8c234",
+    "captions.srt": "b7fc340c37eb04e430c5309218ba66edba1ff916432823e54e4beedba80d185b",
+    "native.json": "d0035e12f77cf6a89692a168d0125bb983753a4bbc44aeab1d95bcdfa3791eea",
+    "voice.wav": "cb04da6932e6dd99cf27c48db5c1add473cd73a4187daa74d02cda5e87304c19",
+    "shot.mp4": "82709c2fe88a6100c5d1fc4d28d6ab90d3dd2224966fcc969591d63c07441fcd",
+    "frame-0000.png": "c5947255ceddb78183be8e98896df1a8505d85ca7bd73b5b95beee505b20caeb",
+    "frame-0001.png": "d592907072a5568bec4c92ea4c6c27657b5fd03b3b6133a657708f0896118baa",
+    "project.fcproj": "4df8ec6a27e5f69450503974495edda7ebeb06c4de09c9a0c6e6f9b26905d596",
+    "operations.json": "b67733e8cac6a5466d31daed11eaaffd655e5b21fc973ff907a25f7ef19c67cc"
+  },
+  "review": "Native PNG and frame 24 of actual H.264 export display 新品上市，轻松剪辑。 without missing-glyph boxes",
+  "publicFirstUse": {
+    "tests": 2,
+    "passed": 2,
+    "skipped": 0,
+    "seconds": 8.595
+  },
+  "fullRegression": {
+    "tests": 44,
+    "passed": 44,
+    "skipped": 0,
+    "seconds": 68.286,
+    "flags": [
+      "CRAFT_CN_FIRST_USE=1",
+      "CRAFT_TASK_FIRST_USE=1",
+      "CRAFT_LIVE_TEST=1",
+      "CRAFT_LIVE_SUITE=1"
+    ]
+  },
+  "testFiles": {
+    "test_chinese_first_use.py": "b624fa3da6174d5214fc71cf668e3c43a824196c973fe580ddf546d074441249",
+    "test_bootstrap.py": "879c9b23dfc2164e8ee3bb1399e00fbbf2fa2787b6c0792df3a4803d24e7b7d4",
+    "test_workflow.py": "f0643c2da8dd2bcf9fbba8180bb9ddec2a7c140d6979f4073846ca2401d7cf7a",
+    "test_runtime_builder.py": "4d77f3ba7bfe816eea61742f5927378f8b71feace269b745cb31bc6efb1e7cfc",
+    "test_task_skill_first_use.py": "48bde992fb65486fdb2dad61fd263648e588f2276d4bdc5a96659eab4bdfd4e4"
+  },
+  "proofScope": [
+    "archive/executable/provenance validation and version coexistence",
+    "Unicode/native/SRT exact subtitle times",
+    "burned movie pixels and distinct Chinese glyphs",
+    "decoded spoken audio correlation",
+    "local caption revision preserves source project and audio tracks",
+    "eight focused task skill operations"
+  ],
+  "limits": [
+    "synthetic footage and installed system voice; not final creative client acceptance",
+    "macOS arm64 only; Chinese font and voice are test prerequisites",
+    "no GUI or model-dispatch acceptance",
+    "ArtCraft currently published bundle uses prior FilmCraft source and requires update"
+  ]
+}

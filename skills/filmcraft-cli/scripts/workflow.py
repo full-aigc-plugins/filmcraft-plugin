@@ -99,8 +99,13 @@ def validate(plan):
         rate = doc['frameRate']
         if set(rate) != {'num', 'den'} or any(type(rate[k]) is not int or rate[k] <= 0 for k in rate) or not 1 <= Fraction(rate['num'], rate['den']) <= 240:
             raise ValueError('invalid_frame_rate')
-    if set(plan.get('export', {})) - {'audioRequired'}:
+    if set(plan.get('export', {})) - {'audioRequired', 'burnCaptions'} or any(type(value) is not bool for value in plan.get('export', {}).values()):
         raise ValueError('invalid_export')
+
+
+def export_settings(plan, caption_state):
+    """有可见字幕轨时默认烧录；仅接受显式布尔值关闭烧录。"""
+    return {'burnCaptions': plan.get('export', {}).get('burnCaptions', any(track['enabled'] for track in caption_state['tracks']))}
 
 
 def run(cli, argv, cwd=None):
@@ -287,7 +292,7 @@ def execute(plan, output, runtime_home=None, source=None):
                     raise ValueError('sequence_roundtrip_mismatch')
                 for index, time in enumerate(plan.get('frames', ['0'])):
                     run(cli, ['--project', str(output / 'project.fcproj'), 'render', '--seconds', str(ticks(time) / TICKS), '--out', str(output / f'frame-{index:04d}.png')])
-                run(cli, ['--project', str(output / 'project.fcproj'), 'export', str(output / 'film.mp4'), '--format', 'h264'])
+                run(cli, ['--project', str(output / 'project.fcproj'), 'export', str(output / 'film.mp4'), '--format', 'h264', '--settings', json.dumps(export_settings(plan, captions))])
                 exported = json.loads(run(cli, ['probe', str(output / 'film.mp4')]))
                 if not exported.get('video') or any(exported['video'][key] != sequence['settings'][key] for key in ('width', 'height')) or exported['video']['frame_rate'] != sequence['settings']['frame_rate']:
                     raise ValueError('export_video_mismatch')

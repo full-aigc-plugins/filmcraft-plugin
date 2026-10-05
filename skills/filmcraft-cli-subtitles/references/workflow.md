@@ -1,8 +1,8 @@
 # 原生剪辑计划 / Native editing plans
 
-`workflow.py` 是可独立安装的剪辑入口。它自动安装锁定的官方 CLI，在持续 MCP 会话中导入、编排、添加字幕，调用原生 Project Manager 收集素材，再重新打开 `.fcproj`、渲染预览并导出 H.264。运行入口只依赖 Python 3.11+ 和自动安装的 CLI；当前支持 macOS arm64。
+`workflow.py` 是可独立安装的剪辑入口。它自动安装锁定的 CLI，在持续 MCP 会话中导入、编排、添加字幕，调用原生 Project Manager 收集素材，再重新打开 `.fcproj`、渲染预览并导出 H.264。运行入口只依赖 Python 3.11+ 和自动安装的 CLI；当前支持 macOS arm64。
 
-The helper bootstraps the pinned official CLI, imports and arranges media in a persistent MCP session, adds captions, collects dependencies using the native Project Manager, reopens the native project, renders previews and exports H.264. The helper requires Python 3.11+ and the automatically installed CLI; runtime support currently covers macOS arm64.
+The helper bootstraps the pinned CLI, imports and arranges media in a persistent MCP session, adds captions, collects dependencies using the native Project Manager, reopens the native project, renders previews and exports H.264. The helper requires Python 3.11+ and the automatically installed CLI; runtime support currently covers macOS arm64.
 
 ## 从已有素材制作短片 / Create from existing media
 
@@ -67,3 +67,5 @@ The output directory must not exist. Native collection targets the final directo
 当前未覆盖完整 Harness 的任务账本、恢复状态机、宿主安装、更多导出格式和真实创意质量验收。技术测试通过不能代替这些验收。
 
 The full Harness ledger, recovery state machine, plugin-host installation, additional export formats and creative review remain separate acceptance work.
+
+有可见字幕轨时默认传入 `burnCaptions=true`，避免预览有字幕而成片遗漏。`export.burnCaptions=false` 显式选择仅工程/侧车字幕；两个导出布尔标志都拒绝字符串和数字。

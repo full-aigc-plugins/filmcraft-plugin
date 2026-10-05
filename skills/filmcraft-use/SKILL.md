@@ -1,6 +1,6 @@
 ---
 name: filmcraft-use
-description: 使用 FilmCraft 编辑可重新打开的 fcproj 视频工程，编排素材、音频与字幕并导出预览或成片；首次使用时安装并检查官方 CLI。
+description: 使用 FilmCraft 编辑可重新打开的 fcproj 视频工程，编排素材、音频与字幕并导出预览或成片；首次使用时安装并检查锁定 CLI。
 license: Apache-2.0
 ---
 
@@ -11,7 +11,7 @@ license: Apache-2.0
 ## 首次使用
 
 1. 定位本 `SKILL.md` 的实际目录。需要 Python 3.11+；使用该目录下的 `scripts/bootstrap.py`，不要假设当前工作目录就是技能目录。
-2. 用户已要求安装或完成创作且现有授权涵盖必要依赖时，直接运行安装入口；安装范围是用户数据目录，不需要 sudo。下载固定官方制品并校验摘要，失败即停止，不删除隔离属性、不改 shell 配置。
+2. 用户已要求安装或完成创作且现有授权涵盖必要依赖时，直接运行安装入口；安装范围是用户数据目录，不需要 sudo。下载固定发布制品并校验摘要，失败即停止，不删除隔离属性、不改 shell 配置。
 
 将 `SKILL_DIR` 设置为宿主实际加载的本 `SKILL.md` 所在目录（绝对路径）。用户级安装可能位于 `~/.agents/skills/filmcraft-use`，项目级可能位于 `.agents/skills/filmcraft-use`，插件可能位于其 `skills/filmcraft-use` 或宿主缓存目录；以实际加载路径为准，不按当前工作目录猜测，也不搜索后随意选择重复版本。技能目录与 CLI 的用户数据安装目录是两个独立位置。
 
@@ -22,7 +22,7 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 
 安装器返回 JSON `executable`，后续将其作为 argv 的第一个元素。当前锁定平台为 macOS arm64；未支持的平台返回 `unsupported_platform`，不要安装别的平台制品。
 
-安装位置默认 `~/.local/share/craft-runtimes`，可用 `--runtime-home` 或 `CRAFT_RUNTIME_HOME` 指定。重复调用校验并复用同版运行时，不联网升级。`--archive` 接受已下载的官方 ZIP，但不跳过摘要检查。
+安装位置默认 `~/.local/share/craft-runtimes`，可用 `--runtime-home` 或 `CRAFT_RUNTIME_HOME` 指定。重复调用校验并复用同版运行时，不联网升级。`--archive` 接受已下载的锁定 ZIP，但不跳过摘要检查。
 
 3. 执行返回路径的 `--version` 和 `help`。本工具用 `help`，不是 `--help`。根据请求执行 `commands <关键词> --json` 与 `describe <命令ID>`，以当前版本返回的参数为准。
 

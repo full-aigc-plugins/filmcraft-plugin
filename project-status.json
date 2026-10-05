@@ -13,7 +13,12 @@
     "1.9": "docs/evidence/skill-suite.json",
     "1.10": "docs/evidence/task-skill-first-use.json",
     "1.11": "docs/evidence/installed-skill-paths.json",
-    "1.12": "docs/evidence/installed-skill-paths.json"
+    "1.12": "docs/evidence/installed-skill-paths.json",
+    "4.19": "docs/evidence/chinese-first-use.json",
+    "4.20": "docs/evidence/chinese-first-use.json",
+    "4.21": "docs/evidence/chinese-first-use.json",
+    "4.22": "docs/evidence/chinese-first-use.json"
   },
-  "hostValidationEvidence": "docs/evidence/codex-current-release-20261006.json"
+  "hostValidationEvidence": "docs/evidence/codex-current-release-20261006.json",
+  "hostValidationStatus": "pending-current-release"
 }

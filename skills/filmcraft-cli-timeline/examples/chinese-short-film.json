@@ -1,0 +1,91 @@
+{
+  "document": {
+    "name": "中文配音短片",
+    "width": 640,
+    "height": 360,
+    "frameRate": {
+      "num": 24,
+      "den": 1
+    }
+  },
+  "operations": [
+    {
+      "command": "asset.import",
+      "params": {
+        "asset": "shot"
+      },
+      "as": "shot"
+    },
+    {
+      "command": "asset.import",
+      "params": {
+        "asset": "voice"
+      },
+      "as": "voice"
+    },
+    {
+      "command": "timeline.place",
+      "params": {
+        "item": {
+          "$ref": "shot.item"
+        },
+        "track": "V1",
+        "time": "0",
+        "sourceIn": "0",
+        "duration": "762048000000",
+        "insert": false
+      },
+      "as": "shotClip"
+    },
+    {
+      "command": "timeline.place",
+      "params": {
+        "item": {
+          "$ref": "voice.item"
+        },
+        "track": "A1",
+        "audioTrack": "A1",
+        "time": "0",
+        "sourceIn": "0",
+        "duration": "762048000000",
+        "insert": false
+      },
+      "as": "voiceClip"
+    },
+    {
+      "command": "captions.newTrack",
+      "params": {
+        "format": "Subtitle",
+        "name": "中文字幕",
+        "language": "zh-CN"
+      }
+    },
+    {
+      "command": "captions.setStyle",
+      "params": {
+        "track": "C1",
+        "font": "Heiti SC",
+        "size": 32,
+        "color": "#ffffff",
+        "background": true
+      }
+    },
+    {
+      "command": "caption.add",
+      "params": {
+        "track": "C1",
+        "text": "新品上市，轻松剪辑。",
+        "startTicks": "0",
+        "durationTicks": "508032000000"
+      },
+      "as": "caption"
+    }
+  ],
+  "frames": [
+    "254016000000",
+    "635040000000"
+  ],
+  "export": {
+    "audioRequired": true
+  }
+}

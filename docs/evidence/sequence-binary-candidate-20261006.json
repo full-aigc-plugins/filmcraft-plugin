@@ -1,0 +1,38 @@
+{
+  "schema": "craft-native-sequence-binary-candidate/v1",
+  "result": "passed",
+  "archiveSha256": "273ffcd5277204131dd0a8b382ae69924f98d6f8dce91d8f5d543429b50639e8",
+  "binarySha256": "c55e2bd129c00d0e280836e16e3fc307d76d54560e274686bcf5df278a01a988",
+  "patchSha256": "a6aafec196f2cda86eae9940b9688bedec9c32b2cd86b084ee705054ec2eb9b2",
+  "frameCount": 12,
+  "sampledFrames": [
+    0,
+    6,
+    11
+  ],
+  "renderSha256": [
+    "7aa9c1e6ff51b5598f2a24e0a085cf87638a6417742e35854d414969270a2e40",
+    "f9ebc6c0bae74b732ac9129974fd210c2931172adee7bda6533e5cd3ab787cd3",
+    "f774b08a0048eb3fe6e31c936748e6463e212553738dc0caf6586187f2f68e3e"
+  ],
+  "projectSha256": "8fe2c391a72d6b17b7fb0878122fb14cfd0e9e55ed98c247c431d0cc5c5b42f7",
+  "sourceBytesPreserved": true,
+  "sourceDirectoryUnavailable": true,
+  "dynamicOpaqueAndPartialAlphaChecks": true,
+  "scope": "private maintained binary; native MCP collection and rendering; not public installation, independent workflow, export or Art acceptance",
+  "testResult": {
+    "passed": 1,
+    "seconds": 0.497,
+    "python": "3.13.5",
+    "logSha256": "9bb2f65586e12023b915a14da9292e57a8b3042eec5fa6c05b19c1cee049a4a0"
+  },
+  "build": {
+    "runtimeVersion": "0.2.0-craft.2",
+    "platform": "darwin-arm64",
+    "archive": "filmcraft-cli-0.2.0-craft.2-macos-arm64.zip",
+    "archiveSha256": "273ffcd5277204131dd0a8b382ae69924f98d6f8dce91d8f5d543429b50639e8",
+    "binarySha256": "c55e2bd129c00d0e280836e16e3fc307d76d54560e274686bcf5df278a01a988",
+    "versionOutput": "filmcraft-cli 0.2.0-craft.2",
+    "provenanceSha256": "e1603e7224dd3af38d65fd58b82c4b64e24eb928d5c35e705dbf81f59ba08325"
+  }
+}

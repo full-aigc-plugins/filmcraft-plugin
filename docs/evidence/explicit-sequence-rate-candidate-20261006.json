@@ -1,0 +1,54 @@
+{
+  "schema": "filmcraft-explicit-sequence-rate-candidate/v1",
+  "result": "PASS",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "patchSha256": "98df1713979ba953067ec90d1ee52acc13ed568cd602ddcebd69bc8a3385612d",
+  "red": {
+    "observedFrameRate": {
+      "num": 30000,
+      "den": 1001
+    },
+    "expectedFrameRate": {
+      "num": 12,
+      "den": 1
+    },
+    "logSha256": "00444ef63d4ac6a5575b1e1b1ef7dcc4867e4e8bede2c32e86a595ca7606ccee"
+  },
+  "target": {
+    "tests": 4,
+    "pass": 4,
+    "includesSaveAndReopen": true,
+    "logSha256": "59eca09ee2899d2f9276654875329c9393d6c1cc2cd7be10e49d3b9e4d6006ae"
+  },
+  "nativeEngine": {
+    "pass": 281,
+    "ignored": 3,
+    "durationSeconds": 16.92,
+    "logSha256": "9fe358d9b17e110147c39f0d41c3e0a7b9afa4e46f1fa86534d8a8631d75adeb"
+  },
+  "sourceDefault": {
+    "tests": 53,
+    "pass": 37,
+    "skipped": 16,
+    "durationSeconds": 11.379
+  },
+  "builderBoundary": {
+    "pass": 4
+  },
+  "assertions": [
+    "12-frame duration stays one second",
+    "real frame six remains correct",
+    "saved native metadata and decoded frames retain explicit rate",
+    "default media preference is unchanged",
+    "invalid rational rates rejected",
+    "legacy image-sequence tests retain behavior"
+  ],
+  "excluded": [
+    "completed craft.2 binary build",
+    "public runtime installation",
+    "independent Film sequence workflow",
+    "Effect-to-Film dynamic compositing",
+    "Art mixed sequence artifact",
+    "full V1 creative/model/GUI/production acceptance"
+  ]
+}

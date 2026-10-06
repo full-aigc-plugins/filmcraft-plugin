@@ -1,0 +1,47 @@
+{
+  "schema": "craft-native-sequence-collection-candidate/v1",
+  "date": "2026-10-06",
+  "status": "native-component-passed-not-distributed",
+  "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+  "patchSha256": "a6aafec196f2cda86eae9940b9688bedec9c32b2cd86b084ee705054ec2eb9b2",
+  "red": {
+    "test": "collect_image_sequence_preserves_all_frames_and_reopens",
+    "expectedFailure": "Project Manager reports no sequenceFiles and copies only the first frame",
+    "exitCode": 101,
+    "logSha256": "d02a135bd74209220d2549a99584c684d3b6d88e3fdd9cae8d9c808ad5f05da4"
+  },
+  "green": {
+    "sequenceTestsPassed": 7,
+    "engineTestsPassed": 284,
+    "engineTestsIgnored": 3,
+    "engineSeconds": 13.04,
+    "sequenceLogSha256": "b5f835c21e626ee45a682a6e6c5a9329756de17268b6622e35b36870d17d436f",
+    "engineLogSha256": "a18772b3e2d44bdf8bd30513d58a211baaac6f0c80b566df6a28903eaf7d5669",
+    "builderBoundaryTestsPassed": 4,
+    "pythonTestsPassed": 37,
+    "pythonTestsSkipped": 17,
+    "pythonSeconds": 5.817,
+    "pythonLogSha256": "a5cca7aef46f35697e8178ee6ca0a5f4cb10684fef3390f3ddefe73f61215359"
+  },
+  "assertions": [
+    "all twelve frames copied byte-for-byte",
+    "first frame remains native media entry",
+    "source directory unavailable after collection",
+    "frame six decodes after native project reopen",
+    "explicit rate and one-second duration preserved",
+    "same-named sequences isolated by item id",
+    "RGBA including partial alpha preserved",
+    "missing intermediate or final frame rejected before destination creation",
+    "existing file collection and consolidation regression included in full engine suite"
+  ],
+  "exclusions": [
+    "current public runtime lock remains 0.2.0-craft.1",
+    "previous craft.2 candidate archive predates collection patch and is not a current candidate",
+    "Film independent workflow sequence contract and dynamic compositing pending",
+    "Art mixed sequence dependency tracking pending",
+    "full creative acceptance pending",
+    "public cold installation not verified; native binary evidence is separate"
+  ],
+  "researchSourceModified": false,
+  "binaryEvidence": "sequence-binary-candidate-20261006.json"
+}

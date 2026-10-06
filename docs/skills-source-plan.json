@@ -19,5 +19,5 @@
   "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums",
   "suiteManifest": "https://github.com/full-aigc-skills/filmcraft-skills/blob/main/skill-suite.json",
   "sourceRef": "v0.1.0-dev.16",
-  "sourceSha": "7340f3397dab47222198d30f986b730faeedfe28"
+  "sourceSha": "400b9bde7e9fbd6c52866a0d96fb8e54800a7f82"
 }

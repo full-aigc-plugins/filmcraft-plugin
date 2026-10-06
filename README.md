@@ -55,7 +55,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.17 |
+| Metadata version | 0.1.0-dev.18 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / 0.1.0-dev.16 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |

@@ -36,7 +36,8 @@
     "4.37": "docs/evidence/codex-effectcraft9-filmcraft10-dynamic-first-use-20261006.json",
     "4.38": "docs/evidence/motion-lut-workflow-candidate-20261006.json",
     "4.39": "docs/evidence/motion-lut-workflow-candidate-20261006.json",
-    "4.41": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json"
+    "4.41": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json",
+    "4.40": "docs/evidence/codex-artcraft69-lut-motion-first-use-20261006.json"
   },
   "hostValidationEvidence": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json",
   "hostValidationStatus": "bounded-installed-native-motion-lut-first-use-passed",

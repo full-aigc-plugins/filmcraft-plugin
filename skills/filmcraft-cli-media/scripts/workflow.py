@@ -24,7 +24,8 @@ def exchange_report(root,outputs,warnings):
 ALLOWED = {'asset.import', 'timeline.place', 'timeline.trim', 'timeline.move',
            'timeline.setTrack', 'timeline.select', 'clip.replaceFromBin',
            'captions.newTrack', 'captions.setStyle', 'caption.add',
-           'captions.setText', 'captions.delete', 'captions.setTrack', 'mixer.setStrip'}
+           'captions.setText', 'captions.delete', 'captions.setTrack', 'mixer.setStrip',
+           'effects.toggleAnimation', 'effects.setParam', 'lumetri.setInputLut'}
 
 def sha(path):
     with Path(path).open('rb') as stream:
@@ -73,11 +74,30 @@ def precise(value):
     return value
 
 
-def validate(plan):
+def explicit_clip(value):
+    return ((type(value) is int and 0 < value <= 2**64-1)
+            or (isinstance(value, dict) and set(value) == {'$ref'}
+                and isinstance(value['$ref'], str)
+                and re.fullmatch(r'[a-zA-Z][\w-]*(?:\.[a-zA-Z0-9_-]+)+', value['$ref']) is not None))
+
+
+def finite_parameter(value):
+    if type(value) in (int, float):
+        return abs(value) <= sys.float_info.max and math.isfinite(value)
+    if type(value) in (str, bool):
+        return True
+    return isinstance(value, list) and bool(value) and all(finite_parameter(v) for v in value)
+
+
+def validate(plan, prior_assets=None):
     if not isinstance(plan, dict) or not isinstance(plan.get('operations'), list):
         raise ValueError('operations_required')
+    if not isinstance(plan.get('assets', {}), dict):
+        raise ValueError('invalid_assets')
     aliases = set()
     for item in plan['operations']:
+        if not isinstance(item, dict):
+            raise ValueError('invalid_operation')
         if item.get('command') not in ALLOWED:
             raise ValueError('unsupported_command')
         alias = item.get('as')
@@ -89,6 +109,37 @@ def validate(plan):
             aliases.add(alias)
         if not isinstance(item.get('params', {}), dict):
             raise ValueError('invalid_params')
+        if item['command'] in ('effects.toggleAnimation', 'effects.setParam'):
+            params = item.get('params', {})
+            required = {'clip', 'effect', 'param'}
+            allowed = required | {'mask'}
+            if item['command'] == 'effects.setParam':
+                required |= {'value'}; allowed |= {'value', 'time'}
+            effect = params.get('effect')
+            if (not required <= set(params) or set(params)-allowed
+                    or not explicit_clip(params.get('clip'))
+                    or not ((isinstance(effect, str) and effect.strip()) or (type(effect) is int and effect >= 0))
+                    or not isinstance(params.get('param'), str) or not params['param'].strip()
+                    or ('mask' in params and (type(params['mask']) is not int or params['mask'] < 0))
+                    or ('value' in required and not finite_parameter(params['value']))):
+                raise ValueError('invalid_effect_params')
+            if 'time' in params:
+                ticks(params['time'])
+        if item['command'] == 'lumetri.setInputLut':
+            params = item.get('params', {})
+            if (set(params) != {'clip', 'asset'} or not explicit_clip(params.get('clip'))
+                    or not isinstance(params.get('asset'), str)):
+                raise ValueError('invalid_lut_params')
+            registered = {**(prior_assets or {}), **plan.get('assets', {})}.get(params['asset'])
+            if registered is None:
+                if prior_assets is not None or 'expectedProjectSha256' not in plan:
+                    raise ValueError('registered_lut_required')
+            elif not isinstance(registered, dict) or registered.get('kind') != 'lut':
+                raise ValueError('registered_lut_required')
+        if item['command'] == 'asset.import':
+            registered = {**(prior_assets or {}), **plan.get('assets', {})}.get(item.get('params', {}).get('asset'))
+            if isinstance(registered, dict) and registered.get('kind') == 'lut':
+                raise ValueError('lut_is_not_media')
         if item['command'] == 'mixer.setStrip':
             params = item.get('params', {})
             # 首版仅允许显式音轨的静态增益，避免混入录音或总线重路由操作。
@@ -103,7 +154,7 @@ def validate(plan):
         raise ValueError('invalid_assets')
     for asset in plan.get('assets',{}).values():
         if (not isinstance(asset,dict) or set(asset)-{'path','sha256','kind'}
-                or asset.get('kind') not in (None,'image-sequence')):
+                or asset.get('kind') not in (None,'image-sequence','lut')):
             raise ValueError('invalid_asset_registration')
     for time in plan.get('frames', ['0']):
         ticks(time)
@@ -153,6 +204,7 @@ def execute(plan, output, runtime_home=None, source=None):
         bindings = prior['bindings']
     elif 'document' not in plan:
         raise ValueError('document_required')
+    validate(plan, prior.get('assets', {}))
     installed = load_module('bootstrap').install(
         json.loads(Path(__file__).with_name('runtime.lock.json').read_text()),
         runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
@@ -168,8 +220,10 @@ def execute(plan, output, runtime_home=None, source=None):
                 raise ValueError('invalid_asset')
             if kind == 'image-sequence':
                 return load_module('sequence_assets').copy_sequence(path, digest, media / alias)
-            if kind is not None:
+            if kind not in (None, 'lut'):
                 raise ValueError('unsupported_asset_kind')
+            if kind == 'lut' and Path(path).suffix.lower() not in ('.cube', '.3dl'):
+                raise ValueError('unsupported_lut_format')
             path = Path(path)
             if path.is_symlink() or not path.is_file() or sha(path) != digest:
                 raise ValueError('asset_digest_mismatch: ' + alias)
@@ -203,6 +257,8 @@ def execute(plan, output, runtime_home=None, source=None):
                 assets[alias] = {'kind':'image-sequence', 'sha256':asset['sha256'],
                                 'sequenceMetadata':{k:v for k,v in descriptor.items() if k!='frames'},
                                 'sequenceStaging':str(target), 'staging':str(target.parent/descriptor['frames'][0]['location'])}
+            elif asset.get('kind') == 'lut':
+                assets[alias] = {'kind':'lut', 'sha256':asset['sha256'], 'staging':str(target)}
             else:
                 probe = json.loads(run(cli, ['probe', str(target)]))
                 assets[alias] = {'sha256': asset['sha256'], 'probe': precise(probe), 'staging': str(target)}
@@ -253,6 +309,10 @@ def execute(plan, output, runtime_home=None, source=None):
             for operation in plan['operations']:
                 identifier = operation['command']
                 params = resolve(operation.get('params', {}), bindings)
+                if identifier in ('effects.setParam', 'effects.toggleAnimation'):
+                    validate({'operations':[{'command':identifier, 'params':params}]})
+                if identifier == 'lumetri.setInputLut' and not (type(params['clip']) is int and 0 < params['clip'] <= 2**64-1):
+                    raise ValueError('invalid_lut_params')
                 if identifier == 'asset.import':
                     asset = assets[params['asset']]
                     if 'item' in asset:
@@ -272,6 +332,9 @@ def execute(plan, output, runtime_home=None, source=None):
                     if asset.get('kind')=='image-sequence':
                         asset['probe'] = sequence_probe(asset)
                     result = {'item': asset['item']}
+                elif identifier == 'lumetri.setInputLut':
+                    asset = assets[params['asset']]
+                    result = command(identifier, {'clip':params['clip'], 'path':asset['staging']})
                 elif identifier == 'timeline.place':
                     asset = next((x for x in assets.values() if x.get('item') == params.get('item')), None)
                     if not asset or any(k in params for k in ('seconds', 'frame')):
@@ -300,6 +363,8 @@ def execute(plan, output, runtime_home=None, source=None):
                         fonts = command('fonts.list', {'system': True})
                         if params['font'] not in {x['family'] for x in fonts}:
                             raise ValueError('missing_font: ' + params['font'])
+                    if identifier == 'effects.setParam' and 'time' in params:
+                        params['time'] = ticks(params['time'])
                     if identifier == 'timeline.trim':
                         value = params.get('delta')
                         if not isinstance(value, str) or not re.fullmatch(r'-?(0|[1-9][0-9]*)', value):
@@ -343,6 +408,15 @@ def execute(plan, output, runtime_home=None, source=None):
                 collected = command('file.projectManager', {'destination': str(output), 'mode': 'collect', 'projectName': 'project', 'excludeUnused': False, 'includeProxies': False, 'wait': True})
                 by_item = {x['item']: x for x in collected['files']}
                 for alias, asset in assets.items():
+                    if asset.get('kind') == 'lut':
+                        directory = output / 'luts'; directory.mkdir(exist_ok=True)
+                        target = directory / (alias + Path(asset['staging']).suffix.lower())
+                        shutil.copyfile(asset['staging'], target)
+                        if sha(target) != asset['sha256']:
+                            raise ValueError('collected_asset_mismatch')
+                        asset['path'] = str(target.relative_to(output))
+                        del asset['staging']
+                        continue
                     if 'item' not in asset:
                         raise ValueError('asset_not_imported: ' + alias)
                     entry = by_item[asset['item']]; target = Path(entry['to'])
@@ -411,6 +485,7 @@ def main():
     parser.add_argument('--source', type=Path)
     parser.add_argument('--runtime-home', type=Path)
     parser.add_argument('--asset', action='append', default=[], help='name=/absolute/path; calculates input digest')
+    parser.add_argument('--lut-asset', action='append', default=[], help='name=/absolute/path/grade.cube; registers hashed LUT dependency')
     parser.add_argument('--sequence-asset', action='append', default=[], help='name=/absolute/path/sequence.json; registers complete image sequence')
     args = parser.parse_args()
     try:
@@ -419,6 +494,9 @@ def main():
             alias, path = assignment.split('=', 1)
             kind = plan.get('assets',{}).get(alias,{}).get('kind')
             plan.setdefault('assets', {})[alias] = dict({'path': path, 'sha256': sha(path)}, **({'kind':kind} if kind else {}))
+        for assignment in args.lut_asset:
+            alias, path = assignment.split('=', 1)
+            plan.setdefault('assets', {})[alias] = {'kind':'lut','path':path,'sha256':sha(path)}
         for assignment in args.sequence_asset:
             alias, path = assignment.split('=', 1)
             plan.setdefault('assets', {})[alias] = {'kind':'image-sequence','path':path,'sha256':sha(path)}

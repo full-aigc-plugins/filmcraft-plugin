@@ -91,3 +91,30 @@ By default audioRequired is true. A native timeline audio clip must reference re
 Register a sequence with `kind: image-sequence`, the absolute `sequence.json` path and its SHA-256, or `--sequence-asset alias=/absolute/path/sequence.json`. Registering only the first frame is insufficient. The workflow verifies the complete RGBA frame set and rational timebase, imports a native sequence, checks actual native media properties, collects every frame and the manifest, and relinks from packaged frames after relocation. Nested frame hashes are included in delivery `files`; the asset path points to the packaged manifest.
 
 This candidate needs the maintained CLI with explicit rate, complete collection and sequence relinking fixes. The public installer lock is unchanged. An unsupported native CLI must fail instead of treating the sequence as a still. Fixed release, cold installation and Art mixed acceptance remain open.
+
+## 运动与 LUT 计划 / Motion and LUT plans
+
+候选源码工作流支持 `effects.toggleAnimation`、`effects.setParam` 和 `lumetri.setInputLut`。不可变插件 dev.10 尚未包含此映射；固定发布与 Art 联调验收保持开放。
+
+The candidate source workflow accepts these three commands. Immutable plugin dev.10 does not yet contain this mapping; fixed-release installation and Art integration remain pending.
+
+```bash
+python3 -I -B "$SKILL_DIR/scripts/workflow.py" \
+  "$SKILL_DIR/examples/motion-lut-film.json" \
+  --asset shot=/absolute/path/shot.mp4 \
+  --asset voice=/absolute/path/voice.wav \
+  --lut-asset grade=/absolute/path/grade.cube \
+  --output /absolute/path/film-motion-v1
+```
+
+`effects.setParam` 必须显式提供 `clip`、`effect`、`param`、`value`；可选 `mask` 为非负整数，`time` 为十进制 ticks 字符串。目标片段可用原生 ID 或 `$ref`；数值必须有限。具体参数类型、效果是否存在及关键帧时间语义由固定原生命令检查。示例对应从序列零点开始的片段；其他起点场景需要单独核验。
+
+Set parameters with an explicit clip, effect, property and finite value. Optional mask indexes are nonnegative integers; keyframe times are decimal tick strings. Native commands check property types and effect existence. The example covers a clip starting at sequence zero; other timing layouts need their own verification.
+
+`toggleAnimation` 是切换操作，不能自动重放；修订已有动画应直接 `setParam` 更新指定时刻。`lumetri.setInputLut` 严格使用 `{"clip":ID,"asset":"grade"}`，不接受任意路径。LUT 通过 `--lut-asset` 或 `assets` 中 `kind: lut`、`path`、`sha256` 登记，仅支持 `.cube`／`.3dl`；不能按媒体导入。原生 CLI 解析并内嵌内容，交付仍保留 `luts/` 依赖及摘要。
+
+Toggle is not idempotent: do not replay it automatically. Update existing animation with setParam instead. LUT assignment uses a registered asset alias, not an arbitrary native path. Register a .cube or .3dl dependency using --lut-asset or kind: lut with path and sha256; LUTs cannot be imported as media. The native CLI embeds parsed LUT text while the package retains the hashed LUT file.
+
+修订通过 `--source` 与 `expectedProjectSha256`，可直接引用旧包中的 LUT 名称。输出新目录，原包不覆盖；坏摘要、未知字段、缺少目标、非有限数值或未登记 LUT 拒绝。重开、预览、成片解码、声音／字幕保全分别验证。
+
+Revisions may reuse the prior LUT alias with --source and expectedProjectSha256. Save to a new directory and preserve the source. Invalid digests, unknown fields, missing targets, nonfinite values or unregistered LUTs fail. Verify project reopening, previews, movie decoding and audio/caption preservation separately.

@@ -134,3 +134,5 @@
 - [x] 4.34 [FC-DM-001-SEQUENCE-RELINK] 候选源码工作流接入完整序列登记／原生导入／全帧收集／移动修订，复现并修复原生序列被按静态首帧重关联的缺陷。真实候选 CLI 工作流与独立 MP4 解码 1 项通过，普通公开原生回归 1 项通过，原生 285 项通过／三项忽略；源包与技能字节不变，坏帧拒绝。证据 docs/evidence/sequence-workflow-candidate-20261006.json。安装结果为已校验候选注入，公开冷安装、固定发行和 Art 联调仍由 4.31 验收。
 
 - [x] 4.35 [FC-DM-001-SEQUENCE] 发布公开原生 craft.2 并更新十一项源码技能锁及当前命令目录；真实安装器从空目录下载后完成序列导入、全帧收集、移动修订和坏帧拒绝；双领域实际 Effect 动画交接、文字修订与普通音画字幕回归通过。证据 docs/evidence/sequence-public-runtime-first-use-20261006.json、docs/evidence/effect-film-sequence-handoff-20261006.json。尚未证明新不可变插件安装或 Art 联调，4.31 保持开放。
+
+- [x] 4.36 [FC-DM-001-SEQUENCE] 固定 Film 插件 dev.10 与技能源 dev.9 发布后，完成 Codex 隔离安装、58 技能发现及零错误检查；从实际安装的单媒体技能冷下载公开 craft.2，完成序列导入／全帧收集／移动修订／坏帧拒绝和独立 MP4 解码，一项通过，执行后 58 项安装摘要保持不变。证据 docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json。不替代实际 Skills CLI 安装、Effect 新序列发行或 Art 联调，4.31 保持开放。

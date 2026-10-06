@@ -28,3 +28,7 @@ Tests copy only their respective skills into isolated `.agents/skills`, start wi
 ## Remaining boundaries
 
 This proves source-skill first use with publicly distributed native runtimes. It does not prove immutable new skill/plugin installation, Art sequence dependencies or selective revision, full creative quality, color fidelity, GUI or all platforms. Task 4.31 remains open and the release remains developmental.
+
+## Installed fixed-plugin acceptance
+
+[Installed evidence](evidence/codex-filmcraft10-sequence-first-use-20261006.json): Codex 0.153.4 installs immutable Film dev.10 (skills dev.9) in isolation, alongside unchanged Effect dev.8, Photo dev.10, Vector dev.11 and Art dev.63. All 58 skills are discovered with zero loading errors. The actually installed media skill starts with an empty runtime directory and completes public download, native sequence creation, complete collection, moved-project revision, corrupt-frame rejection and independent MP4 decode: one passed. All 58 installed skill identities remain intact after execution. This closes the bounded Film installed-release check, not Effect's new sequence snapshot, Art dynamic integration, actual Skills CLI installation or model dispatch; task 4.31 stays open.

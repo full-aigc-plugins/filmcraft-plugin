@@ -182,3 +182,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 已发布技能源 dev.8 修复必需源音轨缺失却因自动静音 AAC 误成功的问题，保留失败诊断，明确无声视频与有意静音 WAV 仍可交付。[架构与范围](docs/FilmCraft-Required-Audio-Architecture.zh_CN.md)。固定插件 dev.9 安装后 3 项真实验收通过，全部 58 项摘要保留。[证据](docs/evidence/codex-filmcraft9-required-audio-first-use-20261006.json)。
 
 开发快照 dev.10 同步不可变 FilmCraft 技能源 dev.9，锁定公开 CLI craft.2。已有源码冷安装序列与实际 Effect→Film 交接证据；安装后的固定快照和 Art 混合验收仍待完成。[架构与证据](docs/FilmCraft-Public-Sequence-First-Use-Architecture.zh_CN.md)。
+
+固定 Film 插件 dev.10 已通过 Codex 0.153.4 隔离安装后的序列首次使用验收。58 项技能发现且零加载错误，Film 执行后全部摘要保持不变。[有界证据](docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json)；Effect／Art 动态发行联调仍待完成。

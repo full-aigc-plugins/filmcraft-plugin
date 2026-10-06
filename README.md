@@ -176,3 +176,5 @@ Fixed FilmCraft plugin dev.7 / source dev.6 passed actual Codex 0.153.4 installa
 [Temporal-source trim and move acceptance](docs/FilmCraft-Temporal-Timeline-Acceptance.md): one installed single-skill empty-runtime case passes, checking source in-points in reopened projects and native exports while preserving other clips, audio, captions and original deliveries. Complete timeline/creative acceptance remains open.
 
 Plugin dev.8 vendors source dev.7: native workflow static audio-track gain (mixer.setStrip), finite-value validation and isolated candidate -6 dB decoding. Fixed Codex installed-snapshot verification passed: one isolated cold audio gain test, 58 discovered skills and preserved hashes; [evidence](docs/evidence/codex-filmcraft8-audio-gain-first-use-20261006.json). [Scope and architecture](docs/FilmCraft-Audio-Gain-Architecture.md).
+
+Installed plugin dev.8 verifies three independent voice/music/original-audio tracks, staggered starts and a music-only gain revision through real decoded frequency amplitudes. All 58 installed hashes remain unchanged. [Scope and evidence](docs/FilmCraft-Multitrack-Audio-Architecture.md).

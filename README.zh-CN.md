@@ -176,3 +176,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 [时间变化素材的裁切与移动验收](docs/FilmCraft-Temporal-Timeline-Acceptance.zh_CN.md)：实际安装的独立时间线技能空运行时测试 1 项通过；保存重开及原生导出均核对源入点，保留其他镜头、音轨、字幕和原交付。完整时间线／创作验收仍开放。
 
 插件 dev.8 固定技能源 dev.7，补齐原生工作流静态音轨增益（mixer.setStrip）、有限数值校验和隔离候选 -6 dB 解码。固定安装副本真实冷启动增益验收通过，58 项技能发现与执行后摘要保留；[证据](docs/evidence/codex-filmcraft8-audio-gain-first-use-20261006.json)。[范围与架构](docs/FilmCraft-Audio-Gain-Architecture.zh_CN.md)。
+
+固定插件 dev.8 已验证已有配音、音乐、视频原音三个独立音轨、错开起点和仅音乐增益返工，使用实际解码频率幅度核验；全部 58 项安装摘要保持不变。[范围与证据](docs/FilmCraft-Multitrack-Audio-Architecture.zh_CN.md)。

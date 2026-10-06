@@ -34,7 +34,7 @@ Intent + assets
 | Plugin ID | filmcraft |
 | Metadata version | 0.1.0-dev.7 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.4 |
+| Skills source | filmcraft-skills / v0.1.0-dev.6 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |

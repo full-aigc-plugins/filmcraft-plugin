@@ -1,0 +1,97 @@
+{
+  "schema": "craft-sequence-workflow-candidate/v1",
+  "result": "passed",
+  "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+  "patchSha256": "b73f97f8e69a66435725cd8c4aa5bf3eecefa1da417c02da8d6bbdbd87e2c793",
+  "sequenceManifestSha256": "f961b56eb7485c229c7b393783353cf00e486930011a8424b438a8694700c902",
+  "collectedFrames": 12,
+  "independentlyDecodedExportFrames": [
+    12,
+    13
+  ],
+  "sourceDirectoryRemoved": true,
+  "corruptDependencyRejected": true,
+  "isolatedSkillBytesUnchanged": true,
+  "movedRevisionPassed": true,
+  "originalDeliveryPreserved": true,
+  "nativeProbe": {
+    "kind": "ImageSequence",
+    "duration": "254016000000",
+    "audio": null,
+    "video": {
+      "width": 32,
+      "height": 18,
+      "frame_rate": {
+        "num": 12,
+        "den": 1
+      },
+      "has_alpha": true
+    },
+    "nativeProperties": {
+      "container": "Image Sequence",
+      "dataRateKbps": null,
+      "duration": {
+        "seconds": 1.0,
+        "ticks": 254016000000,
+        "timecode": "00:00:01:00"
+      },
+      "fileSize": null,
+      "item": 9,
+      "name": "frame_00000.png",
+      "offline": false,
+      "startTimecode": null,
+      "type": "ImageSequence",
+      "video": {
+        "alpha": true,
+        "bitrate": null,
+        "codec": "PNG sequence",
+        "color": "Bt709 / Srgb / Bt709",
+        "frameRate": 12.0,
+        "frameRateLabel": "12",
+        "height": 18,
+        "pixelAspectRatio": "1:1",
+        "pixelFormat": "RGBA 8-bit",
+        "width": 32
+      }
+    }
+  },
+  "sourceProjectSha256": "76cc01f4e1214344bd2afae56a7976466d5b0cf5c4d0fcdfeaf3dd9c4d23ec83",
+  "revisedProjectSha256": "a01c62af4d8b6fad1c6f594afaf82097fb156f57d8d084b819da15d74093be26",
+  "scope": "isolated skill workflow and actual native CLI; installer overridden to verified candidate; not public cold installation or Art mixed acceptance",
+  "driverSha256": "acc872515deedc4c23c7f85e1475b270e98157a39ef1658d3e695ee784b6ca72",
+  "testSha256": "689af82c02028d19c1ef467602ab3e07cbf4d5af067eaee36e7395e59c58e550",
+  "build": {
+    "runtimeVersion": "0.2.0-craft.2",
+    "archiveSha256": "2ba27197a7742b1d3a1f4ecc6e31f8a63fb9cf4ea9106bca803aa418753dd852",
+    "binarySha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+    "provenanceSha256": "7f77045f939cd31d5a3355fc00d870bab781e772b4e80171216fbfed728d60b0"
+  },
+  "verification": {
+    "workflowPassed": 1,
+    "workflowSeconds": 1.145,
+    "workflowLogSha256": "b502c7ae66b7172b26b7dd5e6c6acda3cce1e1caef2c20099bd1a52cf8cfccac",
+    "workflowRedLogSha256": "434fe56ae3586a79a3c14f84b6c6439bf2240bc41c00a8fb974a44a338c5128b",
+    "nativeRelinkRedLogSha256": "9b66deb7277d7aedfba86849cbb303e132091cb2010d483d96a934288ad14824",
+    "nativeSequenceTestsPassed": 8,
+    "engineTestsPassed": 285,
+    "engineTestsIgnored": 3,
+    "engineSeconds": 26.65,
+    "engineLogSha256": "5727796253fca6c0897ee7419059babf442126a058805acda9f4465ebd0556fa",
+    "defaultTestsPassed": 43,
+    "defaultTestsSkipped": 18,
+    "defaultSeconds": 6.008,
+    "defaultLogSha256": "313d9c8a6509926d65195d31c239350ac8357c75842d11c0da96b46ba957c5fd",
+    "ordinaryPublicNativeWorkflowPassed": 1,
+    "ordinarySeconds": 6.277,
+    "ordinaryLogSha256": "d3b885bae0673a0918303b9c3337782d2d6893ad116443c16afc7e14fafc10d6",
+    "resourceSyncPassed": true
+  },
+  "exclusions": [
+    "installer overridden to checksum-bound private candidate",
+    "public runtime locks unchanged",
+    "fixed source/plugin release and cold sequence first use pending",
+    "Effect real dynamic render into Film workflow pending",
+    "Art mixed sequence dependency and revision pending",
+    "full creative and color acceptance pending"
+  ]
+}

@@ -194,3 +194,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 固定 Film dev.11／技能源 dev.10 安装后验收通过：隔离 Codex 发现 58 项技能零错误，Film 十一项分别空运行时冷启动通过；安装后的运动／LUT、音轨增益和序列场景三项通过、零跳过。全部 58 安装摘要保全。新 Art LUT 运行时发行与完整首版仍开放。 [Evidence](docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json).
 
 工作区分段素材消费候选可校验 Effect 检查点、收集连续帧并保留来源摘要。固定发布、完整 1080p 长片头和 Art 集成仍待完成。[架构](docs/FilmCraft-Segmented-Assets-Architecture.zh_CN.md)。
+
+当前源码 HD 分段候选通过 1080p／24 fps／五秒及动态标题核验；固定安装版与 Art HD 仍待完成。[架构与证据](docs/FilmCraft-HD-Sequence-Architecture.zh_CN.md)。

@@ -39,3 +39,5 @@ OpenSpec 是唯一行为事实源；本目录是解释与证据视图。
 [专业领域技术设计](FilmCraft-Domain-Design.zh_CN.md)
 
 [Current host verification / 当前宿主验证](FilmCraft-Host-Verification-Architecture.zh_CN.md)
+
+当前源码 HD 分段候选通过 1080p／24 fps／五秒及动态标题核验；固定安装版与 Art HD 仍待完成。[架构与证据](FilmCraft-HD-Sequence-Architecture.zh_CN.md)。

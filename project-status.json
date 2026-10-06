@@ -38,12 +38,14 @@
     "4.39": "docs/evidence/motion-lut-workflow-candidate-20261006.json",
     "4.41": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json",
     "4.40": "docs/evidence/codex-artcraft69-lut-motion-first-use-20261006.json",
-    "4.42": "docs/evidence/effect-film-segment-candidate-20261007.json"
+    "4.42": "docs/evidence/effect-film-segment-candidate-20261007.json",
+    "4.44": "docs/evidence/effect-film-segment-hd-candidate-20261007.json"
   },
   "hostValidationEvidence": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json",
   "hostValidationStatus": "bounded-installed-native-motion-lut-first-use-passed",
   "temporalTimelineEvidence": "docs/evidence/codex-filmcraft7-temporal-timeline-first-use-20261006.json",
   "currentReleaseDiscoveryEvidence": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json",
   "motionLutCandidateEvidence": "docs/evidence/motion-lut-workflow-candidate-20261006.json",
-  "previousDomainTaskMatrixEvidence": "docs/evidence/codex-current-domain-task-matrix-20261006.json"
+  "previousDomainTaskMatrixEvidence": "docs/evidence/codex-current-domain-task-matrix-20261006.json",
+  "hdSequenceCandidateEvidence": "docs/evidence/effect-film-segment-hd-candidate-20261007.json"
 }

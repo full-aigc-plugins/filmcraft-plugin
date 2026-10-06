@@ -1,0 +1,187 @@
+{
+  "schema": "filmcraft-temporal-timeline-first-use/v1",
+  "initialProjectSha256": "c01ce91ef70af0215ed021d9956acf325daa4a95a5c2ccc33ce1b002ef84c626",
+  "revisedProjectSha256": "4a5520d639f8947315fab14e88f2730c0bd93bea474d151c851ecec147670e88",
+  "editedClip": {
+    "clip": 10,
+    "duration": "254016000000",
+    "durationFrames": 12,
+    "effects": [
+      {
+        "effect": "motion",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "anchor": {
+            "keyframes": 0,
+            "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+          },
+          "anti_flicker": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          },
+          "position": {
+            "keyframes": 0,
+            "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+          },
+          "rotation": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          },
+          "scale": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          },
+          "scale_width": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          },
+          "uniform_scale": {
+            "keyframes": 0,
+            "value": "Bool(true)"
+          }
+        }
+      },
+      {
+        "effect": "opacity",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "blend": {
+            "keyframes": 0,
+            "value": "Choice(0)"
+          },
+          "opacity": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          }
+        }
+      },
+      {
+        "effect": "time_remap",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "speed": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          }
+        }
+      }
+    ],
+    "enabled": true,
+    "item": 8,
+    "label": "Violet",
+    "link": null,
+    "name": "shot.mp4",
+    "sourceIn": "127008000000",
+    "speed": 1.0,
+    "start": "0",
+    "startFrame": 0
+  },
+  "previewPixels": [
+    [
+      254,
+      0,
+      0
+    ],
+    [
+      1,
+      128,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      255
+    ]
+  ],
+  "runtimeSha256": "4bd79931912c591d1cb1b47690949512ffb4361c3ec4f57664024f9a4847ae38",
+  "files": {
+    "plan.json": "8dc5924b639825b0c1c81ec63f862dc53338121bda56fb51493744f9ab6b99b2",
+    "decode.txt": "fc8b983a0fa581062e89239d6a257798de347e00269c3f146f872dfbb6bca2cd",
+    "export-probe.json": "40206631450203ec1f1a11d5641d555d7529e278cd029067a3816cbec94c5e58",
+    "captions.json": "7a858ab59f01ec76a4b287f30a835f5c970a872ce0583a3b101a205e73b60c76",
+    "exchange-loss.json": "7c8e6b2e581713ec64995cd0d51b3dd8c790b3a0eeb231fcef28c729baf29cea",
+    "film.mp4": "c383db9bb7b4383d2e06e4978c738f3910731d9ec9e1c4b15a6373819ad00c90",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "aca4e6349d72efd92005c867aaee2aede7bcc376449088d711af974ce973e76d",
+    "frame-0003.png": "88f7c9a8cf5fd3194748add0e399ea33a973374d4df3bfbf8a9e7012e7f5639d",
+    "voice.wav": "2691be454f8d77f2d48ad911c9908967aa908cb899a0adf1ae7835aae8f1a03d",
+    "shot.mp4": "255b4e0a884744c9e60f9db822a0295ef916736ddafec7c32a435c2c0aafe763",
+    "frame-0002.png": "ab767868dcdeeee41249fec94c2213c03feb8287cf194e29b203700056bb993c",
+    "frame-0000.png": "294453bc6e0c9e6cbfb99260c6706b0d45b5bbcab8612e186b797b76f07ce0d7",
+    "frame-0001.png": "922336426089d8cda33476a6099a48a1ab524e92d2920fb6775d41233d8a1ae2",
+    "project.fcproj": "4a5520d639f8947315fab14e88f2730c0bd93bea474d151c851ecec147670e88",
+    "operations.json": "90ff1a4e18a38cc16809fb71bed9cb6a22233d6c331fadf86e172bbbfafd2fe5"
+  },
+  "sourceFilesPreserved": true,
+  "otherClipPreserved": true,
+  "audioPreserved": true,
+  "captionsPreserved": true,
+  "scope": "single installed timeline skill; default public empty-runtime install; synthetic temporal colors and sine audio; no creative acceptance",
+  "result": "passed",
+  "tests": 1,
+  "skipped": 0,
+  "seconds": 5.294,
+  "testDriverSha256": "1ea9ff5b818cfbb286b5cd8cc319166861eea5cac203492b15fb5f142898bf2c",
+  "logSha256": "4bf421463ccbe980b88fd36f7e954c64d5722823d30ece0c15d3a9b6fadce366",
+  "installedPlugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.7",
+    "ref": "v0.1.0-dev.7",
+    "sha": "bb847883f5203096a1d113faba067bf8bb4da301",
+    "skillSourceSha": "85866c064c7d91abd8da63b0570d78bee3202bf5",
+    "skillSourceRef": "v0.1.0-dev.6",
+    "skillSha256": "2d0a56a23188c7daa17761973178865f2c41bd5129c385ff451ac6dbf636f5df",
+    "pluginManifestSha256": "cf51ae23c021aa69aaf5f0a553eb8749ecd29a2b8ead9397eb2e36de94102d19",
+    "skills": {
+      "filmcraft-cli": "b72f86e33586ec4536cd5452e231f559e1e5ef8711ad927e13ee5f23d347ccea",
+      "filmcraft-cli-audio": "43fecdc65f9358ff3b2966ba277002ca3c7ea479c12550142bc09f43fcfcf2f5",
+      "filmcraft-cli-color": "433b6423338b84cad7523f3beb292a13bbbd58ff7a63d031c2f826a0df78f6b5",
+      "filmcraft-cli-export": "dd3471adca737d95b5855622537eb6ee6108bebe187bb0edbb2bbf70af7b7939",
+      "filmcraft-cli-media": "953ceed5f982f4e7079e076c04a9b348d91e862aae993ff8cb01c0206d658f95",
+      "filmcraft-cli-motion": "897b500b7a43a974304283cbd02a8ce51def5fcaf3e35985a19062069c80cfdc",
+      "filmcraft-cli-project": "e421ba2eb1dd72352347a443ff9c0b99866854538e1136346d9fb5e4b769a17a",
+      "filmcraft-cli-setup": "0e818dd7d55c56bfc6150fc8e7558968b51a8616a00960de239e83cecb7a0a03",
+      "filmcraft-cli-subtitles": "26156a70cf92ff4109c128215b4dfd92978c89eba7136738625c7c311d70831b",
+      "filmcraft-cli-timeline": "e28c2ec4928d23fd5358667974de1fbdb3d70e1dcb3246ec575a85b4c61d2918",
+      "filmcraft-use": "2d0a56a23188c7daa17761973178865f2c41bd5129c385ff451ac6dbf636f5df"
+    }
+  },
+  "unchangedInstalledSkills": 11,
+  "numericDeltaRejected": true,
+  "originalProjectPreservedAfterRefusal": true,
+  "oracle": {
+    "python": "3.13.5",
+    "ffmpeg": "existing test oracle",
+    "Pillow": "12.3"
+  },
+  "limitations": [
+    "one regular in-trim and non-insert move at 12 fps",
+    "does not prove ripple, roll, arbitrary fractional rates or all timeline commands",
+    "sine fixture is not spoken voice",
+    "no model/GUI/production or full creative acceptance"
+  ],
+  "regression": {
+    "skills": {
+      "total": 48,
+      "passed": 35,
+      "skipped": 13,
+      "seconds": 9.538
+    },
+    "plugin": {
+      "total": 4,
+      "passed": 4,
+      "skipped": 0,
+      "seconds": 0.112
+    },
+    "openspecStrict": "passed",
+    "documentation": "passed"
+  }
+}

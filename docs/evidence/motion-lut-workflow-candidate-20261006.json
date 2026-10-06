@@ -1,0 +1,76 @@
+{
+  "schema": "filmcraft-motion-lut-first-use/v1",
+  "result": "PASS",
+  "scope": "candidate single copied motion skill; empty runtime; public download; synthetic existing media; native LUT/keyframes and moved revision; not immutable plugin or Art acceptance",
+  "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+  "independentlyDecodedFrames": 24,
+  "lutSourceRemoved": true,
+  "lutPixel": {
+    "red": 0,
+    "green": 254,
+    "blue": 0
+  },
+  "motionKeyframes": 2,
+  "sourcePreserved": true,
+  "captionsPreserved": true,
+  "audioClipsPreserved": true,
+  "decodedAudioPreserved": true,
+  "decodedLutPixel": [
+    0,
+    253,
+    0
+  ],
+  "nonTargetLumetriPreserved": true,
+  "invalidRevisionRejected": true,
+  "corruptedPackagedLutRejected": true,
+  "publicLutAssetArgumentVerified": true,
+  "skillFilesPreserved": true,
+  "initialProjectSha256": "c42a0b5827f2bae16dc02c24f1828b20f94a118ae5b24613c5a6dc65278a454f",
+  "revisedFiles": {
+    "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+    "plan.json": "a34512f346455bc25bcd55771a30811e2a0952dc6d9a73bc791ae65fafa527d1",
+    "decode.txt": "0c86b44f06707c71120a898018b1cdd625d0c379a5c5530d143723d0ee82bf88",
+    "export-probe.json": "f374957d1cc683d81e5812a8c300c493c8f220c710b64442e07f0f61258f13a6",
+    "captions.json": "978d129f800a09619902375647f1894fad2d66939056220204fa20ab5a2cca35",
+    "exchange-loss.json": "04bfed91e2434921d94aa52d849e42c170575d1b4aa638291c96b7cfad0a5ed6",
+    "film.mp4": "9f4bf4e7619c7a38677a7ba4008112d8afa642711b191a971950f742586091f5",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "d848b3b23044c53cef7a1acc74cbf942d1b38e0651b3d2b763fd4585cf76ee66",
+    "voice.wav": "7637819c1f3a0ffdd1795f462d633749f7e944521d6b0b20bfc78ae64e441ec4",
+    "shot.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+    "frame-0000.png": "7b4236ec0e69846afa7c4926c919dc1dc5ecc837e697af22cd7a590daa138421",
+    "frame-0001.png": "50400d9cf70ed12fb74526dc7bb99bdab28d3e5d0581727e55367f6f652fff76",
+    "project.fcproj": "c56059d009dde2512c516fd3d613189439ada972cab2ef40b6fbf02f182c1ff5",
+    "operations.json": "ead9da64a4608354a85701d90497618ea99f2bb94050d2e2ab83e5e9085f2e80",
+    "luts/grade.cube": "8bf29291918a487e815b1522ee5efeac791f19c7b9ce422a8b18125b04b670a7"
+  },
+  "sourceFiles": {
+    "skills/filmcraft-use/scripts/workflow.py": "224ca663641f20bd067cbf504607132c456dc4e817a3beb36b8adb06722b3561",
+    "tests/test_motion_lut_workflow.py": "a1c74718cc74fb05461ee9da1933b32b0ad13398ab986f94b7b059698bf4f8c0",
+    "tests/test_motion_lut_first_use.py": "f738baaa4e98df088206e1ca751fd1f59cdecbe5f6a13c28b1172a48766f610c"
+  },
+  "componentTests": {
+    "pass": 3,
+    "redBeforeImplementation": true
+  },
+  "defaultSuite": {
+    "tests": 66,
+    "pass": 46,
+    "skipped": 20,
+    "scope": "default suite; gated native scenarios require explicit separate execution"
+  },
+  "nativeRegressions": [
+    {
+      "case": "audio-gain",
+      "pass": 1,
+      "skip": 0,
+      "seconds": 5.446
+    },
+    {
+      "case": "image-sequence-workflow",
+      "pass": 1,
+      "skip": 0,
+      "seconds": 4.846
+    }
+  ]
+}

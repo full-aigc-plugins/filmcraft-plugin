@@ -2,7 +2,7 @@
 
 ## Authority and current phase
 
-Existing OpenSpec FC-DM-001-SEQUENCE owns the handoff, with independent filmcraft-skills as skill authority. The source workflow now implements sequence registration, native import, complete collection and source-project revision. Plugin snapshots and public runtime locks are unchanged. Candidate tests inject the installation result for a checksum-bound maintained binary; this is not public cold installation.
+Existing OpenSpec FC-DM-001-SEQUENCE owns the handoff, with independent filmcraft-skills as skill authority. The source workflow now implements sequence registration, native import, complete collection and source-project revision. Plugin snapshots remain unchanged. Public source runtime locks now select craft.2; see [public first-use follow-up](FilmCraft-Public-Sequence-First-Use-Architecture.md). Candidate tests inject the installation result for a checksum-bound maintained binary; this is not public cold installation.
 
 ## Three native defects and fixes
 

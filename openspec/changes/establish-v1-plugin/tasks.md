@@ -132,3 +132,5 @@
 - [x] 4.33 [FC-DM-001-SEQUENCE] 独立技能源的序列清单校验与完整复制组件：严格时间基、完整帧集、RGBA 像素与摘要、资源门禁、失败保全及单技能独立资源验证。六项组件测试通过，真实 Effect 十二帧包可校验，默认回归 43 项通过／17 项跳过。证据 docs/evidence/sequence-asset-contract-candidate-20261006.json。公开 workflow 调用、原生冷安装、修订及 Art 联调仍由开放任务 4.31 验收。
 
 - [x] 4.34 [FC-DM-001-SEQUENCE-RELINK] 候选源码工作流接入完整序列登记／原生导入／全帧收集／移动修订，复现并修复原生序列被按静态首帧重关联的缺陷。真实候选 CLI 工作流与独立 MP4 解码 1 项通过，普通公开原生回归 1 项通过，原生 285 项通过／三项忽略；源包与技能字节不变，坏帧拒绝。证据 docs/evidence/sequence-workflow-candidate-20261006.json。安装结果为已校验候选注入，公开冷安装、固定发行和 Art 联调仍由 4.31 验收。
+
+- [x] 4.35 [FC-DM-001-SEQUENCE] 发布公开原生 craft.2 并更新十一项源码技能锁及当前命令目录；真实安装器从空目录下载后完成序列导入、全帧收集、移动修订和坏帧拒绝；双领域实际 Effect 动画交接、文字修订与普通音画字幕回归通过。证据 docs/evidence/sequence-public-runtime-first-use-20261006.json、docs/evidence/effect-film-sequence-handoff-20261006.json。尚未证明新不可变插件安装或 Art 联调，4.31 保持开放。

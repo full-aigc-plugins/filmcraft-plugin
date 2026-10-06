@@ -2,7 +2,7 @@
 
 ## 事实源与当前状态
 
-既有 OpenSpec FC-DM-001-SEQUENCE 继续管理交接，独立 filmcraft-skills 是技能事实源。当前源码工作流已接入序列登记、原生导入、全帧收集和源工程修订；插件技能快照与公开运行时锁尚未升级。候选测试使用校验摘要的维护版二进制注入安装结果，不冒充公开冷安装。
+既有 OpenSpec FC-DM-001-SEQUENCE 继续管理交接，独立 filmcraft-skills 是技能事实源。当前源码工作流已接入序列登记、原生导入、全帧收集和源工程修订；插件技能快照尚未升级；源码运行时锁现已选择公开 craft.2，见[公开首次使用跟进](FilmCraft-Public-Sequence-First-Use-Architecture.zh_CN.md)。候选测试使用校验摘要的维护版二进制注入安装结果，不冒充公开冷安装。
 
 ## 三项原生缺陷与修复
 

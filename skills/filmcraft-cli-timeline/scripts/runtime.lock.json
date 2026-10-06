@@ -1,20 +1,20 @@
 {
   "schema": "craft-runtime-lock/v1",
   "artifact": "filmcraft-cli",
-  "resolvedVersion": "0.2.0-craft.1",
-  "releaseRef": "runtime-v0.2.0-craft.1",
+  "resolvedVersion": "0.2.0-craft.2",
+  "releaseRef": "runtime-v0.2.0-craft.2",
   "repository": "https://github.com/full-aigc-skills/filmcraft-skills",
   "upstreamRepository": "https://github.com/storytold/filmcraft",
   "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
-  "runtimeVariant": "maintained-caption-font-family",
+  "runtimeVariant": "maintained-caption-font-and-complete-image-sequence",
   "artifacts": {
     "darwin-arm64": {
-      "url": "https://github.com/full-aigc-skills/filmcraft-skills/releases/download/runtime-v0.2.0-craft.1/filmcraft-cli-0.2.0-craft.1-macos-arm64.zip",
-      "archiveSha256": "99ad8fd7e926a1482793a3fadf737ef91fd1a168ba6c60284cff7dbe1089878f",
-      "binarySha256": "4bd79931912c591d1cb1b47690949512ffb4361c3ec4f57664024f9a4847ae38",
-      "provenanceSha256": "5177af4af0eac07d47fdd7fbfb4b3ed39cf324182141cd0235ee8aef55278cf0",
-      "versionOutput": "filmcraft-cli 0.2.0-craft.1",
-      "evidenceScope": "candidate native tests; isolated public first-use acceptance pending"
+      "url": "https://github.com/full-aigc-skills/filmcraft-skills/releases/download/runtime-v0.2.0-craft.2/filmcraft-cli-0.2.0-craft.2-macos-arm64.zip",
+      "archiveSha256": "2ba27197a7742b1d3a1f4ecc6e31f8a63fb9cf4ea9106bca803aa418753dd852",
+      "binarySha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "provenanceSha256": "7f77045f939cd31d5a3355fc00d870bab781e772b4e80171216fbfed728d60b0",
+      "versionOutput": "filmcraft-cli 0.2.0-craft.2",
+      "evidenceScope": "published maintained runtime; native engine and isolated source-skill public cold-install sequence acceptance; immutable plugin and Art handoff pending"
     }
   },
   "supportedPluginWorkflows": []

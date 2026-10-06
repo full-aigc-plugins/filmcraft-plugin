@@ -99,6 +99,12 @@ def validate(plan):
                     or type(value) not in (int, float)
                     or abs(value) > sys.float_info.max or not math.isfinite(value)):
                 raise ValueError('invalid_track_gain')
+    if not isinstance(plan.get('assets',{}),dict):
+        raise ValueError('invalid_assets')
+    for asset in plan.get('assets',{}).values():
+        if (not isinstance(asset,dict) or set(asset)-{'path','sha256','kind'}
+                or asset.get('kind') not in (None,'image-sequence')):
+            raise ValueError('invalid_asset_registration')
     for time in plan.get('frames', ['0']):
         ticks(time)
     if 'document' in plan:
@@ -157,9 +163,13 @@ def execute(plan, output, runtime_home=None, source=None):
         media = stage / 'assets'
         media.mkdir()
         receipts = []
-        def copy_asset(alias, path, digest):
+        def copy_asset(alias, path, digest, kind=None):
             if not re.fullmatch(r'[a-zA-Z][\w-]*', alias) or not re.fullmatch(r'[a-f0-9]{64}', digest):
                 raise ValueError('invalid_asset')
+            if kind == 'image-sequence':
+                return load_module('sequence_assets').copy_sequence(path, digest, media / alias)
+            if kind is not None:
+                raise ValueError('unsupported_asset_kind')
             path = Path(path)
             if path.is_symlink() or not path.is_file() or sha(path) != digest:
                 raise ValueError('asset_digest_mismatch: ' + alias)
@@ -171,17 +181,31 @@ def execute(plan, output, runtime_home=None, source=None):
                 raise ValueError('asset_changed_during_copy')
             return target
         for alias, asset in prior.get('assets', {}).items():
-            path = (source / asset['path']).resolve()
+            registered = source / asset['path']
+            if registered.is_symlink() or (asset.get('kind')=='image-sequence' and registered.parent.is_symlink()):
+                raise ValueError('invalid_asset_path')
+            path = registered.resolve()
             if not path.is_relative_to(source):
                 raise ValueError('invalid_asset_path')
-            target = copy_asset(alias, path, asset['sha256'])
+            target = copy_asset(alias, path, asset['sha256'], asset.get('kind'))
             assets[alias] = dict(asset, staging=str(target))
+            if asset.get('kind') == 'image-sequence':
+                descriptor = load_module('sequence_assets').validate_sequence(target, asset['sha256'])
+                assets[alias]['sequenceMetadata'] = {k:v for k,v in descriptor.items() if k!='frames'}
+                assets[alias]['sequenceStaging'] = str(target)
+                assets[alias]['staging'] = str(target.parent/descriptor['frames'][0]['location'])
         for alias, asset in plan.get('assets', {}).items():
             if alias in assets:
                 raise ValueError('asset_alias_exists')
-            target = copy_asset(alias, asset['path'], asset['sha256'])
-            probe = json.loads(run(cli, ['probe', str(target)]))
-            assets[alias] = {'sha256': asset['sha256'], 'probe': precise(probe), 'staging': str(target)}
+            target = copy_asset(alias, asset['path'], asset['sha256'], asset.get('kind'))
+            if asset.get('kind') == 'image-sequence':
+                descriptor = load_module('sequence_assets').validate_sequence(target, asset['sha256'])
+                assets[alias] = {'kind':'image-sequence', 'sha256':asset['sha256'],
+                                'sequenceMetadata':{k:v for k,v in descriptor.items() if k!='frames'},
+                                'sequenceStaging':str(target), 'staging':str(target.parent/descriptor['frames'][0]['location'])}
+            else:
+                probe = json.loads(run(cli, ['probe', str(target)]))
+                assets[alias] = {'sha256': asset['sha256'], 'probe': precise(probe), 'staging': str(target)}
         argv = [cli] + (['--project', str(source_project)] if source_project else []) + ['mcp']
         with load_module('mcp_session').Session(argv) as session:
             def call(name, args):
@@ -196,6 +220,24 @@ def execute(plan, output, runtime_home=None, source=None):
                 return value
             def command(identifier, params):
                 return call('command_run', {'id': identifier, 'params': params})
+            def sequence_probe(asset):
+                # 核验原生实际媒体属性；不能把单张图片 probe 伪装为序列。
+                command('project.select', {'items':[asset['item']]})
+                properties = command('file.mediaProperties', {'items':[asset['item']]})
+                metadata = asset['sequenceMetadata']; rate = metadata['frameRate']
+                if len(properties)!=1:
+                    raise ValueError('sequence_native_properties_mismatch')
+                actual = properties[0]; video = actual.get('video', {})
+                expected_ticks = TICKS*metadata['frameCount']*rate['den']//rate['num']
+                if (actual.get('type')!='ImageSequence' or actual.get('offline')
+                        or actual.get('duration',{}).get('ticks')!=expected_ticks
+                        or video.get('frameRate')!=float(Fraction(rate['num'],rate['den']))
+                        or (video.get('width'),video.get('height'))!=(metadata['width'],metadata['height'])
+                        or video.get('alpha') is not True):
+                    raise ValueError('sequence_native_properties_mismatch')
+                return {'kind':actual['type'], 'duration':str(actual['duration']['ticks']), 'audio':None,
+                        'video':{'width':video['width'],'height':video['height'],'frame_rate':rate,'has_alpha':video['alpha']},
+                        'nativeProperties':precise({k:v for k,v in actual.items() if k!='path'})}
             if not source_project:
                 doc = plan['document']
                 command('file.newProject', {'name': doc['name']})
@@ -206,6 +248,8 @@ def execute(plan, output, runtime_home=None, source=None):
                 for asset in assets.values():
                     if 'item' in asset:
                         command('media.relink', {'item': asset['item'], 'path': asset['staging'], 'relinkOthers': False})
+                        if asset.get('kind')=='image-sequence':
+                            asset['probe'] = sequence_probe(asset)
             for operation in plan['operations']:
                 identifier = operation['command']
                 params = resolve(operation.get('params', {}), bindings)
@@ -213,10 +257,20 @@ def execute(plan, output, runtime_home=None, source=None):
                     asset = assets[params['asset']]
                     if 'item' in asset:
                         raise ValueError('asset_already_imported')
-                    imported = command('file.import', {'paths': [asset['staging']]})
+                    if asset.get('kind')=='image-sequence':
+                        rate = asset['sequenceMetadata']['frameRate']
+                        imported = command('file.importImageSequence', {'path':asset['staging'],'frameRate':rate})
+                        details = imported.get('imageSequences', [])
+                        if (imported.get('frameRate')!=rate or len(details)!=1
+                                or details[0].get('frames')!=asset['sequenceMetadata']['frameCount'] or details[0].get('missing')):
+                            raise ValueError('sequence_native_import_mismatch')
+                    else:
+                        imported = command('file.import', {'paths': [asset['staging']]})
                     if imported['errors'] or len(imported['items']) != 1:
                         raise ValueError('import_failed')
                     asset['item'] = imported['items'][0]
+                    if asset.get('kind')=='image-sequence':
+                        asset['probe'] = sequence_probe(asset)
                     result = {'item': asset['item']}
                 elif identifier == 'timeline.place':
                     asset = next((x for x in assets.values() if x.get('item') == params.get('item')), None)
@@ -287,11 +341,25 @@ def execute(plan, output, runtime_home=None, source=None):
             output.mkdir(mode=0o700)
             try:
                 collected = command('file.projectManager', {'destination': str(output), 'mode': 'collect', 'projectName': 'project', 'excludeUnused': False, 'includeProxies': False, 'wait': True})
-                by_item = {x['item']: Path(x['to']) for x in collected['files']}
+                by_item = {x['item']: x for x in collected['files']}
                 for alias, asset in assets.items():
                     if 'item' not in asset:
                         raise ValueError('asset_not_imported: ' + alias)
-                    target = by_item[asset['item']]
+                    entry = by_item[asset['item']]; target = Path(entry['to'])
+                    if asset.get('kind')=='image-sequence':
+                        descriptor = load_module('sequence_assets').validate_sequence(Path(asset['sequenceStaging']),asset['sha256'])
+                        files = entry.get('sequenceFiles', [])
+                        if len(files)!=descriptor['frameCount']:
+                            raise ValueError('collected_sequence_mismatch')
+                        for frame, expected in zip(files,descriptor['frames']):
+                            actual = Path(frame['to'])
+                            if (actual.parent!=target.parent or actual.name!=expected['location']
+                                    or not actual.is_relative_to(output) or actual.is_symlink() or sha(actual)!=expected['sha256']):
+                                raise ValueError('collected_sequence_mismatch')
+                        target = target.parent/'sequence.json'
+                        shutil.copyfile(asset['sequenceStaging'],target)
+                        load_module('sequence_assets').validate_sequence(target,asset['sha256'])
+                        del asset['sequenceStaging']
                     if not target.is_relative_to(output) or sha(target) != asset['sha256']:
                         raise ValueError('collected_asset_mismatch')
                     asset['path'] = str(target.relative_to(output))
@@ -328,7 +396,7 @@ def execute(plan, output, runtime_home=None, source=None):
                     (output / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
                 (output / 'decode.txt').write_text(decoded)
                 exchange_report(output,[f'frame-{index:04d}.png' for index,_ in enumerate(plan.get('frames',['0']))]+['film.mp4']+(['captions.srt'] if captions['tracks'] else []),{})
-                manifest = {'schema': 'filmcraft-delivery/v1', 'sourceProjectSha256': source_hash, 'runtimeSha256': installed['binarySha256'], 'bindings': bindings, 'assets': assets, 'files': {p.name: sha(p) for p in output.iterdir() if p.is_file()}, 'lossReport': {'path':'exchange-loss.json','sha256':sha(output/'exchange-loss.json')}, 'acceptance': 'requires-domain-and-visual-review', 'relocation': 'Use workflow --source; hashes checked before native media.relink.'}
+                manifest = {'schema': 'filmcraft-delivery/v1', 'sourceProjectSha256': source_hash, 'runtimeSha256': installed['binarySha256'], 'bindings': bindings, 'assets': assets, 'files': {str(p.relative_to(output)): sha(p) for p in output.rglob('*') if p.is_file()}, 'lossReport': {'path':'exchange-loss.json','sha256':sha(output/'exchange-loss.json')}, 'acceptance': 'requires-domain-and-visual-review', 'relocation': 'Use workflow --source; hashes checked before native media.relink.'}
                 (output / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
                 return manifest
             except BaseException as error:
@@ -343,12 +411,17 @@ def main():
     parser.add_argument('--source', type=Path)
     parser.add_argument('--runtime-home', type=Path)
     parser.add_argument('--asset', action='append', default=[], help='name=/absolute/path; calculates input digest')
+    parser.add_argument('--sequence-asset', action='append', default=[], help='name=/absolute/path/sequence.json; registers complete image sequence')
     args = parser.parse_args()
     try:
         plan = json.loads(args.plan.read_text())
         for assignment in args.asset:
             alias, path = assignment.split('=', 1)
-            plan.setdefault('assets', {})[alias] = {'path': path, 'sha256': sha(path)}
+            kind = plan.get('assets',{}).get(alias,{}).get('kind')
+            plan.setdefault('assets', {})[alias] = dict({'path': path, 'sha256': sha(path)}, **({'kind':kind} if kind else {}))
+        for assignment in args.sequence_asset:
+            alias, path = assignment.split('=', 1)
+            plan.setdefault('assets', {})[alias] = {'kind':'image-sequence','path':path,'sha256':sha(path)}
         print(json.dumps(execute(plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
     except (ValueError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
         print(json.dumps({'error': str(error)}, ensure_ascii=False))

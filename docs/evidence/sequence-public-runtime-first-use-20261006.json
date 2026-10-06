@@ -1,0 +1,73 @@
+{
+  "schema": "craft-sequence-workflow-first-use/v1",
+  "result": "passed",
+  "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+  "patchSha256": "b73f97f8e69a66435725cd8c4aa5bf3eecefa1da417c02da8d6bbdbd87e2c793",
+  "sequenceManifestSha256": "f961b56eb7485c229c7b393783353cf00e486930011a8424b438a8694700c902",
+  "collectedFrames": 12,
+  "independentlyDecodedExportFrames": [
+    12,
+    13
+  ],
+  "sourceDirectoryRemoved": true,
+  "corruptDependencyRejected": true,
+  "isolatedSkillBytesUnchanged": true,
+  "movedRevisionPassed": true,
+  "originalDeliveryPreserved": true,
+  "nativeProbe": {
+    "kind": "ImageSequence",
+    "duration": "254016000000",
+    "audio": null,
+    "video": {
+      "width": 32,
+      "height": 18,
+      "frame_rate": {
+        "num": 12,
+        "den": 1
+      },
+      "has_alpha": true
+    },
+    "nativeProperties": {
+      "container": "Image Sequence",
+      "dataRateKbps": null,
+      "duration": {
+        "seconds": 1.0,
+        "ticks": 254016000000,
+        "timecode": "00:00:01:00"
+      },
+      "fileSize": null,
+      "item": 9,
+      "name": "frame_00000.png",
+      "offline": false,
+      "startTimecode": null,
+      "type": "ImageSequence",
+      "video": {
+        "alpha": true,
+        "bitrate": null,
+        "codec": "PNG sequence",
+        "color": "Bt709 / Srgb / Bt709",
+        "frameRate": 12.0,
+        "frameRateLabel": "12",
+        "height": 18,
+        "pixelAspectRatio": "1:1",
+        "pixelFormat": "RGBA 8-bit",
+        "width": 32
+      }
+    }
+  },
+  "sourceProjectSha256": "263125ed2e2e66e2377ac28c2e766d76fc2fb175e3869b470f2a5bcd2ec466f2",
+  "revisedProjectSha256": "e0edfbf9cc8b7af59fad69734c7351042d081fe5dbe21f7a8b5b517fd2bd5290",
+  "runtimeLockSha256": "d479a3a39836966a1860b8cf18af5e714c948a3cae959be53a9bca00a61de8be",
+  "scope": "single copied source skill; empty runtime; unchanged installer; public fixed native download; not immutable plugin or Art mixed acceptance",
+  "releaseRef": "runtime-v0.2.0-craft.2",
+  "runtimeReleaseUrl": "https://github.com/full-aigc-skills/filmcraft-skills/releases/tag/runtime-v0.2.0-craft.2",
+  "archiveSha256": "2ba27197a7742b1d3a1f4ecc6e31f8a63fb9cf4ea9106bca803aa418753dd852",
+  "testSha256": "e7542591d8f590c14d8bf977edb777b254a7f9fb0a475d9b4e6fa5452e7a4034",
+  "logSha256": "2ab5346589cf3fcb5e07ab7f70f0c53b52a7e03086a3c7b09007cdd7f6f0ef84",
+  "testsPassed": 1,
+  "exclusions": [
+    "Immutable skill/plugin release acceptance",
+    "Art dynamic handoff",
+    "Full V1, creative and GUI acceptance"
+  ]
+}

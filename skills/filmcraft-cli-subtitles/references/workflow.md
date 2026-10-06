@@ -81,3 +81,13 @@ The full Harness ledger, recovery state machine, plugin-host installation, addit
 有意无声的视频必须明确设置 audioRequired 为 false。用户提供的静音 WAV 具有真实源音轨，可以正常通过；本门禁不以波形幅度为零拒绝素材。audio-check.json 随成功 manifest 摘要保存，也在失败目录保留用于诊断。
 
 By default audioRequired is true. A native timeline audio clip must reference registered media containing an audio stream, and the exported movie must contain an audio stream. Automatically generated silent AAC is insufficient. Failure returns export_audio_missing, retains the native project/movie/preview plus audio-check.json, export-probe.json and failure.json, and publishes no success manifest. Use a fresh output for retries. Explicitly set audioRequired false for video-only delivery; an intentional silent WAV remains valid source audio.
+
+## 动画序列合同候选 / Animated sequence contract candidate
+
+序列登记使用 `assets.<alias> = {"kind":"image-sequence","path":"/absolute/path/sequence.json","sha256":"<清单摘要>"}`，或 `--sequence-asset <alias>=/absolute/path/sequence.json`。不能只登记首帧。清单采用 `craft-image-sequence/v1`；校验全部帧、真实 RGBA 像素、帧率与时间基。工作流按原生序列导入，读取原生属性核对时长与通道，收集全部帧和清单，并在移目录后以包内首帧重关联，保留原生类型和帧率。交付 `manifest.json.files` 包含嵌套帧依赖；`assets.<alias>.path` 指向包内 `sequence.json`。
+
+当前是工作流候选，依赖带帧率、整段收集与序列重关联修复的维护版 CLI。公开固定安装锁尚未升级，旧 CLI 不支持时必须拒绝而不能静默降为图片。公开发行、冷安装和 Art 混合联调仍待验收。
+
+Register a sequence with `kind: image-sequence`, the absolute `sequence.json` path and its SHA-256, or `--sequence-asset alias=/absolute/path/sequence.json`. Registering only the first frame is insufficient. The workflow verifies the complete RGBA frame set and rational timebase, imports a native sequence, checks actual native media properties, collects every frame and the manifest, and relinks from packaged frames after relocation. Nested frame hashes are included in delivery `files`; the asset path points to the packaged manifest.
+
+This candidate needs the maintained CLI with explicit rate, complete collection and sequence relinking fixes. The public installer lock is unchanged. An unsupported native CLI must fail instead of treating the sequence as a still. Fixed release, cold installation and Art mixed acceptance remain open.

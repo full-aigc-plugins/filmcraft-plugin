@@ -1,0 +1,123 @@
+{
+  "schema": "craft-effect-film-sequence-first-use/v1",
+  "result": "PASS",
+  "effectRuntimeSha256": "74d44fc90018ac381dc4516edff939ab26eb6d900ae5c3f49d1eba5ac14105fe",
+  "filmRuntimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+  "effectSequenceSha256": "89d594b9c69b9102393b5ddf7597a2e456744f76a221636d8075df062d87ecf4",
+  "revisedEffectSequenceSha256": "2d0928c85ea1301f8ace7bd8720d863d5ae6ce4ae3fe0e47c73511be354639ee",
+  "copiedSkillHashes": {
+    "effect": {
+      "SKILL.md": "5e38fae50374f586294a0a06e6c074e57b50ef681ee7a12fb8a0b415c2f50f34",
+      "references/scenario.md": "97cc12674477f067b622513dd89fc833f0ad7ecf1c763a69f46a8071ea68785c",
+      "references/workflow.md": "3f3d49cf0d9261dbc22d433fdb392273ddaf7ff480ff27b02de8a79f406b2431",
+      "references/commands.json": "07066739391ebce2b6f03c8aa5e097bbce228748f759688b46d2fb35b0ba96cb",
+      "references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+      "references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+      "examples/layer-mask.json": "61efc2abc7274b45224659ab4aae7e847486af3f3660161a03b83b978ec7a8bc",
+      "examples/brand-intro.json": "8d786356a69ba838cb9015175494e2d44c7ccd05e6cf6a7ced5d8395bba8c5f1",
+      "scripts/bootstrap.py": "73eadc05f3cbb61738a4720997c829c1de1dd82d356244627d38b37e2c696f00",
+      "scripts/exchange_loss.py": "07f0ea82b8bad5062cdfa72e9bdd1b9088e49fe8837b4c856d1cecb1df6d561d",
+      "scripts/image_sequence.py": "beed6c1450c5e1742a5d3a4ef77e195876870e0594dc3552b00e3329764a3c24",
+      "scripts/mcp_session.py": "2f1e6de76d1fe12917933f4967a40c827ba80994a8441e47cb68f212b00160a4",
+      "scripts/runtime.lock.json": "c3dc4d1443e9b74d0891904d7ec95167375cfb9a8457bfc4faa89208280d465d",
+      "scripts/cli.py": "14388135cb9054d411a805f194e9e68f355bd54dcc1202265cab4348afd45e65",
+      "scripts/png_inspection.py": "f5b55f58eb0f4d7d50664442eec75935cdebc3274e04b221acad54fed429bc02",
+      "scripts/workflow.py": "f7af11913660de335d8667e3314777c4b592a720efe6a83b957a526896843eec"
+    },
+    "film": {
+      "SKILL.md": "ce84c25af8bd41bea4b956171562da3e42f868eb1a8a47c2eb21cac7af3eff4b",
+      "references/scenario.md": "c37f43430d99dffed1200efc60684a5b8b67beb65902dbf3ab61b7b8b16fe1e3",
+      "references/workflow.md": "faaf7baca92fd8be769b621e2944523ff1ea903c3d41b07430dedad6d77f9ee2",
+      "references/commands.json": "2a2205efc4d4572e66fa52d9ce069b1f4015a3d83b2928670385d5944e7bf4ea",
+      "references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+      "references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+      "examples/short-film.json": "01ceb137983bde7be8c1a9eac9fbdce9f4f49ec58c59b9ace8acedd7307c0223",
+      "examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+      "scripts/bootstrap.py": "e1198acce81309edef078cea2dbb80c392bff855cd35a699a939bb6c6592d7ba",
+      "scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+      "scripts/mcp_session.py": "2f1e6de76d1fe12917933f4967a40c827ba80994a8441e47cb68f212b00160a4",
+      "scripts/runtime.lock.json": "d479a3a39836966a1860b8cf18af5e714c948a3cae959be53a9bca00a61de8be",
+      "scripts/cli.py": "716f8ed89db05db3fa8a8989c51bbf985e56e8ba81b6ddff92d3747c13d90e9c",
+      "scripts/png_inspection.py": "f5b55f58eb0f4d7d50664442eec75935cdebc3274e04b221acad54fed429bc02",
+      "scripts/sequence_assets.py": "f760fcef3b44125094943b7a366996fb458882a8b7853de8b28c3218aa2da69a",
+      "scripts/workflow.py": "acc872515deedc4c23c7f85e1475b270e98157a39ef1658d3e695ee784b6ca72"
+    }
+  },
+  "frameCount": 12,
+  "frameRate": {
+    "num": 12,
+    "den": 1
+  },
+  "nativeFilmProbe": {
+    "kind": "ImageSequence",
+    "duration": "254016000000",
+    "audio": null,
+    "video": {
+      "width": 320,
+      "height": 180,
+      "frame_rate": {
+        "num": 12,
+        "den": 1
+      },
+      "has_alpha": true
+    },
+    "nativeProperties": {
+      "container": "Image Sequence",
+      "dataRateKbps": null,
+      "duration": {
+        "seconds": 1.0,
+        "ticks": 254016000000,
+        "timecode": "00:00:01:00"
+      },
+      "fileSize": null,
+      "item": 9,
+      "name": "frame_00000.png",
+      "offline": false,
+      "startTimecode": null,
+      "type": "ImageSequence",
+      "video": {
+        "alpha": true,
+        "bitrate": null,
+        "codec": "PNG sequence",
+        "color": "Bt709 / Srgb / Bt709",
+        "frameRate": 12.0,
+        "frameRateLabel": "12",
+        "height": 180,
+        "pixelAspectRatio": "1:1",
+        "pixelFormat": "RGBA 8-bit",
+        "width": 320
+      }
+    }
+  },
+  "independentlyDecodedFrames": 12,
+  "sourceSequenceRemoved": true,
+  "movedProjectRevisionPassed": true,
+  "backgroundAndInitialFramePreserved": true,
+  "animatedTextFrameChanged": true,
+  "oldDeliveryAndSkillsPreserved": true,
+  "scope": "two copied source skills; empty runtime; public native installers; actual Effect output consumed by Film",
+  "excluded": [
+    "immutable new skill/plugin installation",
+    "Art mixed delivery",
+    "creative/color/GUI acceptance"
+  ],
+  "testSha256": "7d341cdcffb6d0066f788423fe9b24b84baec77079e3059a8374e76393261272",
+  "logSha256": "c63693ea23205f904a86108486f7701e8e8da0c480c5389b77059e03f352bc00",
+  "testsPassed": 1,
+  "ordinaryFilmRegression": {
+    "passed": 1,
+    "logSha256": "8f5ca9f8528b337eb1e686e80b733e5ebe9eda5a3d3374215c512dfc8ee1195a"
+  },
+  "defaultSourceTests": {
+    "passed": 43,
+    "skipped": 19,
+    "total": 62,
+    "logSha256": "c49a55730781530d8658eefff5a886f31b20f39e5ca3f5c2ba4605c464dfc73d"
+  },
+  "taskSkillColdRegression": {
+    "passed": 8,
+    "runtimeVersion": "0.2.0-craft.2",
+    "testSha256": "c13702b0187481c0a801a1a76aff99f80fc70a01c3473045b2fd30ae1f79ee97",
+    "logSha256": "0fa7d27fbcf90bd0ca78293240434c12811b00cf4feeb4fb74f0ee09cfa4e166"
+  }
+}

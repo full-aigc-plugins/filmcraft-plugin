@@ -1,7 +1,7 @@
 {
   "schema": "craft-skill-command-evidence/v1",
   "pluginId": "filmcraft",
-  "runtimeVersion": "0.2.0",
+  "runtimeVersion": "0.2.0-craft.2",
   "upstreamRepository": "https://github.com/storytold/filmcraft",
   "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
   "scope": "observed command catalogue, not capability or creative acceptance",
@@ -234,5 +234,7 @@
       "params": "{}",
       "enabledAtEmptySession": true
     }
-  ]
+  ],
+  "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+  "runtimePatchSourceCommit": "9cdd86b16136d14729a097a66edbea069ba15000"
 }

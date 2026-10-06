@@ -1,0 +1,74 @@
+{
+  "schema": "craft-runtime-receipt-acceptance/v1",
+  "date": "2026-10-06",
+  "platform": "darwin-arm64",
+  "status": "candidate-verified-release-pending",
+  "runtimeVersion": "0.2.0-craft.1",
+  "skills": 11,
+  "red": {
+    "tests": 17,
+    "failingSubcases": 13,
+    "reason": "existing receipt corruption and identity drift were accepted",
+    "logSha256": "fe653cc5638f2e463cbf9e8bf65e72e12b9f515a90fb6bcfa5ec52f90e7375b4"
+  },
+  "bootstrap": {
+    "tests": 17,
+    "passed": 17,
+    "skipped": 0
+  },
+  "defaultRegression": {
+    "tests": 47,
+    "passed": 35,
+    "skipped": 12,
+    "seconds": 11.465,
+    "logSha256": "9c72828ce683e830a15256af3c1ed5e22e0ad63309dad492d4ec925a6b1efcab"
+  },
+  "publicFirstUse": {
+    "tests": 1,
+    "passed": 1,
+    "skipped": 0,
+    "seconds": 4.994,
+    "checks": [
+      "single copied skill; fresh runtime; public fixed download",
+      "native project save/reopen and caption persistence",
+      "tampered receipt refused; installation and native project unchanged",
+      "restore exact receipt; verified reuse and native reopen"
+    ]
+  },
+  "singleSkillCli": {
+    "tests": 3,
+    "passed": 3,
+    "skipped": 0,
+    "seconds": 8.165,
+    "checks": [
+      "all 11 copied separately without siblings",
+      "one shared fresh domain runtime for this suite",
+      "Python 3.14 isolated; system-only PATH",
+      "version and actual command catalogue; unknown command refusal"
+    ],
+    "logSha256": "4e17f139ef869d944c28514aabb327cc9f31f3b749cf21e4c022b676cccb5bab"
+  },
+  "sourceFiles": {
+    "skills/filmcraft-use/scripts/bootstrap.py": "e1198acce81309edef078cea2dbb80c392bff855cd35a699a939bb6c6592d7ba",
+    "tests/test_bootstrap.py": "81295efcbb596d4f577d845401fbdea31259a34ab455012c495b7df19ab87341",
+    "tests/test_first_use.py": "2bda13d2a2eeae689eb80f461560606236937de49ab0c742111b44ea05c429dc",
+    "tests/test_skill_suite.py": "116a6eaa4c76d7b4edf1e7484c098d82b629c3c272f4161f01c806a94c51d689"
+  },
+  "limits": [
+    "candidate bootstrap differs from fixed FilmCraft plugin dev.6 / source dev.5",
+    "ArtCraft fixed source lock still uses FilmCraft dev.5",
+    "other three domain installers have not received this receipt change",
+    "not creative/model/GUI/production acceptance",
+    "unsupported platforms remain unsupported"
+  ],
+  "pluginSnapshotCandidate": {
+    "version": "0.1.0-dev.7",
+    "sourceTag": "v0.1.0-dev.6",
+    "sourceSha": "85866c064c7d91abd8da63b0570d78bee3202bf5",
+    "tests": 4,
+    "passed": 4,
+    "skipped": 0,
+    "seconds": 11.448,
+    "scope": "vendor-managed snapshot copied separately; cold public native install and 11 isolated CLI checks; not Codex host installation"
+  }
+}

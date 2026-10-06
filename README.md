@@ -32,7 +32,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.5 |
+| Metadata version | 0.1.0-dev.7 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.4 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
@@ -166,3 +166,7 @@ Development dev.6 vendors FilmCraft skills dev.5 at d7773c802a227368e0d0e2c02534
 The fixed FilmCraft dev.6 / EffectCraft dev.7 / PhotoCraft dev.6 / VectorCraft dev.6 / ArtCraft dev.17 matrix passed isolated Codex discovery of 58 skills and representative native workflows from installed skill content. All installed skill digests remained unchanged afterward. [Installed native evidence](docs/evidence/codex-release17-native-20261006.json). Model dispatch, GUI and complete creative acceptance remain unverified.
 
 Current installed plugin dev.6 / skills dev.5 pass all eight independent task cold starts with maintained CLI 0.2.0-craft.1 (43.688 seconds). Input, output, test-driver and native fingerprints are recorded; all 58 installed hashes remain unchanged. This supplements the older 0.2.0 scene proof without changing release bytes. [Evidence](docs/evidence/maintained-runtime-task-first-use.json).
+
+Candidate installation-receipt reuse validation is implemented and tested; fixed plugin and ArtCraft publication remain pending. [Architecture and evidence](docs/FilmCraft-Runtime-Receipt-Architecture.md).
+
+Development dev.7 vendors immutable skills dev.6 (85866c064c7d91abd8da63b0570d78bee3202bf5). Installation reuse validates receipt identity; four tests from the vendored snapshot pass, including cold public native roundtrip and all 11 isolated CLI entries. [Candidate evidence](docs/evidence/runtime-receipt-candidate.json). Fixed Codex host verification and ArtCraft dependency synchronization remain pending.

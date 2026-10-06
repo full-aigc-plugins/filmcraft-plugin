@@ -18,7 +18,8 @@
     "4.20": "docs/evidence/chinese-first-use.json",
     "4.21": "docs/evidence/chinese-first-use.json",
     "4.22": "docs/evidence/chinese-first-use.json",
-    "1.13": "docs/evidence/maintained-runtime-task-first-use.json"
+    "1.13": "docs/evidence/maintained-runtime-task-first-use.json",
+    "2.7": "docs/evidence/runtime-receipt-candidate.json"
   },
   "hostValidationEvidence": "docs/evidence/codex-release18-native-20261006.json",
   "hostValidationStatus": "bounded-installed-native-workflow-passed"

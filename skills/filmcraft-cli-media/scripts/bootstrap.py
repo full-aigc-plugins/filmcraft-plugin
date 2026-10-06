@@ -71,7 +71,7 @@ def extract(archive, destination):
         source.extractall(destination)
 
 
-def inspect_install(destination, artifact, expected):
+def inspect_install(destination, artifact, expected, version, platform_key):
     binary = destination / artifact
     if destination.is_symlink() or binary.is_symlink() or not binary.is_file():
         raise ValueError('invalid_installed_path')
@@ -80,6 +80,26 @@ def inspect_install(destination, artifact, expected):
     receipt = destination / 'installation.json'
     if receipt.is_symlink() or not receipt.is_file():
         raise ValueError('installation_receipt_missing')
+    # 回执是固定安装身份的一部分；只验证文件存在不能证明缓存可复用。
+    def unique_fields(pairs):
+        record = {}
+        for key, value in pairs:
+            if key in record:
+                raise ValueError('installation_receipt_invalid: duplicate field')
+            record[key] = value
+        return record
+    try:
+        record = json.loads(receipt.read_text(), object_pairs_hook=unique_fields)
+    except (ValueError, UnicodeError) as error:
+        raise ValueError('installation_receipt_invalid') from error
+    if not isinstance(record, dict):
+        raise ValueError('installation_receipt_invalid')
+    identity = {key: expected[key] for key in ('url', 'archiveSha256', 'binarySha256', 'provenanceSha256') if key in expected}
+    identity.update(name=artifact.removesuffix('-cli'), version=version, platform=platform_key,
+                    versionOutput=expected.get('versionOutput', f'{artifact} {version}'),
+                    source=('maintained-github-release' if expected.get('url', '').startswith('https://github.com/full-aigc-skills/filmcraft-skills/') else 'official-github-release'))
+    if any(record.get(key) != value for key, value in identity.items()):
+        raise ValueError('installation_receipt_mismatch; preserve directory for inspection')
     if expected.get('provenanceSha256'):
         record = destination / 'PROVENANCE.json'
         if record.is_symlink() or not record.is_file() or digest(record) != expected['provenanceSha256']:
@@ -117,7 +137,7 @@ def install(lock, runtime_home, archive=None, platform_key=None):
                     raise TimeoutError('runtime_install_busy: installation lock wait expired') from None
                 time.sleep(min(.05, remaining))
         if destination.exists() or destination.is_symlink():
-            return inspect_install(destination, artifact, expected)
+            return inspect_install(destination, artifact, expected, version, key)
         with tempfile.TemporaryDirectory(prefix='.install-', dir=parent) as temporary:
             stage = Path(temporary)
             package = Path(archive) if archive else stage / 'release.zip'
@@ -156,7 +176,7 @@ def install(lock, runtime_home, archive=None, platform_key=None):
             (payload / 'installation.json').write_text(json.dumps(receipt, indent=2) + '\n')
             # 同文件系统原子发布。没有任何自动升级/替换已有版本的分支。
             payload.rename(destination)
-            return dict(inspect_install(destination, artifact, expected), reused=False)
+            return dict(inspect_install(destination, artifact, expected, version, key), reused=False)
 
 
 def main():

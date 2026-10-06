@@ -32,7 +32,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.5 |
+| Metadata version | 0.1.0-dev.7 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.4 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
@@ -166,3 +166,7 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 当前固定发布矩阵（FilmCraft dev.6、EffectCraft dev.7、PhotoCraft dev.6、VectorCraft dev.6、ArtCraft dev.17）在隔离 Codex 安装后通过 58 技能发现及原生代表工作流；执行后所有技能摘要保持不变。[宿主安装内容的原生验证](docs/evidence/codex-release17-native-20261006.json)。此证据不代表模型调度、GUI 或完整创作验收。
 
 当前实际安装的插件 dev.6／技能 dev.5 使用维护版 CLI 0.2.0-craft.1，八类独立场景冷启动全部通过（43.688 秒）。已记录输入、输出、测试驱动和原生摘要，全部 58 个安装摘要不变；补齐旧 0.2.0 场景证据的版本缺口，发行版字节不变。[证据](docs/evidence/maintained-runtime-task-first-use.json)。
+
+候选安装回执复用校验已实现并验证，固定插件发布与 ArtCraft 同步仍待完成。[架构与证据](docs/FilmCraft-Runtime-Receipt-Architecture.zh_CN.md)。
+
+开发版 dev.7 内置固定技能 dev.6（85866c064c7d91abd8da63b0570d78bee3202bf5）。复用安装前核对回执身份；内置快照的四项测试通过，包括公开地址冷安装、原生重开及 11 个隔离 CLI 入口。[候选证据](docs/evidence/runtime-receipt-candidate.json)。固定 Codex 宿主验收和 ArtCraft 依赖同步仍待完成。

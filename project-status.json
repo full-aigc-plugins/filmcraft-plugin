@@ -24,7 +24,8 @@
     "4.23": "docs/evidence/audio-gain-candidate.json",
     "4.24": "docs/evidence/codex-filmcraft8-audio-gain-first-use-20261006.json",
     "4.25": "docs/evidence/codex-release47-audio-gain-first-use-20261006.json",
-    "4.26": "docs/evidence/codex-filmcraft8-multitrack-audio-first-use-20261006.json"
+    "4.26": "docs/evidence/codex-filmcraft8-multitrack-audio-first-use-20261006.json",
+    "4.27": "docs/evidence/required-audio-candidate.json"
   },
   "hostValidationEvidence": "docs/evidence/codex-filmcraft7-receipt-first-use-20261006.json",
   "hostValidationStatus": "bounded-installed-receipt-first-use-passed",

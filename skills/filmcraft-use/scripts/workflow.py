@@ -309,7 +309,13 @@ def execute(plan, output, runtime_home=None, source=None):
                     raise ValueError('export_video_mismatch')
                 if abs(exported['duration'] - sequence['duration']) > TICKS * sequence['settings']['frame_rate']['den'] // sequence['settings']['frame_rate']['num']:
                     raise ValueError('export_duration_mismatch')
-                if plan.get('export', {}).get('audioRequired', True) and not exported.get('audio'):
+                # 导出器可能自动产生静音 AAC；源时间线必须真实引用有音频流的素材。
+                audio_items = {clip['item'] for track in reopened['sequence']['audio'] for clip in track['items']}
+                audio_sources = [alias for alias, asset in assets.items() if asset.get('item') in audio_items and asset['probe'].get('audio')]
+                audio_check = {'schema': 'filmcraft-audio-check/v1', 'required': plan.get('export', {}).get('audioRequired', True), 'sourceAliases': audio_sources, 'exportedAudio': exported.get('audio')}
+                (output / 'audio-check.json').write_text(json.dumps(audio_check, ensure_ascii=False, indent=2) + '\n')
+                (output / 'export-probe.json').write_text(json.dumps(precise(exported), ensure_ascii=False, indent=2) + '\n')
+                if audio_check['required'] and (not exported.get('audio') or not audio_sources):
                     raise ValueError('export_audio_missing')
                 decoded = run(cli, ['bench-decode', str(output / 'film.mp4'), '--frames', str(sequence['durationFrames'])])
                 if not re.search(r'\b' + str(sequence['durationFrames']) + r' frames in ', decoded):

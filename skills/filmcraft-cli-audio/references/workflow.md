@@ -73,3 +73,11 @@ The output directory must not exist. Native collection targets the final directo
 The full Harness ledger, recovery state machine, plugin-host installation, additional export formats and creative review remain separate acceptance work.
 
 有可见字幕轨时默认传入 `burnCaptions=true`，避免预览有字幕而成片遗漏。`export.burnCaptions=false` 显式选择仅工程/侧车字幕；两个导出布尔标志都拒绝字符串和数字。
+
+## 必需音轨门禁 / Required source audio
+
+默认 audioRequired 为 true。成功交付同时要求原生时间线中的音频片段引用具有音频流的已登记素材，以及导出音频流存在。导出器自动生成的静音 AAC 流不能代替源音轨。失败返回 export_audio_missing，保留原生工程、电影、预览、audio-check.json、export-probe.json 和 failure.json，不写成功 manifest，也不覆盖失败目录重试。
+
+有意无声的视频必须明确设置 audioRequired 为 false。用户提供的静音 WAV 具有真实源音轨，可以正常通过；本门禁不以波形幅度为零拒绝素材。audio-check.json 随成功 manifest 摘要保存，也在失败目录保留用于诊断。
+
+By default audioRequired is true. A native timeline audio clip must reference registered media containing an audio stream, and the exported movie must contain an audio stream. Automatically generated silent AAC is insufficient. Failure returns export_audio_missing, retains the native project/movie/preview plus audio-check.json, export-probe.json and failure.json, and publishes no success manifest. Use a fresh output for retries. Explicitly set audioRequired false for video-only delivery; an intentional silent WAV remains valid source audio.

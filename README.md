@@ -32,9 +32,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.8 |
+| Metadata version | 0.1.0-dev.9 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.7 |
+| Skills source | filmcraft-skills / v0.1.0-dev.8 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |
@@ -178,3 +178,5 @@ Fixed FilmCraft plugin dev.7 / source dev.6 passed actual Codex 0.153.4 installa
 Plugin dev.8 vendors source dev.7: native workflow static audio-track gain (mixer.setStrip), finite-value validation and isolated candidate -6 dB decoding. Fixed Codex installed-snapshot verification passed: one isolated cold audio gain test, 58 discovered skills and preserved hashes; [evidence](docs/evidence/codex-filmcraft8-audio-gain-first-use-20261006.json). [Scope and architecture](docs/FilmCraft-Audio-Gain-Architecture.md).
 
 Installed plugin dev.8 verifies three independent voice/music/original-audio tracks, staggered starts and a music-only gain revision through real decoded frequency amplitudes. All 58 installed hashes remain unchanged. [Scope and evidence](docs/FilmCraft-Multitrack-Audio-Architecture.md).
+
+Candidate source dev.8 rejects generated silent AAC when required native source audio is absent, retains diagnostic outputs and still accepts explicit video-only or intentional silent WAV delivery. [Architecture and scope](docs/FilmCraft-Required-Audio-Architecture.md). Fixed installed verification remains pending.

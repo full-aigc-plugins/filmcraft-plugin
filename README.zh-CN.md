@@ -32,9 +32,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.8 |
+| Metadata version | 0.1.0-dev.9 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.7 |
+| Skills source | filmcraft-skills / v0.1.0-dev.8 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |
@@ -178,3 +178,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 插件 dev.8 固定技能源 dev.7，补齐原生工作流静态音轨增益（mixer.setStrip）、有限数值校验和隔离候选 -6 dB 解码。固定安装副本真实冷启动增益验收通过，58 项技能发现与执行后摘要保留；[证据](docs/evidence/codex-filmcraft8-audio-gain-first-use-20261006.json)。[范围与架构](docs/FilmCraft-Audio-Gain-Architecture.zh_CN.md)。
 
 固定插件 dev.8 已验证已有配音、音乐、视频原音三个独立音轨、错开起点和仅音乐增益返工，使用实际解码频率幅度核验；全部 58 项安装摘要保持不变。[范围与证据](docs/FilmCraft-Multitrack-Audio-Architecture.zh_CN.md)。
+
+候选技能源 dev.8 修复必需源音轨缺失却因自动静音 AAC 误成功的问题，保留失败诊断，明确无声视频与有意静音 WAV 仍可交付。[架构与范围](docs/FilmCraft-Required-Audio-Architecture.zh_CN.md)。固定安装复验待完成。

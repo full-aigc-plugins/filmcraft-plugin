@@ -114,4 +114,8 @@
 
 - [x] 4.26 [FC-DM-003] 固定插件 dev.8 的音频技能单独复制到隔离 .agents/skills，从空目录公开安装；验证三个频率可分离的已有声音（含视频原音）与三种独立增益、精确错开起点、音乐 -6 dB 返工、其他频率幅度及原交付保全；记录当前源与实际宿主摘要。证据 `docs/evidence/codex-filmcraft8-multitrack-audio-first-use-20261006.json`。不关闭完整声音质量、全部音频配置或完整 4.9。
 
+- [x] 4.27 [FC-DM-003] 真实复现无源音轨却因自动静音 AAC 误成功；增加源时间线与已登记素材流绑定，保留 audio-check/probe/失败输出，验证公开失败入口、无成功 manifest、诊断重试保全，以及显式无声和有意静音源的合法交付。候选证据 `docs/evidence/required-audio-candidate.json`。
+- [ ] 4.28 [FC-DM-003] 发布固定技能源 dev.8 与插件 dev.9，安装后单音频技能空运行目录复验缺源音轨失败、诊断保留和两种合法无声交付，并验证正向单轨／三轨增益不受影响。
+- [ ] 4.29 [FC-DM-003] 更新 ArtCraft 的固定 FilmCraft 技能源并验收真实混合交付与失败传播；不以独立 FilmCraft 门禁验收关闭混合集成。
+
 任务 4.4–4.6 的有界证据：固定插件 dev.7 的时间线技能单独复制，在空运行时公开安装；用随时间变色的素材验证普通入点裁切和非插入移动，保存重开后核对精确 sourceIn／start／duration，并逐帧解码原生成片检查颜色与间隙。未目标镜头、音轨、字幕和原交付摘要不变；数字型 delta 拒绝且原工程保全。真实 1 项通过（5.294 秒），证据 `docs/evidence/codex-filmcraft7-temporal-timeline-first-use-20261006.json`。原完整任务不勾选：未覆盖 ripple／roll、全部帧率和所有边界场景。

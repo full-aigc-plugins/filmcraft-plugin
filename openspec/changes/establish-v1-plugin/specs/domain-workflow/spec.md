@@ -63,6 +63,12 @@ FilmCraft SHALL 保持配音、音乐、原始音轨的独立身份与增益；�
 - **WHEN** 输出缺少约定音轨或同步偏移超过 fixture 阈值
 - **THEN** 技术门禁失败，保留输出用于诊断
 
+#### Scenario: FC-DM-003-EMPTY 自动静音流不能替代源音轨
+
+- **WHEN** 工程声明 audioRequired，但原生时间线没有引用任何具有音频流的源片段，导出器自动生成静音 AAC 流
+- **THEN** 工作流 SHALL 返回 export_audio_missing，不发布成功 manifest；保留原生工程、导出视频、预览及源/输出音轨核验记录供诊断
+- **AND** 明确 audioRequired 为 false 的视频工程 SHALL 可以交付；不以实际波形为零拒绝用户已有的有意静音素材
+
 ### Requirement: FC-DM-004 字幕时间与版式
 
 FilmCraft SHALL 保存字幕文本、语言、起止时间及样式；拒绝时间越界；缺少字体时报告替代影响，不悄悄更换。

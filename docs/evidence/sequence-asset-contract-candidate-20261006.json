@@ -1,0 +1,189 @@
+{
+  "schema": "craft-sequence-asset-contract-candidate/v1",
+  "date": "2026-10-06",
+  "status": "validated-component-not-wired-to-workflow",
+  "driverSha256": "f760fcef3b44125094943b7a366996fb458882a8b7853de8b28c3218aa2da69a",
+  "pngInspectionSha256": "f5b55f58eb0f4d7d50664442eec75935cdebc3274e04b221acad54fed429bc02",
+  "red": {
+    "expectedFailure": "sequence asset validator missing",
+    "failedTests": 4,
+    "logSha256": "0371789346b39ea9290f7ede2073c90e5eac33e738c1d1fc3edb331145e26352"
+  },
+  "green": {
+    "targetPassed": 6,
+    "targetSeconds": 0.037,
+    "targetLogSha256": "fcc79679fd61f1821d24f3ba295f934745f885f074c5b2c3ab08cb808510d5e9",
+    "defaultPassed": 43,
+    "defaultSkipped": 17,
+    "defaultSeconds": 9.762,
+    "defaultLogSha256": "3e668490a576e09a5cd490e428a5464968449f0a94d825e438d95ed644e08b42",
+    "skillResourceSyncPassed": true,
+    "independentSingleSkillValidationPassed": true,
+    "independentSkillBytesUnchanged": true
+  },
+  "nativeEffectInput": {
+    "manifestSha256": "89d594b9c69b9102393b5ddf7597a2e456744f76a221636d8075df062d87ecf4",
+    "schema": "craft-image-sequence/v1",
+    "frameCount": 12,
+    "frameRate": {
+      "num": 12,
+      "den": 1
+    },
+    "frames": [
+      {
+        "index": 0,
+        "location": "frame_00000.png",
+        "sha256": "94fa4e584df805a110371bd3ec1a0070d5dd05bfd5c28464a19fee1596025bae",
+        "bytes": 1829,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "1e528c6a45aad9be65884e8e191701f571bb1310a2dae0e93facb9597db62467"
+      },
+      {
+        "index": 1,
+        "location": "frame_00001.png",
+        "sha256": "9d6031abfe4ff11373502145babfbdf0109ecc40e7d8c9b1cea1478aeb6470b2",
+        "bytes": 4670,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "453f78a338a2930e907b9285f80f0dfa899d0f934fc3de1e493ccd6bdbecfa45"
+      },
+      {
+        "index": 2,
+        "location": "frame_00002.png",
+        "sha256": "03bc0ac9d58180253079d9e9db94edf3a81f22929b45661a91b979a11f24fc87",
+        "bytes": 4789,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "fa1d1b76f297d478b21ed25d4f4a7b0676e328120cf2318d5d4b5011793930ce"
+      },
+      {
+        "index": 3,
+        "location": "frame_00003.png",
+        "sha256": "c2a342f7fcc7136bc4c9b445a49dfbe4b93f836ba138100048eb29bc422ad9e0",
+        "bytes": 4823,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "fd06a2f6c7f0302600325de6b82c31e2720a95136467b06cdb26b37a3aeb012e"
+      },
+      {
+        "index": 4,
+        "location": "frame_00004.png",
+        "sha256": "1fb7e91b2465e8ef11f1fa0afa60d83b59ccebcc1495686072c6f8348ad3c47b",
+        "bytes": 4871,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "01f271461425b27bfa4c2a01bf6da6df9b75065da067aecbe8a76a296bfaccb0"
+      },
+      {
+        "index": 5,
+        "location": "frame_00005.png",
+        "sha256": "3ea0ebea0fa5327268add45bad4b874f63d59f69115e97be71674e4e22f870e3",
+        "bytes": 4859,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "421b21dacbfdd29d03f1785f996c8205651d68994085e1ab2d3d6586a4285cb5"
+      },
+      {
+        "index": 6,
+        "location": "frame_00006.png",
+        "sha256": "fe261dcba8df6a408c7a8dd90a33200bf3771e43eff5afe789866790c2b41ad6",
+        "bytes": 4807,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "31285125fc4e967ab63dc057b2b439645f563fc4456c9fd6e49cef8174ea8543"
+      },
+      {
+        "index": 7,
+        "location": "frame_00007.png",
+        "sha256": "fe261dcba8df6a408c7a8dd90a33200bf3771e43eff5afe789866790c2b41ad6",
+        "bytes": 4807,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "31285125fc4e967ab63dc057b2b439645f563fc4456c9fd6e49cef8174ea8543"
+      },
+      {
+        "index": 8,
+        "location": "frame_00008.png",
+        "sha256": "fe261dcba8df6a408c7a8dd90a33200bf3771e43eff5afe789866790c2b41ad6",
+        "bytes": 4807,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "31285125fc4e967ab63dc057b2b439645f563fc4456c9fd6e49cef8174ea8543"
+      },
+      {
+        "index": 9,
+        "location": "frame_00009.png",
+        "sha256": "fe261dcba8df6a408c7a8dd90a33200bf3771e43eff5afe789866790c2b41ad6",
+        "bytes": 4807,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "31285125fc4e967ab63dc057b2b439645f563fc4456c9fd6e49cef8174ea8543"
+      },
+      {
+        "index": 10,
+        "location": "frame_00010.png",
+        "sha256": "fe261dcba8df6a408c7a8dd90a33200bf3771e43eff5afe789866790c2b41ad6",
+        "bytes": 4807,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "31285125fc4e967ab63dc057b2b439645f563fc4456c9fd6e49cef8174ea8543"
+      },
+      {
+        "index": 11,
+        "location": "frame_00011.png",
+        "sha256": "fe261dcba8df6a408c7a8dd90a33200bf3771e43eff5afe789866790c2b41ad6",
+        "bytes": 4807,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "rgbaSha256": "31285125fc4e967ab63dc057b2b439645f563fc4456c9fd6e49cef8174ea8543"
+      }
+    ],
+    "validationResult": "passed"
+  },
+  "rejected": [
+    "missing or extra numbered frames",
+    "symlinked frames",
+    "manifest or frame digest mismatch",
+    "decoded pixel hash or alpha extrema mismatch",
+    "duration and rational timebase mismatch",
+    "noninteger timebase fields",
+    "duplicate JSON fields",
+    "decoded or encoded aggregate over 512 MiB",
+    "more than 10000 frames",
+    "unsupported or noncanonical rational rate",
+    "existing destination"
+  ],
+  "exclusions": [
+    "workflow asset import, collection, source revision integration pending",
+    "public runtime installer lock unchanged",
+    "fixed source and plugin publication pending",
+    "cold installed native dynamic handoff pending",
+    "Art sequence contract pending",
+    "full V1 creative acceptance pending"
+  ]
+}

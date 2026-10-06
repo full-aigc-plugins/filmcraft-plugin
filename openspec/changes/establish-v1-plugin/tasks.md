@@ -128,3 +128,5 @@
 - [x] 4.32 [FC-DM-001-SEQUENCE-COLLECT] 原生组件候选：复现首帧-only 收集失败；实现整段收集、同名隔离、缺失／截断拒绝；原目录断开后重开并核对真实帧和 Alpha。七项序列测试、引擎 284 项通过／三项忽略及固定上游补丁检查通过。证据 docs/evidence/sequence-collection-candidate-20261006.json；不表示公开 CLI、独立技能或 Art 联调完成。
 
 4.30／4.31 当前进度：组合 craft.2 二进制已重建，真实 CLI 整段收集与动态图像透明合成候选测试 1 项通过（0.497 秒）；源目录断开后第 0／6／11 帧正确，归档和补丁摘要绑定。证据 docs/evidence/sequence-binary-candidate-20261006.json。公开发行安装、独立技能素材合同和 Art 联调仍开放。
+
+- [x] 4.33 [FC-DM-001-SEQUENCE] 独立技能源的序列清单校验与完整复制组件：严格时间基、完整帧集、RGBA 像素与摘要、资源门禁、失败保全及单技能独立资源验证。六项组件测试通过，真实 Effect 十二帧包可校验，默认回归 43 项通过／17 项跳过。证据 docs/evidence/sequence-asset-contract-candidate-20261006.json。公开 workflow 调用、原生冷安装、修订及 Art 联调仍由开放任务 4.31 验收。

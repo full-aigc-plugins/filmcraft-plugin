@@ -1,0 +1,351 @@
+{
+  "schema": "craft-domain-command-revision-first-use/v1",
+  "domain": "filmcraft",
+  "result": "PASS",
+  "count": 11,
+  "elapsedSeconds": 67.161,
+  "cases": [
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-use"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-setup"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-project"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-media"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-timeline"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-audio"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-subtitles"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-color"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-motion"
+    },
+    {
+      "schema": "craft-native-command-revision/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+      "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+      "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+      "testSha256": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+      "exampleSha256": {
+        "commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+        "commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611"
+      },
+      "revisionCommand": "clip.speedDuration",
+      "targetIdSource": "actual native results",
+      "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+      "revisedProjectSha256": "46ef94737675fb4689854f19f482a7c9d9d9f99a4df76cba067417c4d799bcf9",
+      "operations": 22,
+      "checks": [
+        "single skill copy",
+        "actual target identity",
+        "save and reopen revision",
+        "non-target objects preserved",
+        "native persisted target settings",
+        "rendered output and non-target pixel preservation",
+        "original delivery and skills unchanged"
+      ],
+      "coldInstall": "PASS",
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "skill": "filmcraft-cli-export"
+    }
+  ],
+  "scope": "Each skill copied alone; unique empty runtime; public locked native install; paired revision examples; saved/reopened target state and non-target objects/pixels; original delivery and skill hashes unchanged. Full registry/GUI/model dispatch acceptance remains open."
+}

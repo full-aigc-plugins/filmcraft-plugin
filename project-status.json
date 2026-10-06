@@ -51,5 +51,6 @@
   "previousDomainTaskMatrixEvidence": "docs/evidence/codex-current-domain-task-matrix-20261006.json",
   "hdSequenceCandidateEvidence": "docs/evidence/effect-film-segment-hd-candidate-20261007.json",
   "completeCommandEntryEvidence": "docs/evidence/complete-commands-20261007.json",
-  "completeCommandAcceptance": "incomplete"
+  "completeCommandAcceptance": "incomplete",
+  "completeCommandColdFirstUseEvidence": "docs/evidence/complete-commands-cold-first-use-20261007.json"
 }

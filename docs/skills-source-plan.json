@@ -18,6 +18,6 @@
   "sourceOfTruth": "independent skills repository",
   "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums",
   "suiteManifest": "https://github.com/full-aigc-skills/filmcraft-skills/blob/main/skill-suite.json",
-  "sourceRef": "v0.1.0-dev.16",
-  "sourceSha": "400b9bde7e9fbd6c52866a0d96fb8e54800a7f82"
+  "sourceRef": "v0.1.0-dev.17",
+  "sourceSha": "73055b2cf39c9e0956a121591b2a5fb96c276985"
 }

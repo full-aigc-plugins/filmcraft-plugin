@@ -38,5 +38,6 @@
   "hostValidationEvidence": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json",
   "hostValidationStatus": "bounded-installed-native-sequence-first-use-passed",
   "temporalTimelineEvidence": "docs/evidence/codex-filmcraft7-temporal-timeline-first-use-20261006.json",
-  "currentReleaseDiscoveryEvidence": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json"
+  "currentReleaseDiscoveryEvidence": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json",
+  "currentDomainTaskMatrixEvidence": "docs/evidence/codex-current-domain-task-matrix-20261006.json"
 }

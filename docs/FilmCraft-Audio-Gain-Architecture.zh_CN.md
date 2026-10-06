@@ -20,4 +20,4 @@ flowchart LR
 
 候选首次使用测试仅复制一个音频技能到隔离项目 .agents/skills，并从空运行目录公开安装固定 CLI。真实 1 项通过（5.010 秒）：-6 dB 的解码 RMS 比例为 0.5011754631，理论值 0.5011872336；原交付文件、镜头与音频片段、字幕、技能资源摘要保留。目标回归先因 unsupported_command 失败，最小实现后 8 项通过。证据：[候选记录](evidence/audio-gain-candidate.json)。
 
-尚未证明多音轨相互混音、自动化、GUI、模型派发或创作质量。固定发布后，Codex 0.153.4 隔离安装五插件，发现 58 项技能且零加载错误。安装后的音频技能单独复制并从空运行目录公开安装 CLI，真实 1 项通过（7.372 秒），全部 58 项宿主技能摘要保持不变。[固定安装证据](evidence/codex-filmcraft8-audio-gain-first-use-20261006.json)。ArtCraft 仍锁定旧 FilmCraft 技能源；混合增益节点支持待依赖升级与复验。
+尚未证明多音轨相互混音、自动化、GUI、模型派发或创作质量。固定发布后，Codex 0.153.4 隔离安装五插件，发现 58 项技能且零加载错误。安装后的音频技能单独复制并从空运行目录公开安装 CLI，真实 1 项通过（7.372 秒），全部 58 项宿主技能摘要保持不变。[固定安装证据](evidence/codex-filmcraft8-audio-gain-first-use-20261006.json)。ArtCraft dev.47／技能源 dev.35 已固定 FilmCraft dev.7，单技能首次混合增益返工安装后复验通过；[混合证据](evidence/codex-release47-audio-gain-first-use-20261006.json)。

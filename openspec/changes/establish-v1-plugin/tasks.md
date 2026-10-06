@@ -110,6 +110,6 @@
 
 - [x] 4.23 [FC-DM-003] 复现独立工作流拒绝静态音轨增益；实现明确 A 音轨的有限 volumeDb 校验与原生 mixer.setStrip 调用，同步 11 项自包含技能源；候选单音频技能空运行目录公开安装、另存与实际解码幅度验证通过。证据 `docs/evidence/audio-gain-candidate.json`，不证明当前固定插件包含新入口。
 - [x] 4.24 [FC-DM-003] 固定技能源 dev.7 与插件 dev.8 发布后完成 Codex 隔离安装，58 技能发现且零错误；安装后的音频技能单独冷启动并实际解码 -6 dB 成片通过，全部宿主摘要保留。证据 `docs/evidence/codex-filmcraft8-audio-gain-first-use-20261006.json`。
-- [ ] 4.25 [FC-DM-003] 更新 ArtCraft 固定 FilmCraft 依赖并验证混合工作流中的静态增益；独立 FilmCraft 验收不能替代此项。
+- [x] 4.25 [FC-DM-003] 更新 ArtCraft 固定 FilmCraft 依赖并验证混合工作流中的静态增益；独立 FilmCraft 验收不能替代此项。
 
 任务 4.4–4.6 的有界证据：固定插件 dev.7 的时间线技能单独复制，在空运行时公开安装；用随时间变色的素材验证普通入点裁切和非插入移动，保存重开后核对精确 sourceIn／start／duration，并逐帧解码原生成片检查颜色与间隙。未目标镜头、音轨、字幕和原交付摘要不变；数字型 delta 拒绝且原工程保全。真实 1 项通过（5.294 秒），证据 `docs/evidence/codex-filmcraft7-temporal-timeline-first-use-20261006.json`。原完整任务不勾选：未覆盖 ripple／roll、全部帧率和所有边界场景。

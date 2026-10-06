@@ -35,12 +35,13 @@
     "4.36": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json",
     "4.37": "docs/evidence/codex-effectcraft9-filmcraft10-dynamic-first-use-20261006.json",
     "4.38": "docs/evidence/motion-lut-workflow-candidate-20261006.json",
-    "4.39": "docs/evidence/motion-lut-workflow-candidate-20261006.json"
+    "4.39": "docs/evidence/motion-lut-workflow-candidate-20261006.json",
+    "4.41": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json"
   },
-  "hostValidationEvidence": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json",
-  "hostValidationStatus": "bounded-installed-native-sequence-first-use-passed",
+  "hostValidationEvidence": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json",
+  "hostValidationStatus": "bounded-installed-native-motion-lut-first-use-passed",
   "temporalTimelineEvidence": "docs/evidence/codex-filmcraft7-temporal-timeline-first-use-20261006.json",
-  "currentReleaseDiscoveryEvidence": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json",
-  "currentDomainTaskMatrixEvidence": "docs/evidence/codex-current-domain-task-matrix-20261006.json",
-  "motionLutCandidateEvidence": "docs/evidence/motion-lut-workflow-candidate-20261006.json"
+  "currentReleaseDiscoveryEvidence": "docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json",
+  "motionLutCandidateEvidence": "docs/evidence/motion-lut-workflow-candidate-20261006.json",
+  "previousDomainTaskMatrixEvidence": "docs/evidence/codex-current-domain-task-matrix-20261006.json"
 }

@@ -36,6 +36,10 @@ Import and placement aliases reference native item and clip IDs. Caption timing 
 
 ## 局部修改与素材移动 / Revisions and relocation
 
+静态音轨增益可使用 `mixer.setStrip`，参数严格为 `{"strip":"A1","volumeDb":-6.0}`；支持 A1、A2 等明确音轨和有限分贝数值。此入口不支持总线、路由、录音或自动化字段。另存修订后解码成片音频核对实际幅度，不能只检查命令返回成功。
+
+For static track gain, use `mixer.setStrip` with exactly `{"strip":"A1","volumeDb":-6.0}`. Explicit audio tracks and finite decibel values are supported. Bus, routing, recording and automation fields are rejected. Decode the exported movie to verify the actual amplitude after saving a revision.
+
 使用 `--source /absolute/path/film-v1`，把该包 `manifest.json` 中 `files["project.fcproj"]` 写入新计划的 `expectedProjectSha256`。省略 `document`，输出到新的目录。示例替换镜头：
 
 ```json

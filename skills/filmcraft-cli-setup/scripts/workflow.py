@@ -7,6 +7,7 @@ from fractions import Fraction
 import hashlib
 import importlib.util
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -23,7 +24,7 @@ def exchange_report(root,outputs,warnings):
 ALLOWED = {'asset.import', 'timeline.place', 'timeline.trim', 'timeline.move',
            'timeline.setTrack', 'timeline.select', 'clip.replaceFromBin',
            'captions.newTrack', 'captions.setStyle', 'caption.add',
-           'captions.setText', 'captions.delete', 'captions.setTrack'}
+           'captions.setText', 'captions.delete', 'captions.setTrack', 'mixer.setStrip'}
 
 def sha(path):
     with Path(path).open('rb') as stream:
@@ -88,6 +89,16 @@ def validate(plan):
             aliases.add(alias)
         if not isinstance(item.get('params', {}), dict):
             raise ValueError('invalid_params')
+        if item['command'] == 'mixer.setStrip':
+            params = item.get('params', {})
+            # 首版仅允许显式音轨的静态增益，避免混入录音或总线重路由操作。
+            value = params.get('volumeDb')
+            if (set(params) != {'strip', 'volumeDb'}
+                    or not isinstance(params.get('strip'), str)
+                    or not re.fullmatch(r'A[1-9][0-9]*', params['strip'])
+                    or type(value) not in (int, float)
+                    or abs(value) > sys.float_info.max or not math.isfinite(value)):
+                raise ValueError('invalid_track_gain')
     for time in plan.get('frames', ['0']):
         ticks(time)
     if 'document' in plan:

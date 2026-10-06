@@ -32,7 +32,8 @@
     "4.33": "docs/evidence/sequence-asset-contract-candidate-20261006.json",
     "4.34": "docs/evidence/sequence-workflow-candidate-20261006.json",
     "4.35": "docs/evidence/effect-film-sequence-handoff-20261006.json",
-    "4.36": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json"
+    "4.36": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json",
+    "4.37": "docs/evidence/codex-effectcraft9-filmcraft10-dynamic-first-use-20261006.json"
   },
   "hostValidationEvidence": "docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json",
   "hostValidationStatus": "bounded-installed-native-sequence-first-use-passed",

@@ -136,3 +136,5 @@
 - [x] 4.35 [FC-DM-001-SEQUENCE] 发布公开原生 craft.2 并更新十一项源码技能锁及当前命令目录；真实安装器从空目录下载后完成序列导入、全帧收集、移动修订和坏帧拒绝；双领域实际 Effect 动画交接、文字修订与普通音画字幕回归通过。证据 docs/evidence/sequence-public-runtime-first-use-20261006.json、docs/evidence/effect-film-sequence-handoff-20261006.json。尚未证明新不可变插件安装或 Art 联调，4.31 保持开放。
 
 - [x] 4.36 [FC-DM-001-SEQUENCE] 固定 Film 插件 dev.10 与技能源 dev.9 发布后，完成 Codex 隔离安装、58 技能发现及零错误检查；从实际安装的单媒体技能冷下载公开 craft.2，完成序列导入／全帧收集／移动修订／坏帧拒绝和独立 MP4 解码，一项通过，执行后 58 项安装摘要保持不变。证据 docs/evidence/codex-filmcraft10-sequence-first-use-20261006.json。不替代实际 Skills CLI 安装、Effect 新序列发行或 Art 联调，4.31 保持开放。
+
+- [x] 4.37 [EC-DM-005-SEQUENCE / FC-DM-001-SEQUENCE] 固定 Effect dev.9 与 Film dev.10 公开安装后，从实际安装快照验证单 Effect 冷下载序列、双领域动态交接及移动文字返工、原 MP4 回归，三项通过；58 技能发现零错误，每项执行后全部安装摘要保持不变。证据 docs/evidence/codex-effectcraft9-filmcraft10-dynamic-first-use-20261006.json。Art 动态联调与实际 Skills CLI 安装仍未完成，不关闭完整首版。

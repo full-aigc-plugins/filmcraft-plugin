@@ -21,7 +21,7 @@ def exchange_report(root,outputs,warnings):
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
     module.write_report(root,outputs,warnings)
 
-ALLOWED = {'asset.import', 'timeline.place', 'timeline.trim', 'timeline.move',
+ALLOWED = {'native.command', 'asset.import', 'timeline.place', 'timeline.trim', 'timeline.move',
            'timeline.setTrack', 'timeline.select', 'clip.replaceFromBin',
            'captions.newTrack', 'captions.setStyle', 'caption.add',
            'captions.setText', 'captions.delete', 'captions.setTrack', 'mixer.setStrip',
@@ -89,6 +89,12 @@ def finite_parameter(value):
     return isinstance(value, list) and bool(value) and all(finite_parameter(v) for v in value)
 
 
+def native_module():
+    spec = importlib.util.spec_from_file_location('craft_native_workflow', Path(__file__).with_name('native_workflow.py'))
+    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    return module
+
+
 def validate(plan, prior_assets=None):
     if not isinstance(plan, dict) or not isinstance(plan.get('operations'), list):
         raise ValueError('operations_required')
@@ -98,6 +104,8 @@ def validate(plan, prior_assets=None):
     for item in plan['operations']:
         if not isinstance(item, dict):
             raise ValueError('invalid_operation')
+        if item.get('command') == 'native.command':
+            native_module().validate(item.get('params'))
         if item.get('command') not in ALLOWED:
             raise ValueError('unsupported_command')
         alias = item.get('as')
@@ -322,7 +330,9 @@ def execute(plan, output, runtime_home=None, source=None):
                     validate({'operations':[{'command':identifier, 'params':params}]})
                 if identifier == 'lumetri.setInputLut' and not (type(params['clip']) is int and 0 < params['clip'] <= 2**64-1):
                     raise ValueError('invalid_lut_params')
-                if identifier == 'asset.import':
+                if identifier == 'native.command':
+                    result = native_module().execute(session, params, recovery_state, receipts, stage)
+                elif identifier == 'asset.import':
                     asset = assets[params['asset']]
                     if 'item' in asset:
                         raise ValueError('asset_already_imported')
@@ -395,7 +405,12 @@ def execute(plan, output, runtime_home=None, source=None):
             for track in sequence['video'] + sequence['audio']:
                 for clip in track['items']:
                     asset = next((x for x in assets.values() if x.get('item') == clip['item']), None)
-                    if not asset or clip['speed'] != 1 or clip['sourceIn'] < 0 or clip['sourceIn'] + clip['duration'] > ticks(asset['probe']['duration']):
+                    # 时间线时长不是源媒体消耗时长；倍速片段按绝对速率核验源范围。
+                    speed = clip.get('speed')
+                    if type(speed) not in (int, float) or not math.isfinite(speed) or speed == 0:
+                        raise ValueError('invalid_clip_speed')
+                    consumed = Fraction(clip['duration']) * abs(Fraction(str(speed)))
+                    if not asset or clip['sourceIn'] < 0 or clip['sourceIn'] + consumed > ticks(asset['probe']['duration']):
                         raise ValueError('clip_out_of_range: ' + str(clip['clip']))
             caption_state = command('captions.list', {})
             families = {x['family'] for x in command('fonts.list', {'system': True})}

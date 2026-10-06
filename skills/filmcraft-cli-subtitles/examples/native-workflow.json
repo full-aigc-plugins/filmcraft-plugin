@@ -1,0 +1,54 @@
+{
+  "document": {
+    "name": "Native gateway",
+    "width": 32,
+    "height": 32,
+    "frameRate": {
+      "num": 12,
+      "den": 1
+    }
+  },
+  "operations": [
+    {
+      "command": "asset.import",
+      "params": {
+        "asset": "still"
+      },
+      "as": "still"
+    },
+    {
+      "command": "timeline.place",
+      "params": {
+        "item": {
+          "$ref": "still.item"
+        },
+        "track": "V1",
+        "time": "0",
+        "sourceIn": "0",
+        "duration": "254016000000",
+        "insert": false
+      },
+      "as": "clip"
+    },
+    {
+      "command": "native.command",
+      "params": {
+        "command": "clip.speedDuration",
+        "params": {
+          "clips": {
+            "$ref": "clip.clips"
+          },
+          "speed": 100,
+          "reverse": false,
+          "ripple": false
+        }
+      }
+    }
+  ],
+  "frames": [
+    "0"
+  ],
+  "export": {
+    "audioRequired": false
+  }
+}

@@ -32,9 +32,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.7 |
+| Metadata version | 0.1.0-dev.8 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.6 |
+| Skills source | filmcraft-skills / v0.1.0-dev.7 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |
@@ -175,4 +175,4 @@ Fixed FilmCraft plugin dev.7 / source dev.6 passed actual Codex 0.153.4 installa
 
 [Temporal-source trim and move acceptance](docs/FilmCraft-Temporal-Timeline-Acceptance.md): one installed single-skill empty-runtime case passes, checking source in-points in reopened projects and native exports while preserving other clips, audio, captions and original deliveries. Complete timeline/creative acceptance remains open.
 
-Plugin dev.8 vendors source dev.7: native workflow static audio-track gain (mixer.setStrip), finite-value validation and isolated candidate -6 dB decoding. Fixed installed-snapshot verification is pending. [Scope and architecture](docs/FilmCraft-Audio-Gain-Architecture.md).
+Plugin dev.8 vendors source dev.7: native workflow static audio-track gain (mixer.setStrip), finite-value validation and isolated candidate -6 dB decoding. Fixed Codex installed-snapshot verification passed: one isolated cold audio gain test, 58 discovered skills and preserved hashes; [evidence](docs/evidence/codex-filmcraft8-audio-gain-first-use-20261006.json). [Scope and architecture](docs/FilmCraft-Audio-Gain-Architecture.md).

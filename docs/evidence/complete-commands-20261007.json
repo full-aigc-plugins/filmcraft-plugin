@@ -1,0 +1,112 @@
+{
+  "schema": "craft-complete-command-evidence/v1",
+  "date": "2026-10-07",
+  "domain": "filmcraft",
+  "documentationCommands": 666,
+  "workflowOperations": 17,
+  "workflowNativeCommands": 15,
+  "allCommandsRouted": true,
+  "newRegression": {
+    "passed": 12,
+    "failed": 0,
+    "initialRed": "8 tests failed because commands.py entry did not exist"
+  },
+  "defaultRegression": {
+    "total": 86,
+    "passed": 64,
+    "skipped": 22,
+    "failed": 0
+  },
+  "nativeSample": {
+    "schema": "craft-native-command-sample/v1",
+    "domain": "filmcraft",
+    "result": "PASS",
+    "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+    "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+    "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+    "createOperations": 11,
+    "reopenOperations": 3,
+    "executedCommands": [
+      "clip.speedDuration",
+      "file.newColorMatte",
+      "file.newProject",
+      "file.newSequence",
+      "file.open",
+      "file.saveAs",
+      "sequence.applyVideoTransition",
+      "sequence.inspect",
+      "timeline.place"
+    ],
+    "savedProjectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+    "checks": [
+      "isolated single-skill copy",
+      "live command context",
+      "actual return references",
+      "native save and reopen",
+      "persisted domain settings",
+      "96x64 rendered output",
+      "source project and skill unchanged"
+    ],
+    "guiAcceptance": "NOT_RUN",
+    "fullPerCommandAcceptance": "NOT_RUN",
+    "coldInstall": "NOT_RUN"
+  },
+  "testDriverSha256": "c4b410772c89813478c2e4a4e081985c90c4c821eb80d7534c4cb1e808bad74f",
+  "sourceSkillCount": 11,
+  "scope": "Complete parameter documentation and native invocation route; bounded native sample, not all-command or GUI acceptance",
+  "fullPerCommandAcceptance": "NOT_RUN",
+  "fixedInstalledHostAcceptance": "NOT_RUN",
+  "publication": "local tagged candidate; not published by this change",
+  "verificationCommands": [
+    "python3 -B scripts/build_command_coverage.py --check",
+    "python3 -B scripts/sync_skill_suite.py --check",
+    "python3 -B -m unittest discover -s tests -v",
+    "CRAFT_NATIVE_COMMANDS=1 python3 -B -m unittest discover -s tests -p test_native_commands.py -v"
+  ],
+  "sourceVersion": "0.1.0-dev.12",
+  "pluginVersion": "0.1.0-dev.13",
+  "vendor": {
+    "result": "PASS",
+    "sourceTag": "v0.1.0-dev.12",
+    "sourceCommit": "db278c6c2f34a5ebbc7d461da5b04adf117534de",
+    "skills": 11,
+    "checks": [
+      "local immutable tagged source checkout",
+      "per-skill lock digest and source comparison"
+    ]
+  },
+  "vendoredNativeSample": {
+    "schema": "craft-native-command-sample/v1",
+    "domain": "filmcraft",
+    "result": "PASS",
+    "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+    "entrySha256": "d247ab81b6d28478bbb3da4d958c0a96052067e483ac79fbbb9781bd291f1350",
+    "catalogSha256": "185a510f6b72c75ca41f3d25133813249e3ecc48bcfeea30e16fc6db8a92555c",
+    "createOperations": 11,
+    "reopenOperations": 3,
+    "executedCommands": [
+      "clip.speedDuration",
+      "file.newColorMatte",
+      "file.newProject",
+      "file.newSequence",
+      "file.open",
+      "file.saveAs",
+      "sequence.applyVideoTransition",
+      "sequence.inspect",
+      "timeline.place"
+    ],
+    "savedProjectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+    "checks": [
+      "isolated single-skill copy",
+      "live command context",
+      "actual return references",
+      "native save and reopen",
+      "persisted domain settings",
+      "96x64 rendered output",
+      "source project and skill unchanged"
+    ],
+    "guiAcceptance": "NOT_RUN",
+    "fullPerCommandAcceptance": "NOT_RUN",
+    "coldInstall": "NOT_RUN"
+  }
+}

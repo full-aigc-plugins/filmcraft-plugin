@@ -1,5 +1,13 @@
 # FilmCraft Agent Plugin
 
+## 完整原生命令入口
+
+本地候选：skills dev.12 / plugin dev.13；公开发行及宿主安装验收待完成。
+
+666 条命令现在均有逐项参数说明、技能归属与同会话调用入口。运行 `commands.py list / describe / check / run`；原生状态按实时 enabled 校验。旧工作流的 17 项交付合同保留。GUI 命令需显式 bridge，命令目录覆盖不代表全量验收。
+
+[架构与操作指南](docs/FilmCraft-Complete-Commands-Architecture.zh_CN.md) · [逐项参考](skills/filmcraft-use/references/command-reference.md) · [可运行示例](skills/filmcraft-use/examples/commands-advanced.json)
+
 独立技能驱动的可编辑视频剪辑与音画组织.
 
 [English](README.md) | [简体中文](README.zh-CN.md)
@@ -32,9 +40,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.12 |
+| Metadata version | 0.1.0-dev.13 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / 0.1.0-dev.11 |
+| Skills source | filmcraft-skills / 0.1.0-dev.12 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |

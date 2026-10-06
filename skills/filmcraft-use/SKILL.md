@@ -68,3 +68,15 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 缺少技能：`npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`。每项自带安装与执行资源；直接执行本技能 `scripts/cli.py` 也可查询当前 CLI，不依赖兄弟路径。
 
 工作区分段素材消费候选见 [分段素材](references/segmented-assets.md)。固定发布及 Art 集成仍待验收，不能把候选交接当作完整五插件交付。
+
+## 完整原生命令使用
+
+当前技能自带完整目录的参数说明与同会话入口，不受创作模板白名单限制。读取 [完整使用指南](references/command-usage.md)，按需查询 [命令参考](references/command-reference.md)；每条指令有技能路由、前置观察及验收状态。
+
+```bash
+python3 -I -B "$SKILL_DIR/scripts/commands.py" list --filter QUERY
+python3 -I -B "$SKILL_DIR/scripts/commands.py" describe COMMAND_ID
+python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-advanced.json" --output /absolute/new-command-result
+```
+
+新入口执行前检查真实注册表与当前可执行状态，保留返回值引用和逐步回执；语义错误或超时不冒充成功。目录覆盖与直接原生使用不等于所有指令、GUI、交付或 Art 编排已验收。

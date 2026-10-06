@@ -32,9 +32,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.11 |
+| Metadata version | 0.1.0-dev.12 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.10 |
+| Skills source | filmcraft-skills / 0.1.0-dev.11 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |
@@ -196,3 +196,5 @@ Fixed Film dev.11 / source dev.10 installed-first-use verification passed: isola
 Working-tree segmented asset consumer candidate validates Effect checkpoints, collects continuous frames and preserves source hashes. Fixed release, full HD long render and Art integration remain pending. [Architecture](docs/FilmCraft-Segmented-Assets-Architecture.md).
 
 Current-source HD segmented candidate passes 1080p / 24 fps / five seconds and animated-title checks; immutable installed releases and Art HD remain pending. [Architecture and evidence](docs/FilmCraft-HD-Sequence-Architecture.md).
+
+Immutable plugin release candidate 0.1.0-dev.12 pins skill source 0.1.0-dev.11, including HD segmented workflows and pixel verification optimization. Actual installed first-use acceptance remains pending.

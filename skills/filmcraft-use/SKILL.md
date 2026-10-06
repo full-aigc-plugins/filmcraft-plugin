@@ -66,3 +66,5 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 | **filmcraft-cli-export** | 导出预览帧、成片、交换文件与输出验证 |
 
 缺少技能：`npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`。每项自带安装与执行资源；直接执行本技能 `scripts/cli.py` 也可查询当前 CLI，不依赖兄弟路径。
+
+工作区分段素材消费候选见 [分段素材](references/segmented-assets.md)。固定发布及 Art 集成仍待验收，不能把候选交接当作完整五插件交付。

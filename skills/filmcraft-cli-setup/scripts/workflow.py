@@ -154,7 +154,7 @@ def validate(plan, prior_assets=None):
         raise ValueError('invalid_assets')
     for asset in plan.get('assets',{}).values():
         if (not isinstance(asset,dict) or set(asset)-{'path','sha256','kind'}
-                or asset.get('kind') not in (None,'image-sequence','lut')):
+                or asset.get('kind') not in (None,'image-sequence','segmented-image-sequence','lut')):
             raise ValueError('invalid_asset_registration')
     for time in plan.get('frames', ['0']):
         ticks(time)
@@ -220,6 +220,8 @@ def execute(plan, output, runtime_home=None, source=None):
                 raise ValueError('invalid_asset')
             if kind == 'image-sequence':
                 return load_module('sequence_assets').copy_sequence(path, digest, media / alias)
+            if kind == 'segmented-image-sequence':
+                return load_module('sequence_assets').copy_segmented_sequence(path, digest, media / alias)
             if kind not in (None, 'lut'):
                 raise ValueError('unsupported_asset_kind')
             if kind == 'lut' and Path(path).suffix.lower() not in ('.cube', '.3dl'):
@@ -252,11 +254,14 @@ def execute(plan, output, runtime_home=None, source=None):
             if alias in assets:
                 raise ValueError('asset_alias_exists')
             target = copy_asset(alias, asset['path'], asset['sha256'], asset.get('kind'))
-            if asset.get('kind') == 'image-sequence':
-                descriptor = load_module('sequence_assets').validate_sequence(target, asset['sha256'])
-                assets[alias] = {'kind':'image-sequence', 'sha256':asset['sha256'],
+            if asset.get('kind') in ('image-sequence','segmented-image-sequence'):
+                target_sha = sha(target)
+                descriptor = load_module('sequence_assets').validate_sequence(target, target_sha)
+                assets[alias] = {'kind':'image-sequence', 'sha256':target_sha,
                                 'sequenceMetadata':{k:v for k,v in descriptor.items() if k!='frames'},
                                 'sequenceStaging':str(target), 'staging':str(target.parent/descriptor['frames'][0]['location'])}
+                if asset.get('kind') == 'segmented-image-sequence':
+                    assets[alias]['sourceSequenceSha256'] = asset['sha256']
             elif asset.get('kind') == 'lut':
                 assets[alias] = {'kind':'lut', 'sha256':asset['sha256'], 'staging':str(target)}
             else:
@@ -487,6 +492,7 @@ def main():
     parser.add_argument('--asset', action='append', default=[], help='name=/absolute/path; calculates input digest')
     parser.add_argument('--lut-asset', action='append', default=[], help='name=/absolute/path/grade.cube; registers hashed LUT dependency')
     parser.add_argument('--sequence-asset', action='append', default=[], help='name=/absolute/path/sequence.json; registers complete image sequence')
+    parser.add_argument('--segmented-sequence-asset', action='append', default=[], help='name=/absolute/path/segments.json; registers verified segmented producer checkpoint')
     args = parser.parse_args()
     try:
         plan = json.loads(args.plan.read_text())
@@ -500,6 +506,9 @@ def main():
         for assignment in args.sequence_asset:
             alias, path = assignment.split('=', 1)
             plan.setdefault('assets', {})[alias] = {'kind':'image-sequence','path':path,'sha256':sha(path)}
+        for assignment in args.segmented_sequence_asset:
+            alias, path = assignment.split('=', 1)
+            plan.setdefault('assets', {})[alias] = {'kind':'segmented-image-sequence','path':path,'sha256':sha(path)}
         print(json.dumps(execute(plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
     except (ValueError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
         print(json.dumps({'error': str(error)}, ensure_ascii=False))

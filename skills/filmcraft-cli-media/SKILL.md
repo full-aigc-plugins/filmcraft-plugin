@@ -48,3 +48,5 @@ probe 核对流、帧率和音轨；移动素材后按摘要重新链接，不�
 - 安装/诊断需要时交给 **filmcraft-cli-setup**，完整任务路由交给 **filmcraft-use**；缺少技能时使用 `npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`。不通过相邻文件路径加载其他技能。
 
 本技能不提供虚构的登录接口；本地 headless 不要求云账户。完整 GUI、跨编辑器保真与创作质量按实际证据陈述。
+
+工作区分段素材消费候选见 [分段素材](references/segmented-assets.md)。固定发布及 Art 集成仍待验收，不能把候选交接当作完整五插件交付。

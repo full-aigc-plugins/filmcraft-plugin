@@ -58,3 +58,44 @@ def inspect_png(path):
    if scan[at]>4:bad()
    at+=stride
  return {'width':width,'height':height,'bitDepth':depth,'alpha':color in (4,6) or transparency}
+
+
+def rgba8_rows(scan, width, height):
+    """逐行还原已结构核验的非交错 RGBA8；Up 用隔离的 16 位槽避免跨字节进位。"""
+    stride = width*4
+    if type(width) is not int or type(height) is not int or width<=0 or height<=0 or (stride+1)*height>MAX_SCAN or len(scan)!=(stride+1)*height:
+        raise ValueError('provided_png_invalid')
+    zero = bytes(stride); previous = zero; offset = 0
+    for _ in range(height):
+        filtering=scan[offset]; row=bytearray(scan[offset+1:offset+1+stride]); offset+=stride+1
+        if filtering==0:
+            pass
+        elif filtering==1:
+            for x in range(4,stride):row[x]=(row[x]+row[x-4])&255
+        elif filtering==2:
+            if row==zero:
+                row=previous
+            else:
+                # 每字节扩为 16 位，两个 8 位数之和不向相邻槽进位；取低字节等价模 256。
+                current_words=bytearray(stride*2);current_words[::2]=row
+                previous_words=bytearray(stride*2);previous_words[::2]=previous
+                value=int.from_bytes(current_words,'little')+int.from_bytes(previous_words,'little')
+                row=value.to_bytes(stride*2,'little')[::2]
+        elif filtering==3:
+            for x in range(stride):row[x]=(row[x]+((row[x-4] if x>=4 else 0)+previous[x])//2)&255
+        elif filtering==4:
+            if row==zero and previous==zero:
+                row=zero
+            else:
+                for x in range(stride):
+                    a=row[x-4] if x>=4 else 0;b=previous[x];c=previous[x-4] if x>=4 else 0
+                    if a==c:prediction=b
+                    elif b==c or a==b:prediction=a
+                    else:
+                        pa=abs(b-c);pb=abs(a-c);pc=abs(a+b-2*c)
+                        prediction=a if pa<=pb and pa<=pc else b if pb<=pc else c
+                    row[x]=(row[x]+prediction)&255
+        else:
+            raise ValueError('provided_png_invalid')
+        previous=bytes(row)
+        yield previous

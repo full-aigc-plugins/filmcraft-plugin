@@ -55,9 +55,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.16 |
+| Metadata version | 0.1.0-dev.17 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / 0.1.0-dev.15 |
+| Skills source | filmcraft-skills / 0.1.0-dev.16 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |
@@ -223,3 +223,5 @@ Current-source HD segmented candidate passes 1080p / 24 fps / five seconds and a
 Immutable plugin release candidate 0.1.0-dev.12 pins skill source 0.1.0-dev.11, including HD segmented workflows and pixel verification optimization. Actual installed first-use acceptance remains pending.
 
 Public-workflow reply validation is synchronized in the domain source candidates and has bounded native/Art protocol evidence. Fixed updated domain and Art distributions are still pending. [Candidate architecture](docs/FilmCraft-Complete-Commands-Architecture.md) · [Evidence](docs/evidence/public-workflow-session-candidate-20261007.json).
+
+Failed-stage candidate: public workflows retain original native staging paths, dependency hashes, last submitted requests and completed receipts; replay is prohibited. Fixed releases and installed-host acceptance remain open. [Architecture](docs/FilmCraft-Failed-Stage-Architecture.md).

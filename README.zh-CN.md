@@ -55,9 +55,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.16 |
+| Metadata version | 0.1.0-dev.17 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / 0.1.0-dev.15 |
+| Skills source | filmcraft-skills / 0.1.0-dev.16 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
 | License | Apache-2.0 (original repository content) |
@@ -223,3 +223,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 固定插件发行候选 0.1.0-dev.12 锁定技能源 0.1.0-dev.11，包含 HD 分段工作流与像素校验优化。实际安装版首次使用验收待完成。
 
 公开工作流回复检查已同步领域技能源候选，并通过有界原生／Art 协议验证。新的固定领域和 Art 分发包仍待发行与实际安装验收。[候选架构](docs/FilmCraft-Complete-Commands-Architecture.zh_CN.md) · [证据](docs/evidence/public-workflow-session-candidate-20261007.json)。
+
+失败暂存候选：公开工作流保留原生暂存原路径、依赖摘要、最后提交请求与已完成回执，禁止重放；固定发行与安装副本验收仍开放。[架构](docs/FilmCraft-Failed-Stage-Architecture.zh_CN.md)。

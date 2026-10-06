@@ -118,3 +118,11 @@ Toggle is not idempotent: do not replay it automatically. Update existing animat
 修订通过 `--source` 与 `expectedProjectSha256`，可直接引用旧包中的 LUT 名称。输出新目录，原包不覆盖；坏摘要、未知字段、缺少目标、非有限数值或未登记 LUT 拒绝。重开、预览、成片解码、声音／字幕保全分别验证。
 
 Revisions may reuse the prior LUT alias with --source and expectedProjectSha256. Save to a new directory and preserve the source. Invalid digests, unknown fields, missing targets, nonfinite values or unregistered LUTs fail. Verify project reopening, previews, movie decoding and audio/caption preservation separately.
+
+## 失败暂存的原生恢复
+
+公开工作流已经进入暂存后失败时，保留输出 `failure.json` 指向的 `stage`、该原位置的工程与素材，以及 `recovery-operations.json`。核对 `files` 中全部摘要及 `lastAttempt`，未知请求可能已经执行；不能自动重跑计划、移动暂存或删除失败目录。输出已有时会拒绝再次运行，成功交付才清理未使用暂存。
+
+先用本技能 `commands.py` 的新会话执行打开／检查计划，并显式登记恢复工程作为 `--input project=原暂存工程绝对路径`；按真实对象状态建立新的修改计划。`failure.json` 不是交付 manifest，不能把失败输出直接传给 `workflow.py --source`。成功保存、重开、依赖收集及派生输出检查后才形成新的交付。诊断写入权限不足时仍保留暂存并返回原异常，不能假定失败输出目录一定存在。
+
+After staged failure, retain both the output recovery record and its original sibling stage. Verify all file hashes and the last submitted attempt; an unknown reply may follow a successful native operation. Open/inspect the retained project in a fresh commands.py session before an explicit new revision. Do not replay the original plan, move the stage or pass the failed directory as a successful workflow source package.

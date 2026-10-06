@@ -210,11 +210,13 @@ def execute(plan, output, runtime_home=None, source=None):
         runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
     cli = installed['executable']
     output.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix='.filmcraft-', dir=output.parent) as temporary:
+    recovery_state = {}
+    with load_module('preserved_stage').preserved_stage(output, '.filmcraft-', recovery_state) as temporary:
         stage = Path(temporary)
         media = stage / 'assets'
         media.mkdir()
         receipts = []
+        recovery_state['operations'] = receipts
         def copy_asset(alias, path, digest, kind=None):
             if not re.fullmatch(r'[a-zA-Z][\w-]*', alias) or not re.fullmatch(r'[a-f0-9]{64}', digest):
                 raise ValueError('invalid_asset')
@@ -270,7 +272,9 @@ def execute(plan, output, runtime_home=None, source=None):
         argv = [cli] + (['--project', str(source_project)] if source_project else []) + ['mcp']
         with load_module('mcp_session').Session(argv) as session:
             def call(name, args):
+                recovery_state['lastAttempt'] = {'tool': name, 'arguments': args, 'phase': 'submitted'}
                 result = session.request('tools/call', {'name': name, 'arguments': args})
+                recovery_state['lastAttempt']['phase'] = 'reply_received'
                 if result.get('isError'):
                     raise RuntimeError('command_failed: ' + name + ': ' + json.dumps(result['content']))
                 content = [x['text'] for x in result.get('content', []) if x.get('type') == 'text']
@@ -408,7 +412,7 @@ def execute(plan, output, runtime_home=None, source=None):
             if source_project and sha(source_project) != source_hash:
                 raise ValueError('revision_conflict')
             # 原生收集必须使用最终目录：引擎保存绝对素材引用。失败目录保留诊断，不作为交付。
-            output.mkdir(mode=0o700)
+            load_module('preserved_stage').claim_output(output, recovery_state)
             try:
                 collected = command('file.projectManager', {'destination': str(output), 'mode': 'collect', 'projectName': 'project', 'excludeUnused': False, 'includeProxies': False, 'wait': True})
                 by_item = {x['item']: x for x in collected['files']}

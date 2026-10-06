@@ -1,0 +1,121 @@
+{
+  "schema": "craft-failed-stage-candidate/v1",
+  "date": "2026-10-07",
+  "domain": "filmcraft",
+  "result": "PASS",
+  "scope": "candidate canonical standalone skills; locked native CLI; actual original-stage preservation/reopen; healthy native creation/revision regression",
+  "nativeIdentity": {
+    "pluginId": "filmcraft",
+    "pluginVersion": "0.1.0-dev.15",
+    "cliVersion": "0.2.0-craft.2",
+    "sha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "f229c61f0b4666a9b16f5192d72e3feda6255a12e0bfad962d1aeef1c1686b86"
+  },
+  "sourceBase": "716a7caa25cffb472dad5096635b07c2a377229f",
+  "nativeFaults": {
+    "schema": "craft-native-failed-stage/v1",
+    "domain": "filmcraft",
+    "result": "PASS",
+    "cases": [
+      {
+        "fault": "malformed",
+        "result": "PASS",
+        "originalStagePreserved": true,
+        "nativeReopened": true,
+        "noReplay": true,
+        "nativeSaveCount": 1,
+        "partialFiles": 3
+      },
+      {
+        "fault": "scalar",
+        "result": "PASS",
+        "originalStagePreserved": true,
+        "nativeReopened": true,
+        "noReplay": true,
+        "nativeSaveCount": 1,
+        "partialFiles": 3
+      },
+      {
+        "fault": "missing",
+        "result": "PASS",
+        "originalStagePreserved": true,
+        "nativeReopened": true,
+        "noReplay": true,
+        "nativeSaveCount": 1,
+        "partialFiles": 3
+      },
+      {
+        "fault": "ambiguous",
+        "result": "PASS",
+        "originalStagePreserved": true,
+        "nativeReopened": true,
+        "noReplay": true,
+        "nativeSaveCount": 1,
+        "partialFiles": 3
+      },
+      {
+        "fault": "nonfinite",
+        "result": "PASS",
+        "originalStagePreserved": true,
+        "nativeReopened": true,
+        "noReplay": true,
+        "nativeSaveCount": 1,
+        "partialFiles": 3
+      },
+      {
+        "fault": "tool-content",
+        "result": "PASS",
+        "originalStagePreserved": true,
+        "nativeReopened": true,
+        "noReplay": true,
+        "nativeSaveCount": 1,
+        "partialFiles": 3
+      }
+    ],
+    "scope": "candidate source with locked installed native CLI; original retained stage inspected and reopened; proxy capture is not recovery input"
+  },
+  "redBaseline": {
+    "faults": 6,
+    "reason": "actual native save succeeded once; public workflow removed stage and produced no recovery record",
+    "result": "FAILED_AS_EXPECTED"
+  },
+  "regression": {
+    "tests": 105,
+    "passed": 80,
+    "optionalSkipped": 25,
+    "lifecycleTests": 8,
+    "healthyNativeWorkflowTests": 1,
+    "healthyNativeWorkflowResult": "PASS"
+  },
+  "sourceHashes": {
+    "skills/filmcraft-cli/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-audio/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-audio/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-color/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-color/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-export/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-export/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-media/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-media/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-motion/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-motion/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-project/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-project/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-setup/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-setup/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-subtitles/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-subtitles/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-cli-timeline/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-cli-timeline/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417",
+    "skills/filmcraft-use/scripts/preserved_stage.py": "64199df3ee6af2901a859a5aac401fd27ca2f0c6ba9238e6f72c3563f681ad63",
+    "skills/filmcraft-use/scripts/workflow.py": "43cbc5f278e8826009084c3703a5da7bc66eec20e4d595065f67af49e2cf8417"
+  },
+  "excluded": [
+    "immutable candidate release and actual installed new source",
+    "Art fixed bundled upgrade",
+    "force-killed process and filesystem crash persistence",
+    "complete2639-command/GUI/model/fullV1 acceptance"
+  ]
+}

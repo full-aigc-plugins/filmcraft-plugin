@@ -1,12 +1,13 @@
 # FilmCraft Agent Plugin
 
-Current plugin: `0.1.0-dev.20`; skill source: `0.1.0-dev.18`; bounded native download recovery is published; fixed installed cold acceptance pending.
+Fixed native first-use and complete-command recovery acceptance passed:58 standalone cold installations, ten Art all-domain cold installations, four partial-download SSL EOF recoveries,72 post-save faults, four healthy command revisions and mixed HD revision/recovery/moved delivery. Installed identities remain unchanged. Only domain2.10/8.11 and Art4.10 close; exhaustive2639-command, GUI, model, generic Skills CLI and fullV1 gates remain open. [Version-bound evidence](docs/evidence/codex-native-download-first-use-20261007.json).
 
-Current plugin: `0.1.0-dev.20`; skill source: `0.1.0-dev.18`; bounded native download recovery is published; fixed installed cold acceptance pending.
+Current plugin: `0.1.0-dev.20`; skill source: `0.1.0-dev.18`; fixed installed macOS arm64 acceptance passed; fullV1 remains open.
 
-Native download recovery candidate: up to three read-only attempts discard partial archives. Earlier fixed cold installs failed on SSL EOF; new fixed installed acceptance remains open.
 
-Current plugin: `0.1.0-dev.19`; skill source: `0.1.0-dev.17`; complete-command inner JSON fix is published, fixed installed acceptance pending.
+Historical candidate observation before fixed acceptance: Native download recovery candidate: up to three read-only attempts discard partial archives. Earlier fixed cold installs failed on SSL EOF; new fixed installed acceptance remains open.
+
+Previous version-bound plugin: `0.1.0-dev.19`; skill source: `0.1.0-dev.17`; complete-command inner JSON fix is published, fixed installed acceptance pending.
 
 Previous version-bound failed-stage acceptance: plugin dev.18, standalone source dev.16. All58 independent CLI cold starts,24 original-stage native fault cases and37 native scene tests plus6 contracts pass. Art77 bundle upgrade remains open. [Evidence](docs/evidence/codex-failed-stage-first-use-20261007.json).
 

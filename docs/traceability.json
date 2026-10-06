@@ -86,7 +86,9 @@
       "tasks": [
         "4.1",
         "4.2",
-        "4.3"
+        "4.3",
+        "4.42",
+        "4.43"
       ],
       "owner": "Domain owner",
       "status": "in-progress",

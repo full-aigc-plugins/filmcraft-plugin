@@ -192,3 +192,5 @@ Candidate motion/LUT workflow: explicit keyframes, registered LUTs, native reope
 Development snapshot dev.11 vendors immutable FilmCraft skills dev.10, including declared motion and LUT workflows. The published native CLI remains 0.2.0-craft.2. Installed snapshot and Art mixed acceptance are separate gates.
 
 Fixed Film dev.11 / source dev.10 installed-first-use verification passed: isolated Codex discovers 58 skills without errors; all 11 Film skills pass separate cold CLI startup; installed motion/LUT, audio-gain and sequence scenarios pass with zero skips. All 58 installed hashes remain intact. New Art LUT runtime publication and full V1 remain pending. [Evidence](docs/evidence/codex-filmcraft11-motion-lut-first-use-20261006.json).
+
+Working-tree segmented asset consumer candidate validates Effect checkpoints, collects continuous frames and preserves source hashes. Fixed release, full HD long render and Art integration remain pending. [Architecture](docs/FilmCraft-Segmented-Assets-Architecture.md).

@@ -19,8 +19,9 @@
     "4.21": "docs/evidence/chinese-first-use.json",
     "4.22": "docs/evidence/chinese-first-use.json",
     "1.13": "docs/evidence/maintained-runtime-task-first-use.json",
-    "2.7": "docs/evidence/runtime-receipt-candidate.json"
+    "2.7": "docs/evidence/runtime-receipt-candidate.json",
+    "2.8": "docs/evidence/codex-filmcraft7-receipt-first-use-20261006.json"
   },
-  "hostValidationEvidence": "docs/evidence/codex-release18-native-20261006.json",
-  "hostValidationStatus": "bounded-installed-native-workflow-passed"
+  "hostValidationEvidence": "docs/evidence/codex-filmcraft7-receipt-first-use-20261006.json",
+  "hostValidationStatus": "bounded-installed-receipt-first-use-passed"
 }

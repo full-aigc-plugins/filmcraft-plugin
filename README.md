@@ -155,7 +155,7 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 
 Run this command in the independent `filmcraft-skills` repository; live tests require ffmpeg, ffprobe and Pillow.
 
-Current plugin: `0.1.0-dev.5`; skill suite: `0.1.0-dev.4`. The corrected examples resolve scripts from the actual host-loaded `SKILL.md` directory. All skills passed isolated entry-point checks in user, project and plugin layouts with spaces. [Path evidence](docs/evidence/installed-skill-paths.json). Earlier host evidence above covers its recorded release; existing installations require an update.
+Historical plugin `0.1.0-dev.5` / skill suite `0.1.0-dev.4` path milestone. The corrected examples resolve scripts from the actual host-loaded `SKILL.md` directory. All skills passed isolated entry-point checks in user, project and plugin layouts with spaces. [Path evidence](docs/evidence/installed-skill-paths.json). Earlier host evidence above covers its recorded release; existing installations require an update.
 
 Plugin `0.1.0-dev.5` corrects the whole-skill digests by fetching the immutable public source tag, without local Python caches. Plugin tag `v0.1.0-dev.4` is superseded and must not be installed because its source digests included ignored development caches.
 
@@ -170,3 +170,5 @@ Current installed plugin dev.6 / skills dev.5 pass all eight independent task co
 Candidate installation-receipt reuse validation is implemented and tested; fixed plugin and ArtCraft publication remain pending. [Architecture and evidence](docs/FilmCraft-Runtime-Receipt-Architecture.md).
 
 Development dev.7 vendors immutable skills dev.6 (85866c064c7d91abd8da63b0570d78bee3202bf5). Installation reuse validates receipt identity; four tests from the vendored snapshot pass, including cold public native roundtrip and all 11 isolated CLI entries. [Candidate evidence](docs/evidence/runtime-receipt-candidate.json). Fixed Codex host verification and ArtCraft dependency synchronization remain pending.
+
+Fixed FilmCraft plugin dev.7 / source dev.6 passed actual Codex 0.153.4 installation and four installed-snapshot tests: public cold native install, save/reopen, receipt refusal/restoration, and 11 isolated CLI entries. All 58 installed digests remain unchanged. [Fixed-release evidence](docs/evidence/codex-filmcraft7-receipt-first-use-20261006.json). ArtCraft dev.42 still locks source dev.5; its update remains pending.

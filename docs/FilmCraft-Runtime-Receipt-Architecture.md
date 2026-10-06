@@ -1,6 +1,6 @@
 # FilmCraft Runtime Receipt Architecture
 
-This candidate implements the existing FC-RT-001 installation identity contract. Published plugin dev.6 and its source dev.5 remain unchanged; ArtCraft still locks that published source. This document does not claim a new fixed-release or host acceptance.
+This change implements the existing FC-RT-001 installation identity contract. Fixed source dev.6 and plugin dev.7 passed actual Codex 0.153.4 installation and first-use checks. [Fixed-release evidence](evidence/codex-filmcraft7-receipt-first-use-20261006.json). ArtCraft dev.42 still locks FilmCraft source dev.5; mixed integration of this change remains pending.
 
 ## Reuse contract
 
@@ -22,4 +22,4 @@ Malformed JSON, duplicate keys or a non-object receipt returns installation_rece
 
 [Candidate evidence](evidence/runtime-receipt-candidate.json): 13 failing subcases reproduced before implementation; 17 installer tests pass; default regression passes 35/47 with 12 explicitly skipped live tests. A separate public cold install/native roundtrip passes, including refusal/preservation/restoration. All 11 separately copied skills discover actual commands with a system-only PATH; that suite uses one fresh shared domain runtime, not 11 independent cold downloads. Self-contained resources pass synchronization checks.
 
-Next: fixed skill publication, vendor-only plugin synchronization and installed-snapshot acceptance, then update ArtCraft's dependency lock with its own acceptance. Other domain installers must be audited independently. These checks do not prove creative, GUI, model-dispatch, other-platform or production acceptance. OpenSpec remains implementation-in-progress; the full runtime-distribution baseline remains open.
+Fixed skill publication, vendor-only plugin synchronization and installed-snapshot acceptance are complete: four fixed-content tests passed, all 11 isolated CLI entries ran and all 58 installed digests remained unchanged. Next update ArtCraft's dependency lock with mixed integration acceptance. Other domain installers must be audited independently. These checks do not prove creative, GUI, model-dispatch, other-platform or production acceptance. OpenSpec remains implementation-in-progress; the full runtime-distribution baseline remains open.

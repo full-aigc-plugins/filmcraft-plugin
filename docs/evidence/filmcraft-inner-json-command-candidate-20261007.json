@@ -1,0 +1,129 @@
+{
+  "schema": "craft-inner-json-command-candidate/v1",
+  "date": "2026-10-07",
+  "domain": "filmcraft",
+  "result": "PASS",
+  "scope": "candidate independent source, copied CLI skill, empty public native runtime, real save and original reopen; not fixed plugin installation",
+  "candidateCommandsSha256": "d402df57f920ebb87ea852d5dcd2eb87caa1e0103dd44d098aa720e465593583",
+  "synchronizedSkillCount": 11,
+  "redBaselineObserved": {
+    "innerPayloadSubcaseFailures": 12,
+    "unsafeEditResultErrors": 1,
+    "cause": "inner JSON accepted unsafe values; poisoned result cannot serialize durable failure receipt"
+  },
+  "defaultRegression": {
+    "tests": 107,
+    "passed": 82,
+    "optionalSkipped": 25,
+    "failed": 0
+  },
+  "native": {
+    "schema": "craft-native-protocol-fault-first-use/v1",
+    "domain": "filmcraft",
+    "result": "PASS",
+    "coldInstall": "PASS",
+    "cases": [
+      {
+        "fault": "malformed",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "scalar",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "missing",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "ambiguous",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "nonfinite",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "tool-content",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "inner-nonfinite",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "inner-overflow",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      },
+      {
+        "fault": "inner-duplicate",
+        "nativeSaveCount": 1,
+        "result": "unknown",
+        "startedSteps": 11,
+        "reopen": "PASS",
+        "projectSha256": "47bbe1a399f8626150a009744fabc407b624adc5ed1834cf690724788d67e1c5",
+        "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433"
+      }
+    ],
+    "entrySha256": "d402df57f920ebb87ea852d5dcd2eb87caa1e0103dd44d098aa720e465593583",
+    "transportSha256": "ad8a8fb3f84f9fbf814b5a593c96faf3cf9bb476ff32627039975d7f57c86616",
+    "testSha256": "2fa5ea4d65e8c240b0fb85a21fc8bf1ae3ce08aa93107b0fbf746f96c0cf008c",
+    "checks": [
+      "single skill copy",
+      "fresh public locked runtime",
+      "native save before injected response fault",
+      "one save request",
+      "unknown journal and failure receipt",
+      "no later operations",
+      "saved native project reopened",
+      "original delivery and skills unchanged"
+    ],
+    "scope": "nine injected response faults after real native save; not exhaustive commands or GUI acceptance"
+  },
+  "stillOpen": [
+    "immutable new skill and plugin releases",
+    "actual installed copies",
+    "Art fixed domain bundle update",
+    "complete per-command context/output/GUI/revision acceptance"
+  ]
+}

@@ -49,3 +49,46 @@ python3 -I -B "$SKILL_DIR/scripts/workflow.py" "$SKILL_DIR/examples/chinese-shor
 ### 当前发布版中文烧录缺陷（2026-10-06）
 
 官方 CLI 0.2.0 的字幕烧录忽略轨道 `font`，即使 `fonts.list` 返回中文字体也可能输出缺字方框。中文模板目前是验收输入，不能据此宣称中文成片通过。原生工程和 SRT 可以保留 Unicode，但必须检查实际烧录画面；遇到方框应报告渲染失败，不能把非空 PNG 当作可用字幕。dev.5 将使用独立维护版 0.2.0-craft.1，其固定公开地址首次安装与中文成片验收已通过；必须使用本技能自己的运行时锁，禁止替换已发布的官方 0.2.0 文件。
+
+<!-- COMPLETE_SCENARIO_COMMANDS_START -->
+
+## 完整归属清单 / Complete assigned command list
+
+本技能归属 22 条命令。下面按命令族分组；上述短表若存在，仅是示例。归属按最长前缀确定，实际任务可组合其他能力的命令。
+
+Each command below has a parameter contract in this skill’s `command-reference.md`. Assignment uses the most specific prefix; a task can combine commands from multiple capabilities.
+
+执行顺序：检查工程和选中对象 → `commands.py describe COMMAND_ID` → 根据参数说明构造计划 → `commands.py check PLAN.json` → `commands.py run PLAN.json --output NEW_DIRECTORY` → 保存并重开原生工程、核验目标修改和非目标内容。涉及 GUI 时按 `command-usage.md` 选择 bridge 模式。
+
+Order: inspect project and selection, describe parameters, construct and check the plan, run it, save and reopen the native project, then verify requested and unaffected content. Follow `command-usage.md` for bridge mode.
+
+这些是命令使用入口，不能把分类或计划校验当作实际执行成功；禁用项必须重新查询上下文，超时不得直接重放。 / Classification and preflight do not prove execution acceptance. Re-query disabled commands and reconcile timed-out operations before retry.
+
+### `captions` — 22
+
+| 命令 / Command | 用途 / Label | 参数入口 / Parameters |
+| --- | --- | --- |
+| `captions.newTrack` | Add New Caption Track… | `describe captions.newTrack` |
+| `captions.deleteTrack` | Delete Caption Track | `describe captions.deleteTrack` |
+| `captions.setTrack` | Caption Track Settings | `describe captions.setTrack` |
+| `captions.setStyle` | Caption Track Style | `describe captions.setStyle` |
+| `captions.add` | Add Caption at Playhead | `describe captions.add` |
+| `captions.split` | Split Caption | `describe captions.split` |
+| `captions.merge` | Merge Captions | `describe captions.merge` |
+| `captions.setText` | Edit Caption Text | `describe captions.setText` |
+| `captions.setTimes` | Set Caption In/Out | `describe captions.setTimes` |
+| `captions.trim` | Trim Caption | `describe captions.trim` |
+| `captions.move` | Move Captions | `describe captions.move` |
+| `captions.delete` | Delete Captions | `describe captions.delete` |
+| `captions.select` | Select Captions | `describe captions.select` |
+| `captions.goTo` | Go to Caption | `describe captions.goTo` |
+| `captions.next` | Go to Next Caption Segment | `describe captions.next` |
+| `captions.previous` | Go to Previous Caption Segment | `describe captions.previous` |
+| `captions.showAll` | Show All Caption Tracks | `describe captions.showAll` |
+| `captions.showActiveOnly` | Show Active Caption Tracks Only | `describe captions.showActiveOnly` |
+| `captions.hideAll` | Hide All Caption Tracks | `describe captions.hideAll` |
+| `captions.import` | Import Captions… | `describe captions.import` |
+| `captions.export` | Captions… | `describe captions.export` |
+| `captions.list` | List Captions | `describe captions.list` |
+
+<!-- COMPLETE_SCENARIO_COMMANDS_END -->

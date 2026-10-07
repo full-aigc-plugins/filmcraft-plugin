@@ -1,6 +1,6 @@
 # FilmCraft audio sample duration correction
 
-Status: maintained runtime 0.2.0-craft.3 published; source public cold-use and decoded-export checks passed. Fixed plugin and Art distribution verification remain pending. The normative scenario is FC-DM-002-AUDIO-SAMPLE in establish-v1-plugin.
+Status: maintained runtime 0.2.0-craft.3 published; source public cold-use and decoded-export checks passed. Fixed Film34/Art104 installed distribution and representative revisions pass. The normative scenario is FC-DM-002-AUDIO-SAMPLE in establish-v1-plugin.
 
 ## Problem and behavior
 
@@ -30,4 +30,4 @@ Actual cold-use and native unit red cases were reproduced. Isolated Python build
 
 FC-TX-004 already requires validation failures to avoid recovery directories. A corrupt sequence was rejected but left a recovery directory. Pure asset preflight now checks paths, hashes and sequence frames before runtime installation or staging. Copy-time checks remain to detect later changes. Native execution failures still retain staged projects. The sequence test keeps its no-output assertion. The original representative test strengthens pure digest failures to require no recovery directory while retaining failure.json and source-preservation assertions for native editing failures.
 
-Native 106 tests, two actual public audio-tail/gain tests, sequence relocation/revision and the original short-film task passed. Bound evidence: docs/evidence/filmcraft-audio-sample-source-public-20261007.json. Fixed plugin and Art tasks remain open.
+Native 106 tests, two actual public audio-tail/gain tests, sequence relocation/revision and the original short-film task passed. Bound evidence: docs/evidence/filmcraft-audio-sample-source-public-20261007.json. Fixed distribution evidence: docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json. Only FC-DM-002-AUDIO-SAMPLE closes; full V1 and generic Skills CLI remain open.

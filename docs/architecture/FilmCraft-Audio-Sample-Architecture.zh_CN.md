@@ -1,6 +1,6 @@
 # FilmCraft 音频采样时长修复
 
-状态：维护运行时 0.2.0-craft.3 已公开发布，源技能公开冷安装与实际成片验收通过；固定插件／Art 分发复验尚未完成。规格事实源为 establish-v1-plugin 的 FC-DM-002-AUDIO-SAMPLE。
+状态：维护运行时 0.2.0-craft.3 已公开发布，源技能公开冷安装与实际成片验收通过；固定 Film34／Art104 分发的实际安装与代表性返工复验通过。规格事实源为 establish-v1-plugin 的 FC-DM-002-AUDIO-SAMPLE。
 
 ## 问题与行为
 
@@ -30,4 +30,4 @@ flowchart LR
 
 FC-TX-004 已要求验证前置失败不创建恢复目录。复验发现坏序列被拒绝后仍出现恢复目录，新增纯素材校验在运行时安装／暂存前检查路径、摘要及序列帧。复制时保留第二次校验，防止检查后的文件变化。开始原生执行之后的失败工程保留规则不变。序列测试的输出目录不存在断言保持；首版测试对纯摘要错误改为更严格的无恢复目录断言，原生编辑错误继续检查 failure.json 和原工程保全。
 
-106 项原生测试、两项实际公开安装音频尾部／增益测试、序列移动／返工测试和原首版短片测试通过。绑定证据见 docs/evidence/filmcraft-audio-sample-source-public-20261007.json。该证据不关闭固定插件和 Art 分发任务。
+106 项原生测试、两项实际公开安装音频尾部／增益测试、序列移动／返工测试和原首版短片测试通过。绑定证据见 docs/evidence/filmcraft-audio-sample-source-public-20261007.json。固定插件／Art 分发补证见 docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json；仅关闭 FC-DM-002-AUDIO-SAMPLE，完整 V1 和通用 Skills CLI 保持未完成。

@@ -2,7 +2,7 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.35`；技能源：`0.1.0-dev.34`；13 个独立技能。
+当前插件：`0.1.0-dev.36`；技能源：`0.1.0-dev.35`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -103,9 +103,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.35 |
+| Metadata version | 0.1.0-dev.36 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.34 |
+| Skills source | filmcraft-skills / v0.1.0-dev.35 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -294,3 +294,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 已发布插件 dev.35 接入源 dev.34／原生 craft.4。源技能与固定标签 Codex 插件首次模型下载、真实 CLI 与工作流识别均通过；Art 分发的 ASR 尚待验收。
 
 Film35固定标签宿主验收：五插件64技能身份与加载通过，错误0；实际安装的转录技能独立冷装、首次模型下载及真实CLI／工作流识别44.833秒通过，源工程和音画保全、重开与SRT均通过。Art105／源79已通过固定宿主混合ASR；完整V1保持开放。 [Evidence](docs/evidence/workflow-model-directory-20261008.json).
+
+场景安装示例已使用实际加载的技能自身目录。源路径／布局检查通过；固定安装运行时验收另行记录。 [Architecture / 架构](docs/Scenario-Own-Path-Architecture.zh_CN.md).

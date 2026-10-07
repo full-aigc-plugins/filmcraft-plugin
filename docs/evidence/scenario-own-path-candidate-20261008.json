@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "scope": "source candidate; documented paths and argument-parser entry help only; fixed installed runtime acceptance pending",
+  "record": {
+    "domain": "filmcraft",
+    "skills": 13,
+    "layoutCopies": 39,
+    "helpInvocations": 114,
+    "greenLogSha256": "f21839b1802588d22e1aaa7ecbd191e202da4dbf3c86457da9f56dd6d9486f7d",
+    "redFailures": 2,
+    "regressionTests": 168,
+    "seconds": 22.045,
+    "skipped": 34,
+    "regressionLogSha256": "3ab1df35b4fd710ea5e6710128a6287fee325906270746dc1e9d85d8569b4951"
+  }
+}

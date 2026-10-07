@@ -2,7 +2,7 @@
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.35`; skill source: `0.1.0-dev.34`; 13 independent skills.
+Current plugin: `0.1.0-dev.36`; skill source: `0.1.0-dev.35`; 13 independent skills.
 
 Verified first-use platform: macOS arm64 and Python 3.11+. Pinned runtimes install into the user data directory; skill files stay in their host-loaded directory. These are development releases; complete V1 acceptance and generic Skills CLI installation remain open.
 
@@ -102,9 +102,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.35 |
+| Metadata version | 0.1.0-dev.36 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.34 |
+| Skills source | filmcraft-skills / v0.1.0-dev.35 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -295,3 +295,5 @@ Native ASR candidate: independent single-skill cold CLI/model installation and r
 Released plugin dev.35 vendors published source dev.34/native craft.4. Source and fixed-tag Codex plugin first-model-download and real CLI/workflow inference pass; Art ASR distribution remains pending.
 
 Fixed Film35 host acceptance: five plugins/all64 skill identities and loading pass with zero errors. The installed transcript skill independently cold-installs, downloads its model and performs real CLI/workflow inference (44.833s), preserving source/audio/video and reopening/exporting SRT. Art105/source79 now passes fixed-host mixed ASR; full V1 remains open. [Evidence](docs/evidence/workflow-model-directory-20261008.json).
+
+Scenario installation examples now name the loaded skill itself. Source paths/layout checks pass; fixed installed runtime acceptance is recorded separately. [Architecture / 架构](docs/Scenario-Own-Path-Architecture.md).

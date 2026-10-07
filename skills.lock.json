@@ -4,8 +4,8 @@
     {
       "package": "filmcraft-skills",
       "repo": "https://github.com/full-aigc-skills/filmcraft-skills.git",
-      "ref": "v0.1.0-dev.34",
-      "sha": "3fa37afe17047feca0d341c9c8ae266cc7b59798",
+      "ref": "v0.1.0-dev.35",
+      "sha": "09717472fc0253d9679ca03238b7403e7bd86829",
       "skills": [
         "filmcraft-use",
         "filmcraft-cli",
@@ -34,8 +34,8 @@
         "filmcraft-cli-color": "2619990a2ea5111ae8fd8f50f816f40c176e7d2f5cd1df390047a31c698ebeff",
         "filmcraft-cli-motion": "62d756df21698dfda659233d283d6a6cb25d4e1531be9987e6f74afd85c8e31e",
         "filmcraft-cli-export": "8482556e2131bfacaae14beffa87dc950a1da9fd0356c8a66da5b8523755a3aa",
-        "filmcraft-cli-multicam": "feefdb6b6a3a55b29d0691e5ae2df8d707d746049e692ce74f75d781f6ed0673",
-        "filmcraft-cli-transcript": "15431ce5ec1701b2be62442f070097e7bfff664d9202773db47fb24355235f7a"
+        "filmcraft-cli-multicam": "bc0ea660d6aecae57c78ce4041094ef499e52a2b3f30ae8fcbf2ea898c35f0df",
+        "filmcraft-cli-transcript": "18356cfdb831663e5fc222876025b6ffe03f7362025f9bd09a3366a8d9435352"
       }
     }
   ]

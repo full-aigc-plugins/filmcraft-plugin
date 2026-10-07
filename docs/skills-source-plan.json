@@ -13,11 +13,12 @@
     "filmcraft-cli-subtitles",
     "filmcraft-cli-color",
     "filmcraft-cli-motion",
-    "filmcraft-cli-export"
+    "filmcraft-cli-export",
+    "filmcraft-cli-multicam"
   ],
   "sourceOfTruth": "independent skills repository",
   "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums",
   "suiteManifest": "https://github.com/full-aigc-skills/filmcraft-skills/blob/main/skill-suite.json",
-  "sourceRef": "v0.1.0-dev.25",
-  "sourceSha": "50b86cf23114dfcb44113cdaf6dd5c7069411760"
+  "sourceRef": "v0.1.0-dev.26",
+  "sourceSha": "1fb2b24560831e69803f03309fe9c4d341f8d5f2"
 }

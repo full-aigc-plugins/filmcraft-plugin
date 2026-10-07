@@ -5314,8 +5314,8 @@ Merge Clips…
 
 Create Multi-Camera Source Sequence…
 
-- 技能 / Owner: `filmcraft-cli-timeline`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.createMulticam`；按原生参数构造计划后执行 run。
@@ -5331,8 +5331,8 @@ Create Multi-Camera Source Sequence…
 
 Enable
 
-- 技能 / Owner: `filmcraft-cli-timeline`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.multicamEnable`；按原生参数构造计划后执行 run。
@@ -5348,8 +5348,8 @@ Enable
 
 Flatten
 
-- 技能 / Owner: `filmcraft-cli-timeline`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.multicamFlatten`；按原生参数构造计划后执行 run。
@@ -5365,8 +5365,8 @@ Flatten
 
 Switch Multi-Camera Angle
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.switchAngle`；按原生参数构造计划后执行 run。
@@ -5382,8 +5382,8 @@ Switch Multi-Camera Angle
 
 Start Multi-Camera Recording
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.recordStart`；按原生参数构造计划后执行 run。
@@ -5399,8 +5399,8 @@ Start Multi-Camera Recording
 
 Cut to Camera
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cut`；按原生参数构造计划后执行 run。
@@ -5416,8 +5416,8 @@ Cut to Camera
 
 Stop Multi-Camera Recording
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.recordStop`；按原生参数构造计划后执行 run。
@@ -5433,8 +5433,8 @@ Stop Multi-Camera Recording
 
 Multi-Camera Audio Follows Video
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.audioFollowsVideo`；按原生参数构造计划后执行 run。
@@ -5450,8 +5450,8 @@ Multi-Camera Audio Follows Video
 
 Edit Cameras…
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.editCameras`；按原生参数构造计划后执行 run。
@@ -5467,8 +5467,8 @@ Edit Cameras…
 
 Cut to Camera
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera`；按原生参数构造计划后执行 run。
@@ -5484,8 +5484,8 @@ Cut to Camera
 
 Multi-Camera Layout
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.gridLayout`；按原生参数构造计划后执行 run。
@@ -5501,8 +5501,8 @@ Multi-Camera Layout
 
 Multi-Camera Page
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.page`；按原生参数构造计划后执行 run。
@@ -5518,8 +5518,8 @@ Multi-Camera Page
 
 Next Multi-Camera Page
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.nextPage`；按原生参数构造计划后执行 run。
@@ -5535,8 +5535,8 @@ Next Multi-Camera Page
 
 Previous Multi-Camera Page
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.prevPage`；按原生参数构造计划后执行 run。
@@ -5552,8 +5552,8 @@ Previous Multi-Camera Page
 
 Multi-Camera Selection Top Down
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectionTopDown`；按原生参数构造计划后执行 run。
@@ -5569,8 +5569,8 @@ Multi-Camera Selection Top Down
 
 Show Multi-Camera Preview Monitor
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.showPreviewMonitor`；按原生参数构造计划后执行 run。
@@ -5586,8 +5586,8 @@ Show Multi-Camera Preview Monitor
 
 Auto-Adjust Multi-Camera Playback Quality
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.autoAdjustQuality`；按原生参数构造计划后执行 run。
@@ -5603,8 +5603,8 @@ Auto-Adjust Multi-Camera Playback Quality
 
 Transmit Multi-Camera View
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.transmitView`；按原生参数构造计划后执行 run。
@@ -5620,8 +5620,8 @@ Transmit Multi-Camera View
 
 Multi-Camera Grid
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.grid`；按原生参数构造计划后执行 run。
@@ -5637,8 +5637,8 @@ Multi-Camera Grid
 
 Inspect Multi-Camera
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.inspect`；按原生参数构造计划后执行 run。
@@ -5654,8 +5654,8 @@ Inspect Multi-Camera
 
 Select Camera 1
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera1`；按原生参数构造计划后执行 run。
@@ -5671,8 +5671,8 @@ Select Camera 1
 
 Cut to Camera 1
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera1`；按原生参数构造计划后执行 run。
@@ -5688,8 +5688,8 @@ Cut to Camera 1
 
 Select Camera 2
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera2`；按原生参数构造计划后执行 run。
@@ -5705,8 +5705,8 @@ Select Camera 2
 
 Cut to Camera 2
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera2`；按原生参数构造计划后执行 run。
@@ -5722,8 +5722,8 @@ Cut to Camera 2
 
 Select Camera 3
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera3`；按原生参数构造计划后执行 run。
@@ -5739,8 +5739,8 @@ Select Camera 3
 
 Cut to Camera 3
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera3`；按原生参数构造计划后执行 run。
@@ -5756,8 +5756,8 @@ Cut to Camera 3
 
 Select Camera 4
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera4`；按原生参数构造计划后执行 run。
@@ -5773,8 +5773,8 @@ Select Camera 4
 
 Cut to Camera 4
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera4`；按原生参数构造计划后执行 run。
@@ -5790,8 +5790,8 @@ Cut to Camera 4
 
 Select Camera 5
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera5`；按原生参数构造计划后执行 run。
@@ -5807,8 +5807,8 @@ Select Camera 5
 
 Cut to Camera 5
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera5`；按原生参数构造计划后执行 run。
@@ -5824,8 +5824,8 @@ Cut to Camera 5
 
 Select Camera 6
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera6`；按原生参数构造计划后执行 run。
@@ -5841,8 +5841,8 @@ Select Camera 6
 
 Cut to Camera 6
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera6`；按原生参数构造计划后执行 run。
@@ -5858,8 +5858,8 @@ Cut to Camera 6
 
 Select Camera 7
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera7`；按原生参数构造计划后执行 run。
@@ -5875,8 +5875,8 @@ Select Camera 7
 
 Cut to Camera 7
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera7`；按原生参数构造计划后执行 run。
@@ -5892,8 +5892,8 @@ Cut to Camera 7
 
 Select Camera 8
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera8`；按原生参数构造计划后执行 run。
@@ -5909,8 +5909,8 @@ Select Camera 8
 
 Cut to Camera 8
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera8`；按原生参数构造计划后执行 run。
@@ -5926,8 +5926,8 @@ Cut to Camera 8
 
 Select Camera 9
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera9`；按原生参数构造计划后执行 run。
@@ -5943,8 +5943,8 @@ Select Camera 9
 
 Cut to Camera 9
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-multicam`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera9`；按原生参数构造计划后执行 run。

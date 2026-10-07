@@ -53,6 +53,21 @@ def references(value, aliases):
         for child in value:
             references(child, aliases)
 
+def validate_tick_parameters(command, params, allow_references=False, contract=None):
+    """校验原生文档明确声明的 ticks；原生引擎不会解析数字字符串。"""
+    if contract is None:
+        contract = next(row for row in catalog()["commands"] if row["id"] == command)
+    fields = re.findall(r'"([A-Za-z][A-Za-z0-9_]*)"\s*:\s*ticks', contract.get("params") or "")
+    for field in fields:
+        if field not in params:
+            continue
+        value = params[field]
+        if allow_references and isinstance(value, dict) and set(value) == {"$ref"}:
+            continue
+        if type(value) is not int or not -(2 ** 63) <= value < 2 ** 63:
+            raise ValueError("invalid_tick_parameter: " + command + "." + field + "; use an exact signed 64-bit JSON integer")
+
+
 def validate(plan, input_names=()):
     if (not isinstance(plan, dict) or set(plan) != {"schema", "operations"}
             or plan["schema"] != "craft-command-plan/v1"
@@ -77,6 +92,8 @@ def validate(plan, input_names=()):
         if key == "tool" and step[key] == ROUTES[DOMAIN][1]:
             raise ValueError("use_command_operation_for_native_registry")
         references(step["params"], aliases)
+        if key == "command":
+            validate_tick_parameters(step[key], step["params"], allow_references=True, contract=rows[step[key]])
         alias = step.get("as")
         if alias is not None:
             if not isinstance(alias, str) or not re.fullmatch(r"[a-zA-Z][\w-]*", alias) or alias in aliases:
@@ -294,6 +311,8 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
             receipt["registeredCommands"] = len(current)
             for index, step in enumerate(plan["operations"]):
                 params = resolve(step["params"], bindings)
+                if "command" in step:
+                    validate_tick_parameters(step["command"], params)
                 record = {"index": index, "command": step.get("command"), "tool": step.get("tool"),
                           "params": params, "state": "started"}
                 if "command" in step:

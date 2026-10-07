@@ -35,7 +35,7 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 - 先核对素材路径、流信息、画幅、帧率、成片时长、配音来源和原生交付要求。`probe <media>` 返回素材信息。
 - 修改已有工程前保存独立检查点，使用 `--project <绝对路径.fcproj>` 打开。普通 CLI 调用之间不共享内存，写入命令必须配合 `--save` 或 `--save-as`，或者同一 `run` / MCP 会话完成。
 - `run <文件.jsonl>` 接收逐行 `{"id":"命令ID","params":{...}}`。默认遇错停止，不使用 `--keep-going` 掩盖失败。需要上一步创建对象的 ID 时，读取实际结果或保持 MCP 会话；不猜 ID。
-- 时间基准为每秒 `254016000000` ticks。计划中的大整数保留十进制字符串；映射到命令时按实测 schema 使用 ticks 或 seconds，不经过 JavaScript Number 丢精度。
+- 时间基准为每秒 `254016000000` ticks。workflow.py 模板按其合同使用大整数字符串；commands.py 原生命令的 ticks 使用精确 JSON 整数，按原生参数合同区分 ticks 与 seconds，不经过 JavaScript Number 丢精度。
 - 素材、音乐、配音和字幕分别组织；只在用户授权范围内使用声音。字幕的字体、时间和内容必须可独立修改。
 - 使用 `render --seconds <时间> --out <图片>` 检查关键帧。`export <输出> --format <格式>` 等待导出，具体格式和参数以当前 `help`、`describe file.exportMedia` 为准。
 - 保存后重新打开工程并 `inspect`，核对轨道、素材引用、字幕和局部修改未影响的内容。检查真实导出文件的解码、时长、尺寸和音轨后才能声明成片完成。
@@ -54,7 +54,7 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 
 | 技能 | 触发任务 |
 | :--- | :--- |
-| **filmcraft-cli** | 查询实际命令参数和能力，调用公开 CLI、MCP 与诊断 |
+| **filmcraft-cli** | 查询 FilmCraft 原生命令和参数，或处理多机位切换、主录音连续性与通用剪辑命令；首次使用安装固定 CLI。 |
 | **filmcraft-cli-setup** | 首次安装、摘要校验、版本检查与缺失运行时排障 |
 | **filmcraft-cli-project** | 创建、打开、保存 fcproj 和组织序列、素材箱 |
 | **filmcraft-cli-media** | 检查已有音视频、图片和素材引用，导入并收集或重关联素材 |
@@ -63,6 +63,7 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 | **filmcraft-cli-subtitles** | 导入、创建、修改字幕文本、时间、样式并交付 SRT |
 | **filmcraft-cli-color** | 调整镜头色彩、使用许可明确的 LUT 与颜色预设 |
 | **filmcraft-cli-motion** | 创建文字图形、效果参数与镜头关键帧 |
+| **filmcraft-cli-multicam** | 处理同步机位、角度切换、切点与主录音连续性 |
 | **filmcraft-cli-export** | 导出预览帧、成片、交换文件与输出验证 |
 
 缺少技能：`npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`。每项自带安装与执行资源；直接执行本技能 `scripts/cli.py` 也可查询当前 CLI，不依赖兄弟路径。
@@ -81,10 +82,12 @@ python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands
 
 新入口执行前检查真实注册表与当前可执行状态，保留返回值引用和逐步回执；语义错误或超时不冒充成功。目录覆盖与直接原生使用不等于所有指令、GUI、交付或 Art 编排已验收。
 
-完整工作流命令网关见 [使用说明](references/native-workflow.md)。领域分发固定版本为 0.1.0-dev.21；该版本的独立安装复验与全量逐命令验收分别记录，不以发布替代验收。
+完整工作流命令网关见 [使用说明](references/native-workflow.md)。固定 CLI 的版本与制品摘要以本技能自带 `scripts/runtime.lock.json` 为准；技能包版本以对应发布标签为准。独立安装复验与全量逐命令验收分别记录，不以发布替代验收。
 
 GUI任务可先使用本技能自带的 [固定桌面安装](references/desktop-install.md)；安装、启动与实际GUI编辑分别核验。
 
 业务任务从 [场景操作手册](references/business-scenes.md) 开始，按输入检查、模板适配、原生交付、局部返工和结果核验执行。
 
 安装失败时读取 [首次使用诊断](references/first-use-failures.md)，按回执定位当前技能自身的 setup 入口；安装失败与原生调用失败分别处理。
+
+多机位访谈、演出与主录音连续性任务，读取 [多机位场景](references/multicam-scene.md)，核对机位编号、同步依据和切点验收。

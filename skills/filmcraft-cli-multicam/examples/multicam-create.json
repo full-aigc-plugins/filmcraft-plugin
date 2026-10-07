@@ -1,0 +1,121 @@
+{
+  "schema": "craft-command-plan/v1",
+  "operations": [
+    {
+      "command": "file.newProject",
+      "params": {
+        "name": "Multicam test"
+      }
+    },
+    {
+      "command": "file.import",
+      "params": {
+        "paths": [
+          {
+            "$ref": "red.path"
+          },
+          {
+            "$ref": "blue.path"
+          }
+        ]
+      },
+      "as": "media"
+    },
+    {
+      "command": "project.select",
+      "params": {
+        "items": {
+          "$ref": "media.items"
+        }
+      }
+    },
+    {
+      "command": "clip.createMulticam",
+      "params": {
+        "items": {
+          "$ref": "media.items"
+        },
+        "name": "Synced cameras",
+        "method": "in",
+        "audio": "camera1",
+        "cameraNames": "clip"
+      },
+      "as": "source"
+    },
+    {
+      "command": "file.newSequence",
+      "params": {
+        "name": "Main",
+        "width": 96,
+        "height": 64,
+        "fps": 12,
+        "video": 1,
+        "audio": 1
+      }
+    },
+    {
+      "command": "timeline.place",
+      "params": {
+        "item": {
+          "$ref": "source.sequence"
+        },
+        "track": "V1",
+        "time": 0,
+        "duration": 508032000000,
+        "insert": false
+      },
+      "as": "placed"
+    },
+    {
+      "command": "timeline.select",
+      "params": {
+        "clips": {
+          "$ref": "placed.clips"
+        },
+        "add": false,
+        "toggle": false
+      }
+    },
+    {
+      "command": "clip.multicamEnable",
+      "params": {
+        "clips": {
+          "$ref": "placed.clips"
+        },
+        "enabled": true
+      }
+    },
+    {
+      "command": "multicam.audioFollowsVideo",
+      "params": {
+        "enabled": false
+      }
+    },
+    {
+      "command": "playhead.set",
+      "params": {
+        "seconds": 1
+      }
+    },
+    {
+      "command": "multicam.cutToCamera",
+      "params": {
+        "camera": 2,
+        "videoOnly": true
+      }
+    },
+    {
+      "command": "sequence.inspect",
+      "params": {},
+      "as": "inspect"
+    },
+    {
+      "command": "file.saveAs",
+      "params": {
+        "path": {
+          "$output": "project.fcproj"
+        }
+      }
+    }
+  ]
+}

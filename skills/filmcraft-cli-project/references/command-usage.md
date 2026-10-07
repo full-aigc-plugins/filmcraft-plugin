@@ -114,3 +114,9 @@ python3 -I -B "$SKILL_DIR/scripts/desktop.py" run "$SKILL_DIR/examples/desktop-f
 该入口采用相同 craft-command-plan/v1 格式；先用 commands.py describe 查阅命令及前置状态，再组织真实计划。desktop-session.json 记录桌面身份、监听进程身份和会话退出结果，逐步命令结果仍在 journal.json、success.json 或 failure.json。固定桌面安装不等于所有 GUI 指令可在空工程运行；禁用项须根据原生原因建立所需文档、对象、选择或界面状态，不能绕过检查。
 
 For GUI prerequisites, use the skill-owned desktop.py entry and its pinned installation guide. It executes the same command-plan protocol, verifies the owned listener process, preserves command receipts, and closes the processes it started. Establish native prerequisites explicitly; installation or representative execution does not establish acceptance of every GUI command.
+
+## FilmCraft ticks 参数校验 / Tick parameter validation
+
+固定目录明确声明为 ticks 的原生命令参数必须是有符号64位 JSON 整数。数字字符串、小数、布尔和溢出值在 check 阶段拒绝；返回值引用解析后在 run 阶段再次校验。workflow.py 的模板字符串合同是独立合同，不能直接套用到原生命令计划。Python JSON 整数可保留超过2^53的值，禁止先经 JavaScript Number 转换。省略时间参数时按原生合同使用播放头，必要时用 playhead.set seconds 显式定位。
+
+Native fields documented as ticks require exact signed64-bit JSON integers. Literal type/range errors fail preflight; resolved references are checked again before execution. Workflow-template strings have a separate contract.

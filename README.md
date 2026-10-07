@@ -12,6 +12,8 @@ Current sample-duration correction: Film plugin dev.34 / source dev.32 and Art p
 
 Historical: Current Film dev.34 / source dev.32 / native craft.3 passes ten distinct standalone scene tests: project, media, timeline, audio, subtitles, color, motion, transcript, multicam and export. Each scene receives its own copied skill and new public runtime installation; actual native save/reopen, rendered frames or decoded samples and non-target preservation are asserted. All ten pass with no skips (67.330s), and all64 original installed digests still match the fixed lock. Transcript coverage uses provided timed words; automatic ASR, generic Skills CLI installation, every command context and full V1 remain open. [Evidence](docs/evidence/filmcraft34-ten-scene-first-use-20261008.json).
 
+Maintainer source validation rejects symbolic links, incomplete locks and version-named branches, and checks all declared sources before replacing any managed skill. Published skill/runtime identities remain unchanged. [Snapshot preflight architecture](docs/Skill-Snapshot-Self-Contained.md).
+
 ## First use
 
 Invoke **`filmcraft-use`** in your host. For direct CLI use, set `SKILL_DIR` to the absolute directory of the `SKILL.md` actually loaded by that host. It may be under user/project `.agents/skills`, the plugin, or a host cache; use the actual path. Each entry below installs/verifies its locked runtime before invoking it.

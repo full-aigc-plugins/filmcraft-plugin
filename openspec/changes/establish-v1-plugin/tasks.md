@@ -240,3 +240,5 @@
 - [x] [FC-DM-002-AUDIO-SAMPLE] 以实际解码红例和原生工程测试修复音频向下截帧；保留视频对齐、字幕及序列补丁，发布独立维护运行时并完成固定 Film／Art 安装副本的尾部和修订验收。
 
 采样时长补证：`docs/evidence/filmcraft-audio-sample-source-public-20261007.json` 与 `docs/evidence/filmcraft32-local-tag-13-cold-first-use-20261007.json`。运行时 craft.3 已公开下载；本地冻结源32的13个单技能分别空运行时安装通过（72.263秒）。历史本地冷安装报告中的待发布状态保留执行当时事实。源32、Film34、Art源78／插件104已公开固定；实际安装、音频尾部／增益／越界、序列迁移与局部返工、混合交付和品牌返工通过。该有界修复门禁完成，当前固定证据：`docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json`；完整V1和通用Skills CLI仍未完成。
+
+2026-10-08 当前Film34／源32／craft.3十场景首用补证：`docs/evidence/filmcraft34-ten-scene-first-use-20261008.json`。每个场景技能独立复制并使用新运行时，十项真实原生另存／重开、渲染／音频、源工程与非目标保全测试无跳过通过；64原安装摘要匹配。仅验证所列工程／素材／时间线／音频／字幕／调色／运动／时间文本／多机位／导出路径，自动ASR、全量命令、通用Skills CLI与完整领域合同仍开放。

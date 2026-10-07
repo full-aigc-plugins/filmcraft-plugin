@@ -1,3 +1,5 @@
+Every-skill cold first use: **64/64 passed** on macOS arm64 / Python3.13.5 (620.155s). Each single skill used its own empty runtime and default public downloads; locked native version and command discovery passed, installed hashes unchanged. Generic Skills CLI installation and complete V1 remain open. [Evidence](docs/evidence/craft-fixed64-every-skill-cold-first-use-20261007.json).
+
 Current plugin: `0.1.0-dev.30`; skill source: `0.1.0-dev.28`; Strict command-plan JSON snapshot is vendored. Source regression and standalone-copy plan tests pass; fixed installed plan guards and representative native save/reopen/render checks pass. Exhaustive commands and full V1 remain open.
 
 Fixed installation verification: five plugins / 62 skills discovered in isolated Codex, zero loading errors; all62 command/resource checks and248 setup-diagnostic checks passed. Four new specialized skills passed empty-runtime installation, version and command queries. Native creative, exhaustive-command and fullV1 acceptance remain separately scoped. [Evidence](docs/evidence/craft-fixed62-installation-20261007.json).

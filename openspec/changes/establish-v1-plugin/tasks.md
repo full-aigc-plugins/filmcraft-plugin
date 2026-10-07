@@ -242,3 +242,11 @@
 采样时长补证：`docs/evidence/filmcraft-audio-sample-source-public-20261007.json` 与 `docs/evidence/filmcraft32-local-tag-13-cold-first-use-20261007.json`。运行时 craft.3 已公开下载；本地冻结源32的13个单技能分别空运行时安装通过（72.263秒）。历史本地冷安装报告中的待发布状态保留执行当时事实。源32、Film34、Art源78／插件104已公开固定；实际安装、音频尾部／增益／越界、序列迁移与局部返工、混合交付和品牌返工通过。该有界修复门禁完成，当前固定证据：`docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json`；完整V1和通用Skills CLI仍未完成。
 
 2026-10-08 当前Film34／源32／craft.3十场景首用补证：`docs/evidence/filmcraft34-ten-scene-first-use-20261008.json`。每个场景技能独立复制并使用新运行时，十项真实原生另存／重开、渲染／音频、源工程与非目标保全测试无跳过通过；64原安装摘要匹配。仅验证所列工程／素材／时间线／音频／字幕／调色／运动／时间文本／多机位／导出路径，自动ASR、全量命令、通用Skills CLI与完整领域合同仍开放。
+
+- [ ] [FC-DM-004-ASR] 复现当前原生缺Whisper红例；保持既有三类修复并构建启用Whisper的新不可变运行时；校验首次模型下载与真实识别、重开／字幕／输入保全；公开运行时、独立技能及固定Film／Art分别验收。模型权重不提交，不使用FixedTranscriber或已给时间文本替代ASR。
+
+2026-10-08 ASR候选补证：`docs/evidence/whisper-candidate-inference-20261008.json`。原生公开craft.3缺Whisper红例及数据目录红例已复现；保留三类补丁的Whisper／目录修复候选原生129项和独立技能实际模型首用1项无跳过通过，常规回归164项中130项通过／34项跳过。模型约154MB，校验四文件，实际28词识别、指定数据目录、重开/SRT及原音画保全通过。候选为本地校验归档；公开运行时、固定Film／Art和完整V1仍开放，不关闭FC-DM-004-ASR。
+
+2026-10-08 同一ASR证据补齐公开craft.4：13独立源技能冷安装67.272秒、当前目录版本的实际公开ASR50.350秒、十原生场景89.158秒无跳过通过；旧目录摘要曾触发网关拒绝，已从公开二进制重新采集666条命令／原参数并通过高级网关原生重开及红蓝渲染。源码冻结候选dev.33，固定Film／Art尚待升级验收，FC-DM-004-ASR继续开放。
+
+源dev.33已发布，提交`77afe6e0b487b79de43388b81cc0829f3a325b59`与远端main／tag一致，两种布局的公开ZIP字节与该Git archive一致；source工作区干净。固定插件34仍锁源32，Art104仍保留旧分发，领域／Art升级与宿主ASR验收未完成。

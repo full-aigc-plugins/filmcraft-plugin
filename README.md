@@ -287,3 +287,5 @@ Source candidate now includes owned standalone desktop startup: 48/48 single-ski
 Command-plan JSON source candidate: duplicate keys are rejected before installation and output creation. All 13 domain skills pass standalone-copy rejection and valid-plan checks. Three focused tests pass; fixed-plugin publication and installed acceptance remain NOT_RUN. [Evidence](docs/evidence/command-plan-json-candidate-20261007.json).
 
 Fixed strict-plan installed verification passes: 64 CLI probes, 324 duplicate-key rejections across54 independently copied installed domain skills, 54 unique-plan structure checks and four cold native save/reopen/render samples. All64 installed skill hashes remain unchanged. Only the bounded strict-plan publication gate closes; generic Skills CLI, Art domain-bundle upgrade, exhaustive contexts and fullV1 remain open. [Evidence](docs/evidence/command-plan-json-fixed-first-use-20261007.json).
+
+Native ASR candidate: independent single-skill cold CLI/model installation and real recognition passed; public runtime and fixed Film/Art upgrades remain pending. [Evidence](docs/evidence/whisper-candidate-inference-20261008.json).

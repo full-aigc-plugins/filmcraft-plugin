@@ -2,7 +2,7 @@
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.37`; skill source: `0.1.0-dev.35`; 13 independent skills.
+Current plugin: `0.1.0-dev.38`; skill source: `0.1.0-dev.35`; 13 independent skills.
 
 Verified first-use platform: macOS arm64 and Python 3.11+. Pinned runtimes install into the user data directory; skill files stay in their host-loaded directory. These are development releases; complete V1 acceptance and generic Skills CLI installation remain open.
 
@@ -102,7 +102,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.37 |
+| Metadata version | 0.1.0-dev.38 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.35 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
@@ -302,6 +302,8 @@ Fixed installed own-directory acceptance passes for the updated scenario skills;
 
 Fixed installation boundary qualification: all 64 current standalone skills pass 128 real unavailable-archive cases through their own bootstrap and CLI entries. Errors retain each skill’s local setup path without retry or native launch; source/copied skill hashes stay unchanged. Four domain SK-002 requirements qualify against the exact lock; Art SK-002 and generic Skills CLI installation remain open. Historical CLI red cases were reconstructed now, rather than treated as old runs. [Evidence](docs/evidence/craft-fixed-setup-boundary-20261008.json).
 
-Public protocol authority is pinned to ArtCraft v0.1.0-dev.107: [reference and verification](docs/Craft-Protocol-Authority.md). This validates the source contract; full runtime protocol acceptance remains open.
+Public protocol authority is pinned to ArtCraft v0.1.0-dev.109: [reference and verification](docs/Craft-Protocol-Authority.md). This validates the source contract; full runtime protocol acceptance remains open.
 
-Current fixed protocol-reference release matrix (Film/Effect dev.37, Photo dev.36, Vector dev.34, Art dev.107) passes actual isolated Codex installation/discovery of 64 skills, 16 installed authority-file digest checks, and 64 independent public CLI probes using five fresh domain caches. Historical native scene proof is reused only for byte-identical skills; full V1 remains open. [Fixed release evidence](docs/evidence/craft-protocol-authority-fixed-first-use-20261008.json).
+Previously verified fixed protocol-reference release matrix (Film/Effect dev.37, Photo dev.36, Vector dev.34, Art dev.107) passes actual isolated Codex installation/discovery of 64 skills, 16 installed authority-file digest checks, and 64 independent public CLI probes using five fresh domain caches. Historical native scene proof is reused only for byte-identical skills; full V1 remains open. [Fixed release evidence](docs/evidence/craft-protocol-authority-fixed-first-use-20261008.json).
+
+This plugin pins protocol authority to ArtCraft dev.109 and retains its locked standalone skill source. Actual installation of the updated matrix is being verified; complete V1 and runtime protocol acceptance remain open.

@@ -2,7 +2,7 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.37`；技能源：`0.1.0-dev.35`；13 个独立技能。
+当前插件：`0.1.0-dev.38`；技能源：`0.1.0-dev.35`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -103,7 +103,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.37 |
+| Metadata version | 0.1.0-dev.38 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.35 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
@@ -301,6 +301,8 @@ Film35固定标签宿主验收：五插件64技能身份与加载通过，错误
 
 固定独立安装边界验收：全部 64 个当前技能的自身安装器／CLI 共 128 个不可用归档失败案例通过；错误保留本技能 setup 路径，无重试／原生启动，源副本摘要不变。四领域 SK-002 按当前精确锁验收；Art SK-002 和通用 Skills CLI 实际安装仍开放。历史 CLI 红灯为本轮重建，不冒充旧运行。[证据](docs/evidence/craft-fixed-setup-boundary-20261008.json)。
 
-公共协议来源已固定到 ArtCraft v0.1.0-dev.107：[引用与校验说明](docs/Craft-Protocol-Authority.zh_CN.md)。这项检查核对协议来源，完整运行时协议验收仍未完成。
+公共协议来源已固定到 ArtCraft v0.1.0-dev.109：[引用与校验说明](docs/Craft-Protocol-Authority.zh_CN.md)。这项检查核对协议来源，完整运行时协议验收仍未完成。
 
-当前固定协议引用发行矩阵（Film／Effect dev.37、Photo dev.36、Vector dev.34、Art dev.107）已通过隔离 Codex 安装／发现 64 项技能、16 项实际安装所有者文件摘要核对，以及五个全新领域缓存下的 64 项独立公开 CLI 探测。原生场景证据仅对字节一致的技能复用，完整首版仍开放。[固定发行证据](docs/evidence/craft-protocol-authority-fixed-first-use-20261008.json)。
+此前已验证的固定协议引用发行矩阵（Film／Effect dev.37、Photo dev.36、Vector dev.34、Art dev.107）已通过隔离 Codex 安装／发现 64 项技能、16 项实际安装所有者文件摘要核对，以及五个全新领域缓存下的 64 项独立公开 CLI 探测。原生场景证据仅对字节一致的技能复用，完整首版仍开放。[固定发行证据](docs/evidence/craft-protocol-authority-fixed-first-use-20261008.json)。
+
+本次插件固定协议引用升级至 ArtCraft dev.109；技能快照保持原固定来源，新的实际宿主安装矩阵正在验证。完整首版与运行时协议验收仍开放。

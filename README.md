@@ -299,3 +299,5 @@ Fixed Film35 host acceptance: five plugins/all64 skill identities and loading pa
 Scenario installation examples now name the loaded skill itself. Source paths/layout checks pass; fixed installed runtime acceptance is recorded separately. [Architecture / 架构](docs/Scenario-Own-Path-Architecture.md).
 
 Fixed installed own-directory acceptance passes for the updated scenario skills; 64 host identities match. Complete V1 remains open. [Evidence / 证据](docs/evidence/craft-scenario-paths-fixed-first-use-20261008.json).
+
+Fixed installation boundary qualification: all 64 current standalone skills pass 128 real unavailable-archive cases through their own bootstrap and CLI entries. Errors retain each skill’s local setup path without retry or native launch; source/copied skill hashes stay unchanged. Four domain SK-002 requirements qualify against the exact lock; Art SK-002 and generic Skills CLI installation remain open. Historical CLI red cases were reconstructed now, rather than treated as old runs. [Evidence](docs/evidence/craft-fixed-setup-boundary-20261008.json).

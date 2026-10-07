@@ -2,7 +2,7 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.38`；技能源：`0.1.0-dev.35`；13 个独立技能。
+当前插件：`0.1.0-dev.39`；技能源：`0.1.0-dev.36`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -103,9 +103,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.38 |
+| Metadata version | 0.1.0-dev.39 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.35 |
+| Skills source | filmcraft-skills / v0.1.0-dev.36 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -308,3 +308,5 @@ Film35固定标签宿主验收：五插件64技能身份与加载通过，错误
 本次插件固定协议引用升级至 ArtCraft dev.109；技能快照保持原固定来源，新的实际宿主安装矩阵正在验证。完整首版与运行时协议验收仍开放。
 
 固定发行 Film38／Effect38／Photo37／Vector35／Art109 已通过实际隔离 Codex 安装和发现 64 项技能、16 项安装副本协议文件摘要核对、五个全新领域缓存下的 64 项 CLI 探测。十项 ArtCraft 技能分别从空缓存完成原生 Photo 蒙版调整、源工程返工与迁移打包；另外 54 项技能仅复用整个技能摘要一致的历史原生证据。默认维护验收矩阵已更新；通用 Skills CLI 安装、模型调度、GUI 和完整 V1／协议验收仍开放。[本次固定证据](docs/evidence/craft-archive-prefix-fixed-first-use-20261008.json)。
+
+dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自含字号换算。源码原生首用通过；新固定插件安装另验。[证据](docs/Caption-Size-First-Use.zh_CN.md)。

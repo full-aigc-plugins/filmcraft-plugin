@@ -6,7 +6,7 @@
     {"command": "timeline.place", "params": {"item": {"$ref": "shot.item"}, "track": "V1", "time": "0", "sourceIn": "0", "duration": "508032000000", "insert": false}, "as": "shotClip"},
     {"command": "timeline.place", "params": {"item": {"$ref": "voice.item"}, "track": "A1", "audioTrack": "A1", "time": "0", "sourceIn": "0", "duration": "508032000000", "insert": false}, "as": "voiceClip"},
     {"command": "captions.newTrack", "params": {"format": "Subtitle", "name": "English captions", "language": "en"}},
-    {"command": "captions.setStyle", "params": {"track": "C1", "font": "Arial", "size": 18, "color": "#ffffff", "background": true}},
+    {"command": "captions.setStyle", "params": {"track": "C1", "font": "Arial", "size": 84, "margin": 0.02, "color": "#ffffff", "background": true}},
     {"command": "caption.add", "params": {"track": "C1", "text": "First scene", "startTicks": "0", "durationTicks": "254016000000"}, "as": "caption"}
   ],
   "frames": ["127008000000", "381024000000"],

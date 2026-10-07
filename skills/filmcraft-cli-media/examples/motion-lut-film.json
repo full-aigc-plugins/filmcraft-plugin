@@ -65,7 +65,7 @@
       "params": {
         "track": "C1",
         "font": "Arial",
-        "size": 18,
+        "size": 84, "margin": 0.02,
         "color": "#ffffff",
         "background": true
       }

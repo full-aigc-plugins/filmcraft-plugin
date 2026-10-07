@@ -2,7 +2,7 @@
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.38`; skill source: `0.1.0-dev.35`; 13 independent skills.
+Current plugin: `0.1.0-dev.39`; skill source: `0.1.0-dev.36`; 13 independent skills.
 
 Verified first-use platform: macOS arm64 and Python 3.11+. Pinned runtimes install into the user data directory; skill files stay in their host-loaded directory. These are development releases; complete V1 acceptance and generic Skills CLI installation remain open.
 
@@ -102,9 +102,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.38 |
+| Metadata version | 0.1.0-dev.39 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.35 |
+| Skills source | filmcraft-skills / v0.1.0-dev.36 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -309,3 +309,5 @@ Previously verified fixed protocol-reference release matrix (Film/Effect dev.37,
 This plugin pins protocol authority to ArtCraft dev.109 and retains its locked standalone skill source. Actual installation of the updated matrix is being verified; complete V1 and runtime protocol acceptance remain open.
 
 Fixed releases Film38/Effect38/Photo37/Vector35/Art109 pass actual isolated Codex installation/discovery of 64 skills, 16 installed protocol file digests, and 64 CLI probes using five fresh domain caches. Each of ten Art skills freshly passes its own empty-public-runtime native Photo mask/adjustment creation, source revision and moved package verification. The remaining 54 skills reuse historical native proof only when the entire skill hash matches. Maintainer defaults now select this matrix; generic Skills CLI installation, model dispatch, GUI and complete V1/protocol acceptance remain open. [Fixed evidence](docs/evidence/craft-archive-prefix-fixed-first-use-20261008.json).
+
+Dev.39 vendors immutable standalone source dev.36 with readable small-frame caption templates and independent size guidance. Native source tests pass; new installed-host acceptance is tracked separately. [Evidence](docs/Caption-Size-First-Use.md).

@@ -297,3 +297,5 @@ Released plugin dev.35 vendors published source dev.34/native craft.4. Source an
 Fixed Film35 host acceptance: five plugins/all64 skill identities and loading pass with zero errors. The installed transcript skill independently cold-installs, downloads its model and performs real CLI/workflow inference (44.833s), preserving source/audio/video and reopening/exporting SRT. Art105/source79 now passes fixed-host mixed ASR; full V1 remains open. [Evidence](docs/evidence/workflow-model-directory-20261008.json).
 
 Scenario installation examples now name the loaded skill itself. Source paths/layout checks pass; fixed installed runtime acceptance is recorded separately. [Architecture / 架构](docs/Scenario-Own-Path-Architecture.md).
+
+Fixed installed own-directory acceptance passes for the updated scenario skills; 64 host identities match. Complete V1 remains open. [Evidence / 证据](docs/evidence/craft-scenario-paths-fixed-first-use-20261008.json).

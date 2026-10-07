@@ -296,3 +296,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 Film35固定标签宿主验收：五插件64技能身份与加载通过，错误0；实际安装的转录技能独立冷装、首次模型下载及真实CLI／工作流识别44.833秒通过，源工程和音画保全、重开与SRT均通过。Art105／源79已通过固定宿主混合ASR；完整V1保持开放。 [Evidence](docs/evidence/workflow-model-directory-20261008.json).
 
 场景安装示例已使用实际加载的技能自身目录。源路径／布局检查通过；固定安装运行时验收另行记录。 [Architecture / 架构](docs/Scenario-Own-Path-Architecture.zh_CN.md).
+
+新场景自身目录已通过固定安装复验；64项宿主身份匹配。完整V1仍开放。 [Evidence / 证据](docs/evidence/craft-scenario-paths-fixed-first-use-20261008.json).

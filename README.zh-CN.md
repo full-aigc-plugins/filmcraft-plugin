@@ -1,3 +1,5 @@
+Film独立工作流的同目标执行保护源码候选：原生启动前认领规范化目标，中断后保留running／reconciling身份。7项目标回归和1项实际冷原生创建／导出／重开／返工通过；源仓153项中122通过、31条件跳过，候选同步13技能。固定发布／安装、其他领域保护和完整任务合同仍开放。 [Evidence / 证据](docs/evidence/filmcraft-output-execution-candidate-20261007.json).
+
 领域场景验收现为 **43项原生测试通过／全部42个不同场景技能**。固定安装跟踪用例使用受支持H.264 High通过；此前无损输入不受原生解码器支持，失败证据保留。Art角色专项、实际Skills CLI及完整V1仍开放。 [Evidence / 证据](docs/evidence/craft-fixed-tracking-supported-input-20261007.json).
 
 追加专项验收：**累计42项原生测试通过，覆盖41／42个领域场景技能**。多机位、带时间文本转录、滤镜及Puppet补验通过；Effect跟踪视频纹理未出现在预期像素，分析实际关键帧为0，尚未验收。64个安装摘要保持。Art角色专项、自动ASR、实际Skills CLI和完整V1继续开放。[证据](docs/evidence/craft-fixed-additional-task-scenes-20261007.json)。

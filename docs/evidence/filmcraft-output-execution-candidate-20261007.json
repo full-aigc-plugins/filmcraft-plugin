@@ -1,0 +1,59 @@
+{
+  "schema": "filmcraft-output-execution-candidate/v1",
+  "result": "PASS",
+  "stage": "unpublished-source-candidate",
+  "sourceBaseline": "e8f187b741112d15de0dbfda9d80474f51e62a2f",
+  "sourceHashes": {
+    "workflow.py": "86c4df69745ba6247b19a6c75a9dfddcea212f673725dac98f8ac03f03374045",
+    "output_guard.py": "5555f0560d956678a38a2753ea0f7746fba69401940b25b49a81d3a03f4e315c"
+  },
+  "targetTests": {
+    "passed": 7,
+    "driverSha256": "630e79a2068a7cc141a471273bd78f996fe111b13e7e5e7eea1f811b97d74138",
+    "redBeforeImplementation": "public workflow reached mocked native-session loading and raised native_started_without_claim instead of output_execution_conflict; initial missing-helper errors were not treated as behavioral proof"
+  },
+  "regression": {
+    "total": 153,
+    "passed": 122,
+    "skipped": 31,
+    "receipt": {
+      "passed": true,
+      "seconds": 22.573,
+      "stdout": "",
+      "stderr": "ss....................s........................s.......s.ss...s.....ss....sssss.....ss....................................ss....s..sssssssssss...........\n----------------------------------------------------------------------\nRan 153 tests in 22.400s\n\nOK (skipped=31)\n"
+    }
+  },
+  "native": {
+    "receipt": {
+      "passed": true,
+      "seconds": 6.415,
+      "sourceHashes": {
+        "workflow.py": "86c4df69745ba6247b19a6c75a9dfddcea212f673725dac98f8ac03f03374045",
+        "output_guard.py": "5555f0560d956678a38a2753ea0f7746fba69401940b25b49a81d3a03f4e315c"
+      },
+      "driverSha256": "f75634a7c6a191ea882195eec971a5195c8e99617ce032bdd6cb2fe264234a8b",
+      "stdout": "",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 6.360s\n\nOK\n"
+    },
+    "observations": {
+      "domain": "filmcraft",
+      "result": "PASS",
+      "entrySha256": "290108267b948b6ddda6f0865e20f1bdfadd7558442fb1d617125a1ed25eb116",
+      "projectSha256": "67df898963a2698fd6ee963c31f5898074bb169c611ae03c609e9e5745115608",
+      "revisionSha256": "4fc2d9426c0f8cfac77f358dbc92170490b5edfa8378a7ff594ca75e855eb880",
+      "scope": "candidate single-skill cold native workflow delivery and revision; not fixed release or full DAG acceptance"
+    },
+    "scope": "one copied candidate skill, absent runtime, public native install; creation/export/reopen/source revision; no native concurrent-worker proof"
+  },
+  "skills": {
+    "count": 13,
+    "resourceSync": "PASS"
+  },
+  "unverified": [
+    "fixed skill/plugin publication and installed acceptance",
+    "other three standalone domain guards",
+    "complete standalone idempotency/authorization/cancellation/budgets",
+    "automatic unknown-result reconciliation",
+    "complete V1"
+  ]
+}

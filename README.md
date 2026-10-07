@@ -1,4 +1,4 @@
-Current plugin: `0.1.0-dev.30`; skill source: `0.1.0-dev.28`. Strict command-plan JSON snapshot is vendored. Source regression and standalone-copy plan tests pass; this fixed plugin's installed verification remains pending. Exhaustive commands and full V1 remain open.
+Current plugin: `0.1.0-dev.30`; skill source: `0.1.0-dev.28`; Strict command-plan JSON snapshot is vendored. Source regression and standalone-copy plan tests pass; fixed installed plan guards and representative native save/reopen/render checks pass. Exhaustive commands and full V1 remain open.
 
 Fixed installation verification: five plugins / 62 skills discovered in isolated Codex, zero loading errors; all62 command/resource checks and248 setup-diagnostic checks passed. Four new specialized skills passed empty-runtime installation, version and command queries. Native creative, exhaustive-command and fullV1 acceptance remain separately scoped. [Evidence](docs/evidence/craft-fixed62-installation-20261007.json).
 
@@ -283,3 +283,5 @@ The 48 standalone domain skills now have their own pinned official desktop insta
 Source candidate now includes owned standalone desktop startup: 48/48 single-skill cold GUI save/reopen and cleanup cases passed. See [runtime evidence](docs/evidence/craft-owned-desktop-first-use-20261007.json). Fixed-release installation and complete command execution remain open.
 
 Command-plan JSON source candidate: duplicate keys are rejected before installation and output creation. All 13 domain skills pass standalone-copy rejection and valid-plan checks. Three focused tests pass; fixed-plugin publication and installed acceptance remain NOT_RUN. [Evidence](docs/evidence/command-plan-json-candidate-20261007.json).
+
+Fixed strict-plan installed verification passes: 64 CLI probes, 324 duplicate-key rejections across54 independently copied installed domain skills, 54 unique-plan structure checks and four cold native save/reopen/render samples. All64 installed skill hashes remain unchanged. Only the bounded strict-plan publication gate closes; generic Skills CLI, Art domain-bundle upgrade, exhaustive contexts and fullV1 remain open. [Evidence](docs/evidence/command-plan-json-fixed-first-use-20261007.json).

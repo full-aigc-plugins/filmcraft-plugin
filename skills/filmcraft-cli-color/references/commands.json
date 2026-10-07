@@ -1,7 +1,7 @@
 {
   "schema": "craft-skill-command-evidence/v1",
   "pluginId": "filmcraft",
-  "runtimeVersion": "0.2.0-craft.2",
+  "runtimeVersion": "0.2.0-craft.3",
   "upstreamRepository": "https://github.com/storytold/filmcraft",
   "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
   "scope": "observed command catalogue, not capability or creative acceptance",

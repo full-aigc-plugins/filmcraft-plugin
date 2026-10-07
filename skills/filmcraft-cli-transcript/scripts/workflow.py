@@ -217,6 +217,33 @@ def run(cli, argv, cwd=None):
     return result.stdout
 
 
+def preflight_assets(new_assets, prior_assets, source):
+    """在运行时安装与暂存执行前校验素材；复制时再次校验以检测并发变化。"""
+    for registered, group in ((True, prior_assets), (False, new_assets)):
+        for alias, asset in group.items():
+            kind = asset.get('kind')
+            if not re.fullmatch(r'[a-zA-Z][\w-]*', alias) or not re.fullmatch(r'[a-f0-9]{64}', asset['sha256']):
+                raise ValueError('invalid_asset')
+            path = source / asset['path'] if registered else Path(asset['path'])
+            if registered:
+                if path.is_symlink() or (kind == 'image-sequence' and path.parent.is_symlink()):
+                    raise ValueError('invalid_asset_path')
+                path = path.resolve()
+                if not path.is_relative_to(source):
+                    raise ValueError('invalid_asset_path')
+            if kind == 'image-sequence':
+                load_module('sequence_assets').validate_sequence(path, asset['sha256'])
+            elif kind == 'segmented-image-sequence':
+                load_module('sequence_assets').validate_segmented_source(path, asset['sha256'])
+            else:
+                if kind not in (None, 'lut'):
+                    raise ValueError('unsupported_asset_kind')
+                if kind == 'lut' and path.suffix.lower() not in ('.cube', '.3dl'):
+                    raise ValueError('unsupported_lut_format')
+                if path.is_symlink() or not path.is_file() or sha(path) != asset['sha256']:
+                    raise ValueError('asset_digest_mismatch: ' + alias)
+
+
 def execute(plan, output, runtime_home=None, source=None):
     validate(plan)
     output = Path(output).absolute()
@@ -240,6 +267,7 @@ def execute(plan, output, runtime_home=None, source=None):
     elif 'document' not in plan:
         raise ValueError('document_required')
     validate(plan, prior.get('assets', {}))
+    preflight_assets(plan.get('assets', {}), prior.get('assets', {}), source)
     installed = load_module('bootstrap').install(
         json.loads(Path(__file__).with_name('runtime.lock.json').read_text()),
         runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))

@@ -100,5 +100,5 @@
   "audioTailAcceptance": "fixed-installed-bounded-pass; generic Skills CLI, creative and complete V1 remain open",
   "audioSampleSourcePublicEvidence": "docs/evidence/filmcraft-audio-sample-source-public-20261007.json",
   "audioSampleLocalSourceColdEvidence": "docs/evidence/filmcraft32-local-tag-13-cold-first-use-20261007.json",
-  "audioSamplePublicationState": "native-craft3-published; source32 local frozen and 13 cold gates passed; Git pushes return server error; fixed plugin and Art upgrade pending"
+  "audioSamplePublicationState": "native-craft3 and source32 published; 13 independent source cold gates passed; fixed plugin and Art upgrade pending"
 }

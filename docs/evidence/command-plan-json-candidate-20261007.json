@@ -1,0 +1,40 @@
+{
+  "schema": "craft-command-plan-json-candidate/v1",
+  "domain": "filmcraft",
+  "result": "PASS",
+  "scope": "source candidate public isolated-Python entrypoints; no runtime or creative acceptance",
+  "driverSha256": "363b4858141b7bb84e1880868200cc3a8debf48f5c4b800880cc3956a56e125b",
+  "entrySha256": "b055d20f64347ead10d940a331f9d1aff929d4f8e1ddc96fb4ede8fcddc02b28",
+  "failureReproducedBeforeFix": true,
+  "effectcraftExistingProtection": false,
+  "regressionBeforeAdditionalStandaloneTest": {
+    "total": 143,
+    "passed": 114,
+    "skipped": 29
+  },
+  "finalFocusedTests": {
+    "passed": 3,
+    "skipped": 0
+  },
+  "standaloneSkills": 13,
+  "publicEntryCalls": 33,
+  "negativeCalls": 19,
+  "positiveStructureOnlyChecks": 14,
+  "assertions": [
+    "duplicate root, command and nested parameter keys rejected",
+    "check and run return structured duplicate_json_key failure",
+    "standalone skill copies do not depend on siblings",
+    "no output directory or runtime cache created for invalid plan",
+    "valid unique plan remains structurally checkable",
+    "no new bytecode in copied skills"
+  ],
+  "publication": "NOT_RUN",
+  "installedFixedPluginAcceptance": "NOT_RUN",
+  "unverified": [
+    "native parameter acceptance",
+    "all command contexts",
+    "model dispatch",
+    "GUI",
+    "full V1"
+  ]
+}

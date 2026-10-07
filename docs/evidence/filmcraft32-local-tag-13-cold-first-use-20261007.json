@@ -1,0 +1,130 @@
+{
+  "schema": "filmcraft32-local-tag-source-cold-first-use/v1",
+  "result": "PASS",
+  "sourceRef": "v0.1.0-dev.32",
+  "sourceCommit": "057ffcd1af35a5ba138cc6dbc955d2a7ea497583",
+  "sourceTagPublication": "PENDING_GITHUB_GIT_SERVER_ERROR",
+  "nativeRelease": "runtime-v0.2.0-craft.3",
+  "nativeDownloadMode": "default public download, no local archive override",
+  "records": [
+    {
+      "skill": "filmcraft-cli",
+      "skillSha256": "b45f2ad3efc7866f6adaa8357114db0cbce7155c2094771f204b7595638bf219",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "skillSha256": "abd80ed8df9711eabdcca72da1839050e982a5ef7c4737ff729d0f32d125b404",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "skillSha256": "31d61723362a63116302fded9ededb6acd5073a31ea38845b6ac976260454fab",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "skillSha256": "45870c00d3345ef6b8985f619daf6f0ebdd93f55e96c0f07f94896b522960f44",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "skillSha256": "b1120679264bd527be459e1fd085c212da98c83f51ae48ee1d9ccf6b84ae0586",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "skillSha256": "4e2ee90307d6f4f2a5ed58c740b31391514543083752c93eed52281556abf921",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "skillSha256": "15dfda848c23346836891eb2b1366cb58e8c574436f17aa22821a37a89e37373",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "skillSha256": "6c6c6e694c3a2129ef38fa73d0a092eee31c9840aa01d537254e0bd194eb2352",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "skillSha256": "60971731fe634aa7aa3fbfa7b1839eb95fc729979e6242e866e68f38a7589a41",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "skillSha256": "6492bdfaf7b9eacecf3c1bb8d3d04a33134c7d456570d549ac001f9e3483d714",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "skillSha256": "0d677f52896c1a935365a20c1738d421eac6f60cf84c1c09d6bc268970647e3d",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "skillSha256": "4e535f813baf3a9afd5f1c84838bf36d9d240dc06d8be9dcacc4354f693d0597",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    },
+    {
+      "skill": "filmcraft-use",
+      "skillSha256": "c1c3b2d94304de8823a81248ef912603be6746aa7d805dc59bc403160c299481",
+      "runtimeInitiallyAbsent": true,
+      "nativeVersion": "filmcraft-cli 0.2.0-craft.3",
+      "commands": 666,
+      "discoverySha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+      "skillFilesPreserved": true
+    }
+  ],
+  "seconds": 72.263,
+  "scope": "13 standalone skill copies from local immutable tag; one absent runtime per skill; actual version and 666-command discovery; not a fixed plugin/Art or generic Skills CLI install proof"
+}

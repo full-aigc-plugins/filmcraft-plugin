@@ -238,3 +238,5 @@
 固定发行补证：`docs/evidence/craft-art103-audio-tail-fixed-first-use-20261007.json`。仅关闭正常速率纯音频完整尾部向最近帧上对齐的首用修复：Film33／源31和Art103／源77实际安装、独立冷启动、尾部解码、增益另存与显式越界拒绝通过；完整领域任务仍开放。
 
 - [ ] [FC-DM-002-AUDIO-SAMPLE] 以实际解码红例和原生工程测试修复音频向下截帧；保留视频对齐、字幕及序列补丁，发布独立维护运行时并完成固定 Film／Art 安装副本的尾部和修订验收。
+
+采样时长补证：`docs/evidence/filmcraft-audio-sample-source-public-20261007.json` 与 `docs/evidence/filmcraft32-local-tag-13-cold-first-use-20261007.json`。运行时 craft.3 已公开下载；本地冻结源32的13个单技能分别空运行时安装通过（72.263秒）。源标签／插件／Art 发布因 Git 推送服务器内部错误待恢复，FC-DM-002-AUDIO-SAMPLE 保持未完成，不用本地归档替代公开固定安装验收。

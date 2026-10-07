@@ -97,5 +97,8 @@
   "advancedDesktopFirstUseEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "ownedDesktopAcceptance": "bounded-first-use-and-advanced-desktop-passed; exhaustive commands and full V1 remain open",
   "audioTailFixedEvidence": "docs/evidence/craft-art103-audio-tail-fixed-first-use-20261007.json",
-  "audioTailAcceptance": "fixed-installed-bounded-pass; generic Skills CLI, creative and complete V1 remain open"
+  "audioTailAcceptance": "fixed-installed-bounded-pass; generic Skills CLI, creative and complete V1 remain open",
+  "audioSampleSourcePublicEvidence": "docs/evidence/filmcraft-audio-sample-source-public-20261007.json",
+  "audioSampleLocalSourceColdEvidence": "docs/evidence/filmcraft32-local-tag-13-cold-first-use-20261007.json",
+  "audioSamplePublicationState": "native-craft3-published; source32 local frozen and 13 cold gates passed; Git pushes return server error; fixed plugin and Art upgrade pending"
 }

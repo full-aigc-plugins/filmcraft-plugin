@@ -104,7 +104,7 @@ Intent + assets
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.34 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
-| Host compatibility | Codex dev.35 installation/discovery pending; dev.34 proof remains historical |
+| Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art mixed ASR and GUI pending |
 | License | Apache-2.0 (original repository content) |
 
 
@@ -291,3 +291,5 @@ Fixed strict-plan installed verification passes: 64 CLI probes, 324 duplicate-ke
 Native ASR candidate: independent single-skill cold CLI/model installation and real recognition passed; public runtime and fixed Film/Art upgrades remain pending. [Evidence](docs/evidence/whisper-candidate-inference-20261008.json).
 
 Candidate plugin dev.35 vendors published source dev.34/native craft.4. Source first-model-download and real CLI/workflow inference pass; fixed-tag plugin installation and Art ASR distribution remain pending.
+
+Fixed Film35 host acceptance: five plugins/all64 skill identities and loading pass with zero errors. The installed transcript skill independently cold-installs, downloads its model and performs real CLI/workflow inference (44.833s), preserving source/audio/video and reopening/exporting SRT. Art104 still uses older domain distribution; full V1 remains open. [Evidence](docs/evidence/workflow-model-directory-20261008.json).

@@ -4,7 +4,7 @@
 
 ## 完整归属清单 / Complete assigned command list
 
-本技能归属 135 条命令。下面按命令族分组；上述短表若存在，仅是示例。归属按最长前缀确定，实际任务可组合其他能力的命令。
+本技能归属 121 条命令。下面按命令族分组；上述短表若存在，仅是示例。归属按最长前缀确定，实际任务可组合其他能力的命令。
 
 Each command below has a parameter contract in this skill’s `command-reference.md`. Assignment uses the most specific prefix; a task can combine commands from multiple capabilities.
 
@@ -209,24 +209,5 @@ Order: inspect project and selection, describe parameters, construct and check t
 | 命令 / Command | 用途 / Label | 参数入口 / Parameters |
 | --- | --- | --- |
 | `state.inspect` | Inspect Editor State | `describe state.inspect` |
-
-### `transcript` — 14
-
-| 命令 / Command | 用途 / Label | 参数入口 / Parameters |
-| --- | --- | --- |
-| `transcript.generate` | Transcribe… | `describe transcript.generate` |
-| `transcript.set` | Import Transcript | `describe transcript.set` |
-| `transcript.delete` | Delete Transcript | `describe transcript.delete` |
-| `transcript.inspect` | Inspect Transcript | `describe transcript.inspect` |
-| `transcript.search` | Search Transcript | `describe transcript.search` |
-| `transcript.models` | List Speech Models | `describe transcript.models` |
-| `transcript.downloadModel` | Download Speech Model | `describe transcript.downloadModel` |
-| `transcript.select` | Mark Selected Text | `describe transcript.select` |
-| `transcript.extract` | Extract Selected Text | `describe transcript.extract` |
-| `transcript.lift` | Lift Selected Text | `describe transcript.lift` |
-| `transcript.renameSpeaker` | Rename Speaker… | `describe transcript.renameSpeaker` |
-| `transcript.removePauses` | Remove Pauses | `describe transcript.removePauses` |
-| `transcript.removeFillers` | Remove Filler Words | `describe transcript.removeFillers` |
-| `transcript.createCaptions` | Create Captions from Transcript… | `describe transcript.createCaptions` |
 
 <!-- COMPLETE_SCENARIO_COMMANDS_END -->

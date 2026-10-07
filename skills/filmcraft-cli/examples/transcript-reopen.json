@@ -1,0 +1,33 @@
+{
+  "schema": "craft-command-plan/v1",
+  "operations": [
+    {
+      "command": "file.open",
+      "params": {
+        "path": {
+          "$ref": "project.path"
+        }
+      }
+    },
+    {
+      "command": "transcript.inspect",
+      "params": {},
+      "as": "reopened"
+    },
+    {
+      "command": "captions.list",
+      "params": {},
+      "as": "captions"
+    },
+    {
+      "command": "captions.export",
+      "params": {
+        "path": {
+          "$output": "reopened.srt"
+        },
+        "format": "srt",
+        "track": "C1"
+      }
+    }
+  ]
+}

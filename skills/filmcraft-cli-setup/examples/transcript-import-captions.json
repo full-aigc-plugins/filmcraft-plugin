@@ -1,0 +1,129 @@
+{
+  "schema": "craft-command-plan/v1",
+  "operations": [
+    {
+      "command": "file.newProject",
+      "params": {
+        "name": "Imported transcript captions"
+      }
+    },
+    {
+      "command": "file.import",
+      "params": {
+        "paths": [
+          {
+            "$ref": "voice.path"
+          }
+        ]
+      },
+      "as": "media"
+    },
+    {
+      "command": "file.newSequence",
+      "params": {
+        "name": "Voice",
+        "width": 96,
+        "height": 64,
+        "fps": 12,
+        "video": 1,
+        "audio": 1
+      }
+    },
+    {
+      "command": "timeline.place",
+      "params": {
+        "item": {
+          "$ref": "media.items.0"
+        },
+        "track": "V1",
+        "time": 0,
+        "duration": 508032000000,
+        "insert": false
+      }
+    },
+    {
+      "command": "transcript.set",
+      "params": {
+        "item": {
+          "$ref": "media.items.0"
+        },
+        "transcript": {
+          "language": "en",
+          "speakers": [
+            {
+              "name": "Speaker 1"
+            }
+          ],
+          "words": [
+            {
+              "text": "Hello",
+              "start": 0,
+              "end": 127008000000,
+              "speaker": 0
+            },
+            {
+              "text": "craft",
+              "start": 127008000000,
+              "end": 254016000000,
+              "speaker": 0
+            }
+          ]
+        }
+      },
+      "as": "imported"
+    },
+    {
+      "command": "transcript.inspect",
+      "params": {},
+      "as": "transcript"
+    },
+    {
+      "command": "transcript.search",
+      "params": {
+        "query": "craft"
+      },
+      "as": "search"
+    },
+    {
+      "command": "transcript.renameSpeaker",
+      "params": {
+        "item": {
+          "$ref": "media.items.0"
+        },
+        "speaker": 0,
+        "name": "Narrator"
+      }
+    },
+    {
+      "command": "transcript.createCaptions",
+      "params": {
+        "maxChars": 42,
+        "lines": 2,
+        "minSeconds": 1,
+        "maxSeconds": 6,
+        "name": "Imported captions"
+      },
+      "as": "captions"
+    },
+    {
+      "command": "captions.export",
+      "params": {
+        "path": {
+          "$output": "captions.srt"
+        },
+        "format": "srt",
+        "track": {
+          "$ref": "captions.track"
+        }
+      }
+    },
+    {
+      "command": "file.saveAs",
+      "params": {
+        "path": {
+          "$output": "project.fcproj"
+        }
+      }
+    }
+  ]
+}

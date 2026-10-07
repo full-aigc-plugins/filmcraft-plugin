@@ -54,14 +54,21 @@ def references(value, aliases):
             references(child, aliases)
 
 def validate_tick_parameters(command, params, allow_references=False, contract=None):
-    """校验原生文档明确声明的 ticks；原生引擎不会解析数字字符串。"""
+    """校验公开合同声明的整数时间值，以及导入转录的逐词时间。"""
     if contract is None:
         contract = next(row for row in catalog()["commands"] if row["id"] == command)
-    fields = re.findall(r'"([A-Za-z][A-Za-z0-9_]*)"\s*:\s*ticks', contract.get("params") or "")
-    for field in fields:
-        if field not in params:
-            continue
-        value = params[field]
+    fields = re.findall(r'"([A-Za-z][A-Za-z0-9_]*)"\s*:\s*ticks?\b', contract.get("params") or "")
+    values = [(field, params[field]) for field in fields if field in params]
+    if command == "transcript.set":
+        # 此命令的 tick 位于 transcript.words 数组，不能当作顶层参数读取。
+        transcript = params.get("transcript")
+        words = transcript.get("words") if isinstance(transcript, dict) else None
+        if isinstance(words, list):
+            for index, word in enumerate(words):
+                if isinstance(word, dict):
+                    values.extend(("transcript.words." + str(index) + "." + field, word[field])
+                                  for field in ("start", "end") if field in word)
+    for field, value in values:
         if allow_references and isinstance(value, dict) and set(value) == {"$ref"}:
             continue
         if type(value) is not int or not -(2 ** 63) <= value < 2 ** 63:

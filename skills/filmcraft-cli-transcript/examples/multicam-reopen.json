@@ -1,0 +1,50 @@
+{
+  "schema": "craft-command-plan/v1",
+  "operations": [
+    {
+      "command": "file.open",
+      "params": {
+        "path": {
+          "$ref": "project.path"
+        }
+      }
+    },
+    {
+      "command": "sequence.open",
+      "params": {
+        "item": 16
+      }
+    },
+    {
+      "command": "sequence.inspect",
+      "params": {},
+      "as": "reopened"
+    },
+    {
+      "tool": "render_frame",
+      "params": {
+        "seconds": 0.5
+      }
+    },
+    {
+      "tool": "render_frame",
+      "params": {
+        "seconds": 1.5
+      }
+    },
+    {
+      "command": "file.exportMedia",
+      "params": {
+        "path": {
+          "$output": "film.mp4"
+        },
+        "format": "h264",
+        "width": 96,
+        "height": 64,
+        "fps": 12,
+        "audio": true,
+        "wait": true
+      }
+    }
+  ]
+}

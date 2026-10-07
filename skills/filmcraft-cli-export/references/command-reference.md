@@ -8748,8 +8748,8 @@ Quick Export
 
 Transcribe…
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.generate`；按原生参数构造计划后执行 run。
@@ -8765,8 +8765,8 @@ Transcribe…
 
 Import Transcript
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.set`；按原生参数构造计划后执行 run。
@@ -8782,8 +8782,8 @@ Import Transcript
 
 Delete Transcript
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.delete`；按原生参数构造计划后执行 run。
@@ -8799,8 +8799,8 @@ Delete Transcript
 
 Inspect Transcript
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.inspect`；按原生参数构造计划后执行 run。
@@ -8816,8 +8816,8 @@ Inspect Transcript
 
 Search Transcript
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.search`；按原生参数构造计划后执行 run。
@@ -8833,8 +8833,8 @@ Search Transcript
 
 List Speech Models
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.models`；按原生参数构造计划后执行 run。
@@ -8850,8 +8850,8 @@ List Speech Models
 
 Download Speech Model
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.downloadModel`；按原生参数构造计划后执行 run。
@@ -8867,8 +8867,8 @@ Download Speech Model
 
 Mark Selected Text
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.select`；按原生参数构造计划后执行 run。
@@ -8884,8 +8884,8 @@ Mark Selected Text
 
 Extract Selected Text
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.extract`；按原生参数构造计划后执行 run。
@@ -8901,8 +8901,8 @@ Extract Selected Text
 
 Lift Selected Text
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.lift`；按原生参数构造计划后执行 run。
@@ -8918,8 +8918,8 @@ Lift Selected Text
 
 Rename Speaker…
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.renameSpeaker`；按原生参数构造计划后执行 run。
@@ -8935,8 +8935,8 @@ Rename Speaker…
 
 Remove Pauses
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.removePauses`；按原生参数构造计划后执行 run。
@@ -8952,8 +8952,8 @@ Remove Pauses
 
 Remove Filler Words
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.removeFillers`；按原生参数构造计划后执行 run。
@@ -8969,8 +8969,8 @@ Remove Filler Words
 
 Create Captions from Transcript…
 
-- 技能 / Owner: `filmcraft-cli`。
-- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
+- 技能 / Owner: `filmcraft-cli-transcript`。
+- 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
 - 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.createCaptions`；按原生参数构造计划后执行 run。

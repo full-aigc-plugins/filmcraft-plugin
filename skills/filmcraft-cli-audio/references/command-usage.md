@@ -120,3 +120,9 @@ For GUI prerequisites, use the skill-owned desktop.py entry and its pinned insta
 固定目录明确声明为 ticks 的原生命令参数必须是有符号64位 JSON 整数。数字字符串、小数、布尔和溢出值在 check 阶段拒绝；返回值引用解析后在 run 阶段再次校验。workflow.py 的模板字符串合同是独立合同，不能直接套用到原生命令计划。Python JSON 整数可保留超过2^53的值，禁止先经 JavaScript Number 转换。省略时间参数时按原生合同使用播放头，必要时用 playhead.set seconds 显式定位。
 
 Native fields documented as ticks require exact signed64-bit JSON integers. Literal type/range errors fail preflight; resolved references are checked again before execution. Workflow-template strings have a separate contract.
+
+## 计划 JSON 的唯一键 / Unique keys in plan JSON
+
+每个 JSON 对象中的键必须唯一，包括顶层、操作及嵌套参数。重复 `command`、`params` 或任何参数键会在公开 `check` / `run` 入口被拒绝，错误为 `duplicate_json_key`；不创建运行时缓存或输出目录，不进行原生调用。先修正计划，再重新校验。严格 JSON 校验还拒绝非有限数值。`check` 成功仍只证明计划结构与目录成员关系，不能证明原生参数、上下文或创作结果通过。
+
+Every object must use unique JSON keys, including the root, operations and nested parameters. Duplicate keys fail with `duplicate_json_key` before runtime installation, output creation or native execution. Correct the plan and check it again. Nonfinite values are also rejected. A successful `check` establishes structure and catalog membership only; native parameters, context and creative results require execution evidence.

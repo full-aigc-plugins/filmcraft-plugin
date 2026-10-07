@@ -7,7 +7,7 @@
 
 ## 1. Problem and scope
 
-The released standalone workflow checks output existence before installation but claims the delivery directory later, after native operations may already have started. Two callers can therefore start native sessions for the same absent target. This candidate claims a canonical output identity after runtime verification and before native session startup. It does not replace Art orchestration or establish complete standalone task idempotency, authorization, cancellation or shared budgets.
+Before skills29, the standalone workflow checked output existence before installation but claimed the delivery directory later, after native operations may already have started. Two callers can therefore start native sessions for the same absent target. The published skills29 workflow claims a canonical output identity after runtime verification and before native session startup. It does not replace Art orchestration or establish complete standalone task idempotency, authorization, cancellation or shared budgets.
 
 ## 2. State and data flow
 
@@ -31,7 +31,7 @@ The parent directory contains a persistent `.filmcraft-execution-<canonical-targ
 
 The public workflow regression first failed because it reached native-session loading instead of rejecting the conflicting claim. Seven target tests cover public-entrypoint ordering, real subprocess competition, SIGKILL persistence, exception state, independent targets and user-file boundaries. A copied single-skill candidate with an empty runtime exercises actual native creation, export, reopen and source revision. Detailed results and source fingerprints are in [candidate evidence](evidence/filmcraft-output-execution-candidate-20261007.json).
 
-The helper and workflow are synchronized into all 13 independent skills. Native binaries and their locks remain unchanged. The initial source candidate is now published as skills29/plugin31; task3.14 fixed-installation repetition passed. Art still pins Film28 and needs its own upgrade acceptance. Other three standalone domains and complete task contracts remain open.
+The helper and workflow are synchronized into all 13 independent skills. Native binaries and their locks remain unchanged. The initial source candidate is now published as skills29/plugin31; task3.14 fixed-installation repetition passed. Art99/source73 now pins Film29 and passes a separate fixed-installed cold mixed creation/revision/reuse and portable package gate. Its full V1 gates remain open. Other three standalone domains and complete task contracts remain open.
 
 Fixed installed proof: [receipt](evidence/filmcraft31-fixed-output-execution-first-use-20261007.json).
 

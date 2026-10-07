@@ -31,11 +31,13 @@ The parent directory contains a persistent `.filmcraft-execution-<canonical-targ
 
 The public workflow regression first failed because it reached native-session loading instead of rejecting the conflicting claim. Seven target tests cover public-entrypoint ordering, real subprocess competition, SIGKILL persistence, exception state, independent targets and user-file boundaries. A copied single-skill candidate with an empty runtime exercises actual native creation, export, reopen and source revision. Detailed results and source fingerprints are in [candidate evidence](evidence/filmcraft-output-execution-candidate-20261007.json).
 
-The helper and workflow are synchronized into all 13 independent skills. Native binaries and their locks remain unchanged. This is an unpublished source candidate; new immutable skill/plugin releases and installed-native repetition are tracked separately in tasks 3.14. Other three standalone domains and complete task contracts remain open.
+The helper and workflow are synchronized into all 13 independent skills. Native binaries and their locks remain unchanged. The initial source candidate is now published as skills29/plugin31; task3.14 fixed-installation repetition passed. Art still pins Film28 and needs its own upgrade acceptance. Other three standalone domains and complete task contracts remain open.
+
+Fixed installed proof: [receipt](evidence/filmcraft31-fixed-output-execution-first-use-20261007.json).
 
 ---
 
 **Document version**: V1.0.0
 **Created**: 2026-10-07
 **Updated**: 2026-10-07
-**Status**: Source candidate; fixed publication/installation pending
+**Status**: Film31/source29 fixed first-use verified; complete V1 pending

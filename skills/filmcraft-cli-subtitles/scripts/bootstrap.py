@@ -200,16 +200,24 @@ def install(lock, runtime_home, archive=None, platform_key=None):
             return dict(inspect_install(destination, artifact, expected, version, key), reused=False)
 
 
+def setup_failure(runtime_home):
+    """定位当前独立技能的安装入口；仅提供诊断，不触发重试。"""
+    return {'skill': 'filmcraft-cli-setup',
+            'bootstrapScript': str(Path(__file__).resolve()),
+            'runtimeHome': str(Path(runtime_home).expanduser().absolute()),
+            'automaticRetry': False}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runtime-home', default=os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
     parser.add_argument('--archive', type=Path, help='已下载的锁定发布 ZIP；仍强制校验归档和二进制摘要')
     args = parser.parse_args()
-    lock = json.loads(Path(__file__).with_name('runtime.lock.json').read_text())
     try:
+        lock = json.loads(Path(__file__).with_name('runtime.lock.json').read_text())
         print(json.dumps(install(lock, args.runtime_home, args.archive), ensure_ascii=False))
     except (ValueError, OSError, subprocess.SubprocessError, zipfile.BadZipFile) as error:
-        print(json.dumps({'error': str(error), 'installed': False}, ensure_ascii=False))
+        print(json.dumps({'error': str(error), 'installed': False, 'dependencySetup': setup_failure(args.runtime_home)}, ensure_ascii=False))
         raise SystemExit(1)
 
 

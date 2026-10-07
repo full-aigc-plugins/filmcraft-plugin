@@ -1,0 +1,13 @@
+{
+  "schema": "craft-desktop-lock/v1",
+  "domain": "filmcraft",
+  "version": "0.2.0",
+  "url": "https://github.com/storytold/filmcraft/releases/download/v0.2.0/filmcraft-0.2.0-macos-universal.dmg",
+  "filename": "filmcraft-0.2.0-macos-universal.dmg",
+  "bytes": 37556573,
+  "archiveSha256": "170e5887353aa9d8119e19543fa7ecfdbff7c7a11138352f96731d6d354b7850",
+  "binarySha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa",
+  "app": "FilmCraft.app",
+  "executable": "FilmCraft",
+  "bundleIdentifier": "ai.storyteller.filmcraft"
+}

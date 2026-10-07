@@ -55,7 +55,8 @@
     "2.9": "docs/evidence/filmcraft-native-download-candidate-20261007.json",
     "2.10": "docs/evidence/codex-native-download-first-use-20261007.json",
     "8.11": "docs/evidence/codex-native-download-first-use-20261007.json",
-    "8.12": "docs/evidence/codex-native-gateway-first-use-20261007.json"
+    "8.12": "docs/evidence/codex-native-gateway-first-use-20261007.json",
+    "8.16": "docs/evidence/craft-owned-desktop-first-use-20261007.json"
   },
   "hostValidationEvidence": "docs/evidence/codex-protocol-fault-first-use-20261007.json",
   "hostValidationStatus": "fixed-protocol-repair-install-and-discovery-passed",

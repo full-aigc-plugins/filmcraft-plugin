@@ -1,3 +1,5 @@
+Current fixed releases: four domain plugins dev.24/sources dev.22; Art plugin dev.90/source dev.63/runtime83. All 58 single-skill empty-runtime cases, four advanced desktop cases and the brand mixed revision passed. [Version, skill and native artifact-bound evidence](evidence/craft-full-command-fixed-first-use-20261007.json). Earlier version tables and reports below retain their historical scope. Exhaustive commands, all UI interactions, agent model dispatch and full V1 are not established.
+
 # Craft Desktop First-Use Architecture
 
 > 2026-10-07. Scope: the standalone desktop installation component in four domain skill suites. This is source-candidate implementation; fixed-release skill installation and complete GUI acceptance remain open.

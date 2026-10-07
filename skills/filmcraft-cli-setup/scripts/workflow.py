@@ -210,8 +210,9 @@ def export_settings(plan, caption_state):
     return {'burnCaptions': plan.get('export', {}).get('burnCaptions', any(track['enabled'] for track in caption_state['tracks']))}
 
 
-def run(cli, argv, cwd=None):
-    result = subprocess.run([cli] + argv, capture_output=True, text=True, timeout=180, cwd=cwd)
+def run(cli, argv, cwd=None, data_dir=None):
+    prefix = [cli] + (['--data-dir', str(data_dir)] if data_dir is not None else [])
+    result = subprocess.run(prefix + argv, capture_output=True, text=True, timeout=180, cwd=cwd)
     if result.returncode:
         raise RuntimeError('cli_failed: ' + result.stdout[-2000:] + result.stderr[-2000:])
     return result.stdout
@@ -244,8 +245,10 @@ def preflight_assets(new_assets, prior_assets, source):
                     raise ValueError('asset_digest_mismatch: ' + alias)
 
 
-def execute(plan, output, runtime_home=None, source=None):
+def execute(plan, output, runtime_home=None, source=None, data_dir=None):
     validate(plan)
+    configured_data_dir = data_dir if data_dir is not None else os.environ.get('FILMCRAFT_DATA_DIR')
+    data_dir = Path(configured_data_dir).expanduser().resolve() if configured_data_dir else None
     output = Path(output).absolute()
     output = output.parent.resolve()/output.name
     if output.exists() or output.is_symlink():
@@ -272,6 +275,9 @@ def execute(plan, output, runtime_home=None, source=None):
         json.loads(Path(__file__).with_name('runtime.lock.json').read_text()),
         runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
     cli = installed['executable']
+    # MCP 与重开／导出共用模型目录；运行时负责创建，不改调用者环境。
+    def native_run(argv):
+        return run(cli, argv, data_dir=data_dir)
     output.parent.mkdir(parents=True, exist_ok=True)
     recovery_state = {}
     execution_identity = {'planHash': hashlib.sha256(json.dumps(plan, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest(),
@@ -333,9 +339,9 @@ def execute(plan, output, runtime_home=None, source=None):
             elif asset.get('kind') == 'lut':
                 assets[alias] = {'kind':'lut', 'sha256':asset['sha256'], 'staging':str(target)}
             else:
-                probe = json.loads(run(cli, ['probe', str(target)]))
+                probe = json.loads(native_run(['probe', str(target)]))
                 assets[alias] = {'sha256': asset['sha256'], 'probe': precise(probe), 'staging': str(target)}
-        argv = [cli] + (['--project', str(source_project)] if source_project else []) + ['mcp']
+        argv = [cli] + (['--data-dir', str(data_dir)] if data_dir is not None else []) + (['--project', str(source_project)] if source_project else []) + ['mcp']
         with load_module('mcp_session').Session(argv) as session:
             def call(name, args):
                 recovery_state['lastAttempt'] = {'tool': name, 'arguments': args, 'phase': 'submitted'}
@@ -515,15 +521,15 @@ def execute(plan, output, runtime_home=None, source=None):
                         raise ValueError('collected_asset_mismatch')
                     asset['path'] = str(target.relative_to(output))
                     del asset['staging']
-                reopened = json.loads(run(cli, ['--project', str(output / 'project.fcproj'), 'inspect']))
-                captions = json.loads(run(cli, ['--project', str(output / 'project.fcproj'), 'exec', 'captions.list']))
+                reopened = json.loads(native_run(['--project', str(output / 'project.fcproj'), 'inspect']))
+                captions = json.loads(native_run(['--project', str(output / 'project.fcproj'), 'exec', 'captions.list']))
                 # 选择状态属于会话，不是原生工程持久化内容。
                 if {k: v for k, v in reopened['sequence'].items() if k != 'selection'} != {k: v for k, v in sequence.items() if k != 'selection'}:
                     raise ValueError('sequence_roundtrip_mismatch')
                 for index, time in enumerate(plan.get('frames', ['0'])):
-                    run(cli, ['--project', str(output / 'project.fcproj'), 'render', '--seconds', str(ticks(time) / TICKS), '--out', str(output / f'frame-{index:04d}.png')])
-                run(cli, ['--project', str(output / 'project.fcproj'), 'export', str(output / 'film.mp4'), '--format', 'h264', '--settings', json.dumps(export_settings(plan, captions))])
-                exported = json.loads(run(cli, ['probe', str(output / 'film.mp4')]))
+                    native_run(['--project', str(output / 'project.fcproj'), 'render', '--seconds', str(ticks(time) / TICKS), '--out', str(output / f'frame-{index:04d}.png')])
+                native_run(['--project', str(output / 'project.fcproj'), 'export', str(output / 'film.mp4'), '--format', 'h264', '--settings', json.dumps(export_settings(plan, captions))])
+                exported = json.loads(native_run(['probe', str(output / 'film.mp4')]))
                 if not exported.get('video') or any(exported['video'][key] != sequence['settings'][key] for key in ('width', 'height')) or exported['video']['frame_rate'] != sequence['settings']['frame_rate']:
                     raise ValueError('export_video_mismatch')
                 if abs(exported['duration'] - sequence['duration']) > TICKS * sequence['settings']['frame_rate']['den'] // sequence['settings']['frame_rate']['num']:
@@ -536,11 +542,11 @@ def execute(plan, output, runtime_home=None, source=None):
                 (output / 'export-probe.json').write_text(json.dumps(precise(exported), ensure_ascii=False, indent=2) + '\n')
                 if audio_check['required'] and (not exported.get('audio') or not audio_sources):
                     raise ValueError('export_audio_missing')
-                decoded = run(cli, ['bench-decode', str(output / 'film.mp4'), '--frames', str(sequence['durationFrames'])])
+                decoded = native_run(['bench-decode', str(output / 'film.mp4'), '--frames', str(sequence['durationFrames'])])
                 if not re.search(r'\b' + str(sequence['durationFrames']) + r' frames in ', decoded):
                     raise ValueError('export_decode_incomplete')
                 if captions['tracks']:
-                    run(cli, ['--project', str(output / 'project.fcproj'), 'exec', 'captions.export', json.dumps({'path': str(output / 'captions.srt'), 'format': 'srt'})])
+                    native_run(['--project', str(output / 'project.fcproj'), 'exec', 'captions.export', json.dumps({'path': str(output / 'captions.srt'), 'format': 'srt'})])
                 if source_project and sha(source_project) != source_hash:
                     raise ValueError('revision_conflict')
                 for name, value in [('plan.json', plan), ('native.json', precise(reopened)), ('captions.json', precise(captions)), ('export-probe.json', precise(exported)), ('operations.json', precise(receipts))]:
@@ -561,6 +567,7 @@ def main():
     parser.add_argument('--output', required=True, type=Path)
     parser.add_argument('--source', type=Path)
     parser.add_argument('--runtime-home', type=Path)
+    parser.add_argument('--data-dir', type=Path, help='persistent native data/model directory; overrides FILMCRAFT_DATA_DIR')
     parser.add_argument('--asset', action='append', default=[], help='name=/absolute/path; calculates input digest')
     parser.add_argument('--lut-asset', action='append', default=[], help='name=/absolute/path/grade.cube; registers hashed LUT dependency')
     parser.add_argument('--sequence-asset', action='append', default=[], help='name=/absolute/path/sequence.json; registers complete image sequence')
@@ -581,7 +588,7 @@ def main():
         for assignment in args.segmented_sequence_asset:
             alias, path = assignment.split('=', 1)
             plan.setdefault('assets', {})[alias] = {'kind':'segmented-image-sequence','path':path,'sha256':sha(path)}
-        print(json.dumps(execute(plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
+        print(json.dumps(execute(plan, args.output, args.runtime_home, args.source, args.data_dir), ensure_ascii=False))
     except (ValueError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
         print(json.dumps({'error': str(error)}, ensure_ascii=False))
         raise SystemExit(1)

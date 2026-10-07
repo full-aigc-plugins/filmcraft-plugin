@@ -50,3 +50,7 @@ Historical release record: Current first-use entry: plugin `0.1.0-dev.21`, skill
 
 Fixed native gateway first use passes:48 independently installed domain skills and ten Art85/source58 public workflows cold-install, create/reopen/export, revise and preserve original deliveries. Art public Brief, all four gateway domains, five child nodes, selective Logo revision/icon reuse, moved package, native cancellation and six unknown faults pass. All58 installed identities are unchanged. Full2639-command/GUI/model/generic Skills CLI/V1 gates remain open. [Usage](docs/Craft-Native-Gateway-Usage.md) · [Fixed evidence](docs/evidence/codex-native-gateway-first-use-20261007.json).
 
+
+## 0.1.0-dev.35
+
+Plugin dev.35 vendors published Film skills dev.34/native craft.4 with real Whisper and persistent workflow model directories. All13 public-source cold installs pass (40.11s); source real model first use plus CLI/workflow recognition passes (52.497s). Fixed plugin host and Art acceptance remain pending. [Evidence](docs/evidence/workflow-model-directory-20261008.json).

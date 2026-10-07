@@ -2,15 +2,15 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.34`；技能源：`0.1.0-dev.32`；13 个独立技能。
+当前插件：`0.1.0-dev.35`；技能源：`0.1.0-dev.34`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
 固定音频尾部验收：Film 插件 dev.33／源 dev.31、Art 插件 dev.103／源 dev.77 已通过实际安装首用。64 项安装身份核验；23 项有变更技能逐个空运行时安装通过（258.282 秒），另 41 项摘要未变并复用原冷安装证据。音频尾部、增益另存、显式越界拒绝、五子工程配音混合交付、移动包和品牌返工／无关节点复用通过；不关闭通用 Skills CLI、创作审批或完整 V1。[版本绑定证据](docs/evidence/craft-art103-audio-tail-fixed-first-use-20261007.json)。
 
-当前采样时长修复验收：Film 插件 dev.34／源 dev.32、Art 插件 dev.104／源 dev.78 已通过固定公开标签的实际安装。64 项安装文件身份复核通过；本次 23 项技能分别空运行时安装（Film 13 项、Art 10 项），另 41 项仅在完整摘要一致后复用历史冷安装证据。2.20 秒及 2.211 秒音频尾部、增益另存、显式越界拒绝、序列迁移、带字幕配音短片局部修改、五子工程混合交付、移动包及品牌依赖返工通过。这仅关闭采样时长修复的有界发行门禁，完整 V1、通用 Skills CLI、模型调度和创作验收仍未完成。[当前固定证据](docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json)。
+历史版本证据：当前采样时长修复验收：Film 插件 dev.34／源 dev.32、Art 插件 dev.104／源 dev.78 已通过固定公开标签的实际安装。64 项安装文件身份复核通过；本次 23 项技能分别空运行时安装（Film 13 项、Art 10 项），另 41 项仅在完整摘要一致后复用历史冷安装证据。2.20 秒及 2.211 秒音频尾部、增益另存、显式越界拒绝、序列迁移、带字幕配音短片局部修改、五子工程混合交付、移动包及品牌依赖返工通过。这仅关闭采样时长修复的有界发行门禁，完整 V1、通用 Skills CLI、模型调度和创作验收仍未完成。[当前固定证据](docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json)。
 
-当前 Film 插件 dev.34／源 dev.32／原生 craft.3 的十项独立场景测试通过：工程、素材、时间线、音频、字幕、调色、运动、时间文本、多机位和导出。每项只复制自身技能并从新运行时目录公开安装，断言真实原生另存／重开、渲染帧或解码音频及非目标保全。十项无跳过通过（67.330秒），64项原安装摘要仍匹配固定锁。时间文本使用已提供的带时间词句；自动ASR、实际通用Skills CLI安装、全量命令上下文与完整V1保持未完成。 [证据](docs/evidence/filmcraft34-ten-scene-first-use-20261008.json).
+历史版本证据：当前 Film 插件 dev.34／源 dev.32／原生 craft.3 的十项独立场景测试通过：工程、素材、时间线、音频、字幕、调色、运动、时间文本、多机位和导出。每项只复制自身技能并从新运行时目录公开安装，断言真实原生另存／重开、渲染帧或解码音频及非目标保全。十项无跳过通过（67.330秒），64项原安装摘要仍匹配固定锁。时间文本使用已提供的带时间词句；自动ASR、实际通用Skills CLI安装、全量命令上下文与完整V1保持未完成。 [证据](docs/evidence/filmcraft34-ten-scene-first-use-20261008.json).
 
 ## 首次使用
 
@@ -101,11 +101,11 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.34 |
+| Metadata version | 0.1.0-dev.35 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.32 |
+| Skills source | filmcraft-skills / v0.1.0-dev.34 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
-| Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
+| Host compatibility | Codex dev.35 installation/discovery pending; dev.34 proof remains historical |
 | License | Apache-2.0 (original repository content) |
 
 
@@ -288,3 +288,5 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 严格计划解析的固定安装复验通过：64 个 CLI 探测、54 个独立安装领域技能的 324 次重复键拒绝、54 次有效计划结构检查，以及四领域空缓存原生保存／重开／渲染实例通过；执行后全部 64 个安装技能摘要不变。仅关闭本次修复的发布门禁；通用 Skills CLI、Art 领域包升级、全部命令上下文和完整首版仍开放。[证据](docs/evidence/command-plan-json-fixed-first-use-20261007.json)。
 
 原生ASR候选：独立单技能空CLI/模型缓存安装与真实识别通过；公开运行时及固定Film／Art升级仍待验收。[证据](docs/evidence/whisper-candidate-inference-20261008.json)。
+
+候选插件 dev.35 接入已发布源 dev.34／原生 craft.4。源技能首次模型下载、真实 CLI 与工作流识别通过；插件固定标签安装和 Art 分发的 ASR 尚待验收。

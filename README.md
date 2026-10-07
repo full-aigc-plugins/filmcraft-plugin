@@ -2,7 +2,7 @@
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.34`; skill source: `0.1.0-dev.32`; 13 independent skills.
+Current plugin: `0.1.0-dev.35`; skill source: `0.1.0-dev.34`; 13 independent skills.
 
 Verified first-use platform: macOS arm64 and Python 3.11+. Pinned runtimes install into the user data directory; skill files stay in their host-loaded directory. These are development releases; complete V1 acceptance and generic Skills CLI installation remain open.
 
@@ -10,7 +10,7 @@ Fixed audio-tail acceptance: Film plugin dev.33 / source dev.31 and Art plugin d
 
 Current sample-duration correction: Film plugin dev.34 / source dev.32 and Art plugin dev.104 / source dev.78 pass actual fixed public-tag installation. All 64 installed identities are rechecked; 23 skills pass fresh independent cold starts (13 Film, 10 Art), and 41 historical cold records are reused only after full-tree digest equality. Actual 2.20s and 2.211s audio tails, gain revision, explicit oversized rejection, sequence relocation, captioned/narrated short-film revision, five-child mixed delivery, moved package and selective brand revision pass. Only this bounded sample-duration release gate closes; full V1, generic Skills CLI, model dispatch and creative acceptance remain open. [Current fixed evidence](docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json).
 
-Current Film dev.34 / source dev.32 / native craft.3 passes ten distinct standalone scene tests: project, media, timeline, audio, subtitles, color, motion, transcript, multicam and export. Each scene receives its own copied skill and new public runtime installation; actual native save/reopen, rendered frames or decoded samples and non-target preservation are asserted. All ten pass with no skips (67.330s), and all64 original installed digests still match the fixed lock. Transcript coverage uses provided timed words; automatic ASR, generic Skills CLI installation, every command context and full V1 remain open. [Evidence](docs/evidence/filmcraft34-ten-scene-first-use-20261008.json).
+Historical: Current Film dev.34 / source dev.32 / native craft.3 passes ten distinct standalone scene tests: project, media, timeline, audio, subtitles, color, motion, transcript, multicam and export. Each scene receives its own copied skill and new public runtime installation; actual native save/reopen, rendered frames or decoded samples and non-target preservation are asserted. All ten pass with no skips (67.330s), and all64 original installed digests still match the fixed lock. Transcript coverage uses provided timed words; automatic ASR, generic Skills CLI installation, every command context and full V1 remain open. [Evidence](docs/evidence/filmcraft34-ten-scene-first-use-20261008.json).
 
 ## First use
 
@@ -100,11 +100,11 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.34 |
+| Metadata version | 0.1.0-dev.35 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.32 |
+| Skills source | filmcraft-skills / v0.1.0-dev.34 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
-| Host compatibility | Codex development install/discovery pass; GUI and other hosts pending |
+| Host compatibility | Codex dev.35 installation/discovery pending; dev.34 proof remains historical |
 | License | Apache-2.0 (original repository content) |
 
 
@@ -289,3 +289,5 @@ Command-plan JSON source candidate: duplicate keys are rejected before installat
 Fixed strict-plan installed verification passes: 64 CLI probes, 324 duplicate-key rejections across54 independently copied installed domain skills, 54 unique-plan structure checks and four cold native save/reopen/render samples. All64 installed skill hashes remain unchanged. Only the bounded strict-plan publication gate closes; generic Skills CLI, Art domain-bundle upgrade, exhaustive contexts and fullV1 remain open. [Evidence](docs/evidence/command-plan-json-fixed-first-use-20261007.json).
 
 Native ASR candidate: independent single-skill cold CLI/model installation and real recognition passed; public runtime and fixed Film/Art upgrades remain pending. [Evidence](docs/evidence/whisper-candidate-inference-20261008.json).
+
+Candidate plugin dev.35 vendors published source dev.34/native craft.4. Source first-model-download and real CLI/workflow inference pass; fixed-tag plugin installation and Art ASR distribution remain pending.

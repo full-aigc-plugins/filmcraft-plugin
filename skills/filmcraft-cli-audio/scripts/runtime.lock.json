@@ -1,20 +1,20 @@
 {
   "schema": "craft-runtime-lock/v1",
   "artifact": "filmcraft-cli",
-  "resolvedVersion": "0.2.0-craft.3",
-  "releaseRef": "runtime-v0.2.0-craft.3",
+  "resolvedVersion": "0.2.0-craft.4",
+  "releaseRef": "runtime-v0.2.0-craft.4",
   "repository": "https://github.com/full-aigc-skills/filmcraft-skills",
   "upstreamRepository": "https://github.com/storytold/filmcraft",
   "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
-  "runtimeVariant": "maintained-caption-sequence-and-audio-sample-duration",
+  "runtimeVariant": "maintained-caption-sequence-audio-sample-and-whisper-session-directory",
   "artifacts": {
     "darwin-arm64": {
-      "url": "https://github.com/full-aigc-skills/filmcraft-skills/releases/download/runtime-v0.2.0-craft.3/filmcraft-cli-0.2.0-craft.3-macos-arm64.zip",
-      "archiveSha256": "27583a492d180510defb78aec6e9884c72a906e3ed00fe6c1c806017adb26c01",
-      "binarySha256": "d74aa4639e7f012e2273cea346037a15a02a245a516020c86bf6fb2200a6bb3b",
-      "provenanceSha256": "eb9180e26fa0b37229e597dc0a40a0fa9942bb536f0e7e7d6a6087fb9f08fb14",
-      "versionOutput": "filmcraft-cli 0.2.0-craft.3",
-      "evidenceScope": "published maintained runtime; source public audio-tail acceptance pending; fixed plugin/Art distribution pending"
+      "url": "https://github.com/full-aigc-skills/filmcraft-skills/releases/download/runtime-v0.2.0-craft.4/filmcraft-cli-0.2.0-craft.4-macos-arm64.zip",
+      "archiveSha256": "91992564d770828f3ab0a7ab1c0378e0f3e8f4ad308551979ed5606ee09fd1dc",
+      "binarySha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+      "provenanceSha256": "7f6f8ac4013daf546331706c091f48ce313378839b31c9d36644e0a71c975025",
+      "versionOutput": "filmcraft-cli 0.2.0-craft.4",
+      "evidenceScope": "published maintained runtime; candidate single-skill real ASR passed; public and fixed plugin/Art acceptance pending"
     }
   },
   "supportedPluginWorkflows": []

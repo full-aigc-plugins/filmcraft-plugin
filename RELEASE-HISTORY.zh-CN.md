@@ -50,3 +50,7 @@ Film独立工作流的同目标执行保护源码候选：原生启动前认领�
 
 固定原生命令网关首用通过：48项领域安装技能与十项 Art85／技能源58 的公开入口独立冷安装、创建／重开／导出、返工并保全原交付。公开 Brief、四领域网关、五子工程、Logo选择性更新／无关图标复用、移动包、真实取消和六类未知回复故障通过；58项安装摘要不变。全2639命令／GUI／模型／通用Skills CLI／完整V1门禁保持开放。[使用指南](docs/Craft-Native-Gateway-Usage.zh_CN.md) · [固定证据](docs/evidence/codex-native-gateway-first-use-20261007.json)。
 
+
+## 0.1.0-dev.35
+
+插件 dev.35 接入已发布 Film 技能源 dev.34／原生 craft.4，包含真实 Whisper 和工作流模型目录。公开技能源13项独立冷安装通过（40.11秒），源技能真实模型首次使用与 CLI／工作流识别通过（52.497秒）。固定插件宿主及 Art 验收仍待完成。 [Evidence](docs/evidence/workflow-model-directory-20261008.json).

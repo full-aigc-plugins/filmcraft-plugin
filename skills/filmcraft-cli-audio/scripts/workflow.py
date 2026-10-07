@@ -194,6 +194,7 @@ def run(cli, argv, cwd=None):
 def execute(plan, output, runtime_home=None, source=None):
     validate(plan)
     output = Path(output).absolute()
+    output = output.parent.resolve()/output.name
     if output.exists() or output.is_symlink():
         raise ValueError('output_exists')
     source_project, source_hash, prior = None, None, {}
@@ -219,7 +220,10 @@ def execute(plan, output, runtime_home=None, source=None):
     cli = installed['executable']
     output.parent.mkdir(parents=True, exist_ok=True)
     recovery_state = {}
-    with load_module('preserved_stage').preserved_stage(output, '.filmcraft-', recovery_state) as temporary:
+    execution_identity = {'planHash': hashlib.sha256(json.dumps(plan, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest(),
+                          'inputHashes': {name: asset['sha256'] for name, asset in plan.get('assets', {}).items()},
+                          'projectRevision': source_hash, 'runtimeSha256': installed['binarySha256']}
+    with load_module('output_guard').claim(output, execution_identity), load_module('preserved_stage').preserved_stage(output, '.filmcraft-', recovery_state) as temporary:
         stage = Path(temporary)
         media = stage / 'assets'
         media.mkdir()

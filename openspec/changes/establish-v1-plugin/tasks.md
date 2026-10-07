@@ -232,3 +232,5 @@
 3.13源码候选证据：`docs/evidence/filmcraft-output-execution-candidate-20261007.json`。公开入口红例复现后，7项目标测试、122源回归（31跳过）、1项实际冷原生工作流通过；资源同步13技能。3.14固定发布／安装及完整FC-TX-001/002/003保持开放。
 
 3.14固定发行证据：`docs/evidence/filmcraft31-fixed-output-execution-first-use-20261007.json`。Film31／源29：13个独立冷安装、7项安装保护及1项实际原生创建／返工通过，公开归档身份和64安装摘要核验。Art仍固定Film28，其分发升级单独验收；完整FC-TX-001/002/003不由此关闭。
+
+- [ ] [FC-DM-002-AUDIO-FRAME] 发布完整音频尾部原生帧对齐修复，固定 Film/Art 分发并在实际安装副本完成冷安装、创建、重开、增益另存、尾部波形及显式越界拒绝验收。源码候选红绿证据：`docs/evidence/filmcraft-subframe-audio-source-candidate-20261007.json`；157 项回归中 32 项跳过，不替代固定发行验收。

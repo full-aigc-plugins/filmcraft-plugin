@@ -1,0 +1,55 @@
+{
+  "schema": "filmcraft-audio-subframe-first-use/v1",
+  "scope": "Independent copied audio skill, empty public runtime, subframe source tail preservation, create and gain revision; explicit oversized range rejection. Source candidate only.",
+  "sourceDurationSeconds": 2.211333333333333,
+  "decodedTailWindowSeconds": [
+    2.17,
+    2.2
+  ],
+  "decodedTailRms": 0.12477565138693177,
+  "oversizedExplicitRangeRejected": true,
+  "gainDb": -6,
+  "decodedRmsRatio": 0.5012229721999519,
+  "expectedRatio": 0.5011872336272722,
+  "runtimeSha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+  "sourcePreserved": true,
+  "videoAudioClipIdentityPreserved": true,
+  "captionsPreserved": true,
+  "skillFilesPreserved": true,
+  "initialProjectSha256": "17af36eb6fbfcf7857848395f611409bfcbb00ca4b3a9e7d50b2799188ad4ff6",
+  "revisedFiles": {
+    "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+    "plan.json": "33f4c4cf9d12c5575c280a8ece1c3784b0716e6722ba0c367a4939740f172845",
+    "decode.txt": "4b667d4bdf2970b884f176b58a4e6e322cbdad60a80c3d4840b5ce8328de1ca2",
+    "export-probe.json": "61a547f31957faeede3609786e52bdbe667b7e46ebb59f305a545d04d562c6fb",
+    "captions.json": "978d129f800a09619902375647f1894fad2d66939056220204fa20ab5a2cca35",
+    "exchange-loss.json": "0abf5b419bb9fa5190be662e207e05e6c5591c2931d196995c99d863f5e3d63c",
+    "film.mp4": "6be8d981f849602619f13fc43ec15590dc21b4efa242a16b2e6261719476b70a",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "67716e276cf0742f863c0002b45a653d3d410d21823d40ccec0bcceb7f6b80da",
+    "voice.wav": "0168e16173699c6bc35ea79ec2c8e76421cb2553a95baca4300221204043048e",
+    "shot.mp4": "53e8909dfffc9dccb6241cd25e0bf61f1750c7b33cbb815c860667c8af69a7a8",
+    "frame-0000.png": "294453bc6e0c9e6cbfb99260c6706b0d45b5bbcab8612e186b797b76f07ce0d7",
+    "project.fcproj": "bcc9d30b26df0310f7a88cc8be298de263edd918873b858284fe85f2bef6dd8c",
+    "operations.json": "00953baaf1a6edbcc73616dda63526f67d09803f09d6d1ecac99ac6a1adc3696"
+  },
+  "status": "SOURCE_CANDIDATE_PASS",
+  "fixedReleaseVerification": "NOT_RUN",
+  "red": {
+    "logSha256": "bd70666cd863bad45288458fbe57838ac03e29f0ed95f7b311f859ec4704fcb9",
+    "error": "clip_out_of_range: 11",
+    "tests": 1
+  },
+  "regression": {
+    "tests": 157,
+    "skipped": 32,
+    "result": "PASS",
+    "logSha256": "cad9b7571633fba3a6e1d9be30bfc40addf9ba57bb22e5544e707e905b4c6f47"
+  },
+  "sourceFiles": {
+    "skills/filmcraft-use/scripts/workflow.py": "ab221c9f4f6f693d76dbb9d0d76ae9128ae3c8aa811d5d46f77d9e9955fd69e7",
+    "tests/test_workflow.py": "54d5773f839577f3af768402b806cc782bcbbd160284566cf081c8ff2e4e4b12",
+    "tests/test_audio_subframe_first_use.py": "a511b671d6adc7f45dc0bbe5d76478a7b708ea30adc504f114cf312dae32db3f"
+  },
+  "sourceCommit": "d248f8a90b153c16dc4e9206c6511f87dede909e"
+}

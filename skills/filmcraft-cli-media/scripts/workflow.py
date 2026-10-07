@@ -65,6 +65,32 @@ def ticks(value):
     return number
 
 
+def source_range_valid(clip, probe, frame_rate):
+    """核验真实源消耗；仅允许正常速率纯音频的原生尾部帧填充。"""
+    speed = clip.get('speed')
+    if type(speed) not in (int, float) or not math.isfinite(speed) or speed == 0:
+        raise ValueError('invalid_clip_speed')
+    start, duration = clip['sourceIn'], clip['duration']
+    available = ticks(probe['duration'])
+    if start < 0 or start >= available or duration <= 0:
+        return False
+    consumed = Fraction(duration) * abs(Fraction(str(speed)))
+    if start + consumed <= available:
+        return True
+    if speed != 1 or probe.get('kind') != 'AudioOnly' or not probe.get('audio') or probe.get('video'):
+        return False
+    # 与引擎 FrameRate::snap_nearest / make_track_item 保持整数语义；中点取较早帧。
+    num, den = frame_rate['num'], frame_rate['den']
+    if type(num) is not int or type(den) is not int or num <= 0 or den <= 0:
+        return False
+    unit = TICKS * den
+    remaining = available - start
+    frame = remaining * num // unit
+    lower, upper = frame * unit // num, (frame + 1) * unit // num
+    snapped = lower if remaining - lower <= upper - remaining else upper
+    return duration == max(snapped, unit // num)
+
+
 def precise(value):
     """将检查结果中的时间字段转为十进制字符串，保留对象 ID。"""
     if isinstance(value, list):
@@ -409,12 +435,7 @@ def execute(plan, output, runtime_home=None, source=None):
             for track in sequence['video'] + sequence['audio']:
                 for clip in track['items']:
                     asset = next((x for x in assets.values() if x.get('item') == clip['item']), None)
-                    # 时间线时长不是源媒体消耗时长；倍速片段按绝对速率核验源范围。
-                    speed = clip.get('speed')
-                    if type(speed) not in (int, float) or not math.isfinite(speed) or speed == 0:
-                        raise ValueError('invalid_clip_speed')
-                    consumed = Fraction(clip['duration']) * abs(Fraction(str(speed)))
-                    if not asset or clip['sourceIn'] < 0 or clip['sourceIn'] + consumed > ticks(asset['probe']['duration']):
+                    if not asset or not source_range_valid(clip, asset['probe'], sequence['settings']['frame_rate']):
                         raise ValueError('clip_out_of_range: ' + str(clip['clip']))
             caption_state = command('captions.list', {})
             families = {x['family'] for x in command('fonts.list', {'system': True})}

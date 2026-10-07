@@ -126,3 +126,9 @@ Revisions may reuse the prior LUT alias with --source and expectedProjectSha256.
 先用本技能 `commands.py` 的新会话执行打开／检查计划，并显式登记恢复工程作为 `--input project=原暂存工程绝对路径`；按真实对象状态建立新的修改计划。`failure.json` 不是交付 manifest，不能把失败输出直接传给 `workflow.py --source`。成功保存、重开、依赖收集及派生输出检查后才形成新的交付。诊断写入权限不足时仍保留暂存并返回原异常，不能假定失败输出目录一定存在。
 
 After staged failure, retain both the output recovery record and its original sibling stage. Verify all file hashes and the last submitted attempt; an unknown reply may follow a successful native operation. Open/inspect the retained project in a fresh commands.py session before an explicit new revision. Do not replay the original plan, move the stage or pass the failed directory as a successful workflow source package.
+
+## 非整帧音频的完整导入
+
+仅音频素材需要保留全部尾部时，`timeline.place` 可省略 `duration`，由已登记的媒体时长与 `sourceIn` 确定合法源范围。原生时间线会将片段时长对齐到最近序列帧，极短片段至少一帧；技能仅认可与此结果完全一致的正常速度音频尾部填充。源 WAV 不会被截短。显式 `duration` 超出源时长仍在执行前拒绝，视频与倍速片段继续按实际源消耗检查。
+
+验收应解码成片尾部的实际音频，并另存、重开工程；仅存在 AAC 流不能证明尾部保全。

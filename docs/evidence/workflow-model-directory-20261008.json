@@ -2,7 +2,7 @@
   "schema": "filmcraft-workflow-model-directory-evidence/v1",
   "date": "2026-10-08",
   "result": "PASS",
-  "scope": "Fixed Film35/source34/native craft.4 first use verified; Art104 retains older distribution and full V1 remains open",
+  "scope": "Fixed Film35/source34/native craft.4 and Art105/source79 ASR first use verified; full V1 remains open",
   "tdd": {
     "before": "Explicit data_dir rejected, environment directory omitted from MCP argv: 2 errors, 1 failure, 1 pass",
     "after": {
@@ -31,7 +31,6 @@
     "tests/test_workflow_data_directory.py": "56d7365a049b721a44ba522cfbf098b8d492cce15b7544640329dfd620980f63"
   },
   "remaining": [
-    "Upgrade Art source/runtime/plugin routing and verify isolated fixed host mixed ASR",
     "Full V1 requirements and generic Skills CLI acceptance remain open"
   ],
   "freshModelFirstUse": {
@@ -685,5 +684,17 @@
         "publicBytesMatchGitArchive": true
       }
     }
+  },
+  "artFixedDistribution": {
+    "pluginRef": "v0.1.0-dev.105",
+    "pluginCommit": "79d66ba61d8a1f640aa523c396832dabd3aadfc2",
+    "sourceRef": "v0.1.0-dev.79",
+    "sourceCommit": "dc9ecb314226460163877ac8ba3deb6397c1d61f",
+    "result": "PASS",
+    "mixedAsrSeconds": 196.91,
+    "wordCount": 28,
+    "fiveChildren": true,
+    "selectiveBrandRevision": true,
+    "movedPackage": true
   }
 }

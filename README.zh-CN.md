@@ -289,6 +289,6 @@ CRAFT_TASK_FIRST_USE=1 CRAFT_LIVE_TEST=1 CRAFT_LIVE_SUITE=1 python3 -B -m unitte
 
 原生ASR候选：独立单技能空CLI/模型缓存安装与真实识别通过；公开运行时及固定Film／Art升级仍待验收。[证据](docs/evidence/whisper-candidate-inference-20261008.json)。
 
-候选插件 dev.35 接入已发布源 dev.34／原生 craft.4。源技能首次模型下载、真实 CLI 与工作流识别通过；插件固定标签安装和 Art 分发的 ASR 尚待验收。
+已发布插件 dev.35 接入源 dev.34／原生 craft.4。源技能与固定标签 Codex 插件首次模型下载、真实 CLI 与工作流识别均通过；Art 分发的 ASR 尚待验收。
 
 Film35固定标签宿主验收：五插件64技能身份与加载通过，错误0；实际安装的转录技能独立冷装、首次模型下载及真实CLI／工作流识别44.833秒通过，源工程和音画保全、重开与SRT均通过。Art104仍用旧领域分发；完整V1保持开放。 [Evidence](docs/evidence/workflow-model-directory-20261008.json).

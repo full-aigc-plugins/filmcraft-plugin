@@ -290,6 +290,6 @@ Fixed strict-plan installed verification passes: 64 CLI probes, 324 duplicate-ke
 
 Native ASR candidate: independent single-skill cold CLI/model installation and real recognition passed; public runtime and fixed Film/Art upgrades remain pending. [Evidence](docs/evidence/whisper-candidate-inference-20261008.json).
 
-Candidate plugin dev.35 vendors published source dev.34/native craft.4. Source first-model-download and real CLI/workflow inference pass; fixed-tag plugin installation and Art ASR distribution remain pending.
+Released plugin dev.35 vendors published source dev.34/native craft.4. Source and fixed-tag Codex plugin first-model-download and real CLI/workflow inference pass; Art ASR distribution remains pending.
 
 Fixed Film35 host acceptance: five plugins/all64 skill identities and loading pass with zero errors. The installed transcript skill independently cold-installs, downloads its model and performs real CLI/workflow inference (44.833s), preserving source/audio/video and reopening/exporting SRT. Art104 still uses older domain distribution; full V1 remains open. [Evidence](docs/evidence/workflow-model-directory-20261008.json).

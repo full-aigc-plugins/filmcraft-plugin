@@ -1,0 +1,38 @@
+{
+  "schema": "filmcraft-workflow-model-directory-evidence/v1",
+  "date": "2026-10-08",
+  "result": "PASS",
+  "scope": "Unreleased source workflow; immutable dev.33 and Film34/Art104 unchanged",
+  "tdd": {
+    "before": "Explicit data_dir rejected, environment directory omitted from MCP argv: 2 errors, 1 failure, 1 pass",
+    "after": {
+      "passed": 4,
+      "skipped": 0
+    }
+  },
+  "regression": {
+    "total": 168,
+    "passed": 134,
+    "skipped": 34,
+    "seconds": 23.852
+  },
+  "live": {
+    "installation": "One independently copied transcript skill, fresh public craft.4 runtime",
+    "model": "Previously downloaded and verified whisper-tiny reused; not a first-download test",
+    "modelsDirCorrect": true,
+    "environmentOverrideUnused": true,
+    "realInference": true,
+    "nativeProjectAndSrt": true,
+    "projectSha256": "4d515d2602e42abd37f62f86e538df92e848ee330a837bd1bfb5abed83208123",
+    "srtSha256": "9107116afdd33783a11e24d785483e106541e8d9f5cee864c4cd642fbc0105c6"
+  },
+  "files": {
+    "skills/filmcraft-use/scripts/workflow.py": "2a958d80a5913d0e29b328d9f279958c63793078ba1a6e68a9ab0ae404822668",
+    "tests/test_workflow_data_directory.py": "56d7365a049b721a44ba522cfbf098b8d492cce15b7544640329dfd620980f63"
+  },
+  "remaining": [
+    "Publish new source snapshot and vendor into fixed Film plugin",
+    "Upgrade Art source/runtime/plugin routing and verify isolated fixed host ASR",
+    "Full V1 requirements and generic Skills CLI acceptance remain open"
+  ]
+}

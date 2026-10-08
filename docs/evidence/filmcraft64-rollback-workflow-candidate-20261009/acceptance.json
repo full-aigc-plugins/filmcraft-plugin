@@ -20,7 +20,7 @@
     "openspec/changes/establish-v1-plugin/specs/runtime-distribution/spec.md": "0663821e54071420208df2895232b3183dde59cdaaa1e19148439bfe37012e08",
     "openspec/changes/establish-v1-plugin/specs/skills-distribution/spec.md": "9314d1faf62fe143fc09f06474415d1542f2727dd30b89942a1ef85b8de94541",
     "openspec/changes/establish-v1-plugin/specs/task-execution/spec.md": "31d3c25542707aa42af4e486a04840e67534d53e02a9d90ebdc82053f051a64b",
-    "openspec/changes/establish-v1-plugin/tasks.md": "b70f9535a61022b3e570f54dac13b47f5b65b47655915a4e50ffe2ecbe7b9ca5",
+    "openspec/changes/establish-v1-plugin/tasks.md": "d6235b41bce775668d4b06bafd1e645f4381d746cb32a7b7bb2724af246b50cb",
     "openspec/config.yaml": "81171c5cbd0e505a730e4be3148b1aa9277c69b5af7f3708ae0e86adc6f632eb",
     "openspec/specs/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "package.json": "3628af94178506933d83491fe663eaf32a4c21cdf474fc120b99a8dab332d996",
@@ -224,6 +224,13 @@
     "Current source candidate, not fixed64 installation proof.",
     "Only macOS arm64 and owned headless fixture; creative/user acceptance NOT_RUN.",
     "Private original digests and sanitized projections are distinct; no grants, media or binaries published.",
-    "FC-RT-002 tasks2.4-2.6 and all29 remaining V1 tasks stay open pending full qualification."
-  ]
+    "FC-RT-002 tasks2.4-2.6 and all29 remaining V1 tasks stay open pending full qualification.",
+    "After tests, tasks/status only gained the candidate evidence record; documentation/current-facts/OpenSpec checks reran. source-checks.json retains original tested input digests."
+  ],
+  "postTestDocumentationChanges": {
+    "openspec/changes/establish-v1-plugin/tasks.md": {
+      "testedSha256": "b70f9535a61022b3e570f54dac13b47f5b65b47655915a4e50ffe2ecbe7b9ca5",
+      "publishedSha256": "d6235b41bce775668d4b06bafd1e645f4381d746cb32a7b7bb2724af246b50cb"
+    }
+  }
 }

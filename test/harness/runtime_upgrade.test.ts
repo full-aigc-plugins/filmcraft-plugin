@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { existsSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { TaskLedger } from '../../src/harness/task_ledger.ts';
 import { RuntimeUpgrade } from '../../src/adapters/runtime_upgrade.ts';
@@ -11,11 +11,15 @@ import { readFileSync } from 'node:fs';
 
 function setup(t:any){
  const root=workspace(t),file=join(root,'state.sqlite'),db=new TaskLedger(file);db.close();
- const skill=new URL('../../skills/filmcraft-use',import.meta.url).pathname;
- const lock=JSON.parse(readFileSync(new URL('../../skills.lock.json',import.meta.url),'utf8'));
+ // 授权/只读主题测试使用明确的合成锁，不把macOS发布制品当成Linux可执行证据。
+ const skill=join(root,'synthetic-candidate');mkdirSync(join(skill,'scripts'),{recursive:true});
+ const lock=JSON.parse(readFileSync(new URL('../../skills/filmcraft-use/scripts/runtime.lock.json',import.meta.url),'utf8'));
+ const key=process.platform==='darwin'?'darwin-'+process.arch:process.platform+'-'+process.arch;
+ lock.artifacts[key]={...Object.values(lock.artifacts)[0] as object};
+ writeFileSync(join(skill,'scripts/runtime.lock.json'),JSON.stringify(lock));
  const candidate=join(root,'candidate.json'),plan=join(root,'plan.json');
  writeFileSync(candidate,JSON.stringify({schema:'filmcraft-runtime-candidate/v1',skillDirectory:skill,
-  sourceRevision:lock.sources[0].sha,sourceTreeSha256:fingerprintSkill(skill)}));
+  sourceRevision:'a'.repeat(40),sourceTreeSha256:fingerprintSkill(skill)}));
  writeFileSync(plan,JSON.stringify({document:{name:'Probe',width:32,height:32,frameRate:{num:12,den:1}},operations:[],exports:{}}));
  const options={candidateFile:candidate,planFile:plan,ledgerFile:file,runtimeHome:join(root,'runtime'),python:process.env.FILMCRAFT_PYTHON??'python3'};
  return {root,file,candidate,plan,options,service:new RuntimeUpgrade(options)};
@@ -66,4 +70,11 @@ test('capability refusal survives the Python preflight boundary as capability_mi
  const runner=new PythonWorkflowRunner(null as any,null as any,{skillDirectory:skill,sourceRevision:'a'.repeat(40),runtimeHome:join(f.root,'unused-runtime'),pluginVersion:'synthetic',python:f.options.python});
  assert.throws(()=>runner.prepare(f.plan,join(f.root,'output')),(e:any)=>e.code==='capability_missing');
  assert.equal(existsSync(join(f.root,'output')),false);
+});
+
+test('an unavailable platform is rejected before authorization, installation or ledger changes',t=>{
+ const f=setup(t),c=JSON.parse(readFileSync(f.candidate,'utf8')),p=join(c.skillDirectory,'scripts/runtime.lock.json');
+ const lock=JSON.parse(readFileSync(p,'utf8'));lock.artifacts={};writeFileSync(p,JSON.stringify(lock));c.sourceTreeSha256=fingerprintSkill(c.skillDirectory);writeFileSync(f.candidate,JSON.stringify(c));
+ const before=readFileSync(f.file);assert.throws(()=>f.service.probeSubject(),/unsupported_upgrade_platform/);
+ assert.equal(existsSync(f.options.runtimeHome),false);assert.deepEqual(readFileSync(f.file),before);
 });

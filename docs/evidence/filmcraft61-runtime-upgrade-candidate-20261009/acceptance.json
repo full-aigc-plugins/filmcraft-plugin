@@ -83,26 +83,26 @@
     "test/harness/revision_loop.test.ts": "d1d311ad673f59b90ee4269ce68e9a443d814d5b990d15514a53f45e72791781",
     "test/harness/revision_scope.test.ts": "e90b095bb4df1d01732006ceef79a2ab44870021508985a06427f6955317a8e3",
     "test/harness/runtime_deployment.test.ts": "eb658049081261a59e0f9b1bd9e860b0c2696f1a59eb7c0e1aec8d48db6c9f59",
-    "test/harness/runtime_upgrade.test.ts": "150396d0027b4d5463026dc94f0ca311f223d4db4f5691fab903dfe0510a6c05",
+    "test/harness/runtime_upgrade.test.ts": "23741241a8d0d9912d8f0062f4a62272b54f69f15180a8d63e998c95d2623dd3",
     "test/harness/state_maintenance.test.ts": "c5f17351dcaafe0baab228dd158154088863f83a9d6225de20c674c75f609f65",
     "test/harness/task_ledger.test.ts": "fc4af8a587d992d4d0e93a93fc42a87998df487a1e84b0757834dbc18a476341",
     "test/harness/workflow_admission.test.ts": "30873a6efbd219419773b70d2c63ea547accc2f9811ef8522f975a67959fb255"
   },
   "sourceCounts": {
-    "tests": 154,
-    "pass": 151,
+    "tests": 155,
+    "pass": 152,
     "fail": 0,
     "skipped": 3
   },
   "pythonTests": 83,
   "nativeCounts": {
-    "tests": 154,
-    "pass": 154,
+    "tests": 155,
+    "pass": 155,
     "fail": 0,
     "skipped": 0
   },
   "nativeMatrixRows": 50,
-  "entryDeploymentTests": 18,
+  "entryDeploymentTests": 19,
   "transition": {
     "old": "0.2.0-craft.4",
     "new": "0.2.0-craft.5",
@@ -188,6 +188,66 @@
       "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/source-protocol.txt",
       "originalPrivateSha256": "ca704096f690bee24912e2d03265b4aa2469c671d26d9339260b72adc044450b",
       "publicProjectionSha256": "ca704096f690bee24912e2d03265b4aa2469c671d26d9339260b72adc044450b"
+    },
+    "entry-tests-portable.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/entry-tests-portable.txt",
+      "originalPrivateSha256": "7db5475d7148731cfbc0ae2a0bc57257c3ce392f707b903af06674581562ae68",
+      "publicProjectionSha256": "7db5475d7148731cfbc0ae2a0bc57257c3ce392f707b903af06674581562ae68"
+    },
+    "ci-linux-fixture-failure.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/ci-linux-fixture-failure.txt",
+      "originalPrivateSha256": "fc7a17a961dde00651ac486cc85e4d35dedcd418ac83f49ec8f6e7730a5c1ba1",
+      "publicProjectionSha256": "fc7a17a961dde00651ac486cc85e4d35dedcd418ac83f49ec8f6e7730a5c1ba1"
+    },
+    "ci-linux-fixture-failure.json": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/ci-linux-fixture-failure.json",
+      "originalPrivateSha256": "acb2e1768a5ae1d4f6f9694636c619a7af169032f9e0d2607a3289e562611a5c",
+      "publicProjectionSha256": "acb2e1768a5ae1d4f6f9694636c619a7af169032f9e0d2607a3289e562611a5c"
+    },
+    "source-portable-report.json": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/source-portable-report.json",
+      "originalPrivateSha256": "330858dbaca0f56a17fad48b26b6b09ffd559609664ca2ae2ce905312b639067",
+      "publicProjectionSha256": "38947e57f14eee1c7e9952797aa6b4e5f6da185a53d9bc146c3ce3b672c75007"
+    },
+    "source-portable-node.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/source-portable-node.txt",
+      "originalPrivateSha256": "ca8bbc61ab8f2346832d0b6f8640d641ded59f56ce0e0a15f3b31587d1ceea57",
+      "publicProjectionSha256": "ca8bbc61ab8f2346832d0b6f8640d641ded59f56ce0e0a15f3b31587d1ceea57"
+    },
+    "source-portable-metadata.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/source-portable-metadata.txt",
+      "originalPrivateSha256": "92f5ced9aafee77d0bf2c3d0c3692d1763cde81779c05697eaa548f3cce317dd",
+      "publicProjectionSha256": "92f5ced9aafee77d0bf2c3d0c3692d1763cde81779c05697eaa548f3cce317dd"
+    },
+    "source-portable-protocol.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/source-portable-protocol.txt",
+      "originalPrivateSha256": "ca704096f690bee24912e2d03265b4aa2469c671d26d9339260b72adc044450b",
+      "publicProjectionSha256": "ca704096f690bee24912e2d03265b4aa2469c671d26d9339260b72adc044450b"
+    },
+    "source-portable-python.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/source-portable-python.txt",
+      "originalPrivateSha256": "2c34a9faabf98472d46695af5206e395e4db318d7b914b01ab2c91cb7d716ada",
+      "publicProjectionSha256": "2c34a9faabf98472d46695af5206e395e4db318d7b914b01ab2c91cb7d716ada"
+    },
+    "source-portable-fixed-source.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/source-portable-fixed-source.txt",
+      "originalPrivateSha256": "a8587f6c6b8b10e234943116409788373b5152415e1499bf0089adb6cd20d6f7",
+      "publicProjectionSha256": "a8587f6c6b8b10e234943116409788373b5152415e1499bf0089adb6cd20d6f7"
+    },
+    "native-portable.txt": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/native-portable.txt",
+      "originalPrivateSha256": "9a0a9d900ba670c471c4faa8e0878228966f7179a90eeebe657e4e2c6df58916",
+      "publicProjectionSha256": "9a0a9d900ba670c471c4faa8e0878228966f7179a90eeebe657e4e2c6df58916"
+    },
+    "native-portable.json": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/native-portable.json",
+      "originalPrivateSha256": "107defd80b76e7075f53a2b4598680fd63ad7fcedd774e80c6835e5f71c0fb39",
+      "publicProjectionSha256": "107defd80b76e7075f53a2b4598680fd63ad7fcedd774e80c6835e5f71c0fb39"
+    },
+    "matrix-portable.jsonl": {
+      "path": "docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/matrix-portable.jsonl",
+      "originalPrivateSha256": "99be014683fa0584a17d382083f8f4671802a5e427d75a375a4e438fbddc78bb",
+      "publicProjectionSha256": "7928eb39766a1305b0b5762cf0ce8a2e82d4f4116e36b44492bf89fc76588c30"
     }
   },
   "scope": "Actual source CLI and LocalAuthorizationStore in macOS arm64 owned fixture. Prior installed fixed45/source42 identities verified for old native runtime. Current source46 craft.5 selected, actual workflow and independent decode, rollback with fresh actual probe, old/new source and binary preserved. Not current fixed61 installation or full FC-RT-002 qualification.",
@@ -204,5 +264,12 @@
   "fullV1": "INCOMPLETE",
   "creativeAcceptance": "manual_review",
   "userAcceptance": "NOT_RUN",
-  "digestSemantics": "Native hashes refer to original private bytes and measured inputs. Redacted public files have separate projection hashes; projections are not native byte identities."
+  "digestSemantics": "Native hashes refer to original private bytes and measured inputs. Redacted public files have separate projection hashes; projections are not native byte identities.",
+  "portabilityCorrection": {
+    "failedRun": 37827754878,
+    "failedRevision": "61504e7a216310443491994a385440e6c1cb1505",
+    "cause": "Five read-only authorization tests incorrectly consumed a macOS-only runtime lock on Linux.",
+    "correction": "Owned synthetic lock fixture plus unsupported-platform refusal test. Production platform restrictions unchanged.",
+    "linuxNativeAcceptance": "NOT_RUN"
+  }
 }

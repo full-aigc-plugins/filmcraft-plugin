@@ -397,3 +397,5 @@ dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自�
 固定dev.64/source47在macOS arm64完成FC-RT-002七场景验收：164/164安装原生回归、286安装器用例及13实际安装技能空缓存公开CLI首用通过；2.4—2.6已完成，完整V1余26项。其他平台、全量命令与创作接受继续开放。 Evidence: `docs/evidence/fc-rt-002/index.json`.
 
 开发版65锁定公开source48，已登记素材预检及公开工作流/运行时CLI可返回安全聚合问题清单；169/169源码原生回归、实际13技能CLI/Harness拒绝边界通过。完整FC-DM-001序列/HD/重关联与固定65资格待验收，V1余26项保持开放。 Evidence: `docs/evidence/filmcraft65-asset-issues-candidate-20261009/acceptance.json`.
+
+固定dev.65/source48在实际隔离Codex安装通过素材问题清单子门禁：13技能CLI/Harness与两个公开NodeCLI拒绝、0任务/尝试，169/169安装原生及旧源回退执行通过，13技能/69代码/23测试文件保全。完整FC-DM-001序列/HD/重关联与26项V1任务继续开放。 Evidence: `docs/evidence/filmcraft65-fixed-asset-issues-20261009/acceptance.json`.

@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "operations": 17,
+  "ownedProcessesStopped": true,
+  "listenerOwnedByPID": true,
+  "frame": {
+    "width": 96,
+    "height": 82,
+    "sha256": "8283f7d93907b0b4384868f11de791a63bf130a217831ff0f0079c78fca2293e"
+  },
+  "scope": "actual fixed71 installed owned signed desktop save/open, UI inspection and rendered frame; bounded command set"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "filmcraft-fixed-execution-boundaries/v1",
+  "result": "PARTIAL",
+  "qualification": "NOT_PROVEN",
+  "pluginRef": "v0.1.0-dev.71",
+  "pluginSha": "348073ad8934a0404b7e1515b38fca9668b642f5",
+  "sourceRef": "v0.1.0-dev.53",
+  "sourceSha": "3c2a422db9ff5627aad52c12d7203636cbdc5e11",
+  "installedRegression": {
+    "tests": 185,
+    "pass": 185,
+    "skip": 0,
+    "log": "installed-regression.txt"
+  },
+  "all13InstalledSkillsPreserved": true,
+  "installedCodeAndTestsPreserved": true,
+  "host": "host.json",
+  "publicRootMatrix": "root-matrix.json",
+  "environment": "environment.json",
+  "maintenance": "maintenance.json",
+  "ownedDesktop": "desktop.json",
+  "knownFailure": {
+    "case": "complete-command explicit read-only model directory",
+    "result": "FAIL",
+    "observed": "capability_missing: model:whisper-tiny",
+    "expected": "use existing host-provided verified model cache without writing or downloading",
+    "reason": "commands.py overrides explicit FILMCRAFT_DATA_DIR with private output data directory; owned desktop also forces a private data directory"
+  },
+  "fullFC_RL_002": "NOT_PROVEN",
+  "openV1Tasks": 8
+}

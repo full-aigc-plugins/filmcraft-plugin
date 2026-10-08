@@ -1,0 +1,32 @@
+test_existing_evidence_directory_is_never_overwritten (test_fixed_recovery.FixedRecoveryTests.test_existing_evidence_directory_is_never_overwritten) ... ok
+test_relative_output_remains_at_callers_location_after_installed_child_changes_directory (test_fixed_recovery.FixedRecoveryTests.test_relative_output_remains_at_callers_location_after_installed_child_changes_directory) ... FAIL
+
+======================================================================
+FAIL: test_relative_output_remains_at_callers_location_after_installed_child_changes_directory (test_fixed_recovery.FixedRecoveryTests.test_relative_output_remains_at_callers_location_after_installed_child_changes_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_fixed_recovery.py", line 57, in test_relative_output_remains_at_callers_location_after_installed_child_changes_directory
+    result = self.execute(root, Path('acceptance'))
+  File "[PLUGIN_ROOT]/tests/test_fixed_recovery.py", line 50, in execute
+    return self.verifier.verify(Path('new-host'), Path('old-host'), Path('authority'), 'v0.1.0-dev.47', output, 'python-fixture', 'node-fixture')
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[PLUGIN_ROOT]/scripts/verify_fixed_recovery.py", line 54, in verify
+    result = subprocess.run([node, '--test', '--test-concurrency=1', *[str(p) for p in tests if p.name.endswith('.test.ts')]],
+        cwd=plugin, env=environment, capture_output=True, text=True, timeout=900)
+  File "/opt/anaconda3/lib/python3.13/unittest/mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/unittest/mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/unittest/mock.py", line 1234, in _execute_mock_call
+    result = effect(*args, **kwargs)
+  File "[PLUGIN_ROOT]/tests/test_fixed_recovery.py", line 43, in run
+    self.assertTrue(Path(env[key]).is_absolute(), key + ' must survive child cwd changes')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FILMCRAFT_HARNESS_REPORT must survive child cwd changes
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.010s
+
+FAILED (failures=1)

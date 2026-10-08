@@ -1,6 +1,6 @@
 # FilmCraft 只读诊断、状态修复与继续执行
 
-[English](FilmCraft-Recovery-Architecture.md)。行为事实源为 `establish-v1-plugin` 的 FC-TX-002；本页解释 9.16—9.18。插件候选 dev.46 保持独立技能源 dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`，不修改固定技能中的 Python 编辑逻辑。源码候选 60 项原生及状态回归无跳过通过；发布后固定安装单独验收，任务在该验收完成前保持开放。
+[English](FilmCraft-Recovery-Architecture.md)。行为事实源为 `establish-v1-plugin` 的 FC-TX-002；本页解释 9.16—9.18。插件候选 dev.47 保持独立技能源 dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`，不修改固定技能中的 Python 编辑逻辑。源码候选 60 项原生及状态回归无跳过通过；发布后固定安装单独验收，任务在该验收完成前保持开放。
 
 ```mermaid
 flowchart TD
@@ -49,3 +49,7 @@ flowchart TD
 固定公开标签安装由 `scripts/verify_fixed_install.py` 验证，恢复矩阵由 `scripts/verify_fixed_recovery.py` 在实际安装目录执行并使用全新原生运行时；执行后复查安装身份。源码或历史安装结果不代替当前固定验收。完整 Harness、公共 admission、预算／取消、运行时升级排空、独立技术／创作／用户接受、其他平台与类型检查仍开放；本轮任何 verifying 均不代表质量完成或 V1 完成。
 
 [Source candidate evidence / 源码候选证据](evidence/filmcraft46-recovery-candidate-20261008.json).
+
+发行修正：dev.46 安装副本的60项回归通过，但恢复验收收集器使用相对输出路径时随子进程 cwd 改变而写错证据位置，报告未通过；dev.47 在启动前规范化全部输入／输出路径，新增明确红灯与目的地、已有证据保全回归。原 dev.46 标签与 ZIP 保持不变；完整固定验收使用新标签另行执行。
+
+[Current dev.47 candidate / 当前源码候选](evidence/filmcraft47-recovery-candidate-20261008.json).

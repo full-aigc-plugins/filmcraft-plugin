@@ -1,0 +1,17 @@
+test_dangling_output_symlink_cannot_redirect_evidence_writes (test_fixed_recovery.FixedRecoveryTests.test_dangling_output_symlink_cannot_redirect_evidence_writes) ... FAIL
+test_existing_evidence_directory_is_never_overwritten (test_fixed_recovery.FixedRecoveryTests.test_existing_evidence_directory_is_never_overwritten) ... ok
+test_relative_output_remains_at_callers_location_after_installed_child_changes_directory (test_fixed_recovery.FixedRecoveryTests.test_relative_output_remains_at_callers_location_after_installed_child_changes_directory) ... ok
+
+======================================================================
+FAIL: test_dangling_output_symlink_cannot_redirect_evidence_writes (test_fixed_recovery.FixedRecoveryTests.test_dangling_output_symlink_cannot_redirect_evidence_writes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_fixed_recovery.py", line 78, in test_dangling_output_symlink_cannot_redirect_evidence_writes
+    with self.assertRaisesRegex(ValueError, 'recovery_output_exists'): self.execute(root, Path('acceptance'))
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.018s
+
+FAILED (failures=1)

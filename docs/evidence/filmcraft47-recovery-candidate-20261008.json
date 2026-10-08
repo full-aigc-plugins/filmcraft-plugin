@@ -1,0 +1,134 @@
+{
+  "schema": "filmcraft-recovery-candidate/v1",
+  "result": "PASS",
+  "pluginVersion": "0.1.0-dev.47",
+  "sourceRef": "v0.1.0-dev.42",
+  "sourceSha": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+  "platform": "darwin-arm64",
+  "node": "24.18.0",
+  "python": "3.13.5",
+  "nativeRegression": {
+    "total": 60,
+    "passed": 60,
+    "skipped": 0
+  },
+  "pythonRegression": {
+    "total": 45,
+    "passed": 45
+  },
+  "matrixScenarios": 14,
+  "protocolValidation": {
+    "status": "passed",
+    "scope": "fixed owner schema mapping only; no host, budget or quality acceptance",
+    "authority": {
+      "repository": "https://github.com/full-aigc-plugins/artcraft-plugin.git",
+      "ref": "v0.1.0-dev.109",
+      "sha": "09d4ac5b8ff82f8fe819189e4be487b45ab2472b"
+    },
+    "schemaSha256": {
+      "taskSchema": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+      "artifactSchema": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d"
+    },
+    "validated": {
+      "publicTasks": 3,
+      "publicArtifacts": 26
+    }
+  },
+  "priorBehaviorEvidence": "docs/evidence/filmcraft46-recovery-candidate-20261008.json",
+  "collectorCorrection": {
+    "publishedBaselineCommit": "d9fe1e7ca9b495f8fb932ccf10c447f4020afdda",
+    "publishedBaselineRef": "v0.1.0-dev.46",
+    "relativePathRed": {
+      "tests": 2,
+      "targetFailures": 1
+    },
+    "intermediateSymlinkRed": {
+      "tests": 3,
+      "targetFailures": 1,
+      "scope": "intermediate path correction, not a released baseline"
+    },
+    "finalCollectorRegression": {
+      "tests": 3,
+      "passed": 3
+    },
+    "dev46InstalledNativeTestsPassed": 60,
+    "dev46FixedAcceptance": "FAILED; relative evidence path followed installed child cwd. No completed recovery tasks inferred. Immutable dev46 tag/ZIP unchanged."
+  },
+  "implementationFilesSha256": {
+    "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+    "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+    "src/adapters/python_workflow.ts": "bb0005ac4fbf77d3f340b2fd954551ec6d6f90d74c7478b2de26b881d0cc409b",
+    "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+    "src/cli/recovery.ts": "3bda655f6afcc7696342d7bd8d91b87234474361652a4a93da59ed424764fa2c",
+    "src/harness/authorization.ts": "9f2b2ff12289f36eeab0049740218ead33cdf4e5452cca85f039c191d70ed51f",
+    "src/harness/continuation.ts": "eacf061cc42e0311886a405d9b848d02b2ffed323470dba641c63e147185f43e",
+    "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+    "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+    "src/harness/state_maintenance.ts": "1d3422a9fa9adbf6b5e0895c055f9ac81dbfcc25997433ac7f5d0c4454aa1c9b",
+    "src/harness/task_ledger.ts": "d50ed0ccb17c7c86cf5dd1ec17df9ade5f7d31c5970e7e3fbfd5a48a9110b1ab",
+    "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+    "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62",
+    "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+    "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+    "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+    "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+    "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+    "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+    "scripts/validate_protocol_mapping.py": "60ddb28a89e2e30df847dec658ed19cc482f994f17d7c6bdf76f2d4e24be0413",
+    "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+    "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+    "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+    "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+    "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+    "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+    "scripts/verify_fixed_lineage.ts": "2b97f40437d59289099af74b454711da9c842ad771fa802600b943b910fe87e9",
+    "scripts/verify_fixed_recovery.py": "78b3d99a162511339e5c2ee5f32605c577a84e98b60a72c09b12bec93c577170",
+    "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+    "test/harness/authorization.test.ts": "89681a5e5f92e2f1676bf1ef9e238646d44084d85b91034a7214b3ba2d06eeef",
+    "test/harness/fixtures.ts": "d1b5e2c60f0d9237b0400f6cb7e46038d6da7e245ed7c5589bf65ed474cb1039",
+    "test/harness/native_workflow.test.ts": "a189aac0cc34d4c621ea7df8bfe6253a979645844fb0506e7de8baf4c3529608",
+    "test/harness/protocol_mapping.test.ts": "51a343405b131a1a195e6efe855635ac3d3a7609dd8ad6d8e96531e331f99ee8",
+    "test/harness/receipt_index.test.ts": "16809c9f0abfedcb4d3fd20bbe4d73cbcdfac724578bedd7e6fbe6decce03786",
+    "test/harness/recovery.test.ts": "6fafcb59a662b199f645c9913ecec68fc4bc27af0233dfd10c4b7b04f7f9e80e",
+    "test/harness/state_maintenance.test.ts": "a02af7a59f1676369c3a9c5cdb0ced096717fbbb6a0af8bf0c229807c863f983",
+    "test/harness/task_ledger.test.ts": "fc4af8a587d992d4d0e93a93fc42a87998df487a1e84b0757834dbc18a476341",
+    "tests/test_command_evidence.py": "18bea41d012814d9dd1bdcefc70f484e51959b8326e886fa455df47ce5388442",
+    "tests/test_contract_reference.py": "9a0a27ce81b79be857bc0553161e6f4a8b1064ce25d6f29caf1751ecac219276",
+    "tests/test_current_facts.py": "f766a1569474dade44ca926df98f039b738f235fd1ac1fb39ee64cbf1d14994f",
+    "tests/test_current_readme_identity.py": "365242f7f49ac2ede315f0f2e94d25169881aaf928f083109b644ba4fb05e840",
+    "tests/test_fixed_install.py": "baa406a6273ee50b59f1db19198f7983f0723355b471544f25136473dfb250e4",
+    "tests/test_fixed_recovery.py": "dc6f515b29916e29bccc3f4ecb7bd4d34ae0acdfdf6ab178b112da4ed1e9dd71",
+    "tests/test_skill_vendor.py": "96ffa55a58c647dfa3e20b0e2a3cc6633ad338e680cd43b5db20d82e8a8212bb",
+    "tests/test_skill_vendor_self_contained.py": "3c28f7ebbabd27c751824c41b80c8c8b459dbbc2dffa733fe7070ac9863140e6",
+    "tests/test_source_plan_identity.py": "f5baa55086bb68f035322f70553385c29d9f5e1d1ef046db8bbdecd0d08e2965"
+  },
+  "originalPrivateEvidenceSha256": {
+    "native.log": "28f5e5128c00de007b6c147499b60f22092d089370e42496129a4f93efc0c0e7",
+    "python.log": "0a72ff36eafba02739d964650be8cdc9deae7d4f7016db8377806dde872e0aab",
+    "collector-relative-red.log": "966f9caa53590eec9fbc03855da570a3e2c212f0c1e2f84de478620e2187e1cb",
+    "collector-relative-green.log": "5a01b24497106f7b24e5e58ab6f35b55b3b65d46d334b15f3e0df62fe0fc0e9c",
+    "collector-symlink-red.log": "f729e3c4add5f2b264e8b9003c9e3eaa0070895f5d84ece532c190b5dacaedba",
+    "dev46-collector-failure.log": "03d353776e2674248fd3b34ef1b0d50e7622027b1c975ae2511f47f54468dbb8",
+    "dev46-installed-tests.log": "3daf8726d7926af9e2b00dff3d9efc64ac7192cb44bbeae4c704c069939dd98c",
+    "native.json": "ecdace8f3c29614a2b16cc0b530d92026ea1dd183c9a18fc5690bc9b28701931",
+    "matrix.jsonl": "64bdfcdc7c9a76db0800bd27bc0050a4c4eeb26ffdb76ebc04b60d1153857276"
+  },
+  "evidenceFiles": {
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/collector-relative-green.log": "5a01b24497106f7b24e5e58ab6f35b55b3b65d46d334b15f3e0df62fe0fc0e9c",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/collector-relative-red.log": "4c5413354bc5651b8fd0ca10370f1327aae5d2b7eef9719b7c48afc90abb120d",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/collector-symlink-red.log": "21fcccbaec7d244bf046c62fb7df89d8e3dcfb47b865e421c9f43f8ef65cb824",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/dev46-collector-failure.log": "3bb8058ea54c5355ec34dc322a1f5aebbebaad08a86fe016a1d261b5ce06df1f",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/dev46-installed-tests.log": "3daf8726d7926af9e2b00dff3d9efc64ac7192cb44bbeae4c704c069939dd98c",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/matrix.jsonl": "3e496b633f9c4f6f4fff66295ebb7a53ae66503436c35db063014c63611a01b5",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/native.json": "ecdace8f3c29614a2b16cc0b530d92026ea1dd183c9a18fc5690bc9b28701931",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/native.log": "28f5e5128c00de007b6c147499b60f22092d089370e42496129a4f93efc0c0e7",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/protocol.json": "297770bce5dfa8aa8788751bd9b6b0b182a7e17490decfa5ec39c2d6ed5882f8",
+    "docs/evidence/filmcraft47-recovery-candidate-20261008/python.log": "bb98300b89d3cbff1803aa0ce225646aca2fb369ff709f8a5813ba2883d7e1e1"
+  },
+  "digestSemantics": "Original private evidence digests and sanitized public projection digests are separate. Assertions compare original files before redaction.",
+  "fixedInstall": "NOT_RUN for dev47; new public-tag installed acceptance required",
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "INCOMPLETE"
+}

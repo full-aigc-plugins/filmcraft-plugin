@@ -1,0 +1,7 @@
+test_existing_evidence_directory_is_never_overwritten (test_fixed_recovery.FixedRecoveryTests.test_existing_evidence_directory_is_never_overwritten) ... ok
+test_relative_output_remains_at_callers_location_after_installed_child_changes_directory (test_fixed_recovery.FixedRecoveryTests.test_relative_output_remains_at_callers_location_after_installed_child_changes_directory) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.010s
+
+OK

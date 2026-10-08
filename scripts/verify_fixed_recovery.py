@@ -19,6 +19,10 @@ def module(path, name):
 
 
 def verify(host, previous_host, authority, ref, output, python, node):
+    # 原生测试在安装目录执行；所有宿主输入与证据目的地先绑定调用者目录。
+    host, previous_host, authority = (path.resolve() for path in (host, previous_host, authority))
+    # 输出只做词法绝对化，保留最终 symlink 检查，不能跟随悬空链接创建目标。
+    output = Path(os.path.abspath(output))
     fixed = module(ROOT / 'scripts/verify_fixed_install.py', 'recovery_fixed')
     helper, helper_identity = fixed.owner_helper(authority)
     def install_identity(path, version):

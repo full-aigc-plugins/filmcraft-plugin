@@ -16,7 +16,7 @@ export type Binding = {
   inputHashes: Record<string, string>; inputRefs: { assetId: string; version: string; sha256: string }[];
   projectRevision: string | null; projectKey: string; outputRoot: string;
   sourceRevision: string; sourceTreeSha256: string; runtimeIdentity: RuntimeIdentity;
-  authorizationRef: string; authorizationScopeSha256: string; deadline: number;
+  authorizationRef: string; authorizationScopeSha256: string; deadline: number; executionPermissionsSha256?: string;
 };
 export type Lease = { taskId: string; attemptId: string; owner: string; epoch: number; expiresAt: number };
 export type RecoveryLease = Lease & { recoveryId: string };
@@ -38,6 +38,7 @@ function validate(binding: Binding) {
   for (const key of ['planHash', 'nativePlanHash', 'projectKey', 'sourceTreeSha256', 'authorizationScopeSha256'] as const) {
     check(isHash(binding[key]), 'invalid_task_binding', key);
   }
+  check(binding.executionPermissionsSha256 === undefined || isHash(binding.executionPermissionsSha256), 'invalid_task_binding');
   check(binding.projectRevision === null || isHash(binding.projectRevision), 'invalid_task_binding', 'projectRevision');
   check(typeof binding.sourceRevision === 'string' && /^[a-f0-9]{40}$/.test(binding.sourceRevision), 'invalid_task_binding', 'sourceRevision');
   check(typeof binding.outputRoot === 'string' && isAbsolute(binding.outputRoot) && normalize(binding.outputRoot) === binding.outputRoot, 'invalid_task_binding', 'outputRoot');

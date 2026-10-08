@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.70
+
+dev.70 binds trusted execution roots into exact host authorization and native preflight. Public workflow and recovery continuation accept an independent permissions file; changed roots invalidate the grant. Source53 isolates native and owned desktop execution, including its loopback port and temporary frame files. Actual candidate native and signed-desktop checks pass. Complete FC-RL-002, maintenance separation, secret references and eight V1 tasks remain open; fixed70 host qualification is NOT_RUN.
+
 ## 0.1.0-dev.69
 
 Development release69 pins independently published source52. Filters every Harness Python child environment, including process identity probes, and adds OpenSpec trusted-root and child-environment scenarios. Candidate native/Harness tests pass; public root authorization integration, fixed69 host qualification and eight full tasks remain open.

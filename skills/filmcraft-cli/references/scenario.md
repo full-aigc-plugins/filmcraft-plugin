@@ -8,7 +8,7 @@
 
 Each command below has a parameter contract in this skill’s `command-reference.md`. Assignment uses the most specific prefix; a task can combine commands from multiple capabilities.
 
-执行顺序：检查工程和选中对象 → `commands.py describe COMMAND_ID` → 根据参数说明构造计划 → `commands.py check PLAN.json` → `commands.py run PLAN.json --output NEW_DIRECTORY` → 保存并重开原生工程、核验目标修改和非目标内容。涉及 GUI 时按 `command-usage.md` 选择 bridge 模式。
+执行顺序：检查工程和选中对象 → `commands.py describe COMMAND_ID` → 根据参数说明构造计划 → `commands.py check PLAN.json` → `commands.py run PLAN.json --output NEW_DIRECTORY --read-root READ_ROOT --write-root WRITE_ROOT --write-root RUNTIME_HOME --runtime-home RUNTIME_HOME` → 保存并重开原生工程、核验目标修改和非目标内容。涉及 GUI 时先按 `command-usage.md` 检查隔离能力；不具备同等目录隔离的bridge入口拒绝执行。
 
 Order: inspect project and selection, describe parameters, construct and check the plan, run it, save and reopen the native project, then verify requested and unaffected content. Follow `command-usage.md` for bridge mode.
 

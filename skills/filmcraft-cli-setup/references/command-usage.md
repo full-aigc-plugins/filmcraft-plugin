@@ -4,6 +4,8 @@
 
 This entry routes every command in the pinned reflected registry. It does not broaden the acceptance claims of workflow.py. The reference preserves verbatim parameters, skill ownership, empty-session observations and per-command acceptance status.
 
+公开run须同时提供独立读取／写入根和安装维护根，见 [可信执行权限](execution-permissions.md)。macOS headless与本次拥有的受隔离桌面会话分别实施原生进程限制；未具备同等隔离的手工外部bridge明确拒绝。 / Public run requires trusted roots; owned desktop sessions isolate both processes; unconfirmed external bridges refuse execution.
+
 ## 1. 定位、查询与准备 / Locate, inspect and prepare
 
 SKILL_DIR 必须是宿主实际加载本 SKILL.md 的目录；支持用户／项目 .agents/skills、插件 skills 和宿主缓存。任何本领域单技能均包含此入口、目录和示例，不读取兄弟目录。

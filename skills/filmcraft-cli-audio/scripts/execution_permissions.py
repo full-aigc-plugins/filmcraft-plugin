@@ -66,7 +66,7 @@ def child_environment(environment=None):
     return result
 
 
-def command(argv, policy, platform=None, protected_roots=()):
+def command(argv, policy, platform=None, protected_roots=(), control_port=None, graphics=False):
     """构造实际系统隔离命令；缺少支持时拒绝，不回退无隔离执行。"""
     policy = validate(policy)
     if (sys.platform if platform is None else platform) != 'darwin' or not Path('/usr/bin/sandbox-exec').is_file():
@@ -90,6 +90,13 @@ def command(argv, policy, platform=None, protected_roots=()):
              '(allow file-read-data (literal "/dev/null") (literal "/dev/random") (literal "/dev/urandom") (literal "/dev/zero"))',
              '(allow file-write* ' + ' '.join(subpath(path) for path in policy['writeRoots']) + ')',
              '(allow file-write-data (literal "/dev/null"))']
+    if graphics:
+        rules.extend(['(allow iokit-open)', '(allow iokit-get-properties)'])
+    if control_port is not None:
+        if type(control_port) is not int or not 1 <= control_port <= 65535:
+            raise ValueError('invalid_execution_permissions')
+        endpoint = json.dumps('localhost:' + str(control_port))
+        rules.append('(allow network* (local ip ' + endpoint + ') (remote ip ' + endpoint + '))')
     # 即使调用方授权了包含缓存的工作根，编辑进程也不得修改已锁定执行文件。
     protected = {str(executable.parent), str(Path(sys.prefix).resolve()), str(Path(sys.base_prefix).resolve())}
     for root in protected_roots:
@@ -98,3 +105,35 @@ def command(argv, policy, platform=None, protected_roots=()):
         protected.add(str(Path(root).resolve()))
     rules.append('(deny file-write* ' + ' '.join(subpath(path) for path in sorted(protected)) + ')')
     return ['/usr/bin/sandbox-exec', '-p', '\n'.join(rules), *argv]
+
+
+def from_cli(read_roots, write_roots):
+    """仅接受可信命令行的独立根授权；计划不能提供或扩大策略。"""
+    if not read_roots or not write_roots:
+        raise ValueError('execution_permissions_required')
+    return validate({'schema': SCHEMA, 'readRoots': read_roots, 'writeRoots': write_roots})
+
+
+def workflow_paths(plan, output, policy, source=None, data_dir=None):
+    """在读取素材／源清单与创建输出前检查工作流显式文件位置。"""
+    policy = validate(policy)
+    require_write(output, policy)
+    # 临时工程和持久锁与目标同父目录，父目录也须有明确写入权限。
+    require_write(Path(output).parent, policy)
+    if source is not None:
+        require_read(source, policy)
+        require_read(Path(source) / 'manifest.json', policy)
+        require_read(Path(source) / 'project.fcproj', policy)
+    if isinstance(plan, dict) and isinstance(plan.get('assets', {}), dict):
+        for asset in plan.get('assets', {}).values():
+            if isinstance(asset, dict) and isinstance(asset.get('path'), str):
+                require_read(asset['path'], policy)
+    if data_dir is not None:
+        require_read(data_dir, policy)
+    return policy
+
+
+def ensure_available():
+    """编辑前拒绝不具备实际进程目录隔离的平台。"""
+    if sys.platform != 'darwin' or not Path('/usr/bin/sandbox-exec').is_file():
+        raise ValueError('execution_isolation_unavailable')

@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "layer": "candidate actual native WorkflowAdmission with private exact fixture grant",
+  "expandedRootsRefused": true,
+  "refusalBeforeTaskRegistration": true,
+  "deliveryState": "verifying",
+  "receipt": "linked",
+  "permissionsSha256": "3b53fe089410fd4f565e9b855e4f71de43a506924ab28c47b91e31dbcd8ddec3",
+  "skillPreserved": true,
+  "inputPreserved": true,
+  "sourceTreeSha256": "b1c3060da45ef59bf8c327fbef8368aeca0739276f270745a5f21121eb796195",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "fixedRelease": "NOT_RUN"
+}

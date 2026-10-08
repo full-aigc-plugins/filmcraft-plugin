@@ -335,10 +335,15 @@ def export_settings(plan, caption_state):
     return {'burnCaptions': plan.get('export', {}).get('burnCaptions', any(track['enabled'] for track in caption_state['tracks']))}
 
 
-def run(cli, argv, cwd=None, data_dir=None):
+def run(cli, argv, cwd=None, data_dir=None, permissions=None, protected_roots=()):
     prefix = [cli] + (['--data-dir', str(data_dir)] if data_dir is not None else [])
-    result = subprocess.run(prefix + argv, capture_output=True, text=True, timeout=180, cwd=cwd,
-                            env=load_module('execution_permissions').child_environment())
+    command = prefix + argv
+    if permissions is not None:
+        command = load_module('execution_permissions').command(command, permissions, protected_roots=protected_roots)
+    environment = load_module('execution_permissions').child_environment()
+    if permissions is not None and cwd is not None:
+        environment['TMPDIR'] = str(Path(cwd).resolve())
+    result = subprocess.run(command, capture_output=True, text=True, timeout=180, cwd=cwd, env=environment)
     if result.returncode:
         raise RuntimeError('cli_failed: ' + result.stdout[-2000:] + result.stderr[-2000:])
     return result.stdout
@@ -386,10 +391,13 @@ def preflight_assets(new_assets, prior_assets, source):
         raise AssetPreflightError(issues, first_code)
 
 
-def execute(plan, output, runtime_home=None, source=None, data_dir=None):
+def execute(plan, output, runtime_home=None, source=None, data_dir=None, permissions=None, protected_paths=()):
     validate(plan)
     configured_data_dir = data_dir if data_dir is not None else os.environ.get('FILMCRAFT_DATA_DIR')
     data_dir = Path(configured_data_dir).expanduser().resolve() if configured_data_dir else None
+    if permissions is not None:
+        permissions = load_module('execution_permissions').workflow_paths(plan, output, permissions, source, data_dir)
+        load_module('execution_permissions').require_write(runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')), permissions)
     output = Path(output).absolute()
     output = output.parent.resolve()/output.name
     if output.exists() or output.is_symlink():
@@ -412,14 +420,24 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
         raise ValueError('document_required')
     validate(plan, prior.get('assets', {}))
     preflight_assets(plan.get('assets', {}), prior.get('assets', {}), source)
+    if permissions is not None:
+        load_module('execution_permissions').ensure_available()
     execution_context = load_module('output_guard').execution_context()
     installed = load_module('bootstrap').install(
         json.loads(Path(__file__).with_name('runtime.lock.json').read_text()),
         runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
     cli = installed['executable']
     # MCP 与重开／导出共用模型目录；运行时负责创建，不改调用者环境。
+    protected_roots = [str(Path(__file__).resolve().parents[1]), str(Path(cli).resolve().parent),
+                       str(Path(runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes'))).resolve()), *protected_paths]
+    if permissions is not None:
+        protected_roots.extend(str(Path(asset['path']).resolve()) for asset in plan.get('assets', {}).values())
+    if source:
+        protected_roots.append(str(source))
+    if data_dir is not None:
+        protected_roots.append(str(data_dir))
     def native_run(argv):
-        return run(cli, argv, data_dir=data_dir)
+        return run(cli, argv, cwd=stage if permissions is not None else None, data_dir=data_dir, permissions=permissions, protected_roots=protected_roots)
     output.parent.mkdir(parents=True, exist_ok=True)
     recovery_state = {}
     execution_identity = {'planHash': hashlib.sha256(json.dumps(plan, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest(),
@@ -427,6 +445,8 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
                           'projectRevision': source_hash, 'runtimeSha256': installed['binarySha256']}
     with load_module('output_guard').claim(output, execution_identity, execution_context), load_module('preserved_stage').preserved_stage(output, '.filmcraft-', recovery_state) as temporary:
         stage = Path(temporary)
+        if permissions is not None and data_dir is None:
+            data_dir = stage / '.native-data'
         media = stage / 'assets'
         media.mkdir()
         receipts = []
@@ -484,7 +504,9 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
                 probe = json.loads(native_run(['probe', str(target)]))
                 assets[alias] = {'sha256': asset['sha256'], 'probe': precise(probe), 'staging': str(target)}
         argv = [cli] + (['--data-dir', str(data_dir)] if data_dir is not None else []) + (['--project', str(source_project)] if source_project else []) + ['mcp']
-        with load_module('mcp_session').Session(argv) as session:
+        if permissions is not None:
+            argv = load_module('execution_permissions').command(argv, permissions, protected_roots=protected_roots)
+        with load_module('mcp_session').Session(argv, **({'cwd':str(stage)} if permissions is not None else {})) as session:
             gateway = native_module().commands
             capability_module = load_module('capabilities')
             current_rows = gateway.runtime_rows(session)
@@ -736,27 +758,35 @@ def main():
     parser.add_argument('--source', type=Path)
     parser.add_argument('--runtime-home', type=Path)
     parser.add_argument('--data-dir', type=Path, help='persistent native data/model directory; overrides FILMCRAFT_DATA_DIR')
+    parser.add_argument('--read-root', action='append', default=[], help='trusted canonical existing media/plan read root')
+    parser.add_argument('--write-root', action='append', default=[], help='trusted canonical existing project write root')
     parser.add_argument('--asset', action='append', default=[], help='name=/absolute/path; calculates input digest')
     parser.add_argument('--lut-asset', action='append', default=[], help='name=/absolute/path/grade.cube; registers hashed LUT dependency')
     parser.add_argument('--sequence-asset', action='append', default=[], help='name=/absolute/path/sequence.json; registers complete image sequence')
     parser.add_argument('--segmented-sequence-asset', action='append', default=[], help='name=/absolute/path/segments.json; registers verified segmented producer checkpoint')
     args = parser.parse_args()
     try:
+        permissions = load_module('execution_permissions').from_cli(args.read_root, args.write_root)
+        load_module('execution_permissions').require_read(args.plan, permissions)
         plan = json.loads(args.plan.read_text())
         for assignment in args.asset:
             alias, path = assignment.split('=', 1)
+            load_module('execution_permissions').require_read(path, permissions)
             kind = plan.get('assets',{}).get(alias,{}).get('kind')
             plan.setdefault('assets', {})[alias] = dict({'path': path, 'sha256': sha(path)}, **({'kind':kind} if kind else {}))
         for assignment in args.lut_asset:
             alias, path = assignment.split('=', 1)
+            load_module('execution_permissions').require_read(path, permissions)
             plan.setdefault('assets', {})[alias] = {'kind':'lut','path':path,'sha256':sha(path)}
         for assignment in args.sequence_asset:
             alias, path = assignment.split('=', 1)
+            load_module('execution_permissions').require_read(path, permissions)
             plan.setdefault('assets', {})[alias] = {'kind':'image-sequence','path':path,'sha256':sha(path)}
         for assignment in args.segmented_sequence_asset:
             alias, path = assignment.split('=', 1)
+            load_module('execution_permissions').require_read(path, permissions)
             plan.setdefault('assets', {})[alias] = {'kind':'segmented-image-sequence','path':path,'sha256':sha(path)}
-        print(json.dumps(execute(plan, args.output, args.runtime_home, args.source, args.data_dir), ensure_ascii=False))
+        print(json.dumps(execute(plan, args.output, args.runtime_home, args.source, args.data_dir, permissions=permissions, protected_paths=[str(args.plan.resolve())]), ensure_ascii=False))
     except (ValueError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
         failure = {'error': str(error)}
         if isinstance(error, AssetPreflightError):

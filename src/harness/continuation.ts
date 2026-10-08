@@ -1,3 +1,4 @@
+import { requirePermissions, requireRead, validatePermissions } from '../support/execution_permissions.ts';
 import { RecoveryService } from './recovery.ts';
 import type { RepairRequest } from './recovery.ts';
 import { forensicSnapshot } from './forensic_snapshot.ts';
@@ -38,6 +39,9 @@ export class ContinuationService {
     check(parent.binding.authorizationRef === request.authorizationRef
       && parent.binding.authorizationScopeSha256 === request.authorizationScopeSha256, 'authorization_required');
     child = { ...child, outputRoot: canonicalTarget(child.outputRoot) };
+    const permissions=requirePermissions(options.permissions);
+    requireRead(planFile,permissions);requireRead(parent.binding.outputRoot,permissions);
+    check(child.executionPermissionsSha256===sha256(stableJson(validatePermissions(permissions))),'permission_identity_conflict');
     const projectHash = sha256(readBoundFile(parent.binding.outputRoot, 'project.fcproj', 512 * 1024 * 1024));
     check(child.taskId !== parentId && child.outputRoot !== parent.binding.outputRoot
       && child.projectRevision === projectHash, 'invalid_continuation');

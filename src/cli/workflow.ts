@@ -1,3 +1,4 @@
+import { validatePermissions } from '../support/execution_permissions.ts';
 import {AssetPreflightRefusal} from '../adapters/asset_refusal.ts';
 import {ClipTimingRefusal} from '../adapters/clip_refusal.ts';
 import { parseArgs } from 'node:util';
@@ -17,13 +18,13 @@ import { check, HarnessError, parseJson } from '../support/json.ts';
 async function main() {
   const { values, positionals } = parseArgs({ allowPositionals: true, options: {
     help: { type: 'boolean' }, binding: { type: 'string' }, plan: { type: 'string' }, source: { type: 'string' },
-    resources: { type: 'string' }, ledger: { type: 'string' }, blobs: { type: 'string' }, 'authorization-root': { type: 'string' },
+    permissions: { type: 'string' }, resources: { type: 'string' }, ledger: { type: 'string' }, blobs: { type: 'string' }, 'authorization-root': { type: 'string' },
     'runtime-home': { type: 'string' }, python: { type: 'string' }, candidate: {type:'string'},
   } });
   if (values.help) {
-    console.log('node src/cli/workflow.ts subject|run --binding FILE [--resources FILE]\n'
+    console.log('node src/cli/workflow.ts subject|run --binding FILE [--resources FILE] [--permissions FILE]\n'
       + 'subject: read-only authorization subject; never creates a grant.\n'
-      + 'run: --resources FILE --plan FILE --ledger FILE --blobs DIRECTORY --authorization-root DIRECTORY --runtime-home DIRECTORY [--source DELIVERY] [--python FILE] [--candidate FILE].\n'
+      + 'run: --permissions FILE --resources FILE --plan FILE --ledger FILE --blobs DIRECTORY --authorization-root DIRECTORY --runtime-home DIRECTORY [--source DELIVERY] [--python FILE] [--candidate FILE].\n'
       + 'A retained candidate must match the binding and an already activated ledger selection; it cannot authorize or activate itself.\n'
       + 'Trusted host grants must already authorize the exact subject. Unknown outcomes are never replayed.');
     return;
@@ -34,7 +35,9 @@ async function main() {
   const resources = resourcePath ? parseJson(readBoundFile(dirname(resourcePath), basename(resourcePath)).toString('utf8')) : undefined;
   const candidate=values.candidate?readRuntimeCandidate(values.candidate):null;
   if(candidate){check(candidate.sourceRevision===binding.sourceRevision&&candidate.sourceTreeSha256===binding.sourceTreeSha256,'runtime_candidate_binding_mismatch');}
-  const subject = executionSubject(binding, resources);
+  const permissionPath = values.permissions ? resolve(values.permissions) : null;
+  const permissions = permissionPath ? validatePermissions(parseJson(readBoundFile(dirname(permissionPath), basename(permissionPath)).toString('utf8'))) : undefined;
+  const subject = executionSubject(binding, resources, permissions);
   if (positionals[0] === 'subject') { console.log(JSON.stringify(subject)); return; }
   check(values.resources && values.plan && values.ledger && values.blobs && values['authorization-root'] && values['runtime-home'], 'invalid_workflow_arguments');
   const authorize = new LocalAuthorizationStore(values['authorization-root']).authorize;
@@ -53,7 +56,7 @@ async function main() {
     }
     const service = new WorkflowAdmission(db, new ReceiptIndex(db, values.blobs), {
       skillDirectory: candidate?.skillDirectory??join(root, 'skills/filmcraft-use'), sourceRevision: candidate?.sourceRevision??lock.sources[0].sha,
-      resources, pluginVersion: manifest.version, runtimeHome: values['runtime-home'], python: values.python,
+      permissions, resources, pluginVersion: manifest.version, runtimeHome: values['runtime-home'], python: values.python,
     }, authorize);
     console.log(JSON.stringify(await service.run(binding, values.plan, values.source)));
   } finally { db.close(); }

@@ -1,3 +1,5 @@
+import { validatePermissions, requirePermissions, requireRead, requireWrite } from '../support/execution_permissions.ts';
+import type { ExecutionPermissions } from '../support/execution_permissions.ts';
 import { childEnvironment } from '../support/process_environment.ts';
 import {AssetPreflightRefusal,validateAssetIssues} from './asset_refusal.ts';
 import {ClipTimingRefusal,validateClipTiming} from './clip_refusal.ts';
@@ -38,7 +40,7 @@ function stopped(pid: number) {
   catch (error: any) { return error.code === 'ESRCH'; }
 }
 export type WorkflowOptions = { python?: string; skillDirectory: string; sourceRevision: string; runtimeHome: string; pluginVersion: string;
-  beforeDispatch?: () => void; resources?: ResourcePolicy; budgetParentId?: string };
+  beforeDispatch?: () => void; permissions?: ExecutionPermissions; resources?: ResourcePolicy; budgetParentId?: string };
 
 /** 内部领域执行适配；预算先持久化，本适配不重试或代替宿主授权与用户接受。 */
 export class PythonWorkflowRunner {
@@ -49,6 +51,11 @@ export class PythonWorkflowRunner {
     this.ledger = ledger; this.index = index; this.options = options;
   }
   prepare(planFile: string, outputRoot: string, source?: string) {
+    if (this.options.permissions) {
+      const policy = validatePermissions(this.options.permissions);
+      requireRead(planFile, policy); requireWrite(outputRoot, policy); requireWrite(dirname(resolve(outputRoot)), policy);
+      if (source) { requireRead(source, policy); requireRead(join(source, 'manifest.json'), policy); requireRead(join(source, 'project.fcproj'), policy); }
+    }
     check(process.platform !== 'win32', 'unsupported_runner_platform');
     check(/^[a-f0-9]{40}$/.test(this.options.sourceRevision), 'invalid_source_revision');
     const root = resolve(this.options.skillDirectory);
@@ -64,6 +71,10 @@ export class PythonWorkflowRunner {
     if (source) { source = realpathSync(source); }
     const projectKey = sha256(source ? join(realpathSync(source), 'project.fcproj') : outputRoot);
     const argv = ['-I', '-B', script, '--skill-dir', root, '--plan', resolve(planFile), '--output', outputRoot, '--runtime-home', resolve(this.options.runtimeHome)];
+    if (this.options.permissions) {
+      for (const path of this.options.permissions.readRoots) { argv.push('--read-root', path); }
+      for (const path of this.options.permissions.writeRoots) { argv.push('--write-root', path); }
+    }
     if (source) { argv.push('--source', resolve(source)); }
     const result = spawnSync(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
       { encoding: 'utf8', timeout: 180_000, maxBuffer: 4 * 1024 * 1024, shell: false, env: childEnvironment() });
@@ -73,9 +84,10 @@ export class PythonWorkflowRunner {
         const failure=parseJson(result.stdout??'');
         if(failure.schema==='filmcraft-native-preflight-error/v1'&&failure.error?.code==='asset_preflight_failed'){assetIssues=failure.error.assetIssues;}
         if(failure.schema==='filmcraft-native-preflight-error/v1'&&failure.error?.code==='clip_timing_failed'){clipTiming=failure.error.clipTiming;}
+        if(failure.schema==='filmcraft-native-preflight-error/v1' && ['invalid_execution_permissions','permission_read_denied','permission_write_denied','execution_isolation_unavailable'].includes(failure.error?.code)) { check(false, failure.error.code); }
         if(failure.schema==='filmcraft-native-preflight-error/v1'
           &&['capability_missing','capability_unknown','capability_contract_drift','capability_identity_mismatch'].includes(failure.error?.code)){code=failure.error.code;diagnostic=failure.error.diagnostic;}
-      }catch{/* 未知或畸形输出保持明确失败，不提升为能力已验证。 */}
+      }catch(error){ if (error instanceof Error && ['invalid_execution_permissions','permission_read_denied','permission_write_denied','execution_isolation_unavailable'].includes(error.message)) { throw error; } /* 未知或畸形输出保持明确失败。 */}
       const issues=validateAssetIssues(assetIssues);if(issues){throw new AssetPreflightRefusal(issues);}
       const clipDetail=validateClipTiming(clipTiming);if(clipDetail){throw new ClipTimingRefusal(clipDetail);}
       if(code!=='native_preflight_failed'){throw new CapabilityRefusal(code,diagnostic);}
@@ -97,6 +109,10 @@ export class PythonWorkflowRunner {
   }
   async run(binding: Binding, planFile: string, source?: string) {
     this.options.beforeDispatch?.();
+    requirePermissions(this.options.permissions);
+    if (this.options.permissions) {
+      check(binding.executionPermissionsSha256 === sha256(stableJson(validatePermissions(this.options.permissions))), 'permission_identity_conflict');
+    }
     binding = { ...binding, outputRoot: canonicalTarget(binding.outputRoot) };
     if (source) { source = realpathSync(source); }
     const prepared = this.prepare(planFile, binding.outputRoot, source);
@@ -136,6 +152,10 @@ export class PythonWorkflowRunner {
       resources.assertDispatch(registered.taskId);
       const argv = ['-I', '-B', join(resolve(this.options.skillDirectory), 'scripts/workflow.py'), resolve(planFile),
         '--output', binding.outputRoot, '--runtime-home', resolve(this.options.runtimeHome)];
+      if (this.options.permissions) {
+        for (const path of this.options.permissions.readRoots) { argv.push('--read-root', path); }
+        for (const path of this.options.permissions.writeRoots) { argv.push('--write-root', path); }
+      }
       if (source) { argv.push('--source', resolve(source)); }
       const child = spawn(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
         { shell: false, detached: true, stdio: ['ignore', 'pipe', 'pipe'],

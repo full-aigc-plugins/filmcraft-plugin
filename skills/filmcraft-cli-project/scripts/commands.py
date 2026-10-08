@@ -279,8 +279,19 @@ def capability_snapshot(session, installed, rows, mode='headless', desktop=None,
     return load('capabilities').snapshot(installed, catalog(), rows, mode, desktop, resources)
 
 def execute(plan, output, runtime_home=None, mode="headless", connect=None, token_file=None,
-            installer=None, session_factory=None, inputs=None, desktop_identity=None):
+            installer=None, session_factory=None, inputs=None, desktop_identity=None, permissions=None, protected_paths=(), owned_bridge_port=None):
     inputs = inputs or {}
+    if permissions is not None:
+        permissions = load('execution_permissions').validate(permissions)
+        load('execution_permissions').require_write(output, permissions)
+        load('execution_permissions').require_write(Path(output).parent, permissions)
+        for value in inputs.values():
+            load('execution_permissions').require_read(value, permissions)
+        if mode != 'headless' and not (mode == 'bridge' and session_factory is not None
+                and type(owned_bridge_port) is int and connect == '127.0.0.1:' + str(owned_bridge_port)):
+            raise ValueError('execution_isolation_unavailable')
+        load('execution_permissions').require_write(runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')), permissions)
+        load('execution_permissions').ensure_available()
     if not isinstance(inputs, dict) or any(not isinstance(k, str) or not re.fullmatch(r"[a-zA-Z][\w-]*", k) or k == "output" for k in inputs):
         raise ValueError("invalid_input_name")
     sources = {}
@@ -313,7 +324,9 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
         installed = installer(lock, runtime_home or os.environ.get("CRAFT_RUNTIME_HOME",
                                str(Path.home() / ".local/share/craft-runtimes")))
         receipt["runtimeSha256"] = installed["binarySha256"]
-        session_factory = session_factory or load("mcp_session").Session
+        if session_factory is None:
+            session_type = load('mcp_session').Session
+            session_factory = (lambda argv: session_type(argv, cwd=str(output))) if permissions is not None else session_type
         bindings = {"output": "" if DOMAIN == "photocraft" else str(output)}
         receipt["inputs"] = {}
         if sources:
@@ -330,7 +343,14 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
             relative = str(target.relative_to(output))
             bindings[name] = {"path": relative if DOMAIN == "photocraft" else str(target), "sha256": digest}
             receipt["inputs"][name] = {"path": relative, "sha256": digest}
-        with session_factory(backend_argv(installed["executable"], output, mode, connect, token_file)) as session:
+        argv = backend_argv(installed["executable"], output, mode, connect, token_file)
+        if permissions is not None:
+            argv = [installed['executable'], '--data-dir', str(output / '.native-data'), *argv[1:]]
+            argv = load('execution_permissions').command(argv, permissions,
+                protected_roots=[str(ROOT), str(Path(installed['executable']).resolve().parent),
+                    str(Path(runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes'))).resolve()),
+                    *[str(Path(value).resolve()) for value in inputs.values()], *protected_paths], control_port=owned_bridge_port)
+        with session_factory(argv) as session:
             discovery = session.request("tools/list", {})
             if (not isinstance(discovery, dict) or not isinstance(discovery.get('tools'), list)
                     or any(not isinstance(tool, dict) or not isinstance(tool.get('name'), str)
@@ -418,6 +438,8 @@ def main():
     check = sub.add_parser("check"); check.add_argument("plan", type=Path); check.add_argument("--input", action="append", default=[])
     run = sub.add_parser("run"); run.add_argument("plan", type=Path); run.add_argument("--output", type=Path, required=True)
     run.add_argument("--input", action="append", default=[]); run.add_argument("--runtime-home"); run.add_argument("--mode", choices=["headless", "bridge"], default="headless")
+    run.add_argument('--read-root', action='append', default=[])
+    run.add_argument('--write-root', action='append', default=[])
     run.add_argument("--connect"); run.add_argument("--control-token-file")
     run.add_argument('--desktop-app', type=Path, help='existing pinned signed app for manual bridge; owned desktop.py supplies its verified identity')
     args = parser.parse_args()
@@ -430,6 +452,10 @@ def main():
             if result is None:
                 raise ValueError("unknown_command: " + args.command)
         else:
+            permissions = None
+            if args.action == 'run':
+                permissions = load('execution_permissions').from_cli(args.read_root, args.write_root)
+                load('execution_permissions').require_read(args.plan, permissions)
             plan = reply_json(args.plan.read_text())
             inputs = {}
             for item in args.input:
@@ -452,7 +478,7 @@ def main():
                     desktop_identity = load('desktop').inspect(args.desktop_app.absolute().parent,
                         desktop_lock)
                 result = execute(plan, args.output, args.runtime_home, args.mode, args.connect, args.control_token_file,
-                                 inputs=inputs, desktop_identity=desktop_identity)
+                                 inputs=inputs, desktop_identity=desktop_identity, permissions=permissions, protected_paths=[str(args.plan.resolve())])
         print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
         return 0 if not isinstance(result, dict) or result.get("result", "PASS") == "PASS" else 1
     except (ValueError, OSError) as error:

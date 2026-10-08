@@ -86,7 +86,7 @@ def install(lock,runtime_home,archive=None,platform_key=None):
   return {k:v for k,v in actual.items() if k!='files'}|{'reused':False,'scope':'signed app installation only; launch/GUI acceptance separate'}
 
 def main():
- parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['install','run']);parser.add_argument('plan',nargs='?',type=Path);parser.add_argument('--output',type=Path);parser.add_argument('--input',action='append',default=[]);parser.add_argument('--runtime-home',type=Path,default=Path.home()/'.local/share/craft-runtimes');parser.add_argument('--archive',type=Path,help='可选固定本地DMG；仍执行全部摘要校验');args=parser.parse_args();lock=json.loads(Path(__file__).with_name('desktop.lock.json').read_text())
+ parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['install','run']);parser.add_argument('plan',nargs='?',type=Path);parser.add_argument('--output',type=Path);parser.add_argument('--input',action='append',default=[]);parser.add_argument('--runtime-home',type=Path,default=Path.home()/'.local/share/craft-runtimes');parser.add_argument('--archive',type=Path,help='可选固定本地DMG；仍执行全部摘要校验');parser.add_argument('--read-root',action='append',default=[]);parser.add_argument('--write-root',action='append',default=[]);args=parser.parse_args();lock=json.loads(Path(__file__).with_name('desktop.lock.json').read_text())
  try:
   if args.command=='install':
    if args.plan or args.output or args.input:raise ValueError('unexpected_install_arguments')
@@ -94,13 +94,16 @@ def main():
   else:
    if not args.plan or not args.output or args.archive:raise ValueError('run_requires_plan_output_and_pinned_public_install')
    import importlib.util
+   spec=importlib.util.spec_from_file_location('desktop_permissions',Path(__file__).with_name('execution_permissions.py'));permissions=importlib.util.module_from_spec(spec);spec.loader.exec_module(permissions)
+   policy=permissions.from_cli(args.read_root,args.write_root);permissions.require_read(args.plan,policy);permissions.require_write(args.output,policy)
+   import importlib.util
    spec=importlib.util.spec_from_file_location('craft_owned_desktop',Path(__file__).with_name('desktop_session.py'));module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);inputs={}
    for item in args.input:
     name,separator,value=item.partition('=')
     if not separator or name in inputs:raise ValueError('invalid_or_duplicate_input')
     inputs[name]=value
    plan=module.read_plan(args.plan)
-   result=module.run(plan,args.output,args.runtime_home,inputs)
+   result=module.run(plan,args.output,args.runtime_home,inputs,permissions=policy,protected_paths=[str(args.plan.resolve())])
   print(json.dumps(result,allow_nan=False))
   if result.get('result','PASS')!='PASS':raise SystemExit(1)
  except KeyboardInterrupt:parser.exit(130,'desktop_workflow_interrupted: outcome receipt preserved; request not replayed\n')

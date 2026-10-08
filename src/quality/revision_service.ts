@@ -1,3 +1,4 @@
+import { requirePermissions, requireRead, requireWrite } from '../support/execution_permissions.ts';
 import { randomUUID } from 'node:crypto';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -187,10 +188,14 @@ export class RevisionService{
     row=this.row(loopId);const definition=row.definition as Definition,root=this.ledger.getTask(definition.rootTaskId);
     const allowedSources=[definition.rootTaskId,...this.ledger.db.prepare("SELECT child_task_id FROM revision_rounds WHERE loop_id=? AND state='reviewed'").all(loopId).map((value:any)=>value.child_task_id)];
     check(allowedSources.includes(sourceTaskId),'revision_source_outside_loop');
+    const permissions=requirePermissions(options.permissions);
+    check(root.binding.executionPermissionsSha256===sha256(stableJson(permissions)),'permission_identity_conflict');
+    requireRead(root.binding.outputRoot,permissions);requireRead(this.ledger.getTask(sourceTaskId).binding.outputRoot,permissions);
+    requireWrite(outputRoot,permissions);
     const source=this.project(sourceTaskId),compiled=compileRevision(source,source.sourceSha256,definition.policy.scopes,definition.policy.issues,definition.policy.criteria.goal.audioRequired);
     outputRoot=canonicalTarget(outputRoot);
     for(const id of allowedSources){const path=this.ledger.getTask(id).binding.outputRoot;check(!overlaps(path,outputRoot)&&!overlaps(outputRoot,path),'revision_output_overlaps');}
-    const planBytes=stableJson(compiled.plan)+'\n',planRoot=join(this.quality.store,'revision-plans');mkdirSync(planRoot,{recursive:true,mode:0o700});
+    const planBytes=stableJson(compiled.plan)+'\n',planRoot=join(this.quality.store,'revision-plans');requireWrite(planRoot,permissions);mkdirSync(planRoot,{recursive:true,mode:0o700});
     const planName=sha256(planBytes),planFile=join(planRoot,planName);
     if(!existsSync(planFile)){writeFileSync(planFile,planBytes,{flag:'wx',mode:0o400});}
     check(readBoundFile(planRoot,planName).toString('utf8')===planBytes,'revision_plan_conflict');

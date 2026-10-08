@@ -14,16 +14,17 @@ function setup(t:any){
  const manifest=JSON.parse(readFileSync(new URL('../../plugin.json',import.meta.url),'utf8')).version;
  const task=binding(root);task.sourceTreeSha256=fingerprintSkill(skill);task.runtimeIdentity.pluginVersion=manifest;
  const candidate={schema:'filmcraft-runtime-candidate/v1',skillDirectory:skill,sourceRevision:task.sourceRevision,sourceTreeSha256:task.sourceTreeSha256};
+ const permissions={schema:'filmcraft-execution-permissions/v1',readRoots:[root],writeRoots:[root]},permissionFile=join(root,'permissions.json');writeFileSync(permissionFile,JSON.stringify(permissions));
  const file=join(root,'candidate.json'),bound=join(root,'binding.json'),resources=join(root,'resources.json'),ledger=join(root,'state.sqlite'),grants=join(root,'grants');
  writeFileSync(file,JSON.stringify(candidate));writeFileSync(bound,JSON.stringify(task));writeFileSync(resources,JSON.stringify({limits:{},allocation:{}}));
  const cli=new URL('../../src/cli/workflow.ts',import.meta.url).pathname;
- const run=(command='subject')=>{const p=spawnSync(process.execPath,[cli,command,'--binding',bound,'--resources',resources,'--candidate',file,
+ const run=(command='subject')=>{const p=spawnSync(process.execPath,[cli,command,'--binding',bound,'--permissions',permissionFile,'--resources',resources,'--candidate',file,
   ...(command==='run'?['--plan',join(root,'absent-plan'),'--ledger',ledger,'--blobs',join(root,'blobs'),'--authorization-root',grants,'--runtime-home',join(root,'runtime')]:[])],{encoding:'utf8'});return {status:p.status,body:JSON.parse(p.stdout)};};
- const authorize=()=>{mkdirSync(grants,{mode:0o700});writeFileSync(join(grants,sha256(task.authorizationRef)+'.json'),JSON.stringify({schema:'filmcraft-local-authorization/v1',authorizationRef:task.authorizationRef,authorizationScopeSha256:task.authorizationScopeSha256,subjects:[sha256(stableJson(executionSubject(task,{limits:{},allocation:{}})))],expiresAt:Date.now()+60000,revoked:false}),{mode:0o600});};
- return {root,skill,task,candidate,file,ledger,run,authorize};
+ const authorize=()=>{mkdirSync(grants,{mode:0o700});writeFileSync(join(grants,sha256(task.authorizationRef)+'.json'),JSON.stringify({schema:'filmcraft-local-authorization/v1',authorizationRef:task.authorizationRef,authorizationScopeSha256:task.authorizationScopeSha256,subjects:[sha256(stableJson(executionSubject(task,{limits:{},allocation:{}},permissions)))],expiresAt:Date.now()+60000,revoked:false}),{mode:0o600});};
+ return {root,skill,task,candidate,file,ledger,run,authorize,permissions};
 }
 test('retained candidate subject is read-only and remains bound to the exact source',t=>{
- const f=setup(t),r=f.run();assert.equal(r.status,0);assert.deepEqual(r.body,executionSubject(f.task,{limits:{},allocation:{}}));
+ const f=setup(t),r=f.run();assert.equal(r.status,0);assert.deepEqual(r.body,executionSubject(f.task,{limits:{},allocation:{}},f.permissions));
  assert.equal(existsSync(f.ledger),false);assert.equal(existsSync(join(f.root,'runtime')),false);
 });
 test('candidate caller cannot supply availability or a mismatched source identity',t=>{
@@ -49,6 +50,6 @@ test('a selected different runtime fences an otherwise authorized retained candi
  assert.equal(f.run('run').body.error.code,'runtime_selection_mismatch');assert.equal(existsSync(join(f.root,'runtime')),false);
 });
 test('matching activated candidate reaches its own adapter instead of the bundled source',t=>{
- const f=setup(t);f.authorize();const db=new TaskLedger(f.ledger);new RuntimeDeployment(db,{authorize:fixtureAuthorizer}).activate({sourceRevision:f.task.sourceRevision,sourceTreeSha256:f.task.sourceTreeSha256,runtimeIdentity:f.task.runtimeIdentity,ledgerSchemas:[6]},f.task);db.close();
+ const f=setup(t);f.authorize();writeFileSync(join(f.root,'absent-plan'),'{}');const db=new TaskLedger(f.ledger);new RuntimeDeployment(db,{authorize:fixtureAuthorizer}).activate({sourceRevision:f.task.sourceRevision,sourceTreeSha256:f.task.sourceTreeSha256,runtimeIdentity:f.task.runtimeIdentity,ledgerSchemas:[6]},f.task);db.close();
  assert.equal(f.run('run').body.error.code,'capability_adapter_missing');assert.equal(existsSync(join(f.root,'runtime')),false);
 });

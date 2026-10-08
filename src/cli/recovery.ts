@@ -1,3 +1,4 @@
+import { validatePermissions } from '../support/execution_permissions.ts';
 import { parseArgs } from 'node:util';
 import { dirname, basename, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,13 +18,13 @@ async function main() {
     'authorization-root': { type: 'string' }, 'expected-epoch': { type: 'string' }, 'inspection-sha256': { type: 'string' },
     'authorization-ref': { type: 'string' }, 'authorization-scope-sha256': { type: 'string' }, backup: { type: 'string' },
     'child-binding': { type: 'string' }, plan: { type: 'string' }, 'runtime-home': { type: 'string' }, python: { type: 'string' },
-    signal: { type: 'boolean' },
+    permissions: { type: 'string' }, signal: { type: 'boolean' },
   } });
   if (values.help) {
     console.log('node src/cli/recovery.ts inspect|reconcile|repair|continue|upgrade|rollback|cancel|cancel-reconcile --ledger FILE\n'
       + 'inspect/reconcile: read-only; --blobs DIRECTORY --task ID.\n'
       + 'repair/continue: additionally --expected-epoch --inspection-sha256 --authorization-ref --authorization-scope-sha256 --authorization-root.\n'
-      + 'continue: additionally --child-binding FILE --plan FILE --runtime-home DIRECTORY [--python FILE]. Original task must be independently repaired to verifying.\n'
+      + 'continue: additionally --permissions FILE --child-binding FILE --plan FILE --runtime-home DIRECTORY [--python FILE]. Original task must be independently repaired to verifying.\n'
       + 'upgrade/rollback: --backup DIRECTORY --authorization-ref --authorization-scope-sha256 --authorization-root.\n'
       + 'cancel: --task ID --authorization-ref --authorization-scope-sha256 --authorization-root. Persists the request only.\n'
       + 'cancel-reconcile: --task ID [--signal --authorization-root DIRECTORY] [--python FILE]. Signals only identity-bound supported process groups. Private host grants are never created by this CLI.');
@@ -67,9 +68,11 @@ async function main() {
   const plugin = fileURLToPath(new URL('../../', import.meta.url));
   const manifest = parseJson(readBoundFile(plugin, 'plugin.json').toString('utf8'));
   const lock = parseJson(readBoundFile(plugin, 'skills.lock.json').toString('utf8'));
+  const permissionPath=values.permissions?resolve(values.permissions):null;
+  const permissions=permissionPath?validatePermissions(parseJson(readBoundFile(dirname(permissionPath),basename(permissionPath)).toString('utf8'))):undefined;
   const report = await new ContinuationService(values.ledger, values.blobs, { authorize }).continue(values.task, request,
     child, values.plan, { skillDirectory: join(plugin, 'skills/filmcraft-use'), sourceRevision: lock.sources[0].sha,
-      pluginVersion: manifest.version, runtimeHome: values['runtime-home'], python: values.python });
+      permissions, pluginVersion: manifest.version, runtimeHome: values['runtime-home'], python: values.python });
   console.log(JSON.stringify(report));
 }
 try { await main(); }

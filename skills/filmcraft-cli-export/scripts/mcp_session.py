@@ -11,7 +11,7 @@ import time
 
 
 class Session:
-    def __init__(self, argv, timeout=120, env=None):
+    def __init__(self, argv, timeout=120, env=None, cwd=None):
         self.timeout = timeout
         self.buffer = b''
         self.sequence = 0
@@ -20,7 +20,9 @@ class Session:
             spec = importlib.util.spec_from_file_location('craft_session_permissions', Path(__file__).with_name('execution_permissions.py'))
             permissions = importlib.util.module_from_spec(spec); spec.loader.exec_module(permissions)
             env = permissions.child_environment()
-        self.process = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=self.stderr, env=env)
+            if cwd is not None:
+                env['TMPDIR'] = str(Path(cwd).resolve())
+        self.process = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=self.stderr, env=env, cwd=cwd)
         try:
             self.request('initialize', {'protocolVersion': '2024-11-05', 'capabilities': {}, 'clientInfo': {'name': 'craft-skill', 'version': '0.1.0'}})
             self.send({'jsonrpc': '2.0', 'method': 'notifications/initialized'})

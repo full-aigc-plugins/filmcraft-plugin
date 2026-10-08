@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync, symlinkSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync, symlinkSync, realpathSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { TaskLedger } from '../../src/harness/task_ledger.ts';
@@ -35,6 +35,8 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
       resources: { limits: { timeMs: 1800_000, diskBytes: 512_000_000, outputBytes: 512_000_000, slots: 2, revisions: 2 },
         allocation: { timeMs: 300_000, diskBytes: 64_000_000, outputBytes: 64_000_000, slots: 1, revisions: 0 } },
       runtimeHome: process.env.FILMCRAFT_NATIVE_RUNTIME_HOME ?? join(process.env.HOME!, '.local/share/craft-runtimes'), pluginVersion: JSON.parse(readFileSync(new URL('../../plugin.json', import.meta.url), 'utf8')).version };
+    const permissions={schema:'filmcraft-execution-permissions/v1' as const,readRoots:[root],writeRoots:[root,realpathSync(options.runtimeHome)].sort()};
+    Object.assign(options,{permissions});
     const alias = join(root, 'parent-alias'); symlinkSync(root, alias);
     const runner = new PythonWorkflowRunner(db, index, options), output = join(alias, 'delivery');
     const prepared = runner.prepare(planFile, output);
@@ -42,7 +44,7 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
       projectKey: prepared.projectKey, outputRoot: output,
       nativePlanHash: prepared.planIdentity.workflowPlanSha256, sourceRevision,
       sourceTreeSha256: prepared.sourceTreeSha256, runtimeIdentity: prepared.runtimeIdentity,
-      inputHashes: { still: imageHash }, inputRefs: [{ assetId: 'still', version: 'fixture-v1', sha256: imageHash }] });
+      executionPermissionsSha256:sha256(stableJson(permissions)), inputHashes: { still: imageHash }, inputRefs: [{ assetId: 'still', version: 'fixture-v1', sha256: imageHash }] });
     const wrongHash = '0'.repeat(64);
     await assert.rejects(runner.run({ ...task, taskId: 'bad-input', idempotencyKey: 'bad-input',
       inputHashes: { still: wrongHash }, inputRefs: [{ assetId: 'still', version: 'wrong', sha256: wrongHash }] }, planFile), /input_identity_conflict/);
@@ -160,13 +162,14 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
     assert.equal(reusedContinuation.intentReused, true); assert.equal(reusedContinuation.task.reused, true);
     assert.equal(db.listAttempts(continuationTask.taskId).length, 1); assert.equal(db.listContinuations(lostTask.taskId).length, 1);
     const childBindingFile = join(root, 'child-binding.json'); writeFileSync(childBindingFile, JSON.stringify(continuationTask));
+    const permissionsFile=join(root,'permissions.json');writeFileSync(permissionsFile,JSON.stringify(permissions));
     const cliRequest = continuationRequest();
     const cliContinue = spawnSync(process.execPath, [new URL('../../src/cli/recovery.ts', import.meta.url).pathname, 'continue',
       '--ledger', dbFile, '--blobs', lostBlobs, '--task', lostTask.taskId,
       '--expected-epoch', String(cliRequest.expectedEpoch), '--inspection-sha256', cliRequest.inspectionSha256,
       '--authorization-ref', lostTask.authorizationRef, '--authorization-scope-sha256', lostTask.authorizationScopeSha256,
       '--authorization-root', grantRoot, '--child-binding', childBindingFile, '--plan', continuationFile,
-      '--runtime-home', options.runtimeHome, '--python', python], { encoding: 'utf8', timeout: 180_000 });
+      '--permissions',permissionsFile,'--runtime-home', options.runtimeHome, '--python', python], { encoding: 'utf8', timeout: 180_000 });
     assert.equal(cliContinue.status, 0, cliContinue.stdout + cliContinue.stderr);
     assert.equal(JSON.parse(cliContinue.stdout).task.reused, true);
     assert.equal(db.listAttempts(continuationTask.taskId).length, 1);

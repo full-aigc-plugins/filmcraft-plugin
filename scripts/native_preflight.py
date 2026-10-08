@@ -6,6 +6,9 @@ import importlib.util
 import json
 import re
 import sys
+import os
+import tempfile
+from contextlib import ExitStack
 from pathlib import Path
 
 
@@ -72,16 +75,24 @@ def valid_clip_timing(value):
     return {'reason': value['reason'], 'clipIds': list(value['clipIds'])}
 
 
-def inspect(skill, plan_path, output, runtime_home, source=None):
+def inspect(skill, plan_path, output, runtime_home, source=None, permissions=None):
     def load(name):
         path = skill / 'scripts' / (name + '.py')
         spec = importlib.util.spec_from_file_location('filmcraft_preflight_' + name, path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         return module
+    if permissions is not None:
+        permissions = load('execution_permissions').validate(permissions)
+        load('execution_permissions').require_read(plan_path, permissions)
     commands = load('commands')
     plan = commands.reply_json(plan_path.read_text())
     workflow = load('workflow')
+    data_dir = os.environ.get('FILMCRAFT_DATA_DIR')
+    if permissions is not None:
+        permissions = load('execution_permissions').workflow_paths(plan, output, permissions, source, data_dir)
+        load('execution_permissions').require_write(runtime_home, permissions)
+        load('execution_permissions').ensure_available()
     prior = commands.reply_json((source / 'manifest.json').read_text()) if source else {}
     project_revision = hashlib.sha256((source / 'project.fcproj').read_bytes()).hexdigest() if source else None
     workflow.validate(plan, prior.get('assets', {}))
@@ -93,7 +104,14 @@ def inspect(skill, plan_path, output, runtime_home, source=None):
         resources.append({'kind': 'codec', 'name': 'h264'})
     requirements['resources'] = resources
     argv = [installed['executable']] + (['--project', str(source / 'project.fcproj')] if source else []) + ['mcp']
-    with load('mcp_session').Session(argv) as session:
+    with ExitStack() as stack:
+        if permissions is not None:
+            private = stack.enter_context(tempfile.TemporaryDirectory(prefix='.filmcraft-probe-', dir=permissions['writeRoots'][0]))
+            native_data = data_dir or str(Path(private) / 'native-data')
+            argv = [argv[0], '--data-dir', native_data, *argv[1:]]
+            protected = [str(skill), str(runtime_home)] + ([str(source)] if source else []) + ([str(data_dir)] if data_dir else [])
+            argv = load('execution_permissions').command(argv, permissions, protected_roots=protected)
+        session = stack.enter_context(load('mcp_session').Session(argv, **({'cwd':private} if permissions is not None else {})))
         rows = commands.runtime_rows(session)
         snapshot = commands.capability_snapshot(session, installed, rows, requires=requirements)
         requested = [item['params']['command'] for item in plan['operations'] if item['command'] == 'native.command']
@@ -117,16 +135,23 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--runtime-home', type=Path, required=True)
     parser.add_argument('--source', type=Path)
+    parser.add_argument('--read-root', action='append', default=[])
+    parser.add_argument('--write-root', action='append', default=[])
     args = parser.parse_args()
     try:
-        print(json.dumps(inspect(args.skill_dir, args.plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
+        permissions = None
+        if args.read_root or args.write_root:
+            spec = importlib.util.spec_from_file_location('preflight_permissions', args.skill_dir / 'scripts/execution_permissions.py')
+            helper = importlib.util.module_from_spec(spec); spec.loader.exec_module(helper)
+            permissions = helper.from_cli(args.read_root, args.write_root)
+        print(json.dumps(inspect(args.skill_dir, args.plan, args.output, args.runtime_home, args.source, permissions), ensure_ascii=False))
     except Exception as error:
         # 仅传播明确的能力拒绝码；不把本地路径、堆栈或任意原生文本当成公共错误合同。
         code = str(error).split(':', 1)[0]
-        if code not in {'capability_missing', 'capability_unknown', 'capability_contract_drift', 'capability_identity_mismatch'}:
+        if code not in {'invalid_execution_permissions', 'permission_read_denied', 'permission_write_denied', 'execution_isolation_unavailable', 'capability_missing', 'capability_unknown', 'capability_contract_drift', 'capability_identity_mismatch'}:
             code = 'native_preflight_failed'
         failure = {'code': code}
-        if code != 'native_preflight_failed':
+        if code in {'capability_missing', 'capability_unknown', 'capability_contract_drift', 'capability_identity_mismatch'}:
             failure['diagnostic'] = getattr(error, 'capability_diagnostic', None) or refusal_diagnostic(error, {}, {})
         issues = valid_asset_issues(getattr(error, 'asset_issues', None))
         if issues:

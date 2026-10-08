@@ -149,7 +149,7 @@ test('missing capability evidence remains unknown and a mismatching packaged dep
   assert.equal(index.inspect(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'unknown');
   manifest.assets.still.path = 'not-packaged.png';
   writeFileSync(join(output, 'manifest.json'), JSON.stringify(manifest));
-  assert.equal(index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'unknown');
+  assert.equal(index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'conflict');
   assert.equal(index.collect(task.taskId, lease.attemptId).outputRefs.length, 0);
 });
 
@@ -306,4 +306,15 @@ test('delivery refuses self-consistent but false exchange-loss claims and absent
   delete current.files['exchange-loss.json'];
   writeFileSync(join(output, 'manifest.json'), JSON.stringify(current));
   assert.equal(index.inspect(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'unknown');
+});
+
+
+test('packaged inputs at the delivery root are dependencies rather than missing derivative reports', t => {
+  const { output, task, lease, index, manifest } = delivery(t);
+  const bytes = readFileSync(join(output, 'assets/still.png'));
+  writeFileSync(join(output, 'still.png'), bytes);
+  delete manifest.files['assets/still.png']; manifest.files['still.png'] = sha256(bytes);
+  manifest.assets.still.path = 'still.png';
+  writeFileSync(join(output, 'manifest.json'), JSON.stringify(manifest));
+  assert.equal(index.inspect(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'linked');
 });

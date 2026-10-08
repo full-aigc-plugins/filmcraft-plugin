@@ -1,0 +1,45 @@
+{
+  "schema": "filmcraft-artifact-contract-followup/v1",
+  "result": "SOURCE_AND_NATIVE_CANDIDATE_PASS",
+  "sourceChecks": {
+    "python": 79,
+    "tests": 135,
+    "pass": 132,
+    "fail": 0,
+    "skipped": 3
+  },
+  "actualNativeLineageCases": 10,
+  "actualNativeRecordNegativeCases": 9,
+  "targetTests": 17,
+  "protocolValidation": {
+    "status": "passed",
+    "ref": "v0.1.0-dev.109",
+    "publicTasks": 1,
+    "publicArtifacts": 13
+  },
+  "workingTreeCandidate": true,
+  "fixedInstallation": "NOT_RUN",
+  "relocationQualification": "NOT_RUN",
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "openTasks": 39,
+  "evidenceFiles": {
+    "acceptance.json": "efefa70dead84c7442f45c528f67018a83d99eb2dc3a47da093e884d0f52e6f2",
+    "exchange-loss-red.txt": "a9d8110be22e1c5463444fae3bbfa3dc7556bf94b24a82d533003f4fcf5c5b67",
+    "fixed58-lineage-budget-refusal.txt": "eb0de50fa4dec6fbd84f0c39bbe9ec2aaa98d84d36a46fe7076ff4578c999cb5",
+    "native-candidate1-failure.txt": "1e40cd600fddf2df1294b3aa605af3ffb4006fbcca7d986f6861d44450200193",
+    "native-candidate2-green.txt": "a7bc3121f731a4765a55db2ea4763317386a50c944451311fe3e54eda900e141",
+    "native-candidate2-report.json": "6e4b3a46c0016f6b379b044b6ed8600891fb01c2e431c6faa2dc750d515650d1",
+    "native-loss-negative-source.txt": "bc8498b7f67520218a42767ef63b80234aca7b598e2f8b9a003c1c54eb8766b1",
+    "native-loss-negative.json": "96ece67ebc398ce89ce574ee59bfe01ae305ddb3961539c337e28117cae1efc6",
+    "node-final-green.txt": "261f64d3202ff9cec7a735620b8f0b5cdbfb5411b041c8295969b79b11455ad8",
+    "node-green.txt": "013ddeb3a035439c5011420e61bc63cebc68a483b4d3a4fd2982f23a8476524e",
+    "python-green.txt": "d671f32622d2b9ff9924bfc263156acf5780cc14a7df23b9fb562ff767da6ec5",
+    "root-input-red.txt": "6253b1224f55e90c5a18cca8025a7da526a78b390d855b580757236721aa606a",
+    "source-checks-final.json": "82b9d4b80b78fde508120aef6468ce77396345a6c58902b4036ccc1e1374d8b4",
+    "source-checks.json": "8a1cbcabe8c7fe5df6e66d440551dd0c2619dde7ae1d806b4c7d0b93a0ba90bc",
+    "target2-green.txt": "0bb1bf0be5e4aeb4f4fcf84cff08456b7a58cf3654fb0959809633a8e4d5991a"
+  }
+}

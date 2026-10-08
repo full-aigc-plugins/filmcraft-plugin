@@ -1,0 +1,25 @@
+✔ legacy command receipt is linked without rewriting native integers or declaring completion (32.975625ms)
+✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (28.850084ms)
+✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (29.722792ms)
+✔ receipt paths reject traversal and symlinks before reading their targets (27.875417ms)
+✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (0.183125ms)
+✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (97.0755ms)
+✔ delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS (181.543667ms)
+✔ missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered (102.803292ms)
+✔ legacy output execution maps declared new inputs separately from inherited project inputs (127.074709ms)
+✔ failed-stage receipts retain original bytes and missing historical identities without following stage paths (28.123584ms)
+✔ delivery without the same-attempt execution record remains unknown and cannot expose output artifacts (77.597917ms)
+✔ execution owner PID must match the attempt and legacy missing process identity stays unknown (102.698583ms)
+✔ old artifacts cannot be relabeled as a later task attempt even when plan and runtime match (226.096208ms)
+✔ conflicting same-kind observations retain original CAS bytes and do not replace the original association (101.841125ms)
+✔ current missing process evidence cannot inherit an older linked conclusion from the receipt index (182.081667ms)
+✔ delivery refuses self-consistent but false exchange-loss claims and absent loss identity (436.85575ms)
+✔ packaged inputs at the delivery root are dependencies rather than missing derivative reports (52.821458ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1918.237708

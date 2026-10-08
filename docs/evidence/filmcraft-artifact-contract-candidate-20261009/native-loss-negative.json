@@ -1,0 +1,66 @@
+{
+  "schema": "filmcraft-native-loss-negative/v1",
+  "result": "PASS",
+  "cases": [
+    {
+      "case": "missing-report-identity",
+      "status": "unknown",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "wrong-native-hash",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "wrong-inspection-hash",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "wrong-export-hash",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "lossy-native-substitute",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "font-fidelity-promotion",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "omitted-export",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "duplicate-export",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    },
+    {
+      "case": "broken-report",
+      "status": "conflict",
+      "result": "PASS",
+      "layer": "mutated records of actual native synthetic-media execution; no native replay"
+    }
+  ],
+  "manifestRestored": true,
+  "lossReportRestored": true,
+  "nativeProjectPreserved": true,
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "fixedInstallation": "NOT_RUN"
+}

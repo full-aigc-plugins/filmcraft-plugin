@@ -3,7 +3,7 @@ import { isObject } from '../support/json.ts';
 
 /** 将损失声明逐项绑定到已重新读取的清单文件；缺失历史身份保持 unknown。 */
 export function exchangeLossStatus(declaration: unknown, report: unknown,
-  files: Record<string, { sha256: string }>): 'match' | 'unknown' | 'conflict' {
+  files: Record<string, { sha256: string }>, packagedInputs: ReadonlySet<string>): 'match' | 'unknown' | 'conflict' {
   if (declaration === undefined || !Object.hasOwn(files, 'exchange-loss.json')) { return 'unknown'; }
   if (!isObject(declaration) || declaration.path !== 'exchange-loss.json'
     || declaration.sha256 !== files['exchange-loss.json'].sha256 || !isObject(report)
@@ -45,7 +45,7 @@ export function exchangeLossStatus(declaration: unknown, report: unknown,
   }
   // 每个约定导出都须有损失记录，不能通过删掉 outputs 隐藏有损交换。
   for (const name of Object.keys(files)) {
-    if (formats.has(extname(name).slice(1).toLowerCase()) && !name.startsWith('assets/') && !seen.has(name)) { return 'conflict'; }
+    if (formats.has(extname(name).slice(1).toLowerCase()) && !packagedInputs.has(name) && !seen.has(name)) { return 'conflict'; }
   }
   return 'match';
 }

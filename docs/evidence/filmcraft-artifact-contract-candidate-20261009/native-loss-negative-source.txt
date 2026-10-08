@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {TaskLedger} from '[PLUGIN_ROOT]/src/harness/task_ledger.ts';
+import {ReceiptIndex} from '[PLUGIN_ROOT]/src/artifacts/receipt_index.ts';
+import {sha256,parseJson} from '[PLUGIN_ROOT]/src/support/json.ts';
+const root='[PRIVATE_WORK]/artifact-candidate-native2-20261009',output=join(root,'delivery');
+const db=new TaskLedger(join(root,'ledger.sqlite'),{readOnly:true});
+const index=new ReceiptIndex(db,join(root,'blobs'),{readOnly:true});
+const task=db.getTask('create'),attempt=task.attemptId!;
+const mp=join(output,'manifest.json'),lp=join(output,'exchange-loss.json');
+const mb=readFileSync(mp),lb=readFileSync(lp),project=sha256(readFileSync(join(output,'project.fcproj')));
+const cases:any[]=[];
+try {
+ assert.equal(index.collect('create',attempt).status,'linked');
+ for(const [name,mutate,expected] of [
+  ['missing-report-identity',(_r:any,m:any)=>{delete m.lossReport;},'unknown'],
+  ['wrong-native-hash',(r:any)=>{r.native.sha256='0'.repeat(64);},'conflict'],
+  ['wrong-inspection-hash',(r:any)=>{r.inspection.sha256='0'.repeat(64);},'conflict'],
+  ['wrong-export-hash',(r:any)=>{r.outputs[0].sha256='0'.repeat(64);},'conflict'],
+  ['lossy-native-substitute',(r:any)=>{r.outputs[0].nativeSubstitute=true;},'conflict'],
+  ['font-fidelity-promotion',(r:any)=>{r.outputs[0].changes.find((x:any)=>x.code==='font-appearance').status='observed';},'conflict'],
+  ['omitted-export',(r:any)=>{r.outputs.pop();},'conflict'],
+  ['duplicate-export',(r:any)=>{r.outputs.push(structuredClone(r.outputs[0]));},'conflict'],
+  ['broken-report',(_r:any,m:any)=>{m.brokenFixture=true;},'conflict'],
+ ] as const){
+  const r=parseJson(lb.toString()),m=parseJson(mb.toString());mutate(r,m);
+  const bytes=Buffer.from(m.brokenFixture?'{broken-json':JSON.stringify(r));delete m.brokenFixture;
+  m.files['exchange-loss.json']=sha256(bytes);if(m.lossReport){m.lossReport.sha256=sha256(bytes);}
+  writeFileSync(lp,bytes);writeFileSync(mp,JSON.stringify(m));
+  const seen=index.inspect('create',attempt,'delivery','manifest.json');assert.equal(seen.status,expected,name);
+  cases.push({case:name,status:seen.status,result:'PASS',layer:'mutated records of actual native synthetic-media execution; no native replay'});
+ }
+} finally {writeFileSync(mp,mb);writeFileSync(lp,lb);db.close();}
+assert.equal(sha256(readFileSync(mp)),sha256(mb));assert.equal(sha256(readFileSync(lp)),sha256(lb));assert.equal(sha256(readFileSync(join(output,'project.fcproj'))),project);
+writeFileSync('[PRIVATE_WORK]/native-loss-negative-20261009.json',JSON.stringify({schema:'filmcraft-native-loss-negative/v1',result:'PASS',cases,manifestRestored:true,lossReportRestored:true,nativeProjectPreserved:true,technicalAcceptance:'NOT_RUN',creativeAcceptance:'NOT_RUN',fixedInstallation:'NOT_RUN'},null,2)+'\n');
+console.log(JSON.stringify({result:'PASS',cases:cases.length}));

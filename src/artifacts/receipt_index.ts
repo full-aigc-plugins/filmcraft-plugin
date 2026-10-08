@@ -102,18 +102,20 @@ export class ReceiptIndex {
         try { loss = parseJson(readBoundFile(root, 'exchange-loss.json').toString('utf8')); }
         catch { loss = null; }
       }
-      summary.exchangeLossIdentity = exchangeLossStatus(raw.lossReport, loss, files);
-      results.push(summary.exchangeLossIdentity);
+      const packagedInputs = new Set<string>();
       summary.dependencies = [];
       for (const [name, asset] of Object.entries(raw.assets) as [string, any][]) {
         const ref = binding.inputRefs.find(input => input.assetId === name);
         if (!ref) { results.push('unknown'); continue; }
         const packaged = typeof asset.path === 'string' && Object.hasOwn(files, asset.path)
           && files[asset.path].sha256 === ref.sha256;
+        if (packaged) { packagedInputs.add(asset.path); }
         summary.dependencies.push({ assetRef: { ...ref }, kind: asset.kind === 'lut' ? 'lut' : 'media',
           packaged, missingReason: packaged ? null : 'dependency packaging not verified' });
         if (!packaged) { results.push('unknown'); }
       }
+      summary.exchangeLossIdentity = exchangeLossStatus(raw.lossReport, loss, files, packagedInputs);
+      results.push(summary.exchangeLossIdentity);
       if (Object.hasOwn(files, 'plan.json')) {
         const identity = normalizePlan(join(root, 'plan.json'));
         compare('publicPlanIdentity', identity.canonicalPlanSha256, binding.planHash);

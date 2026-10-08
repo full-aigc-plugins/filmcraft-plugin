@@ -59,3 +59,9 @@ Source red tests, regressions and post-publication fixed installation retain the
 [Source candidate evidence / 源码候选证据](evidence/filmcraft45-lineage-candidate-20261008.json).
 
 [Fixed installed acceptance / 固定安装验收](evidence/filmcraft45-fixed-lineage-20261008.json): tasks 9.13–9.15 complete; 39 native tests, 10 lineage cases, 13 preserved skills / 26 code files. Full V1 remains open.
+
+## 2026-10-09 exchange-loss association candidate
+
+For FC-AR-001/002, `ReceiptIndex` now checks the manifest lossReport identity and the exchange-loss report bindings to the current native project, reopening inspection file and every export. Missing historical report identity remains unknown. Malformed reports, identity conflicts, omitted or duplicate exports, lossy nativeSubstitute claims and promotion of unknown font/effect fidelity to observed produce conflict. Public artifact references and independent review remain blocked. Format losses must be explicit lost observations; association alone never promotes technical or creative acceptance.
+
+Synthetic review, recovery and revision fixtures now carry explicit loss reports. A revision that changes native bytes also updates the loss report and manifest hashes. These fixtures only verify state gates. The native lineage executor now supplies the explicit resource budget required by the later controller; this does not establish a new fixed-installation or actual-export pass. Red evidence and source checks are recorded under `docs/evidence/filmcraft-artifact-contract-candidate-20261009/`. Full tasks 5.1–5.3 and 5.6 remain open; the existing dev.58 tag is unchanged.

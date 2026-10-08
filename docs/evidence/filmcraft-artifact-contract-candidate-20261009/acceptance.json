@@ -1,0 +1,30 @@
+{
+  "schema": "filmcraft-artifact-contract-candidate/v1",
+  "result": "SOURCE_PASS_FIXED_INSTALL_NOT_RUN",
+  "baseRevision": "66ddd89d1dd97f94e80eb68194b3dfa7e8ae2871",
+  "sourceIdentity": "source-checks.json carries per-file hashes for changed source; base revision alone is not the candidate identity",
+  "red": "missing lossReport identity was accepted as linked; expected unknown",
+  "sourceChecks": {
+    "python": 79,
+    "nodePass": 131,
+    "nodeFail": 0,
+    "nodeEnvironmentNotRun": 3
+  },
+  "behavior": "loss declarations bind native, inspection and exports; missing identity unknown; malformed or conflicting declarations conflict; quality gate requires linked collection",
+  "nativeLineage": "fixed dev.58 verifier refused budget_required before native dispatch; candidate supplies explicit policy but has not been qualified in a new installation",
+  "vendorSkills": "unchanged locked source dev.46",
+  "fixedInstallation": "NOT_RUN",
+  "relocationQualification": "NOT_RUN",
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "openTasks": 39,
+  "evidenceFiles": {
+    "exchange-loss-red.txt": "a9d8110be22e1c5463444fae3bbfa3dc7556bf94b24a82d533003f4fcf5c5b67",
+    "fixed58-lineage-budget-refusal.txt": "eb0de50fa4dec6fbd84f0c39bbe9ec2aaa98d84d36a46fe7076ff4578c999cb5",
+    "node-green.txt": "013ddeb3a035439c5011420e61bc63cebc68a483b4d3a4fd2982f23a8476524e",
+    "python-green.txt": "d671f32622d2b9ff9924bfc263156acf5780cc14a7df23b9fb562ff767da6ec5",
+    "source-checks.json": "8a1cbcabe8c7fe5df6e66d440551dd0c2619dde7ae1d806b4c7d0b93a0ba90bc"
+  }
+}

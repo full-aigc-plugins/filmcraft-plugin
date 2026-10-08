@@ -11,7 +11,7 @@ import { RecoveryService } from '../../src/harness/recovery.ts';
 import { ReceiptIndex } from '../../src/artifacts/receipt_index.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { normalizePlan } from '../../src/adapters/plan_identity.ts';
-import { binding, hash, workspace, fixtureAuthorizer, captureEvidence } from './fixtures.ts';
+import { binding, hash, workspace, fixtureAuthorizer, captureEvidence, syntheticExchangeLoss } from './fixtures.ts';
 
 function files(root: string) {
   const result: Record<string, string> = {};
@@ -78,7 +78,8 @@ test('an actually running detached process remains occupied after its host state
 function lostReply(t: Parameters<typeof workspace>[0]) {
   const root = workspace(t), output = join(root, 'delivery'); mkdirSync(output);
   const plan = { schema: 'fixture-only/v1' }, caps = { schema: 'filmcraft-capability-snapshot/v1', mode: 'headless' };
-  const payloads = { 'plan.json': JSON.stringify(plan), 'project.fcproj': 'fixture project; no native acceptance', 'capabilities.json': JSON.stringify(caps) };
+  const payloads: Record<string, string> = { 'native.json': '{}', 'plan.json': JSON.stringify(plan), 'project.fcproj': 'fixture project; no native acceptance', 'capabilities.json': JSON.stringify(caps) };
+  payloads['exchange-loss.json'] = JSON.stringify(syntheticExchangeLoss(payloads));
   for (const [name, text] of Object.entries(payloads)) { writeFileSync(join(output, name), text); }
   const identity = normalizePlan(join(output, 'plan.json')), base = binding(root);
   const task = { ...base, planHash: identity.canonicalPlanSha256, nativePlanHash: identity.workflowPlanSha256,
@@ -88,6 +89,7 @@ function lostReply(t: Parameters<typeof workspace>[0]) {
   const process = spawnSync(globalThis.process.execPath, ['-e', '']); assert.equal(process.status, 0);
   db.markSubmitted(lease, process.pid!);
   writeFileSync(join(output, 'manifest.json'), JSON.stringify({ schema: 'filmcraft-delivery/v1', runtimeSha256: task.runtimeIdentity.sha256,
+    lossReport: {path: 'exchange-loss.json', sha256: sha256(payloads['exchange-loss.json'])},
     sourceProjectSha256: null, assets: {}, files: Object.fromEntries(Object.entries(payloads).map(([name,text]) => [name,sha256(text)])) }));
   const guard = '.filmcraft-execution-' + sha256(task.outputRoot) + '.json';
   writeFileSync(join(root, guard), JSON.stringify({ schema: 'filmcraft-output-execution/v1', targetHash: sha256(task.outputRoot),

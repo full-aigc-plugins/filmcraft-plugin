@@ -29,6 +29,8 @@ const dbFile = join(root, 'ledger.sqlite'), blobs = join(root, 'blobs'), db = ne
 const index = new ReceiptIndex(db, blobs);
 const version = JSON.parse(readFileSync(join(plugin, 'plugin.json'), 'utf8')).version;
 const runner = new PythonWorkflowRunner(db, index, { python, skillDirectory: skill, sourceRevision: args.source,
+  resources: { limits: { timeMs: 1800_000, diskBytes: 128_000_000, outputBytes: 128_000_000, slots: 1, revisions: 0 },
+    allocation: { timeMs: 300_000, diskBytes: 64_000_000, outputBytes: 64_000_000, slots: 1, revisions: 0 } },
   runtimeHome: join(root, 'runtime'), pluginVersion: version });
 const cases: any[] = [], publicTasks: any[] = [], publicArtifacts: any[] = [], archived: any[] = [];
 const observations: any[] = [];

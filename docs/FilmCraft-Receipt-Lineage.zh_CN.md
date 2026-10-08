@@ -59,3 +59,9 @@ flowchart TD
 [Source candidate evidence / 源码候选证据](evidence/filmcraft45-lineage-candidate-20261008.json).
 
 [Fixed installed acceptance / 固定安装验收](evidence/filmcraft45-fixed-lineage-20261008.json): tasks 9.13–9.15 complete; 39 native tests, 10 lineage cases, 13 preserved skills / 26 code files. Full V1 remains open.
+
+## 2026-10-09 交换损失关联候选
+
+针对 FC-AR-001/002，`ReceiptIndex` 现在检查 manifest 的 lossReport 身份，以及 `exchange-loss.json` 对当前原生工程、重开检查文件和每个导出的摘要关联。清单缺失旧报告身份保持 unknown；畸形报告、身份冲突、遗漏导出、重复导出、有损 nativeSubstitute 或将未知字体／效果保真改称已观察，产生 conflict，禁止输出公共产物引用与进入独立质量审查。格式损失要求显式 lost，未知保真保持 unknown；关联本身不提升技术或创作验收。
+
+合成评审、恢复和返工夹具增加明确损失报告；修改原生工程的返工夹具同时重新绑定报告及清单摘要，不沿用旧报告。此类夹具只验证状态门禁。原生血缘执行器补充后来必需的显式资源预算，尚未据此宣称新版固定安装或真实导出通过。红灯与源码检查记录位于 `docs/evidence/filmcraft-artifact-contract-candidate-20261009/`；5.1–5.3、5.6 完整合同仍开放，现有 dev.58 标签未改写。

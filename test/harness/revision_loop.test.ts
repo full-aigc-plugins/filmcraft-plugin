@@ -41,7 +41,10 @@ function child(f:ReturnType<typeof fixture>,name='child',outside=false){
   const binding={...f.task,taskId:name,idempotencyKey:name,outputRoot:output,projectKey:hash(name==='child'?'c':'d'),
     projectRevision:source.sourceSha256,planHash:identity.canonicalPlanSha256,nativePlanHash:identity.workflowPlanSha256};
   const manifest=JSON.parse(readFileSync(join(output,'manifest.json'),'utf8'));manifest.sourceProjectSha256=source.sourceSha256;
-  manifest.files['project.fcproj']=sha256(readFileSync(join(output,'project.fcproj')));writeFileSync(join(output,'manifest.json'),JSON.stringify(manifest));
+  manifest.files['project.fcproj']=sha256(readFileSync(join(output,'project.fcproj')));
+  const loss=JSON.parse(readFileSync(join(output,'exchange-loss.json'),'utf8'));loss.native.sha256=manifest.files['project.fcproj'];
+  writeFileSync(join(output,'exchange-loss.json'),JSON.stringify(loss));manifest.files['exchange-loss.json']=sha256(readFileSync(join(output,'exchange-loss.json')));
+  manifest.lossReport.sha256=manifest.files['exchange-loss.json'];writeFileSync(join(output,'manifest.json'),JSON.stringify(manifest));
   const parent=f.db.getTask(f.task.taskId);f.db.beginContinuation(f.task.taskId,parent.epoch,hash(),binding);
   const lease=f.db.claim(name,'synthetic-worker',60000);f.db.beginAttempt(lease,'synthetic-native');f.db.markSubmitted(lease,123456);
   const guard='.filmcraft-execution-'+sha256(output)+'.json';writeFileSync(join(f.root,guard),JSON.stringify({schema:'filmcraft-output-execution/v1',

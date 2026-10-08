@@ -7,7 +7,7 @@ import { ReviewService, reviewerIdentity } from '../../src/quality/review_servic
 import { reviewRequestHash } from '../../src/quality/review_contract.ts';
 import type { ReviewCriteria, Assessment } from '../../src/quality/review_contract.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
-import { binding, hash, workspace } from './fixtures.ts';
+import { binding, hash, workspace, syntheticExchangeLoss } from './fixtures.ts';
 
 // 此 fixture 只证明 SQL/回执/隔离/失效规则，不声称合成字节是原生工程或视频。
 export function qualityFixture(t:Parameters<typeof workspace>[0],projectBytes?:Buffer) {
@@ -17,16 +17,18 @@ export function qualityFixture(t:Parameters<typeof workspace>[0],projectBytes?:B
   const files:Record<string,Buffer>={
     'plan.json':Buffer.from(JSON.stringify({assets:{still:{path:'input.png',sha256:mediaHash}}})),
     'project.fcproj':projectBytes??Buffer.from('synthetic project'), 'film.mp4':Buffer.from('synthetic film'),
-    'assets/still.png':media,'exchange-loss.json':Buffer.from('{}'),
+    'assets/still.png':media,'native.json':Buffer.from('{}'),
     'capabilities.json':Buffer.from(JSON.stringify({...snapshot,commandChecks:[],resourceChecks:[]})),
     'generator-private.txt':Buffer.from('generator self defense must not enter review'),
   };
+  files['exchange-loss.json']=Buffer.from(JSON.stringify(syntheticExchangeLoss(files)));
   for(const [name,bytes] of Object.entries(files)){writeFileSync(join(output,name),bytes);}
   const identity=normalizePlan(join(output,'plan.json')),base=binding(root);
   const task={...base,planHash:identity.canonicalPlanSha256,nativePlanHash:identity.workflowPlanSha256,
     inputHashes:{still:mediaHash},inputRefs:[{assetId:'still',version:'fixture-v1',sha256:mediaHash}],
     runtimeIdentity:{...base.runtimeIdentity,capabilitySnapshotSha256:sha256(stableJson(snapshot))}};
   writeFileSync(join(output,'manifest.json'),JSON.stringify({schema:'filmcraft-delivery/v1',runtimeSha256:task.runtimeIdentity.sha256,
+    lossReport:{path:'exchange-loss.json',sha256:sha256(files['exchange-loss.json'])},
     sourceProjectSha256:null,assets:{still:{path:'assets/still.png',sha256:mediaHash}},
     files:Object.fromEntries(Object.entries(files).map(([name,bytes])=>[name,sha256(bytes)]))}));
   const db=new TaskLedger(join(root,'ledger.sqlite'));t.after(()=>db.close());db.register(task);

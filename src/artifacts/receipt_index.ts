@@ -1,6 +1,7 @@
 import { constants, openSync, closeSync, existsSync, fstatSync, lstatSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import type { TaskLedger, Binding } from '../harness/task_ledger.ts';
+import { exchangeLossStatus } from './exchange_loss.ts';
 import { normalizePlan } from '../adapters/plan_identity.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
 
@@ -96,6 +97,13 @@ export class ReceiptIndex {
         files[name] = { sha256: digest, bytes: content.length };
       }
       summary.files = files;
+      let loss: unknown;
+      if (Object.hasOwn(files, 'exchange-loss.json')) {
+        try { loss = parseJson(readBoundFile(root, 'exchange-loss.json').toString('utf8')); }
+        catch { loss = null; }
+      }
+      summary.exchangeLossIdentity = exchangeLossStatus(raw.lossReport, loss, files);
+      results.push(summary.exchangeLossIdentity);
       summary.dependencies = [];
       for (const [name, asset] of Object.entries(raw.assets) as [string, any][]) {
         const ref = binding.inputRefs.find(input => input.assetId === name);

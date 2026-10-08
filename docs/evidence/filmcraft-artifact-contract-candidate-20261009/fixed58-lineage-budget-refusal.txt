@@ -1,0 +1,18 @@
+file://[USER_HOME]/workspaces/workspace-agent-skills/.local/filmcraft-recovery-01a11a34-20261008/host58/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.58/src/support/json.ts:11
+  if (!condition) { throw new HarnessError(code, detail); }
+                          ^
+
+HarnessError: budget_required
+    at check (file://[USER_HOME]/workspaces/workspace-agent-skills/.local/filmcraft-recovery-01a11a34-20261008/host58/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.58/src/support/json.ts:11:27)
+    at file://[USER_HOME]/workspaces/workspace-agent-skills/.local/filmcraft-recovery-01a11a34-20261008/host58/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.58/src/harness/resources.ts:106:7
+    at TaskLedger.transaction (file://[USER_HOME]/workspaces/workspace-agent-skills/.local/filmcraft-recovery-01a11a34-20261008/host58/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.58/src/harness/task_ledger.ts:205:26)
+    at ResourceController.reserve (file://[USER_HOME]/workspaces/workspace-agent-skills/.local/filmcraft-recovery-01a11a34-20261008/host58/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.58/src/harness/resources.ts:91:32)
+    at PythonWorkflowRunner.run (file://[USER_HOME]/workspaces/workspace-agent-skills/.local/filmcraft-recovery-01a11a34-20261008/host58/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.58/src/adapters/python_workflow.ts:102:15)
+    at file://[USER_HOME]/workspaces/workspace-agent-skills/.local/filmcraft-recovery-01a11a34-20261008/host58/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.58/scripts/verify_fixed_lineage.ts:64:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  code: 'budget_required'
+}
+
+Node.js v24.18.0

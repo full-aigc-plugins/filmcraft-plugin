@@ -98,8 +98,13 @@ function delivery(t: Parameters<typeof workspace>[0], inherited = false) {
   const files: Record<string, Buffer> = {
     'plan.json': Buffer.from(JSON.stringify(plan)), 'project.fcproj': Buffer.from('fixture-native-project; not a real project'),
     'assets/still.png': media, 'capabilities.json': Buffer.from(JSON.stringify({ ...snapshot, commandChecks: [], resourceChecks: [] })),
+    'native.json': Buffer.from('{"sequence":{}}'),
     'exchange-loss.json': Buffer.from('{}'),
   };
+  files['exchange-loss.json'] = Buffer.from(JSON.stringify({ schema: 'craft-exchange-loss/v1', pluginId: 'filmcraft',
+    native: { location: 'project.fcproj', sha256: sha256(files['project.fcproj']) },
+    inspection: { location: 'native.json', sha256: sha256(files['native.json']) },
+    outputs: [], acceptance: 'technical-observations-only' }));
   for (const [name, bytes] of Object.entries(files)) { writeFileSync(join(output, name), bytes); }
   const identity = normalizePlan(join(output, 'plan.json'));
   const base = binding(root);
@@ -109,6 +114,7 @@ function delivery(t: Parameters<typeof workspace>[0], inherited = false) {
     runtimeIdentity: { ...base.runtimeIdentity, capabilitySnapshotSha256: sha256(stableJson(snapshot)) } };
   const manifest = { schema: 'filmcraft-delivery/v1', runtimeSha256: task.runtimeIdentity.sha256,
     sourceProjectSha256: task.projectRevision, assets: { still: { path: 'assets/still.png', sha256: mediaHash } },
+    lossReport: { path: 'exchange-loss.json', sha256: sha256(files['exchange-loss.json']) },
     files: Object.fromEntries(Object.entries(files).map(([name, bytes]) => [name, sha256(bytes)])) };
   writeFileSync(join(output, 'manifest.json'), JSON.stringify(manifest));
   const db = new TaskLedger(join(root, 'ledger.sqlite')); t.after(() => db.close());
@@ -247,4 +253,57 @@ test('current missing process evidence cannot inherit an older linked conclusion
   db.db.prepare('UPDATE attempts SET pid=NULL WHERE attempt_id=?').run(lease.attemptId);
   const current = index.collect(task.taskId, lease.attemptId);
   assert.equal(current.status, 'unknown'); assert.deepEqual(current.outputRefs, []);
+});
+
+
+test('delivery refuses self-consistent but false exchange-loss claims and absent loss identity', t => {
+  const { output, task, lease, index, manifest } = delivery(t);
+  const files = manifest.files as Record<string, string>;
+  function put(name: string, value: unknown) {
+    const bytes = Buffer.from(typeof value === 'string' ? value : JSON.stringify(value));
+    writeFileSync(join(output, name), bytes); files[name] = sha256(bytes);
+  }
+  put('native.json', { sequence: {} }); put('film.mp4', 'synthetic export');
+  const report = { schema: 'craft-exchange-loss/v1', pluginId: 'filmcraft',
+    native: { location: 'project.fcproj', sha256: files['project.fcproj'] },
+    inspection: { location: 'native.json', sha256: files['native.json'] },
+    outputs: [{ location: 'film.mp4', sha256: files['film.mp4'], format: 'mp4', role: 'derivative', nativeSubstitute: false,
+      changes: [{ code: 'native-editing-model', status: 'lost', reason: 'rendered' },
+        { code: 'font-appearance', status: 'unknown', reason: 'not compared' },
+        ...['editable-layers-paths-text', 'effect-keyframe-parameters', 'alpha-channel', 'editable-timeline'].map(code =>
+          ({ code, status: 'lost', reason: 'rendered' }))], observations: {}, warnings: [] }],
+    acceptance: 'technical-observations-only' };
+  function inspect(value: any, declaration = true) {
+    put('exchange-loss.json', value);
+    const current = { ...manifest, ...(declaration ? { lossReport: { path: 'exchange-loss.json', sha256: files['exchange-loss.json'] } } : {}) };
+    if (!declaration) { delete (current as any).lossReport; }
+    writeFileSync(join(output, 'manifest.json'), JSON.stringify(current));
+    return index.inspect(task.taskId, lease.attemptId, 'delivery', 'manifest.json');
+  }
+  assert.equal(inspect(report).status, 'linked');
+  assert.equal(inspect(report, false).status, 'unknown');
+  for (const mutate of [
+    (r: any) => { r.native.sha256 = hash('e'); },
+    (r: any) => { r.inspection.sha256 = hash('e'); },
+    (r: any) => { r.outputs[0].sha256 = hash('e'); },
+    (r: any) => { r.outputs[0].nativeSubstitute = true; },
+    (r: any) => { r.outputs[0].role = 'native'; },
+    (r: any) => { r.outputs[0].changes[1].status = 'observed'; },
+    (r: any) => { r.outputs[0].changes = r.outputs[0].changes.filter((c: any) => c.code !== 'font-appearance'); },
+    (r: any) => { r.outputs = []; },
+    (r: any) => { r.outputs.push(structuredClone(r.outputs[0])); },
+  ]) {
+    const changed = structuredClone(report); mutate(changed);
+    assert.equal(inspect(changed).status, 'conflict');
+  }
+  assert.equal(inspect({}).status, 'conflict');
+  assert.equal(inspect('{broken-json').status, 'conflict');
+  inspect(report);
+  const current = JSON.parse(readFileSync(join(output, 'manifest.json'), 'utf8'));
+  current.lossReport.sha256 = hash('f');
+  writeFileSync(join(output, 'manifest.json'), JSON.stringify(current));
+  assert.equal(index.inspect(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'conflict');
+  delete current.files['exchange-loss.json'];
+  writeFileSync(join(output, 'manifest.json'), JSON.stringify(current));
+  assert.equal(index.inspect(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'unknown');
 });

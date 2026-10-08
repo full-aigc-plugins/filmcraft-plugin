@@ -1,6 +1,6 @@
 # FilmCraft 独立质量评审架构
 
-[English](FilmCraft-Quality-Architecture.md)。行为事实源为 OpenSpec `establish-v1-plugin` 的 FC-QA-001；本增量对应9.22—9.24。当前源码候选已有验证，固定 dev.50 安装验收尚待执行，完整 V1、受限修订和用户接受接口继续开放。
+[English](FilmCraft-Quality-Architecture.md)。行为事实源为 OpenSpec `establish-v1-plugin` 的 FC-QA-001；本增量对应9.22—9.24。固定dev.50／源42安装验收现已通过：107项无跳过测试，40类矩阵含8类质量专项，13技能／40执行文件保全。详见[固定证据](evidence/filmcraft50-fixed-quality-20261008.json)。完整 V1、受限修订和用户接受接口继续开放。
 
 ```mermaid
 flowchart TD

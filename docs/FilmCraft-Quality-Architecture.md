@@ -1,6 +1,6 @@
 # FilmCraft independent quality review architecture
 
-[简体中文](FilmCraft-Quality-Architecture.zh_CN.md). FC-QA-001 in OpenSpec `establish-v1-plugin` is authoritative for tasks9.22–9.24. Source candidate verification is available; fixed dev.50 installed acceptance remains pending. Complete V1, bounded revision and the user-decision interface remain open.
+[简体中文](FilmCraft-Quality-Architecture.zh_CN.md). FC-QA-001 in OpenSpec `establish-v1-plugin` is authoritative for tasks9.22–9.24. Fixed dev.50/source42 installed acceptance now passes:107 tests without skips and8 quality scenarios among40 matrix records;13 skills/40 execution files remain unchanged. See [fixed evidence](evidence/filmcraft50-fixed-quality-20261008.json). Complete V1, bounded revision and the user-decision interface remain open.
 
 ```mermaid
 flowchart TD

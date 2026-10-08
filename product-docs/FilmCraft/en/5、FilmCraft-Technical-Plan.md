@@ -99,3 +99,5 @@ Resource implementation update: the schema4 resource architecture in docs/FilmCr
 Fixed dev49/source42 resource acceptance is now complete for tasks9.19–9.21:81 installed tests without skips,32 matrix records and four release CI runs pass. Full V1 remains open with60 tasks.
 
 Independent quality update: minimal context, trusted host/manual verification, version invalidation and per-channel temporal/audio checks have a source candidate. See docs/FilmCraft-Quality-Architecture.md. Fixed dev.50 installed acceptance, tasks9.22–9.24, user acceptance and full V1 remain open.
+
+Fixed dev.50/source42 independent quality acceptance now completes tasks9.22–9.24:107 installed tests without skips,40 matrix records including8 quality cases,13 skills/40 execution files preserved and four release CI runs pass. Creative review remains manual_review, user acceptance NOT_RUN and57 V1 tasks open.

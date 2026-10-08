@@ -1,3 +1,4 @@
+import { realpathSync } from 'node:fs';
 import type { DatabaseSync } from 'node:sqlite';
 import type { TaskLedger, Binding } from '../harness/task_ledger.ts';
 import type { AuthorizationRequest, Authorizer } from '../harness/authorization.ts';
@@ -39,22 +40,36 @@ export function assertRuntimeSelection(db:DatabaseSync,binding:Pick<Binding,'sou
 }
 /** 授权主题绑定完整候选与当前代次；事务排空后才发布选择，旧制品不删除。 */
 export class RuntimeDeployment{
- ledger:TaskLedger;authorize?:Authorizer;
- constructor(ledger:TaskLedger,options:{authorize?:Authorizer}={}){this.ledger=ledger;this.authorize=options.authorize;}
+ ledger:TaskLedger;authorize?:Authorizer;verifyCandidate?:(descriptor:DeploymentDescriptor)=>DeploymentDescriptor;expectedGeneration?:number;
+ constructor(ledger:TaskLedger,options:{authorize?:Authorizer;verifyCandidate?:(descriptor:DeploymentDescriptor)=>DeploymentDescriptor;expectedGeneration?:number}={}){
+  this.ledger=ledger;this.authorize=options.authorize;this.verifyCandidate=options.verifyCandidate;this.expectedGeneration=options.expectedGeneration;
+ }
  history(){return deploymentHistory(this.ledger.db);}
  current(){return this.history().at(-1)??null;}
+ /** 授权主题绑定规范账本路径，不能把相同候选的许可用于另一个账本。 */
+ subject(descriptor:DeploymentDescriptor,action:'upgrade'|'rollback'){
+  valid(descriptor);const file=this.ledger.db.prepare('PRAGMA database_list').all().find(row=>row.name==='main')!.file;
+  return {action,identitySha256:sha256(stableJson({ledgerPathSha256:sha256(realpathSync(String(file))),generation:this.current()?.generation??0,descriptor}))};
+ }
  private select(descriptor:DeploymentDescriptor,request:AuthorizationRequest,action:'upgrade'|'rollback'){
-  valid(descriptor);
+  descriptor=parseJson(stableJson(descriptor));valid(descriptor);
   return this.ledger.transaction(()=>{
    const current=this.current(),schema=Number(this.ledger.db.prepare('PRAGMA user_version').get()!.user_version);
+   check(this.expectedGeneration===undefined||this.expectedGeneration===(current?.generation??0),'runtime_generation_stale');
    check(descriptor.ledgerSchemas.includes(schema),'runtime_state_incompatible');
-   const subject={action,identitySha256:sha256(stableJson({generation:current?.generation??0,descriptor}))};
+   const subject=this.subject(descriptor,action);
    requireAuthorization(this.authorize,request,subject);
    // 超时不等于停止；未知 attempt、持久工程占用和未提交计划都必须先处理。
    check(!this.ledger.db.prepare("SELECT task_id FROM tasks WHERE state NOT IN ('verifying','review_ready','completed','failed','cancelled')").get()
     &&!this.ledger.db.prepare('SELECT task_id FROM project_leases').get()
     &&!this.ledger.db.prepare("SELECT attempt_id FROM attempts WHERE state IN ('intent','submitted','unknown')").get()
     &&!this.ledger.db.prepare("SELECT task_id FROM task_resources WHERE state!='settled'").get(),'runtime_not_drained');
+   if(this.verifyCandidate){
+    const measured=this.verifyCandidate(parseJson(stableJson(descriptor)));valid(measured);
+    const base=(d:DeploymentDescriptor)=>({...d,runtimeIdentity:{...d.runtimeIdentity,capabilitySnapshotSha256:null}});
+    check(stableJson(base(measured))===stableJson(base(descriptor)),'runtime_probe_changed');
+    descriptor=parseJson(stableJson(measured));
+   }
    requireAuthorization(this.authorize,request,subject);
    const generation=(current?.generation??0)+1,data=stableJson(descriptor);
    this.ledger.db.prepare('INSERT INTO runtime_deployments VALUES(?,?,?,?,?,?)')

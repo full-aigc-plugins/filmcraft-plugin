@@ -63,7 +63,15 @@ export class PythonWorkflowRunner {
     if (source) { argv.push('--source', resolve(source)); }
     const result = spawnSync(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
       { encoding: 'utf8', timeout: 180_000, maxBuffer: 4 * 1024 * 1024, shell: false });
-    check(!result.error && result.status === 0, 'native_preflight_failed', result.stderr.trim().slice(-2048));
+    if(result.error || result.status!==0){
+      let code='native_preflight_failed';
+      try{
+        const failure=parseJson(result.stdout??'');
+        if(failure.schema==='filmcraft-native-preflight-error/v1'
+          &&['capability_missing','capability_unknown','capability_contract_drift','capability_identity_mismatch'].includes(failure.error?.code)){code=failure.error.code;}
+      }catch{/* 未知或畸形输出保持明确失败，不提升为能力已验证。 */}
+      check(false,code);
+    }
     const preflight = parseJson(result.stdout);
     check(preflight.schema === 'filmcraft-native-preflight/v1' && isObject(preflight.inputHashes)
       && Object.values(preflight.inputHashes).every(isHash)

@@ -1,0 +1,26 @@
+✔ runtime switch persists generation, retains old identity and fences stale admission (5.452ms)
+✔ planned, live and unknown work prevent upgrade without switching identity (3.489167ms)
+✔ compatible rollback preserves history and incompatible schema cannot become active (2.991917ms)
+✔ runtime selection cannot be authorized by its own body (1.84125ms)
+✔ selection survives a new connection and history corruption fails closed (3.838792ms)
+✔ live execution retains its occupancy and refuses runtime replacement (3.926167ms)
+✔ unknown execution retains its occupancy and refuses runtime replacement (3.648875ms)
+✔ revoked authorization before publication preserves generation and old identity (2.303417ms)
+✔ activation write transaction excludes another admission connection before selection publication (3.808833ms)
+✔ an upgrade grant subject is specific to its actual ledger path (3.645542ms)
+✔ failed or identity-drifting live probe cannot publish a new generation (2.665833ms)
+✔ a stale activation generation is rejected before probing or publishing (2.869959ms)
+✔ upgrade probe subject is read-only and binds ledger, runtime home, source and plan (32.774125ms)
+✔ unauthorized runtime probe installs nothing and leaves ledger untouched (12.823083ms)
+✔ runtime CLI subject does not create a grant, installation, or ledger writes (180.442625ms)
+✔ source drift during authorization is refused before installing a runtime (19.141709ms)
+✔ probe authorization binds another ledger and interpreter rather than trusting a reference (86.253166ms)
+✔ capability refusal survives the Python preflight boundary as capability_missing (52.77975ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 470.817208

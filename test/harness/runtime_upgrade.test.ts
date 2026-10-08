@@ -1,0 +1,69 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+import { existsSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { RuntimeUpgrade } from '../../src/adapters/runtime_upgrade.ts';
+import { fingerprintSkill } from '../../src/adapters/python_workflow.ts';
+import { workspace, hash } from './fixtures.ts';
+import { readFileSync } from 'node:fs';
+
+function setup(t:any){
+ const root=workspace(t),file=join(root,'state.sqlite'),db=new TaskLedger(file);db.close();
+ const skill=new URL('../../skills/filmcraft-use',import.meta.url).pathname;
+ const lock=JSON.parse(readFileSync(new URL('../../skills.lock.json',import.meta.url),'utf8'));
+ const candidate=join(root,'candidate.json'),plan=join(root,'plan.json');
+ writeFileSync(candidate,JSON.stringify({schema:'filmcraft-runtime-candidate/v1',skillDirectory:skill,
+  sourceRevision:lock.sources[0].sha,sourceTreeSha256:fingerprintSkill(skill)}));
+ writeFileSync(plan,JSON.stringify({document:{name:'Probe',width:32,height:32,frameRate:{num:12,den:1}},operations:[],exports:{}}));
+ const options={candidateFile:candidate,planFile:plan,ledgerFile:file,runtimeHome:join(root,'runtime'),python:process.env.FILMCRAFT_PYTHON??'python3'};
+ return {root,file,candidate,plan,options,service:new RuntimeUpgrade(options)};
+}
+test('upgrade probe subject is read-only and binds ledger, runtime home, source and plan',t=>{
+ const f=setup(t),before=readFileSync(f.file),subject=f.service.probeSubject();
+ assert.deepEqual(readFileSync(f.file),before);assert.equal(existsSync(f.options.runtimeHome),false);
+ assert.notEqual(new RuntimeUpgrade({...f.options,runtimeHome:join(f.root,'other')}).probeSubject().identitySha256,subject.identitySha256);
+ writeFileSync(f.plan,readFileSync(f.plan,'utf8')+'\n');
+ assert.notEqual(f.service.probeSubject().identitySha256,subject.identitySha256);
+});
+test('unauthorized runtime probe installs nothing and leaves ledger untouched',t=>{
+ const f=setup(t),before=readFileSync(f.file);
+ assert.throws(()=>f.service.probe({authorizationRef:'grant',authorizationScopeSha256:hash()}),/authorization_verifier_required/);
+ assert.equal(existsSync(f.options.runtimeHome),false);assert.deepEqual(readFileSync(f.file),before);
+});
+test('runtime CLI subject does not create a grant, installation, or ledger writes',t=>{
+ const f=setup(t),before=readFileSync(f.file),cli=new URL('../../src/cli/runtime.ts',import.meta.url).pathname;
+ const argv=[cli,'probe-subject','--candidate',f.candidate,'--plan',f.plan,'--ledger',f.file,'--runtime-home',f.options.runtimeHome];
+ const r=spawnSync(process.execPath,argv,{encoding:'utf8'});assert.equal(r.status,0,r.stdout+r.stderr);
+ assert.deepEqual(JSON.parse(r.stdout),f.service.probeSubject());assert.deepEqual(readFileSync(f.file),before);
+ const run=spawnSync(process.execPath,[...argv.slice(0,1),'probe',...argv.slice(2),'--authorization-ref','grant','--authorization-scope-sha256',hash(),'--authorization-root',join(f.root,'grants')],{encoding:'utf8'});
+ assert.equal(run.status,1);assert.equal(JSON.parse(run.stdout).error.code,'authorization_required');assert.equal(existsSync(f.options.runtimeHome),false);
+});
+test('source drift during authorization is refused before installing a runtime',async t=>{
+ const f=setup(t);const {fixtureAuthorizer}=await import('./fixtures.ts');
+ const service=new RuntimeUpgrade(f.options,(subject,request)=>{writeFileSync(f.plan,'{}');return fixtureAuthorizer(subject,request);});
+ assert.throws(()=>service.probe({authorizationRef:'grant',authorizationScopeSha256:hash()}),/runtime_probe_changed/);
+ assert.equal(existsSync(f.options.runtimeHome),false);
+});
+test('probe authorization binds another ledger and interpreter rather than trusting a reference',t=>{
+ const f=setup(t),other=join(f.root,'other.sqlite'),db=new TaskLedger(other);db.close();
+ assert.notEqual(new RuntimeUpgrade({...f.options,ledgerFile:other}).probeSubject().identitySha256,f.service.probeSubject().identitySha256);
+ assert.notEqual(new RuntimeUpgrade({...f.options,python:process.execPath}).probeSubject().identitySha256,f.service.probeSubject().identitySha256);
+});
+test('capability refusal survives the Python preflight boundary as capability_missing',async t=>{
+ const {mkdirSync}=await import('node:fs');const {PythonWorkflowRunner}=await import('../../src/adapters/python_workflow.ts');
+ const f=setup(t),skill=join(f.root,'synthetic-skill'),scripts=join(skill,'scripts');mkdirSync(scripts,{recursive:true});
+ const sources:{[key:string]:string}={
+  'runtime.lock.json':readFileSync(new URL('../../skills/filmcraft-use/scripts/runtime.lock.json',import.meta.url),'utf8'),
+  'commands.py':'import json\nreply_json=json.loads\ndef runtime_rows(*args): return []\ndef capability_snapshot(*args,**kwargs): return {}\n',
+  'workflow.py':'def validate(*args): pass\ndef preflight_assets(*args): pass\n',
+  'bootstrap.py':"def install(*args): return {'executable':'synthetic-no-native-process'}\n",
+  'mcp_session.py':'class Session:\n def __init__(self,*args): pass\n def __enter__(self): return self\n def __exit__(self,*args): pass\n',
+  'capabilities.py':"def enforce(*args): raise ValueError('capability_missing: synthetic-operation')\n"
+ };
+ for(const [name,data] of Object.entries(sources)){writeFileSync(join(scripts,name),data);}
+ const runner=new PythonWorkflowRunner(null as any,null as any,{skillDirectory:skill,sourceRevision:'a'.repeat(40),runtimeHome:join(f.root,'unused-runtime'),pluginVersion:'synthetic',python:f.options.python});
+ assert.throws(()=>runner.prepare(f.plan,join(f.root,'output')),(e:any)=>e.code==='capability_missing');
+ assert.equal(existsSync(join(f.root,'output')),false);
+});

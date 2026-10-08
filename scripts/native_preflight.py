@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 
@@ -48,4 +49,12 @@ if __name__ == '__main__':
     parser.add_argument('--runtime-home', type=Path, required=True)
     parser.add_argument('--source', type=Path)
     args = parser.parse_args()
-    print(json.dumps(inspect(args.skill_dir, args.plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
+    try:
+        print(json.dumps(inspect(args.skill_dir, args.plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
+    except Exception as error:
+        # 仅传播明确的能力拒绝码；不把本地路径、堆栈或任意原生文本当成公共错误合同。
+        code = str(error).split(':', 1)[0]
+        if code not in {'capability_missing', 'capability_unknown', 'capability_contract_drift', 'capability_identity_mismatch'}:
+            code = 'native_preflight_failed'
+        print(json.dumps({'schema': 'filmcraft-native-preflight-error/v1', 'error': {'code': code}}))
+        sys.exit(1)

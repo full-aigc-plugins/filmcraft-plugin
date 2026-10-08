@@ -1,0 +1,56 @@
+✖ capability refusal survives the Python preflight boundary as capability_missing (59.434041ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 142.912875
+
+✖ failing tests:
+
+test at test/harness/runtime_upgrade.test.ts:54:1
+✖ capability refusal survives the Python preflight boundary as capability_missing (59.434041ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  HarnessError: native_preflight_failed: Traceback (most recent call last):
+    File "[PLUGIN_ROOT]/scripts/native_preflight.py", line 51, in <module>
+      print(json.dumps(inspect(args.skill_dir, args.plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
+                       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "[PLUGIN_ROOT]/scripts/native_preflight.py", line 35, in inspect
+      load('capabilities').enforce(snapshot, requirements, requested)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "[TEMP_PATH]", line 1, in enforce
+      def enforce(*args): raise ValueError('capability_missing: synthetic-operation')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ValueError: capability_missing: synthetic-operation
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:67:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: HarnessError: native_preflight_failed: Traceback (most recent call last):
+      File "[PLUGIN_ROOT]/scripts/native_preflight.py", line 51, in <module>
+        print(json.dumps(inspect(args.skill_dir, args.plan, args.output, args.runtime_home, args.source), ensure_ascii=False))
+                         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "[PLUGIN_ROOT]/scripts/native_preflight.py", line 35, in inspect
+        load('capabilities').enforce(snapshot, requirements, requested)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "[TEMP_PATH]", line 1, in enforce
+        def enforce(*args): raise ValueError('capability_missing: synthetic-operation')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ValueError: capability_missing: synthetic-operation
+        at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+        at PythonWorkflowRunner.prepare (file://[PLUGIN_ROOT]/src/adapters/python_workflow.ts:66:5)
+        at file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:67:27
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:67:9)
+        at async Test.run (node:internal/test_runner/test:1332:7)
+        at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3),
+    operator: 'throws',
+    diff: 'simple'
+  }

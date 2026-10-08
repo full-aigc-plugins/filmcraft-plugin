@@ -1,5 +1,8 @@
 # FilmCraft Agent Plugin
 
+dev.61 source candidate adds the authorized runtime upgrade CLI and fresh probe binding. Two-phase grants, drain/identity checks and stable capability errors protect selection and rollback. Fixed-release and complete FC-RT-002 qualification remain pending;29 full-V1 tasks stay open. [Entry and boundaries](docs/FilmCraft-Runtime-Upgrade.md).
+
+
 dev.60 source candidate adds durable runtime selection, admission fencing, drain checks and schema6 backed migration. Runtime upgrade CLI/probe binding and fixed native upgrade qualification remain pending; OpenSpec2.4–2.6 and29 full-V1 tasks stay open. The previous fixed dev.59 quality/artifact evidence applies to its immutable tag only.
 
 
@@ -50,7 +53,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.60` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.61` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -70,7 +73,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.60`; skill source: `0.1.0-dev.46`; 13 independent skills.
+Current plugin: `0.1.0-dev.61`; skill source: `0.1.0-dev.46`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -174,7 +177,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.60 |
+| Metadata version | 0.1.0-dev.61 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.46 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |

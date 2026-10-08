@@ -69,3 +69,21 @@ test('activation write transaction excludes another admission connection before 
  service.activate(f.descriptor(f.next),f.grant);assert.equal(blocked,2);
  assert.throws(()=>other.register(f.old),/runtime_selection_mismatch/);
 });
+test('an upgrade grant subject is specific to its actual ledger path',t=>{
+ const f=setup(t),other=new TaskLedger(join(f.root,'another.sqlite'));t.after(()=>other.close());
+ const descriptor=f.descriptor(f.old);
+ assert.notEqual(f.service.subject(descriptor,'upgrade').identitySha256,new RuntimeDeployment(other).subject(descriptor,'upgrade').identitySha256);
+});
+test('failed or identity-drifting live probe cannot publish a new generation',t=>{
+ const f=setup(t);f.service.activate(f.descriptor(f.old),f.grant);
+ for(const verifyCandidate of [()=>{throw new Error('probe_failed');},(d:any)=>({...d,sourceTreeSha256:hash('f')})]){
+  const service=new RuntimeDeployment(f.ledger,{authorize:fixtureAuthorizer,verifyCandidate});
+  assert.throws(()=>service.activate(f.descriptor(f.next),f.grant),/probe_failed|runtime_probe_changed/);
+  assert.equal(f.service.current().generation,1);
+ }
+});
+test('a stale activation generation is rejected before probing or publishing',t=>{
+ const f=setup(t);f.service.activate(f.descriptor(f.old),f.grant);let probed=false;
+ const service=new RuntimeDeployment(f.ledger,{authorize:fixtureAuthorizer,expectedGeneration:0,verifyCandidate:d=>{probed=true;return d;}});
+ assert.throws(()=>service.activate(f.descriptor(f.next),f.grant),/runtime_generation_stale/);assert.equal(probed,false);
+});

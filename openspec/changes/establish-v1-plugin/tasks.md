@@ -463,3 +463,5 @@ dev.42 发行进展：已实现只读诊断和原尝试状态修复；本地原�
 6.1—6.6 当前固定 dev.59/source46/craft.5 合同验收：`docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json`；FC-QA-001/002 全八场景索引位于 `docs/evidence/fc-qa-001/` 与 `docs/evidence/fc-qa-002/`。135/135 实际安装回归、49 条场景记录；原生速度/时长局部修订、独立重新评审、非目标保全及预算停止通过。历史行为红灯保留并绑定摘要。创作 manual_review、用户接受 NOT_RUN、其他平台和任意创作返工未验收，完整 V1 仍有29项开放。
 
 2.4—2.6 在研检查点（dev.60 候选）：增加 schema6 运行时选择历史、排空及注册／领取／尝试门禁，schema1—5 显式备份迁移；目标行为红灯和源码回归记录见后续 runtime-deployment 候选证据。真实升级入口的探测／兼容身份绑定、公开固定安装和完整场景验收尚未完成，不勾选这三项任务。
+
+2.4—2.6 dev.61 源码入口候选：`docs/evidence/filmcraft61-runtime-upgrade-candidate-20261009/acceptance.json`，实际私有宿主许可、重新探测、craft.4→craft.5切换、一次原生交付与独立全解码、回退及4类拒绝通过；18项入口/部署测试和154/154源码原生回归通过。当前固定安装、完整模式与故障场景仍待验收，三项任务保持开放，不以该候选关闭完整FC-RT-002。

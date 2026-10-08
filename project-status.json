@@ -152,7 +152,9 @@
     "fixedCapabilityEvidence": "docs/evidence/filmcraft44-fixed-capabilities-20261008.json",
     "fixedLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
     "lineageStatus": "four legacy formats, original CAS, same-attempt context, stale/conflict refusal and bounded partial handoff repair passed actual fixed install",
-    "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json"
+    "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
+    "resourceCandidateEvidence": "docs/evidence/filmcraft49-resources-candidate-20261008.json",
+    "resourceStatus": "source candidate81/81 native/state and47 Python passed; schema4 durable scope, quota refusal, shared continuation budget and identity-bound POSIX cancellation; fixed49 installed acceptance pending; tasks9.19-9.21 remain open"
   },
   "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
   "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json"

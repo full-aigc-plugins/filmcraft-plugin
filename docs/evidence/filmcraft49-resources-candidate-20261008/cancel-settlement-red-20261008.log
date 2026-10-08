@@ -1,0 +1,31 @@
+✖ restart after confirmed cancellation but before settlement finishes accounting exactly once (125.121208ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 214.428625
+
+✖ failing tests:
+
+test at test/harness/cancellation.test.ts:88:1
+✖ restart after confirmed cancellation but before settlement finishes accounting exactly once (125.121208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'reserved'
+  - 'settled'
+  
+      at TestContext.<anonymous> (file://[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/test/harness/cancellation.test.ts:94:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'reserved',
+    expected: 'settled',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

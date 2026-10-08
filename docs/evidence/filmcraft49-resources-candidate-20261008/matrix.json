@@ -1,0 +1,1016 @@
+[
+  {
+    "scenario": "actual-budget-cancel-confirmed",
+    "layer": "actual controlled POSIX process group",
+    "requestState": "cancel_requested",
+    "finalState": "cancelled",
+    "signalled": true,
+    "partialPreserved": true
+  },
+  {
+    "scenario": "budget-cancel-unsupported",
+    "layer": "actual controlled process, declared stop unsupported",
+    "state": "cancel_requested",
+    "process": "running",
+    "signalled": false,
+    "reservation": "reserved",
+    "occupancy": 1
+  },
+  {
+    "scenario": "budget-cancel-pid-reuse",
+    "layer": "injected birth mismatch on actual controlled process",
+    "state": "cancel_requested",
+    "process": "unknown",
+    "signalled": false,
+    "originalStillRunning": true
+  },
+  {
+    "scenario": "budget-cancel-reply-lost",
+    "layer": "actual controlled process and reopened SQLite",
+    "state": "cancelled",
+    "attempts": 1,
+    "cancelIntents": 1,
+    "duplicateSignal": false
+  },
+  {
+    "scenario": "budget-parent-cancel-live-child",
+    "layer": "actual identity-bound detached child",
+    "childState": "cancel_requested",
+    "childStillRunning": true,
+    "sameScope": true,
+    "newDependencyRefused": true
+  },
+  {
+    "scenario": "budget-host-exited-child-alive",
+    "layer": "actual host exit and identity-bound detached child",
+    "hostExitCode": 0,
+    "child": "running",
+    "state": "cancel_requested",
+    "reservation": "reserved",
+    "occupancy": 1
+  },
+  {
+    "scenario": "budget-cancel-private-cli",
+    "layer": "actual CLI, private grant and controlled POSIX process",
+    "requestOnlyKeptRunning": true,
+    "unauthorizedSignalRefused": true,
+    "confirmed": "cancelled"
+  },
+  {
+    "scenario": "actual-native-budget-and-cancellation",
+    "layer": "actual Python/native output, shared continuation budget and authorized stop",
+    "schemaVersion": 4,
+    "sharedScope": "lost-reply",
+    "parentTaskId": "lost-reply",
+    "childTaskId": "continue-1",
+    "reservations": [
+      {
+        "task_id": "lost-reply",
+        "scope_id": "lost-reply",
+        "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":0,\"slots\":1,\"timeMs\":300000}",
+        "state": "settled",
+        "reserved_at": 1791467590604,
+        "consumed": "{\"diskBytes\":438357,\"outputBytes\":438357,\"revisions\":0,\"slots\":0,\"timeMs\":1039}",
+        "process_identity": "{\"attemptId\":\"e6b3bd86-34e5-41ba-ab69-4c5034da22d0\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":6542,\"pid\":6542,\"ppid\":4733,\"started\":\"1791467590.635042\",\"uid\":501},\"stopSupported\":true}"
+      },
+      {
+        "task_id": "continue-1",
+        "scope_id": "lost-reply",
+        "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":1,\"slots\":1,\"timeMs\":300000}",
+        "state": "settled",
+        "reserved_at": 1791467592296,
+        "consumed": "{\"diskBytes\":416618,\"outputBytes\":416618,\"revisions\":1,\"slots\":0,\"timeMs\":457}",
+        "process_identity": "{\"attemptId\":\"8ca40eca-48e9-4b85-8f0c-98b13fbb11e3\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":7526,\"pid\":7526,\"ppid\":4733,\"started\":\"1791467592.328260\",\"uid\":501},\"stopSupported\":true}"
+      }
+    ],
+    "outputLimit": {
+      "state": "failed",
+      "reason": "budget_output_exceeded",
+      "bytes": 438353,
+      "partialProjectPreserved": true,
+      "dependencyAttempts": 0
+    },
+    "cancellation": {
+      "taskId": "cancel-native",
+      "attempts": 1,
+      "state": "cancelled",
+      "stopped": true,
+      "authorization": "actual private host LocalAuthorizationStore"
+    }
+  },
+  {
+    "scenario": "actual-native-repair-and-continuation",
+    "layer": "actual Python/native create, lost reply, repair and continued editing; actual private host grants",
+    "nativeBefore": {
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/capabilities.json": "969ca67cafc98b01f4fa6617f1bd0ac8710d8ddcd997155be10a85171357f8c4",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/decode.txt": "23baf1192eb51c5cb7028d10f3521e7bd59daba109711e0bfb7c4fefa6b6cc61",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/exchange-loss.json": "9ccfd1d926e34b1c6eeeed11f85fe6f428b265b3dd5cfa292171d0c05dbe013d",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/export-probe.json": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/film.mp4": "73bb18aa66928337592ece4485972b8f03de6038313883695acdccd140b3a0f8",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/frame-0000.png": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/manifest.json": "8e8df32c6cee8b4249b533b6c1d2920377fab1fa930074ba7aeab9195f01e9b1",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/native.json": "b26d553779fd299666028dea97ec3794a3210eb3d8ddca25048fbfee279dd51a",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/operations.json": "cf0c527b086353d0288a4ff9c2d1f23e47e614c94389bdf6c424f966338ec4fd",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/plan.json": "da2bcc0d7aa1ae3b142fcdb0e2714b57cf63e7cb6bd67819f021e44bdbf58d66",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/project.fcproj": "eaff8cc5d9419475f730660fc4322777cedb564a3d7c3cfc89dec33b8c09b96e",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/still.png": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/.filmcraft-execution-34af457ce7ec8b18e4238ccfd101e89f4513ddb9cd84b187df32a1581ceb769f.json": "ef7ffa428f38e008e0f0345371cadbef186a5755481f2f56ac2882c95b2d39e4"
+    },
+    "nativeAfter": {
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/capabilities.json": "969ca67cafc98b01f4fa6617f1bd0ac8710d8ddcd997155be10a85171357f8c4",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/decode.txt": "23baf1192eb51c5cb7028d10f3521e7bd59daba109711e0bfb7c4fefa6b6cc61",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/exchange-loss.json": "9ccfd1d926e34b1c6eeeed11f85fe6f428b265b3dd5cfa292171d0c05dbe013d",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/export-probe.json": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/film.mp4": "73bb18aa66928337592ece4485972b8f03de6038313883695acdccd140b3a0f8",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/frame-0000.png": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/manifest.json": "8e8df32c6cee8b4249b533b6c1d2920377fab1fa930074ba7aeab9195f01e9b1",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/native.json": "b26d553779fd299666028dea97ec3794a3210eb3d8ddca25048fbfee279dd51a",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/operations.json": "cf0c527b086353d0288a4ff9c2d1f23e47e614c94389bdf6c424f966338ec4fd",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/plan.json": "da2bcc0d7aa1ae3b142fcdb0e2714b57cf63e7cb6bd67819f021e44bdbf58d66",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/project.fcproj": "eaff8cc5d9419475f730660fc4322777cedb564a3d7c3cfc89dec33b8c09b96e",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/lost-reply/still.png": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+      "[TEST_ROOT]/tmp/filmcraft-harness-Wazrki/.filmcraft-execution-34af457ce7ec8b18e4238ccfd101e89f4513ddb9cd84b187df32a1581ceb769f.json": "ef7ffa428f38e008e0f0345371cadbef186a5755481f2f56ac2882c95b2d39e4"
+    },
+    "originalAttempts": [
+      {
+        "attempt_id": "e6b3bd86-34e5-41ba-ab69-4c5034da22d0",
+        "task_id": "lost-reply",
+        "epoch": 1,
+        "operation_key": "workflow:b1f7c42721b085bb61be615c98c65db0ca691ef7e9946f6d6a6d0eea8afa5ca4",
+        "state": "succeeded",
+        "pid": 6542,
+        "receipt_sha256": "8e8df32c6cee8b4249b533b6c1d2920377fab1fa930074ba7aeab9195f01e9b1"
+      }
+    ],
+    "childAttempts": [
+      {
+        "attempt_id": "8ca40eca-48e9-4b85-8f0c-98b13fbb11e3",
+        "task_id": "continue-1",
+        "epoch": 1,
+        "operation_key": "workflow:f58ca21d845c5bd4cfcf37f29596b99b21acf6aba1e37e8fddf3a5d9957fcc69",
+        "state": "succeeded",
+        "pid": 7526,
+        "receipt_sha256": "3ea54a6a34d2f05a73ee82f8b46525fcd1c0c055cb9eddd7db572de35ff25968"
+      }
+    ],
+    "recoveryIntents": [
+      {
+        "intent_id": "7b57e649-9e01-47d8-8371-e76886c91dee",
+        "task_id": "lost-reply",
+        "attempt_id": "e6b3bd86-34e5-41ba-ab69-4c5034da22d0",
+        "epoch": 3,
+        "owner": "1b29078d-63ba-45df-8e25-92c943b59c08",
+        "lease_until": 1791467621217,
+        "evidence_sha256": "c0a0cf1c7e1ce8dae7016df8e87c1adb779b19656741ae5fc92ea75659c45f9e",
+        "state": "applied",
+        "completion_sha256": "d34bc12ea2bbe328533d849c57d1a681c047ae593b718dae71354cda6cf9acf1",
+        "reason": null
+      }
+    ],
+    "continuationIntents": [
+      {
+        "intent_id": "8d6e2d27-07ef-4e4a-8c20-3cbd7966fb8a",
+        "parent_task_id": "lost-reply",
+        "parent_attempt_id": "e6b3bd86-34e5-41ba-ab69-4c5034da22d0",
+        "parent_epoch": 3,
+        "child_task_id": "continue-1",
+        "binding_sha256": "936ec58a8889f437d3627cb0d855a8b551bba1a5a1bc585577a245b2b05d960f",
+        "evidence_sha256": "97085abf15dd4d1036f3c835e5eaac691ffedd7efa03db8378ddddfd1f90f7d6",
+        "state": "applied"
+      }
+    ],
+    "readonlyFilesPreserved": true,
+    "originalReplayed": false,
+    "quality": "NOT_RUN"
+  },
+  {
+    "scenario": "readonly-wal-and-missing-receipts",
+    "layer": "synthetic receipts; actual SQLite WAL",
+    "before": {
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "da8ef689f540e4525bdd87337b97147fb28adb1b6ab6aee19a86eef505472dff",
+      "ledger.sqlite-wal": "ce5205f3eead0fcdbbc0b98a668bb7b4bd033a7f7a821eb1e14e879f0dd8d2b2"
+    },
+    "after": {
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "da8ef689f540e4525bdd87337b97147fb28adb1b6ab6aee19a86eef505472dff",
+      "ledger.sqlite-wal": "ce5205f3eead0fcdbbc0b98a668bb7b4bd033a7f7a821eb1e14e879f0dd8d2b2"
+    },
+    "inspection": {
+      "schema": "filmcraft-inspection/v1",
+      "taskId": "task-1",
+      "task": {
+        "state": "reconciling",
+        "epoch": 2,
+        "attemptId": "3e917470-0cba-4b8e-b102-c668620c3104"
+      },
+      "process": {
+        "status": "unknown",
+        "pid": null
+      },
+      "bindingSha256": "32107ff02ad3ecdadf4790e5b9dcbbb06929d1981670528f9be084636c402725",
+      "contentSha256": null,
+      "receipts": {
+        "delivery": null,
+        "execution": null
+      },
+      "replayAllowed": false,
+      "ledgerIdentity": {
+        "database": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+        "wal": "ce5205f3eead0fcdbbc0b98a668bb7b4bd033a7f7a821eb1e14e879f0dd8d2b2"
+      },
+      "diagnosis": "unknown",
+      "error": {
+        "code": "process_identity_unknown"
+      },
+      "observedAt": "2026-10-08T13:53:17.883Z",
+      "evidenceSha256": "13d842e6ea215c2790a682f974969bbee91acc97110ddff249595178dfbfc66a"
+    },
+    "state": {
+      "taskId": "task-1",
+      "state": "reconciling",
+      "epoch": 2,
+      "attemptId": "3e917470-0cba-4b8e-b102-c668620c3104",
+      "binding": {
+        "authorizationRef": "grant-1",
+        "authorizationScopeSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "deadline": 1791471197874,
+        "idempotencyKey": "request-1",
+        "inputHashes": {},
+        "inputRefs": [],
+        "namespace": "local-host",
+        "nativePlanHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "outputRoot": "[TEST_ROOT]/tmp/filmcraft-harness-vQ0ZsW/delivery",
+        "planHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "projectKey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "projectRevision": null,
+        "runtimeIdentity": {
+          "capabilitySnapshotSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "cliVersion": "0.2.0-craft.4",
+          "mode": "headless",
+          "pluginId": "filmcraft",
+          "pluginVersion": "0.1.0-dev.41",
+          "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        "sourceRevision": "dddddddddddddddddddddddddddddddddddddddd",
+        "sourceTreeSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "taskId": "task-1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "3e917470-0cba-4b8e-b102-c668620c3104",
+        "task_id": "task-1",
+        "epoch": 1,
+        "operation_key": "native-workflow",
+        "state": "unknown",
+        "pid": null,
+        "receipt_sha256": null
+      }
+    ]
+  },
+  {
+    "scenario": "missing-and-damaged-ledgers",
+    "layer": "synthetic damaged SQLite bytes",
+    "before": {
+      "broken.sqlite": "e2a7f22660c2692658a3da127162b88ca8d08b51e19f2a0797c6b4d66d83a730"
+    },
+    "after": {
+      "broken.sqlite": "e2a7f22660c2692658a3da127162b88ca8d08b51e19f2a0797c6b4d66d83a730"
+    },
+    "result": "unknown"
+  },
+  {
+    "scenario": "lost-reply-and-old-epoch",
+    "layer": "synthetic native receipts; actual stopped process",
+    "before": {
+      ".filmcraft-execution-f5a61b111d3bc56a78b236b9056f1bba0816b5cea019dab96d1c84552f3ee504.json": "f911c739fb8c4e21f873d85e89536c8f0505b7414e2d8fa08e0bc80d1090ac4a",
+      "delivery/capabilities.json": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+      "delivery/manifest.json": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/plan.json": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+      "delivery/project.fcproj": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "2d86f5f672a8adb35bf8bd9d9cb21eb85b09ea42a77dda1f186dff84911d3cbe",
+      "ledger.sqlite-wal": "45b0a54d8e38fc2e6927b7f96b61c1b845ca5eae52cf6cd2a824541e18944e34"
+    },
+    "after": {
+      ".filmcraft-execution-f5a61b111d3bc56a78b236b9056f1bba0816b5cea019dab96d1c84552f3ee504.json": "f911c739fb8c4e21f873d85e89536c8f0505b7414e2d8fa08e0bc80d1090ac4a",
+      "blobs/532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "blobs/f911c739fb8c4e21f873d85e89536c8f0505b7414e2d8fa08e0bc80d1090ac4a": "f911c739fb8c4e21f873d85e89536c8f0505b7414e2d8fa08e0bc80d1090ac4a",
+      "delivery/capabilities.json": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+      "delivery/manifest.json": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/plan.json": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+      "delivery/project.fcproj": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "22ac56fbc91c7ba4866fb5affe31a817bb2d3d0178bc5da5cfc2e83fbcf81906",
+      "ledger.sqlite-wal": "97d46d1850ba9eb902a5b4ee222780ce835cab933d74a6679473b56d79aeebad"
+    },
+    "inspection": {
+      "schema": "filmcraft-inspection/v1",
+      "taskId": "task-1",
+      "task": {
+        "state": "reconciling",
+        "epoch": 2,
+        "attemptId": "f9189a0d-6f16-4d7e-8ed1-5c6e682da078"
+      },
+      "process": {
+        "status": "stopped",
+        "pid": 10078
+      },
+      "bindingSha256": "7b39ee5ac8e30249e466c2fcc7602a49a0fe14a76ccec9ce90d17a7bb73899af",
+      "contentSha256": "a5599e8aa21c16f8253412420d97abbb71de3e5f951624b0572ad375295ac7eb",
+      "receipts": {
+        "delivery": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+        "execution": "f911c739fb8c4e21f873d85e89536c8f0505b7414e2d8fa08e0bc80d1090ac4a"
+      },
+      "replayAllowed": false,
+      "ledgerIdentity": {
+        "database": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+        "wal": "45b0a54d8e38fc2e6927b7f96b61c1b845ca5eae52cf6cd2a824541e18944e34"
+      },
+      "diagnosis": "executed",
+      "error": null,
+      "observedAt": "2026-10-08T13:53:18.071Z",
+      "evidenceSha256": "6d513eb2e82dd9d4764fb9c046bb55ea779df78aae8c469e5390dbceff0f49c8"
+    },
+    "result": {
+      "taskId": "task-1",
+      "attemptId": "f9189a0d-6f16-4d7e-8ed1-5c6e682da078",
+      "state": "verifying",
+      "replayed": false,
+      "reused": false,
+      "recoveryId": "6a04cc8d-8cc2-4c85-b599-2880f8beea1c",
+      "receipt": {
+        "taskId": "task-1",
+        "attemptId": "f9189a0d-6f16-4d7e-8ed1-5c6e682da078",
+        "state": "verifying",
+        "runtimeIdentity": {
+          "capabilitySnapshotSha256": "e29e8e9567d698e3b0b05fb2546411aed6f93fcf3989cfe130754eba0a142fcd",
+          "cliVersion": "0.2.0-craft.4",
+          "mode": "headless",
+          "pluginId": "filmcraft",
+          "pluginVersion": "0.1.0-dev.41",
+          "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        "status": "linked",
+        "missingReceiptKinds": [],
+        "outputRefs": [
+          {
+            "protocolVersion": "craft-artifact/v1",
+            "assetId": "filmcraft:23222b874e506a35a7c3e7717d7103cb9d4691ad144175c65fc418bc6d56e7b4",
+            "version": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+            "sha256": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+            "bytes": 28,
+            "mediaType": "application/octet-stream",
+            "producerTaskId": "task-1",
+            "sourceRefs": [],
+            "nativeProjectRef": {
+              "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+              "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "location": "project.fcproj"
+            },
+            "renditions": [],
+            "dependencies": [],
+            "technicalMetadata": {},
+            "lossReportRef": null,
+            "evidenceRefs": [
+              {
+                "assetId": "receipt:delivery",
+                "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "location": "manifest.json"
+              }
+            ],
+            "location": "plan.json"
+          },
+          {
+            "protocolVersion": "craft-artifact/v1",
+            "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+            "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+            "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+            "bytes": 37,
+            "mediaType": "application/octet-stream",
+            "producerTaskId": "task-1",
+            "sourceRefs": [],
+            "nativeProjectRef": {
+              "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+              "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "location": "project.fcproj"
+            },
+            "renditions": [],
+            "dependencies": [],
+            "technicalMetadata": {},
+            "lossReportRef": null,
+            "evidenceRefs": [
+              {
+                "assetId": "receipt:delivery",
+                "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "location": "manifest.json"
+              }
+            ],
+            "location": "project.fcproj"
+          },
+          {
+            "protocolVersion": "craft-artifact/v1",
+            "assetId": "filmcraft:3c5bbe1910d457ab600d741b4c6c02b68349655c8535dd7782e962406ff5469c",
+            "version": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+            "sha256": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+            "bytes": 63,
+            "mediaType": "application/octet-stream",
+            "producerTaskId": "task-1",
+            "sourceRefs": [],
+            "nativeProjectRef": {
+              "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+              "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "location": "project.fcproj"
+            },
+            "renditions": [],
+            "dependencies": [],
+            "technicalMetadata": {},
+            "lossReportRef": null,
+            "evidenceRefs": [
+              {
+                "assetId": "receipt:delivery",
+                "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "location": "manifest.json"
+              }
+            ],
+            "location": "capabilities.json"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "assetId": "receipt:delivery",
+            "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+            "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+            "location": "manifest.json"
+          },
+          {
+            "assetId": "receipt:output-execution",
+            "version": "f911c739fb8c4e21f873d85e89536c8f0505b7414e2d8fa08e0bc80d1090ac4a",
+            "sha256": "f911c739fb8c4e21f873d85e89536c8f0505b7414e2d8fa08e0bc80d1090ac4a",
+            "location": ".filmcraft-execution-f5a61b111d3bc56a78b236b9056f1bba0816b5cea019dab96d1c84552f3ee504.json"
+          }
+        ],
+        "technicalAcceptance": "NOT_RUN",
+        "creativeAcceptance": "NOT_RUN",
+        "userAcceptance": "NOT_RUN",
+        "error": null
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "f9189a0d-6f16-4d7e-8ed1-5c6e682da078",
+        "task_id": "task-1",
+        "epoch": 1,
+        "operation_key": "workflow",
+        "state": "succeeded",
+        "pid": 10078,
+        "receipt_sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018"
+      }
+    ],
+    "intents": [
+      {
+        "intent_id": "6a04cc8d-8cc2-4c85-b599-2880f8beea1c",
+        "task_id": "task-1",
+        "attempt_id": "f9189a0d-6f16-4d7e-8ed1-5c6e682da078",
+        "epoch": 3,
+        "owner": "fadc3646-bf5f-448f-93c2-f91bb12fe858",
+        "lease_until": 1791467628254,
+        "evidence_sha256": "6d513eb2e82dd9d4764fb9c046bb55ea779df78aae8c469e5390dbceff0f49c8",
+        "state": "applied",
+        "completion_sha256": "17503717d04fadef053e0579e177e42a0fa12fe1e4a27d7bd8e826a1d850ee56",
+        "reason": null
+      }
+    ]
+  },
+  {
+    "scenario": "expired-recovery-owner",
+    "layer": "actual SQLite fences with controlled time",
+    "intents": [
+      {
+        "intent_id": "a132af6c-650f-4d1e-b7cb-cf95255dc933",
+        "task_id": "task-1",
+        "attempt_id": "f44ce430-70f3-443a-8fbd-901a96a02bd1",
+        "epoch": 3,
+        "owner": "repair-owner",
+        "lease_until": 1791467598808,
+        "evidence_sha256": "955e22ccf31f71d591a9b32380dad2bd91650acceae80977c58e5e29024239ef",
+        "state": "abandoned",
+        "completion_sha256": null,
+        "reason": "recovery_lease_expired"
+      },
+      {
+        "intent_id": "ae09237e-a7c3-49a9-aa2f-82c059831e4b",
+        "task_id": "task-1",
+        "attempt_id": "f44ce430-70f3-443a-8fbd-901a96a02bd1",
+        "epoch": 4,
+        "owner": "fresh-owner",
+        "lease_until": 1791467598829,
+        "evidence_sha256": "955e22ccf31f71d591a9b32380dad2bd91650acceae80977c58e5e29024239ef",
+        "state": "pending",
+        "completion_sha256": null,
+        "reason": null
+      }
+    ],
+    "oldEpoch": 3,
+    "currentEpoch": 4
+  },
+  {
+    "scenario": "repeat-repair",
+    "layer": "synthetic native receipts",
+    "before": {
+      ".filmcraft-execution-5be7eb09794d61013094e20f25834f96fb2d9e088d6e0b9aed3c4b5b07255e65.json": "204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e",
+      "blobs/204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e": "204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e",
+      "blobs/532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/capabilities.json": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+      "delivery/manifest.json": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/plan.json": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+      "delivery/project.fcproj": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "a9d43a52df9aab761e3a6eb1bd20413ccc83433c49450da5df397afde566c564",
+      "ledger.sqlite-wal": "f4f2db52f0c496f610320cee0aac5558d9a844b665437fd8b9b601eba28a9af4"
+    },
+    "after": {
+      ".filmcraft-execution-5be7eb09794d61013094e20f25834f96fb2d9e088d6e0b9aed3c4b5b07255e65.json": "204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e",
+      "blobs/204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e": "204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e",
+      "blobs/532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/capabilities.json": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+      "delivery/manifest.json": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/plan.json": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+      "delivery/project.fcproj": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "a9d43a52df9aab761e3a6eb1bd20413ccc83433c49450da5df397afde566c564",
+      "ledger.sqlite-wal": "f4f2db52f0c496f610320cee0aac5558d9a844b665437fd8b9b601eba28a9af4"
+    },
+    "result": {
+      "taskId": "task-1",
+      "attemptId": "bef9b245-4c56-4500-b37a-b6f9ea926cc9",
+      "state": "verifying",
+      "replayed": false,
+      "reused": true,
+      "recoveryId": "4c28c988-b049-47fe-8537-3389f7bede4d",
+      "receipt": {
+        "taskId": "task-1",
+        "attemptId": "bef9b245-4c56-4500-b37a-b6f9ea926cc9",
+        "state": "verifying",
+        "runtimeIdentity": {
+          "capabilitySnapshotSha256": "e29e8e9567d698e3b0b05fb2546411aed6f93fcf3989cfe130754eba0a142fcd",
+          "cliVersion": "0.2.0-craft.4",
+          "mode": "headless",
+          "pluginId": "filmcraft",
+          "pluginVersion": "0.1.0-dev.41",
+          "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        "status": "linked",
+        "missingReceiptKinds": [],
+        "outputRefs": [
+          {
+            "protocolVersion": "craft-artifact/v1",
+            "assetId": "filmcraft:23222b874e506a35a7c3e7717d7103cb9d4691ad144175c65fc418bc6d56e7b4",
+            "version": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+            "sha256": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+            "bytes": 28,
+            "mediaType": "application/octet-stream",
+            "producerTaskId": "task-1",
+            "sourceRefs": [],
+            "nativeProjectRef": {
+              "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+              "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "location": "project.fcproj"
+            },
+            "renditions": [],
+            "dependencies": [],
+            "technicalMetadata": {},
+            "lossReportRef": null,
+            "evidenceRefs": [
+              {
+                "assetId": "receipt:delivery",
+                "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "location": "manifest.json"
+              }
+            ],
+            "location": "plan.json"
+          },
+          {
+            "protocolVersion": "craft-artifact/v1",
+            "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+            "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+            "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+            "bytes": 37,
+            "mediaType": "application/octet-stream",
+            "producerTaskId": "task-1",
+            "sourceRefs": [],
+            "nativeProjectRef": {
+              "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+              "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "location": "project.fcproj"
+            },
+            "renditions": [],
+            "dependencies": [],
+            "technicalMetadata": {},
+            "lossReportRef": null,
+            "evidenceRefs": [
+              {
+                "assetId": "receipt:delivery",
+                "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "location": "manifest.json"
+              }
+            ],
+            "location": "project.fcproj"
+          },
+          {
+            "protocolVersion": "craft-artifact/v1",
+            "assetId": "filmcraft:3c5bbe1910d457ab600d741b4c6c02b68349655c8535dd7782e962406ff5469c",
+            "version": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+            "sha256": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+            "bytes": 63,
+            "mediaType": "application/octet-stream",
+            "producerTaskId": "task-1",
+            "sourceRefs": [],
+            "nativeProjectRef": {
+              "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+              "version": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "sha256": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+              "location": "project.fcproj"
+            },
+            "renditions": [],
+            "dependencies": [],
+            "technicalMetadata": {},
+            "lossReportRef": null,
+            "evidenceRefs": [
+              {
+                "assetId": "receipt:delivery",
+                "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+                "location": "manifest.json"
+              }
+            ],
+            "location": "capabilities.json"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "assetId": "receipt:delivery",
+            "version": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+            "sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+            "location": "manifest.json"
+          },
+          {
+            "assetId": "receipt:output-execution",
+            "version": "204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e",
+            "sha256": "204e0283cb1536c87e91ca2c17449ee7362b90dd4cb4c8b73c16134931a2eb5e",
+            "location": ".filmcraft-execution-5be7eb09794d61013094e20f25834f96fb2d9e088d6e0b9aed3c4b5b07255e65.json"
+          }
+        ],
+        "technicalAcceptance": "NOT_RUN",
+        "creativeAcceptance": "NOT_RUN",
+        "userAcceptance": "NOT_RUN",
+        "error": null
+      }
+    },
+    "intents": [
+      {
+        "intent_id": "4c28c988-b049-47fe-8537-3389f7bede4d",
+        "task_id": "task-1",
+        "attempt_id": "bef9b245-4c56-4500-b37a-b6f9ea926cc9",
+        "epoch": 3,
+        "owner": "fcad9aa7-a4ff-4786-8248-1eee5fb35328",
+        "lease_until": 1791467630045,
+        "evidence_sha256": "5231065f4d17949cdbf8aa7afdac71b4cfa91c9190d6b35bdefd47735696417d",
+        "state": "applied",
+        "completion_sha256": "1ccfad26d8e97b3e1cb458c01d3190f41a1a38f61891e76ba582f70c82ad6a2e",
+        "reason": null
+      }
+    ]
+  },
+  {
+    "scenario": "two-recovery-executors",
+    "layer": "two actual Node processes; synthetic native receipts",
+    "results": [
+      "APPLIED",
+      "stale_epoch"
+    ],
+    "attempts": [
+      {
+        "attempt_id": "e9712920-e691-4796-8245-b1498c9e130a",
+        "task_id": "task-1",
+        "epoch": 1,
+        "operation_key": "workflow",
+        "state": "succeeded",
+        "pid": 10650,
+        "receipt_sha256": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018"
+      }
+    ],
+    "intents": [
+      {
+        "intent_id": "42a63582-8616-4107-bcec-e2bd28ed83d3",
+        "task_id": "task-1",
+        "attempt_id": "e9712920-e691-4796-8245-b1498c9e130a",
+        "epoch": 3,
+        "owner": "3b44abb6-3349-4342-979d-4726ab9ba9dc",
+        "lease_until": 1791467631704,
+        "evidence_sha256": "6c978b3550a0c5cf388fae579e93fdb56b91b82cacd443599047835b3d314107",
+        "state": "applied",
+        "completion_sha256": "66531379572257f45768259adf7694ff18e77f13d629bffc89dd94aa56bc6048",
+        "reason": null
+      }
+    ],
+    "state": {
+      "taskId": "task-1",
+      "state": "verifying",
+      "epoch": 3,
+      "attemptId": "e9712920-e691-4796-8245-b1498c9e130a",
+      "binding": {
+        "authorizationRef": "grant-1",
+        "authorizationScopeSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "deadline": 1791471201419,
+        "idempotencyKey": "request-1",
+        "inputHashes": {},
+        "inputRefs": [],
+        "namespace": "local-host",
+        "nativePlanHash": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+        "outputRoot": "[TEST_ROOT]/tmp/filmcraft-harness-UWjzXu/delivery",
+        "planHash": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+        "projectKey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "projectRevision": null,
+        "runtimeIdentity": {
+          "capabilitySnapshotSha256": "e29e8e9567d698e3b0b05fb2546411aed6f93fcf3989cfe130754eba0a142fcd",
+          "cliVersion": "0.2.0-craft.4",
+          "mode": "headless",
+          "pluginId": "filmcraft",
+          "pluginVersion": "0.1.0-dev.41",
+          "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        "sourceRevision": "dddddddddddddddddddddddddddddddddddddddd",
+        "sourceTreeSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "taskId": "task-1"
+      }
+    }
+  },
+  {
+    "scenario": "expired-revoked-authorization",
+    "layer": "synthetic receipts; actual authorization gates",
+    "before": {
+      ".filmcraft-execution-70ad2b3544bc931b2fe34d6c5e10ad3c2a2473977aae7386a1203f010dfee65a.json": "284c1b6195b1fd36a524329b757724a0b02651b64de4d6e25c753d125f62c1ee",
+      "delivery/capabilities.json": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+      "delivery/manifest.json": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/plan.json": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+      "delivery/project.fcproj": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "d196f9f7821ea05396eab5e79e8b38669820d4873f25ca3d42b4c6dfad88f78f",
+      "ledger.sqlite-wal": "e430c3bbaef25fca7b94cf89f561dbb2c355ccd75f8ff8c815165c727e97ef64"
+    },
+    "after": {
+      ".filmcraft-execution-70ad2b3544bc931b2fe34d6c5e10ad3c2a2473977aae7386a1203f010dfee65a.json": "284c1b6195b1fd36a524329b757724a0b02651b64de4d6e25c753d125f62c1ee",
+      "delivery/capabilities.json": "0f709d3a6c089609062af6a2e2ec76653647e6e640541abf8f662f685a69ac03",
+      "delivery/manifest.json": "532d48a78310b884237d2a5aafac842c2eae96ccffece8a8b2ff8507ae186018",
+      "delivery/plan.json": "a8c7bebf799ab77552173d024941d813285e0c53573a6be81063956ebc0e414f",
+      "delivery/project.fcproj": "a3744f929cea51862bd7048ae71e4b31b26da8637220dd3eb0869df627b3e890",
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "d196f9f7821ea05396eab5e79e8b38669820d4873f25ca3d42b4c6dfad88f78f",
+      "ledger.sqlite-wal": "e430c3bbaef25fca7b94cf89f561dbb2c355ccd75f8ff8c815165c727e97ef64"
+    },
+    "errors": [
+      "authorization_expired",
+      "authorization_required"
+    ]
+  },
+  {
+    "scenario": "host-exited-child-alive",
+    "layer": "actual exited Node host and detached controlled Node child; not native editing",
+    "before": {
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "628541a0db00d346e5de9e529e73922f1eea6c0b723be441c8d320961a411e34",
+      "ledger.sqlite-wal": "77cdaa72c6759c56876cbfd8393187a4b98d524dcc59298592360f4ac4aa7099"
+    },
+    "after": {
+      "ledger.sqlite": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+      "ledger.sqlite-shm": "628541a0db00d346e5de9e529e73922f1eea6c0b723be441c8d320961a411e34",
+      "ledger.sqlite-wal": "77cdaa72c6759c56876cbfd8393187a4b98d524dcc59298592360f4ac4aa7099"
+    },
+    "hostExitCode": 0,
+    "childPid": 11649,
+    "observation": {
+      "schema": "filmcraft-inspection/v1",
+      "taskId": "task-1",
+      "task": {
+        "state": "reconciling",
+        "epoch": 2,
+        "attemptId": "0e588650-8a2d-4ff7-b757-3356585c5074"
+      },
+      "process": {
+        "status": "alive",
+        "pid": 11649
+      },
+      "bindingSha256": "822387952af170b1236968441c0f2b3a1a5b45ef0b992d6a38ed07064a855e3f",
+      "contentSha256": null,
+      "receipts": {
+        "delivery": null,
+        "execution": null
+      },
+      "replayAllowed": false,
+      "ledgerIdentity": {
+        "database": "fea1a39d176064967274aebd64de2b502378a234a1dbee881ae265dbbae19941",
+        "wal": "77cdaa72c6759c56876cbfd8393187a4b98d524dcc59298592360f4ac4aa7099"
+      },
+      "diagnosis": "running",
+      "error": null,
+      "observedAt": "2026-10-08T13:53:23.222Z",
+      "evidenceSha256": "194cb84caf9c5b41afc510837399ed8634ba0489ee139d353ab040c65b31aba7"
+    },
+    "occupancy": 1
+  },
+  {
+    "scenario": "budget-restart-unknown",
+    "layer": "actual reopened SQLite with synthetic unknown attempt",
+    "reservations": 1,
+    "reused": true,
+    "state": "reserved",
+    "releaseRefused": true
+  },
+  {
+    "scenario": "budget-limit-timeMs",
+    "layer": "deterministic quota boundary",
+    "refused": "budget_time_exceeded",
+    "attempts": 0,
+    "persistedReason": "budget_time_exceeded"
+  },
+  {
+    "scenario": "budget-limit-diskBytes",
+    "layer": "deterministic quota boundary",
+    "refused": "budget_disk_exceeded",
+    "attempts": 0,
+    "persistedReason": "budget_disk_exceeded"
+  },
+  {
+    "scenario": "budget-limit-outputBytes",
+    "layer": "deterministic quota boundary",
+    "refused": "budget_output_exceeded",
+    "attempts": 0,
+    "persistedReason": "budget_output_exceeded"
+  },
+  {
+    "scenario": "budget-limit-slots",
+    "layer": "deterministic quota boundary",
+    "refused": "budget_concurrency_exceeded",
+    "attempts": 0,
+    "persistedReason": "budget_concurrency_exceeded"
+  },
+  {
+    "scenario": "budget-limit-revisions",
+    "layer": "deterministic quota boundary",
+    "refused": "budget_revisions_exceeded",
+    "attempts": 0,
+    "persistedReason": "budget_revisions_exceeded"
+  },
+  {
+    "scenario": "budget-disk-shortage",
+    "layer": "fault injected available-byte probe",
+    "freeBytes": 1,
+    "refused": "disk_space_insufficient",
+    "reservations": 0
+  },
+  {
+    "scenario": "budget-parent-child",
+    "layer": "actual SQLite parent-child shared reservation",
+    "sameScope": true,
+    "sharedDeadline": true,
+    "reservations": 2,
+    "dependencyRefused": "budget_output_exceeded"
+  },
+  {
+    "scenario": "budget-reservation-owner-killed",
+    "layer": "actual SIGKILL after durable reservation",
+    "ownerSignal": "SIGKILL",
+    "reused": true,
+    "reservations": 1
+  },
+  {
+    "scenario": "schema1-upgrade-rollback",
+    "layer": "actual SQLite maintenance; synthetic operation records",
+    "version": 1,
+    "before": {
+      "ledger.sqlite": "11c6fc894b36dfdfc46543a47602a0cc16c174dd1fa8184c5135a0dae518ddd6"
+    },
+    "after": {
+      "ledger.sqlite": "bf4cb12a56487586a46e81c8d13f5990ec863fdaff73a897fe52daa53fcf312c"
+    },
+    "manifest": {
+      "baseRecordsSha256": "b28f40bf80eb12ad072fa918e019e0d857134279d275a2e57d8c81e35e62fc25",
+      "complete": true,
+      "files": {
+        "database.sqlite": "11c6fc894b36dfdfc46543a47602a0cc16c174dd1fa8184c5135a0dae518ddd6",
+        "database.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "shm.audit": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+      },
+      "fromVersion": 1,
+      "recordsSha256": "b28f40bf80eb12ad072fa918e019e0d857134279d275a2e57d8c81e35e62fc25",
+      "schema": "filmcraft-ledger-backup/v1",
+      "toVersion": 4
+    },
+    "logicalBeforeSha256": "b28f40bf80eb12ad072fa918e019e0d857134279d275a2e57d8c81e35e62fc25",
+    "logicalAfterSha256": "b28f40bf80eb12ad072fa918e019e0d857134279d275a2e57d8c81e35e62fc25",
+    "originalAttemptId": "6957dcb2-2694-4280-aefa-5a363a466862",
+    "recordsPreserved": true
+  },
+  {
+    "scenario": "schema2-upgrade-rollback",
+    "layer": "actual SQLite maintenance; synthetic operation records",
+    "version": 2,
+    "before": {
+      "ledger.sqlite": "9760cd98dcb394581206f34f93dc1bf52d29e097d5903b9da731a8684eafd223"
+    },
+    "after": {
+      "ledger.sqlite": "1a426a72ad997159b04de2adf405c8b3c01b40ab2006221eae24f62dcd95f207"
+    },
+    "manifest": {
+      "baseRecordsSha256": "7ec0268924e096011bbe2dd936f90cf4702ac3d78f9c56b4d408188623585a13",
+      "complete": true,
+      "files": {
+        "database.sqlite": "9760cd98dcb394581206f34f93dc1bf52d29e097d5903b9da731a8684eafd223",
+        "database.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "shm.audit": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+      },
+      "fromVersion": 2,
+      "recordsSha256": "bc8eb3319ba72d9ea298385e0243b41d8f49735806daed27fe12d9d64fea2432",
+      "schema": "filmcraft-ledger-backup/v1",
+      "toVersion": 4
+    },
+    "logicalBeforeSha256": "bc8eb3319ba72d9ea298385e0243b41d8f49735806daed27fe12d9d64fea2432",
+    "logicalAfterSha256": "bc8eb3319ba72d9ea298385e0243b41d8f49735806daed27fe12d9d64fea2432",
+    "originalAttemptId": "4f45b073-7411-4d6a-b0fa-da608142b121",
+    "recordsPreserved": true
+  },
+  {
+    "scenario": "schema3-upgrade-rollback",
+    "layer": "actual SQLite maintenance; synthetic operation records",
+    "version": 3,
+    "before": {
+      "ledger.sqlite": "1da8cd9e3ccbfd2d43ef8f137ed6214eca160a3eae3fcbaaa3fb6051ebac0543"
+    },
+    "after": {
+      "ledger.sqlite": "e8fc16e7b468de663404215f2f5113f37017858c845997894ada957acdb88d2d"
+    },
+    "manifest": {
+      "baseRecordsSha256": "3641163b9cd23ba57ab771b309421fbf9579191d6ca90c232afdf9e8791b9494",
+      "complete": true,
+      "files": {
+        "database.sqlite": "1da8cd9e3ccbfd2d43ef8f137ed6214eca160a3eae3fcbaaa3fb6051ebac0543",
+        "database.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "shm.audit": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+      },
+      "fromVersion": 3,
+      "recordsSha256": "60d55b6ba1623ec7bf908ea7e3fcf80adc42d829bf939753c92e7ad912399e75",
+      "schema": "filmcraft-ledger-backup/v1",
+      "toVersion": 4
+    },
+    "logicalBeforeSha256": "60d55b6ba1623ec7bf908ea7e3fcf80adc42d829bf939753c92e7ad912399e75",
+    "logicalAfterSha256": "60d55b6ba1623ec7bf908ea7e3fcf80adc42d829bf939753c92e7ad912399e75",
+    "originalAttemptId": "601df2e2-c507-444a-8eeb-83a838f94039",
+    "recordsPreserved": true
+  },
+  {
+    "scenario": "inspection-concurrent-write",
+    "layer": "actual concurrent SQLite commit during isolated observation",
+    "refused": "ledger_changed",
+    "currentEpoch": 3
+  },
+  {
+    "scenario": "rollback-preserves-new-records",
+    "layer": "actual SQLite with synthetic new task",
+    "before": {
+      "ledger.sqlite": "73fd0d785567d8c55d4e9c889c9d32ac8baa764ec2af450606037bfd9e2a53d4"
+    },
+    "after": {
+      "ledger.sqlite": "73fd0d785567d8c55d4e9c889c9d32ac8baa764ec2af450606037bfd9e2a53d4"
+    },
+    "originalBackupSha256": "d1633e5927ee5668b0a0c86e5273cd87539932363b9220f106016a0d70457b19",
+    "refused": "rollback_changes_conflict"
+  },
+  {
+    "scenario": "actual-previous-version-downgrade-refusal",
+    "layer": "actual fixed dev45 installed core versus current schema4 SQLite fixture",
+    "before": {
+      "ledger.sqlite": "1813b3b6cf7e6ad03f45d2670089474bf4114c63f3650c360226f67e215ec1f9"
+    },
+    "after": {
+      "ledger.sqlite": "1813b3b6cf7e6ad03f45d2670089474bf4114c63f3650c360226f67e215ec1f9"
+    },
+    "error": "ledger_schema_unsupported",
+    "previousVersion": "0.1.0-dev.45"
+  }
+]

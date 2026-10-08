@@ -93,3 +93,5 @@
 ## CLI 技能体系增量
 
 [FilmCraft CLI / setup / task suite](../../docs/FilmCraft-Skill-Suite-Architecture.zh_CN.md)
+
+资源实现增量：schema4持久预留、共享继续预算与身份绑定的POSIX取消已有源码测试，固定dev49安装验收待执行。详见资源架构；9.19—9.21与完整V1保持开放。

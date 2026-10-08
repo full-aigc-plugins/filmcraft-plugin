@@ -9,6 +9,9 @@ import { ReceiptIndex, readBoundFile } from '../artifacts/receipt_index.ts';
 import { normalizePlan } from './plan_identity.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
 import { canonicalTarget } from '../support/paths.ts';
+import { ResourceController, outputBytes } from '../harness/resources.ts';
+import type { ResourcePolicy } from '../harness/resources.ts';
+import { CancellationService } from '../harness/cancellation.ts';
 
 /** 自包含技能内容身份；不使用工作目录、mtime 或可变分支作为替代。 */
 export function fingerprintSkill(directory: string) {
@@ -30,9 +33,10 @@ function stopped(pid: number) {
   try { process.kill(-pid, 0); return false; }
   catch (error: any) { return error.code === 'ESRCH'; }
 }
-export type WorkflowOptions = { python?: string; skillDirectory: string; sourceRevision: string; runtimeHome: string; pluginVersion: string; beforeDispatch?: () => void };
+export type WorkflowOptions = { python?: string; skillDirectory: string; sourceRevision: string; runtimeHome: string; pluginVersion: string;
+  beforeDispatch?: () => void; resources?: ResourcePolicy; budgetParentId?: string };
 
-/** 内部领域执行适配；宿主先验证授权范围。本适配不重试、不承担预算或用户接受。 */
+/** 内部领域执行适配；预算先持久化，本适配不重试或代替宿主授权与用户接受。 */
 export class PythonWorkflowRunner {
   ledger: TaskLedger;
   index: ReceiptIndex;
@@ -85,11 +89,17 @@ export class PythonWorkflowRunner {
     check(stableJson(prepared.runtimeIdentity) === stableJson(binding.runtimeIdentity), 'runtime_identity_conflict');
     this.options.beforeDispatch?.();
     const registered = this.ledger.register(binding);
+    const resources = new ResourceController(this.ledger);
     // 同一幂等身份已运行过时只返回原任务，不启动第二次 Python 原生执行。
     if (registered.state !== 'planned' && registered.state !== 'ready') {
+      if (['verifying','failed','completed'].includes(registered.state)
+        && this.ledger.db.prepare('SELECT task_id FROM task_resources WHERE task_id=?').get(registered.taskId)) {
+        resources.settle(registered.taskId, { stopped: true, outputBytes: outputBytes(binding.outputRoot) });
+      }
       return { taskId: registered.taskId, state: registered.state, reused: true,
         attemptId: registered.attemptId, receipt: registered.attemptId ? this.index.collect(registered.taskId, registered.attemptId) : null };
     }
+    resources.reserve(registered.taskId, this.options.resources, this.options.budgetParentId);
     const lease = this.ledger.claim(registered.taskId, randomUUID(), Math.min(3600_000, Math.max(1, binding.deadline - Date.now())));
     let launched = false;
     try {
@@ -102,6 +112,7 @@ export class PythonWorkflowRunner {
       const attempt = this.ledger.beginAttempt(lease, 'workflow:' + binding.nativePlanHash);
       check(attempt.fresh, 'outcome_unknown');
       this.options.beforeDispatch?.();
+      resources.assertDispatch(registered.taskId);
       const argv = ['-I', '-B', join(resolve(this.options.skillDirectory), 'scripts/workflow.py'), resolve(planFile),
         '--output', binding.outputRoot, '--runtime-home', resolve(this.options.runtimeHome)];
       if (source) { argv.push('--source', resolve(source)); }
@@ -117,9 +128,26 @@ export class PythonWorkflowRunner {
         child.on('error', error => { spawnError = error; });
         child.on('close', (code, signal) => resolveExit({ code, signal }));
       });
-      if (child.pid) { this.ledger.markSubmitted(lease, child.pid); }
-      const end = await ending;
+      if (child.pid) {
+        this.ledger.markSubmitted(lease, child.pid);
+        new CancellationService(this.ledger, { python: this.options.python }).bindProcess(lease, child.pid, true);
+      }
+      let budgetReason: string | null = null;
+      const monitor = () => {
+        try { budgetReason = resources.observe(registered.taskId, outputBytes(binding.outputRoot)) ?? budgetReason; }
+        catch { budgetReason = 'output_measurement_unknown'; resources.halt(registered.taskId, budgetReason); }
+      };
+      const timer = setInterval(monitor, 100);
+      let end: { code: number | null; signal: string | null };
+      try { end = await ending; } finally { clearInterval(timer); }
+      monitor();
       const stoppedConfirmed = child.pid ? stopped(child.pid) : spawnError !== null;
+      if (this.ledger.getTask(registered.taskId).state === 'cancel_requested') {
+        const cancelled = new CancellationService(this.ledger, { python: this.options.python }).reconcile(registered.taskId);
+        return { taskId: registered.taskId, attemptId: lease.attemptId, state: cancelled.state,
+          reused: false, process: { pid: child.pid ?? null, stopped: cancelled.process === 'stopped', exitCode: end.code, signal: end.signal },
+          receipt: this.index.collect(registered.taskId, lease.attemptId) };
+      }
       let outcome: 'succeeded' | 'failed' | 'unknown' = 'unknown', receiptSha256: string | null = null;
       if (end.code === 0 && stoppedConfirmed) {
         const delivery = this.index.ingest(registered.taskId, lease.attemptId, 'delivery', 'manifest.json');
@@ -133,10 +161,12 @@ export class PythonWorkflowRunner {
         const raw = parseJson(readBoundFile(binding.outputRoot, 'failure.json').toString('utf8'));
         outcome = raw.outcome === 'failed' && stoppedConfirmed ? 'failed' : 'unknown';
       } else if (spawnError && !child.pid) { outcome = 'failed'; }
+      if (budgetReason && outcome === 'succeeded') { outcome = 'failed'; }
       this.ledger.finishAttempt(lease, { outcome, stopped: stoppedConfirmed, receiptSha256 });
+      if (stoppedConfirmed && outcome !== 'unknown') { resources.settle(registered.taskId, { stopped: true, outputBytes: outputBytes(binding.outputRoot) }); }
       return { taskId: registered.taskId, attemptId: lease.attemptId, state: this.ledger.getTask(registered.taskId).state,
         reused: false, process: { pid: child.pid ?? null, stopped: stoppedConfirmed, exitCode: end.code, signal: end.signal },
-        receipt: this.index.collect(registered.taskId, lease.attemptId) };
+        budgetReason, receipt: this.index.collect(registered.taskId, lease.attemptId) };
     } catch (error) {
       // 未发出进程前的冲突是已知拒绝；发出后的任何异常不能自动重放。
       if (!launched) {
@@ -145,6 +175,9 @@ export class PythonWorkflowRunner {
       }
       try { this.ledger.finishAttempt(lease, { outcome: launched ? 'unknown' : 'failed', stopped: !launched, receiptSha256: null }); }
       catch { /* 原 epoch/占用保留；不能用状态写入异常遮蔽原始错误。 */ }
+      if (!launched && this.ledger.getTask(registered.taskId).state === 'failed') {
+        resources.settle(registered.taskId, { stopped: true, outputBytes: outputBytes(binding.outputRoot) });
+      }
       throw error;
     }
   }

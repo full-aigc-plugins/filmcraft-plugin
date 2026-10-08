@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Source candidate dev.49 adds durable shared resource reservations and identity-bound POSIX cancellation, preserving independent source42/13 skills. Native/state81/81 and Python47/47 pass; fixed-tag installed acceptance is pending and tasks9.19–9.21 remain open. [Architecture](docs/FilmCraft-Resource-Architecture.md) · [Evidence](docs/evidence/filmcraft49-resources-candidate-20261008.json).
+
 Fixed dev.48/source42 completes OpenSpec 9.16–9.18: 13 skills / 30 execution files retain identity; 60 installed tests without skips, 14 recovery scenarios, actual native continuation and schema1/2 backed upgrade/compatible rollback pass. Three tasks / 26 artifacts validate against the pinned owner; main/tag CI passes. [Fixed evidence](docs/evidence/filmcraft48-fixed-recovery-20261008.json). Full V1 remains open (63 tasks).
 
 [Recovery matrix and compatibility](docs/FilmCraft-Fixed-Recovery.md). Failed dev.46/dev.47 collection history remains in the version-bound evidence; prior tags and packages are unchanged.
@@ -16,7 +18,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.48` / `filmcraft-skills@v0.1.0-dev.42`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.49` / `filmcraft-skills@v0.1.0-dev.42`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.4` / `0.2.0`; root runtime lock is historical only.
 
@@ -32,7 +34,7 @@ Four-domain RT-001 runtime source/integrity acceptance now covers every current 
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.48`; skill source: `0.1.0-dev.42`; 13 independent skills.
+Current plugin: `0.1.0-dev.49`; skill source: `0.1.0-dev.42`; 13 independent skills.
 
 Verified first-use platform: macOS arm64 and Python 3.11+. Pinned runtimes install into the user data directory; skill files stay in their host-loaded directory. These are development releases; complete V1 acceptance and generic Skills CLI installation remain open.
 
@@ -132,7 +134,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.48 |
+| Metadata version | 0.1.0-dev.49 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.42 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |

@@ -10,6 +10,8 @@ import { publicTask } from '../../src/adapters/protocol_mapping.ts';
 import { LocalAuthorizationStore } from '../../src/harness/authorization.ts';
 import { ContinuationService, continuationSubject } from '../../src/harness/continuation.ts';
 import { RecoveryService } from '../../src/harness/recovery.ts';
+import { ResourceController, outputBytes } from '../../src/harness/resources.ts';
+import { CancellationService, cancellationSubject } from '../../src/harness/cancellation.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { binding, workspace, captureEvidence } from './fixtures.ts';
 
@@ -28,6 +30,8 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
     const sourceRevision = process.env.FILMCRAFT_NATIVE_SOURCE_REVISION!;
     assert.match(sourceRevision, /^[a-f0-9]{40}$/);
     const options = { python, skillDirectory: skill, sourceRevision,
+      resources: { limits: { timeMs: 1800_000, diskBytes: 512_000_000, outputBytes: 512_000_000, slots: 2, revisions: 2 },
+        allocation: { timeMs: 300_000, diskBytes: 64_000_000, outputBytes: 64_000_000, slots: 1, revisions: 0 } },
       runtimeHome: process.env.FILMCRAFT_NATIVE_RUNTIME_HOME ?? join(process.env.HOME!, '.local/share/craft-runtimes'), pluginVersion: JSON.parse(readFileSync(new URL('../../plugin.json', import.meta.url), 'utf8')).version };
     const alias = join(root, 'parent-alias'); symlinkSync(root, alias);
     const runner = new PythonWorkflowRunner(db, index, options), output = join(alias, 'delivery');
@@ -106,6 +110,7 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
     assert.equal(repaired.receipt.status, 'linked'); assert.deepEqual(nativeFiles(), nativeBefore);
     assert.equal(db.listAttempts(lostTask.taskId).length, 1);
     assert.equal(db.listRecoveryIntents(lostTask.taskId)[0].state, 'applied');
+    assert.equal(new ResourceController(db).snapshot(lostTask.taskId).reservations[0].state, 'reserved');
     const reusedLost = await lostRunner.run(lostTask, planFile);
     assert.equal(reusedLost.reused, true); assert.equal(reusedLost.attemptId, repaired.attemptId);
     // 明确剩余计划独立继续：原尝试已经修复，只有新子任务执行原生返工。
@@ -147,6 +152,47 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
     assert.equal(cliContinue.status, 0, cliContinue.stdout + cliContinue.stderr);
     assert.equal(JSON.parse(cliContinue.stdout).task.reused, true);
     assert.equal(db.listAttempts(continuationTask.taskId).length, 1);
+    const budget = new ResourceController(db).snapshot(continuationTask.taskId);
+    assert.equal(budget.scopeId, lostTask.taskId); assert.equal(budget.reservations.length, 2);
+    assert.equal(budget.reservations.every(row => row.state === 'settled'), true);
+    assert.equal(JSON.parse(budget.reservations[1].allocation).revisions, 1);
+    // 实际原生输出超限仍保留工程与回执，不提升到 verifying，也不再调度依赖。
+    const overOutput = join(root,'over-budget'), overPrepared = runner.prepare(planFile,overOutput);
+    const overTask = { ...task,taskId:'over-budget',idempotencyKey:'over-budget',outputRoot:overOutput,projectKey:overPrepared.projectKey };
+    const overRunner = new PythonWorkflowRunner(db,index,{...options,resources:{ limits:options.resources.limits,
+      allocation:{...options.resources.allocation,outputBytes:1} }});
+    const over = await overRunner.run(overTask,planFile);
+    assert.equal(over.state,'failed');assert.equal(over.budgetReason,'budget_output_exceeded');assert.equal(over.process?.stopped,true);
+    assert.ok(outputBytes(overOutput)>1); assert.ok(existsSync(join(overOutput,'project.fcproj')));
+    const overBudget = new ResourceController(db).snapshot(overTask.taskId);
+    assert.equal(overBudget.state,'halted');assert.equal(overBudget.reservations[0].state,'settled');
+    const dependent = {...overTask,taskId:'blocked-dependent',idempotencyKey:'blocked-dependent',outputRoot:join(root,'blocked-dependent')};db.register(dependent);
+    assert.throws(()=>new ResourceController(db).reserve(dependent.taskId,{allocation:options.resources.allocation},overTask.taskId),/budget_output_exceeded/);
+    assert.equal(db.listAttempts(dependent.taskId).length,0);
+    // 实际 Python/native 适配进程经持久化本机宿主授权取消；发送与确认分开。
+    const cancelOutput=join(root,'cancel-native'),cancelPrepared=runner.prepare(planFile,cancelOutput);
+    const cancelTask={...task,taskId:'cancel-native',idempotencyKey:'cancel-native',outputRoot:cancelOutput,projectKey:cancelPrepared.projectKey};
+    db.register(cancelTask);new ResourceController(db).reserve(cancelTask.taskId,options.resources);
+    grant.subjects.push(sha256(stableJson(cancellationSubject(db,cancelTask.taskId))));writeGrant();
+    const cancellation=new CancellationService(db,{authorize:localAuthorizer,python});let cancelIssued=false,cancelError:unknown=null;
+    const timer=setInterval(()=>{
+      try {
+        if (!cancelIssued && db.getTask(cancelTask.taskId).state==='running'
+          && new ResourceController(db).snapshot(cancelTask.taskId).reservations[0].process_identity) {
+          cancellation.request(cancelTask.taskId,cancelTask);cancelIssued=true;
+          cancellation.reconcile(cancelTask.taskId,{signal:true});
+        }
+      } catch(error){cancelError=error;}
+    },10);
+    let cancelled;
+    try{cancelled=await runner.run(cancelTask,planFile);}finally{clearInterval(timer);}
+    assert.equal(cancelError,null);assert.equal(cancelIssued,true);assert.equal(cancelled.state,'cancelled');assert.equal(cancelled.process?.stopped,true);
+    assert.equal(db.listAttempts(cancelTask.taskId).length,1);
+    const resourcesEvidence={schemaVersion:Number(db.db.prepare('PRAGMA user_version').get()!.user_version),
+      sharedScope:budget.scopeId,parentTaskId:lostTask.taskId,childTaskId:continuationTask.taskId,reservations:budget.reservations,
+      outputLimit:{state:over.state,reason:over.budgetReason,bytes:outputBytes(overOutput),partialProjectPreserved:true,dependencyAttempts:0},
+      cancellation:{taskId:cancelTask.taskId,attempts:1,state:cancelled.state,stopped:cancelled.process?.stopped,authorization:'actual private host LocalAuthorizationStore'}};
+    captureEvidence('actual-native-budget-and-cancellation','actual Python/native output, shared continuation budget and authorized stop',resourcesEvidence);
     captureEvidence('actual-native-repair-and-continuation', 'actual Python/native create, lost reply, repair and continued editing; actual private host grants', { nativeBefore, nativeAfter: nativeFiles(), originalAttempts: db.listAttempts(lostTask.taskId), childAttempts: db.listAttempts(continuationTask.taskId), recoveryIntents: db.listRecoveryIntents(lostTask.taskId), continuationIntents: db.listContinuations(lostTask.taskId), readonlyFilesPreserved: true, originalReplayed: false, quality: 'NOT_RUN' });
     if (process.env.FILMCRAFT_HARNESS_REPORT) {
       // 输出协议对象不含本机绝对路径，供固定所有者 schema 另行核验。
@@ -170,7 +216,8 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
           childAttemptCount: db.listAttempts(continuationTask.taskId).length, intentCount: db.listContinuations(lostTask.taskId).length,
           reused: reusedContinuation.task.reused, intent: db.listContinuations(lostTask.taskId)[0] },
         technicalAcceptance: receipt.technicalAcceptance, creativeAcceptance: receipt.creativeAcceptance,
-        userAcceptance: receipt.userAcceptance, recoveryAuthorization: 'actual private LocalAuthorizationStore for repair and continuation; existing scoped grant reused', authScopeValidation: 'general workflow admission HOST_REQUIRED', budgetEnforcement: 'NOT_IMPLEMENTED' };
+        userAcceptance: receipt.userAcceptance, recoveryAuthorization: 'actual private LocalAuthorizationStore for repair and continuation; existing scoped grant reused', authScopeValidation: 'general workflow admission HOST_REQUIRED',
+        budgetEnforcement: 'candidate durable scope, output cap and identity-bound POSIX cancellation; fixed installed acceptance pending', resources:resourcesEvidence };
       writeFileSync(process.env.FILMCRAFT_HARNESS_REPORT, JSON.stringify(report, null, 2) + '\n');
     }
   });

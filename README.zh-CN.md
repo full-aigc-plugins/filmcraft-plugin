@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.49 源码候选增加持久共享资源预留和进程身份绑定的 POSIX 取消，独立源42／13技能不变；原生／状态81/81、Python47/47通过，固定标签安装验收待执行，9.19—9.21保持开放。[架构](docs/FilmCraft-Resource-Architecture.zh_CN.md) · [证据](docs/evidence/filmcraft49-resources-candidate-20261008.json)。
+
 固定 dev.48／源42 完成 OpenSpec 9.16—9.18：13技能／30执行文件身份保全，60项安装测试无跳过、14类恢复矩阵、真实原生继续及schema1/2备份升级／兼容回退通过；3任务／26产物经固定所有者schema核验，main／tag CI通过。[固定证据](docs/evidence/filmcraft48-fixed-recovery-20261008.json)。完整V1继续开放，余63项任务。
 
 [恢复矩阵与兼容边界](docs/FilmCraft-Fixed-Recovery.zh_CN.md)。dev.46／dev.47失败收集记录保留在版本证据中，旧标签及发布包不变。
@@ -16,7 +18,7 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.48` / `filmcraft-skills@v0.1.0-dev.42`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.49` / `filmcraft-skills@v0.1.0-dev.42`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.4` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -32,7 +34,7 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.48`；技能源：`0.1.0-dev.42`；13 个独立技能。
+当前插件：`0.1.0-dev.49`；技能源：`0.1.0-dev.42`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -133,7 +135,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.48 |
+| Metadata version | 0.1.0-dev.49 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.42 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |

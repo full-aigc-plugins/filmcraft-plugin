@@ -5,6 +5,8 @@ import { LocalAuthorizationStore } from '../harness/authorization.ts';
 import { RecoveryService } from '../harness/recovery.ts';
 import { ContinuationService } from '../harness/continuation.ts';
 import { StateMaintenance } from '../harness/state_maintenance.ts';
+import { TaskLedger } from '../harness/task_ledger.ts';
+import { CancellationService } from '../harness/cancellation.ts';
 import { readBoundFile } from '../artifacts/receipt_index.ts';
 import { check, HarnessError, parseJson } from '../support/json.ts';
 
@@ -15,21 +17,34 @@ async function main() {
     'authorization-root': { type: 'string' }, 'expected-epoch': { type: 'string' }, 'inspection-sha256': { type: 'string' },
     'authorization-ref': { type: 'string' }, 'authorization-scope-sha256': { type: 'string' }, backup: { type: 'string' },
     'child-binding': { type: 'string' }, plan: { type: 'string' }, 'runtime-home': { type: 'string' }, python: { type: 'string' },
+    signal: { type: 'boolean' },
   } });
   if (values.help) {
-    console.log('node src/cli/recovery.ts inspect|reconcile|repair|continue|upgrade|rollback --ledger FILE\n'
+    console.log('node src/cli/recovery.ts inspect|reconcile|repair|continue|upgrade|rollback|cancel|cancel-reconcile --ledger FILE\n'
       + 'inspect/reconcile: read-only; --blobs DIRECTORY --task ID.\n'
       + 'repair/continue: additionally --expected-epoch --inspection-sha256 --authorization-ref --authorization-scope-sha256 --authorization-root.\n'
       + 'continue: additionally --child-binding FILE --plan FILE --runtime-home DIRECTORY [--python FILE]. Original task must be independently repaired to verifying.\n'
-      + 'upgrade/rollback: --backup DIRECTORY --authorization-ref --authorization-scope-sha256 --authorization-root. Private host grants are never created by this CLI.');
+      + 'upgrade/rollback: --backup DIRECTORY --authorization-ref --authorization-scope-sha256 --authorization-root.\n'
+      + 'cancel: --task ID --authorization-ref --authorization-scope-sha256 --authorization-root. Persists the request only.\n'
+      + 'cancel-reconcile: --task ID [--signal --authorization-root DIRECTORY] [--python FILE]. Signals only identity-bound supported process groups. Private host grants are never created by this CLI.');
     return;
   }
   const action = positionals[0];
-  check(positionals.length === 1 && ['inspect','reconcile','repair','continue','upgrade','rollback'].includes(action)
+  check(positionals.length === 1 && ['inspect','reconcile','repair','continue','upgrade','rollback','cancel','cancel-reconcile'].includes(action)
     && values.ledger, 'invalid_recovery_arguments');
   const authorize = !['inspect','reconcile'].includes(action) && values['authorization-root']
     ? new LocalAuthorizationStore(values['authorization-root']).authorize : undefined;
   const authorization = { authorizationRef: values['authorization-ref']!, authorizationScopeSha256: values['authorization-scope-sha256']! };
+  if (action === 'cancel' || action === 'cancel-reconcile') {
+    check(values.task, 'invalid_recovery_arguments');
+    const db = new TaskLedger(values.ledger);
+    try {
+      const cancellation = new CancellationService(db, { authorize, python: values.python });
+      console.log(JSON.stringify(action === 'cancel' ? cancellation.request(values.task, authorization)
+        : cancellation.reconcile(values.task, { signal: values.signal })));
+    } finally { db.close(); }
+    return;
+  }
   if (action === 'upgrade' || action === 'rollback') {
     check(values.backup && authorization.authorizationRef && authorization.authorizationScopeSha256, 'invalid_recovery_arguments');
     const service = new StateMaintenance(values.ledger, { authorize });

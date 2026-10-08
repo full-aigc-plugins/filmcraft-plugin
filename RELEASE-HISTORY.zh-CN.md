@@ -1,5 +1,7 @@
 # 版本绑定的历史发行记录
 
+dev.49 开发候选：schema4持久资源域、共享继续预算、显式宿主授权与进程身份绑定的POSIX取消，以及schema1/2/3备份迁移。源码原生／状态81/81、Python47/47通过，固定安装待执行。[证据](docs/evidence/filmcraft49-resources-candidate-20261008.json)。
+
 dev.45发布后验收：隔离Codex实际安装后完成9.13—9.15；13技能／26执行文件身份保全、39原生测试与10类回执用例通过，固定公共schema映射通过，质量状态仍NOT_RUN。[证据](docs/evidence/filmcraft45-fixed-lineage-20261008.json)。原标签／ZIP不改写，完整V1仍开放。
 
 开发快照 `0.1.0-dev.45` 固定技能源 dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`。受控工作流上下文关联任务／尝试／来源；缺失历史字段保持 unknown。集合须具备清单与同尝试执行记录，重核当前身份和文件，冲突不覆盖原字节；部分交接修复不重放。原生39/39、Python42/42与10类候选用例通过；固定公开标签安装在发布后验证。[映射](docs/FilmCraft-Receipt-Lineage.zh_CN.md) · [证据](docs/evidence/filmcraft45-lineage-candidate-20261008.json)。质量、完整授权预算、恢复与完整V1仍开放。

@@ -4,6 +4,8 @@ import { randomUUID } from 'node:crypto';
 import { isAbsolute, normalize } from 'node:path';
 import { check, HarnessError, isHash, isObject, sha256, stableJson } from '../support/json.ts';
 import { canonicalTarget } from '../support/paths.ts';
+import { RESOURCE_SCHEMA } from './resource_schema.ts';
+import { ResourceController } from './resources.ts';
 
 /** 仅为 ArtCraft 公共 runtimeIdentity 的领域消费类型，规范仍在固定所有者引用。 */
 export type RuntimeIdentity = { pluginId: string; pluginVersion: string; cliVersion: string; sha256: string; mode: string; capabilitySnapshotSha256: string };
@@ -65,15 +67,15 @@ export class TaskLedger {
       if (this.readOnly) {
         this.db.exec('PRAGMA query_only=ON;');
         const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-        check(version === 1 || version === 2 || version === 3, 'ledger_schema_unsupported');
+        check([1, 2, 3, 4].includes(version), 'ledger_schema_unsupported');
         this.verifySchema(version);
       } else {
         this.transaction(() => {
           const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-          check(version === 0 || version === 1 || version === 2 || version === 3, 'ledger_schema_unsupported');
+          check([0, 1, 2, 3, 4].includes(version), 'ledger_schema_unsupported');
           if (version > 0) {
             this.verifySchema(version);
-            check(version === 3, 'ledger_upgrade_required');
+            check(version === 4, 'ledger_upgrade_required');
             return;
           }
           check(!existed, 'ledger_schema_unknown');
@@ -89,7 +91,8 @@ export class TaskLedger {
               kind TEXT NOT NULL, sha256 TEXT NOT NULL, summary TEXT NOT NULL, status TEXT NOT NULL, PRIMARY KEY(attempt_id, kind)) STRICT;
             ${RECOVERY_SCHEMA}
             ${CONTINUATION_SCHEMA}
-            PRAGMA user_version=3;
+            ${RESOURCE_SCHEMA}
+            PRAGMA user_version=4;
             PRAGMA application_id=${APPLICATION_ID};
           `);
         });
@@ -107,6 +110,11 @@ export class TaskLedger {
     };
     if (version >= 2) { expected.recovery_intents = 'intent_id,task_id,attempt_id,epoch,owner,lease_until,evidence_sha256,state,completion_sha256,reason'; }
     if (version >= 3) { expected.continuation_intents = 'intent_id,parent_task_id,parent_attempt_id,parent_epoch,child_task_id,binding_sha256,evidence_sha256,state'; }
+    if (version >= 4) {
+      expected.resource_scopes = 'scope_id,limits,deadline,state,reason,created_at';
+      expected.task_resources = 'task_id,scope_id,allocation,state,reserved_at,consumed,process_identity';
+      expected.cancel_intents = 'task_id,scope_id,request,created_at,diagnosis';
+    }
     const tables = this.db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name").all() as Row[];
     check(tables.map(row => row.name).join(',') === Object.keys(expected).sort().join(','), 'ledger_schema_unknown');
     check(!this.db.prepare("SELECT name FROM sqlite_master WHERE type IN ('view','trigger')").get(), 'ledger_schema_unknown');
@@ -116,11 +124,12 @@ export class TaskLedger {
       const strict = this.db.prepare('SELECT strict FROM pragma_table_list WHERE name=?').get(name) as Row;
       check(strict?.strict === 1, 'ledger_schema_unknown');
       const nullable: Record<string, string[]> = { tasks: ['owner','lease_until','attempt_id'], attempts: ['pid','receipt_sha256'],
-        recovery_intents: ['completion_sha256','reason'] };
+        recovery_intents: ['completion_sha256','reason'], resource_scopes: ['reason'], task_resources: ['consumed','process_identity'] };
       const primary: Record<string, string[]> = { tasks: ['task_id'], project_leases: ['project_key'], attempts: ['attempt_id'],
-        receipts: ['attempt_id','kind'], recovery_intents: ['intent_id'], continuation_intents: ['intent_id'] };
+        receipts: ['attempt_id','kind'], recovery_intents: ['intent_id'], continuation_intents: ['intent_id'],
+        resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'] };
       for (const column of actual) {
-        const integer = ['epoch','lease_until','pid','parent_epoch'].includes(column.name);
+        const integer = ['epoch','lease_until','pid','parent_epoch','deadline','created_at','reserved_at'].includes(column.name);
         check(column.type === (integer ? 'INTEGER' : 'TEXT')
           && column.notnull === (nullable[name]?.includes(column.name) ? 0 : 1)
           && column.pk === Math.max(0, primary[name].indexOf(column.name) + 1), 'ledger_schema_unknown');
@@ -129,6 +138,7 @@ export class TaskLedger {
         tasks: ['task_id', 'namespace,idem'], project_leases: ['project_key', 'task_id', 'output_root'],
         attempts: ['attempt_id', 'task_id,operation_key'], receipts: ['attempt_id,kind'],
         recovery_intents: ['intent_id', 'task_id,epoch'], continuation_intents: ['intent_id', 'child_task_id', 'parent_task_id,child_task_id'],
+        resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'],
       };
       const indices = this.db.prepare('SELECT name FROM pragma_index_list(?) WHERE "unique"=1').all(name) as Row[];
       const constraints = indices.map(index => (this.db.prepare('SELECT name FROM pragma_index_info(?) ORDER BY seqno')
@@ -139,6 +149,8 @@ export class TaskLedger {
         receipts: ['task_id:tasks:task_id','attempt_id:attempts:attempt_id'],
         recovery_intents: ['task_id:tasks:task_id','attempt_id:attempts:attempt_id'],
         continuation_intents: ['parent_task_id:tasks:task_id','parent_attempt_id:attempts:attempt_id','child_task_id:tasks:task_id'],
+        resource_scopes: ['scope_id:tasks:task_id'], task_resources: ['task_id:tasks:task_id','scope_id:resource_scopes:scope_id'],
+        cancel_intents: ['task_id:tasks:task_id','scope_id:resource_scopes:scope_id'],
       };
       const keys = (this.db.prepare('SELECT "from","table","to" FROM pragma_foreign_key_list(?)').all(name) as Row[])
         .map(key => key.from + ':' + key.table + ':' + key.to).sort();
@@ -174,9 +186,11 @@ export class TaskLedger {
       check(['command','delivery','failed-stage','output-execution'].includes(row.kind) && isHash(row.sha256)
         && ['linked','unknown','conflict','stale'].includes(row.status) && isObject(JSON.parse(row.summary)), 'ledger_receipt_corrupt');
     }
+    if (Number(this.db.prepare('PRAGMA user_version').get()!.user_version) >= 4) { new ResourceController(this).verifyIntegrity(); }
   }
   close() { this.db.close(); }
-  private transaction<T>(operation: () => T): T {
+  /** 同账本资源控制器使用同一原子事务；禁止在回调内启动原生副作用。 */
+  transaction<T>(operation: () => T): T {
     check(!this.readOnly, 'ledger_read_only'); this.db.exec('BEGIN IMMEDIATE');
     try { const result = operation(); this.db.exec('COMMIT'); return result; }
     catch (error) { this.db.exec('ROLLBACK'); throw error; }
@@ -223,6 +237,7 @@ export class TaskLedger {
       check(row.state !== 'running', 'lease_busy');
       check(['planned', 'ready'].includes(row.state), 'invalid_task_state');
       check(binding.deadline > now, 'deadline_exceeded');
+      new ResourceController(this).assertDispatch(taskId, now);
       const occupied = this.db.prepare('SELECT task_id FROM project_leases WHERE project_key=?').get(binding.projectKey);
       check(!occupied, 'project_busy');
       check(!this.db.prepare('SELECT task_id FROM project_leases WHERE output_root=?').get(binding.outputRoot), 'output_busy');

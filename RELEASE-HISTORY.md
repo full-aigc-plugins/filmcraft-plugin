@@ -1,5 +1,7 @@
 # Version-bound release records
 
+Development candidate dev.49: schema4 persistent resource scopes, shared continuation budgets, explicit host-authorized identity-bound POSIX cancellation and backed schema1/2/3 migration. Source81/81 native/state and47/47 Python pass; fixed installation is pending. [Evidence](docs/evidence/filmcraft49-resources-candidate-20261008.json).
+
 Post-publication dev.45 acceptance: tasks 9.13–9.15 completed after actual isolated Codex installation, 13 skill/26 code identities preserved, 39 native tests and 10 receipt cases passed. Fixed public schema mappings passed; all quality states remain NOT_RUN. [Evidence](docs/evidence/filmcraft45-fixed-lineage-20261008.json). Original tag/ZIP unchanged; full V1 remains open.
 
 Development snapshot `0.1.0-dev.45` pins source dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`. Controlled workflow context binds task/attempt/source; missing context remains unknown. Receipt collection requires delivery and same-attempt execution, rechecks current identity/content and preserves conflicting originals. Partial handoff repair never replays. Native regression 39/39, Python 42/42 and 10 candidate cases passed; fixed public-tag installation follows publication. [Mapping](docs/FilmCraft-Receipt-Lineage.md) · [Evidence](docs/evidence/filmcraft45-lineage-candidate-20261008.json). Quality, authorization/budgets, complete recovery and full V1 remain open.

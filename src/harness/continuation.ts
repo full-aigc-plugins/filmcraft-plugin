@@ -11,6 +11,7 @@ import { ReceiptIndex, readBoundFile } from '../artifacts/receipt_index.ts';
 import { normalizePlan } from '../adapters/plan_identity.ts';
 import { canonicalTarget } from '../support/paths.ts';
 import { check, sha256, stableJson } from '../support/json.ts';
+import { ResourceController, outputBytes } from './resources.ts';
 
 /** 宿主可用当前诊断与计划构建授权主题；计算摘要本身不授予权限。 */
 export function continuationSubject(parentId: string, parentAttemptId: string | null,
@@ -50,7 +51,13 @@ export class ContinuationService {
       const current = recovery.inspect(parentId);
       check(current.evidenceSha256 === before.evidenceSha256, 'inspection_stale');
       const intent = db.beginContinuation(parentId, request.expectedEpoch, before.evidenceSha256, child);
-      const runner = new PythonWorkflowRunner(db, new ReceiptIndex(db, this.blobs), { ...options, beforeDispatch: permitted });
+      const resources = new ResourceController(db), parentResources = resources.snapshot(parentId);
+      const parentReservation = parentResources.reservations.find(row => row.task_id === parentId)!;
+      // 独立恢复已经确认原尝试结束，方可结算未知时保留的父预留。
+      resources.settle(parentId, { stopped: true, outputBytes: outputBytes(parent.binding.outputRoot) });
+      const allocation = { ...JSON.parse(parentReservation.allocation), revisions: 1 };
+      const runner = new PythonWorkflowRunner(db, new ReceiptIndex(db, this.blobs), { ...options, beforeDispatch: permitted,
+        resources: { allocation }, budgetParentId: parentId });
       const result = await runner.run(child, planFile, parent.binding.outputRoot);
       const audit = db.observeContinuation(intent.intentId);
       return { parentTaskId: parentId, parentAttemptId: parent.attemptId, originalReplayed: false,

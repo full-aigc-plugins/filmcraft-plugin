@@ -65,3 +65,5 @@ Every P0 requirement needs positive and negative evidence; unexecuted cases are 
 **Created**: 2026-10-05
 **Updated**: 2026-10-05
 **Document status**: Ready for review; implementation status is governed by OpenSpec tasks and evidence.
+
+Resource acceptance update: the source candidate implements shared durable budgets and explicit cancellation confirmation. Fixed public-tag installed validation is pending; tasks9.19–9.21 and complete V1 remain open.

@@ -35,3 +35,5 @@ Node/SQLite Harness 与回执血缘已有 [源码候选](FilmCraft-Harness-Candi
 版本和测试范围见 [候选证据](evidence/filmcraft-optimization-candidate-20261008.json)。原生测试仅证明对应执行脚本的当前摘要与限定任务；新增指南与当前事实不因此获得固定安装、宿主或全量命令验收。
 
 后续继续完成能力快照与回执候选的固定安装及完整兼容验收、Node/SQLite Harness 的完整单写/恢复/资源预算、独立评审、受限修订、真实媒体及分层发行验证。新固定发行、实际宿主、全量命令和完整 V1 均保持开放；仅已有明确实现及验证证据的任务可勾选。
+
+资源任务9.19—9.21已有[源码候选](FilmCraft-Resource-Architecture.zh_CN.md)及[版本证据](evidence/filmcraft49-resources-candidate-20261008.json)，原生／状态81/81、Python47/47通过。固定dev49安装待执行，三项任务保持开放，质量与完整V1不由此验收。

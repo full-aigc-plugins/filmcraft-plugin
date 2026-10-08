@@ -95,7 +95,7 @@ def verify(host, previous_host, authority, ref, output, python, node):
         'testFilesSha256': test_hashes, 'testCounts': counts, 'matrix': rows, 'native': native_result,
         'protocolValidation': protocol, 'allInstalledFilesUnchanged': True,
         'technicalAcceptance': 'NOT_RUN', 'creativeAcceptance': 'NOT_RUN', 'userAcceptance': 'NOT_RUN', 'fullV1': 'INCOMPLETE',
-        'scope': 'FC-TX-002 recovery tasks 9.16-9.18; state schema1/2 to3 and compatible rollback only; not runtime upgrade or complete Harness',
+        'scope': 'FC-TX-002 recovery regression; backed state upgrade/compatible rollback at the installed schema version; not runtime upgrade or complete Harness',
         'digestSemantics': 'Original private file digests were asserted in actual runs. Public projections are redacted; their own evidence hashes are recorded separately.'}
     (output / 'report.json').write_text(safe(json.dumps(report, ensure_ascii=False, indent=2)) + '\n')
     return {'result': 'PASS', 'tests': counts, 'scenarios': len(rows), 'protocol': protocol['validated'],

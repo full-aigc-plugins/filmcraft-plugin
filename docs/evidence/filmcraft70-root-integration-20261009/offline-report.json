@@ -24,7 +24,7 @@
           "scripts/validate_docs.py"
         ]
       ],
-      "log": "metadata.log",
+      "log": "offline-metadata.txt",
       "logSha256": "e33a875dbb3309bb48e8258f9df593a4766a72480f48f68c75bff8c79e3adbb9"
     },
     {
@@ -40,7 +40,7 @@
           "check"
         ]
       ],
-      "log": "fixed-source.log",
+      "log": "offline-fixed-source.txt",
       "logSha256": "2ce2f23af377c57c4b5bf36d1d9e5cbae9f57bcac7339ca50cf3a14ade68077f"
     },
     {
@@ -58,7 +58,7 @@
           "-v"
         ]
       ],
-      "log": "python.log",
+      "log": "offline-python.txt",
       "logSha256": "01e5fc131d75596e2f795e50275a12f327b520a0d8b0aa4c981cb8e938703957"
     },
     {
@@ -96,7 +96,7 @@
           "[PLUGIN_ROOT]/test/harness/workflow_candidate.test.ts"
         ]
       ],
-      "log": "node.log",
+      "log": "offline-node.txt",
       "logSha256": "4ba8136dc9d5deafe2ec6596010eb5411fe2f13be30cea0c15515c8f8e89d6f2"
     },
     {
@@ -117,7 +117,7 @@
           "[OUTPUT]/protocol"
         ]
       ],
-      "log": "protocol.log",
+      "log": "offline-protocol.txt",
       "logSha256": "ca704096f690bee24912e2d03265b4aa2469c671d26d9339260b72adc044450b"
     }
   ],

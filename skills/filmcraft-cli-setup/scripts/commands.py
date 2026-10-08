@@ -55,6 +55,8 @@ def references(value, aliases):
 
 def validate_tick_parameters(command, params, allow_references=False, contract=None):
     """校验公开合同声明的整数时间值，以及导入转录的逐词时间。"""
+    if not isinstance(params, dict):
+        raise ValueError('invalid_command_parameters: expected an object after reference resolution')
     if contract is None:
         contract = next(row for row in catalog()["commands"] if row["id"] == command)
     fields = re.findall(r'"([A-Za-z][A-Za-z0-9_]*)"\s*:\s*ticks?\b', contract.get("params") or "")

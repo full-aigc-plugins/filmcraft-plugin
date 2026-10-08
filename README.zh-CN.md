@@ -1,10 +1,10 @@
 # FilmCraft Agent Plugin
 
-[当前固定身份验收](docs/FilmCraft-Fixed-Identity.zh_CN.md)：dev.43 锁定重新采集目录的源 dev.40，实际安装与篡改拒绝结果单独记录。
+[上一固定身份验收](docs/FilmCraft-Fixed-Identity.zh_CN.md)：dev.43 锁定重新采集目录的源 dev.40，实际安装与篡改拒绝结果单独记录。
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.43` / `filmcraft-skills@v0.1.0-dev.40`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.44` / `filmcraft-skills@v0.1.0-dev.41`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.4` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -20,7 +20,7 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.43`；技能源：`0.1.0-dev.40`；13 个独立技能。
+当前插件：`0.1.0-dev.44`；技能源：`0.1.0-dev.41`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -121,9 +121,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.43 |
+| Metadata version | 0.1.0-dev.44 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.40 |
+| Skills source | filmcraft-skills / v0.1.0-dev.41 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

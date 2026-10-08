@@ -1,5 +1,8 @@
 # Version-bound release records
 
+Development snapshot `0.1.0-dev.44` pins skills dev.41 / `f47a2ff6e47e64767d82fd8d88ffa225b204879e`. Resolved whole parameters must remain objects before native submission. Adds separate command evidence dimensions and a fixed parity QA producer; actual new-tag acceptance follows publication, task 9.3 remains open until then.
+
+
 These records were moved verbatim from the README preface. They describe their own versions and are not the current installation contract.
 
 Development snapshot `0.1.0-dev.43` pins source dev.40 / `2eb9e0f169b3cfea1bf810aa0293c51bdbed4177`, repairing catalog identity to MATCH through actual native recapture while retaining all parameter rows and existing subsets. It adds isolated fixed-install verification reusing pinned ArtCraft helper functions, including annotated tag resolution and executable-file identity checks. Local Python regression passes 36 tests and native Harness regression passes 33 without skips. Fixed dev.43 acceptance is recorded separately in [the identity report](docs/evidence/filmcraft43-fixed-identity-20261008.json); publication alone does not close task 9.6 or complete host/V1 acceptance.

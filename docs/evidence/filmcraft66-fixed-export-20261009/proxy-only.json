@@ -1,0 +1,146 @@
+{
+  "result": "PASS",
+  "fixedRef": "v0.1.0-dev.66",
+  "sourceRef": "v0.1.0-dev.49",
+  "installedCore": "[WORK]/host66/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.66",
+  "files": {
+    "project.fcproj": {
+      "sha256": "4c54f0f8c2112f5658c0a9c03738c739c11b24edb17d0eff2405c312594ae7c5",
+      "bytes": 6578
+    },
+    "frame-0000.png": {
+      "sha256": "c5947255ceddb78183be8e98896df1a8505d85ca7bd73b5b95beee505b20caeb",
+      "bytes": 8258
+    },
+    "captions.srt": {
+      "sha256": "b7fc340c37eb04e430c5309218ba66edba1ff916432823e54e4beedba80d185b",
+      "bytes": 64
+    }
+  },
+  "reviewer": {
+    "id": "filmcraft-independent-media",
+    "kind": "external",
+    "version": "1",
+    "implementationSha256": "ee9287a07a814356af52af3ebb409e6db8e3955f6ec5a52d28c7907927e43fe0"
+  },
+  "assessment": {
+    "engineering": {
+      "status": "PASS",
+      "reason": "Independent pinned native project reopen succeeded",
+      "evidence": [
+        "native-inspect"
+      ],
+      "metrics": {
+        "inspectionSha256": "dc90ad1aadb7d0cd1f21306fe4dd09515970f2c5262b4199bea5e097a9e776fa"
+      }
+    },
+    "dimensions": {
+      "subtitleReadability": {
+        "status": "manual_review",
+        "reason": "Independent temporal/creative review is required",
+        "evidence": []
+      },
+      "continuity": {
+        "status": "manual_review",
+        "reason": "Independent temporal/creative review is required",
+        "evidence": []
+      },
+      "rhythm": {
+        "status": "manual_review",
+        "reason": "Independent temporal/creative review is required",
+        "evidence": []
+      },
+      "decode": {
+        "status": "NOT_RUN",
+        "reason": "Required independent media evidence is unavailable",
+        "evidence": []
+      },
+      "videoTiming": {
+        "status": "NOT_RUN",
+        "reason": "Required independent media evidence is unavailable",
+        "evidence": []
+      },
+      "audioClipping": {
+        "status": "NOT_RUN",
+        "reason": "Required independent media evidence is unavailable",
+        "evidence": []
+      },
+      "avSync": {
+        "status": "NOT_RUN",
+        "reason": "Required independent media evidence is unavailable",
+        "evidence": []
+      },
+      "subtitleTiming": {
+        "status": "NOT_RUN",
+        "reason": "Required independent media evidence is unavailable",
+        "evidence": []
+      }
+    },
+    "evidenceCapabilities": [
+      "native-reopen"
+    ]
+  },
+  "reviewResult": {
+    "requestSha256": "ec9db807f9e9a219951c76d4914088452447eb8cf337f63470e4f7774c00b056",
+    "engineering": {
+      "evidence": [
+        "native-inspect"
+      ],
+      "metrics": {
+        "inspectionSha256": "dc90ad1aadb7d0cd1f21306fe4dd09515970f2c5262b4199bea5e097a9e776fa"
+      },
+      "reason": "Independent pinned native project reopen succeeded",
+      "status": "PASS"
+    },
+    "dimensions": {
+      "decode": {
+        "evidence": [],
+        "reason": "Required independent media evidence is unavailable",
+        "status": "NOT_RUN"
+      },
+      "videoTiming": {
+        "evidence": [],
+        "reason": "Required independent media evidence is unavailable",
+        "status": "NOT_RUN"
+      },
+      "audioClipping": {
+        "evidence": [],
+        "reason": "Required independent media evidence is unavailable",
+        "status": "NOT_RUN"
+      },
+      "avSync": {
+        "evidence": [],
+        "reason": "Required independent media evidence is unavailable",
+        "status": "NOT_RUN"
+      },
+      "subtitleTiming": {
+        "evidence": [],
+        "reason": "Required independent media evidence is unavailable",
+        "status": "NOT_RUN"
+      },
+      "subtitleReadability": {
+        "evidence": [],
+        "reason": "Independent temporal/creative review is required",
+        "status": "manual_review"
+      },
+      "continuity": {
+        "evidence": [],
+        "reason": "Independent temporal/creative review is required",
+        "status": "manual_review"
+      },
+      "rhythm": {
+        "evidence": [],
+        "reason": "Independent temporal/creative review is required",
+        "status": "manual_review"
+      }
+    },
+    "engineeringAcceptance": "PASS",
+    "technicalAcceptance": "NOT_RUN",
+    "creativeAcceptance": "manual_review",
+    "userAcceptance": "NOT_RUN",
+    "creativeScore": null,
+    "decision": "manual_review"
+  },
+  "sourcePreserved": true,
+  "formalMovieExists": false
+}

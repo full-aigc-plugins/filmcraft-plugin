@@ -1,0 +1,19 @@
+{
+  "historicalRuntime": "0.2.0-craft.3",
+  "runtimeSha256": "d74aa4639e7f012e2273cea346037a15a02a245a516020c86bf6fb2200a6bb3b",
+  "argv": [
+    "[WORK]/fixed66-asr-historical-red2/empty-runtime/filmcraft/0.2.0-craft.3/filmcraft-cli",
+    "--data-dir",
+    "[WORK]/fixed66-export-historical-red/data",
+    "--project",
+    "[WORK]/fixed66-chinese/v1/project.fcproj",
+    "export",
+    "[WORK]/fixed66-export-historical-red/native.wav",
+    "--preset",
+    "Waveform Audio 48 kHz 24-bit"
+  ],
+  "exitCode": 0,
+  "stdout": "{\n  \"job\": 1,\n  \"path\": \"[WORK]/fixed66-export-historical-red/native.wav\",\n  \"preset\": \"Waveform Audio 48 kHz 24-bit\",\n  \"result\": {\n    \"bytes\": 864044,\n    \"frames\": 144000,\n    \"path\": \"[WORK]/fixed66-export-historical-red/native.wav\",\n    \"render_fps\": 61363627.64721198,\n    \"seconds\": 0.002346667\n  }\n}\n",
+  "stderr": "exported [WORK]/fixed66-export-historical-red/native.wav in 0.0s\n",
+  "sourcePreserved": true
+}

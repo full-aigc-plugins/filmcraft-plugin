@@ -1,0 +1,404 @@
+{
+  "schema": "filmcraft-media-fixtures/v1",
+  "nativeAcceptance": "NOT_RUN",
+  "inputs": {
+    "source-film": {
+      "path": "source-film.mov",
+      "sha256": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+      "bytes": 372178639,
+      "provenance": "real-source",
+      "source": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel (2012), director Ian Hubert",
+      "parents": [],
+      "recipe": [
+        "original movie download, including original credit scroll"
+      ],
+      "realCapture": true
+    },
+    "font": {
+      "path": "NotoSans.ttf",
+      "sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
+      "bytes": 2049096,
+      "provenance": "font",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/NotoSans%5Bwdth,wght%5D.ttf",
+      "license": "OFL-1.1",
+      "attribution": "The Noto Project Authors",
+      "parents": [],
+      "recipe": [
+        "unchanged font download"
+      ],
+      "realCapture": false
+    },
+    "font-license": {
+      "path": "OFL.txt",
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "bytes": 4396,
+      "provenance": "font",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/OFL.txt",
+      "license": "OFL-1.1",
+      "attribution": "The Noto Project Authors",
+      "parents": [],
+      "recipe": [
+        "unchanged accompanying font license"
+      ],
+      "realCapture": false
+    },
+    "vfr": {
+      "path": "vfr.mkv",
+      "sha256": "b9908226c67fff95fdb56441e55fe8af483ab18035344008efcddd0f0de49754",
+      "bytes": 606321,
+      "provenance": "real-derived",
+      "source": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel (2012), director Ian Hubert",
+      "parents": [
+        "source-film"
+      ],
+      "recipe": [
+        "-ss",
+        "30",
+        "-i",
+        "[FIXTURE_ROOT]/source-film.mov",
+        "-t",
+        "3",
+        "-vf",
+        "scale=320:180,select='if(lt(t,1.5),1,not(mod(n,2)))'",
+        "-fps_mode",
+        "vfr",
+        "-c:v",
+        "libx264",
+        "-pix_fmt",
+        "yuv420p",
+        "-c:a",
+        "pcm_s16le"
+      ],
+      "realCapture": false
+    },
+    "long-audio": {
+      "path": "long-tail.wav",
+      "sha256": "e382bdc729beedb9e9694ac4f908fb0af95960a003c79ea215d0fbe680026b0e",
+      "bytes": 34792654,
+      "provenance": "real-derived",
+      "source": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+      "license": "CC-BY-3.0",
+      "attribution": "(CC) Blender Foundation | mango.blender.org; Tears of Steel (2012), director Ian Hubert",
+      "parents": [
+        "source-film"
+      ],
+      "recipe": [
+        "-ss",
+        "30",
+        "-i",
+        "[FIXTURE_ROOT]/source-film.mov",
+        "-t",
+        "181.211333333333",
+        "-vn",
+        "-ar",
+        "48000",
+        "-c:a",
+        "pcm_s16le"
+      ],
+      "realCapture": false
+    },
+    "alpha-0": {
+      "path": "alpha-000.png",
+      "sha256": "f3efd683d3a9b9d841f7598a72f9a28bb434f961d9ba50b9fbdce7c3cedc57c9",
+      "bytes": 115,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-1": {
+      "path": "alpha-001.png",
+      "sha256": "a8e55b9463901c7266835781cd90c3fbf8b365ae278a006580405a8bb69a8b57",
+      "bytes": 118,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-2": {
+      "path": "alpha-002.png",
+      "sha256": "049b4cb99100dbcc264c2b687c10ed79e6f49a79207637af7774dfdba66d2f2f",
+      "bytes": 118,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-3": {
+      "path": "alpha-003.png",
+      "sha256": "64cfd9ccc7e0db517a1c817d20ceff1f7a0a758b3d505b52f8e15d9bb41e048e",
+      "bytes": 118,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-4": {
+      "path": "alpha-004.png",
+      "sha256": "2974e15476f467175a3f90c02a7b5accd3d0f44527aaa2a7efd8f85dbe09f523",
+      "bytes": 117,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-5": {
+      "path": "alpha-005.png",
+      "sha256": "beca40beddb986cd1b74ee4f49c8f23b5d5d80696f15c8501d487db2d06287da",
+      "bytes": 117,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-6": {
+      "path": "alpha-006.png",
+      "sha256": "f3179b5c6fdceb232d0efd2f96aa2fae8e7f4e81a909597c3ea9e20112c703c6",
+      "bytes": 117,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-7": {
+      "path": "alpha-007.png",
+      "sha256": "98f952ed4d8d6d5c1c7ad3a31cc01d5079864dc2127c038e618321d1252fe1d3",
+      "bytes": 117,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-8": {
+      "path": "alpha-008.png",
+      "sha256": "c608295695d0d995394b622e75b4ec7df068183c59d58d3a428927e1edcaf58a",
+      "bytes": 117,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-9": {
+      "path": "alpha-009.png",
+      "sha256": "ad1ee115403047834c504830ca3332bdc851a8f0065aeadc082224fa69a398b1",
+      "bytes": 117,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-10": {
+      "path": "alpha-010.png",
+      "sha256": "69f6664a9a0c7537f70d5609f6d5a2dad7bd08c8c3354225c1052560885ba71e",
+      "bytes": 118,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "alpha-11": {
+      "path": "alpha-011.png",
+      "sha256": "7586e43a8977081ba4ca95880dfafe5a25cddf935d401ecbba20eb625e307b55",
+      "bytes": 118,
+      "provenance": "synthetic",
+      "source": "repository-generated alpha calibration",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "32x18 RGBA; opaque variable red square, half-alpha red at15,5; transparent background"
+      ],
+      "realCapture": false
+    },
+    "bad-file": {
+      "path": "corrupt.mov",
+      "sha256": "3d081a47918e0edcf6d7a49287c275c231ec6294110ab51b272059f803fa66aa",
+      "bytes": 44,
+      "provenance": "synthetic",
+      "source": "repository-generated corrupt bytes",
+      "license": "Apache-2.0",
+      "attribution": "FilmCraft contributors",
+      "parents": [],
+      "recipe": [
+        "deliberately invalid movie bytes"
+      ],
+      "realCapture": false
+    }
+  },
+  "cases": {
+    "vfr": {
+      "inputs": [
+        "vfr"
+      ],
+      "expected": {
+        "presentationTimestamps": "strictly increasing with multiple frame intervals",
+        "nativeDuration": "within one output frame of requested duration",
+        "avSync": "compare decoded source and output audio/video timestamps; not lip-sync approval"
+      },
+      "knownFailure": "CFR assumption drops or repeats source timestamp intervals",
+      "nativeStatus": "NOT_RUN"
+    },
+    "long-audio-tail": {
+      "inputs": [
+        "long-audio"
+      ],
+      "expected": {
+        "duration": "181.211333333 seconds at 48000 Hz",
+        "tailSamples": "nonzero valid samples in final non-frame-aligned source interval",
+        "audioPreserved": "last544 source samples remain nonzero; normalized decoded tail correlation >=0.98 after codec alignment, lag <=1 output frame"
+      },
+      "knownFailure": "frame-rounded duration truncates the last valid 48000Hz samples",
+      "nativeStatus": "NOT_RUN"
+    },
+    "font-change": {
+      "inputs": [
+        "font",
+        "font-license",
+        "vfr"
+      ],
+      "expected": {
+        "fontIdentity": "font bytes and license bound; installed native font discovery required",
+        "pixels": "native rendered caption changes when supported font changes; no silent fallback"
+      },
+      "knownFailure": "same pixels after actual font substitution or a silently unavailable requested font",
+      "nativeStatus": "NOT_RUN"
+    },
+    "transparent-sequence": {
+      "inputs": [
+        "alpha-0",
+        "alpha-1",
+        "alpha-2",
+        "alpha-3",
+        "alpha-4",
+        "alpha-5",
+        "alpha-6",
+        "alpha-7",
+        "alpha-8",
+        "alpha-9",
+        "alpha-10",
+        "alpha-11"
+      ],
+      "expected": {
+        "alpha": "opaque, half-alpha and transparent input pixels measured",
+        "pixels": "native PNG composite matches expected background and half-alpha blend within3 of255 per channel"
+      },
+      "knownFailure": "alpha discarded or half-alpha composited as opaque",
+      "nativeStatus": "NOT_RUN"
+    },
+    "bad-file": {
+      "inputs": [
+        "bad-file"
+      ],
+      "expected": {
+        "rejection": "corrupt media cannot produce a successful native delivery"
+      },
+      "knownFailure": "invalid bytes accepted as successful media import/export",
+      "nativeStatus": "NOT_RUN"
+    },
+    "missing-font": {
+      "inputs": [
+        "font",
+        "vfr"
+      ],
+      "expected": {
+        "rejection": "unavailable font rejected explicitly before successful caption delivery"
+      },
+      "knownFailure": "FilmCraft-Deliberately-Missing-Font-53 silently substitutes another font",
+      "nativeStatus": "NOT_RUN"
+    },
+    "dependency-move": {
+      "inputs": [
+        "vfr",
+        "long-audio"
+      ],
+      "expected": {
+        "reopen": "collected project reopens after source directory becomes unavailable",
+        "bytes": "all collected dependencies retain input digests",
+        "missingDependency": "removing a required collected dependency refuses successful delivery"
+      },
+      "knownFailure": "old absolute source path still required; missing collected dependency accepted",
+      "nativeStatus": "NOT_RUN"
+    }
+  },
+  "notes": [
+    "Real movie-derived VFR is an intentional retiming, not original variable-rate camera capture.",
+    "All binary inputs and derivatives remain private; no source footage is committed or published.",
+    "Synthetic alpha and corrupt bytes remain separately labeled; font download is not installation.",
+    "Retain source attribution, source link, license and change description for any later reuse."
+  ],
+  "measurements": {
+    "vfrFrames": 54,
+    "vfrIntervalsSeconds": [
+      0.041,
+      0.042,
+      0.083,
+      0.084
+    ],
+    "audioSamplesPerChannel": 8698144,
+    "audioRate": 48000,
+    "audioDurationSeconds": 181.21133333333333,
+    "audioChannels": 2,
+    "tailSamplesPerChannel": 544,
+    "tailRms": 0.21819747478561088,
+    "timestampProbeSha256": "b887b8c2276558f7e0d4820b7b4c90f02babc1928c0ed665e2a6b780723fccef"
+  }
+}

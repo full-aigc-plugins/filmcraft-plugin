@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "scope": "actual unchanged historical public craft.3 and fixed craft.5 native PCM export of same VFR project; decoded actual source reference; not a candidate lock mutation",
+  "expected": {
+    "minimumCorrelation": 0.98,
+    "alignmentWindowSeconds": 0.08333333333333333
+  },
+  "historical": {
+    "historicalRuntime": "0.2.0-craft.3",
+    "runtimeSha256": "d74aa4639e7f012e2273cea346037a15a02a245a516020c86bf6fb2200a6bb3b",
+    "exitCode": 0,
+    "stdout": "{\n  \"job\": 1,\n  \"path\": \"[WORK]/fixed66-export-historical-red/vfr-native.wav\",\n  \"preset\": \"Waveform Audio 48 kHz 24-bit\",\n  \"result\": {\n    \"bytes\": 864044,\n    \"frames\": 144000,\n    \"path\": \"[WORK]/fixed66-export-historical-red/vfr-native.wav\",\n    \"render_fps\": 35783065.1674225,\n    \"seconds\": 0.00402425\n  }\n}\n",
+    "stderr": "exported [WORK]/fixed66-export-historical-red/vfr-native.wav in 0.0s\n",
+    "sourcePreserved": true,
+    "metrics": {
+      "samples": 22400,
+      "correlation": 0.471547724544517,
+      "rms": 0.13472598791122437
+    },
+    "expectedCorrelationMinimum": 0.98
+  },
+  "currentRuntimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "observations": {
+    "historical": {
+      "correlation": 0.471547615206236,
+      "bestAlignedCorrelation": 0.5224244606494531,
+      "lagSamples": 1,
+      "waveSha256": "b842524a2a9fd34478b4e9cf6b0fa2dd9c022cff05f079f0a59123eee8298b5a"
+    },
+    "current": {
+      "correlation": 0.9999956756940991,
+      "bestAlignedCorrelation": 0.999995515718671,
+      "lagSamples": 0,
+      "waveSha256": "4644722f156534edbd14fa650b301c8bc6f601f47680e478d985931fa77e5b2b"
+    }
+  },
+  "sourcePreserved": true
+}

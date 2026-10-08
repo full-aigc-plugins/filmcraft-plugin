@@ -1,0 +1,45 @@
+{
+  "requirement": "FC-DM-006",
+  "result": "PASS",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-006-P",
+      "result": "PASS",
+      "evidence": [
+        "media-matrix.json"
+      ],
+      "observed": "Actual installed immutable66 workflow native saves/reopens and exports; independent ffprobe dimensions/12fps/frame count/duration and ffmpeg full decode; source audio, PCM/AAC tails, preview pixels measured; no replacement export."
+    },
+    {
+      "id": "FC-DM-006-N",
+      "result": "PASS",
+      "evidence": [
+        "proxy-only.json"
+      ],
+      "observed": "Real native project plus preview and SRT with no film.mp4: independent native reopen PASS, decode and technical formal acceptance NOT_RUN, decision manual_review,user NOT_RUN; source unchanged."
+    },
+    {
+      "id": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "result": "PASS",
+      "evidence": [
+        "media-matrix.json",
+        "fixture-manifest.json",
+        "paired-native-pcm.json"
+      ],
+      "observed": "All7 cases PASS: licensed Tears of Steel-derived VFR and stereo181.211333s nonframe tail; bundled-font identity/change; explicitly synthetic alpha; bad-file/font/dependency refusals and moved reopening. Native PCM sample-exact8698144 and last544channel samples,AAC alignedtail>0.999 correlations; VFR36outputframes/source54,zero audio lag. Historicalcraft3 PCM real VFR bestalignedcorrelation0.5224 fails0.98 while fixedcraft5sameproject0.999995 passes."
+    }
+  ],
+  "tasksQualified": [
+    "4.16",
+    "4.17",
+    "4.18"
+  ],
+  "fullV1": "OPEN",
+  "acceptanceEvidence": "docs/evidence/filmcraft66-fixed-export-20261009/acceptance.json",
+  "acceptanceSha256": "4450a23970087e3c83f5d008f8657ac538fa97900708f796ff0e504072556b8d"
+}

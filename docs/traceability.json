@@ -216,14 +216,15 @@
         "9.33"
       ],
       "owner": "Domain owner",
-      "status": "in-progress",
-      "evidence": "docs/evidence/film-workflow-tests.json",
+      "status": "verified",
+      "evidence": "docs/evidence/fc-dm-006/index.json",
       "optimizationStatus": "planned",
       "optimizationTasks": [
         "9.31",
         "9.32",
         "9.33"
-      ]
+      ],
+      "implementationScope": "Tasks4.16-4.18 all3scenarios/sevenmedia cases fixed66/source49 actualmacOSarm64/Codex/headless; Art/fullV1 separate"
     },
     {
       "requirement": "FC-AR-001",

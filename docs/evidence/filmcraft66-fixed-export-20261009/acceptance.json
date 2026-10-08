@@ -1,0 +1,99 @@
+{
+  "schema": "filmcraft-fixed-domain-acceptance/v1",
+  "result": "PASS",
+  "requirement": "FC-DM-006",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "platform": "macOS arm64",
+  "host": "Codex0.147.0 actual isolated fixed-tag install",
+  "mode": "headless",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-006-P",
+      "result": "PASS",
+      "evidence": [
+        "media-matrix.json"
+      ],
+      "observed": "Actual installed immutable66 workflow native saves/reopens and exports; independent ffprobe dimensions/12fps/frame count/duration and ffmpeg full decode; source audio, PCM/AAC tails, preview pixels measured; no replacement export."
+    },
+    {
+      "id": "FC-DM-006-N",
+      "result": "PASS",
+      "evidence": [
+        "proxy-only.json"
+      ],
+      "observed": "Real native project plus preview and SRT with no film.mp4: independent native reopen PASS, decode and technical formal acceptance NOT_RUN, decision manual_review,user NOT_RUN; source unchanged."
+    },
+    {
+      "id": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "result": "PASS",
+      "evidence": [
+        "media-matrix.json",
+        "fixture-manifest.json",
+        "paired-native-pcm.json"
+      ],
+      "observed": "All7 cases PASS: licensed Tears of Steel-derived VFR and stereo181.211333s nonframe tail; bundled-font identity/change; explicitly synthetic alpha; bad-file/font/dependency refusals and moved reopening. Native PCM sample-exact8698144 and last544channel samples,AAC alignedtail>0.999 correlations; VFR36outputframes/source54,zero audio lag. Historicalcraft3 PCM real VFR bestalignedcorrelation0.5224 fails0.98 while fixedcraft5sameproject0.999995 passes."
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "media-matrix.json",
+      "originalSha256": "b6d52c5898135eb05dcdf9a7b64d9eb1f41782cf7d4989ee73c040c814639738",
+      "projectionSha256": "b6d52c5898135eb05dcdf9a7b64d9eb1f41782cf7d4989ee73c040c814639738"
+    },
+    {
+      "path": "media-matrix.txt",
+      "originalSha256": "bba4cba3d6c63ee816fc84ae908af55e77bd86e9e809ead5c5c955317602cfb4",
+      "projectionSha256": "bba4cba3d6c63ee816fc84ae908af55e77bd86e9e809ead5c5c955317602cfb4"
+    },
+    {
+      "path": "fixture-manifest.json",
+      "originalSha256": "293620f598b465d8d6260339472a5dbac45d939e04a3da736fb41c87ba05c205",
+      "projectionSha256": "293620f598b465d8d6260339472a5dbac45d939e04a3da736fb41c87ba05c205"
+    },
+    {
+      "path": "proxy-only.json",
+      "originalSha256": "54893b3f9081dc1f59af21d0a67b06033acc5b73f0dc7bd47bf7cc44153aafc0",
+      "projectionSha256": "2b984722fb0e6fbad34e910763e1a3fad7e72a9d8377f7c87ad4d687b4945f27"
+    },
+    {
+      "path": "proxy-producer.ts.txt",
+      "originalSha256": "f52dc503d9e807cbdaca7c426cdb179d51401f92ce6b6c3fcfaaf38edfc1495d",
+      "projectionSha256": "f52dc503d9e807cbdaca7c426cdb179d51401f92ce6b6c3fcfaaf38edfc1495d"
+    },
+    {
+      "path": "paired-native-pcm.json",
+      "originalSha256": "19d6fc7b79162fb3b48da8a14d39de4c43cdeba1f2042e75bfb92a72ceb7e257",
+      "projectionSha256": "a6c1e2552a8775c1150b434a11278093d4f52414aee053bc8d751ba05cfc65c5"
+    },
+    {
+      "path": "historical-integer-wave.json",
+      "originalSha256": "aaab0c9d5756c0dff209eae45275bc67b0b069455e1915fa995d731822e19c78",
+      "projectionSha256": "0a8abd82716ebddbda140bf0bde0e7e09d1f55278b3e4c27f4f3fca080722db8"
+    },
+    {
+      "path": "historical-long-wave.json",
+      "originalSha256": "7a364c5d57a19d9b1c5f66bdba5624df7b385654c10fa48c77f5e95d6831834a",
+      "projectionSha256": "9f68854e352e4833ceeddb1adceade9f754219a4d4e88345c00d1cb5097e8a40"
+    }
+  ],
+  "all13InstalledSkillsAndExecutionCodePreserved": true,
+  "tasksQualified": [
+    "4.16",
+    "4.17",
+    "4.18"
+  ],
+  "fullV1": "OPEN",
+  "notes": "Historical integral and long WAV exports actually PASS and are retained as controls, not behavior red. Real VFR native PCM content failure is the behavior red. Alpha is explicitly synthetic, other capture-derived dimensions retain source/license/recipes. No media/model/binary is committed.",
+  "notAccepted": [
+    "otherhosts/platforms",
+    "all666commands/GUI",
+    "separate Art distribution integration",
+    "creative/user acceptance",
+    "complete V1"
+  ]
+}

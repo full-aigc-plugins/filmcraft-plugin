@@ -1,0 +1,1008 @@
+{
+  "result": "PASS",
+  "cases": {
+    "vfr": {
+      "status": "PASS",
+      "measurements": {
+        "projectSha256": "d56ab198b1289b0f2e3b02d31cf1128b1a2385c174990fc78bd9b0a3978aff62",
+        "movieSha256": "9ddd20248f43eedc0d6645d861467c0591aa3a21b8cec3ab53ad362a62afc57d",
+        "durationSeconds": 3.008,
+        "requestedSeconds": 3,
+        "videoFrames": 36,
+        "fullDecode": true,
+        "audio": [
+          {
+            "channel": 0,
+            "correlation": 0.9999656239607124,
+            "alignmentCorrelation": 0.9999656239607126,
+            "lagSeconds": 0.0,
+            "sampleCount": 22400,
+            "rms": 0.13964824627460062
+          }
+        ],
+        "sourceFrames": 54,
+        "sourceFrameIntervals": [
+          0.041,
+          0.042,
+          0.083,
+          0.084
+        ],
+        "streamStarts": {
+          "video": 0.0,
+          "audio": 0.0
+        },
+        "frameAlignment": [
+          {
+            "requestedSeconds": 0,
+            "sourcePts": 0.0,
+            "meanChannelError": 0.3351793981481481
+          },
+          {
+            "requestedSeconds": 1.5,
+            "sourcePts": 1.5,
+            "meanChannelError": 0.3349537037037037
+          },
+          {
+            "requestedSeconds": 2.9166666666666665,
+            "sourcePts": 2.833,
+            "meanChannelError": 0.3397685185185185
+          }
+        ]
+      }
+    },
+    "long-audio-tail": {
+      "status": "PASS",
+      "measurements": {
+        "projectSha256": "be97e92f0c2c066a0fcdea3030db8036abe00e3e5401d7f7ce4069035a6fa879",
+        "movieSha256": "e9956d6d9eea894d2ce629c53a7e71dc1dfcf5ead208fb2f3eb4bf23078650da",
+        "durationSeconds": 181.25,
+        "requestedSeconds": 181.21133333333333,
+        "videoFrames": 2175,
+        "fullDecode": true,
+        "sourceSamplesPerChannel": 8698144,
+        "pcm": {
+          "decodedSamplesPerChannel": 8698144,
+          "tail": [
+            {
+              "channel": 0,
+              "correlation": 0.99999999999999,
+              "alignmentCorrelation": 0.9999999999999934,
+              "lagSeconds": 0.0,
+              "sampleCount": 544,
+              "rms": 0.2282559224825635
+            },
+            {
+              "channel": 1,
+              "correlation": 0.9999999999999889,
+              "alignmentCorrelation": 0.9999999999999907,
+              "lagSeconds": 0.0,
+              "sampleCount": 544,
+              "rms": 0.2076522699867051
+            }
+          ],
+          "sha256": "a9c4ba08a6558e09d3fd70dc3f0f20e2318227f241246ef79bd0158e15e9d82d"
+        },
+        "aac": {
+          "decodedSamplesPerChannel": 8698848,
+          "tail": [
+            {
+              "channel": 0,
+              "correlation": 0.9992790019140639,
+              "alignmentCorrelation": 0.9993385689263481,
+              "lagSeconds": 0.0,
+              "sampleCount": 544,
+              "rms": 0.23114848259903686
+            },
+            {
+              "channel": 1,
+              "correlation": 0.9996064840234762,
+              "alignmentCorrelation": 0.9992857296139339,
+              "lagSeconds": 0.0,
+              "sampleCount": 544,
+              "rms": 0.2069798869201582
+            }
+          ],
+          "sha256": "e9956d6d9eea894d2ce629c53a7e71dc1dfcf5ead208fb2f3eb4bf23078650da"
+        }
+      }
+    },
+    "font-change": {
+      "status": "PASS",
+      "measurements": {
+        "fonts": [
+          {
+            "licenseSha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+            "licenseSource": "https://github.com/storytold/filmcraft/blob/adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6/assets/fonts/OFL-Inter.txt",
+            "family": "Inter",
+            "origin": "runtime-bundled",
+            "fontSha256": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+            "license": "OFL-1.1",
+            "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+            "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+          },
+          {
+            "licenseSha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+            "licenseSource": "https://github.com/storytold/filmcraft/blob/adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6/assets/fonts/OFL-NotoSerif.txt",
+            "family": "Noto Serif",
+            "origin": "runtime-bundled",
+            "fontSha256": "a15cfbbc1539d707115111d672d590a3d70d4f74b4c0a315956da20ae19a14e1",
+            "license": "OFL-1.1",
+            "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+            "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+          }
+        ],
+        "discovered": [
+          "Inter",
+          "Noto Serif"
+        ],
+        "changedPixels": 1684,
+        "deliveries": [
+          {
+            "font": "Inter",
+            "projectSha256": "87387ba3a731599add052506c34eed0d761dce7c6f75f8d2042a76d4d554f1f6",
+            "movieSha256": "31f766367748469d3cf1eb28b9726df9e832638f619c3f3e90eadc4ce1e2690b",
+            "durationSeconds": 3.008,
+            "requestedSeconds": 3,
+            "videoFrames": 36,
+            "fullDecode": true
+          },
+          {
+            "font": "Noto Serif",
+            "projectSha256": "f8299b849fadded4de7980a36fad96f083a0774cb4742eb48fe07dc505b393e6",
+            "movieSha256": "d4c1a435a14243f2001b8ab84623cbca25a7f426b23e0ff9d492056ae0e6993f",
+            "durationSeconds": 3.008,
+            "requestedSeconds": 3,
+            "videoFrames": 36,
+            "fullDecode": true
+          }
+        ],
+        "downloadedNotoSans": "not installed or claimed as rendered; bundled fonts used without global installation"
+      }
+    },
+    "transparent-sequence": {
+      "status": "PASS",
+      "measurements": {
+        "provenance": "synthetic",
+        "compositeModel": "straight sRGB decoded to linear light; over black; sRGB RGBA8 output",
+        "halfAlphaRedExpected": 188,
+        "pixels": [
+          {
+            "frame": 0,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 1,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 2,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 3,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 4,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 5,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 6,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 7,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 8,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 9,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 10,
+            "maximumChannelError": 0
+          },
+          {
+            "frame": 11,
+            "maximumChannelError": 0
+          }
+        ],
+        "projectSha256": "044b1839347bdb876a17598d368529dcff4d4bc391317edfb43cb173034233ff",
+        "movieSha256": "b9f083010a30f4a6ef38a54970fdbb53aef250ed0b2086589b9b9301517bb92b",
+        "durationSeconds": 1.002,
+        "requestedSeconds": 1,
+        "videoFrames": 12,
+        "fullDecode": true
+      }
+    },
+    "bad-file": {
+      "status": "PASS",
+      "measurements": {
+        "refused": true,
+        "error": "cli_failed: filmcraft-cli: [OUTPUT]/.filmcraft-s81gx3ig/assets/bad.mov: unsupported media: bad.mov: unrecognised format\n",
+        "failureReceiptSha256": "1b821be5981ec65424d13df046db6014aa2a1c78953af2b86324c54fe0baddcd",
+        "successfulDeliveryExists": false,
+        "sourcePreserved": true
+      }
+    },
+    "missing-font": {
+      "status": "PASS",
+      "measurements": {
+        "refused": true,
+        "error": "missing_font: FilmCraft-Deliberately-Missing-Font-53",
+        "failureReceiptSha256": "43b9813056bfe2bc3262e61c2450e261b63f74d9ccabc58622528e613ff07d2d",
+        "successfulDeliveryExists": false,
+        "sourcePreserved": true
+      }
+    },
+    "dependency-move": {
+      "status": "PASS",
+      "measurements": {
+        "sourceDirectoryUnavailable": true,
+        "collectedAssetSha256": {
+          "video": "b9908226c67fff95fdb56441e55fe8af483ab18035344008efcddd0f0de49754",
+          "audio": "e382bdc729beedb9e9694ac4f908fb0af95960a003c79ea215d0fbe680026b0e"
+        },
+        "relinkedPixelsUnchanged": true,
+        "missingDependency": {
+          "refused": true,
+          "error": "asset_digest_mismatch: audio",
+          "failureReceiptSha256": null,
+          "successfulDeliveryExists": false,
+          "sourcePreserved": true
+        },
+        "projectSha256": "ba2e4cec4218672b9cb2f417cff0d204df3e338ac8c27b0dced341941d0dce31",
+        "movieSha256": "47c2f0ae8760e4490c8d477cce3612377ad659a2dfb9b94233c66e7001de8595",
+        "durationSeconds": 3.008,
+        "requestedSeconds": 3,
+        "videoFrames": 36,
+        "fullDecode": true
+      }
+    }
+  },
+  "layer": "native-matrix",
+  "installationPreserved": true,
+  "fixedInstallation": "PASS",
+  "otherPlatforms": "NOT_RUN",
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "NOT_PROVEN",
+  "schema": "filmcraft-native-media-matrix/v1",
+  "fixtureManifestSha256": "293620f598b465d8d6260339472a5dbac45d939e04a3da736fb41c87ba05c205",
+  "runtime": {
+    "version": "0.2.0-craft.5",
+    "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+    "platform": "darwin-arm64",
+    "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+  },
+  "skillFilesSha256": {
+    "SKILL.md": "d99581114f6fd977e318b0a33fe4e90d851caf4c95296cf524f296045bdc0c98",
+    "examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "references/task-scene.md": "27acaa880936e82c593698daa23312c5f819452b23a8f46c34d7cde167f009ef",
+    "references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "references/workflow.md": "6d7b1b7d36a9975535e11fbf4c2893a7b87ab97328efb9db1820db9d026a32eb",
+    "scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "scripts/mcp_session.py": "ad8a8fb3f84f9fbf814b5a593c96faf3cf9bb476ff32627039975d7f57c86616",
+    "scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "scripts/workflow.py": "c882cf15bed07410fbe510916ef2f9b958bc344d83ff345d0aa0ab148b4f3445"
+  },
+  "executedSkillFilesSha256": {
+    "SKILL.md": "d99581114f6fd977e318b0a33fe4e90d851caf4c95296cf524f296045bdc0c98",
+    "examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "references/task-scene.md": "27acaa880936e82c593698daa23312c5f819452b23a8f46c34d7cde167f009ef",
+    "references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "references/workflow.md": "6d7b1b7d36a9975535e11fbf4c2893a7b87ab97328efb9db1820db9d026a32eb",
+    "scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "scripts/mcp_session.py": "ad8a8fb3f84f9fbf814b5a593c96faf3cf9bb476ff32627039975d7f57c86616",
+    "scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "scripts/workflow.py": "c882cf15bed07410fbe510916ef2f9b958bc344d83ff345d0aa0ab148b4f3445"
+  },
+  "verifierFilesSha256": {
+    "verify_media_matrix.py": "80fd452e32d27f0ecd0d75cea2afc3643c30909ccdb59ec5a879b9008811aee4",
+    "media_matrix.py": "762e9047131b4e41a8ccbaf7413442686cafb77f4b2e6645f982ca1d403e15d9"
+  },
+  "inputSha256": {
+    "source-film": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+    "font": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
+    "font-license": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+    "vfr": "b9908226c67fff95fdb56441e55fe8af483ab18035344008efcddd0f0de49754",
+    "long-audio": "e382bdc729beedb9e9694ac4f908fb0af95960a003c79ea215d0fbe680026b0e",
+    "alpha-0": "f3efd683d3a9b9d841f7598a72f9a28bb434f961d9ba50b9fbdce7c3cedc57c9",
+    "alpha-1": "a8e55b9463901c7266835781cd90c3fbf8b365ae278a006580405a8bb69a8b57",
+    "alpha-2": "049b4cb99100dbcc264c2b687c10ed79e6f49a79207637af7774dfdba66d2f2f",
+    "alpha-3": "64cfd9ccc7e0db517a1c817d20ceff1f7a0a758b3d505b52f8e15d9bb41e048e",
+    "alpha-4": "2974e15476f467175a3f90c02a7b5accd3d0f44527aaa2a7efd8f85dbe09f523",
+    "alpha-5": "beca40beddb986cd1b74ee4f49c8f23b5d5d80696f15c8501d487db2d06287da",
+    "alpha-6": "f3179b5c6fdceb232d0efd2f96aa2fae8e7f4e81a909597c3ea9e20112c703c6",
+    "alpha-7": "98f952ed4d8d6d5c1c7ad3a31cc01d5079864dc2127c038e618321d1252fe1d3",
+    "alpha-8": "c608295695d0d995394b622e75b4ec7df068183c59d58d3a428927e1edcaf58a",
+    "alpha-9": "ad1ee115403047834c504830ca3332bdc851a8f0065aeadc082224fa69a398b1",
+    "alpha-10": "69f6664a9a0c7537f70d5609f6d5a2dad7bd08c8c3354225c1052560885ba71e",
+    "alpha-11": "7586e43a8977081ba4ca95880dfafe5a25cddf935d401ecbba20eb625e307b55",
+    "bad-file": "3d081a47918e0edcf6d7a49287c275c231ec6294110ab51b272059f803fa66aa"
+  },
+  "calls": [
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "--data-dir",
+        "[OUTPUT]/data",
+        "--project",
+        "[OUTPUT]/vfr/project.fcproj",
+        "inspect"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "4e17a7c264f03ba8e32ef89a10dc9d2a19f5fdac7d3540d1e6d2ebdf92437478",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "[OUTPUT]/vfr/film.mp4"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "f50f3303ddd694a51a0301b78c889ba079262232c35bebab623f6f7a7e29e467",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/vfr/film.mp4",
+        "-f",
+        "null",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[FIXTURES]/vfr.mkv",
+        "-vn",
+        "-ar",
+        "8000",
+        "-ac",
+        "1",
+        "-f",
+        "f32le",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "39aa9d9e0dacf443c0670e68226161a44389c837f51f4d8c11b11d060ada5a8c",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/vfr/film.mp4",
+        "-vn",
+        "-ar",
+        "8000",
+        "-ac",
+        "1",
+        "-f",
+        "f32le",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "bd254a1dd0ba41f01b5e9856981b11da3dbee8953013d8eb7ba5851d9d8dc4c6",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_frames",
+        "-show_entries",
+        "frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "[FIXTURES]/vfr.mkv"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "b887b8c2276558f7e0d4820b7b4c90f02babc1928c0ed665e2a6b780723fccef",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "[OUTPUT]/vfr/film.mp4"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "f50f3303ddd694a51a0301b78c889ba079262232c35bebab623f6f7a7e29e467",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[FIXTURES]/vfr.mkv",
+        "-an",
+        "-fps_mode",
+        "passthrough",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgb24",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "4e09ec3c763ef05c5eb1fb20a5dce5ffb0c78b63c020345c259fd36d2949cc6b",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "--data-dir",
+        "[OUTPUT]/data",
+        "--project",
+        "[OUTPUT]/long-audio-tail/project.fcproj",
+        "inspect"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "11a1a780866e9ae78e15716da0a72853fb26e4aac69c382defcb2a2caa5bda1a",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "[OUTPUT]/long-audio-tail/film.mp4"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "6868cc487fe12177d7394b30637bf707f7ef813b2e3297855a0ad8e31c48a98d",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/long-audio-tail/film.mp4",
+        "-f",
+        "null",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "--data-dir",
+        "[OUTPUT]/data",
+        "--project",
+        "[OUTPUT]/long-audio-tail/project.fcproj",
+        "export",
+        "[OUTPUT]/long-audio-tail/native.wav",
+        "--preset",
+        "Waveform Audio 48 kHz 24-bit"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "590af18393c06b7caa0089bad00ecfb2d632ba99da7ecf903f4077c4841feb7d",
+      "stderr": "exported [OUTPUT]/long-audio-tail/native.wav in 0.2s\n"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[FIXTURES]/long-tail.wav",
+        "-vn",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-f",
+        "f32le",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "56588ffde36e9371290943adc5955f33e78df70546de98c3ff4eaff1ded74445",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/long-audio-tail/native.wav",
+        "-vn",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-f",
+        "f32le",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "600d71c834d4ae9371e85ac7104c24ae0995b998350ac7c0b1fc7295d9f7796a",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/long-audio-tail/film.mp4",
+        "-vn",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-f",
+        "f32le",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "4d0acf8adb6f5ee7b6153b891196b88f9d44e07170acdbb0601ffc616ddac6eb",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "exec",
+        "fonts.list",
+        "{\"system\":true}"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "a5d3830a69ce0a9997c69ccf11d4db4313ca43f5135cb82452ad81102fcb0158",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "[USER_HOME]/workspaces/workspace-agent-skills/research/filmcraft",
+        "show",
+        "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6:assets/fonts/Inter-Regular.ttf"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "[USER_HOME]/workspaces/workspace-agent-skills/research/filmcraft",
+        "show",
+        "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6:assets/fonts/OFL-Inter.txt"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "[USER_HOME]/workspaces/workspace-agent-skills/research/filmcraft",
+        "show",
+        "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6:assets/fonts/NotoSerif-Regular.ttf"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "a15cfbbc1539d707115111d672d590a3d70d4f74b4c0a315956da20ae19a14e1",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "[USER_HOME]/workspaces/workspace-agent-skills/research/filmcraft",
+        "show",
+        "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6:assets/fonts/OFL-NotoSerif.txt"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "--data-dir",
+        "[OUTPUT]/data",
+        "--project",
+        "[OUTPUT]/font-first/project.fcproj",
+        "inspect"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "6bd6d38a2f43f694cad97446b1ce0fb7e0134f85470762f3556552e294da8714",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "[OUTPUT]/font-first/film.mp4"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "2c02fb4af15c46ca7fef329891d3dee06d957d81b045a411d3de46fd3449527e",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/font-first/film.mp4",
+        "-f",
+        "null",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "--data-dir",
+        "[OUTPUT]/data",
+        "--project",
+        "[OUTPUT]/font-second/project.fcproj",
+        "inspect"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "3ef90512ebd93bb81d1bb2b1af1bb096b019024f460637150ea0f12fe713430f",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "[OUTPUT]/font-second/film.mp4"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "d0db89a55797358a3d866c67b06a9f4c69b5fee005bd6e2a007482f0d7d1214f",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/font-second/film.mp4",
+        "-f",
+        "null",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "--data-dir",
+        "[OUTPUT]/data",
+        "--project",
+        "[OUTPUT]/transparent-sequence/project.fcproj",
+        "inspect"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "c5725c52710071039d4706324e4a8131dab1f2390733a8f2957c3d53d6b56868",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "[OUTPUT]/transparent-sequence/film.mp4"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "5359fe97abe8aeb20f9b7f94d3486c3be8f6268fa7da221fb9a008bb46459533",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/transparent-sequence/film.mp4",
+        "-f",
+        "null",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "[OUTPUT]/fresh-public-runtime/filmcraft/0.2.0-craft.5/filmcraft-cli",
+        "--data-dir",
+        "[OUTPUT]/data",
+        "--project",
+        "[OUTPUT]/dependency-move/project.fcproj",
+        "inspect"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "57ee62a3ad3f35b222cab80ec8fa1d05ccad8ca07b9e8ded43ffa5aa2d68c902",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "[OUTPUT]/dependency-move/film.mp4"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "f44cd6dda2558ae87980e06bc7030ad8d80f881481c81b748905ab83e0c77796",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "[OUTPUT]/dependency-move/film.mp4",
+        "-f",
+        "null",
+        "-"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    }
+  ],
+  "hostReceiptSha256": "f484053260f997accbb5bbbedf15a24fe3c43e582abd0f1616a7b041868d5ae1",
+  "plugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.66",
+    "ref": "v0.1.0-dev.66",
+    "sha": "992d768bcc912ec7776235560e63dc0e928a592d",
+    "skillSourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+    "skillSourceRef": "v0.1.0-dev.49",
+    "pluginManifestSha256": "eb0547d0ade03d48f209e2e57f565f03f73c87d1d599d7b3576a3e96a74832fe",
+    "skillSha256": "714cc7e0ece0c775ab8600b35d3c3c97ddb026e3521a57b793a969e60f279a56",
+    "skills": {
+      "filmcraft-use": "714cc7e0ece0c775ab8600b35d3c3c97ddb026e3521a57b793a969e60f279a56",
+      "filmcraft-cli": "de1c04a73d800742a368803b503245a4d8d7997f5618f03c6945f663fc4df2ae",
+      "filmcraft-cli-setup": "3e45ae8bede794afbf674d907ce3e9bcf14d035768af3d9b9760401e5255e4a4",
+      "filmcraft-cli-project": "de37a7fbef7f05b92786a1fe3f79f6cb667b1018fd2eb710d69a36cfcb8cf9b3",
+      "filmcraft-cli-media": "ac0dc1c9e7f6979abc2a3de5ca4994ded2451db84bf1327b62c231453ce56a5e",
+      "filmcraft-cli-timeline": "0c8943381381342165f970321cf93e93897a7d9cbabf97eaec9021cea09152a6",
+      "filmcraft-cli-audio": "1d6caec97cdc1ec3a23987a24649ea939ad0eb8ea7686f01911a41ed66aaa664",
+      "filmcraft-cli-subtitles": "54e82f0a882158995bc759bda8d09eae8805cb19d1ea186198fea31be1601b9c",
+      "filmcraft-cli-color": "f8a88008c85af3f85f9218a470485f6996ab7d47fab9020c8000d877afd67958",
+      "filmcraft-cli-motion": "91c3295161f11cb40692863704ca2e9ac7683510d88fd195f071e1615f847b24",
+      "filmcraft-cli-export": "1c30af7c5a03494a52b6d43c5323a70459629f75db8b902ec0bbdbb25d338c3a",
+      "filmcraft-cli-multicam": "ca42199014412e44b3fd557ef17c5347535f08f534a2c8308f12d938dd9762ea",
+      "filmcraft-cli-transcript": "18dddea3f0911fa9d5109d5230edf9775e0db30e8fc4e9211f538d2e233f0265"
+    },
+    "codeFilesSha256": {
+      "package.json": "5cd0dac965e067f18c24fe1d805e68225c971f82ee01df8a33e709c21926d4c0",
+      "scripts/check_release.py": "bb8abba5a0dbc895bf93b30c6796add551983560430989d1cb57c58cee150ea6",
+      "scripts/collect_release_layers.py": "064b89ad37ae1156bff782fd0e70666ce24e5794ed97c8e8ae1444de26d891f7",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/media_matrix.py": "762e9047131b4e41a8ccbaf7413442686cafb77f4b2e6645f982ca1d403e15d9",
+      "scripts/native_preflight.py": "c655263fdc0df5d9cb1219441182035ca8f77cc0521b3dbe4683a4eae7121492",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/probe_workflow_writer.py": "27126388902856a91d2c443570fb33f4af2eb4dcdceba30942309afd90ac0570",
+      "scripts/process_identity.py": "2d239b424b34092e32b8c8105b71672511ad3253ccf177f9b633618e98bd1ae8",
+      "scripts/protocol_fixture.ts": "4729d8ccbb4f9718e00451f02ee1352a4b8484fe0b56ac0846e42fe9fd26fccb",
+      "scripts/release_evidence.py": "05b06b6cc5c7c7536f0067a3d103596026ddba83e553046c40970a79b0450008",
+      "scripts/review_media.py": "2b8b55958a032fc6a625c280a5a9f74bd3ee78ff0a17343ca36d69967fbf033b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "fe8d39c98acaa8334c9576f842b850c2cb2f86932ddc4ce64c9c4ef2dd5edcc7",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_artifact_contract.ts": "3f3c0c3e6e5c6b5aa337ca7e7a7617e3ac16e1b354968d4333d5388e3b0a9694",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_admission.py": "5316d5e6622d1f28ba688ff0762c6116da8b005986b2ab190e4ee06d80dcd5c4",
+      "scripts/verify_fixed_artifacts.py": "6008c8e599465bd89ed26fe2b97b89245a934685152997278757dfd68262e78f",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "37aef833272f99d6f9c3a4e53cdbe86946302f2a063d55be1c3d0c59ec15faa1",
+      "scripts/verify_fixed_media.py": "bdf14e498066b979b95707d507937e75943d060eacae06b182ea40854c3c4421",
+      "scripts/verify_fixed_quality.py": "840f59f78cafbff9cff1f6a7bebdc80f97123ac152ed3979fc3e8bb69bd5bf1d",
+      "scripts/verify_fixed_recovery.py": "e7225bb0a35fbea4d5bfe689148909cb3abecc7e2b22c074aca6debe9fb59c8b",
+      "scripts/verify_fixed_resources.py": "205352ad76c275a134d4c17845ee19e59e452ad627ef42270891585ca7ac98b1",
+      "scripts/verify_fixed_revision.py": "908009395a515166b1fc0f8f69f8d54157a7af3363b1432bd16439a9f353fe1f",
+      "scripts/verify_media_matrix.py": "80fd452e32d27f0ecd0d75cea2afc3643c30909ccdb59ec5a879b9008811aee4",
+      "scripts/verify_protocol_gate.py": "3388c8654f6239a775748ac450ac0e9653a88cbc37672811330dc89e0c9a3ea5",
+      "scripts/verify_recovery_contract.py": "34b9b9c7b976ff5677fcd53127e9c14bebc31ed45c682599773bddba1186b9d6",
+      "scripts/verify_runtime_transition.py": "87b149096560cf035ff1e71ab0e7abe56d6d49d49c5b20bfe3c78eb6a7755064",
+      "scripts/verify_workflow_admission.ts": "7c24b8d3540df1f8250046d82da2ac25ce698ed3400877d8359558ac1dcf7414",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "scripts/verify_writer_boundaries.py": "b5936502c52ed7f60b7be2e3eaf1693b9f654a20e2869a7dbc437053751174a4",
+      "src/adapters/asset_refusal.ts": "c00715d34a007a2f758973f111b89e542dbf174d1329e48763396e8365cccf7d",
+      "src/adapters/capability_refusal.ts": "759105f53eb4bb044b70d31e335206c56ffd18a83dd0a56498ca89d5b5814605",
+      "src/adapters/clip_refusal.ts": "16d8f1355d1b048be93f65bdb585f745195bb11433a866ef8dc58849d435db74",
+      "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "38df7db0cf6301506cf37a46c2fb44945c90426359b013b33666480142a3e9e9",
+      "src/adapters/runtime_candidate.ts": "9d953e0ede332b49019717affa7be691ed6b8420cec2db28762c5c8f9b2b39a0",
+      "src/adapters/runtime_deployment.ts": "36842d4ca170da882c1e54c108fa1bdad72a2a533f7b8c69bd536a9e55fbeedf",
+      "src/adapters/runtime_upgrade.ts": "1110f7ae5571c6e3b043a0ad65fdcd9e3e1467cf48d4a642585d81c57654ea27",
+      "src/artifacts/exchange_loss.ts": "213bf786ec7be2c2c462900ebdb5e5a29ffcbc6e278230cc6137453e43581cff",
+      "src/artifacts/receipt_index.ts": "d93cda02a97852345005e0a7ed57663a47ed319dda8b7749a508287ff9c0c090",
+      "src/cli/recovery.ts": "c4838abe071cebe0bb97befb9b3316d0338d3548845cef9b8842bc742dc8c35f",
+      "src/cli/runtime.ts": "5adb5407bdc0118f84b77d43c91919430c607798d5b1a13c1513bc6f3f5b90c9",
+      "src/cli/workflow.ts": "12af2caa762861e841d2226e7271eef99434bb9d9481518a8cb1ec9ac70ef6eb",
+      "src/harness/authorization.ts": "dcf9f031e6a00c1249b39beff99d627cbf82a50730595c9d63d873c287ab3dfb",
+      "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+      "src/harness/continuation.ts": "5660d11ffb5045c095b00faf7314cf1e28ae064edb65956d96da6d59a2fc83ed",
+      "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+      "src/harness/process_identity.ts": "a0e66f96d8a62953ae73d98b2de9ca683961d2b8a24e2afb70ecb6d05a0c0584",
+      "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+      "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+      "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+      "src/harness/state_maintenance.ts": "5eac10270615aca8b80ffe1d4c7e1fb2db1f4b42a235c0bbc1855ad859f31b6e",
+      "src/harness/task_ledger.ts": "dd7dfa57fbd1876cfcd27ee88d2cf681e65e34648da9acd6580588e4b49e5691",
+      "src/harness/workflow_admission.ts": "f441f5f10027926e6f3328e35c5436bde258714b6e1c1d30b9a45e276e7637b8",
+      "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+      "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+      "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+      "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+      "src/quality/revision_service.ts": "9972065d55744551627f94c8b8ee98139ac7f1c4e32199d479f7995833e8df66",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62"
+    }
+  },
+  "allInstalledSkillsUnchanged": true,
+  "installedSkillCount": 13,
+  "scope": "seven real-derived/synthetic media cases in actual isolated fixed Codex installation; bounded platform/codec scope; full V1 remains open"
+}

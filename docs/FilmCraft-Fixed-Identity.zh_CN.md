@@ -12,6 +12,7 @@
 
 ```bash
 python3 -I -B scripts/verify_fixed_install.py --codex "$CODEX_CLI" --authority "$ARTCRAFT_REPOSITORY" --ref v0.1.0-dev.43 --output "$NEW_OUTPUT_DIRECTORY"
+python3 -I -B scripts/verify_fixed_identity.py --host "$NEW_OUTPUT_DIRECTORY" --authority "$ARTCRAFT_REPOSITORY" --ref v0.1.0-dev.43 --output "$NEW_IDENTITY_REPORT"
 python3 -B scripts/current_facts.py --check
 ```
 
@@ -19,6 +20,8 @@ python3 -B scripts/current_facts.py --check
 
 ## 验收与状态
 
-[固定身份报告](evidence/filmcraft43-fixed-identity-20261008.json) 分别记录：当前身份一致性、生成结果可重复、单字段篡改拒绝、历史证据不升级，以及实际安装后的公开 CLI/工作流结果。只有上述任务所需证据完成才勾选 9.6。基础验证器已经从公开 dev.42 标签完成 13 技能发现、零加载错误及 18 个执行文件核对，此记录不代替新 dev.43 验收。
+[固定身份报告](evidence/filmcraft43-fixed-identity-20261008.json) 为 PASS，任务 9.6 已完成：公开 dev.43 标签在隔离 Codex 0.147.0 安装，13 技能发现零错误、19 个执行文件一致；安装复制件的 7 类单字段篡改被拒绝，中英文文档连续生成完全相同，原安装文件保持不变。dev.42 历史 MISMATCH 与当前完整组合 NOT_PROVEN 均保留。
+
+安装内容的原生回归 33 项无跳过通过，包含实际创建、返工、导出、幂等和丢失回执恢复；实际运行时身份为 craft.4 / `80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893`。原生生产者报告保留原有 candidate 范围措辞，外层证据明确实际执行目录来自 Codex 安装标签。身份复验脚本及本验收记录为发布后的补充，已发布 dev.43 标签与 ZIP 不变；复验脚本摘要单独记录，不能声称它已包含在原 ZIP 中。
 
 源码测试、固定安装、实际宿主发现和模型路由分别报告。发现技能不证明自动路由准确，目录一致不证明逐命令成功，身份 MATCH 不把完整组合的 NOT_PROVEN 改为通过。完整模式/平台、升级回退、预算取消、质量与用户接受及完整 V1 仍开放。

@@ -306,7 +306,8 @@
         "9.29",
         "9.30"
       ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json"
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+      "fixedIdentityEvidence": "docs/evidence/filmcraft43-fixed-identity-20261008.json"
     },
     {
       "requirement": "FC-RL-002",

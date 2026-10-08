@@ -1,10 +1,10 @@
 {
   "schema": "filmcraft-fixed-identity-acceptance/v1",
-  "result": "NOT_RUN",
+  "result": "PASS",
   "pluginRef": "v0.1.0-dev.43",
   "skillSourceRef": "v0.1.0-dev.40",
   "skillSourceSha": "2eb9e0f169b3cfea1bf810aa0293c51bdbed4177",
-  "scope": "pending actual fixed installation, current identity, tamper rejection and history-preservation checks",
+  "scope": "task 9.6 fixed public-tag identity, seven single-field tamper rejections, repeat generation, unchanged installed package and preserved history",
   "baseline42": {
     "result": "PASS",
     "skills": 13,
@@ -12,8 +12,10 @@
     "executableFiles": 18
   },
   "notAccepted": [
-    "task 9.6 until fixed dev.43 evidence completes",
-    "complete release/host/runtime/V1 acceptance"
+    "complete release/host/runtime/V1 acceptance",
+    "automatic model routing",
+    "exhaustive command and mode/platform compatibility",
+    "authorization enforcement, budget/cancellation and independent quality/user acceptance"
   ],
   "candidateTests": {
     "python": {
@@ -38,12 +40,75 @@
     "docs/current-facts.json": "b83a0c33a4211d315663249208f5be07f17851d49764cf32bdc2637ad121e4c5"
   },
   "evidenceFiles": {
-    "docs/evidence/filmcraft43-fixed-identity-20261008/native-candidate.log": "54fe8cd57808b98eb8c92f1af4723efdad1d793ec79f41d1451df0cf4edc6959",
-    "docs/evidence/filmcraft43-fixed-identity-20261008/verifier-malformed-red.log": "846804f03432d4c5f49826b24e43f51f573627618b6da7fc5523b9a6889f96a4",
-    "docs/evidence/filmcraft43-fixed-identity-20261008/verifier-red.log": "ed9b80fe405c731049f9c8ec5d6f8dd182273f185f7690a02f20dba7cfcf63c7",
-    "docs/evidence/filmcraft43-fixed-identity-20261008/python-green.log": "b192bf3975b6da2691974ea1219c777231d14332fce8c06ad7f920ae050ef88b",
     "docs/evidence/filmcraft43-fixed-identity-20261008/baseline42-host.json": "f5a66e323d698703f027b572b580a507476b7408983702c05f70bae725891e5a",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/host43.json": "82571821b4338aa2c4a59050999b9e5f71937c96cbb5c49610a7ee56c44cf1b3",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/identity-live.json": "18cd9ae191c6cd99f0fcd22ccd943d16ee4cdf7854e0d54c07861de6bedfc04c",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/identity-live.log": "7799a5e6905c1c1c2928881f79b7180aa3ba15a28b9014801b4a4d9ce3430680",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/installed-native.json": "9ee9cd83d726b19c89797a1562d2eb88a2e2fb957cdd5f1ee9c586dc31b2044e",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/installed-native.log": "62b79e4f5d20757f9dcfd5f2fa50ed005c95f0560e41e29b653142c7da5ca7f0",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/native-candidate.json": "b1d0365f52121e8a463a69b120bd08ae8104fb5fad16e2d367da5d091b05ffa3",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/native-candidate.log": "54fe8cd57808b98eb8c92f1af4723efdad1d793ec79f41d1451df0cf4edc6959",
     "docs/evidence/filmcraft43-fixed-identity-20261008/protocol.json": "04b59538a0a29d334e1d086103931fc7fabc98caad2eee7535f0ee402dadc572",
-    "docs/evidence/filmcraft43-fixed-identity-20261008/native-candidate.json": "b1d0365f52121e8a463a69b120bd08ae8104fb5fad16e2d367da5d091b05ffa3"
-  }
+    "docs/evidence/filmcraft43-fixed-identity-20261008/python-green.log": "b192bf3975b6da2691974ea1219c777231d14332fce8c06ad7f920ae050ef88b",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/verifier-malformed-red.log": "846804f03432d4c5f49826b24e43f51f573627618b6da7fc5523b9a6889f96a4",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/verifier-red.log": "ed9b80fe405c731049f9c8ec5d6f8dd182273f185f7690a02f20dba7cfcf63c7"
+  },
+  "pluginSha": "599fab595921e260e764c76a9a485a344b07fb2a",
+  "fixedHost": {
+    "result": "PASS",
+    "codexVersion": "codex-cli 0.147.0",
+    "skills": 13,
+    "loadingErrors": 0,
+    "executableFiles": 19,
+    "helper": {
+      "commit": "09d4ac5b8ff82f8fe819189e4be487b45ab2472b",
+      "path": "scripts/verify_codex_host.py",
+      "sha256": "8708c984e0e64a96196eee2745a6742b0ec53a17a402bb70b92d878443a13a35"
+    }
+  },
+  "identityChecks": {
+    "tamperCases": 7,
+    "deterministicGeneration": "PASS",
+    "historicalRuntimeIgnored": "PASS",
+    "historical42": {
+      "sha256": "55c2679f719fecffa48aeb7bf2eb52470be4d665f632c8a9f5085681f788ea06",
+      "catalogIdentity": "MISMATCH",
+      "currentQualification": "NOT_PROVEN"
+    },
+    "installedTreeBefore": "deb419f651d076a2247a3eb927dd137558fd991b1a019640bdc1291cda91fbb6",
+    "installedTreeAfter": "deb419f651d076a2247a3eb927dd137558fd991b1a019640bdc1291cda91fbb6",
+    "currentQualification": "NOT_PROVEN",
+    "referenceCatalogIdentity": "MATCH"
+  },
+  "installedNative": {
+    "result": "PASS",
+    "tests": 33,
+    "passed": 33,
+    "skipped": 0,
+    "runtimeIdentity": {
+      "pluginId": "filmcraft",
+      "pluginVersion": "0.1.0-dev.43",
+      "cliVersion": "0.2.0-craft.4",
+      "sha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "450548b2ca12c7e5a497109e7ac26ed925bd5b0616f808c88791bbbe9d839452"
+    },
+    "sourceRevision": "2eb9e0f169b3cfea1bf810aa0293c51bdbed4177",
+    "sourceTreeSha256": "5e59a5e63eacea8b9458988759ce72148101d55d9a56819d2a4bb4a1822e24dc",
+    "createState": "verifying",
+    "revisionState": "verifying",
+    "idempotentReuse": true,
+    "originalPreserved": true,
+    "scope": "Actual tests from Codex-installed tag43 with its installed source40; original report schema retains its bounded candidate wording; no model dispatch or full Harness acceptance."
+  },
+  "producer": {
+    "path": "scripts/verify_fixed_identity.py",
+    "sha256": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+    "scope": "post-tag acceptance producer, does not modify published tag43"
+  },
+  "commands": [
+    "python3 -I -B scripts/verify_fixed_install.py --codex \"$CODEX_CLI\" --authority \"$ARTCRAFT_REPOSITORY\" --ref v0.1.0-dev.43 --output \"$NEW_HOST_OUTPUT\"",
+    "python3 -I -B scripts/verify_fixed_identity.py --host \"$NEW_HOST_OUTPUT\" --authority \"$ARTCRAFT_REPOSITORY\" --ref v0.1.0-dev.43 --output \"$NEW_IDENTITY_REPORT\"",
+    "npm run test:native (cwd actual installed tag43, FILMCRAFT_NATIVE_SKILL=installed filmcraft-use, FILMCRAFT_NATIVE_SOURCE_REVISION=source40 commit)"
+  ]
 }

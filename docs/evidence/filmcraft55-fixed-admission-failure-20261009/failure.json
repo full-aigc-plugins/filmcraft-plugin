@@ -1,0 +1,13 @@
+{
+  "schema": "filmcraft-fixed-admission-failure/v1",
+  "result": "FAIL",
+  "pluginRef": "v0.1.0-dev.55",
+  "pluginSha": "799884acde76fe2413261cfb414b9153134951eb",
+  "nativeCasesPass": 7,
+  "fixedQualification": "FAIL",
+  "error": "admission_identity_or_cases_incomplete",
+  "cause": "Verifier incorrectly compared adapter raw-byte tree hash against vendor file-digest tree hash; all installed payloads separately verified unchanged. No task closed.",
+  "adapterSha256": "ea425eea48ee8a8808359936c24f4a27f57d75aeb733b2f10287d7fea0215cdd",
+  "vendorSha256": "781563b33d3f20ed1f1077feac417c13c8230796d7de9bdb438633f4a4a7d29d",
+  "repair": "Independent algorithm-specific comparison, explicit algorithm labels and new immutable dev.56; dev.55 preserved."
+}

@@ -1,5 +1,7 @@
 # Version-bound release records
 
+dev.56 independently verifies adapter raw-byte tree and vendor file-digest tree identities, with explicit algorithm labels. Fixed dev.55 passed seven native cases but failed final qualification because its verifier mixed these algorithms. Failure evidence and the old tag are preserved; fixed dev.56 acceptance is pending, with no task closed.
+
 dev.55 adds trusted host admission for initial workflows: execute subjects bind the complete task and resource policy; authority is re-read before preflight and native submission. Missing, expired, revoked or mismatched decisions refuse execution. Seven unit and seven actual-native candidate cases pass; fixed installation and full V1 remain open.
 
 Fixed dev.54/source46/public craft.5 passes all seven native media cases in an actual isolated Codex installation, preserving all13 skill and executable identities. OpenSpec9.32 and9.33 are complete;48 full-V1 tasks remain open. Scope is bounded to current macOS arm64, Codex and codecs; creative, user and other-platform acceptance remain open. [Fixed evidence](docs/evidence/filmcraft54-fixed-media-20261009/report.json).

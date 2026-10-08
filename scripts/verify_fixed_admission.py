@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """绑定真实固定宿主与全部安装字节的首次工作流准入验收。"""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -16,12 +17,13 @@ CASES = {'ungranted-exact-subject', 'actual-cli-authorized-native-create',
          'actual-native-revision-and-stale-source-conflict'}
 
 
-def validate_report(report, expected):
+def validate_report(report, expected, adapter_skill_sha256):
     if (report.get('schema') != 'filmcraft-workflow-admission-verification/v1'
             or report.get('result') != 'PASS' or report.get('layer') != 'actual-native'
             or report.get('pluginVersion') != expected['version']
             or report.get('sourceRevision') != expected['skillSourceSha']
-            or report.get('skillSha256') != expected['skills']['filmcraft-use']
+            or report.get('skillSha256') != adapter_skill_sha256
+            or report.get('skillHashAlgorithm') != 'path-nul-raw-bytes-nul'
             or report.get('installedSkillPreserved') is not True
             or report.get('fullV1') != 'NOT_PROVEN'
             or len(report.get('cases', [])) != len(CASES)
@@ -67,14 +69,21 @@ def verify(host, repository, authority, ref, output, node, python):
         if output.is_dir(): (output / 'failed.private.log').write_text(result.stdout + result.stderr)
         raise ValueError('fixed_native_admission_failed')
     check_files()
-    report = json.loads((output / 'report.json').read_text()); validate_report(report, expected)
+    adapter_digest = hashlib.sha256()
+    skill = directories['filmcraft-use']
+    for path in sorted((p for p in skill.rglob('*') if p.is_file() and '__pycache__' not in p.parts), key=lambda p: str(p)):
+        adapter_digest.update(path.relative_to(skill).as_posix().encode() + b'\0')
+        adapter_digest.update(path.read_bytes()); adapter_digest.update(b'\0')
+    report = json.loads((output / 'report.json').read_text())
+    validate_report(report, expected, adapter_digest.hexdigest())
     lock = json.loads((directories['filmcraft-use'] / 'scripts/runtime.lock.json').read_text())
     runtime = report.get('runtimeIdentity', {})
     artifact = lock['artifacts'][report['platform']]
     if runtime.get('sha256') != artifact['binarySha256'] or runtime.get('cliVersion') != lock['resolvedVersion']:
         raise ValueError('fixed_runtime_mismatch')
     report.update(layer='fixed-installed-native', plugin=expected, hostReceiptSha256=digest(host / 'host-receipt.json'),
-                  installedSkillCount=len(directories), allInstalledSkillsUnchanged=True, allInstalledCodeUnchanged=True)
+                  skillVendorSha256=expected['skills']['filmcraft-use'],
+                  skillVendorHashAlgorithm='vendor-path-nul-file-sha256-newline', installedSkillCount=len(directories), allInstalledSkillsUnchanged=True, allInstalledCodeUnchanged=True)
     (output / 'fixed-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     return report
 

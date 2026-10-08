@@ -110,7 +110,7 @@ try {
     originalSha256: projectSha, changedSha256: changedSource, staleAttempts: 0, sourcePreserved: true });
   assert.equal(fingerprintSkill(skill), skillBefore);
   const report = { schema: 'filmcraft-workflow-admission-verification/v1', result: 'PASS', layer: 'actual-native',
-    pluginVersion: version, sourceRevision: sourceSha, skillSha256: skillBefore, runtimeIdentity: prepared.runtimeIdentity,
+    pluginVersion: version, sourceRevision: sourceSha, skillSha256: skillBefore, skillHashAlgorithm: 'path-nul-raw-bytes-nul', runtimeIdentity: prepared.runtimeIdentity,
     platform: process.platform + '-' + process.arch, nodeVersion: process.version, cases,
     planSha256: sha256(readFileSync(planFile)), inputSha256: sha256(readFileSync(image)),
     installedSkillPreserved: true, authorization: 'private host LocalAuthorizationStore; explicit exact subjects; no production grants',

@@ -146,3 +146,7 @@ FilmCraft caption size is normalized to 1080 lines, not expressed directly in ou
 音频 `timeline.place` 的显式duration必须落在已登记源范围内；短配音不能直接复制视频全长。需要完整短配音时可省略duration，由实际媒体长度与sourceIn决定；核对片段结束时间和成片尾部，防止非预期延长序列。示例中明确两秒的裁切要求对应输入至少两秒。
 
 Explicit audio placement duration must stay within the registered source range. Do not assign the full video duration to shorter narration. Omit duration when placing the complete short source, then check clip end time and exported tail for unintended sequence extension. Examples explicitly trimming two seconds require sources of at least two seconds.
+
+已登记普通素材在安装/交付目录创建前聚合缺失、摘要冲突和符号链接问题。公开失败 JSON 的可选 `assetIssues` 数组只含 `alias`、`origin`（plan/source）和 `reason`（missing_file/digest_mismatch/invalid_path），保留原错误前缀；不返回本地路径，不用同名文件替代。序列结构验证和命令行摘要登记错误仍保留各自拒绝合同。
+
+Registered ordinary media preflight aggregates missing, digest-conflicting and symlink inputs before installation/output. Optional `assetIssues` contains alias, origin and reason only; existing error prefixes remain compatible. Sequence validation and CLI digest-registration failures retain their separate refusal contracts.

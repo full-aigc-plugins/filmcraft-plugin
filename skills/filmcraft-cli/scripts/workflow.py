@@ -224,8 +224,16 @@ def run(cli, argv, cwd=None, data_dir=None):
     return result.stdout
 
 
+class AssetPreflightError(ValueError):
+    """素材问题清单仅包含已验证的别名、来源和原因，不暴露本地路径。"""
+    def __init__(self, issues, code='asset_digest_mismatch'):
+        self.asset_issues = issues
+        super().__init__(code + ': ' + issues[0]['alias'])
+
+
 def preflight_assets(new_assets, prior_assets, source):
     """在运行时安装与暂存执行前校验素材；复制时再次校验以检测并发变化。"""
+    issues, first_code = [], None
     for registered, group in ((True, prior_assets), (False, new_assets)):
         for alias, asset in group.items():
             kind = asset.get('kind')
@@ -234,7 +242,9 @@ def preflight_assets(new_assets, prior_assets, source):
             path = source / asset['path'] if registered else Path(asset['path'])
             if registered:
                 if path.is_symlink() or (kind == 'image-sequence' and path.parent.is_symlink()):
-                    raise ValueError('invalid_asset_path')
+                    issues.append({'alias':alias,'origin':'source','reason':'invalid_path'})
+                    first_code = first_code or 'invalid_asset_path'
+                    continue
                 path = path.resolve()
                 if not path.is_relative_to(source):
                     raise ValueError('invalid_asset_path')
@@ -247,8 +257,13 @@ def preflight_assets(new_assets, prior_assets, source):
                     raise ValueError('unsupported_asset_kind')
                 if kind == 'lut' and path.suffix.lower() not in ('.cube', '.3dl'):
                     raise ValueError('unsupported_lut_format')
-                if path.is_symlink() or not path.is_file() or sha(path) != asset['sha256']:
-                    raise ValueError('asset_digest_mismatch: ' + alias)
+                reason = ('invalid_path' if path.is_symlink() else 'missing_file' if not path.is_file()
+                          else 'digest_mismatch' if sha(path) != asset['sha256'] else None)
+                if reason:
+                    issues.append({'alias':alias,'origin':'source' if registered else 'plan','reason':reason})
+                    first_code = first_code or 'asset_digest_mismatch'
+    if issues:
+        raise AssetPreflightError(issues, first_code)
 
 
 def execute(plan, output, runtime_home=None, source=None, data_dir=None):
@@ -626,7 +641,10 @@ def main():
             plan.setdefault('assets', {})[alias] = {'kind':'segmented-image-sequence','path':path,'sha256':sha(path)}
         print(json.dumps(execute(plan, args.output, args.runtime_home, args.source, args.data_dir), ensure_ascii=False))
     except (ValueError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
-        print(json.dumps({'error': str(error)}, ensure_ascii=False))
+        failure = {'error': str(error)}
+        if isinstance(error, AssetPreflightError):
+            failure['assetIssues'] = error.asset_issues
+        print(json.dumps(failure, ensure_ascii=False))
         raise SystemExit(1)
 
 if __name__ == '__main__':

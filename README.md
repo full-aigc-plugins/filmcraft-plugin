@@ -53,7 +53,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.64` / `filmcraft-skills@v0.1.0-dev.47`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.65` / `filmcraft-skills@v0.1.0-dev.48`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -77,7 +77,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.64`; skill source: `0.1.0-dev.47`; 13 independent skills.
+Current plugin: `0.1.0-dev.65`; skill source: `0.1.0-dev.48`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -181,9 +181,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.64 |
+| Metadata version | 0.1.0-dev.65 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.47 |
+| Skills source | filmcraft-skills / v0.1.0-dev.48 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -396,3 +396,5 @@ Fixed Film41/source38 and Art118/source90 first use passes: all64 installation i
 Historical source-candidate checkpoint: Development64 adds an explicit retained-source workflow CLI candidate with strict binding, existing execution grant and activated ledger selection. Actual rollback execution and decoding pass; source-native regression is164/164. Fixed64/full V1 qualification remains pending (29 tasks). Evidence: `docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json`.
 
 FC-RT-002 is qualified for fixed dev.64/source47 on macOS arm64: all seven runtime scenarios,164/164 installed native tests,286 installer cases and13 actual installed public cold CLI starts pass. Tasks2.4–2.6 are complete;26 V1 tasks remain. Other platforms, full command coverage and creative acceptance remain open. Evidence: `docs/evidence/fc-rt-002/index.json`.
+
+Development65 pins published source48 and adds safe aggregate asset issue lists through registered-media preflight and public workflow/runtime CLIs.169/169 source-native tests and actual13 skill CLI/Harness refusal boundaries pass. Full FC-DM-001 sequence/HD/relink and fixed65 qualification remain pending;26 V1 tasks stay open. Evidence: `docs/evidence/filmcraft65-asset-issues-candidate-20261009/acceptance.json`.

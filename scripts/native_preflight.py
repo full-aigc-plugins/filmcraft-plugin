@@ -45,6 +45,20 @@ def refusal_diagnostic(error, snapshot, requires):
                          'catalogSha256': digest(snapshot.get('catalogSha256'))}}
 
 
+def valid_asset_issues(value):
+    """仅允许安全别名与封闭的来源/原因；不将路径或任意异常文本传给宿主。"""
+    if not isinstance(value, list) or not value:
+        return None
+    for row in value:
+        if (not isinstance(row, dict) or set(row) != {'alias', 'origin', 'reason'}
+                or not isinstance(row['alias'], str)
+                or not re.fullmatch(r'[a-zA-Z][\w-]*', row['alias'])
+                or row['origin'] not in ('plan', 'source')
+                or row['reason'] not in ('missing_file', 'digest_mismatch', 'invalid_path')):
+            return None
+    return [dict(row) for row in value]
+
+
 def inspect(skill, plan_path, output, runtime_home, source=None):
     def load(name):
         path = skill / 'scripts' / (name + '.py')
@@ -101,5 +115,8 @@ if __name__ == '__main__':
         failure = {'code': code}
         if code != 'native_preflight_failed':
             failure['diagnostic'] = getattr(error, 'capability_diagnostic', None) or refusal_diagnostic(error, {}, {})
+        issues = valid_asset_issues(getattr(error, 'asset_issues', None))
+        if issues:
+            failure = {'code': 'asset_preflight_failed', 'assetIssues': issues}
         print(json.dumps({'schema': 'filmcraft-native-preflight-error/v1', 'error': failure}))
         sys.exit(1)

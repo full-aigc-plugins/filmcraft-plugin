@@ -1,0 +1,57 @@
+{
+  "schema": "filmcraft-public-asset-refusal-candidate/v1",
+  "result": "PASS",
+  "pluginVersion": "0.1.0-dev.65",
+  "sourceRevision": "4e955df5a4d5d95e6ef27723223d3fafb0109dec",
+  "sourceTreeSha256": "2852dd32639953edebdcecb4a2abf2b4dbfe802c1adef1b2da6058c524cd87c3",
+  "workflow": {
+    "status": 1,
+    "body": {
+      "schema": "filmcraft-workflow-admission-error/v1",
+      "replayAllowed": false,
+      "error": {
+        "code": "asset_preflight_failed",
+        "assetIssues": [
+          {
+            "alias": "first",
+            "origin": "plan",
+            "reason": "missing_file"
+          },
+          {
+            "alias": "second",
+            "origin": "plan",
+            "reason": "missing_file"
+          }
+        ]
+      }
+    }
+  },
+  "runtimeProbe": {
+    "status": 1,
+    "body": {
+      "schema": "filmcraft-runtime-upgrade-error/v1",
+      "replayAllowed": false,
+      "error": {
+        "code": "asset_preflight_failed",
+        "assetIssues": [
+          {
+            "alias": "first",
+            "origin": "plan",
+            "reason": "missing_file"
+          },
+          {
+            "alias": "second",
+            "origin": "plan",
+            "reason": "missing_file"
+          }
+        ]
+      }
+    }
+  },
+  "tasks": 0,
+  "attempts": 0,
+  "runtimeCreated": false,
+  "outputCreated": false,
+  "skillPreserved": true,
+  "scope": "Actual source candidate bundled skill and public Node CLIs; separate exact private fixture grants, real plan/source/lock digests. Capability snapshot not measured because missing inputs stop before native installation. No self-authorization by production code."
+}

@@ -1,0 +1,22 @@
+✔ asset issue list crosses Python preflight without native installation or local paths (59.063583ms)
+✔ malformed asset issue diagnostics cannot become public refusal details (52.505833ms)
+✔ asset issue validator refuses paths, open fields, unsupported states and non-list values (0.244709ms)
+✔ validated safe issues are detached from mutable native reply data (0.112958ms)
+✔ existing long registered aliases remain valid across asset preflight (52.770333ms)
+✔ capability diagnostic preserves a cloned safe difference, not caller mutation (0.879667ms)
+✔ capability diagnostic rejects path, extra field, malformed hash, and inconsistent status (0.164167ms)
+✔ upgrade probe subject is read-only and binds ledger, runtime home, source and plan (25.286042ms)
+✔ unauthorized runtime probe installs nothing and leaves ledger untouched (8.982ms)
+✔ runtime CLI subject does not create a grant, installation, or ledger writes (186.380833ms)
+✔ source drift during authorization is refused before installing a runtime (13.964042ms)
+✔ probe authorization binds another ledger and interpreter rather than trusting a reference (78.59275ms)
+✔ capability refusal survives the Python preflight boundary as capability_missing (56.915084ms)
+✔ an unavailable platform is rejected before authorization, installation or ledger changes (3.437083ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 485.134042

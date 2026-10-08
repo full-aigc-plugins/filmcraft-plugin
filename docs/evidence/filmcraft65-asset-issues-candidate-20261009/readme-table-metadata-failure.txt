@@ -1,0 +1,15 @@
+{"status": "passed", "scope": "current identity consistency only", "skills": 13, "commands": 666}
+
+{
+  "status": "failed",
+  "scope": "documentation structure, local links, status honesty and spec/task traceability only",
+  "markdownFiles": 377,
+  "capabilities": 7,
+  "requirements": 23,
+  "scenarios": 113,
+  "openImplementationTasks": 26,
+  "errors": [
+    "README.md: current README identity skills differs from manifest/lock",
+    "README.zh-CN.md: current README identity skills differs from manifest/lock"
+  ]
+}

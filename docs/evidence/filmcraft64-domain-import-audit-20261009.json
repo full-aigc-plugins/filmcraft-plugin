@@ -1,0 +1,18 @@
+{
+  "schema": "filmcraft-domain-import-gap/v1",
+  "result": "FAIL",
+  "pluginRef": "v0.1.0-dev.64",
+  "pluginRevision": "ff23199b2d7a92a6c5d0eeae8d108dd0f35bfd84",
+  "sourceRevision": "0cb4c59de5e54cc34594b9374a6bf1cb86a19e33",
+  "sourceFileSha256": "5b192f844e4698b348b0981fc06916c1163936b417a3fa6d8c9ffea6b68f298e",
+  "requirement": "FC-DM-001-N",
+  "expected": "All missing or digest-conflicting aliases reported before installation/compilation without filename relink.",
+  "actualError": "asset_digest_mismatch: missingOne",
+  "structuredIssueList": null,
+  "unreportedAliases": [
+    "missingTwo",
+    "changed"
+  ],
+  "layer": "Actual fixed64 installed Python preflight with owned temporary inputs; no native editing or installation.",
+  "next": "Add aggregate safe asset issue list while preserving existing refusal compatibility, propagate through public workflow/Harness entry, then test source and fixed install. Full DM-001 sequence/HD/relink acceptance stays open."
+}

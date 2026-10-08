@@ -1,0 +1,8 @@
+{
+  "result": "FAIL",
+  "scope": "first QA interruption scheduling attempt only; product execution completed normally",
+  "error": "owner_ended_before_barrier",
+  "cause": "Probe used generic run_command instead of actual FilmCraft command_run/id. No interrupted-case PASS or task closure was reported.",
+  "firstActualScopes": "admission and same/different target competition passed",
+  "repair": "Use actual pinned FilmCraft native_call route; native request implementations and installed payloads unchanged."
+}

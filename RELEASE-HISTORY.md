@@ -1,5 +1,7 @@
 # Version-bound release records
 
+dev.57 adds per-scenario version-binding/writer QA. All five specified scenarios pass against fixed dev.56: actual same-target contention, independent-target progress, user-directory preservation, SIGKILL after real native save with no replay and checkpoint reopen, and stale-plan refusal after an owned signed desktop bridge save. New fixed dev.57 verification is pending;3.3 and full V1 remain open.
+
 Fixed dev.56/source46/craft.5 passes seven actual-native host admission cases, preserving13 skills and all executable identities. OpenSpec3.1 and3.2 tests/minimum implementation are complete; full version-binding/writer acceptance3.3, other dispatch paths/platforms and full V1 remain open, with46 tasks remaining. The dev.55 verifier failure is preserved. [Evidence](docs/evidence/filmcraft56-fixed-admission-20261009/report.json).
 
 dev.56 independently verifies adapter raw-byte tree and vendor file-digest tree identities, with explicit algorithm labels. Fixed dev.55 passed seven native cases but failed final qualification because its verifier mixed these algorithms. Failure evidence and the old tag are preserved; fixed dev.56 acceptance is pending, with no task closed.

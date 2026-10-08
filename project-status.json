@@ -199,5 +199,7 @@
   "workflowAdmissionCandidateEvidence": "docs/evidence/filmcraft55-admission-candidate-20261009/report.json",
   "workflowAdmissionStatus": "tasks3.1/3.2 source tests and minimum implementation complete; fixed56/source46/craft.5 seven actual-native admission cases PASS;13 skills and all code unchanged; two tree hash algorithms independently verified; full TX-001 acceptance3.3 and46 V1 tasks open",
   "workflowAdmissionFailedFixedEvidence": "docs/evidence/filmcraft55-fixed-admission-failure-20261009/failure.json",
-  "workflowAdmissionFixedEvidence": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json"
+  "workflowAdmissionFixedEvidence": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
+  "writerBoundaryCandidateEvidence": "docs/evidence/filmcraft57-writer-candidate-20261009/binding-dimensions-report.json",
+  "writerBoundaryStatus": "5/5 FC-TX-001 scenarios passed against fixed56 with hash-bound external QA; new fixed57 verifier/installation pending; task3.3 and46 full V1 tasks remain open"
 }

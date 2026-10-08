@@ -57,3 +57,5 @@ flowchart TD
 源码红灯、回归和发布后固定安装结果各自绑定版本保存。其他平台、类型检查、模型路由、完整授权／预算／取消、备份回退、移动包及大媒体边界、质量循环与完整 V1 继续开放。
 
 [Source candidate evidence / 源码候选证据](evidence/filmcraft45-lineage-candidate-20261008.json).
+
+[Fixed installed acceptance / 固定安装验收](evidence/filmcraft45-fixed-lineage-20261008.json): tasks 9.13–9.15 complete; 39 native tests, 10 lineage cases, 13 preserved skills / 26 code files. Full V1 remains open.

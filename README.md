@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Codex discovers 13 skills; 26 installed execution files remain unchanged; 39 installed native tests and 10 lineage cases pass. Public create/revision and lineage objects validate against the pinned owner. [Evidence](docs/evidence/filmcraft45-fixed-lineage-20261008.json). Full delivery, authorization/budgets, recovery, quality and V1 remain open.
+
 [Receipt compatibility and lineage](docs/FilmCraft-Receipt-Lineage.md): dev.45/source42 rejects incomplete or cross-attempt provenance, preserves original CAS bytes and supports partial handoff repair without replay. Source validation passed; actual fixed-install acceptance is recorded separately. Full V1 remains open.
 
 [Fixed-install capability acceptance](docs/FilmCraft-Fixed-Capabilities.md): task 9.12 completes 273 malformed-declaration preflights, 32 native command cases and 13 domain cases; full upgrade, exhaustive commands and other platforms remain open.

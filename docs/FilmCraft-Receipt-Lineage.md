@@ -57,3 +57,5 @@ Public artifacts bind producerTaskId, immutable input versions, native project, 
 Source red tests, regressions and post-publication fixed installation retain their own identities. Other platforms, static type checking, model routing, full authorization/budgets/cancellation, backup/rollback, moved packages/large-media boundaries, quality loops and full V1 remain open.
 
 [Source candidate evidence / 源码候选证据](evidence/filmcraft45-lineage-candidate-20261008.json).
+
+[Fixed installed acceptance / 固定安装验收](evidence/filmcraft45-fixed-lineage-20261008.json): tasks 9.13–9.15 complete; 39 native tests, 10 lineage cases, 13 preserved skills / 26 code files. Full V1 remains open.

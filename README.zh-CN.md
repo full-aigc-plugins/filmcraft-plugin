@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定 dev.45/source42 回执验收通过并完成9.13—9.15：隔离Codex发现13技能，26安装执行文件保全；39项安装原生测试、10类血缘用例通过，创建／返工与溯源公共对象通过固定所有者schema。[证据](docs/evidence/filmcraft45-fixed-lineage-20261008.json)。完整交付、授权预算、恢复、质量与V1继续开放。
+
 [回执兼容与血缘](docs/FilmCraft-Receipt-Lineage.zh_CN.md)：dev.45/source42 拒绝残缺或跨尝试证据，保留原字节 CAS，支持部分交接的同尝试状态修复且不重放。源码验证通过，实际固定安装单独记录；完整 V1 仍开放。
 
 [固定安装能力快照验收](docs/FilmCraft-Fixed-Capabilities.zh_CN.md)：9.12 已完成；273 个非法声明预检、32 个命令原生场景及 13 个领域场景，完整升级／全命令／其他平台仍开放。

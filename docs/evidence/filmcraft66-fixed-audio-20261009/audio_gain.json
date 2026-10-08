@@ -1,0 +1,30 @@
+{
+  "schema": "filmcraft-audio-gain-first-use/v1",
+  "scope": "single copied audio skill; empty public runtime installation; synthetic existing audio; static A1 gain only; no creative or GUI acceptance",
+  "gainDb": -6,
+  "decodedRmsRatio": 0.5011754631079757,
+  "expectedRatio": 0.5011872336272722,
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sourcePreserved": true,
+  "videoAudioClipIdentityPreserved": true,
+  "captionsPreserved": true,
+  "skillFilesPreserved": true,
+  "initialProjectSha256": "a4f380e7682277860c01cec2290244c09bb53c97de941797eb5df817e1c6d3cf",
+  "revisedFiles": {
+    "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+    "plan.json": "f3450a378d775db37f8c09910abc280d4c74d8d1c3d3a849994958d5c0c9b428",
+    "decode.txt": "3516b8e6c7806ce42b043f13271bead4c127811fe6f8ee4de2c7faa01eb3461c",
+    "export-probe.json": "07e6fd0869dc97202b1ec359e4558576d6c68ff118b9fb9d83eb1108b795ce8d",
+    "capabilities.json": "55927a15a831e7217265604ab3ee1c609a851982db8e1c5fddabb8a0b65732d3",
+    "captions.json": "eaa0997488a6925a5367b99fd32aca0ca23be5f80bafc146ddc9f6204131d513",
+    "exchange-loss.json": "3b8e3db64aa6ed1ccc4fab64f53c9c8ee758cb3aa7bc247df7444efa5c44738e",
+    "film.mp4": "c8e17d027795e2faad4b0b942e57979ef6f6d8c807d4ffb1b16dad6316552a5a",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "5be97825e64bb0b08e9ec938db3d9d78f179e3642a2fb96720fae1669856f557",
+    "voice.wav": "7637819c1f3a0ffdd1795f462d633749f7e944521d6b0b20bfc78ae64e441ec4",
+    "shot.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+    "frame-0000.png": "b25fc0057f6d1d9e551cfc97d007bb18edd6c3b192612aa1bc6870f08f0c35d3",
+    "project.fcproj": "c2fe62d1a6b0d3cc3e558f5c386547a79d6309e9028e3db2ac38c5bb6acbd616",
+    "operations.json": "51d028f47edd35f0bee00dcb9a68a5a6c531b414fb9267e287e58b3d604b8ed6"
+  }
+}

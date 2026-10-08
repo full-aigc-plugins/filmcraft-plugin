@@ -1,0 +1,437 @@
+{
+  "schema": "filmcraft-multitrack-audio-first-use/v1",
+  "scope": "single copied installed audio skill; public empty runtime install; three synthetic source tones including embedded source-video audio; static A2 gain revision only",
+  "initialGainDb": {
+    "A1": -3,
+    "A2": -9,
+    "A3": -15
+  },
+  "revisedGainDb": {
+    "A2": -15
+  },
+  "frequenciesHz": {
+    "voice": 400,
+    "music": 800,
+    "original": 1200
+  },
+  "decodedInitialAmplitudes": {
+    "400": 0.1251189377570093,
+    "800": 0.06270731906322907,
+    "1200": 0.03138381664386569
+  },
+  "decodedRevisedAmplitudes": {
+    "400": 0.125121728867052,
+    "800": 0.031427932000396355,
+    "1200": 0.031383180965004004
+  },
+  "decodedAmplitudeRatios": {
+    "400": 1.0000223076545625,
+    "800": 0.5011844306197644,
+    "1200": 0.9999797450109749
+  },
+  "earlyAmplitudes": {
+    "400": 2.9507651608390733e-07,
+    "800": 2.1900881003790745e-07,
+    "1200": 0.031491488254131526
+  },
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "nativeSequence": {
+    "audio": [
+      {
+        "enabled": true,
+        "id": 4,
+        "items": [
+          {
+            "clip": 13,
+            "duration": "444528000000",
+            "durationFrames": 21,
+            "effects": [
+              {
+                "effect": "volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "level": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "channel_volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "left": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "right": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "panner",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "balance": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              }
+            ],
+            "enabled": true,
+            "item": 9,
+            "label": "Caribbean",
+            "link": null,
+            "name": "voice.wav",
+            "sourceIn": "0",
+            "speed": 1.0,
+            "start": "63504000000",
+            "startFrame": 3
+          }
+        ],
+        "locked": false,
+        "muted": false,
+        "name": "Audio 1",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 5,
+        "items": [
+          {
+            "clip": 15,
+            "duration": "381024000000",
+            "durationFrames": 18,
+            "effects": [
+              {
+                "effect": "volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "level": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "channel_volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "left": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "right": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "panner",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "balance": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              }
+            ],
+            "enabled": true,
+            "item": 14,
+            "label": "Caribbean",
+            "link": null,
+            "name": "music.wav",
+            "sourceIn": "0",
+            "speed": 1.0,
+            "start": "127008000000",
+            "startFrame": 6
+          }
+        ],
+        "locked": false,
+        "muted": false,
+        "name": "Audio 2",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 6,
+        "items": [
+          {
+            "clip": 12,
+            "duration": "508032000000",
+            "durationFrames": 24,
+            "effects": [
+              {
+                "effect": "volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "level": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "channel_volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "left": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "right": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "panner",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "balance": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              }
+            ],
+            "enabled": true,
+            "item": 8,
+            "label": "Iris",
+            "link": 10,
+            "name": "shot.mp4",
+            "sourceIn": "0",
+            "speed": 1.0,
+            "start": "0",
+            "startFrame": 0
+          }
+        ],
+        "locked": false,
+        "muted": false,
+        "name": "Audio 3",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      }
+    ],
+    "duration": "508032000000",
+    "durationFrames": 24,
+    "id": 7,
+    "in": null,
+    "markers": [],
+    "name": "Short film",
+    "out": null,
+    "playhead": null,
+    "selection": [],
+    "settings": {
+      "audio_master": "Stereo",
+      "color": {
+        "auto_tone_map": true,
+        "wide_gamut": false,
+        "working": "Rec709"
+      },
+      "drop_frame": false,
+      "frame_rate": {
+        "den": 1,
+        "num": 12
+      },
+      "height": 180,
+      "max_bit_depth": false,
+      "max_render_quality": false,
+      "par": [
+        1,
+        1
+      ],
+      "preset": "320x180 12",
+      "preview_codec": "ProRes 422",
+      "sample_rate": 48000,
+      "width": 320,
+      "working_space": "Rec. 709"
+    },
+    "split": {
+      "audioIn": null,
+      "audioOut": null,
+      "videoIn": null,
+      "videoOut": null
+    },
+    "video": [
+      {
+        "enabled": true,
+        "id": 1,
+        "items": [
+          {
+            "clip": 11,
+            "duration": "508032000000",
+            "durationFrames": 24,
+            "effects": [
+              {
+                "effect": "motion",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "anchor": {
+                    "keyframes": 0,
+                    "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+                  },
+                  "anti_flicker": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "position": {
+                    "keyframes": 0,
+                    "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+                  },
+                  "rotation": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "scale": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  },
+                  "scale_width": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  },
+                  "uniform_scale": {
+                    "keyframes": 0,
+                    "value": "Bool(true)"
+                  }
+                }
+              },
+              {
+                "effect": "opacity",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "blend": {
+                    "keyframes": 0,
+                    "value": "Choice(0)"
+                  },
+                  "opacity": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  }
+                }
+              },
+              {
+                "effect": "time_remap",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "speed": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  }
+                }
+              }
+            ],
+            "enabled": true,
+            "item": 8,
+            "label": "Iris",
+            "link": 10,
+            "name": "shot.mp4",
+            "sourceIn": "0",
+            "speed": 1.0,
+            "start": "0",
+            "startFrame": 0
+          }
+        ],
+        "locked": false,
+        "muted": false,
+        "name": "Video 1",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 2,
+        "items": [],
+        "locked": false,
+        "muted": false,
+        "name": "Video 2",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 3,
+        "items": [],
+        "locked": false,
+        "muted": false,
+        "name": "Video 3",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      }
+    ]
+  },
+  "initialProjectSha256": "3d2637d425d08025252630c6c56eaf46d80af3e15a5b0377503720ffa99019a5",
+  "revisedFiles": {
+    "music.wav": "45a189e75bdd0ac947fc9919e2a5a0efa39eb2d9ebff2ae7813c619e300a9135",
+    "audio-check.json": "1b59c5df3ef0548155002a9e0cc98ef23e615a20d2a12ad71c0939326e2ce45c",
+    "plan.json": "3e28ecf1fa5ba2f40786576b402118470fdea40e492f05ffbbcc97f62079b1a2",
+    "decode.txt": "567acb028bff45175a19332fabfcd31224170cc81f90042e2bb9e1968bfe9611",
+    "export-probe.json": "fd0f88f37c1cdf4ac94deb706d3a3f53185bca8cdd551579e7cbe510341d6900",
+    "capabilities.json": "bddba867196381842f7d41d81b75ff7a5e73b4ab3ce49ce49ed07d7aefcce319",
+    "captions.json": "9eda02cd91c5a3a00f1ef3c66d44201aeac034cf1bb76f5af9abe89abba294d0",
+    "exchange-loss.json": "aa4703b7958efc8f6a2c629024b8f2dca59e51a016dfd99eb814e2cf6fc10b65",
+    "film.mp4": "d2dd95fcaab5c954631e89be95e3d039babcfc1fcdb767ade5a098951fbd5708",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "8bda13c54fac3aaa0eef069db1fb1a10b826e7c781952859bebdee1595badada",
+    "voice.wav": "20c5e1c999f805a55b8ecaacbb97f583ea838062c8b4c8aa5c55b0279374abe9",
+    "shot.mp4": "4f94bfad05a9f493bc786b4148bdce2be8bad4e975511d2d0c2814ceb03809da",
+    "frame-0000.png": "b25fc0057f6d1d9e551cfc97d007bb18edd6c3b192612aa1bc6870f08f0c35d3",
+    "project.fcproj": "ac6e97a022f7e09e1173590e804122e4f29dbb19b02be433d7196a84f864bcf1",
+    "operations.json": "ce29333a6556886bf4b765be9d55d3fce9f9259d60478e58b688ce63f755ba90"
+  },
+  "originalDeliveryPreserved": true,
+  "nativeClipIdentitiesAndTimingPreserved": true,
+  "captionsAndPreviewPreserved": true,
+  "skillFilesPreserved": true
+}

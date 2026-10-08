@@ -166,8 +166,9 @@
         "4.9"
       ],
       "owner": "Domain owner",
-      "status": "in-progress",
-      "evidence": "docs/evidence/film-workflow-tests.json"
+      "status": "verified",
+      "evidence": "docs/evidence/fc-dm-003/index.json",
+      "implementationScope": "Tasks4.7–4.9: all5 current scenarios qualified using fixed66/source49 actual isolated installed audio skill/reviewer on macOS arm64/Codex/headless; fullV1 remains open"
     },
     {
       "requirement": "FC-DM-004",

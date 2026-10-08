@@ -1,0 +1,64 @@
+{
+  "requirement": "FC-DM-003",
+  "result": "PASS",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-003-GAIN",
+      "result": "PASS",
+      "evidence": [
+        "audio_gain.json",
+        "docs/evidence/filmcraft66-fixed-timeline-20261009/installed-unit.txt"
+      ],
+      "observed": "Fixed66 installed audio skill copied alone/cold public runtime, native create/reopen/-6dB another delivery, actual RMS ratio; source/non-target/video/captions/skill hashes preserved; invalid nonfinite/unsupported mixer fields refused by actual installed production units."
+    },
+    {
+      "id": "FC-DM-003-MIX",
+      "result": "PASS",
+      "evidence": [
+        "multitrack_audio.json"
+      ],
+      "observed": "Three sources400/800/1200Hz including original video audio, independent native A1/A2/A3 identity and offsets0.25/0.5/0s; original gains-3/-9/-15dB; music-only-6dB revision keeps other amplitudes/native clips/captions/previews/old package; early voice/music signals absent."
+    },
+    {
+      "id": "FC-DM-003-P",
+      "result": "PASS",
+      "evidence": [
+        "audio_gain.json",
+        "multitrack_audio.json",
+        "quality-calibration.json"
+      ],
+      "observed": "Owned pre-existing source files consumed locally; actual native save/reopen/mix and decoded timing/amplitude verified. Independent aligned flash/pulse fixture meets explicit50ms threshold. No sound-generation or upload step exists in these executed plans."
+    },
+    {
+      "id": "FC-DM-003-N",
+      "result": "PASS",
+      "evidence": [
+        "quality-calibration.json",
+        "missing-audio.json"
+      ],
+      "observed": "Actual external current installed reviewer/full ffmpeg decode detects200ms shifted pulses beyond50ms, absent source audio, stereo clipping and corrupt streams, producingblocked technical FAIL. Media-only fixture native engineering isNOT_RUN/creative manual/userNOT_RUN; hashes and reasons archived. Product missing-audio refuses success and retains movie/project/previews/records; repeat never overwrites diagnostics."
+    },
+    {
+      "id": "FC-DM-003-EMPTY",
+      "result": "PASS",
+      "evidence": [
+        "missing-audio.json",
+        "corrected-missing-audio-test.py.txt"
+      ],
+      "observed": "Actual installed66 public cold workflow exports automatic silentAAC but requires true timeline source audio: exit1/export_audio_missing/no manifest, movie/project/preview/source/output checks and original preserved-stage hashedcheckpoint/operations remain. Repeat preserves bothoutput andstage. Explicitoptional audio and user-provided intentional silentWAV pass. Updated only obsolete two-field failed-record test assertion; no published production bytes changed."
+    }
+  ],
+  "tasksQualified": [
+    "4.7",
+    "4.8",
+    "4.9"
+  ],
+  "fullV1": "OPEN",
+  "acceptanceEvidence": "docs/evidence/filmcraft66-fixed-audio-20261009/acceptance.json",
+  "acceptanceSha256": "3989a7b1f4c05897c438c466875da9ecf7fba6a3b310046856e1d86dd91f0a53"
+}

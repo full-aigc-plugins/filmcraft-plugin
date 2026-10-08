@@ -1,0 +1,215 @@
+{
+  "schema": "filmcraft-missing-audio-first-use/v1",
+  "scope": "single audio skill copied alone; default public empty runtime install; real no-source-audio movie with automatic silent AAC",
+  "publicWorkflowExitCode": 1,
+  "failure": {
+    "schema": "craft-failed-stage/v1",
+    "status": "failed",
+    "outcome": "failed",
+    "error": "export_audio_missing",
+    "stage": "../.filmcraft-w70ceb6k",
+    "files": {
+      "assets/shot.mp4": {
+        "sha256": "d0cb3873da857f223ca6800650219d6c024fbdc91b9acec5e7fa594669d496f9",
+        "bytes": 1938
+      },
+      "capabilities.json": {
+        "sha256": "ef9c467ec6e7e54c0eb1744413f3fbf0f8947b22b9512b9a458ffdd9f712e11f",
+        "bytes": 319637
+      },
+      "checkpoint.fcproj": {
+        "sha256": "14fc0c0a6a4606fe6307790eedfd273f599da2e88576696637c288db7b5d570c",
+        "bytes": 4863
+      },
+      "recovery-operations.json": {
+        "sha256": "8db9b60a099eee69b4c6ad81a77865c7f5f26f12237bda222eca851ddd1542d7",
+        "bytes": 56010
+      }
+    },
+    "completedOperations": 9,
+    "lastAttempt": {
+      "tool": "command_run",
+      "arguments": {
+        "id": "file.projectManager",
+        "params": {
+          "destination": "[TEMP]",
+          "mode": "collect",
+          "projectName": "project",
+          "excludeUnused": false,
+          "includeProxies": false,
+          "wait": true
+        }
+      },
+      "phase": "reply_received"
+    },
+    "replayAllowed": false,
+    "acceptance": "not-a-successful-delivery",
+    "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+  },
+  "audioCheck": {
+    "schema": "filmcraft-audio-check/v1",
+    "required": true,
+    "sourceAliases": [],
+    "exportedAudio": {
+      "bits_per_sample": null,
+      "channels": 2,
+      "codec": "AAC",
+      "sample_rate": 48000
+    }
+  },
+  "decodedPeakAmplitude": 0,
+  "failedOutputFiles": {
+    "audio-check.json": "f728651d55b6a10f1946f8f84c7e9005648ebac0ec0005ab1035e03539ff4dac",
+    "export-probe.json": "7a6e327bfc4dd3e59c9fb1ba39a9046cf3ef2bb368ac2ce6b3b38adf4099ea35",
+    "film.mp4": "4d2e36d909532bc9118d5621beb07c7d53c1fdbbdd418fc24c1050aebcbcd053",
+    "shot.mp4": "d0cb3873da857f223ca6800650219d6c024fbdc91b9acec5e7fa594669d496f9",
+    "frame-0000.png": "4a1eead1b76a8b22b6caa4e767c499bee5888dfce11b7de85cb9caf79a293329",
+    "failure.json": "a2d93af1cbe039ff6fe7a4153d67bde21574d43291d912853539b39204761bdd",
+    "project.fcproj": "4b13c85d184d8fe0c17f329e69d830d0a9204836fdb71120385936fe712500e7"
+  },
+  "failedOutputProbe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640029",
+        "width": 320,
+        "height": 180,
+        "coded_width": 320,
+        "coded_height": 192,
+        "has_b_frames": 1,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 41,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 2,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "12/1",
+        "avg_frame_rate": "12/1",
+        "time_base": "1/12",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 12,
+        "duration": "1.000000",
+        "bit_rate": "6592",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "12",
+        "nb_read_frames": "12",
+        "extradata_size": 49,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 48096,
+        "duration": "1.002000",
+        "bit_rate": "319882",
+        "nb_frames": "48",
+        "nb_read_frames": "47",
+        "extradata_size": 2,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ]
+  },
+  "successManifestAbsent": true,
+  "repeatPreservedDiagnostics": true,
+  "explicitOptionalAudioPassed": true,
+  "intentionalSilentSourceAudioPassed": true,
+  "optionalOutputFiles": {
+    "audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+    "plan.json": "c388479b26bab2e3c7d7a31eb7a4e49fb20a34cf7c2f6a42713423b5e3b6b56c",
+    "decode.txt": "6778babdeb610d9eec8b8b3c3f22e14b80cc4879bc3b05cbac422cb986a189c2",
+    "export-probe.json": "7a6e327bfc4dd3e59c9fb1ba39a9046cf3ef2bb368ac2ce6b3b38adf4099ea35",
+    "capabilities.json": "4f91512a4cf9da6025b3ce79db696e9d5cfcfdbd129030d1ccd902c8a124ead1",
+    "captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+    "exchange-loss.json": "4e11f18410b50aaf78cb8b1f35e71b2858475e2194c85ae596b0fd73eb2b935c",
+    "film.mp4": "4d2e36d909532bc9118d5621beb07c7d53c1fdbbdd418fc24c1050aebcbcd053",
+    "native.json": "404e23b8cf4e6f45df47c5778ace6fa9c3aa4df5db8bca9456bdebb38491ce6d",
+    "shot.mp4": "d0cb3873da857f223ca6800650219d6c024fbdc91b9acec5e7fa594669d496f9",
+    "frame-0000.png": "4a1eead1b76a8b22b6caa4e767c499bee5888dfce11b7de85cb9caf79a293329",
+    "project.fcproj": "76a4beb4f2602da8a2c2a44fb02ec591faa67eab936bc56272311476c1fe99ba",
+    "operations.json": "17c5a4f298cd2365e0db076a308c5b8b6f8b40309b2512c30547873d6e141b57"
+  },
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sourceInputSha256": "d0cb3873da857f223ca6800650219d6c024fbdc91b9acec5e7fa594669d496f9",
+  "skillFilesPreserved": true
+}

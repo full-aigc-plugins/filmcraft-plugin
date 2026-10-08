@@ -131,7 +131,10 @@
     "4.3": "docs/evidence/fc-dm-001/index.json",
     "4.4": "docs/evidence/fc-dm-002/index.json",
     "4.5": "docs/evidence/fc-dm-002/index.json",
-    "4.6": "docs/evidence/fc-dm-002/index.json"
+    "4.6": "docs/evidence/fc-dm-002/index.json",
+    "4.7": "docs/evidence/fc-dm-003/index.json",
+    "4.8": "docs/evidence/fc-dm-003/index.json",
+    "4.9": "docs/evidence/fc-dm-003/index.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",

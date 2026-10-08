@@ -1,0 +1,1504 @@
+[
+  {
+    "scenario": "quality-media-aligned",
+    "layer": "actual generated calibration media, external Python and ffmpeg/ffprobe; not user footage",
+    "inputRecipe": {
+      "video": "32x32/25fps/2s, white at 0.48 and 1.48s",
+      "audio": "aevalsrc=0.4*between(t\\,0.48\\,0.54)+0.4*between(t\\,1.48\\,1.54):s=48000:d=2"
+    },
+    "files": {
+      "film.mp4": {
+        "sha256": "4531263e7be9488631b9e2c097dd94da5ca35350567226ce61c12e257baee584",
+        "bytes": 387233
+      },
+      "captions.srt": {
+        "sha256": "4dd5e3b8a0233b461d8bde8cfa44d36a7fbbef3a5119ab6f20413b6c1f43e66e",
+        "bytes": 51
+      },
+      "project.fcproj": {
+        "sha256": "447b65fd00d79b7035c17f1edda5c381e14e7c60015067be73088f02ce332c5a",
+        "bytes": 44
+      }
+    },
+    "reviewer": {
+      "id": "filmcraft-independent-media",
+      "kind": "external",
+      "version": "1",
+      "implementationSha256": "649de3ec5d85c39bf58d6e1232acc4915242cbdd62e448dcb6fbd057897f28a1"
+    },
+    "assessment": {
+      "engineering": {
+        "status": "NOT_RUN",
+        "reason": "Independent native reopen tool unavailable",
+        "evidence": []
+      },
+      "dimensions": {
+        "subtitleReadability": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "continuity": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "rhythm": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "decode": {
+          "status": "PASS",
+          "reason": "Full video/audio stream decode completed",
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          }
+        },
+        "videoTiming": {
+          "status": "PASS",
+          "reason": "Decoded presentation timestamps and requested duration",
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "frames": 50,
+            "firstPts": 0,
+            "lastPts": 1.96,
+            "durationSeconds": 2
+          }
+        },
+        "audioClipping": {
+          "status": "PASS",
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "streams": [
+              {
+                "stream": 0,
+                "channels": 1,
+                "peak": 0.4000000059604645,
+                "clippedFractions": [
+                  0
+                ],
+                "samplesPerChannel": 96000
+              }
+            ],
+            "sampleRate": 48000
+          }
+        },
+        "avSync": {
+          "status": "PASS",
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "visualSeconds": [
+              0.48,
+              1.48
+            ],
+            "audioSeconds": [
+              0.48,
+              1.48
+            ],
+            "errorsMs": [
+              0,
+              0
+            ],
+            "expectedEvents": 2
+          }
+        },
+        "subtitleTiming": {
+          "status": "PASS",
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          }
+        }
+      },
+      "evidenceCapabilities": [
+        "full-video",
+        "caption-timeline",
+        "decoded-audio",
+        "content-sync"
+      ]
+    },
+    "result": {
+      "requestSha256": "0df85062c8ca9940d05d488e4d73e0246059268ccc0291f654502464bb12ceaf",
+      "engineering": {
+        "evidence": [],
+        "reason": "Independent native reopen tool unavailable",
+        "status": "NOT_RUN"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          },
+          "reason": "Full video/audio stream decode completed",
+          "status": "PASS"
+        },
+        "videoTiming": {
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "durationSeconds": 2,
+            "firstPts": 0,
+            "frames": 50,
+            "lastPts": 1.96
+          },
+          "reason": "Decoded presentation timestamps and requested duration",
+          "status": "PASS"
+        },
+        "audioClipping": {
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "sampleRate": 48000,
+            "streams": [
+              {
+                "channels": 1,
+                "clippedFractions": [
+                  0
+                ],
+                "peak": 0.4000000059604645,
+                "samplesPerChannel": 96000,
+                "stream": 0
+              }
+            ]
+          },
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "status": "PASS"
+        },
+        "avSync": {
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "audioSeconds": [
+              0.48,
+              1.48
+            ],
+            "errorsMs": [
+              0,
+              0
+            ],
+            "expectedEvents": 2,
+            "visualSeconds": [
+              0.48,
+              1.48
+            ]
+          },
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "status": "PASS"
+        },
+        "subtitleTiming": {
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          },
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "status": "PASS"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "NOT_RUN",
+      "technicalAcceptance": "PASS",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "manual_review"
+    },
+    "provenance": "repository-generated procedural calibration; no third-party media"
+  },
+  {
+    "scenario": "quality-media-shifted",
+    "layer": "actual generated calibration media, external Python and ffmpeg/ffprobe; not user footage",
+    "inputRecipe": {
+      "video": "32x32/25fps/2s, white at 0.48 and 1.48s",
+      "audio": "aevalsrc=0.4*between(t\\,0.6799999999999999\\,0.74)+0.4*between(t\\,1.68\\,1.74):s=48000:d=2",
+      "delay": 0.2
+    },
+    "files": {
+      "film.mp4": {
+        "sha256": "1a5c8288f4ab1b38b844869c7e2b8a1c471ea982c7e36fb7da55c437c518139c",
+        "bytes": 387233
+      },
+      "captions.srt": {
+        "sha256": "4dd5e3b8a0233b461d8bde8cfa44d36a7fbbef3a5119ab6f20413b6c1f43e66e",
+        "bytes": 51
+      },
+      "project.fcproj": {
+        "sha256": "447b65fd00d79b7035c17f1edda5c381e14e7c60015067be73088f02ce332c5a",
+        "bytes": 44
+      }
+    },
+    "reviewer": {
+      "id": "filmcraft-independent-media",
+      "kind": "external",
+      "version": "1",
+      "implementationSha256": "649de3ec5d85c39bf58d6e1232acc4915242cbdd62e448dcb6fbd057897f28a1"
+    },
+    "assessment": {
+      "engineering": {
+        "status": "NOT_RUN",
+        "reason": "Independent native reopen tool unavailable",
+        "evidence": []
+      },
+      "dimensions": {
+        "subtitleReadability": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "continuity": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "rhythm": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "decode": {
+          "status": "PASS",
+          "reason": "Full video/audio stream decode completed",
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          }
+        },
+        "videoTiming": {
+          "status": "PASS",
+          "reason": "Decoded presentation timestamps and requested duration",
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "frames": 50,
+            "firstPts": 0,
+            "lastPts": 1.96,
+            "durationSeconds": 2
+          }
+        },
+        "audioClipping": {
+          "status": "PASS",
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "streams": [
+              {
+                "stream": 0,
+                "channels": 1,
+                "peak": 0.4000000059604645,
+                "clippedFractions": [
+                  0
+                ],
+                "samplesPerChannel": 96000
+              }
+            ],
+            "sampleRate": 48000
+          }
+        },
+        "avSync": {
+          "status": "FAIL",
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "visualSeconds": [
+              0.48,
+              1.48
+            ],
+            "audioSeconds": [
+              0.68,
+              1.68
+            ],
+            "errorsMs": [
+              200.00000000000006,
+              199.99999999999994
+            ],
+            "expectedEvents": 2
+          }
+        },
+        "subtitleTiming": {
+          "status": "PASS",
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          }
+        }
+      },
+      "evidenceCapabilities": [
+        "full-video",
+        "caption-timeline",
+        "decoded-audio",
+        "content-sync"
+      ]
+    },
+    "result": {
+      "requestSha256": "8c7f6e0b82ae63684a98a4f3dcf45d6beb7e728eb9227985a99d2c00755f19ae",
+      "engineering": {
+        "evidence": [],
+        "reason": "Independent native reopen tool unavailable",
+        "status": "NOT_RUN"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          },
+          "reason": "Full video/audio stream decode completed",
+          "status": "PASS"
+        },
+        "videoTiming": {
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "durationSeconds": 2,
+            "firstPts": 0,
+            "frames": 50,
+            "lastPts": 1.96
+          },
+          "reason": "Decoded presentation timestamps and requested duration",
+          "status": "PASS"
+        },
+        "audioClipping": {
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "sampleRate": 48000,
+            "streams": [
+              {
+                "channels": 1,
+                "clippedFractions": [
+                  0
+                ],
+                "peak": 0.4000000059604645,
+                "samplesPerChannel": 96000,
+                "stream": 0
+              }
+            ]
+          },
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "status": "PASS"
+        },
+        "avSync": {
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "audioSeconds": [
+              0.68,
+              1.68
+            ],
+            "errorsMs": [
+              200.00000000000006,
+              199.99999999999994
+            ],
+            "expectedEvents": 2,
+            "visualSeconds": [
+              0.48,
+              1.48
+            ]
+          },
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "status": "FAIL"
+        },
+        "subtitleTiming": {
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          },
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "status": "PASS"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "NOT_RUN",
+      "technicalAcceptance": "FAIL",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "blocked"
+    },
+    "provenance": "repository-generated procedural calibration; no third-party media"
+  },
+  {
+    "scenario": "quality-media-stereo-clipped",
+    "layer": "actual generated calibration media, external Python and ffmpeg/ffprobe; not user footage",
+    "inputRecipe": {
+      "video": "32x32/25fps/2s, white at 0.48 and 1.48s",
+      "audio": "aevalsrc=1|-1:s=48000:d=2",
+      "clipped": true
+    },
+    "files": {
+      "film.mp4": {
+        "sha256": "06e2fb9711b705339f064e18176bea98ff5c7b0bc7ac86cb86fa4241eb85098d",
+        "bytes": 771233
+      },
+      "captions.srt": {
+        "sha256": "4dd5e3b8a0233b461d8bde8cfa44d36a7fbbef3a5119ab6f20413b6c1f43e66e",
+        "bytes": 51
+      },
+      "project.fcproj": {
+        "sha256": "447b65fd00d79b7035c17f1edda5c381e14e7c60015067be73088f02ce332c5a",
+        "bytes": 44
+      }
+    },
+    "reviewer": {
+      "id": "filmcraft-independent-media",
+      "kind": "external",
+      "version": "1",
+      "implementationSha256": "649de3ec5d85c39bf58d6e1232acc4915242cbdd62e448dcb6fbd057897f28a1"
+    },
+    "assessment": {
+      "engineering": {
+        "status": "NOT_RUN",
+        "reason": "Independent native reopen tool unavailable",
+        "evidence": []
+      },
+      "dimensions": {
+        "subtitleReadability": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "continuity": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "rhythm": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "decode": {
+          "status": "PASS",
+          "reason": "Full video/audio stream decode completed",
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          }
+        },
+        "videoTiming": {
+          "status": "PASS",
+          "reason": "Decoded presentation timestamps and requested duration",
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "frames": 50,
+            "firstPts": 0,
+            "lastPts": 1.96,
+            "durationSeconds": 2
+          }
+        },
+        "audioClipping": {
+          "status": "FAIL",
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "streams": [
+              {
+                "stream": 0,
+                "channels": 2,
+                "peak": 1,
+                "clippedFractions": [
+                  1,
+                  1
+                ],
+                "samplesPerChannel": 96000
+              }
+            ],
+            "sampleRate": 48000
+          }
+        },
+        "avSync": {
+          "status": "FAIL",
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "visualSeconds": [
+              0.48,
+              1.48
+            ],
+            "audioSeconds": [
+              0
+            ],
+            "errorsMs": [
+              480
+            ],
+            "expectedEvents": 2
+          }
+        },
+        "subtitleTiming": {
+          "status": "PASS",
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          }
+        }
+      },
+      "evidenceCapabilities": [
+        "full-video",
+        "caption-timeline",
+        "decoded-audio",
+        "content-sync"
+      ]
+    },
+    "result": {
+      "requestSha256": "59d531ae9cad6d41f9d538f284a89d3d4316fad37ba1ff76226fe3070b37da04",
+      "engineering": {
+        "evidence": [],
+        "reason": "Independent native reopen tool unavailable",
+        "status": "NOT_RUN"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          },
+          "reason": "Full video/audio stream decode completed",
+          "status": "PASS"
+        },
+        "videoTiming": {
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "durationSeconds": 2,
+            "firstPts": 0,
+            "frames": 50,
+            "lastPts": 1.96
+          },
+          "reason": "Decoded presentation timestamps and requested duration",
+          "status": "PASS"
+        },
+        "audioClipping": {
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "sampleRate": 48000,
+            "streams": [
+              {
+                "channels": 2,
+                "clippedFractions": [
+                  1,
+                  1
+                ],
+                "peak": 1,
+                "samplesPerChannel": 96000,
+                "stream": 0
+              }
+            ]
+          },
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "status": "FAIL"
+        },
+        "avSync": {
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "audioSeconds": [
+              0
+            ],
+            "errorsMs": [
+              480
+            ],
+            "expectedEvents": 2,
+            "visualSeconds": [
+              0.48,
+              1.48
+            ]
+          },
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "status": "FAIL"
+        },
+        "subtitleTiming": {
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          },
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "status": "PASS"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "NOT_RUN",
+      "technicalAcceptance": "FAIL",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "blocked"
+    },
+    "provenance": "repository-generated procedural calibration; no third-party media"
+  },
+  {
+    "scenario": "quality-media-broken",
+    "layer": "actual generated calibration media, external Python and ffmpeg/ffprobe; not user footage",
+    "inputRecipe": {
+      "video": "32x32/25fps/2s, white at 0.48 and 1.48s",
+      "audio": "aevalsrc=0.4*between(t\\,0.48\\,0.54)+0.4*between(t\\,1.48\\,1.54):s=48000:d=2",
+      "broken": true
+    },
+    "files": {
+      "film.mp4": {
+        "sha256": "7c9bb95efdb26bf7333cddbb2050417b120824d0176c1ff8d4a020963825a845",
+        "bytes": 21
+      },
+      "captions.srt": {
+        "sha256": "4dd5e3b8a0233b461d8bde8cfa44d36a7fbbef3a5119ab6f20413b6c1f43e66e",
+        "bytes": 51
+      },
+      "project.fcproj": {
+        "sha256": "447b65fd00d79b7035c17f1edda5c381e14e7c60015067be73088f02ce332c5a",
+        "bytes": 44
+      }
+    },
+    "reviewer": {
+      "id": "filmcraft-independent-media",
+      "kind": "external",
+      "version": "1",
+      "implementationSha256": "649de3ec5d85c39bf58d6e1232acc4915242cbdd62e448dcb6fbd057897f28a1"
+    },
+    "assessment": {
+      "engineering": {
+        "status": "NOT_RUN",
+        "reason": "Independent native reopen tool unavailable",
+        "evidence": []
+      },
+      "dimensions": {
+        "subtitleReadability": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "continuity": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "rhythm": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "decode": {
+          "status": "FAIL",
+          "reason": "Full video/audio decode failed",
+          "evidence": [
+            "ffmpeg-full-decode"
+          ]
+        },
+        "videoTiming": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "audioClipping": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "avSync": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "subtitleTiming": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        }
+      },
+      "evidenceCapabilities": []
+    },
+    "result": {
+      "requestSha256": "0f5b24b5c71ef4a2ac1f98d925ad4374c8b3c248fb3b3577b4f89b8d767f7be4",
+      "engineering": {
+        "evidence": [],
+        "reason": "Independent native reopen tool unavailable",
+        "status": "NOT_RUN"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "reason": "Full video/audio decode failed",
+          "status": "FAIL"
+        },
+        "videoTiming": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "audioClipping": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "avSync": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "subtitleTiming": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "NOT_RUN",
+      "technicalAcceptance": "FAIL",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "blocked"
+    },
+    "provenance": "repository-generated procedural calibration; no third-party media"
+  },
+  {
+    "scenario": "quality-media-missing-audio",
+    "layer": "actual generated calibration media, external Python and ffmpeg/ffprobe; not user footage",
+    "inputRecipe": {
+      "video": "32x32/25fps/2s, white at 0.48 and 1.48s",
+      "audio": "aevalsrc=0.4*between(t\\,0.48\\,0.54)+0.4*between(t\\,1.48\\,1.54):s=48000:d=2",
+      "noAudio": true
+    },
+    "files": {
+      "film.mp4": {
+        "sha256": "9ade4a3f02ba5d6310afa623f7409b03975ab9773ee4edfbe996caf5137ff605",
+        "bytes": 2385
+      },
+      "captions.srt": {
+        "sha256": "4dd5e3b8a0233b461d8bde8cfa44d36a7fbbef3a5119ab6f20413b6c1f43e66e",
+        "bytes": 51
+      },
+      "project.fcproj": {
+        "sha256": "447b65fd00d79b7035c17f1edda5c381e14e7c60015067be73088f02ce332c5a",
+        "bytes": 44
+      }
+    },
+    "reviewer": {
+      "id": "filmcraft-independent-media",
+      "kind": "external",
+      "version": "1",
+      "implementationSha256": "649de3ec5d85c39bf58d6e1232acc4915242cbdd62e448dcb6fbd057897f28a1"
+    },
+    "assessment": {
+      "engineering": {
+        "status": "NOT_RUN",
+        "reason": "Independent native reopen tool unavailable",
+        "evidence": []
+      },
+      "dimensions": {
+        "subtitleReadability": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "continuity": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "rhythm": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "decode": {
+          "status": "PASS",
+          "reason": "Full video/audio stream decode completed",
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          }
+        },
+        "videoTiming": {
+          "status": "PASS",
+          "reason": "Decoded presentation timestamps and requested duration",
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "frames": 50,
+            "firstPts": 0,
+            "lastPts": 1.96,
+            "durationSeconds": 2
+          }
+        },
+        "audioClipping": {
+          "status": "FAIL",
+          "reason": "Required audio stream is absent",
+          "evidence": [
+            "full-media-stream-inventory"
+          ]
+        },
+        "avSync": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "subtitleTiming": {
+          "status": "PASS",
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          }
+        }
+      },
+      "evidenceCapabilities": [
+        "full-video",
+        "caption-timeline"
+      ]
+    },
+    "result": {
+      "requestSha256": "42ef236d475e4d7bb0ff18d849e26904f6d917df982fde31ccd6274c688fe174",
+      "engineering": {
+        "evidence": [],
+        "reason": "Independent native reopen tool unavailable",
+        "status": "NOT_RUN"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          },
+          "reason": "Full video/audio stream decode completed",
+          "status": "PASS"
+        },
+        "videoTiming": {
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "durationSeconds": 2,
+            "firstPts": 0,
+            "frames": 50,
+            "lastPts": 1.96
+          },
+          "reason": "Decoded presentation timestamps and requested duration",
+          "status": "PASS"
+        },
+        "audioClipping": {
+          "evidence": [
+            "full-media-stream-inventory"
+          ],
+          "reason": "Required audio stream is absent",
+          "status": "FAIL"
+        },
+        "avSync": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "subtitleTiming": {
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                1000
+              ]
+            ]
+          },
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "status": "PASS"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "NOT_RUN",
+      "technicalAcceptance": "FAIL",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "blocked"
+    },
+    "provenance": "repository-generated procedural calibration; no third-party media"
+  },
+  {
+    "scenario": "quality-media-bad-subtitle",
+    "layer": "actual generated calibration media, external Python and ffmpeg/ffprobe; not user footage",
+    "inputRecipe": {
+      "video": "32x32/25fps/2s, white at 0.48 and 1.48s",
+      "audio": "aevalsrc=0.4*between(t\\,0.48\\,0.54)+0.4*between(t\\,1.48\\,1.54):s=48000:d=2",
+      "badSubtitle": true
+    },
+    "files": {
+      "film.mp4": {
+        "sha256": "1190935983a86ad0de8156cace1cc754b2539aff365e9d68fbb801c07ad7e300",
+        "bytes": 387233
+      },
+      "captions.srt": {
+        "sha256": "205c7a8541b1a83361ed93d0ba1a00eed64b69e0fa0ec227d8d74b7efc6bec1d",
+        "bytes": 51
+      },
+      "project.fcproj": {
+        "sha256": "447b65fd00d79b7035c17f1edda5c381e14e7c60015067be73088f02ce332c5a",
+        "bytes": 44
+      }
+    },
+    "reviewer": {
+      "id": "filmcraft-independent-media",
+      "kind": "external",
+      "version": "1",
+      "implementationSha256": "649de3ec5d85c39bf58d6e1232acc4915242cbdd62e448dcb6fbd057897f28a1"
+    },
+    "assessment": {
+      "engineering": {
+        "status": "NOT_RUN",
+        "reason": "Independent native reopen tool unavailable",
+        "evidence": []
+      },
+      "dimensions": {
+        "subtitleReadability": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "continuity": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "rhythm": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "decode": {
+          "status": "PASS",
+          "reason": "Full video/audio stream decode completed",
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          }
+        },
+        "videoTiming": {
+          "status": "PASS",
+          "reason": "Decoded presentation timestamps and requested duration",
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "frames": 50,
+            "firstPts": 0,
+            "lastPts": 1.96,
+            "durationSeconds": 2
+          }
+        },
+        "audioClipping": {
+          "status": "PASS",
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "streams": [
+              {
+                "stream": 0,
+                "channels": 1,
+                "peak": 0.4000000059604645,
+                "clippedFractions": [
+                  0
+                ],
+                "samplesPerChannel": 96000
+              }
+            ],
+            "sampleRate": 48000
+          }
+        },
+        "avSync": {
+          "status": "PASS",
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "visualSeconds": [
+              0.48,
+              1.48
+            ],
+            "audioSeconds": [
+              0.48,
+              1.48
+            ],
+            "errorsMs": [
+              0,
+              0
+            ],
+            "expectedEvents": 2
+          }
+        },
+        "subtitleTiming": {
+          "status": "FAIL",
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                3000
+              ]
+            ]
+          }
+        }
+      },
+      "evidenceCapabilities": [
+        "full-video",
+        "caption-timeline",
+        "decoded-audio",
+        "content-sync"
+      ]
+    },
+    "result": {
+      "requestSha256": "07199d65e4f334dff8a2b78bce61a19ad4b941fc3a8595b35e7305e884129006",
+      "engineering": {
+        "evidence": [],
+        "reason": "Independent native reopen tool unavailable",
+        "status": "NOT_RUN"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 2
+          },
+          "reason": "Full video/audio stream decode completed",
+          "status": "PASS"
+        },
+        "videoTiming": {
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "durationSeconds": 2,
+            "firstPts": 0,
+            "frames": 50,
+            "lastPts": 1.96
+          },
+          "reason": "Decoded presentation timestamps and requested duration",
+          "status": "PASS"
+        },
+        "audioClipping": {
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "sampleRate": 48000,
+            "streams": [
+              {
+                "channels": 1,
+                "clippedFractions": [
+                  0
+                ],
+                "peak": 0.4000000059604645,
+                "samplesPerChannel": 96000,
+                "stream": 0
+              }
+            ]
+          },
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "status": "PASS"
+        },
+        "avSync": {
+          "evidence": [
+            "full-video-flash-onsets",
+            "decoded-audio-pulse-onsets"
+          ],
+          "metrics": {
+            "audioSeconds": [
+              0.48,
+              1.48
+            ],
+            "errorsMs": [
+              0,
+              0
+            ],
+            "expectedEvents": 2,
+            "visualSeconds": [
+              0.48,
+              1.48
+            ]
+          },
+          "reason": "Explicit flash/pulse calibration markers; not general lip-sync or music judgment",
+          "status": "PASS"
+        },
+        "subtitleTiming": {
+          "evidence": [
+            "captions.srt",
+            "full-video-pts"
+          ],
+          "metrics": {
+            "cueCount": 1,
+            "cuesMs": [
+              [
+                480,
+                3000
+              ]
+            ]
+          },
+          "reason": "Subtitle sidecar timing bounds; burned-in readability is not measured",
+          "status": "FAIL"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "NOT_RUN",
+      "technicalAcceptance": "FAIL",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "blocked"
+    },
+    "provenance": "repository-generated procedural calibration; no third-party media"
+  },
+  {
+    "scenario": "quality-media-missing-tools",
+    "layer": "actual generated calibration media, external Python and ffmpeg/ffprobe; not user footage",
+    "inputRecipe": {
+      "video": "32x32/25fps/2s, white at 0.48 and 1.48s",
+      "audio": "aevalsrc=0.4*between(t\\,0.48\\,0.54)+0.4*between(t\\,1.48\\,1.54):s=48000:d=2",
+      "noTools": true
+    },
+    "files": {
+      "film.mp4": {
+        "sha256": "6396b375733b5095a4794ce85751fd4c4766435f50edf18c699975da46fd57e6",
+        "bytes": 387233
+      },
+      "captions.srt": {
+        "sha256": "4dd5e3b8a0233b461d8bde8cfa44d36a7fbbef3a5119ab6f20413b6c1f43e66e",
+        "bytes": 51
+      },
+      "project.fcproj": {
+        "sha256": "447b65fd00d79b7035c17f1edda5c381e14e7c60015067be73088f02ce332c5a",
+        "bytes": 44
+      }
+    },
+    "reviewer": {
+      "id": "filmcraft-independent-media",
+      "kind": "external",
+      "version": "1",
+      "implementationSha256": "649de3ec5d85c39bf58d6e1232acc4915242cbdd62e448dcb6fbd057897f28a1"
+    },
+    "assessment": {
+      "engineering": {
+        "status": "NOT_RUN",
+        "reason": "Independent native reopen tool unavailable",
+        "evidence": []
+      },
+      "dimensions": {
+        "subtitleReadability": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "continuity": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "rhythm": {
+          "status": "manual_review",
+          "reason": "Independent temporal/creative review is required",
+          "evidence": []
+        },
+        "decode": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "videoTiming": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "audioClipping": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "avSync": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        },
+        "subtitleTiming": {
+          "status": "NOT_RUN",
+          "reason": "Required independent media evidence is unavailable",
+          "evidence": []
+        }
+      },
+      "evidenceCapabilities": []
+    },
+    "result": {
+      "requestSha256": "95631f0bbda2a96e65dbf6aa751419e421d8bd78dc38993aee4086df52b5bfd8",
+      "engineering": {
+        "evidence": [],
+        "reason": "Independent native reopen tool unavailable",
+        "status": "NOT_RUN"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "videoTiming": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "audioClipping": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "avSync": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "subtitleTiming": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "NOT_RUN",
+      "technicalAcceptance": "NOT_RUN",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "manual_review"
+    },
+    "provenance": "repository-generated procedural calibration; no third-party media"
+  }
+]

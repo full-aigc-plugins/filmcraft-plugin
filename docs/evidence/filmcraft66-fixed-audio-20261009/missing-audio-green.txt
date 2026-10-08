@@ -1,0 +1,6 @@
+test_required_audio_failure_preserves_movie_project_and_input (test_missing_audio_first_use.MissingAudioFirstUseTests.test_required_audio_failure_preserves_movie_project_and_input) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 8.200s
+
+OK

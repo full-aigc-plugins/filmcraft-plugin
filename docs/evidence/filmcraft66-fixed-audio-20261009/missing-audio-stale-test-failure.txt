@@ -1,0 +1,16 @@
+test_required_audio_failure_preserves_movie_project_and_input (test_missing_audio_first_use.MissingAudioFirstUseTests.test_required_audio_failure_preserves_movie_project_and_input) ... FAIL
+
+======================================================================
+FAIL: test_required_audio_failure_preserves_movie_project_and_input (test_missing_audio_first_use.MissingAudioFirstUseTests.test_required_audio_failure_preserves_movie_project_and_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_missing_audio_first_use.py", line 40, in test_required_audio_failure_preserves_movie_project_and_input
+    self.assertEqual(failure, {'status': 'failed', 'error': 'export_audio_missing'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'schema': 'craft-failed-stage/v1', 'status'[1132 chars]ion'} != {'status': 'failed', 'error': 'export_audio_missing'}
+Diff is 1763 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 6.155s
+
+FAILED (failures=1)

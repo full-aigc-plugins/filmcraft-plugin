@@ -1,0 +1,6 @@
+test_music_gain_preserves_voice_original_audio_and_native_project (test_multitrack_audio_first_use.MultitrackAudioFirstUseTests.test_music_gain_preserves_voice_original_audio_and_native_project) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 7.744s
+
+OK

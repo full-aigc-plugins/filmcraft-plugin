@@ -1,0 +1,20 @@
+{
+  "result": "EXPECTED_BEHAVIOR_FAILURE",
+  "sourceRef": "v0.1.0-dev.6",
+  "sourceSha": "85866c064c7d91abd8da63b0570d78bee3202bf5",
+  "workflowSha256": "3424c7cc9a5cc8e5e29a30f27ffaf7e9fcf65c47ee9d3f0f24cf7edd4b0e8aa6",
+  "plan": {
+    "operations": [
+      {
+        "command": "mixer.setStrip",
+        "params": {
+          "strip": "A1",
+          "volumeDb": -6.0
+        }
+      }
+    ]
+  },
+  "actual": "unsupported_command",
+  "expected": "Valid explicit A1 static gain must be accepted",
+  "scope": "Unmodified historical published source6 workflow validate; no runtime execution, fixture errors or missing imports counted as red"
+}

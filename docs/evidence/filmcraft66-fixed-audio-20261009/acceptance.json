@@ -1,0 +1,142 @@
+{
+  "schema": "filmcraft-fixed-domain-audio-acceptance/v1",
+  "result": "PASS",
+  "requirement": "FC-DM-003",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "platform": "macOS arm64",
+  "host": "Codex0.147.0 isolated public-tag installation",
+  "mode": "headless",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-003-GAIN",
+      "result": "PASS",
+      "evidence": [
+        "audio_gain.json",
+        "docs/evidence/filmcraft66-fixed-timeline-20261009/installed-unit.txt"
+      ],
+      "observed": "Fixed66 installed audio skill copied alone/cold public runtime, native create/reopen/-6dB another delivery, actual RMS ratio; source/non-target/video/captions/skill hashes preserved; invalid nonfinite/unsupported mixer fields refused by actual installed production units."
+    },
+    {
+      "id": "FC-DM-003-MIX",
+      "result": "PASS",
+      "evidence": [
+        "multitrack_audio.json"
+      ],
+      "observed": "Three sources400/800/1200Hz including original video audio, independent native A1/A2/A3 identity and offsets0.25/0.5/0s; original gains-3/-9/-15dB; music-only-6dB revision keeps other amplitudes/native clips/captions/previews/old package; early voice/music signals absent."
+    },
+    {
+      "id": "FC-DM-003-P",
+      "result": "PASS",
+      "evidence": [
+        "audio_gain.json",
+        "multitrack_audio.json",
+        "quality-calibration.json"
+      ],
+      "observed": "Owned pre-existing source files consumed locally; actual native save/reopen/mix and decoded timing/amplitude verified. Independent aligned flash/pulse fixture meets explicit50ms threshold. No sound-generation or upload step exists in these executed plans."
+    },
+    {
+      "id": "FC-DM-003-N",
+      "result": "PASS",
+      "evidence": [
+        "quality-calibration.json",
+        "missing-audio.json"
+      ],
+      "observed": "Actual external current installed reviewer/full ffmpeg decode detects200ms shifted pulses beyond50ms, absent source audio, stereo clipping and corrupt streams, producingblocked technical FAIL. Media-only fixture native engineering isNOT_RUN/creative manual/userNOT_RUN; hashes and reasons archived. Product missing-audio refuses success and retains movie/project/previews/records; repeat never overwrites diagnostics."
+    },
+    {
+      "id": "FC-DM-003-EMPTY",
+      "result": "PASS",
+      "evidence": [
+        "missing-audio.json",
+        "corrected-missing-audio-test.py.txt"
+      ],
+      "observed": "Actual installed66 public cold workflow exports automatic silentAAC but requires true timeline source audio: exit1/export_audio_missing/no manifest, movie/project/preview/source/output checks and original preserved-stage hashedcheckpoint/operations remain. Repeat preserves bothoutput andstage. Explicitoptional audio and user-provided intentional silentWAV pass. Updated only obsolete two-field failed-record test assertion; no published production bytes changed."
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "audio_gain.json",
+      "originalSha256": "ffa9ba84d4b7ca889ac03ab9e54187cacbc7396766743769647c1e031be6ac20",
+      "projectionSha256": "656a88aa3669ae7474549d7a5f9f57517a87cbc12a1ce0c83679ebb0b4733edf"
+    },
+    {
+      "path": "audio_gain.txt",
+      "originalSha256": "be1daccd3aeb513a3ffed17ae884da9e8c73755fc0c25c175e61b6e2bb52e48f",
+      "projectionSha256": "be1daccd3aeb513a3ffed17ae884da9e8c73755fc0c25c175e61b6e2bb52e48f"
+    },
+    {
+      "path": "multitrack_audio.json",
+      "originalSha256": "a0be9fe02544fd1abd4523bc6cf7c985b5fae6d658d9d0c1fbf7a1750b973511",
+      "projectionSha256": "325a20723ae57687048f1e0f177645e0553d5711f8b09ee0a76e3dafb6d5558a"
+    },
+    {
+      "path": "multitrack_audio.txt",
+      "originalSha256": "056cff82062dec56ce237fa3bdff1731f4143914b35f8b07490824cdc77d779c",
+      "projectionSha256": "056cff82062dec56ce237fa3bdff1731f4143914b35f8b07490824cdc77d779c"
+    },
+    {
+      "path": "missing-audio.json",
+      "originalSha256": "e2c17e5dab24a998acf823bddfc6b255070bf447205e256cf1d49794e4af420f",
+      "projectionSha256": "3f1b034fc9f227105b2c818739591f1dac21854ddd9fb224fe84a19d6799f999"
+    },
+    {
+      "path": "missing-audio-green.txt",
+      "originalSha256": "9a4b7f92890822a52d22e41e584363333f004354d1e534f510bbf92b463dd024",
+      "projectionSha256": "9a4b7f92890822a52d22e41e584363333f004354d1e534f510bbf92b463dd024"
+    },
+    {
+      "path": "missing-audio-stale-test-failure.txt",
+      "originalSha256": "1676e5fca02adea505a8d5d2c0caf1eac2c05c235a396377892a45d278a336a2",
+      "projectionSha256": "25b9c914dabb7717da136cbf9f52d1846df1c9ec7335ddfb231d80ba67b655eb"
+    },
+    {
+      "path": "corrected-missing-audio-test.py.txt",
+      "originalSha256": "74cce7c678567efd34741c162ea9afa3b19ed682ff869ed1b3b11aaffba4696a",
+      "projectionSha256": "74cce7c678567efd34741c162ea9afa3b19ed682ff869ed1b3b11aaffba4696a"
+    },
+    {
+      "path": "quality-calibration.json",
+      "originalSha256": "2cbb1a468c3b4e2830d3da99a788ce06beaec85d183257b44bc4b768ee36faf3",
+      "projectionSha256": "cf3324311d6ac7c709e8f61299bfbebdc0e7bdf2600abe8c213af096261c218e"
+    },
+    {
+      "path": "quality-calibration.txt",
+      "originalSha256": "7f91e3d7c1bc0cb1f82b639db4ac71854b236d7fe9d2c6ae260c5e8b7268035b",
+      "projectionSha256": "7f91e3d7c1bc0cb1f82b639db4ac71854b236d7fe9d2c6ae260c5e8b7268035b"
+    },
+    {
+      "path": "gain-behavior-red.json",
+      "originalSha256": "f6f1b81ee9bb3bec0d190c4768ffc61edc7680cf4edc67112a7721842011b782",
+      "projectionSha256": "b53eec3188931dfebc558f8040d5225da7911496d082f15aac99a10656c2a73c"
+    }
+  ],
+  "testSourceSha256": {
+    "tests/test_audio_gain_first_use.py": "6bd06ba44b83a4f68743cc73d7808689e25d8066fde8f2d49ecd05dd705a0abe",
+    "tests/test_multitrack_audio_first_use.py": "41cd7ed443f10e0a729a2ef438dbfaee19b5fe873f736dc9ec3c9d5c419b9a23",
+    "test/harness/quality_media_native.test.ts": "b3ae709b515eb324858b4ca7e4d23a42a2b0bed90aa75b6a01105ce6aba3838c",
+    "test/harness/fixtures.ts": "86f884eea5610df0886cb8340c829afc74b1997eb84208ac549b1d18aa9c0b41"
+  },
+  "installedSkillsAndExecutionCodePreserved": true,
+  "redEvidence": "gain-behavior-red.json: unmodified published source6 rejects explicit valid mixer operation. Stale missing-audio assertion failure is a test-contract failure, not behavior red.",
+  "qualificationTestCorrection": "tests/test_missing_audio_first_use.py corrected for existingcraft-failed-stage/v1, stage hashes and repeat preservation; actual installed source49 remains byte-identical.",
+  "notAccepted": [
+    "all666commands and GUI contexts",
+    "other hosts/platforms",
+    "native engineering of media-only calibration",
+    "arbitrary speech lip-sync",
+    "creative/user acceptance",
+    "complete V1"
+  ],
+  "tasksQualified": [
+    "4.7",
+    "4.8",
+    "4.9"
+  ],
+  "fullV1": "OPEN",
+  "qualificationTestCorrectionCommit": "87b54ffc4b66e45644396c2b4311db9c6af5572c"
+}

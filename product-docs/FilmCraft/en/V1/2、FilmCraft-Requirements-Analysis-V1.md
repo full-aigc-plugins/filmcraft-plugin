@@ -54,3 +54,5 @@ When format, budget or asset permissions conflict, preserve explicit user constr
 **Created**: 2026-10-05
 **Updated**: 2026-10-05
 **Document status**: Ready for review; implementation status is governed by OpenSpec tasks and evidence.
+
+2026-10-09 status: fixed dev.59 qualifies all8 FC-AR-001/002 scenarios on macOS arm64 Codex/headless. Only artifact tasks5.1–5.3 and5.6 close; other platforms, creative/user acceptance and full V1 remain open. OpenSpec remains authoritative; see repository `docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json`.

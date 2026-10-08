@@ -98,3 +98,5 @@ dev.55 adds trusted host admission for initial workflows: execute subjects bind 
 Fixed dev.56/source46/craft.5 passes seven actual-native host admission cases, preserving13 skills and all executable identities. OpenSpec3.1 and3.2 tests/minimum implementation are complete; full version-binding/writer acceptance3.3, other dispatch paths/platforms and full V1 remain open, with46 tasks remaining. The dev.55 verifier failure is preserved.
 
 dev.57 adds per-scenario version-binding/writer QA. All five specified scenarios pass against fixed dev.56: actual same-target contention, independent-target progress, user-directory preservation, SIGKILL after real native save with no replay and checkpoint reopen, and stale-plan refusal after an owned signed desktop bridge save. New fixed dev.57 verification is pending;3.3 and full V1 remain open.
+
+2026-10-09 status: fixed dev.59 qualifies all8 FC-AR-001/002 scenarios on macOS arm64 Codex/headless. Only artifact tasks5.1–5.3 and5.6 close; other platforms, creative/user acceptance and full V1 remain open. OpenSpec remains authoritative; see repository `docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json`.

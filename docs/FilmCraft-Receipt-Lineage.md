@@ -1,5 +1,9 @@
 # FilmCraft receipt lineage and compatibility mapping
 
+Fixed dev.59/source46/public craft.5 qualifies all8 FC-AR-001/002 scenarios in isolated macOS arm64 Codex/headless:13 skills and62 executable files preserved,10 lineage plus15 artifact cases passed,2 public tasks/26 artifacts passed the fixed ArtCraft schemas. All135 installed regression tests pass without skips; source83 Python/132 Node pass, with3 declared source-environment checks supplemented by the installed run. OpenSpec5.1–5.3 and5.6 are complete;35 full-V1 tasks remain open. Creative acceptance is manual_review, user/other-platform acceptance is NOT_RUN. [Fixed evidence](evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json).
+
+Historical checkpoints and candidate progression follow.
+
 This change implements tasks 9.13–9.15 of `establish-v1-plugin` and the three FC-AR-001 receipt scenarios. Plugin dev.45 pins independent skills dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`. Actual fixed installation is qualified separately after publication; full delivery and V1 remain open.
 
 The native `.fcproj` owns editing data, SQLite tasks/attempts/leases own execution state, and independent quality evidence owns review conclusions. The index preserves original bytes in CAS and maps fields explicitly. It neither introduces a competing state authority nor promotes association to quality acceptance.

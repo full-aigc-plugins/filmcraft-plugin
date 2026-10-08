@@ -2,7 +2,7 @@
 
 ## Purpose
 
-本能力定义 FilmCraft 在 artifact-delivery 范围内对用户、宿主与下游系统承诺的可观察行为、失败语义和验收证据，确保规划、执行与实际交付之间保持可验证的边界。当前为目标规范；回执映射已有源码候选，完整交付合同尚未验收。
+本能力定义 FilmCraft 在 artifact-delivery 范围内对用户、宿主与下游系统承诺的可观察行为、失败语义和验收证据，确保规划、执行与实际交付之间保持可验证的边界。固定 dev.59 已在 macOS arm64 的隔离 Codex／headless 安装验收全部八个合同场景；其他平台、创作与用户接受及完整 V1 仍未验收。
 
 ## ADDED Requirements
 

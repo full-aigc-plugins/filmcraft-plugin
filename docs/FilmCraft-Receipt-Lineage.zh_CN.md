@@ -1,5 +1,9 @@
 # FilmCraft 回执血缘与兼容映射
 
+固定dev.59／源46／公开craft.5在macOS arm64隔离Codex／headless验收FC-AR-001/002全部8场景：13技能／62执行文件保全，10类血缘＋15类产物用例通过，2公共任务／26产物通过固定ArtCraft schema。135项安装回归全部通过、零跳过；源码83项Python／132项Node通过，3项声明环境检查由安装运行补证。OpenSpec5.1—5.3及5.6完成，完整V1剩35项。创作manual_review，用户／其他平台NOT_RUN。[固定证据](evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json)。
+
+以下保留历史检查点与候选演进。
+
 本次变更对应 `establish-v1-plugin` 的 9.13—9.15 与 FC-AR-001 的三个回执场景。插件 dev.45 固定独立技能源 dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`。固定安装验收在发布后另行记录；完整交付合同与 V1 仍开放。
 
 原生 `.fcproj` 是编辑数据事实源，SQLite 任务／尝试／租约是执行状态事实源，质量评审证据另行拥有评审结论。回执索引保存原始字节 CAS 和显式字段映射，不新增任务状态权威，不把关联成功转换为质量通过。

@@ -112,7 +112,11 @@
     "3.6": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json",
     "3.7": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json",
     "3.8": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json",
-    "3.9": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json"
+    "3.9": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json",
+    "5.1": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json",
+    "5.2": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json",
+    "5.3": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json",
+    "5.6": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",

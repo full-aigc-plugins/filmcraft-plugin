@@ -54,3 +54,5 @@
 **创建日期**：2026-10-05
 **最后更新**：2026-10-05
 **文档状态**：待评审；实现以 OpenSpec 任务和证据为准。
+
+2026-10-09 状态：FC-AR-001/002在固定dev.59的macOS arm64 Codex／headless完成全部8场景验收；仅产物合同任务5.1—5.3及5.6关闭，其他平台、创作／用户接受和完整V1仍开放。事实源仍为OpenSpec；证据见仓库 `docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json`。

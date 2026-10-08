@@ -1,6 +1,8 @@
 # FilmCraft Agent Plugin
 
-dev.59准备产物合同固定验收：源码候选10类血缘／15类产物用例覆盖FC-AR-001/002全部8场景，包含工程迁移重关联、缺失依赖、独立原生重开及质量回执身份。逐场景门禁拒绝证据缺失或拼接。源46／craft.5技能快照不变；新固定59安装待验收，5.1—5.3／5.6与39项完整V1任务仍开放。[候选证据](docs/evidence/filmcraft59-artifact-candidate-20261009/acceptance.json)。
+固定dev.59／源46／公开craft.5在macOS arm64隔离Codex／headless验收FC-AR-001/002全部8场景：13技能／62执行文件保全，10类血缘＋15类产物用例通过，2公共任务／26产物通过固定ArtCraft schema。135项安装回归全部通过、零跳过；源码83项Python／132项Node通过，3项声明环境检查由安装运行补证。OpenSpec5.1—5.3及5.6完成，完整V1剩35项。创作manual_review，用户／其他平台NOT_RUN。[固定证据](docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json)。
+
+dev.59先前候选记录（已由上方固定验收补证）：源码候选10类血缘／15类产物用例覆盖FC-AR-001/002全部8场景，包含工程迁移重关联、缺失依赖、独立原生重开及质量回执身份。逐场景门禁拒绝证据缺失或拼接。源46／craft.5技能快照不变；新固定59安装待验收，5.1—5.3／5.6与39项完整V1任务仍开放。[候选证据](docs/evidence/filmcraft59-artifact-candidate-20261009/acceptance.json)。
 
 固定 dev.58 的预算／取消合同补充验收通过：FC-TX-003四个场景、16类必选边界及额外私有CLI场景通过。复用同一固定版本133项无跳过安装回归，重新核验13技能、执行与测试源码身份；本轮未重复运行原生。已完成OpenSpec3.7—3.9，完整V1余39项。未知原生结果保留占用／预留；预算限制后续调度，不作为OS资源配额或其他平台验收。 [Evidence](docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json).
 

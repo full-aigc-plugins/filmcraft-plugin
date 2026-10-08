@@ -1,0 +1,29 @@
+✔ capability diagnostic preserves a cloned safe difference, not caller mutation (0.844083ms)
+✔ capability diagnostic rejects path, extra field, malformed hash, and inconsistent status (0.176834ms)
+✔ runtime switch persists generation, retains old identity and fences stale admission (6.979416ms)
+✔ planned, live and unknown work prevent upgrade without switching identity (3.243875ms)
+✔ compatible rollback preserves history and incompatible schema cannot become active (3.840708ms)
+✔ runtime selection cannot be authorized by its own body (2.402209ms)
+✔ selection survives a new connection and history corruption fails closed (4.489458ms)
+✔ live execution retains its occupancy and refuses runtime replacement (4.6525ms)
+✔ unknown execution retains its occupancy and refuses runtime replacement (4.379417ms)
+✔ revoked authorization before publication preserves generation and old identity (3.066583ms)
+✔ activation write transaction excludes another admission connection before selection publication (3.493708ms)
+✔ an upgrade grant subject is specific to its actual ledger path (4.138834ms)
+✔ failed or identity-drifting live probe cannot publish a new generation (2.747ms)
+✔ a stale activation generation is rejected before probing or publishing (2.369625ms)
+✔ upgrade probe subject is read-only and binds ledger, runtime home, source and plan (26.05225ms)
+✔ unauthorized runtime probe installs nothing and leaves ledger untouched (10.236958ms)
+✔ runtime CLI subject does not create a grant, installation, or ledger writes (194.464125ms)
+✔ source drift during authorization is refused before installing a runtime (14.57275ms)
+✔ probe authorization binds another ledger and interpreter rather than trusting a reference (79.772541ms)
+✔ capability refusal survives the Python preflight boundary as capability_missing (57.391292ms)
+✔ an unavailable platform is rejected before authorization, installation or ledger changes (3.323125ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 488.848125

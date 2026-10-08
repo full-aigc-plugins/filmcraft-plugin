@@ -53,7 +53,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.61` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.62` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -62,6 +62,8 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 参考目录身份：`MATCH`；不一致须显式保留，不能覆盖实际执行运行时锁。
 
 <!-- FILMCRAFT_CURRENT_FACTS_END -->
+
+开发版 dev.62 补充安全的能力拒绝差异，保留实测身份与参数摘要，排除路径和任意原生文本。源码原生157/157通过；已补齐固定dev.61前版的安装、有界模式和真实运行时切换证据。当前固定62和完整FC-RT-002仍待验收，V1余29项。[证据](docs/evidence/filmcraft62-capability-diagnostic-20261009/acceptance.json)。
 
 [dev.42 开发发行验证](docs/FilmCraft-Dev42-Release.zh_CN.md)：锁定技能 dev.39，验证 Node/SQLite 任务与回执血缘、只读诊断及有界状态修复；当前源码与内置快照原生回归通过。宿主安装、完整恢复、授权执行、预算、质量及完整 V1 仍开放；历史候选报告保留原身份。
 
@@ -73,7 +75,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.61`；技能源：`0.1.0-dev.46`；13 个独立技能。
+当前插件：`0.1.0-dev.62`；技能源：`0.1.0-dev.46`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -178,7 +180,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.61 |
+| Metadata version | 0.1.0-dev.62 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.46 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |

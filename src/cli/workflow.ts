@@ -1,4 +1,5 @@
 import { parseArgs } from 'node:util';
+import { CapabilityRefusal } from '../adapters/capability_refusal.ts';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readBoundFile, ReceiptIndex } from '../artifacts/receipt_index.ts';
@@ -46,6 +47,7 @@ async function main() {
 try { await main(); }
 catch (error) {
   console.log(JSON.stringify({ schema: 'filmcraft-workflow-admission-error/v1', replayAllowed: false,
-    error: { code: error instanceof HarnessError ? error.code : 'workflow_admission_failed' } }));
+    error: { code: error instanceof HarnessError ? error.code : 'workflow_admission_failed',
+      ...(error instanceof CapabilityRefusal&&error.diagnostic?{diagnostic:error.diagnostic}:{}) } }));
   process.exitCode = 1;
 }

@@ -7,6 +7,7 @@ import type { Binding } from '../harness/task_ledger.ts';
 import { TaskLedger } from '../harness/task_ledger.ts';
 import { ReceiptIndex, readBoundFile } from '../artifacts/receipt_index.ts';
 import { normalizePlan } from './plan_identity.ts';
+import { CapabilityRefusal } from './capability_refusal.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
 import { canonicalTarget } from '../support/paths.ts';
 import { ResourceController, outputBytes } from '../harness/resources.ts';
@@ -64,12 +65,13 @@ export class PythonWorkflowRunner {
     const result = spawnSync(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
       { encoding: 'utf8', timeout: 180_000, maxBuffer: 4 * 1024 * 1024, shell: false });
     if(result.error || result.status!==0){
-      let code='native_preflight_failed';
+      let code='native_preflight_failed',diagnostic:unknown;
       try{
         const failure=parseJson(result.stdout??'');
         if(failure.schema==='filmcraft-native-preflight-error/v1'
-          &&['capability_missing','capability_unknown','capability_contract_drift','capability_identity_mismatch'].includes(failure.error?.code)){code=failure.error.code;}
+          &&['capability_missing','capability_unknown','capability_contract_drift','capability_identity_mismatch'].includes(failure.error?.code)){code=failure.error.code;diagnostic=failure.error.diagnostic;}
       }catch{/* 未知或畸形输出保持明确失败，不提升为能力已验证。 */}
+      if(code!=='native_preflight_failed'){throw new CapabilityRefusal(code,diagnostic);}
       check(false,code);
     }
     const preflight = parseJson(result.stdout);

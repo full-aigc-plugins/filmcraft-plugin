@@ -1,0 +1,105 @@
+{
+  "schema": "filmcraft-fixed-runtime-qualification/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.61",
+  "pluginRevision": "cb9b4ba27cda0dd069757a2ed2ba858adcab71cf",
+  "sourceRef": "v0.1.0-dev.46",
+  "platform": "darwin-arm64",
+  "ledgerSchema": 6,
+  "skills": 13,
+  "preflightCases": 273,
+  "commandCases": 32,
+  "workflowCases": 13,
+  "transition": {
+    "old": "0.2.0-craft.4",
+    "new": "0.2.0-craft.5",
+    "generations": 3,
+    "nativeAttempts": 1,
+    "independentFullDecode": "PASS",
+    "negativeCases": 4
+  },
+  "files": {
+    "host.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/host.json",
+      "originalPrivateSha256": "a5d82ffeaf01d690d2f365131f469d020eb92c43141e7f475a8c2d895e8b5b7c",
+      "publicProjectionSha256": "a5d82ffeaf01d690d2f365131f469d020eb92c43141e7f475a8c2d895e8b5b7c"
+    },
+    "final-identity.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/final-identity.json",
+      "originalPrivateSha256": "0afc32cb5576534b53987f5ecd8cbd8321e2e348d0ea13e1d35914ef37aa972c",
+      "publicProjectionSha256": "0afc32cb5576534b53987f5ecd8cbd8321e2e348d0ea13e1d35914ef37aa972c"
+    },
+    "previous-identity.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/previous-identity.json",
+      "originalPrivateSha256": "b91a6e8fa34cb69118baa639354a94ad897bed70ee71312b1c3ed76dd2b54659",
+      "publicProjectionSha256": "b91a6e8fa34cb69118baa639354a94ad897bed70ee71312b1c3ed76dd2b54659"
+    },
+    "transition.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/transition.json",
+      "originalPrivateSha256": "fbfd6c6b5b512bd969b6270a2e2bf7c995919ddadeca3913134ae24acf8dee79",
+      "publicProjectionSha256": "fbfd6c6b5b512bd969b6270a2e2bf7c995919ddadeca3913134ae24acf8dee79"
+    },
+    "commands-report.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/commands-report.json",
+      "originalPrivateSha256": "52fcc02d14779d04e5081f04e997b3ab359a4c52ef6dc4d6bd1ce97b40bf6811",
+      "publicProjectionSha256": "52fcc02d14779d04e5081f04e997b3ab359a4c52ef6dc4d6bd1ce97b40bf6811"
+    },
+    "commands-native-traces.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/commands-native-traces.json",
+      "originalPrivateSha256": "00d99fdf1b0bb5f6673166d8e804fc3bd78d12beef532226b373f1814002e7f7",
+      "publicProjectionSha256": "00d99fdf1b0bb5f6673166d8e804fc3bd78d12beef532226b373f1814002e7f7"
+    },
+    "commands-catalogs.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/commands-catalogs.json",
+      "originalPrivateSha256": "b92d3e3283c6542dc5f4055af3e0a38a05c3031230b7e3ec12ccabfc45162f4e",
+      "publicProjectionSha256": "b92d3e3283c6542dc5f4055af3e0a38a05c3031230b7e3ec12ccabfc45162f4e"
+    },
+    "commands-cases.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/commands-cases.json",
+      "originalPrivateSha256": "23168dc2ee49219852ac5dc010ffeb25d75c81c472c6085eee131ead19dd022f",
+      "publicProjectionSha256": "23168dc2ee49219852ac5dc010ffeb25d75c81c472c6085eee131ead19dd022f"
+    },
+    "commands-preflight.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/commands-preflight.json",
+      "originalPrivateSha256": "4e00d150c44bcfc3dcf0a08216666a72586f3f8e054a29d922c343b7c9de4dfa",
+      "publicProjectionSha256": "4e00d150c44bcfc3dcf0a08216666a72586f3f8e054a29d922c343b7c9de4dfa"
+    },
+    "workflow-report.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/workflow-report.json",
+      "originalPrivateSha256": "833a582905c0ebbcd0103ad0c40519a9ce55ece7cc0bf878feab94495a6e4efe",
+      "publicProjectionSha256": "833a582905c0ebbcd0103ad0c40519a9ce55ece7cc0bf878feab94495a6e4efe"
+    },
+    "workflow-native-traces.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/workflow-native-traces.json",
+      "originalPrivateSha256": "57c4b0c5f9269b3009ba05e88af8a3080d7f72ca7932af69a9c1ec662dcc5f88",
+      "publicProjectionSha256": "57c4b0c5f9269b3009ba05e88af8a3080d7f72ca7932af69a9c1ec662dcc5f88"
+    },
+    "workflow-cases.json": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/workflow-cases.json",
+      "originalPrivateSha256": "df1316e5132741e2225ea3701e7476acf39663fe2c1a13e24d57c769c8e00969",
+      "publicProjectionSha256": "df1316e5132741e2225ea3701e7476acf39663fe2c1a13e24d57c769c8e00969"
+    },
+    "runtime61-fixed-transition.txt": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/runtime61-fixed-transition.txt",
+      "originalPrivateSha256": "9eff7766a8fa874ab96f10e874426403bd23899e362a75a61ae2f6e21da73f94",
+      "publicProjectionSha256": "9eff7766a8fa874ab96f10e874426403bd23899e362a75a61ae2f6e21da73f94"
+    },
+    "runtime61-fixed-capabilities.txt": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/runtime61-fixed-capabilities.txt",
+      "originalPrivateSha256": "d61a2a1cb981a7f53bbc406155a4c0c327404fc0af08447bf2bf3c90f9120d7a",
+      "publicProjectionSha256": "d61a2a1cb981a7f53bbc406155a4c0c327404fc0af08447bf2bf3c90f9120d7a"
+    },
+    "runtime61-fixed-workflow-capabilities.txt": {
+      "path": "docs/evidence/filmcraft61-fixed-runtime-20261009/runtime61-fixed-workflow-capabilities.txt",
+      "originalPrivateSha256": "95dda9423ed3d46dfe45e21f57268ce4ee9b6806ce2747492682dc694a8b8815",
+      "publicProjectionSha256": "95dda9423ed3d46dfe45e21f57268ce4ee9b6806ce2747492682dc694a8b8815"
+    }
+  },
+  "scope": "Installed fixed61 code and all13 skills; bounded native headless/bridge, controlled fault replies separately labeled, actual runtime transition and independent decode with private grants. Diagnostic improvements after61 need separate source and fixed qualification.",
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "otherPlatforms": "NOT_RUN",
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "openTasks": 29
+}

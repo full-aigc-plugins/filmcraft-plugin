@@ -1,0 +1,1 @@
+{"result": "PASS", "old": "0.2.0-craft.4", "new": "0.2.0-craft.5", "generations": 3, "attempts": 1, "negativeCases": 4}

@@ -68,7 +68,13 @@ test('capability refusal survives the Python preflight boundary as capability_mi
  };
  for(const [name,data] of Object.entries(sources)){writeFileSync(join(scripts,name),data);}
  const runner=new PythonWorkflowRunner(null as any,null as any,{skillDirectory:skill,sourceRevision:'a'.repeat(40),runtimeHome:join(f.root,'unused-runtime'),pluginVersion:'synthetic',python:f.options.python});
- assert.throws(()=>runner.prepare(f.plan,join(f.root,'output')),(e:any)=>e.code==='capability_missing');
+ assert.throws(()=>runner.prepare(f.plan,join(f.root,'output')),(e:any)=>{
+  assert.equal(e.code,'capability_missing');
+  assert.equal(e.diagnostic?.schema,'filmcraft-capability-refusal/v1');
+  assert.equal(e.diagnostic?.subject,'synthetic-operation');
+  assert.equal(e.diagnostic?.status,'missing');
+  return true;
+ });
  assert.equal(existsSync(join(f.root,'output')),false);
 });
 

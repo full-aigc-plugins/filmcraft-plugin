@@ -13,3 +13,5 @@ Common arguments: `--candidate FILE --plan FILE --ledger FILE --runtime-home DIR
 Known missing/unknown capabilities and parameter/identity drift retain stable refusal codes across the Python preflight boundary. Unexpected output remains a failure without publishing a selection or exposing local traceback paths.
 
 [Control and failure flow](FilmCraft-Runtime-Upgrade.zh_CN.md). Source-native switching does not establish fixed-release installation, complete fault recovery, all platforms, or full FC-RT-002 qualification; tasks2.4–2.6 remain open until those gates have evidence.
+
+Capability refusals may include a validated `diagnostic` (`filmcraft-capability-refusal/v1`) with the affected field, status, known expected/observed values and measured snapshot digests. Parameter text, local paths and arbitrary native messages are excluded; unknown values stay null. Node checks the exact fields and matching refusal status. This explains blocking and does not establish resource execution or creative acceptance.

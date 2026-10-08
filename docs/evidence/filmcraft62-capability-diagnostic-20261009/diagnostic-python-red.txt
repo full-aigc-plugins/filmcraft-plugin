@@ -1,0 +1,32 @@
+EEE
+======================================================================
+ERROR: test_command_drift_reports_hashes_without_parameter_text (test_preflight_refusal.RefusalTests.test_command_drift_reports_hashes_without_parameter_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<PLUGIN_ROOT>/tests/test_preflight_refusal.py", line 20, in test_command_drift_reports_hashes_without_parameter_text
+    value = preflight.refusal_diagnostic(ValueError('capability_contract_drift: clip.trim'),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'preflight_refusal' has no attribute 'refusal_diagnostic'
+
+======================================================================
+ERROR: test_identity_difference_retains_observed_and_expected (test_preflight_refusal.RefusalTests.test_identity_difference_retains_observed_and_expected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<PLUGIN_ROOT>/tests/test_preflight_refusal.py", line 13, in test_identity_difference_retains_observed_and_expected
+    value = preflight.refusal_diagnostic(ValueError('capability_identity_mismatch: runtimeVersion'),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'preflight_refusal' has no attribute 'refusal_diagnostic'
+
+======================================================================
+ERROR: test_unknown_paths_and_untrusted_snapshot_values_are_redacted (test_preflight_refusal.RefusalTests.test_unknown_paths_and_untrusted_snapshot_values_are_redacted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<PLUGIN_ROOT>/tests/test_preflight_refusal.py", line 27, in test_unknown_paths_and_untrusted_snapshot_values_are_redacted
+    value = preflight.refusal_diagnostic(ValueError('capability_unknown: model:/private/secret/model'),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'preflight_refusal' has no attribute 'refusal_diagnostic'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=3)

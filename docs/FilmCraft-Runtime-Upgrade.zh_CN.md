@@ -28,3 +28,5 @@ flowchart TD
 已知缺失能力通过 `capability_missing`、证据不足通过 `capability_unknown`、参数或身份漂移通过各自稳定错误码拒绝。未知的 Python/原生输出保持 `native_preflight_failed`，不把堆栈或本地路径作为公共合同返回。
 
 该入口及源码原生切换证据不代替固定发布安装、故障恢复、全平台或完整 FC-RT-002 场景验收。2.4—2.6 在这些门禁完成前保持开放。
+
+能力拒绝附带可选 `diagnostic`：`filmcraft-capability-refusal/v1` 标明字段、状态、可确认的预期和实测值及当前快照摘要。参数只返回摘要；未知值为 null，本地路径与任意原生文本不回显。Node 校验字段和拒绝码对应状态，不接受额外字段。该信息仅解释阻断原因，不证明资源可执行或创作验收通过。

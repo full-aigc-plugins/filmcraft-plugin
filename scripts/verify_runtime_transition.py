@@ -5,6 +5,7 @@ from pathlib import Path
 parser=argparse.ArgumentParser(description='实际运行时版本切换、独立原生交付、回退及拒绝场景；不代替固定安装资格。')
 for key in ['output','previous-core','node','python','ffmpeg']:parser.add_argument('--'+key,required=True)
 parser.add_argument('--runtime-home')
+parser.add_argument('--require-diagnostics', action='store_true')
 args=parser.parse_args()
 ROOT=Path(__file__).resolve().parents[1];WORK=Path(args.output).absolute()
 if WORK.exists() or WORK.is_symlink():raise ValueError('runtime_transition_output_exists')
@@ -67,6 +68,16 @@ missing=json.loads(PLAN.read_text());missing['requires']={'resources':[{'kind':'
 missingargs=[*flags,'--candidate',NEW];missingargs[missingargs.index('--plan')+1]=missingplan
 subject=run([NODE,CLI,'probe-subject',*missingargs]);grant(subject)
 missingresult=run([NODE,CLI,'probe',*missingargs,*auth],expect=1);assert missingresult['error']['code']=='capability_missing'
+diagnosticresult=None
+if args.require_diagnostics:
+ diagnostic=missingresult['error']['diagnostic'];assert diagnostic['subject']=='codec:missing-owned-runtime61-codec' and diagnostic['status']=='missing' and diagnostic['observed']=='missing'
+ mismatch=json.loads(PLAN.read_text());mismatch['requires']={'runtimeVersion':'0.0.0-incompatible'};mismatchplan=WORK/'version-mismatch.plan.json';mismatchplan.write_text(json.dumps(mismatch))
+ mismatchargs=[*flags,'--candidate',NEW];mismatchargs[mismatchargs.index('--plan')+1]=mismatchplan
+ subject=run([NODE,CLI,'probe-subject',*mismatchargs]);grant(subject)
+ diagnosticresult=run([NODE,CLI,'probe',*mismatchargs,*auth],expect=1)
+ error=diagnosticresult['error'];assert error['code']=='capability_identity_mismatch'
+ diagnostic=error['diagnostic'];assert diagnostic['subject']=='runtimeVersion' and diagnostic['status']=='mismatch' and diagnostic['expected']=='0.0.0-incompatible' and diagnostic['observed']==newversion
+ assert diagnostic['snapshot']['runtimeSha256']==new['descriptor']['runtimeIdentity']['sha256']
 stale=run([NODE,CLI,'activate',*flags,'--candidate',NEW,'--probe',WORK/'new.probe.json',*auth],expect=1);assert stale['error']['code']=='runtime_probe_changed'
 # 篡改回执即使获得相应主题许可，仍须与真实重新探测一致。
 args=[*flags,'--candidate',NEW];subj=run([NODE,CLI,'probe-subject',*args]);grant(subj);fresh=run([NODE,CLI,'probe',*args,*auth]);fresh['descriptor']['runtimeIdentity']['sha256']='0'*64
@@ -79,4 +90,5 @@ subj=run([NODE,CLI,'subject',*args,'--probe',freshfile]);grant(subj)
 busy=run([NODE,CLI,'activate',*args,'--probe',freshfile,*auth],expect=1);assert busy['error']['code']=='runtime_not_drained'
 assert sha(project)==projectsha and sha(oldbinary)==oldbinarysha
 report['negativeCases']={'missingCodec':missingresult,'staleProbe':stale,'forgedProbe':forgedresult,'pendingPlan':busy};report['finalSelectionGeneration']=nodejs("import{TaskLedger}from'./src/harness/task_ledger.ts';import{RuntimeDeployment}from'./src/adapters/runtime_deployment.ts';const db=new TaskLedger(process.argv[2]);console.log(JSON.stringify({generation:new RuntimeDeployment(db).current().generation}));db.close();",LEDGER)['generation'];assert report['finalSelectionGeneration']==3
-(WORK/'report.private.json').write_text(json.dumps(report,indent=2));print(json.dumps({'result':'PASS','old':oldversion,'new':newversion,'generations':3,'attempts':1,'negativeCases':4}))
+if diagnosticresult:report['negativeCases']['versionDiagnostic']=diagnosticresult
+(WORK/'report.private.json').write_text(json.dumps(report,indent=2));print(json.dumps({'result':'PASS','old':oldversion,'new':newversion,'generations':3,'attempts':1,'negativeCases':len(report['negativeCases'])}))

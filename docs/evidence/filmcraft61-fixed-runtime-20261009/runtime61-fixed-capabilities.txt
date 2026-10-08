@@ -1,0 +1,34 @@
+fixed requires preflight: 273
+headless-default PASS 
+headless-bound-reopen PASS 
+headless-mismatch-mode FAIL capability_identity_mismatch: mode
+headless-mismatch-platform FAIL capability_identity_mismatch: platform
+headless-mismatch-runtimeVersion FAIL capability_identity_mismatch: runtimeVersion
+headless-mismatch-runtimeSha256 FAIL capability_identity_mismatch: runtimeSha256
+headless-mismatch-parametersSha256 FAIL capability_identity_mismatch: parametersSha256
+headless-missing-codec FAIL capability_missing: codec:missing-filmcraft-fixed-resource
+headless-unknown-codec FAIL capability_unknown: codec:missing-filmcraft-fixed-resource
+headless-missing-font FAIL capability_missing: font:missing-filmcraft-fixed-resource
+headless-unknown-font FAIL capability_unknown: font:missing-filmcraft-fixed-resource
+headless-missing-model FAIL capability_missing: model:missing-filmcraft-fixed-resource
+headless-unknown-model FAIL capability_unknown: model:missing-filmcraft-fixed-resource
+headless-late-contract FAIL capability_contract_drift: file.saveAs
+bridge-default PASS 
+bridge-bound-reopen PASS 
+bridge-mismatch-mode FAIL capability_identity_mismatch: mode
+bridge-mismatch-platform FAIL capability_identity_mismatch: platform
+bridge-mismatch-runtimeVersion FAIL capability_identity_mismatch: runtimeVersion
+bridge-mismatch-runtimeSha256 FAIL capability_identity_mismatch: runtimeSha256
+bridge-mismatch-parametersSha256 FAIL capability_identity_mismatch: parametersSha256
+bridge-mismatch-desktopSha256 FAIL capability_identity_mismatch: desktopSha256
+bridge-unknown-desktop FAIL capability_unknown: desktop_identity
+bridge-missing-codec FAIL capability_missing: codec:missing-filmcraft-fixed-resource
+bridge-unknown-codec FAIL capability_unknown: codec:missing-filmcraft-fixed-resource
+bridge-missing-font FAIL capability_missing: font:missing-filmcraft-fixed-resource
+bridge-unknown-font FAIL capability_unknown: font:missing-filmcraft-fixed-resource
+bridge-missing-model FAIL capability_missing: model:missing-filmcraft-fixed-resource
+bridge-unknown-model FAIL capability_unknown: model:missing-filmcraft-fixed-resource
+bridge-late-contract FAIL capability_contract_drift: file.saveAs
+bridge-real-parameter-drift FAIL capability_contract_drift: file.importImageSequence
+headless-model-install-reprobe FAIL command_failed: [{"type": "text", "text": "invalid parameters for `transcript.generate`: nothing to transcribe (pass `items`, select clips, or open a sequence with audio)"}]
+{"result": "PASS", "preflightCases": 273, "nativeCases": 32, "task": "9.12"}

@@ -4,8 +4,45 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
+
+
+def refusal_diagnostic(error, snapshot, requires):
+    """仅投影安全身份、状态和摘要；拒绝文本及完整参数文档不属于公共诊断。"""
+    def token(value):
+        return value if isinstance(value, str) and re.fullmatch(r'[A-Za-z0-9_.:@+\-]{1,128}', value) else None
+    def digest(value):
+        return value if isinstance(value, str) and re.fullmatch(r'[a-f0-9]{64}', value) else None
+    code, _, raw = str(error).partition(': ')
+    subject = token(raw) or 'redacted'
+    runtime = snapshot.get('runtime', {})
+    desktop = snapshot.get('desktop', {})
+    actual = {'mode': snapshot.get('mode'), 'platform': runtime.get('platform'),
+              'runtimeVersion': runtime.get('version'), 'runtimeSha256': runtime.get('binarySha256'),
+              'desktopSha256': desktop.get('binarySha256'), 'parametersSha256': snapshot.get('parametersSha256')}
+    expected, observed = None, None
+    if subject in actual:
+        expected, observed = token(requires.get(subject)), token(actual[subject])
+    elif subject.startswith(('codec:', 'font:', 'model:')):
+        kind, name = subject.split(':', 1)
+        rows = snapshot.get('resources', [])
+        row = next((r for r in rows if r.get('kind') == kind and r.get('name') == name), {})
+        expected, observed = 'available', token(row.get('status')) or 'unknown'
+    else:
+        row = next((r for r in snapshot.get('commands', []) if r.get('id') == subject), {})
+        expected = digest(row.get('expectedParametersSha256'))
+        observed = digest(row.get('observedParametersSha256'))
+    return {'schema': 'filmcraft-capability-refusal/v1', 'subject': subject,
+            'status': {'capability_missing': 'missing', 'capability_unknown': 'unknown',
+                       'capability_contract_drift': 'drift', 'capability_identity_mismatch': 'mismatch'}[code],
+            'expected': expected, 'observed': observed,
+            'snapshot': {'mode': actual['mode'] if actual['mode'] in ('headless', 'bridge') else None,
+                         'platform': token(actual['platform']), 'runtimeVersion': token(actual['runtimeVersion']),
+                         'runtimeSha256': digest(actual['runtimeSha256']),
+                         'parametersSha256': digest(actual['parametersSha256']),
+                         'catalogSha256': digest(snapshot.get('catalogSha256'))}}
 
 
 def inspect(skill, plan_path, output, runtime_home, source=None):
@@ -33,7 +70,12 @@ def inspect(skill, plan_path, output, runtime_home, source=None):
         rows = commands.runtime_rows(session)
         snapshot = commands.capability_snapshot(session, installed, rows, requires=requirements)
         requested = [item['params']['command'] for item in plan['operations'] if item['command'] == 'native.command']
-        load('capabilities').enforce(snapshot, requirements, requested)
+        try:
+            load('capabilities').enforce(snapshot, requirements, requested)
+        except (ValueError, RuntimeError) as error:
+            if str(error).split(':', 1)[0] in {'capability_missing', 'capability_unknown', 'capability_contract_drift', 'capability_identity_mismatch'}:
+                error.capability_diagnostic = refusal_diagnostic(error, snapshot, requirements)
+            raise
     inputs = {name: asset['sha256'] for name, asset in {**prior.get('assets', {}), **plan.get('assets', {})}.items()}
     if source and hashlib.sha256((source / 'project.fcproj').read_bytes()).hexdigest() != project_revision:
         raise ValueError('revision_conflict')
@@ -56,5 +98,8 @@ if __name__ == '__main__':
         code = str(error).split(':', 1)[0]
         if code not in {'capability_missing', 'capability_unknown', 'capability_contract_drift', 'capability_identity_mismatch'}:
             code = 'native_preflight_failed'
-        print(json.dumps({'schema': 'filmcraft-native-preflight-error/v1', 'error': {'code': code}}))
+        failure = {'code': code}
+        if code != 'native_preflight_failed':
+            failure['diagnostic'] = getattr(error, 'capability_diagnostic', None) or refusal_diagnostic(error, {}, {})
+        print(json.dumps({'schema': 'filmcraft-native-preflight-error/v1', 'error': failure}))
         sys.exit(1)

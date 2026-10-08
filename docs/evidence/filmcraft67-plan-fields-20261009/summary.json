@@ -1,0 +1,12 @@
+{
+  "schema": "filmcraft-plan-field-release/v1",
+  "pluginVersion": "0.1.0-dev.67",
+  "sourceRef": "v0.1.0-dev.50",
+  "sourceSha": "d99d3e194bcee2d77932b14901b614033bd911dd",
+  "sourceChecks": "PASS",
+  "sourceBehaviorEvidence": "https://github.com/full-aigc-skills/filmcraft-skills/tree/v0.1.0-dev.50/docs/evidence/source50-plan-field-boundary-20261009",
+  "fixedInstall": "NOT_RUN",
+  "remainingOpenTasks": 8,
+  "fullV1": "NOT_PROVEN",
+  "scope": "Reject undefined workflow root and operation fields before asset access, installation and output. Native parameter, trusted roots and host secret reference qualification remain open."
+}

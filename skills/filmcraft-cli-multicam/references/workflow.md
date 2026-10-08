@@ -152,3 +152,7 @@ Explicit audio placement duration must stay within the registered source range. 
 Registered ordinary media preflight aggregates missing, digest-conflicting and symlink inputs before installation/output. Optional `assetIssues` contains alias, origin and reason only; existing error prefixes remain compatible. Sequence validation and CLI digest-registration failures retain their separate refusal contracts.
 
 裁切预检在原生timeline.trim前依据当前片段与已登记素材核验请求源区间，拒绝引擎静默钳制。错误保留原前缀，公共CLI的clipTiming只含固定reason和十进制字符串clipIds；失败暂存中的clip-timing.json参与失败回执摘要，不是成功交付。合法音频尾部填充继续按原合同核验。 / Trim preflight refuses explicit out-of-source requests before native clamping;safe clipTiming uses fixed reasons and exact decimal clip IDs. Failed-stage clip-timing.json is hashed separately;existing valid audio-tail padding remains governed by its contract.
+
+## 不可信扩展字段
+
+工作流顶层仅接受 `document`、`assets`、`operations`、`frames`、`export`、`expectedProjectSha256`、`requires`；每项操作仅接受 `command`、`params`、`as`。未定义字段返回 `invalid_workflow_fields` 或 `invalid_operation_fields`，在素材读取、安装和输出创建前停止，且不回显字段名或值。凭据不得放入计划或元数据；该入口不提供云密钥传递接口。用户创作文字和完整原生命令的参数按各自契约处理，不能据此宣称已完成全部秘密或路径权限验收。

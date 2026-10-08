@@ -195,6 +195,9 @@ def validate(plan, prior_assets=None):
         raise ValueError('invalid_workflow_plan: use commands.py check/run for craft-command-plan/v1')
     if not isinstance(plan, dict) or not isinstance(plan.get('operations'), list):
         raise ValueError('operations_required')
+    # 不可信扩展字段不能随原始计划进入交付；诊断不回显未知名称或值。
+    if set(plan) - {'document', 'assets', 'operations', 'frames', 'export', 'expectedProjectSha256', 'requires'}:
+        raise ValueError('invalid_workflow_fields')
     if 'requires' in plan:
         load_module('capabilities').validate_requirements(plan['requires'])
         if plan['requires'].get('mode', 'headless') != 'headless':
@@ -205,6 +208,8 @@ def validate(plan, prior_assets=None):
     for item in plan['operations']:
         if not isinstance(item, dict):
             raise ValueError('invalid_operation')
+        if set(item) - {'command', 'params', 'as'}:
+            raise ValueError('invalid_operation_fields')
         if item.get('command') == 'native.command':
             native_module().validate(item.get('params'), allow_references=True)
         if item.get('command') not in ALLOWED:

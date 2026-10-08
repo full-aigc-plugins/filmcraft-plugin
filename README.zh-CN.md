@@ -53,7 +53,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.66` / `filmcraft-skills@v0.1.0-dev.49`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.67` / `filmcraft-skills@v0.1.0-dev.50`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -77,7 +77,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.66`；技能源：`0.1.0-dev.49`；13 个独立技能。
+当前插件：`0.1.0-dev.67`；技能源：`0.1.0-dev.50`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -182,9 +182,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.66 |
+| Metadata version | 0.1.0-dev.67 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.49 |
+| Skills source | filmcraft-skills / v0.1.0-dev.50 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -419,3 +419,5 @@ dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自�
 2026-10-09 完成4.16—4.18／FC-DM-006：固定66/source49实际安装七类媒体矩阵及代理预览负例通过。原生保存重开／导出后独立核对尺寸、12fps、全帧解码、时长与音轨；Tears of Steel许可来源VFR54源帧／36输出帧与音频零偏移、181.211333秒双声道非整帧尾部8698144样本及最后544样本保全、两字体摘要与像素变化、明确合成透明序列、移动依赖及坏文件／缺字体／缺依赖拒绝均通过。仅预览无成片时实际评审维持正式输出NOT_RUN。历史公开craft.3同工程VFR原生PCM相关性最大0.5224失败，当前craft.5为0.999995通过；历史整秒及长WAV成功对照另存，不冒充红灯。13技能及安装代码保全。完整V1余8项；其他宿主、全666命令／GUI和创作用户验收仍开放。 [FC-DM-006](docs/evidence/fc-dm-006/index.json)。
 
 2026-10-09 固定66/source49全部13技能已完成不同专业任务的独立安装复验：10专项原生测试、use中文空格路径交付／修订、CLI高级原生示例和setup损坏拒绝／复用全部通过；另13技能公开与Harness素材缺失／摘要负例通过。安装技能与执行字节保全。宿主模型实际意图路由尚未验收，9.9保持开放，完整V1仍余8项。 [Independent evidence](docs/evidence/filmcraft66-independent-skills-20261009/summary.json).
+
+开发候选dev.67锁定独立技能源dev.50，拒绝工作流顶层／操作对象中的未定义字段，避免metadata随plan.json进入交付；原生参数、可信读取／写入根与宿主秘密引用仍待完整验证。固定66的既有验收保持原身份；新固定67安装与完整V1仍开放，8项任务未关闭。

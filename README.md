@@ -53,7 +53,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.66` / `filmcraft-skills@v0.1.0-dev.49`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.67` / `filmcraft-skills@v0.1.0-dev.50`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -77,7 +77,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.66`; skill source: `0.1.0-dev.49`; 13 independent skills.
+Current plugin: `0.1.0-dev.67`; skill source: `0.1.0-dev.50`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -181,9 +181,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.66 |
+| Metadata version | 0.1.0-dev.67 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.49 |
+| Skills source | filmcraft-skills / v0.1.0-dev.50 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -420,3 +420,5 @@ Development dev.66 pins source dev.49 and returns independently validated clip t
 2026-10-09 qualified4.16-4.18/FC-DM-006 on actual fixed66/source49 installed Codex/macOSarm64/headless. All7 source/license/hash-bound real-derived and explicitly synthetic media cases pass native reopen/export and independent dimension/12fps/full-decode/duration/audio checks. Preview-only actual review keeps formal output NOT_RUN. Historical publiccraft3 VFR native PCM bestalignedcorrelation0.5224 fails0.98; sameproject fixedcraft5 correlation0.999995 passes. Successful historical integer/longWAV controls are retained, not claimed as red. All13installedskills/code preserved. FullV1 remaining8; otherhosts/full666GUI/Art/creative/user gates open. [FC-DM-006](docs/evidence/fc-dm-006/index.json).
 
 2026-10-09 all13 fixed66/source49 skills passed isolated professional task verification:10native specialty tests,use Unicode/spaces native delivery/revision,CLI advanced example,andsetup corruption/refusal/reuse. All13 public/Harness asset-preflight negatives pass;installedbytes unchanged. Host model intent routing remains NOT_RUN;9.9 and8fullV1tasks stay open. [Independent evidence](docs/evidence/filmcraft66-independent-skills-20261009/summary.json).
+
+Developmentcandidate dev.67 pins source50 and rejects undefined workflow-root/operation fields before they can enter delivery plan.json. Native parameters,trustedread/write roots and hostsecret references remain open. Existing fixed66evidence keeps its originalidentity; newfixed67install and fullV1remain open,with8tasks unchecked.

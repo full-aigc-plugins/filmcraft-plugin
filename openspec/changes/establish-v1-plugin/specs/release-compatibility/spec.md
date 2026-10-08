@@ -54,6 +54,13 @@
 - **WHEN** 素材元数据包含额外命令或路径越界请求
 - **THEN** 作为数据处理并拒绝越权执行，日志不泄露秘密
 
+#### Scenario: FC-RL-002-PLAN-FIELDS 计划扩展字段不得进入交付
+
+- **WHEN** 不可信工作流 JSON 在顶层或操作对象加入未定义字段，包括元数据中的指令或凭据值
+- **THEN** 公开入口 SHALL 在素材读取、运行时安装、原生执行及输出创建前拒绝，返回固定错误代码，不回显字段名或值
+- **AND** 顶层仅接受既有 document、assets、operations、frames、export、expectedProjectSha256、requires；操作对象仅接受 command、params、as；既有完整命令计划入口提示保持兼容
+- **AND** 原生参数、用户创作文本、宿主秘密引用和读取／写入根授权分别验证，不把该字段边界修复当作完整权限与秘密验收。
+
 ## Implementation evidence (non-normative)
 
 `docs/evidence/codex-current-release.json` binds current fixed releases to two actual Codex CLI/app-server versions, five enabled namespaced skills, installed public workflow outcomes and explicit exclusions. The corresponding bilingual Host-Verification-Architecture documents specify the repeatable check. RL-001 tasks remain unchecked until their full P0 prerequisites and scenarios pass.

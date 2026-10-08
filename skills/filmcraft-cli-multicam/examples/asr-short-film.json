@@ -1,0 +1,63 @@
+{
+  "document": {
+    "name": "Speech film",
+    "width": 320,
+    "height": 180,
+    "frameRate": {
+      "num": 12,
+      "den": 1
+    }
+  },
+  "operations": [
+    {
+      "command": "asset.import",
+      "params": {
+        "asset": "shot"
+      },
+      "as": "shot"
+    },
+    {
+      "command": "asset.import",
+      "params": {
+        "asset": "voice"
+      },
+      "as": "voice"
+    },
+    {
+      "command": "timeline.place",
+      "params": {
+        "item": {
+          "$ref": "shot.item"
+        },
+        "track": "V1",
+        "time": "0",
+        "sourceIn": "0",
+        "duration": "508032000000",
+        "insert": false
+      },
+      "as": "shotClip"
+    },
+    {
+      "command": "timeline.place",
+      "params": {
+        "item": {
+          "$ref": "voice.item"
+        },
+        "track": "A1",
+        "audioTrack": "A1",
+        "time": "0",
+        "sourceIn": "0",
+        "duration": "508032000000",
+        "insert": false
+      },
+      "as": "voiceClip"
+    }
+  ],
+  "frames": [
+    "127008000000",
+    "381024000000"
+  ],
+  "export": {
+    "audioRequired": true
+  }
+}

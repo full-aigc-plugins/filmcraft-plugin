@@ -72,10 +72,22 @@ Source skills pin maintainedcraft.4 with real native CPU Whisper. Immutable olde
 
 ### 公共工作流的模型目录 / Model directory in public workflows
 
-源码工作流 `workflow.py --data-dir "$MODEL_DATA_DIR"`（Python：`execute(..., data_dir=...)`）将同一持久目录传给 MCP、重开、渲染及导出进程。显式参数优先于 `FILMCRAFT_DATA_DIR`；未配置时保持原生默认目录。Art 编排调用可继承此环境变量。预先下载与识别必须指向同一目录；模型位于该目录的 `models/`，不随成片打包。此源码变更尚未进入已发布的 dev.33 或固定 Film34／Art104。
+源码工作流 `workflow.py --data-dir "$MODEL_DATA_DIR"`（Python：`execute(..., data_dir=...)`）将同一持久目录传给 MCP、重开、渲染及导出进程。显式参数优先于 `FILMCRAFT_DATA_DIR`；未配置时保持原生默认目录。Art 编排调用可继承此环境变量。预先下载与识别必须指向同一目录；模型位于该目录的 `models/`，不随成片打包。该模型目录能力已包含在固定Film39／Art110；实际安装仍按自身锁核对。
 
-The source workflow forwards `--data-dir` (Python `data_dir`) to MCP and auxiliary native processes. It overrides `FILMCRAFT_DATA_DIR`, while an unconfigured invocation keeps the native default. Use the same persistent directory for model download and recognition. Models remain under `models/` outside the delivery package. This source change is not yet included in published dev.33 or fixed Film34/Art104.
+The source workflow forwards `--data-dir` (Python `data_dir`) to MCP and auxiliary native processes. It overrides `FILMCRAFT_DATA_DIR`, while an unconfigured invocation keeps the native default. Use the same persistent directory for model download and recognition. Models remain under `models/` outside the delivery package. Film39/Art110 include this model-directory behavior; verify the lock of the loaded installation.
 
 下载若因断网或 `unexpected end of file` 明确失败，可在同一数据目录重新调用 `transcript.downloadModel`，完成文件由原生下载器保留，未完成文件重新校验。不要自动重放已提交的识别／修改命令；先检查回复、工程状态与恢复记录。首次使用网络失败必须作为失败证据保留，不能用复用本地模型冒充首次下载通过。
 
 After an explicit network download failure, retry only `transcript.downloadModel` in the same directory. The native downloader retains completed files and validates new downloads. Do not automatically replay submitted recognition or editing commands; reconcile replies, project state and recovery records first. Retain first-download failures separately from cached-model acceptance.
+
+## 自动字幕的专用模板与轨道交接 / Dedicated ASR templates and track handoff
+
+新建语音识别短片使用本技能 `examples/asr-short-film.json`，该模板只导入并编排音画，不创建占位字幕。按素材实际时长调整时间线，再保存基础交付。已提供文稿的任务仍可选择其他字幕模板；不要将占位文字作为识别输出。
+
+模型在已声明目录首次下载成功后，复制 `examples/asr-captions-revision.json` 到任务目录，将 `expectedProjectSha256` 的全零示例值替换为基础交付 manifest 中 `files.project.fcproj` 的真实摘要。模型、语言、媒体与输出设置按任务修改；模板的 voice.item 仅适用于该基础模板的绑定。运行同技能 `workflow.py /absolute/asr-revision.json --source /absolute/base-delivery --output /absolute/new-asr-delivery --data-dir "$MODEL_DATA_DIR"`。输出目录必须不存在，保存安装副本。
+
+模板以 native.command 查询模型、识别真实音频、检查词，然后生成 maxChars32、两行字幕。样式 track 引用 `speechCaptions.track` 的实际返回ID，不硬编码C1。默认size84仅对应180高画面的名义14px；字体、语言、行宽与输出尺寸变化时按1080行归一重新计算，并检查实际预览。模板不自动下载模型，必须先完成本指南的查询与固定下载。
+
+已有工程先用 captions.list 查询轨道ID、名字、文本、时间和enabled。仅在任务明确替换模板占位轨道时，用 captions.setTrack 将该实际ID的enabled设false，另存并保留文字/时间；无关用户字幕保持。新增轨道会改变C1/C2标签。仅重做版式时复用已识别词，不再次识别音频。重开后核对单一目标字幕、SRT无占位文字、音画与原工程摘要不变。自动识别正确不等于字幕版式合格。
+
+For new ASR films, use this skill's asr-short-film.json without supplied captions. Download the pinned model into the declared directory first. Copy asr-captions-revision.json and replace its zero digest with the base manifest's actual project digest. Adapt language, media IDs and timing. Run the revision through this skill's workflow.py with source, a new output directory and the same data directory. The template recognizes audio and styles the actual returned speechCaptions.track ID. Size84 means nominal14px at180 height, not a universal font size. Inspect the native preview, SRT, reopened project and preserved audio/video. For existing projects, disable only the explicitly superseded placeholder track after querying its actual ID; retain text/timing and unrelated captions. Layout-only revisions reuse existing transcripts rather than recognizing audio again.

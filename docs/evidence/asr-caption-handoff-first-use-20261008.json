@@ -1,0 +1,41 @@
+{
+  "schema": "filmcraft-asr-caption-handoff/v1",
+  "result": "PASS",
+  "goalStatus": "not_complete",
+  "sourceRef": "v0.1.0-dev.37",
+  "sourceSha": "f4adfa8e30f18ee43feef33de9deaab3f10b39e2",
+  "runtimeVersion": "0.2.0-craft.4",
+  "red": {
+    "result": "expected_behavior_failure",
+    "visibleTracks": 2,
+    "logSha256": "f2afd48ee45d0c1925df2ace6e072c544c0640f9577ab3320c1906cf252abd0b"
+  },
+  "green": {
+    "result": "PASS",
+    "visibleTracks": 1,
+    "captionSegments": 3,
+    "size": 84,
+    "maxChars": 32,
+    "returnedTrackReference": true,
+    "realSpeechWordCount": 28,
+    "referenceWordCoverage": 1.0,
+    "firstModelDownload": true,
+    "sourcePreserved": true,
+    "audioVideoPreserved": true,
+    "proofSha256": "032a5446cf9744eb13faf095b2a2dc0e036d77cfb93af8c413d45b6a991d2505",
+    "logSha256": "8bea506114dc69af244192835d85bb24958d39214c881d9c9ad3be18e26a41c1",
+    "frameSha256": "e3866ebf8d0e3249a409a5568f01ea1fec0f02cef55aa7118791db75f1ab3ecb"
+  },
+  "sourceRegression": {
+    "total": 169,
+    "passed": 134,
+    "skipped": 35,
+    "logSha256": "d27a124be991a10610e2d6dd15429fe399ab047d145de9b4574e2f50b1a972f8"
+  },
+  "pending": [
+    "new fixed plugin host and native acceptance",
+    "generic Skills CLI installation",
+    "full V1",
+    "human creative acceptance"
+  ]
+}

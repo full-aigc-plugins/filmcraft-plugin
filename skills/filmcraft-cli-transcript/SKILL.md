@@ -29,7 +29,7 @@ CLI argv 在 `--` 后，原生子命令必须放首位。安装参数放分隔�
 
 ## 场景操作
 
-先读取 [转录场景指南](references/transcript-scene.md)，区分已有逐词转录和自动语音识别，检查媒体、活动序列与逐词时间单位。
+先读取 [转录场景指南](references/transcript-scene.md)，区分已有逐词转录和自动语音识别，检查媒体、活动序列与逐词时间单位。新建ASR短片使用自身 asr-short-film.json 与 asr-captions-revision.json；后者用返回轨道ID设置可读样式，避免占位字幕叠加。
 
 先查询当前版本与命令目录；只读和编辑调用分别记录。读当前工程状态与命令 enabled/params 后构造 argv；需要创建对象的连续步骤在同会话执行，不能猜测返回 ID。
 

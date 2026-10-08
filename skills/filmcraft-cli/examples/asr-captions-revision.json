@@ -1,0 +1,68 @@
+{
+  "expectedProjectSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "operations": [
+    {
+      "command": "native.command",
+      "params": {
+        "command": "transcript.models",
+        "params": {}
+      },
+      "as": "models"
+    },
+    {
+      "command": "native.command",
+      "params": {
+        "command": "transcript.generate",
+        "params": {
+          "model": "whisper-tiny",
+          "language": "en",
+          "items": [
+            {
+              "$ref": "voice.item"
+            }
+          ]
+        }
+      },
+      "as": "recognized"
+    },
+    {
+      "command": "native.command",
+      "params": {
+        "command": "transcript.inspect",
+        "params": {}
+      },
+      "as": "transcript"
+    },
+    {
+      "command": "native.command",
+      "params": {
+        "command": "transcript.createCaptions",
+        "params": {
+          "name": "Workflow speech",
+          "maxChars": 32,
+          "lines": 2
+        }
+      },
+      "as": "speechCaptions"
+    },
+    {
+      "command": "captions.setStyle",
+      "params": {
+        "track": {
+          "$ref": "speechCaptions.track"
+        },
+        "font": "Arial",
+        "size": 84,
+        "margin": 0.02,
+        "color": "#ffffff",
+        "background": true
+      }
+    }
+  ],
+  "frames": [
+    "127008000000"
+  ],
+  "export": {
+    "audioRequired": true
+  }
+}

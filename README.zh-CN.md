@@ -1,6 +1,6 @@
 # FilmCraft Agent Plugin
 
-开发版dev.51新增持久化受限修订协调器及原生范围核验。公开标签固定安装验收待执行，OpenSpec9.25—9.27保持开放。[修订架构](docs/FilmCraft-Revision-Architecture.zh_CN.md)。
+固定dev.51／源42完成OpenSpec9.25—9.27：126项安装原生／状态测试无跳过、49类矩阵含9类受限修订专项、13技能／44执行文件保全，公共协议与四次发布CI通过。创作人工复核与用户接受仍开放，完整V1余54项。[修订架构](docs/FilmCraft-Revision-Architecture.zh_CN.md) · [固定证据](docs/evidence/filmcraft51-fixed-revision-20261008.json)。
 
 固定dev.50／源42完成OpenSpec9.22—9.24：13技能／40执行文件保全，107项安装测试无跳过、40类矩阵记录含8类独立质量专项、原生重开与时序音频校准通过；发布提交四次CI成功。创作仍manual_review，用户接受NOT_RUN。[架构](docs/FilmCraft-Quality-Architecture.zh_CN.md) · [固定证据](docs/evidence/filmcraft50-fixed-quality-20261008.json)。完整V1余57项开放。
 

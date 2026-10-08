@@ -1,6 +1,6 @@
 # Bounded local revision
 
-FC-QA-002, OpenSpec9.25–9.27. Development candidate dev.51/source42; fixed public-tag installed qualification is pending. The complete V1 remains incomplete.
+FC-QA-002, OpenSpec9.25–9.27. Fixed dev.51/source42 public-tag installed qualification passes for this bounded scope. The complete V1 remains incomplete.
 
 ```mermaid
 flowchart LR
@@ -25,3 +25,5 @@ Every new candidate requires its own frozen request and independent receipt. Eng
 The trusted host must call `invalidateCriteria` when the current goal or rubric changes. This permanently fences dispatch and removes the old best recommendation; it does not silently widen policy or allocate a fresh loop. Same-scope rounds reuse the original authorization reference and shared resource scope. Broader changes require a new explicit authorization scope.
 
 Unknown attempts only observe or enter independent recovery. Round count, failure count, shared budget and stagnant progress stop dispatch. The host receives unresolved issue IDs and quality dimensions plus current independently revalidated best references. POSIX process controls are the existing boundary; this is neither an OS sandbox nor full cross-platform qualification. The revision coordinator currently exposes a programmatic host interface; full user-decision UX and general creative revision routing remain open.
+
+Fixed dev.51/source42 qualification now passes; evidence: [fixed report](evidence/filmcraft51-fixed-revision-20261008.json). This completes only OpenSpec9.25–9.27;54 V1 tasks remain.

@@ -103,3 +103,5 @@ Independent quality update: minimal context, trusted host/manual verification, v
 Fixed dev.50/source42 independent quality acceptance now completes tasks9.22–9.24:107 installed tests without skips,40 matrix records including8 quality cases,13 skills/40 execution files preserved and four release CI runs pass. Creative review remains manual_review, user acceptance NOT_RUN and57 V1 tasks open.
 
 Bounded revision candidate: schema5 ledger, object/track/time/leaf/dependency scope, fresh independent review and round/failure/budget/stagnation gates. See docs/FilmCraft-Revision-Architecture.md. Fixed dev.51 qualification, tasks9.25–9.27 and full V1 remain open.
+
+Fixed dev.51/source42 completes OpenSpec9.25–9.27:126 installed native/state tests without skips,49 matrix records including9 bounded revision cases,13 skills/44 execution files preserved; public protocol validation and all four release CI runs pass. Creative/manual and user acceptance remain open, with54 V1 tasks remaining. docs/evidence/filmcraft51-fixed-revision-20261008.json · docs/evidence/filmcraft51-fixed-revision-20261008.json.

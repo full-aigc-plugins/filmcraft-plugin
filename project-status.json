@@ -94,7 +94,10 @@
     "9.21": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
     "9.22": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
     "9.23": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
-    "9.24": "docs/evidence/filmcraft50-fixed-quality-20261008.json"
+    "9.24": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
+    "9.25": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
+    "9.26": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
+    "9.27": "docs/evidence/filmcraft51-fixed-revision-20261008.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -164,10 +167,14 @@
     "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
     "qualityCandidateEvidence": "docs/evidence/filmcraft50-quality-candidate-20261008.json",
     "qualityStatus": "tasks9.22-9.24 qualified in actual installed plugin50/source42:107/107 tests,40 matrix records including8 quality scenarios, fresh independent context, replay refusal and actual native/temporal/audio checks; creative manual_review and user NOT_RUN, bounded revision/real user media/full V1 remain open with57 tasks",
-    "fixedQualityEvidence": "docs/evidence/filmcraft50-fixed-quality-20261008.json"
+    "fixedQualityEvidence": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
+    "revisionCandidateEvidence": "docs/evidence/filmcraft51-revision-candidate-20261008.json",
+    "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
+    "revisionStatus": "tasks9.25-9.27 qualified in fixed installed plugin51/source42:126/126 no skips,49 matrix records including9 revision scenarios, native scoped save/reopen and new independent review, bounded stops and verified best preservation; creative/manual, user acceptance and full V1 remain open with54 tasks"
   },
   "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
   "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
   "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
-  "fixedQualityEvidence": "docs/evidence/filmcraft50-fixed-quality-20261008.json"
+  "fixedQualityEvidence": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
+  "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json"
 }

@@ -22,7 +22,7 @@ def validate_resources(report):
     if not REQUIRED.issubset({row.get("scenario") for row in rows}):
         raise ValueError("resource_matrix_incomplete")
     resource = report.get("native", {}).get("resources", {})
-    if (resource.get("schemaVersion") not in (4, 5) or resource.get("sharedScope") != resource.get("parentTaskId")
+    if (resource.get("schemaVersion") not in (4, 5, 6) or resource.get("sharedScope") != resource.get("parentTaskId")
             or resource.get("parentTaskId") == resource.get("childTaskId")):
         raise ValueError("resource_scope_mismatch")
     reservations = resource.get("reservations", [])

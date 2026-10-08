@@ -49,7 +49,7 @@ def verify(authority,node,output):
   # 三个原生/时序媒体/上一实际安装核心用例可在普通CI缺环境，但逐条保留NOT_RUN。
   allowed={'actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt',
            'actual temporal/audio fixtures detect synchronization, per-channel clipping and decode failure',
-           'the actual previous installed dev45 core refuses schema5 without editing current state'}
+           'the actual previous installed dev45 core refuses schema6 without editing current state'}
   observed=re.findall(r'^ok \d+ - (.*?) # SKIP(?: .*)?$',node_log,re.M)
   if counts['fail'] or counts['tests']<1 or counts['pass']+counts['skipped']!=counts['tests']:raise ValueError('node_test_gate_failed')
   if len(observed)!=counts['skipped'] or not set(observed).issubset(allowed):raise ValueError('undeclared_node_skip')

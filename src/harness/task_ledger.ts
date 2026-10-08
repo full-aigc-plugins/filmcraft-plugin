@@ -1,3 +1,4 @@
+import { DEPLOYMENT_SCHEMA, assertRuntimeSelection, deploymentHistory } from '../adapters/runtime_deployment.ts';
 import { existsSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { randomUUID } from 'node:crypto';
@@ -68,15 +69,15 @@ export class TaskLedger {
       if (this.readOnly) {
         this.db.exec('PRAGMA query_only=ON;');
         const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-        check([1, 2, 3, 4, 5].includes(version), 'ledger_schema_unsupported');
+        check([1, 2, 3, 4, 5, 6].includes(version), 'ledger_schema_unsupported');
         this.verifySchema(version);
       } else {
         this.transaction(() => {
           const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-          check([0, 1, 2, 3, 4, 5].includes(version), 'ledger_schema_unsupported');
+          check([0, 1, 2, 3, 4, 5, 6].includes(version), 'ledger_schema_unsupported');
           if (version > 0) {
             this.verifySchema(version);
-            check(version === 5, 'ledger_upgrade_required');
+            check(version === 6, 'ledger_upgrade_required');
             return;
           }
           check(!existed, 'ledger_schema_unknown');
@@ -94,7 +95,8 @@ export class TaskLedger {
             ${CONTINUATION_SCHEMA}
             ${RESOURCE_SCHEMA}
             ${REVISION_SCHEMA}
-            PRAGMA user_version=5;
+            ${DEPLOYMENT_SCHEMA}
+            PRAGMA user_version=6;
             PRAGMA application_id=${APPLICATION_ID};
           `);
         });
@@ -121,6 +123,7 @@ export class TaskLedger {
       expected.revision_loops='loop_id,root_task_id,policy_sha256,definition,state,reason,generation,created_at';
       expected.revision_rounds='loop_id,round_no,child_task_id,intent_sha256,intent,state,result,result_sha256';
     }
+    if(version>=6){expected.runtime_deployments='generation,descriptor,descriptor_sha256,action,authorization_ref,created_at';}
     const tables = this.db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name").all() as Row[];
     check(tables.map(row => row.name).join(',') === Object.keys(expected).sort().join(','), 'ledger_schema_unknown');
     check(!this.db.prepare("SELECT name FROM sqlite_master WHERE type IN ('view','trigger')").get(), 'ledger_schema_unknown');
@@ -134,7 +137,7 @@ export class TaskLedger {
         revision_loops:['reason'],revision_rounds:['result','result_sha256'] };
       const primary: Record<string, string[]> = { tasks: ['task_id'], project_leases: ['project_key'], attempts: ['attempt_id'],
         receipts: ['attempt_id','kind'], recovery_intents: ['intent_id'], continuation_intents: ['intent_id'],
-        resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'],revision_loops:['loop_id'],revision_rounds:['loop_id','round_no'] };
+        resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'],revision_loops:['loop_id'],revision_rounds:['loop_id','round_no'],runtime_deployments:['generation'] };
       for (const column of actual) {
         const integer = ['epoch','lease_until','pid','parent_epoch','deadline','created_at','reserved_at','generation','round_no'].includes(column.name);
         check(column.type === (integer ? 'INTEGER' : 'TEXT')
@@ -146,7 +149,7 @@ export class TaskLedger {
         attempts: ['attempt_id', 'task_id,operation_key'], receipts: ['attempt_id,kind'],
         recovery_intents: ['intent_id', 'task_id,epoch'], continuation_intents: ['intent_id', 'child_task_id', 'parent_task_id,child_task_id'],
         resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'],
-        revision_loops:['loop_id','root_task_id'],revision_rounds:['loop_id,round_no','child_task_id'],
+        revision_loops:['loop_id','root_task_id'],revision_rounds:['loop_id,round_no','child_task_id'],runtime_deployments:[],
       };
       const indices = this.db.prepare('SELECT name FROM pragma_index_list(?) WHERE "unique"=1').all(name) as Row[];
       const constraints = indices.map(index => (this.db.prepare('SELECT name FROM pragma_index_info(?) ORDER BY seqno')
@@ -159,7 +162,7 @@ export class TaskLedger {
         continuation_intents: ['parent_task_id:tasks:task_id','parent_attempt_id:attempts:attempt_id','child_task_id:tasks:task_id'],
         resource_scopes: ['scope_id:tasks:task_id'], task_resources: ['task_id:tasks:task_id','scope_id:resource_scopes:scope_id'],
         cancel_intents: ['task_id:tasks:task_id','scope_id:resource_scopes:scope_id'],
-        revision_loops:['root_task_id:tasks:task_id'],revision_rounds:['loop_id:revision_loops:loop_id','child_task_id:tasks:task_id'],
+        revision_loops:['root_task_id:tasks:task_id'],revision_rounds:['loop_id:revision_loops:loop_id','child_task_id:tasks:task_id'],runtime_deployments:[],
       };
       const keys = (this.db.prepare('SELECT "from","table","to" FROM pragma_foreign_key_list(?)').all(name) as Row[])
         .map(key => key.from + ':' + key.table + ':' + key.to).sort();
@@ -197,8 +200,11 @@ export class TaskLedger {
     }
     if (Number(this.db.prepare('PRAGMA user_version').get()!.user_version) >= 4) { new ResourceController(this).verifyIntegrity(); }
     if (Number(this.db.prepare('PRAGMA user_version').get()!.user_version) >= 5) { verifyRevisionIntegrity(this.db); }
+    if (Number(this.db.prepare('PRAGMA user_version').get()!.user_version) >= 6) { deploymentHistory(this.db); }
   }
   close() { this.db.close(); }
+  /** 预检只核验已选身份；最终注册与领取在同一写事务内复查。 */
+  assertRuntime(binding: Pick<Binding,'sourceRevision'|'sourceTreeSha256'|'runtimeIdentity'>){assertRuntimeSelection(this.db,binding);}
   /** 同账本资源控制器使用同一原子事务；禁止在回调内启动原生副作用。 */
   transaction<T>(operation: () => T): T {
     check(!this.readOnly, 'ledger_read_only'); this.db.exec('BEGIN IMMEDIATE');
@@ -225,6 +231,7 @@ export class TaskLedger {
     const { taskId, ...identity } = binding;
     const fingerprint = sha256(stableJson(identity));
     return this.transaction(() => {
+      this.assertRuntime(binding);
       const old = this.db.prepare('SELECT task_id,identity_hash FROM tasks WHERE namespace=? AND idem=?').get(binding.namespace, binding.idempotencyKey) as Row | undefined;
       if (old) { check(old.identity_hash === fingerprint, 'idempotency_conflict'); return this.getTask(old.task_id); }
       check(!this.db.prepare('SELECT task_id FROM tasks WHERE task_id=?').get(taskId), 'task_identity_conflict');
@@ -237,6 +244,7 @@ export class TaskLedger {
     check(identifier(owner) && Number.isSafeInteger(ttlMs) && ttlMs > 0 && ttlMs <= 24 * 3600_000 && Number.isSafeInteger(now), 'invalid_lease');
     const result = this.transaction(() => {
       const row = this.row(taskId), binding = JSON.parse(row.binding) as Binding;
+      this.assertRuntime(binding);
       if (row.state === 'running' && row.lease_until <= now) {
         // 超时仅撤销旧执行者，保留工程占用；不会自动启动第二次编辑。
         this.db.prepare("UPDATE tasks SET state='reconciling',epoch=epoch+1 WHERE task_id=?").run(taskId);
@@ -269,7 +277,7 @@ export class TaskLedger {
   beginAttempt(lease: Lease, operationKey: string, now = Date.now()) {
     check(identifier(operationKey), 'invalid_operation_key');
     return this.transaction(() => {
-      this.verifyLease(lease, now);
+      this.verifyLease(lease, now);this.assertRuntime(this.getTask(lease.taskId).binding);
       const old = this.db.prepare('SELECT * FROM attempts WHERE task_id=? AND operation_key=?').get(lease.taskId, operationKey) as Row | undefined;
       if (old) { check(old.attempt_id === lease.attemptId, 'outcome_unknown'); return { attemptId: old.attempt_id, fresh: false, state: old.state }; }
       this.db.prepare('INSERT INTO attempts(attempt_id,task_id,epoch,operation_key,state) VALUES(?,?,?,?,?)')

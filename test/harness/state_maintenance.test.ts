@@ -15,7 +15,8 @@ function fixture(t: Parameters<typeof workspace>[0], version = 2) {
   const task = binding(root); db.register(task); const lease = db.claim(task.taskId, 'old-owner', 1000);
   db.beginAttempt(lease, 'old-operation'); db.finishAttempt(lease, { outcome: 'unknown', stopped: false, receiptSha256: null });
   db.recordReceipt(task.taskId, lease.attemptId, 'failed-stage', hash(), {}, 'unknown');
-  db.db.exec('UPDATE tasks SET lease_until=0; DROP TABLE IF EXISTS revision_rounds; DROP TABLE IF EXISTS revision_loops;');
+  db.db.exec('UPDATE tasks SET lease_until=0; DROP TABLE runtime_deployments;');
+  if(version<5){db.db.exec('DROP TABLE revision_rounds; DROP TABLE revision_loops;');}
   if (version < 4) { db.db.exec('DROP TABLE cancel_intents; DROP TABLE task_resources; DROP TABLE resource_scopes;'); }
   if (version < 3) { db.db.exec('DROP TABLE continuation_intents;'); }
   if (version === 1) { db.db.exec('DROP TABLE recovery_intents;'); }
@@ -26,12 +27,12 @@ function fixture(t: Parameters<typeof workspace>[0], version = 2) {
 function files(root: string) {
   return Object.fromEntries(readdirSync(root).filter(name => !name.startsWith('backup')).map(name => [name, sha256(readFileSync(join(root, name)))]));
 }
-for (const version of [1, 2, 3, 4]) {
+for (const version of [1, 2, 3, 4, 5]) {
   test('schema' + version + ' backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy', t => {
     const { root, file, task, lease, service, grant } = fixture(t, version);
     const baseline = service.inspect(), before = files(root), backup = join(root, 'backup');
     assert.throws(() => new TaskLedger(file), /ledger_upgrade_required/); assert.deepEqual(files(root), before);
-    const upgraded = service.upgrade(backup, grant); assert.equal(upgraded.toVersion, 5);
+    const upgraded = service.upgrade(backup, grant); assert.equal(upgraded.toVersion, 6);
     const manifestBytes = readFileSync(join(backup, 'manifest.json')), manifest = JSON.parse(manifestBytes.toString());
     assert.equal(sha256(manifestBytes), upgraded.backupManifestSha256);
     for (const [name, digest] of Object.entries(manifest.files)) { assert.equal(sha256(readFileSync(join(backup, name))), digest); }
@@ -133,7 +134,7 @@ test('matching column names without FilmCraft structural constraints cannot clai
   assert.throws(() => new TaskLedger(file, { readOnly: true }), /ledger_schema_unknown/);
 });
 
-test('the actual previous installed dev45 core refuses schema5 without editing current state',
+test('the actual previous installed dev45 core refuses schema6 without editing current state',
   { skip: !process.env.FILMCRAFT_PREVIOUS_CORE }, t => {
     const root = workspace(t), file = join(root, 'ledger.sqlite'), db = new TaskLedger(file);
     db.register(binding(root)); db.close(); const before = files(root);
@@ -142,5 +143,5 @@ test('the actual previous installed dev45 core refuses schema5 without editing c
     const result = spawnSync(process.execPath, ['--input-type=module', '-e', code, file], { encoding: 'utf8' });
     assert.equal(result.status, 0, result.stderr); assert.equal(result.stdout.trim(), 'ledger_schema_unsupported');
     assert.deepEqual(files(root), before);
-    captureEvidence('actual-previous-version-downgrade-refusal', 'actual fixed dev45 installed core versus current schema5 SQLite fixture', { before, after: files(root), error: result.stdout.trim(), previousVersion: '0.1.0-dev.45' });
+    captureEvidence('actual-previous-version-downgrade-refusal', 'actual fixed dev45 installed core versus current schema6 SQLite fixture', { before, after: files(root), error: result.stdout.trim(), previousVersion: '0.1.0-dev.45' });
   });

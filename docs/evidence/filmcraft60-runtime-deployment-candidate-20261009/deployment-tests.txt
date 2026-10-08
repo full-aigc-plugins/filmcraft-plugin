@@ -1,0 +1,17 @@
+✔ runtime switch persists generation, retains old identity and fences stale admission (4.86775ms)
+✔ planned, live and unknown work prevent upgrade without switching identity (2.342333ms)
+✔ compatible rollback preserves history and incompatible schema cannot become active (3.3ms)
+✔ runtime selection cannot be authorized by its own body (2.147333ms)
+✔ selection survives a new connection and history corruption fails closed (3.678042ms)
+✔ live execution retains its occupancy and refuses runtime replacement (3.162ms)
+✔ unknown execution retains its occupancy and refuses runtime replacement (3.056084ms)
+✔ revoked authorization before publication preserves generation and old identity (2.495875ms)
+✔ activation write transaction excludes another admission connection before selection publication (3.544333ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 109.90725

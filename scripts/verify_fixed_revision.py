@@ -15,7 +15,7 @@ REQUIRED = {'actual-native-scoped-revision', 'actual-native-revision-budget-best
 
 def validate_revision(report):
     if (report.get('result') != 'PASS' or not report.get('allInstalledFilesUnchanged')
-            or report.get('resources', {}).get('schemaVersion') != 5):
+            or report.get('resources', {}).get('schemaVersion') not in (5, 6)):
         raise ValueError('fixed_revision_install_unqualified')
     rows = {row['scenario']: row for row in report.get('matrix', [])}
     if not REQUIRED.issubset(rows): raise ValueError('revision_matrix_incomplete')

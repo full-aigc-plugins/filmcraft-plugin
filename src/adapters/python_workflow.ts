@@ -51,6 +51,10 @@ export class PythonWorkflowRunner {
     check(!lstatSync(root).isSymbolicLink() && existsSync(join(root, 'scripts/capabilities.py')), 'capability_adapter_missing');
     const planIdentity = normalizePlan(planFile, this.options.python);
     const sourceTreeSha256 = fingerprintSkill(root);
+    const lock=parseJson(readFileSync(join(root,'scripts/runtime.lock.json'),'utf8'));
+    const artifact=lock.artifacts?.[process.platform==='darwin'?'darwin-'+(process.arch==='arm64'?'arm64':process.arch):process.platform+'-'+process.arch];
+    if(this.ledger){this.ledger.assertRuntime({sourceRevision:this.options.sourceRevision,sourceTreeSha256,
+      runtimeIdentity:{pluginId:'filmcraft',pluginVersion:this.options.pluginVersion,cliVersion:lock.resolvedVersion,sha256:artifact?.binarySha256,mode:'headless',capabilitySnapshotSha256:'0'.repeat(64)}});}
     const script = fileURLToPath(new URL('../../scripts/native_preflight.py', import.meta.url));
     outputRoot = canonicalTarget(outputRoot);
     if (source) { source = realpathSync(source); }

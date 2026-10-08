@@ -226,5 +226,7 @@
   "resourceContractFixedEvidence": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json",
   "resourceContractStatus": "tasks3.7-3.9 qualified: all4 FC-TX-003 scenarios,16 required resource cases plus private CLI case, same fixed58/source46/craft.5 actual133/133 native/state run reused;13 skills/executable/test identities rechecked;39 V1 tasks open",
   "qualityRevisionContractEvidence": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
-  "qualityRevisionContractStatus": "FC-QA-001/002 eight scenarios qualified in fixed59/source46/craft.5,135/135 installed tests and49 matrix rows. Native revision and budget stop verified; creative manual_review/user NOT_RUN/other platforms and full V1 remain open."
+  "qualityRevisionContractStatus": "FC-QA-001/002 eight scenarios qualified in fixed59/source46/craft.5,135/135 installed tests and49 matrix rows. Native revision and budget stop verified; creative manual_review/user NOT_RUN/other platforms and full V1 remain open.",
+  "runtimeDeploymentCandidateEvidence": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/acceptance.json",
+  "runtimeDeploymentCandidateStatus": "dev.60 source candidate: schema6 durable runtime selection and admission fences,9 deployment tests,145/145 source-native regression,83 Python and142 Node source PASS with3 native environment NOT_RUN supplemented separately. Actual binary replacement/probe binding/fixed60 install and2.4-2.6 remain open;29 tasks remain."
 }

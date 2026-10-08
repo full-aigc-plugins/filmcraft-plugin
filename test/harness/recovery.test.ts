@@ -172,7 +172,7 @@ test('legacy ledger snapshots remain read-only and an explicit writer upgrades w
   const root = workspace(t), file = join(root, 'ledger.sqlite'); let db = new TaskLedger(file);
   db.register(binding(root)); const lease = db.claim('task-1', 'worker', 60_000); db.beginAttempt(lease, 'workflow');
   db.finishAttempt(lease, { outcome: 'unknown', stopped: false, receiptSha256: null });
-  db.db.exec('DROP TABLE revision_rounds; DROP TABLE revision_loops; DROP TABLE cancel_intents; DROP TABLE task_resources; DROP TABLE resource_scopes; DROP TABLE continuation_intents; DROP TABLE recovery_intents; PRAGMA user_version=1'); db.close();
+  db.db.exec('DROP TABLE runtime_deployments; DROP TABLE revision_rounds; DROP TABLE revision_loops; DROP TABLE cancel_intents; DROP TABLE task_resources; DROP TABLE resource_scopes; DROP TABLE continuation_intents; DROP TABLE recovery_intents; PRAGMA user_version=1'); db.close();
   const before = files(root), service = new RecoveryService(file, join(root, 'blobs'));
   const inspected = service.inspect('task-1'); assert.equal(inspected.task?.attemptId, lease.attemptId);
   assert.deepEqual(files(root), before);
@@ -183,7 +183,7 @@ test('legacy ledger snapshots remain read-only and an explicit writer upgrades w
   const raw = new DatabaseSync(file); raw.prepare('UPDATE tasks SET lease_until=0').run(); raw.close();
   maintenance.upgrade(join(root, 'backup'), { authorizationRef: 'maintenance-grant', authorizationScopeSha256: hash() });
   db = new TaskLedger(file); t.after(() => db.close());
-  assert.equal((db.db.prepare('PRAGMA user_version').get() as any).user_version, 5);
+  assert.equal((db.db.prepare('PRAGMA user_version').get() as any).user_version, 6);
   assert.equal(db.getTask('task-1').attemptId, lease.attemptId); assert.equal(db.getTask('task-1').state, 'reconciling');
   assert.equal(db.listRecoveryIntents('task-1').length, 0);
 });
@@ -264,7 +264,7 @@ test('expired or revoked host authorization cannot change an uncertain attempt',
 
 test('legacy writer must require an explicit verified backup before migration', t => {
   const root = workspace(t), file = join(root, 'ledger.sqlite'), db = new TaskLedger(file);
-  db.register(binding(root)); db.db.exec('DROP TABLE revision_rounds; DROP TABLE revision_loops; DROP TABLE cancel_intents; DROP TABLE task_resources; DROP TABLE resource_scopes; DROP TABLE continuation_intents; DROP TABLE recovery_intents; PRAGMA user_version=1'); db.close();
+  db.register(binding(root)); db.db.exec('DROP TABLE runtime_deployments; DROP TABLE revision_rounds; DROP TABLE revision_loops; DROP TABLE cancel_intents; DROP TABLE task_resources; DROP TABLE resource_scopes; DROP TABLE continuation_intents; DROP TABLE recovery_intents; PRAGMA user_version=1'); db.close();
   const before = files(root);
   assert.throws(() => new TaskLedger(file), /ledger_upgrade_required/);
   assert.deepEqual(files(root), before);

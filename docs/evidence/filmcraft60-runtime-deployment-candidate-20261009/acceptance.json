@@ -1,0 +1,157 @@
+{
+  "schema": "filmcraft-runtime-deployment-source-candidate/v1",
+  "result": "PASS",
+  "pluginVersion": "0.1.0-dev.60",
+  "sourceRef": "v0.1.0-dev.46",
+  "runtimeVersion": "0.2.0-craft.5",
+  "ledgerSchema": 6,
+  "filesSha256": {
+    "package.json": "9b47b0419927c310ea592d72851b0de71304d174ba1b5a6db2083a3502ff5ced",
+    "plugin.json": "497e2a5403d142a7c4eaef78b9f80aa03705d094c5c70fac4bc0d8000db3bc43",
+    "scripts/check_release.py": "bb8abba5a0dbc895bf93b30c6796add551983560430989d1cb57c58cee150ea6",
+    "scripts/verify_fixed_resources.py": "205352ad76c275a134d4c17845ee19e59e452ad627ef42270891585ca7ac98b1",
+    "scripts/verify_fixed_revision.py": "908009395a515166b1fc0f8f69f8d54157a7af3363b1432bd16439a9f353fe1f",
+    "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+    "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+    "src/adapters/python_workflow.ts": "4e7977670860823f2d0b839958a8817fa55d764d37d2bda2975cde86260847b5",
+    "src/adapters/runtime_deployment.ts": "cc6ebdc89160a2d20e92194381e27a0cf053d274d37c47c27873e61208d73900",
+    "src/artifacts/exchange_loss.ts": "213bf786ec7be2c2c462900ebdb5e5a29ffcbc6e278230cc6137453e43581cff",
+    "src/artifacts/receipt_index.ts": "d93cda02a97852345005e0a7ed57663a47ed319dda8b7749a508287ff9c0c090",
+    "src/cli/recovery.ts": "c4838abe071cebe0bb97befb9b3316d0338d3548845cef9b8842bc742dc8c35f",
+    "src/cli/workflow.ts": "dcf6803877cd94b1c623e7766cf50b92e5a7e1845e9ef15b59b646b7dd310968",
+    "src/harness/authorization.ts": "dcf9f031e6a00c1249b39beff99d627cbf82a50730595c9d63d873c287ab3dfb",
+    "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+    "src/harness/continuation.ts": "5660d11ffb5045c095b00faf7314cf1e28ae064edb65956d96da6d59a2fc83ed",
+    "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+    "src/harness/process_identity.ts": "a0e66f96d8a62953ae73d98b2de9ca683961d2b8a24e2afb70ecb6d05a0c0584",
+    "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+    "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+    "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+    "src/harness/state_maintenance.ts": "5eac10270615aca8b80ffe1d4c7e1fb2db1f4b42a235c0bbc1855ad859f31b6e",
+    "src/harness/task_ledger.ts": "dd7dfa57fbd1876cfcd27ee88d2cf681e65e34648da9acd6580588e4b49e5691",
+    "src/harness/workflow_admission.ts": "f441f5f10027926e6f3328e35c5436bde258714b6e1c1d30b9a45e276e7637b8",
+    "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+    "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+    "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+    "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+    "src/quality/revision_service.ts": "9972065d55744551627f94c8b8ee98139ac7f1c4e32199d479f7995833e8df66",
+    "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+    "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62",
+    "test/harness/authorization.test.ts": "89681a5e5f92e2f1676bf1ef9e238646d44084d85b91034a7214b3ba2d06eeef",
+    "test/harness/cancellation.test.ts": "ffcf0cacc3ebb94ceb5d7263e7a70ed01138b307872641789189459f952bf189",
+    "test/harness/fixtures.ts": "86f884eea5610df0886cb8340c829afc74b1997eb84208ac549b1d18aa9c0b41",
+    "test/harness/native_revision_fixture.ts": "f10a9cf1a6e3e5a91e181971aebf61fbd073f795c04cbc572fe544f43da56e1e",
+    "test/harness/native_workflow.test.ts": "bffe18a57b3247d89929c571c695716cec7af3db901e3e598117040ef05c47f4",
+    "test/harness/protocol_mapping.test.ts": "51a343405b131a1a195e6efe855635ac3d3a7609dd8ad6d8e96531e331f99ee8",
+    "test/harness/quality_fixtures.ts": "9612e1cc761e44646562b38981a04b7ee063441b6c015664079651dcae7d0021",
+    "test/harness/quality_media_native.test.ts": "b3ae709b515eb324858b4ca7e4d23a42a2b0bed90aa75b6a01105ce6aba3838c",
+    "test/harness/quality_review.test.ts": "d0a2eca1204f6cd6de0811e2cbbf629526bfa4d19debf046c697337c382d7c55",
+    "test/harness/quality_service.test.ts": "ce024d99e76e366f02b1a6030084766350aeb0082224df554d75c886da991746",
+    "test/harness/receipt_index.test.ts": "261c9dd7cc08fb166259529ae4988b59022f6a5b32e0eb4aa96a551c311e7619",
+    "test/harness/recovery.test.ts": "1d0f43e64a8d5346bf481f9efdaef26c8c882fa592a5f275aa3f70a677b2b716",
+    "test/harness/resources.test.ts": "918844302a506dd20780de70fc9a183fe2292f42c02659cbed373ab46c3da78f",
+    "test/harness/revision_loop.test.ts": "d1d311ad673f59b90ee4269ce68e9a443d814d5b990d15514a53f45e72791781",
+    "test/harness/revision_scope.test.ts": "e90b095bb4df1d01732006ceef79a2ab44870021508985a06427f6955317a8e3",
+    "test/harness/runtime_deployment.test.ts": "474dd0afb31e32d92701e12450dc5858137f29abcb16ba8d61304d56a86493e9",
+    "test/harness/state_maintenance.test.ts": "c5f17351dcaafe0baab228dd158154088863f83a9d6225de20c674c75f609f65",
+    "test/harness/task_ledger.test.ts": "fc4af8a587d992d4d0e93a93fc42a87998df487a1e84b0757834dbc18a476341",
+    "test/harness/workflow_admission.test.ts": "30873a6efbd219419773b70d2c63ea547accc2f9811ef8522f975a67959fb255"
+  },
+  "sourceCounts": {
+    "tests": 145,
+    "pass": 142,
+    "fail": 0,
+    "skipped": 3
+  },
+  "pythonTests": 83,
+  "nativeCounts": {
+    "tests": 145,
+    "pass": 145,
+    "fail": 0,
+    "skipped": 0
+  },
+  "nativeMatrixRows": 50,
+  "deploymentTests": 9,
+  "logs": {
+    "target-red.txt": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/target-red.txt",
+      "originalPrivateSha256": "3570510d10f870cc3478d2200d9a8a632903d5b0a5eaecf8922ddaf1ffa8349c",
+      "publicProjectionSha256": "9156c5b886e8c90772273feb4b8551d2dbc02bb22ff73a98843e98cd993e87a0"
+    },
+    "schema-structure-candidate-failure.txt": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/schema-structure-candidate-failure.txt",
+      "originalPrivateSha256": "2c058e900dd199242617f0b4ed6c84879dc07283b071cd091b92f305c78839ad",
+      "publicProjectionSha256": "4a570396622a574386cedc01053f1c7415cd301a23c234ddb7e95f317aa35b3b"
+    },
+    "deployment-tests.txt": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/deployment-tests.txt",
+      "originalPrivateSha256": "821e1c6006b0aa2fa3292f65ca1870dfd80aa5d9f8a76924ee3221331e0b83d3",
+      "publicProjectionSha256": "821e1c6006b0aa2fa3292f65ca1870dfd80aa5d9f8a76924ee3221331e0b83d3"
+    },
+    "native.txt": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/native.txt",
+      "originalPrivateSha256": "eb8875a98439bf79c11730b9d3b248bf43faa27915157a11d8375b3b156aade7",
+      "publicProjectionSha256": "eb8875a98439bf79c11730b9d3b248bf43faa27915157a11d8375b3b156aade7"
+    },
+    "native.json": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/native.json",
+      "originalPrivateSha256": "389d00a8dace6ca9740804e6ce6a714ea619776519df47e7f246f895e910f3f5",
+      "publicProjectionSha256": "389d00a8dace6ca9740804e6ce6a714ea619776519df47e7f246f895e910f3f5"
+    },
+    "matrix.jsonl": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/matrix.jsonl",
+      "originalPrivateSha256": "94dcaf255d4ee55636657e0f6c811fc76156d7304cdac7ebd5cd11b42556cf66",
+      "publicProjectionSha256": "4edee5e273532130c3e6839c13e896ceb335ad5c2ced516cc90a90fbcdce7481"
+    },
+    "metadata-candidate-failure.txt": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/metadata-candidate-failure.txt",
+      "originalPrivateSha256": "e61767eff34c3fa10476bfb8a0fbdf5a8f1d1cd97c0509bbd5a356aa2a084801",
+      "publicProjectionSha256": "e61767eff34c3fa10476bfb8a0fbdf5a8f1d1cd97c0509bbd5a356aa2a084801"
+    },
+    "source-report.json": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/source-report.json",
+      "originalPrivateSha256": "81a6f9f2c32d89cf2e50c3c679653155ce4d90aa21fed98ee5cc00fcb3fce3ce",
+      "publicProjectionSha256": "728669ab898e303b4a698c41acd21576e39eff7af9c9b918b7c10ac1045bb103"
+    },
+    "source-metadata.log": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/source-metadata.txt",
+      "originalPrivateSha256": "26b95555b6518fc8b8bff0c6150f72dccb16105b21b85a306f148632cd8035c8",
+      "publicProjectionSha256": "26b95555b6518fc8b8bff0c6150f72dccb16105b21b85a306f148632cd8035c8"
+    },
+    "source-fixed-source.log": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/source-fixed-source.txt",
+      "originalPrivateSha256": "a8587f6c6b8b10e234943116409788373b5152415e1499bf0089adb6cd20d6f7",
+      "publicProjectionSha256": "a8587f6c6b8b10e234943116409788373b5152415e1499bf0089adb6cd20d6f7"
+    },
+    "source-python.log": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/source-python.txt",
+      "originalPrivateSha256": "e776cf9598adfb6ab48ed0d3ab53b74c2e5a44dbfe82ffcf275518fd26edcc86",
+      "publicProjectionSha256": "e776cf9598adfb6ab48ed0d3ab53b74c2e5a44dbfe82ffcf275518fd26edcc86"
+    },
+    "source-node.log": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/source-node.txt",
+      "originalPrivateSha256": "bfbee658efc680d05c19cb600b279c581d7cb9fc4e1078106e09662d756ff55e",
+      "publicProjectionSha256": "bfbee658efc680d05c19cb600b279c581d7cb9fc4e1078106e09662d756ff55e"
+    },
+    "source-protocol.log": {
+      "path": "docs/evidence/filmcraft60-runtime-deployment-candidate-20261009/source-protocol.txt",
+      "originalPrivateSha256": "ca704096f690bee24912e2d03265b4aa2469c671d26d9339260b72adc044450b",
+      "publicProjectionSha256": "ca704096f690bee24912e2d03265b4aa2469c671d26d9339260b72adc044450b"
+    }
+  },
+  "scope": "Source candidate only: actual SQLite deployment history/admission/transaction/unknown-work gates; actual source-native creation, quality, scoped revision and backed schema1-5 upgrade regression. Does not prove an actual native version replacement or fixed60 installed workflow.",
+  "pending": [
+    "production upgrade CLI and trusted measured compatibility/probe binding",
+    "native version transition and fault recovery",
+    "fixed public installation and all FC-RT-002 scenario qualification"
+  ],
+  "tasksStillOpen": [
+    "2.4",
+    "2.5",
+    "2.6"
+  ],
+  "fullV1": "INCOMPLETE",
+  "openTasks": 29,
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN"
+}

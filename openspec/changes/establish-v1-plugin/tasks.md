@@ -461,3 +461,5 @@ dev.42 发行进展：已实现只读诊断和原尝试状态修复；本地原�
 2026-10-09 固定dev.59／源46／公开craft.5完成5.1—5.3及5.6：实际隔离Codex安装13技能／62执行文件身份保全；10类血缘及15类产物用例映射全部8场景，2任务／26产物通过固定ArtCraft schema；135项安装回归全部通过、零跳过，47矩阵记录另行保存。当前技能源与报告身份校验、原字节CAS、真实原生重开／迁移重关联、缺失依赖拒绝、独立质量身份及12类损失拒绝得到证据。原始红例与失败候选不改写；创作manual_review、用户接受NOT_RUN、其他平台未验收。索引 `docs/evidence/fc-ar-001/`、`docs/evidence/fc-ar-002/`；固定证据 `docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json`。完整V1仍有35项开放；不归档整项change。
 
 6.1—6.6 当前固定 dev.59/source46/craft.5 合同验收：`docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json`；FC-QA-001/002 全八场景索引位于 `docs/evidence/fc-qa-001/` 与 `docs/evidence/fc-qa-002/`。135/135 实际安装回归、49 条场景记录；原生速度/时长局部修订、独立重新评审、非目标保全及预算停止通过。历史行为红灯保留并绑定摘要。创作 manual_review、用户接受 NOT_RUN、其他平台和任意创作返工未验收，完整 V1 仍有29项开放。
+
+2.4—2.6 在研检查点（dev.60 候选）：增加 schema6 运行时选择历史、排空及注册／领取／尝试门禁，schema1—5 显式备份迁移；目标行为红灯和源码回归记录见后续 runtime-deployment 候选证据。真实升级入口的探测／兼容身份绑定、公开固定安装和完整场景验收尚未完成，不勾选这三项任务。

@@ -1,0 +1,783 @@
+✔ private host grant binds the exact operation and is re-read for revocation and expiry (2.915208ms)
+✔ host grant files reject shared permissions, symlinks and ambiguous JSON (0.886167ms)
+✔ cancel request persists before signalling, invalidates the writer, and confirms only after native group stops (114.476ms)
+✖ unsupported cancellation retains running process, occupancy, reservation and partial diagnostics after reopen (40.5135ms)
+✔ PID reuse or changed birth identity cannot signal a process even when its numeric PID matches (72.934917ms)
+✖ lost cancellation reply is recovered from durable request without new attempts or double settlement (105.233875ms)
+✔ restart after confirmed cancellation but before settlement finishes accounting exactly once (105.744792ms)
+✔ parent cancellation fences its running child and prevents any new dependent dispatch (41.095583ms)
+✔ revocation before the supported stop action leaves a requested cancellation and running native group (72.589542ms)
+✖ an exited actual host leaves its identity-bound detached child running, budget held and cancellation unconfirmed (109.173916ms)
+✖ actual cancellation CLI uses a private host grant and requires an explicit signal action (128.03375ms)
+﹣ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (0.314583ms) # SKIP
+✔ public task mapping uses registered identity and keeps internal fields in the domain ledger (5.532375ms)
+﹣ actual temporal/audio fixtures detect synchronization, per-channel clipping and decode failure (0.305709ms) # SKIP
+✔ request binds candidate, project, input, goal, rubric, execution and reviewer identities without generator commentary (1.015083ms)
+✔ a high creative score cannot cover a real decode failure or manufacture user acceptance (0.5255ms)
+✔ a known technical failure blocks even when the rubric did not request that dimension (0.209458ms)
+✔ a static frame cannot pass synchronization, clipping, subtitle timing, continuity or rhythm (0.234334ms)
+✔ missing temporal evidence is explicit and cannot become PASS from an empty required set (0.19325ms)
+✔ even complete independent quality PASS is review-ready rather than user-accepted or completed (0.2555ms)
+✔ changing candidate changes the review identity and invalidates the old request (0.243708ms)
+✔ changing project changes the review identity and invalidates the old request (0.149291ms)
+✔ changing inputs changes the review identity and invalidates the old request (0.162791ms)
+✔ changing execution changes the review identity and invalidates the old request (0.608208ms)
+✔ changing goal changes the review identity and invalidates the old request (0.171084ms)
+✔ changing rubric changes the review identity and invalidates the old request (0.119458ms)
+✔ changing reviewer changes the review identity and invalidates the old request (0.114791ms)
+✔ import requires a trusted independent context verifier; body declarations cannot authorize it (820.033ms)
+✔ stored PASS cannot replay after candidate changes (259.881709ms)
+✔ stored PASS cannot replay after project changes (262.292834ms)
+✔ stored PASS cannot replay after input changes (264.750792ms)
+✔ stored PASS cannot replay after execution changes (287.364ms)
+✔ stored PASS cannot replay after epoch changes (286.135625ms)
+✔ stored PASS cannot replay after goal changes (239.304875ms)
+✔ stored PASS cannot replay after rubric changes (233.747708ms)
+✔ stored PASS cannot replay after reviewer changes (234.004041ms)
+✔ external process receives only frozen work and explicit environment, excludes generator context (420.086667ms)
+✔ private review CAS refuses replaced originals (135.616ms)
+✔ candidate mutation during trusted context verification cannot commit a successful receipt (228.728625ms)
+✔ legacy command receipt is linked without rewriting native integers or declaring completion (35.795292ms)
+✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (31.423916ms)
+✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (30.182542ms)
+✔ receipt paths reject traversal and symlinks before reading their targets (28.856834ms)
+✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (0.204375ms)
+✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (101.592792ms)
+✔ delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS (190.901959ms)
+✔ missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered (113.183959ms)
+✔ legacy output execution maps declared new inputs separately from inherited project inputs (133.45275ms)
+✔ failed-stage receipts retain original bytes and missing historical identities without following stage paths (29.172167ms)
+✔ delivery without the same-attempt execution record remains unknown and cannot expose output artifacts (80.961042ms)
+✔ execution owner PID must match the attempt and legacy missing process identity stays unknown (106.710625ms)
+✔ old artifacts cannot be relabeled as a later task attempt even when plan and runtime match (233.853ms)
+✔ conflicting same-kind observations retain original CAS bytes and do not replace the original association (107.406ms)
+✔ current missing process evidence cannot inherit an older linked conclusion from the receipt index (184.141458ms)
+✔ delivery refuses self-consistent but false exchange-loss claims and absent loss identity (446.741459ms)
+✔ packaged inputs at the delivery root are dependencies rather than missing derivative reports (58.488ms)
+✖ read-only diagnosis sees committed WAL state without changing database, sidecars, projects or missing blob directories (8.701542ms)
+✔ damaged database and missing receipts remain structured unknown and never create or overwrite state (2.425667ms)
+✖ an actually running detached process remains occupied after its host state becomes unknown (30.884125ms)
+✖ lost replies are diagnosed without writes and repaired only with fresh evidence, matching authorization and fenced intent (57.662917ms)
+✖ changed candidate, missing export record or missing process identity cannot unlock or repair an unknown task (58.386084ms)
+✖ recovery intent survives reopening; an active or expired old recovery owner cannot commit (58.223417ms)
+✖ a partial receipt handoff remains diagnostically complete only when both current native records agree (108.119709ms)
+✖ legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities (69.73425ms)
+✔ CLI inspect and reconcile are both read-only; unknown diagnosis is explicit (188.100541ms)
+✖ freshly requested repair of an already reconciled attempt is read-only and does not create another recovery intent (56.556959ms)
+✖ two actual recovery processes cannot apply the same uncertain attempt twice (57.379041ms)
+✖ logical task identity corruption is diagnosed as unknown without rewriting corrupt bytes (5.191208ms)
+✖ matching authorization references alone cannot authorize state repair (55.743042ms)
+✖ expired or revoked host authorization cannot change an uncertain attempt (56.786625ms)
+✔ legacy writer must require an explicit verified backup before migration (4.520208ms)
+✖ continuation cannot substitute for independent state repair of an executed but uncertain attempt (54.519958ms)
+✖ authorization revoked after recovery intent is durable abandons repair without releasing unknown occupancy (57.637667ms)
+✖ an exited actual host does not imply its detached controlled child stopped (32.079583ms)
+✖ CLI repair checks an actual private host grant rather than trusting reference flags (56.079458ms)
+✖ reservations survive reopening without a second charge; unknown retains concurrency and disk (5.614709ms)
+✔ deterministic rejection for timeMs preserves reason and starts no attempt (3.140625ms)
+✔ deterministic rejection for diskBytes preserves reason and starts no attempt (2.511916ms)
+✔ deterministic rejection for outputBytes preserves reason and starts no attempt (2.593125ms)
+✔ deterministic rejection for slots preserves reason and starts no attempt (2.343ms)
+✔ deterministic rejection for revisions preserves reason and starts no attempt (2.324542ms)
+✔ physical disk shortage rejects before reservation even when numeric quota permits it (2.858125ms)
+✔ parent and child share reservation, deadline, concurrency and revision count (4.857667ms)
+✔ expired time reservation halts new dependencies without releasing unknown work (3.140333ms)
+✔ schema4 forensic integrity rejects altered consumed accounting before trusting recovered reservations (2.788375ms)
+✖ an actual killed reservation owner cannot reset durable charges or create a second reservation (76.13275ms)
+✔ persisted policy cannot reset rounds or expand field/goal scope; original authorization reference is reused (2650.305916ms)
+✔ a new candidate needs its own review; old task PASS cannot be relabeled (2996.850125ms)
+✔ non-target mutation rejects candidate and retains original verified best (2042.524416ms)
+✔ failure limit retains a verified best and unresolved technical findings (2909.178625ms)
+✔ stagnation_limit stops with explicit null when no candidate is verified (2941.584833ms)
+✔ round_limit stops with explicit null when no candidate is verified (2835.068709ms)
+✔ unknown pending round blocks dispatch and cannot reuse its slot after a restart (2416.050125ms)
+✔ budget stop and stale best remain explicit; no last candidate is promoted (2266.993542ms)
+✖ state integrity refuses a modified round rather than trusting stored self-evaluation (1909.22625ms)
+✔ goal or rubric change invalidates all previous best evidence and permanently fences dispatch (1978.550209ms)
+✔ local scope compiles pinned source, target and no-ripple commands; relocation retains identity (2.00575ms)
+✔ stale project and unknown target reject before a native plan can be used (0.42725ms)
+✔ revision rejects field drift rather than approving the candidate (0.365958ms)
+✔ revision rejects track drift rather than approving the candidate (0.296042ms)
+✔ revision rejects dependency drift rather than approving the candidate (0.210459ms)
+✔ revision rejects interval drift rather than approving the candidate (0.199417ms)
+✔ revision rejects wrong-result drift rather than approving the candidate (0.177833ms)
+✔ unsupported operation, ripple, owner, broad object field and dependency scope are refused (0.291833ms)
+✔ runtime switch persists generation, retains old identity and fences stale admission after reopen (5.251791ms)
+✔ planned, live and unknown work prevent upgrade without switching identity (2.80325ms)
+✔ compatible rollback preserves history and incompatible schema cannot become active (3.775459ms)
+✔ runtime selection cannot be authorized by its own body (2.1425ms)
+✖ schema1 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (52.061583ms)
+✖ schema2 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (33.97375ms)
+✖ schema3 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (35.343166ms)
+✖ schema4 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (34.755916ms)
+✖ schema5 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (33.678417ms)
+✖ committed uncheckpointed WAL is preserved in backup and read-only diagnosis cannot alter any original sidecar (36.038708ms)
+✔ a changed original during isolated inspection is unknown rather than a reusable old snapshot (8.542167ms)
+✖ rollback refuses to discard new task records and does not overwrite the immutable old backup (34.915375ms)
+✖ corrupt backups, unsupported ledgers and logical damage cannot be upgraded or claimed (32.835792ms)
+✔ maintenance cannot run without authorization or while a live write lease is held (9.107208ms)
+✔ an existing empty SQLite database is unknown, never an invitation to initialize FilmCraft state (0.982ms)
+✔ foreign and logically damaged ledgers are rejected before any backup or original SQLite write (8.029459ms)
+✔ revocation after backup intent preserves original schema and the complete backup audit (35.149208ms)
+✔ matching column names without FilmCraft structural constraints cannot claim a ledger (5.233375ms)
+﹣ the actual previous installed dev45 core refuses schema5 without editing current state (0.029625ms) # SKIP
+✔ same idempotency key returns the original task; changed identity conflicts without replacing it (5.043334ms)
+✔ task IDs cannot overwrite another caller and input versions remain bound (2.518084ms)
+✖ project occupancy survives close/reopen and unknown execution does not free the writer (5.227542ms)
+✔ expired leases are fenced without automatically taking over or accepting an old completion (2.744583ms)
+✖ intent is committed before submission and accepted execution is not completed delivery (3.484208ms)
+✔ missing stop confirmation remains unknown; receipts cannot be spliced across attempts (3.187291ms)
+✔ deadline and unsupported state database refuse execution without editing user files (3.012375ms)
+✖ two actual processes cannot acquire the same project writer (77.372584ms)
+✔ aliased output parents share idempotency and occupancy even with a different project key (4.19375ms)
+✔ an unrelated SQLite database with user_version 1 is rejected without changing its bytes (1.879875ms)
+✔ initial admission refuses missing host authority before preflight, installation or task registration (4.382208ms)
+✔ execution authorization binds every task identity dimension instead of trusting a reference (1.103375ms)
+✔ expired and mismatched execution decisions refuse admission without claiming an attempt (5.395917ms)
+✔ revocation in host dispatch hook is re-read before any preflight or native launch (2.8955ms)
+✔ a valid exact execute decision reaches the adapter without granting other subjects (2.803541ms)
+✔ workflow CLI computes a subject read-only and refuses missing authority before creating a ledger (156.466ms)
+✔ resource policy is part of the exact execution grant (0.6465ms)
+ℹ tests 140
+ℹ suites 0
+ℹ pass 103
+ℹ fail 34
+ℹ cancelled 0
+ℹ skipped 3
+ℹ todo 0
+ℹ duration_ms 34377.297792
+
+✖ failing tests:
+
+test at test/harness/cancellation.test.ts:55:1
+✖ unsupported cancellation retains running process, occupancy, reservation and partial diagnostics after reopen (40.5135ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/cancellation.test.ts:58:20)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/cancellation.test.ts:78:1
+✖ lost cancellation reply is recovered from durable request without new attempts or double settlement (105.233875ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/cancellation.test.ts:81:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/cancellation.test.ts:118:1
+✖ an exited actual host leaves its identity-bound detached child running, budget held and cancellation unconfirmed (109.173916ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/cancellation.test.ts:134:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/cancellation.test.ts:142:1
+✖ actual cancellation CLI uses a private host grant and requires an explicit signal action (128.03375ms)
+  AssertionError [ERR_ASSERTION]: {"schema":"filmcraft-recovery-error/v1","replayAllowed":false,"error":{"code":"ledger_schema_unknown"}}
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/cancellation.test.ts:151:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:35:1
+✖ read-only diagnosis sees committed WAL state without changing database, sidecars, projects or missing blob directories (8.701542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'reconciling'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:38:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'reconciling',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:60:1
+✖ an actually running detached process remains occupied after its host state becomes unknown (30.884125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'unknown' !== 'alive'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:68:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unknown',
+    expected: 'alive',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:102:1
+✖ lost replies are diagnosed without writes and repaired only with fresh evidence, matching authorization and fenced intent (57.662917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unknown'
+  - 'executed'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:106:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unknown',
+    expected: 'executed',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:124:1
+✖ changed candidate, missing export record or missing process identity cannot unlock or repair an unknown task (58.386084ms)
+  TypeError: Cannot read properties of null (reading 'epoch')
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:126:96)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+test at test/harness/recovery.test.ts:142:1
+✖ recovery intent survives reopening; an active or expired old recovery owner cannot commit (58.223417ms)
+  TypeError: Cannot read properties of null (reading 'epoch')
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:145:59)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+test at test/harness/recovery.test.ts:157:1
+✖ a partial receipt handoff remains diagnostically complete only when both current native records agree (108.119709ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unknown'
+  - 'executed'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:163:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unknown',
+    expected: 'executed',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:171:1
+✖ legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities (69.73425ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:185:8)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/recovery.test.ts:201:1
+✖ freshly requested repair of an already reconciled attempt is read-only and does not create another recovery intent (56.556959ms)
+  TypeError: Cannot read properties of null (reading 'epoch')
+      at request (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:203:116)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:205:31)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+test at test/harness/recovery.test.ts:212:1
+✖ two actual recovery processes cannot apply the same uncertain attempt twice (57.379041ms)
+  TypeError: Cannot read properties of null (reading 'epoch')
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:214:54)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+test at test/harness/recovery.test.ts:232:1
+✖ logical task identity corruption is diagnosed as unknown without rewriting corrupt bytes (5.191208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'ledger_schema_unknown'
+  - 'invalid_task_binding'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:236:55)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'ledger_schema_unknown',
+    expected: 'invalid_task_binding',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:240:1
+✖ matching authorization references alone cannot authorize state repair (55.743042ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /authorization_verifier_required/. Input:
+  
+  "TypeError: Cannot read properties of null (reading 'epoch')"
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:244:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: Cannot read properties of null (reading 'epoch')
+        at file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:244:89
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:244:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5),
+    expected: /authorization_verifier_required/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:250:1
+✖ expired or revoked host authorization cannot change an uncertain attempt (56.786625ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /authorization_expired/. Input:
+  
+  "TypeError: Cannot read properties of null (reading 'epoch')"
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:254:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: Cannot read properties of null (reading 'epoch')
+        at file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:254:86
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:254:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5),
+    expected: /authorization_expired/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:274:1
+✖ continuation cannot substitute for independent state repair of an executed but uncertain attempt (54.519958ms)
+  TypeError: Cannot read properties of null (reading 'epoch')
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:276:54)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+test at test/harness/recovery.test.ts:284:1
+✖ authorization revoked after recovery intent is durable abandons repair without releasing unknown occupancy (57.637667ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /authorization_required/. Input:
+  
+  "TypeError: Cannot read properties of null (reading 'epoch')"
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:289:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: Cannot read properties of null (reading 'epoch')
+        at file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:289:86
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:289:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5),
+    expected: /authorization_required/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:297:1
+✖ an exited actual host does not imply its detached controlled child stopped (32.079583ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unknown'
+  - 'running'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:305:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unknown',
+    expected: 'running',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/recovery.test.ts:311:1
+✖ CLI repair checks an actual private host grant rather than trusting reference flags (56.079458ms)
+  TypeError: Cannot read properties of null (reading 'epoch')
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/recovery.test.ts:319:105)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+test at test/harness/resources.test.ts:19:1
+✖ reservations survive reopening without a second charge; unknown retains concurrency and disk (5.614709ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/resources.test.ts:22:20)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/resources.test.ts:80:1
+✖ an actual killed reservation owner cannot reset durable charges or create a second reservation (76.13275ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/resources.test.ts:92:14)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/revision_loop.test.ts:107:1
+✖ state integrity refuses a modified round rather than trusting stored self-evaluation (1909.22625ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /ledger_revision_corrupt/. Input:
+  
+  'HarnessError: ledger_schema_unknown'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/revision_loop.test.ts:110:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: HarnessError: ledger_schema_unknown
+        at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+        at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+        at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:73:14)
+        at forensicSnapshot (file://[PLUGIN_ROOT]/src/harness/forensic_snapshot.ts:30:10)
+        at StateMaintenance.inspect (file://[PLUGIN_ROOT]/src/harness/state_maintenance.ts:41:12)
+        at file://[PLUGIN_ROOT]/test/harness/revision_loop.test.ts:110:72
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/revision_loop.test.ts:110:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14),
+    expected: /ledger_revision_corrupt/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test/harness/state_maintenance.test.ts:31:3
+✖ schema1 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (52.061583ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:40:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/state_maintenance.test.ts:31:3
+✖ schema2 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (33.97375ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:40:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/state_maintenance.test.ts:31:3
+✖ schema3 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (35.343166ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:40:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/state_maintenance.test.ts:31:3
+✖ schema4 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (34.755916ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:40:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/state_maintenance.test.ts:31:3
+✖ schema5 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (33.678417ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:40:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/state_maintenance.test.ts:52:1
+✖ committed uncheckpointed WAL is preserved in backup and read-only diagnosis cannot alter any original sidecar (36.038708ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:73:14)
+      at forensicSnapshot (file://[PLUGIN_ROOT]/src/harness/forensic_snapshot.ts:30:10)
+      at StateMaintenance.inspect (file://[PLUGIN_ROOT]/src/harness/state_maintenance.ts:41:12)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:60:28)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/state_maintenance.test.ts:74:1
+✖ rollback refuses to discard new task records and does not overwrite the immutable old backup (34.915375ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:77:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/state_maintenance.test.ts:83:1
+✖ corrupt backups, unsupported ledgers and logical damage cannot be upgraded or claimed (32.835792ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:87:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/task_ledger.test.ts:32:1
+✖ project occupancy survives close/reopen and unknown execution does not free the writer (5.227542ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/task_ledger.test.ts:41:20)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/task_ledger.test.ts:60:1
+✖ intent is committed before submission and accepted execution is not completed delivery (3.484208ms)
+  Error [HarnessError]: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:73:14)
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/task_ledger.test.ts:65:20)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ledger_schema_unknown'
+  }
+
+test at test/harness/task_ledger.test.ts:98:1
+✖ two actual processes cannot acquire the same project writer (77.372584ms)
+  Error: file://[PLUGIN_ROOT]/src/support/json.ts:11
+    if (!condition) { throw new HarnessError(code, detail); }
+                            ^
+  
+  HarnessError: ledger_schema_unknown
+      at check (file://[PLUGIN_ROOT]/src/support/json.ts:11:27)
+      at TaskLedger.verifySchema (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:157:7)
+      at file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:79:18
+      at TaskLedger.transaction (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:211:26)
+      at new TaskLedger (file://[PLUGIN_ROOT]/src/harness/task_ledger.ts:75:14)
+      at file://[PLUGIN_ROOT]/[eval1]:1:166
+      at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+      at async node:internal/modules/esm/loader:224:26
+      at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:221:20)
+      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+    code: 'ledger_schema_unknown'
+  }
+  
+  Node.js v24.18.0
+  
+      at ChildProcess.<anonymous> (file://[PLUGIN_ROOT]/test/harness/task_ledger.test.ts:106:102)
+      at ChildProcess.emit (node:events:509:28)
+      at ChildProcess._handle.onexit (node:internal/child_process:295:12)

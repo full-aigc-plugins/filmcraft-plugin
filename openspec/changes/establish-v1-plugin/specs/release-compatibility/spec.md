@@ -89,6 +89,13 @@
 - **AND** 固定安装器仅在对应精确维护授权通过后运行；原生能力探测继续使用目录沙箱，保护技能、固定运行时及显式模型缓存，维护授权不得扩大原生编辑写入范围
 - **AND** 根策略扩张、撤销或探测期间身份变化需重新授权；只读主题计算不得安装、创建许可或修改账本。
 
+#### Scenario: FC-RL-002-READONLY-MODELS 显式模型缓存不被覆盖
+
+- **WHEN** 宿主通过独立运行环境指定现有本地模型目录并将其纳入可信读取根
+- **THEN** 完整命令入口和所属桌面及其MCP客户端 SHALL 消费同一显式模型目录，不用空的输出配置目录覆盖它，也不把读取授权扩大为模型下载／维护写入授权
+- **AND** 越界或畸形模型引用在安装、素材摘要读取及输出创建前拒绝；原生编辑沙箱保护该显式模型目录，临时截图与其他输出仍落在独立授权写入目录
+- **AND** 无显式模型目录时保留本次私有数据目录；真实缓存推理、模型摘要保全和缺失模型拒绝分别验收，禁止以目录存在代替推理成功。
+
 ## Implementation evidence (non-normative)
 
 `docs/evidence/codex-current-release.json` binds current fixed releases to two actual Codex CLI/app-server versions, five enabled namespaced skills, installed public workflow outcomes and explicit exclusions. The corresponding bilingual Host-Verification-Architecture documents specify the repeatable check. RL-001 tasks remain unchecked until their full P0 prerequisites and scenarios pass.

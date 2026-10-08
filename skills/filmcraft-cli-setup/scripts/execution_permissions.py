@@ -137,3 +137,17 @@ def ensure_available():
     """编辑前拒绝不具备实际进程目录隔离的平台。"""
     if sys.platform != 'darwin' or not Path('/usr/bin/sandbox-exec').is_file():
         raise ValueError('execution_isolation_unavailable')
+
+
+def model_data_directory(output, policy=None):
+    """选择宿主显式只读模型目录；未声明时使用本次私有数据目录。"""
+    configured = os.environ.get('FILMCRAFT_DATA_DIR')
+    if configured is None:
+        return Path(output).resolve() / '.native-data', False
+    if (not isinstance(configured, str) or not Path(configured).is_absolute()
+            or any(ord(char) < 32 for char in configured)):
+        raise ValueError('invalid_execution_permissions')
+    path = Path(configured).resolve()
+    if policy is not None:
+        require_read(path, policy)
+    return path, True

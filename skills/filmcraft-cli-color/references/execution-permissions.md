@@ -15,3 +15,5 @@ RUNTIME_HOME须事先有独立可信的目录授权。安装维护可写该目�
 Installer maintenance and editor access are separate: explicitly authorize the runtime directory for installation, while the editor sandbox denies writes there. Registered input files and source deliveries remain protected. Explicit local model directories are read-only to editing; model maintenance is a separate setup operation. Unsupported bridge isolation refuses execution.
 
 此为在研接入，尚不证明全部权限／秘密合同、固定发行安装或完整GUI上下文通过。旧的低层Python测试API保留兼容调用，不属于带宿主准入的公开入口；仍须完成审计，不能用其无策略调用作为授权路径。
+
+完整命令与所属桌面共用显式 FILMCRAFT_DATA_DIR 的只读缓存；根外／非绝对／控制字符引用在安装前拒绝。截图 TMPDIR 与缓存分离，不扩大模型写入权限。Complete-command and owned desktop use the same explicitly granted read-only cache; temporary screenshots use a separate authorized directory.

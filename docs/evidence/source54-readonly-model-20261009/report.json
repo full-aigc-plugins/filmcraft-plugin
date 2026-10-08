@@ -1,0 +1,81 @@
+{
+  "schema": "filmcraft-readonly-model-evidence/v1",
+  "result": "PASS",
+  "scope": "Candidate source54 model-directory fix; actual macOS arm64 native CLI inference, signed desktop discovery and unavailable-inference refusal. Full V1 remains unqualified.",
+  "headless": {
+    "result": "PASS",
+    "scope": "actual candidate public complete-command Whisper inference from explicitly read-only existing verified model cache",
+    "modelFilesSha256": {
+      "models/whisper-tiny/model.safetensors": "7ebd0e69e78190ffe1438491fa05cc1f5c1aa3a4c4db3bc1723adbb551ea2395",
+      "models/whisper-tiny/config.json": "ffdccec4f3211f4c63310f2b7098f309fe70f3952cedc5e4d11e43f5b2379b98",
+      "models/whisper-tiny/tokenizer.json": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566",
+      "models/whisper-tiny/generation_config.json": "a5d5325911f16e74001a72fa13d6e208eee51548f994646de1f4b4cc8b35b512"
+    },
+    "modelsPreserved": true,
+    "modelDownload": "NOT_REQUESTED",
+    "nativeProjectSha256": "cb8b6ec08d817f9c4382d1d62d087747e7fca33ee2c2c6bfdcb0b65fe05d4565",
+    "nativeResult": {
+      "items": [
+        {
+          "item": 1,
+          "language": "en",
+          "source": "whisper-tiny",
+          "speakers": 0,
+          "words": 28
+        }
+      ],
+      "skipped": []
+    }
+  },
+  "desktop": {
+    "discovery": {
+      "available": false,
+      "default": "whisper-base",
+      "dir": "explicit trusted read-only model root",
+      "models": [
+        {
+          "description": "39 M parameters. Fastest; fine for clear speech, rough on noisy audio.",
+          "id": "whisper-tiny",
+          "installed": true,
+          "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+          "multilingual": true,
+          "name": "Whisper tiny (multilingual)",
+          "size": 153547868,
+          "source": "https://huggingface.co/openai/whisper-tiny"
+        },
+        {
+          "description": "74 M parameters. The default: a good balance of speed and accuracy.",
+          "id": "whisper-base",
+          "installed": false,
+          "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+          "multilingual": true,
+          "name": "Whisper base (multilingual)",
+          "size": 292890192,
+          "source": "https://huggingface.co/openai/whisper-base"
+        },
+        {
+          "description": "244 M parameters. Most accurate here; about 4× slower than base.",
+          "id": "whisper-small",
+          "installed": false,
+          "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+          "multilingual": true,
+          "name": "Whisper small (multilingual)",
+          "size": 969481381,
+          "source": "https://huggingface.co/openai/whisper-small"
+        }
+      ]
+    },
+    "inference": "NOT_AVAILABLE",
+    "refusal": "capability_missing: model:whisper-tiny",
+    "desktopSha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa",
+    "scope": "Actual official desktop reports available=false despite installed=true; no GUI inference claimed"
+  },
+  "regression": {
+    "targetRed": 4,
+    "targetGreen": 4,
+    "redLogSha256": "1fb736531a3e09253d796382944c1197cda95dda5d4a24186da904b6410cef69",
+    "greenLogSha256": "9f9c58ffccca70e2482153250859e14c646d421f61654094c8140f6794572bfc"
+  },
+  "modelDownload": "NOT_REQUESTED",
+  "fullV1": "NOT_PROVEN"
+}

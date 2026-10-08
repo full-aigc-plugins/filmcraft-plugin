@@ -281,6 +281,7 @@ def capability_snapshot(session, installed, rows, mode='headless', desktop=None,
 def execute(plan, output, runtime_home=None, mode="headless", connect=None, token_file=None,
             installer=None, session_factory=None, inputs=None, desktop_identity=None, permissions=None, protected_paths=(), owned_bridge_port=None):
     inputs = inputs or {}
+    model_data, explicit_model_data = load('execution_permissions').model_data_directory(output, permissions)
     if permissions is not None:
         permissions = load('execution_permissions').validate(permissions)
         load('execution_permissions').require_write(output, permissions)
@@ -344,12 +345,14 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
             bindings[name] = {"path": relative if DOMAIN == "photocraft" else str(target), "sha256": digest}
             receipt["inputs"][name] = {"path": relative, "sha256": digest}
         argv = backend_argv(installed["executable"], output, mode, connect, token_file)
+        if permissions is not None or explicit_model_data:
+            argv = [installed['executable'], '--data-dir', str(model_data), *argv[1:]]
         if permissions is not None:
-            argv = [installed['executable'], '--data-dir', str(output / '.native-data'), *argv[1:]]
             argv = load('execution_permissions').command(argv, permissions,
                 protected_roots=[str(ROOT), str(Path(installed['executable']).resolve().parent),
                     str(Path(runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes'))).resolve()),
-                    *[str(Path(value).resolve()) for value in inputs.values()], *protected_paths], control_port=owned_bridge_port)
+                    *[str(Path(value).resolve()) for value in inputs.values()], *protected_paths,
+                    *([str(model_data)] if explicit_model_data else [])], control_port=owned_bridge_port)
         with session_factory(argv) as session:
             discovery = session.request("tools/list", {})
             if (not isinstance(discovery, dict) or not isinstance(discovery.get('tools'), list)

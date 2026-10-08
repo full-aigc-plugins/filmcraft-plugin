@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.72
+
+dev.72 pins published source54, preserving the explicit read-only model directory for complete-command, owned desktop and MCP execution. Four target regressions and actual CLI Whisper inference (28 words, unchanged model hashes) pass. The official signed desktop discovers the same cache but reports speech unavailable and correctly refuses inference. Full FC-RL-002, fixed72 qualification and eight V1 tasks remain open. [Evidence](docs/evidence/source54-readonly-model-20261009/report.json).
+
 ## 0.1.0-dev.71
 
 dev.71 requires independent read/write roots for runtime maintenance probes and selection. Canonical roots are bound into both exact host grants; missing roots and outside plan/cache paths refuse before plan reads or authorization. Native capability probes receive the same sandbox policy. Actual public CLI probes/activation, expanded-root refusal, grant revocation and input/skill/binary preservation pass as candidate evidence. Full FC-RL-002 and eight V1 tasks remain open; fixed71 installed-host qualification is NOT_RUN.

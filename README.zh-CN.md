@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.72锁定公开source54：完整命令、所属桌面和MCP保留显式只读模型目录。四项目标回归及CLI真实Whisper识别通过（28词，模型摘要不变）；官方签名桌面发现同一缓存，但报告语音能力不可用并正确拒绝推理。完整FC-RL-002、固定72验收及八项V1任务保持开放。 [Evidence](docs/evidence/source54-readonly-model-20261009/report.json).
+
 固定dev.71安装核验：隔离Codex0.147.0加载13技能，185项安装回归零跳过通过，26项公开原生根边界及17项所属签名桌面操作通过，执行代码／测试／技能身份保全。该证据仅覆盖上述范围。另行只读模型探测实际FAIL：完整命令入口用输出私有目录覆盖已声明的whisper-tiny缓存并误报缺失。完整权限及命令资格仍为NOT_PROVEN，八项任务保持开放。[当前证据](docs/evidence/filmcraft71-fixed-boundaries-20261009/report.json)。
 
 dev.71要求运行时维护探测与选择提供独立读写根，规范根摘要进入探测和选择的精确宿主授权；缺少策略及计划／缓存越界在计划读取和授权查询前拒绝，原生能力探测沿用同一沙箱策略。实际公开CLI探测／激活、根扩张拒绝、撤销授权及输入／技能／二进制保全通过候选验证。完整FC-RL-002与八项V1任务保持开放，固定71宿主安装验收为NOT_RUN。
@@ -61,7 +63,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.71` / `filmcraft-skills@v0.1.0-dev.53`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.72` / `filmcraft-skills@v0.1.0-dev.54`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -85,7 +87,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.71`；技能源：`0.1.0-dev.53`；13 个独立技能。
+当前插件：`0.1.0-dev.72`；技能源：`0.1.0-dev.54`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -190,9 +192,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.71 |
+| Metadata version | 0.1.0-dev.72 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.53 |
+| Skills source | filmcraft-skills / v0.1.0-dev.54 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

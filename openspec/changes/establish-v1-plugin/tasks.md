@@ -495,3 +495,5 @@ dev.42 发行进展：已实现只读诊断和原尝试状态修复；本地原�
 2026-10-09 dev.71维护根候选增量：FC-RL-002-MAINTENANCE-ROOTS补齐独立维护策略、授权主体根摘要和原生能力探测沙箱传递。10项目标测试通过，缺少策略／根扩张／探测未传递策略具有预期失败证据；实际公开CLI探测、代次1激活、根扩张与撤销拒绝、输入／技能／原生二进制保全通过。证据 docs/evidence/filmcraft71-maintenance-roots-20261009/report.json；完整FC-RL-002及八项总任务仍开放，固定71宿主验收未执行。
 
 2026-10-09 固定dev.71/source53补证：实际隔离Codex安装／13技能加载、185项安装回归零跳过、26项公开原生根边界及17项所属签名桌面操作通过；维护根扩张／撤销授权拒绝、七次实际辅助Python环境观察无假凭据／代理／解释器注入，执行代码／测试／13技能保全。证据 docs/evidence/filmcraft71-fixed-boundaries-20261009/report.json。另行实际只读模型探测FAIL：commands.py覆盖显式FILMCRAFT_DATA_DIR为输出私有目录，已缓存whisper-tiny误报capability_missing；所属桌面同样强制私有数据目录。7.4—7.6、8.3、9.9及全部八项总任务继续开放；下一步修复该模型目录路径并复验，不提升为完整权限／GUI／业务路由验收。
+
+2026-10-09 source54／dev.72修复候选：四项目标红灯转绿，真实CLI使用显式只读缓存识别28词且模型摘要不变；实际签名桌面发现同一已安装模型，但自身available=false，按能力门禁拒绝推理。证据 docs/evidence/source54-readonly-model-20261009/report.json。保留固定71原始失败，当前不以有界路径修复关闭7.4—7.6、8.3或9.9，全部八项任务仍未完成。

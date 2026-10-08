@@ -1,0 +1,11 @@
+test_discovery_does_not_promote_other_dimensions (test_command_evidence.CommandEvidenceTests.test_discovery_does_not_promote_other_dimensions) ... ok
+test_invalid_or_duplicate_discovery_rows_are_rejected (test_command_evidence.CommandEvidenceTests.test_invalid_or_duplicate_discovery_rows_are_rejected) ... ok
+test_pass_requires_evidence_and_not_applicable_requires_reason (test_command_evidence.CommandEvidenceTests.test_pass_requires_evidence_and_not_applicable_requires_reason) ... ok
+test_positive_negative_and_persistence_are_independent (test_command_evidence.CommandEvidenceTests.test_positive_negative_and_persistence_are_independent) ... ok
+test_stale_runtime_platform_mode_or_source_is_rejected (test_command_evidence.CommandEvidenceTests.test_stale_runtime_platform_mode_or_source_is_rejected) ... ok
+test_unknown_command_dimension_and_duplicate_claim_are_rejected (test_command_evidence.CommandEvidenceTests.test_unknown_command_dimension_and_duplicate_claim_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.007s
+
+OK

@@ -1,0 +1,68 @@
+[
+  {
+    "entry": "commands",
+    "command": "multicam.cutToCamera",
+    "case": "multicam.cutToCamera",
+    "error": "invalid_tick_parameter: multicam.cutToCamera.time; use an exact signed 64-bit JSON integer",
+    "eventStart": 75,
+    "eventEnd": 82,
+    "dependentCommandRequests": 0,
+    "originalProjectPreserved": true,
+    "inputPreserved": true
+  },
+  {
+    "entry": "commands",
+    "command": "transcript.set",
+    "case": "transcript.set",
+    "error": "invalid_tick_parameter: transcript.set.transcript.words.0.start; use an exact signed 64-bit JSON integer",
+    "eventStart": 82,
+    "eventEnd": 89,
+    "dependentCommandRequests": 0,
+    "originalProjectPreserved": true,
+    "inputPreserved": true
+  },
+  {
+    "entry": "commands",
+    "command": "multicam.cutToCamera",
+    "case": "whole-parameters",
+    "error": "invalid_command_parameters: expected an object after reference resolution",
+    "eventStart": 89,
+    "eventEnd": 96,
+    "dependentCommandRequests": 0,
+    "originalProjectPreserved": true,
+    "inputPreserved": true
+  },
+  {
+    "entry": "workflow",
+    "command": "multicam.cutToCamera",
+    "case": "multicam.cutToCamera",
+    "error": "invalid_tick_parameter: multicam.cutToCamera.time; use an exact signed 64-bit JSON integer",
+    "eventStart": 96,
+    "eventEnd": 110,
+    "dependentCommandRequests": 0,
+    "originalProjectPreserved": true,
+    "inputPreserved": true
+  },
+  {
+    "entry": "workflow",
+    "command": "transcript.set",
+    "case": "transcript.set",
+    "error": "invalid_tick_parameter: transcript.set.transcript.words.0.start; use an exact signed 64-bit JSON integer",
+    "eventStart": 110,
+    "eventEnd": 124,
+    "dependentCommandRequests": 0,
+    "originalProjectPreserved": true,
+    "inputPreserved": true
+  },
+  {
+    "entry": "workflow",
+    "command": "multicam.cutToCamera",
+    "case": "whole-parameters",
+    "error": "invalid_native_operation",
+    "eventStart": 124,
+    "eventEnd": 138,
+    "dependentCommandRequests": 0,
+    "originalProjectPreserved": true,
+    "inputPreserved": true
+  }
+]

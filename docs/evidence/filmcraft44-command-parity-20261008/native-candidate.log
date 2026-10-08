@@ -1,0 +1,45 @@
+
+> @full-aigc-plugins/filmcraft@0.1.0-dev.44 test:native
+> FILMCRAFT_NATIVE_HARNESS=1 node --test --test-concurrency=1 test/harness/*.test.ts
+
+✔ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (3311.38025ms)
+✔ public task mapping uses registered identity and keeps internal fields in the domain ledger (5.054292ms)
+✔ legacy command receipt is linked without rewriting native integers or declaring completion (28.661708ms)
+✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (25.436708ms)
+✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (25.864916ms)
+✔ receipt paths reject traversal and symlinks before reading their targets (25.913542ms)
+✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (0.170041ms)
+✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (86.491792ms)
+✔ delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS (72.701041ms)
+✔ missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered (90.355917ms)
+✔ legacy output execution maps declared new inputs separately from inherited project inputs (92.112958ms)
+✔ failed-stage receipts retain original bytes and missing historical identities without following stage paths (25.293542ms)
+✔ read-only diagnosis sees committed WAL state without changing database, sidecars, projects or missing blob directories (9.884959ms)
+✔ damaged database and missing receipts remain structured unknown and never create or overwrite state (1.687667ms)
+✔ an actually running detached process remains occupied after its host state becomes unknown (32.995708ms)
+✔ lost replies are diagnosed without writes and repaired only with fresh evidence, matching authorization and fenced intent (461.626917ms)
+✔ changed candidate, missing export record or missing process identity cannot unlock or repair an unknown task (169.158125ms)
+✔ recovery intent survives reopening; an active or expired old recovery owner cannot commit (94.423584ms)
+✔ legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities (5.231875ms)
+✔ CLI inspect and reconcile are both read-only; unknown diagnosis is explicit (145.36575ms)
+✔ freshly requested repair of an already reconciled attempt is read-only and does not create another recovery intent (588.643042ms)
+✔ two actual recovery processes cannot apply the same uncertain attempt twice (447.803125ms)
+✔ logical task identity corruption is diagnosed as unknown without rewriting corrupt bytes (4.381583ms)
+✔ same idempotency key returns the original task; changed identity conflicts without replacing it (4.706875ms)
+✔ task IDs cannot overwrite another caller and input versions remain bound (2.385792ms)
+✔ project occupancy survives close/reopen and unknown execution does not free the writer (3.7945ms)
+✔ expired leases are fenced without automatically taking over or accepting an old completion (2.450167ms)
+✔ intent is committed before submission and accepted execution is not completed delivery (3.00225ms)
+✔ missing stop confirmation remains unknown; receipts cannot be spliced across attempts (2.999ms)
+✔ deadline and unsupported state database refuse execution without editing user files (2.569792ms)
+✔ two actual processes cannot acquire the same project writer (70.278875ms)
+✔ aliased output parents share idempotency and occupancy even with a different project key (3.183416ms)
+✔ an unrelated SQLite database with user_version 1 is rejected without changing its bytes (1.625458ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6226.212625

@@ -80,7 +80,8 @@
     "9.8": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
     "9.10": "docs/evidence/filmcraft-capability-candidate-20261008.json",
     "9.11": "docs/evidence/filmcraft-capability-candidate-20261008.json",
-    "9.6": "docs/evidence/filmcraft43-fixed-identity-20261008.json"
+    "9.6": "docs/evidence/filmcraft44-command-parity-20261008.json",
+    "9.3": "docs/evidence/filmcraft44-command-parity-20261008.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -137,7 +138,9 @@
     "harnessStatus": "bounded Node/SQLite and native Python source candidate verified; fixed installs, authorization, recovery, budgets, quality and full V1 open",
     "releaseEvidence": "docs/evidence/filmcraft-dev42-release-20261008.json",
     "recoveryStatus": "bounded read-only diagnosis and same-attempt repair verified; continuation, backup/rollback, authorization enforcement and full recovery acceptance open",
-    "fixedIdentityEvidence": "docs/evidence/filmcraft43-fixed-identity-20261008.json",
-    "fixedIdentityStatus": "task 9.6 fixed installed identity passed; full qualification remains NOT_PROVEN"
+    "fixedIdentityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json",
+    "fixedIdentityStatus": "task 9.6 fixed installed identity passed; full qualification remains NOT_PROVEN",
+    "commandParityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json",
+    "commandParityStatus": "task 9.3 fixed44 whole-parameter/tick parity and six-dimension matrix passed; exhaustive native contexts remain NOT_RUN"
   }
 }

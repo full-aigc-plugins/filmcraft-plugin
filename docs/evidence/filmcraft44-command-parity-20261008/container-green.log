@@ -1,0 +1,13 @@
+test_both_entries_reject_invalid_literal_ticks (test_native_entry_parity.NativeEntryParityTests.test_both_entries_reject_invalid_literal_ticks) ... ok
+test_entire_referenced_transcript_is_checked_after_resolution (test_native_entry_parity.NativeEntryParityTests.test_entire_referenced_transcript_is_checked_after_resolution) ... ok
+test_exact_large_and_boundary_integers_remain_exact (test_native_entry_parity.NativeEntryParityTests.test_exact_large_and_boundary_integers_remain_exact) ... ok
+test_literal_failure_precedes_install_and_output_writes_in_each_skill (test_native_entry_parity.NativeEntryParityTests.test_literal_failure_precedes_install_and_output_writes_in_each_skill) ... ok
+test_nested_word_ticks_share_the_same_contract (test_native_entry_parity.NativeEntryParityTests.test_nested_word_ticks_share_the_same_contract) ... ok
+test_reference_is_allowed_in_plan_and_rechecked_before_native_request (test_native_entry_parity.NativeEntryParityTests.test_reference_is_allowed_in_plan_and_rechecked_before_native_request) ... ok
+test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) ... ok
+test_wrong_plan_entry_reports_the_correct_runner (test_native_entry_parity.NativeEntryParityTests.test_wrong_plan_entry_reports_the_correct_runner) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.763s
+
+OK

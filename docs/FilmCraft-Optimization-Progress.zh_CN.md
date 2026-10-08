@@ -1,8 +1,14 @@
 # FilmCraft 优化实施记录
 
-当前为源码候选实施，完整目标仍是完成技能与插件全部计划任务。[English](FilmCraft-Optimization-Progress.md)。正式需求与任务继续由 [现有 OpenSpec](../openspec/changes/establish-v1-plugin/tasks.md) 持有；本记录不缩小原有门禁。
+本记录涵盖源码候选及后续固定安装验收，完整目标仍是完成技能与插件全部计划任务。[English](FilmCraft-Optimization-Progress.md)。正式需求与任务继续由 [现有 OpenSpec](../openspec/changes/establish-v1-plugin/tasks.md) 持有；本记录不缩小原有门禁。
 
-## 已实现的候选范围
+## 当前固定验收
+
+插件 dev.44／技能源 dev.41 的固定身份验收 9.6 已补证，当前参考身份 MATCH、完整组合仍 NOT_PROVEN。[身份证据](FilmCraft-Command-Parity.zh_CN.md)。P0 任务 9.3 亦完成固定入口对照及六维命令矩阵：390 个公开 CLI 用例、1494 个 tick 参数用例和 6 个真实引用拒绝通过；完整命令、其他参数、模式/平台、模型路由仍开放。[入口与矩阵证据](FilmCraft-Command-Parity.zh_CN.md)。
+
+本记录下方保留初始 dev.41 源码候选状态，包含当时的旧目录 MISMATCH、测试数及未运行 CI，不代表当前快照。后续 dev.42/43 的恢复进展、实际安装及 CI 分别见其版本绑定证据。
+
+## 初始候选实现范围（历史）
 
 独立技能源的 `native_workflow.validate` 复用 `commands.validate_tick_parameters`；计划预检允许返回值引用，执行前重新核验引用解析后的精确整数。非法字面值在安装和输出写入前拒绝，非法引用在依赖原生请求前拒绝。两类计划错用入口会提示正确脚本，领域字符串时间的显式转换继续有效。共享生成器同步 13 个自包含副本。
 
@@ -10,7 +16,7 @@
 
 插件新增 `scripts/current_facts.py`，从固定技能锁、固定来源的 suite 快照、当前能力目录和运行时身份生成 `docs/current-facts.json` 及中英文 README 区块；`--check` 接入文档门禁。根运行时锁只作历史基线，自包含技能的执行锁与 bridge 桌面锁分别展示。历史证据不提升为当前完整组合通过。
 
-## 发现的未关闭差异
+## 初始候选差异（历史，dev.41）
 
 能力快照源码候选已完成 9.10/9.11：可选 `requires` 在安装/写入前校验；实际 CLI/桌面身份、参数原文摘要、模式和平台绑定快照；三类资源通过同一原生上下文只读探测。每次依赖调用重查契约，资源变化后重探测；未知或缺失阻断依赖编辑。命令回执保留 blocked 尝试，领域成功与失败阶段保留由清单摘要绑定的能力文件。20 项能力单元测试及实际原生样例的版本/源码/输入产物绑定见 [能力候选证据](evidence/filmcraft-capability-candidate-20261008.json)。源码全量 201 项中 165 项执行通过，36 项条件跳过；另行显式执行 headless、工作流创建/返工及 owned bridge 冷安装保存/重开与契约阻断样例。
 
@@ -18,7 +24,7 @@
 
 固定快照的 `references/commands.json` 仍记录旧二进制摘要，而有效执行锁和 native 目录快照指向 craft.4；666 项参数原文与现有 native 快照一致。当前事实显式展示 MISMATCH。原固定快照没有被改写；应在核实实际目录后由独立技能源修正，再发布新固定快照并验收，不能直接把旧摘要替换成当前验收证明。
 
-## 验证与下一步
+## 初始候选验证与后续范围（历史）
 
 Node/SQLite Harness 与回执血缘已有 [源码候选](FilmCraft-Harness-Candidate.zh_CN.md)，版本绑定见 [候选证据](evidence/filmcraft-harness-candidate-20261008.json)。任务/尝试、项目与规范化输出占用、租约/epoch、原字节 CAS 和四类旧回执映射已接入现有 Python 工作流。实际创建、返工、原工程保全、输入冲突在登记/编辑前拒绝、别名目标及幂等复用通过；Node 原生回归 22 项无跳过，插件 Python 回归 28 项通过。固定 ArtCraft schema 验证 2 个任务及 13 个产物，5 类无效对象拒绝。
 

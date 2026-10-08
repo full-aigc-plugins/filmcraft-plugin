@@ -1,0 +1,129 @@
+test_both_entries_reject_invalid_literal_ticks (test_native_entry_parity.NativeEntryParityTests.test_both_entries_reject_invalid_literal_ticks) ... ok
+test_entire_referenced_transcript_is_checked_after_resolution (test_native_entry_parity.NativeEntryParityTests.test_entire_referenced_transcript_is_checked_after_resolution) ... ok
+test_exact_large_and_boundary_integers_remain_exact (test_native_entry_parity.NativeEntryParityTests.test_exact_large_and_boundary_integers_remain_exact) ... ok
+test_literal_failure_precedes_install_and_output_writes_in_each_skill (test_native_entry_parity.NativeEntryParityTests.test_literal_failure_precedes_install_and_output_writes_in_each_skill) ... ok
+test_nested_word_ticks_share_the_same_contract (test_native_entry_parity.NativeEntryParityTests.test_nested_word_ticks_share_the_same_contract) ... ok
+test_reference_is_allowed_in_plan_and_rechecked_before_native_request (test_native_entry_parity.NativeEntryParityTests.test_reference_is_allowed_in_plan_and_rechecked_before_native_request) ... ok
+test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) ... 
+  test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value='time') ... ERROR
+  test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value='not-a-parameter-object') ... FAIL
+  test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=True) ... ERROR
+  test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=None) ... ERROR
+  test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=0) ... ERROR
+  test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=[]) ... FAIL
+  test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=['time']) ... ERROR
+test_wrong_plan_entry_reports_the_correct_runner (test_native_entry_parity.NativeEntryParityTests.test_wrong_plan_entry_reports_the_correct_runner) ... ok
+
+======================================================================
+ERROR: test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value='time')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_entry_parity.py", line 132, in test_resolved_parameter_container_cannot_bypass_preflight
+    receipt = commands.execute(plan, Path(directory) / 'output',
+        installer=lambda *args: {'executable': 'native', 'binarySha256': lock['artifacts']['darwin-arm64']['binarySha256'],
+                                'version': lock['resolvedVersion'], 'platform': 'darwin-arm64'},
+        session_factory=lambda *args: Session())
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 359, in execute
+    validate_tick_parameters(step["command"], params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 61, in validate_tick_parameters
+    values = [(field, params[field]) for field in fields if field in params]
+                      ~~~~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+
+======================================================================
+ERROR: test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_entry_parity.py", line 132, in test_resolved_parameter_container_cannot_bypass_preflight
+    receipt = commands.execute(plan, Path(directory) / 'output',
+        installer=lambda *args: {'executable': 'native', 'binarySha256': lock['artifacts']['darwin-arm64']['binarySha256'],
+                                'version': lock['resolvedVersion'], 'platform': 'darwin-arm64'},
+        session_factory=lambda *args: Session())
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 359, in execute
+    validate_tick_parameters(step["command"], params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 61, in validate_tick_parameters
+    values = [(field, params[field]) for field in fields if field in params]
+                                                            ^^^^^^^^^^^^^^^
+TypeError: argument of type 'bool' is not iterable
+
+======================================================================
+ERROR: test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_entry_parity.py", line 132, in test_resolved_parameter_container_cannot_bypass_preflight
+    receipt = commands.execute(plan, Path(directory) / 'output',
+        installer=lambda *args: {'executable': 'native', 'binarySha256': lock['artifacts']['darwin-arm64']['binarySha256'],
+                                'version': lock['resolvedVersion'], 'platform': 'darwin-arm64'},
+        session_factory=lambda *args: Session())
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 359, in execute
+    validate_tick_parameters(step["command"], params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 61, in validate_tick_parameters
+    values = [(field, params[field]) for field in fields if field in params]
+                                                            ^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
+
+======================================================================
+ERROR: test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_entry_parity.py", line 132, in test_resolved_parameter_container_cannot_bypass_preflight
+    receipt = commands.execute(plan, Path(directory) / 'output',
+        installer=lambda *args: {'executable': 'native', 'binarySha256': lock['artifacts']['darwin-arm64']['binarySha256'],
+                                'version': lock['resolvedVersion'], 'platform': 'darwin-arm64'},
+        session_factory=lambda *args: Session())
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 359, in execute
+    validate_tick_parameters(step["command"], params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 61, in validate_tick_parameters
+    values = [(field, params[field]) for field in fields if field in params]
+                                                            ^^^^^^^^^^^^^^^
+TypeError: argument of type 'int' is not iterable
+
+======================================================================
+ERROR: test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=['time'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_entry_parity.py", line 132, in test_resolved_parameter_container_cannot_bypass_preflight
+    receipt = commands.execute(plan, Path(directory) / 'output',
+        installer=lambda *args: {'executable': 'native', 'binarySha256': lock['artifacts']['darwin-arm64']['binarySha256'],
+                                'version': lock['resolvedVersion'], 'platform': 'darwin-arm64'},
+        session_factory=lambda *args: Session())
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 359, in execute
+    validate_tick_parameters(step["command"], params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 61, in validate_tick_parameters
+    values = [(field, params[field]) for field in fields if field in params]
+                      ~~~~~~^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+======================================================================
+FAIL: test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value='not-a-parameter-object')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_entry_parity.py", line 136, in test_resolved_parameter_container_cannot_bypass_preflight
+    self.assertEqual(receipt['result'], 'FAIL')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+======================================================================
+FAIL: test_resolved_parameter_container_cannot_bypass_preflight (test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight) (value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_entry_parity.py", line 136, in test_resolved_parameter_container_cannot_bypass_preflight
+    self.assertEqual(receipt['result'], 'FAIL')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.846s
+
+FAILED (failures=2, errors=5)

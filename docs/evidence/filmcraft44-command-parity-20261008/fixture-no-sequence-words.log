@@ -1,0 +1,22 @@
+fixed tick validation cases: 1494
+literal CLI cases passed: filmcraft-cli
+literal CLI cases passed: filmcraft-cli-audio
+literal CLI cases passed: filmcraft-cli-color
+literal CLI cases passed: filmcraft-cli-export
+literal CLI cases passed: filmcraft-cli-media
+literal CLI cases passed: filmcraft-cli-motion
+literal CLI cases passed: filmcraft-cli-multicam
+literal CLI cases passed: filmcraft-cli-project
+literal CLI cases passed: filmcraft-cli-setup
+literal CLI cases passed: filmcraft-cli-subtitles
+literal CLI cases passed: filmcraft-cli-timeline
+literal CLI cases passed: filmcraft-cli-transcript
+literal CLI cases passed: filmcraft-use
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_command_parity.py", line 275, in <module>
+    verify(args.host, args.authority, args.ref, args.output)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_command_parity.py", line 161, in verify
+    require(int(transcript['words'][0]['start']) == 2 ** 53 + 1 and
+                ~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

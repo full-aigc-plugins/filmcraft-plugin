@@ -1,0 +1,178 @@
+{
+  "schema": "filmcraft-command-parity-acceptance/v1",
+  "result": "PASS",
+  "completedTasks": [
+    "9.3"
+  ],
+  "pluginRef": "v0.1.0-dev.44",
+  "pluginSha": "fc03fe9b8af0ef314dde9e6b8c7ae6da9ed22f04",
+  "sourceRef": "v0.1.0-dev.41",
+  "sourceSha": "f47a2ff6e47e64767d82fd8d88ffa225b204879e",
+  "binding": {
+    "pluginSha": "fc03fe9b8af0ef314dde9e6b8c7ae6da9ed22f04",
+    "sourceSha": "f47a2ff6e47e64767d82fd8d88ffa225b204879e",
+    "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+    "runtimeVersion": "0.2.0-craft.4",
+    "platform": "darwin-arm64",
+    "mode": "headless"
+  },
+  "scope": "FC-CM-001-ENTRY-TICK-PARITY, FC-CM-001-RESOLVED-TICK and FC-CM-001-COMMAND-EVIDENCE; current fixed installation and explicit dimension gaps",
+  "tests": {
+    "matrixUnit": {
+      "passed": 6,
+      "failed": 0,
+      "initialRed": "6 errors: missing matrix implementation"
+    },
+    "sourceRegression": {
+      "total": 208,
+      "passed": 172,
+      "skipped": 36,
+      "scope": "current unchanged source41; conditional skips are not native acceptance"
+    },
+    "pluginRegression": {
+      "passed": 42,
+      "skipped": 0
+    },
+    "fixedInstallation": {
+      "literalCliCases": 390,
+      "invalidLiterals": 364,
+      "wrongPlanTypes": 26,
+      "parameterCases": 1494,
+      "actualReferenceCases": 6,
+      "preservedSkills": 13
+    },
+    "nativeHarnessCandidate": {
+      "passed": 33,
+      "skipped": 0,
+      "scope": "source41 vendored candidate before tag publication; actual installed native parity is reported separately"
+    }
+  },
+  "matrixSummary": {
+    "discovery": {
+      "PASS": 666,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "N/A": 0
+    },
+    "parameterValidation": {
+      "PASS": 74,
+      "FAIL": 0,
+      "NOT_RUN": 592,
+      "N/A": 0
+    },
+    "positiveExecution": {
+      "PASS": 12,
+      "FAIL": 0,
+      "NOT_RUN": 654,
+      "N/A": 0
+    },
+    "negativeRejection": {
+      "PASS": 74,
+      "FAIL": 0,
+      "NOT_RUN": 592,
+      "N/A": 0
+    },
+    "reopen": {
+      "PASS": 6,
+      "FAIL": 0,
+      "NOT_RUN": 660,
+      "N/A": 0
+    },
+    "nonTargetPreservation": {
+      "PASS": 6,
+      "FAIL": 0,
+      "NOT_RUN": 660,
+      "N/A": 0
+    }
+  },
+  "precision": {
+    "exactJsonInteger": "9007199254740993",
+    "domainDecimalConversion": "PASS",
+    "nativeSavedTranscript": "PASS",
+    "nativeReopenAndResave": "PASS",
+    "workflowNativeSavedTranscript": "PASS",
+    "scope": "Raw per-media ticks in actual fcproj, not derived sequence-word mapping or playhead frame snapping"
+  },
+  "fixtureCorrections": [
+    {
+      "attempt": 1,
+      "failure": "No derived sequence words for video color matte",
+      "resolution": "Check actual raw per-media transcript ticks in saved JSON; do not infer from empty derived audio view"
+    },
+    {
+      "attempt": 2,
+      "failure": "Selection differs on reopening",
+      "resolution": "Only selection excluded as documented session-only state; all persisted sequence fields compared"
+    }
+  ],
+  "currentQualification": "NOT_PROVEN",
+  "notAccepted": [
+    "all native command contexts or other parameter types",
+    "exhaustive command execution and GUI/bridge",
+    "other platforms",
+    "actual model routing",
+    "full V1"
+  ],
+  "producers": {
+    "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+    "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+    "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+    "tests/test_command_evidence.py": "18bea41d012814d9dd1bdcefc70f484e51959b8326e886fa455df47ce5388442"
+  },
+  "producerScope": "QA producers and matrix unit tests are in frozen tag44; acceptance records are a post-tag supplement; tag/ZIP unchanged",
+  "evidenceFiles": {
+    "docs/evidence/filmcraft44-command-parity-20261008/actual-catalog.json": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a",
+    "docs/evidence/filmcraft44-command-parity-20261008/command-matrix.json": "74fbe7a06b743da1fac3a124d007f826889b82534b08db02f04be09825b315c5",
+    "docs/evidence/filmcraft44-command-parity-20261008/container-green.log": "d523b56cd8e14a3caf382fed93f2d14a58702461832c9d5a5e7163efd1e68e61",
+    "docs/evidence/filmcraft44-command-parity-20261008/container-red.log": "e848b99d4c2fd614fb0b5b64f9fa3ff75ef161afa8b2e6f40cc8b60464a05b8e",
+    "docs/evidence/filmcraft44-command-parity-20261008/fixed-parity.log": "2632158c4eab109f3f498f38a4cb934bbf7c9f84ae42adba9366285f10d4cb64",
+    "docs/evidence/filmcraft44-command-parity-20261008/fixture-no-sequence-words.log": "0e3df476473743800992795bb681cf2c12f57de774f5e99f612d516e57bdeb2c",
+    "docs/evidence/filmcraft44-command-parity-20261008/fixture-session-selection.log": "25d8ed903e9d7bb4a0e260ea4d46e889d60667854ad114f8e43e721820ee3c0c",
+    "docs/evidence/filmcraft44-command-parity-20261008/host.json": "d0e4936cc6687f36a498606829cf39663452eae55555f150bf557c034c65866e",
+    "docs/evidence/filmcraft44-command-parity-20261008/identity.json": "db1352ac444c8d10a907fec2359817e29e977e16bea716e53efeb1dc2f5d94e9",
+    "docs/evidence/filmcraft44-command-parity-20261008/identity.log": "7799a5e6905c1c1c2928881f79b7180aa3ba15a28b9014801b4a4d9ce3430680",
+    "docs/evidence/filmcraft44-command-parity-20261008/literal-cli.json": "58df3bd62ec547cc836c0a59036db6e957b10204e18627ab6ac90735be640ade",
+    "docs/evidence/filmcraft44-command-parity-20261008/matrix-green.log": "0b55289a37e91141e1ad13649f5615dc448f36c5f3715863b3e4a5224c033532",
+    "docs/evidence/filmcraft44-command-parity-20261008/matrix-red.log": "18737d3c579c79748d6be3ae5b5244fa0abc3c69963f606d9b340ddee400fd30",
+    "docs/evidence/filmcraft44-command-parity-20261008/native-candidate.json": "7c1e863063b3c9e89776c3e8736180f759a277de58f6a0254247311c081b499a",
+    "docs/evidence/filmcraft44-command-parity-20261008/native-candidate.log": "b75d3ff978bbc6ada61bb4dfc4bd46f398e3840afbac84aa77cfa71dad1139ae",
+    "docs/evidence/filmcraft44-command-parity-20261008/native-create-reopen.json": "76128d973c33106142bf20fd5270b6ee5a6787722e9db94fa28c7fd1904bf6d6",
+    "docs/evidence/filmcraft44-command-parity-20261008/native-events.json": "27918dec3c8597eae3de35585bd38f91f2c8f1297fcf2aa5bbe9e945bb07c28a",
+    "docs/evidence/filmcraft44-command-parity-20261008/native-sequence-comparison.json": "29dd172b10084edd95f44942ba00b18e2ed5028fdcdb69acda57affd5ad6fcbc",
+    "docs/evidence/filmcraft44-command-parity-20261008/parameter-validation.json": "97de733b3ded053f2dbc6618745a967c3c55c06bf7dea534a42a415aa875827c",
+    "docs/evidence/filmcraft44-command-parity-20261008/plugin-regression.log": "6a2c5885611a8553cadb0df86cce679793ee08344668e625ed87d9ed5bf30169",
+    "docs/evidence/filmcraft44-command-parity-20261008/reference-rejection.json": "3ad6f3f42e418acfd26067e41a1ce0334c7440563d70d523a24d5d99781a6c9a",
+    "docs/evidence/filmcraft44-command-parity-20261008/report.json": "6a4c5fc8c79c85db636412aef34b2882e81700eee83a8d68f61698677618c50f",
+    "docs/evidence/filmcraft44-command-parity-20261008/source-regression.log": "d4c768b34a962dd03218f0efca4d8126115c1256c233632912eca6a698479d5e"
+  },
+  "renewedTaskEvidence": [
+    "9.6"
+  ],
+  "containerFix": {
+    "sourceVersion": "0.1.0-dev.41",
+    "cases": 7,
+    "initialIncorrectPasses": 2,
+    "initialUnstructuredErrors": 5,
+    "green": "structured refusal before dependent native calls",
+    "actualFixedWholeParameterCases": 2
+  },
+  "fixedHost": {
+    "codexVersion": "codex-cli 0.147.0",
+    "skills": 13,
+    "loadingErrors": 0,
+    "executableFiles": 22
+  },
+  "fixedIdentity": {
+    "result": "PASS",
+    "tamperCases": 7,
+    "deterministicGeneration": "PASS",
+    "installedTreeBefore": "74cd1f372b23399911d9afa7dfc1a0dd6826a1586923ae7c17bfbecf7e384345",
+    "installedTreeAfter": "74cd1f372b23399911d9afa7dfc1a0dd6826a1586923ae7c17bfbecf7e384345",
+    "historical42": {
+      "sha256": "55c2679f719fecffa48aeb7bf2eb52470be4d665f632c8a9f5085681f788ea06",
+      "catalogIdentity": "MISMATCH",
+      "currentQualification": "NOT_PROVEN"
+    },
+    "currentQualification": "NOT_PROVEN"
+  }
+}

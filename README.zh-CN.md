@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+[固定命令入口与分维矩阵](docs/FilmCraft-Command-Parity.zh_CN.md)：dev.44/source41 完成 9.3 并补证当前身份；完整逐命令和 V1 仍开放。
+
 [上一固定身份验收](docs/FilmCraft-Fixed-Identity.zh_CN.md)：dev.43 锁定重新采集目录的源 dev.40，实际安装与篡改拒绝结果单独记录。
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->

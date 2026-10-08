@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+[Fixed command entry parity and dimension matrix](docs/FilmCraft-Command-Parity.md): dev.44/source41 qualifies task 9.3 and renews identity evidence; exhaustive commands and V1 remain open.
+
 [Previous fixed identity acceptance](docs/FilmCraft-Fixed-Identity.md): dev.43 pins recaptured source dev.40; installed identity and tamper-rejection results are recorded separately.
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->

@@ -307,7 +307,7 @@
         "9.30"
       ],
       "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
-      "fixedIdentityEvidence": "docs/evidence/filmcraft43-fixed-identity-20261008.json"
+      "fixedIdentityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json"
     },
     {
       "requirement": "FC-RL-002",
@@ -380,7 +380,8 @@
         "9.2",
         "9.3"
       ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json"
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+      "fixedCommandParityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json"
     },
     {
       "requirement": "FC-TX-004",

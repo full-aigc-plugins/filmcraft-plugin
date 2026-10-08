@@ -1,0 +1,15 @@
+fixed tick validation cases: 1494
+literal CLI cases passed: filmcraft-cli
+literal CLI cases passed: filmcraft-cli-audio
+literal CLI cases passed: filmcraft-cli-color
+literal CLI cases passed: filmcraft-cli-export
+literal CLI cases passed: filmcraft-cli-media
+literal CLI cases passed: filmcraft-cli-motion
+literal CLI cases passed: filmcraft-cli-multicam
+literal CLI cases passed: filmcraft-cli-project
+literal CLI cases passed: filmcraft-cli-setup
+literal CLI cases passed: filmcraft-cli-subtitles
+literal CLI cases passed: filmcraft-cli-timeline
+literal CLI cases passed: filmcraft-cli-transcript
+literal CLI cases passed: filmcraft-use
+{"result": "PASS", "literalCliCases": 390, "parameterCases": 1494, "referenceCases": 6}

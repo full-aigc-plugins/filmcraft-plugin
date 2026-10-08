@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+四领域RT-001运行时来源与完整性已完成当前全部场景验收，固定技能字节保持不变；运行时升级与完整首版仍开放。[验收架构](docs/Craft-Fixed-Runtime-Integrity-Architecture.zh_CN.md)。
+
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
 当前插件：`0.1.0-dev.40`；技能源：`0.1.0-dev.37`；13 个独立技能。

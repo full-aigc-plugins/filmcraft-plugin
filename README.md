@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Four-domain RT-001 runtime source/integrity acceptance now covers every current scenario; existing pinned skill bytes remain unchanged. Runtime upgrades and fullV1 remain open. [Acceptance architecture](docs/Craft-Fixed-Runtime-Integrity-Architecture.md).
+
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
 Current plugin: `0.1.0-dev.40`; skill source: `0.1.0-dev.37`; 13 independent skills.

@@ -1,5 +1,9 @@
 # 版本绑定的历史发行记录
 
+## 0.1.0-dev.53
+
+锁定已发布技能源 dev.45；发布真实媒体 fixtures 与原生 VFR 音频失败证据。PCM 修复仅为源码候选，默认 craft.4 不变；9.32/9.33 及完整 V1 未关闭。
+
 dev.49 开发候选：schema4持久资源域、共享继续预算、显式宿主授权与进程身份绑定的POSIX取消，以及schema1/2/3备份迁移。源码原生／状态81/81、Python47/47通过，固定安装待执行。[证据](docs/evidence/filmcraft49-resources-candidate-20261008.json)。
 
 dev.45发布后验收：隔离Codex实际安装后完成9.13—9.15；13技能／26执行文件身份保全、39原生测试与10类回执用例通过，固定公共schema映射通过，质量状态仍NOT_RUN。[证据](docs/evidence/filmcraft45-fixed-lineage-20261008.json)。原标签／ZIP不改写，完整V1仍开放。

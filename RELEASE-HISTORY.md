@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.53
+
+Pins published source dev.45 and distributes real-media fixtures plus failed native VFR audio evidence. The PCM fix is a source candidate only; default craft.4 is unchanged. Tasks9.32/9.33 and full V1 remain open.
+
 Development candidate dev.49: schema4 persistent resource scopes, shared continuation budgets, explicit host-authorized identity-bound POSIX cancellation and backed schema1/2/3 migration. Source81/81 native/state and47/47 Python pass; fixed installation is pending. [Evidence](docs/evidence/filmcraft49-resources-candidate-20261008.json).
 
 Post-publication dev.45 acceptance: tasks 9.13–9.15 completed after actual isolated Codex installation, 13 skill/26 code identities preserved, 39 native tests and 10 receipt cases passed. Fixed public schema mappings passed; all quality states remain NOT_RUN. [Evidence](docs/evidence/filmcraft45-fixed-lineage-20261008.json). Original tag/ZIP unchanged; full V1 remains open.

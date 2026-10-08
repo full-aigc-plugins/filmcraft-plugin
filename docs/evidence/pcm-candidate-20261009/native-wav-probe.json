@@ -1,0 +1,21 @@
+{
+  "schema": "filmcraft-pcm-candidate-media-probe/v1",
+  "runtimeVersion": "0.2.0-craft.5",
+  "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "patchSha256": "0474c967c96f2673691dea7f77c23598cd81d8c1213d9998246fe2c512a7757a",
+  "inputSha256": "b9908226c67fff95fdb56441e55fe8af483ab18035344008efcddd0f0de49754",
+  "projectSha256": "52177309f1a0d51e8a2ffc1e27f8af1b3d06abd6c1d8678095fb34e72e2c986a",
+  "outputSha256": "4644722f156534edbd14fa650b301c8bc6f601f47680e478d985931fa77e5b2b",
+  "probe": "same real-derived VFR project; native 48kHz 24bit stereo WAV; independent FFmpeg decode 8kHz mono",
+  "inputSamples8k": 24000,
+  "outputSamples8k": 24000,
+  "correlation": 0.9999953107160087,
+  "lagSamples8k": 0,
+  "minimumCorrelation": 0.98,
+  "maximumLagSeconds": 0.08333333333333333,
+  "result": "PASS",
+  "layer": "private maintained runtime candidate only",
+  "fixedInstallation": "NOT_RUN",
+  "completeMediaMatrix": "NOT_RUN",
+  "fullV1": "NOT_PROVEN"
+}

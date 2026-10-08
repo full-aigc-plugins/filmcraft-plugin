@@ -22,7 +22,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.52` / `filmcraft-skills@v0.1.0-dev.44`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.53` / `filmcraft-skills@v0.1.0-dev.45`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.4` / `0.2.0`; root runtime lock is historical only.
 
@@ -38,7 +38,9 @@ Four-domain RT-001 runtime source/integrity acceptance now covers every current 
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.52`; skill source: `0.1.0-dev.44`; 13 independent skills.
+Development dev.53 pins source dev.45 and packages real-media preparation and failed-probe evidence. The PCM timing fix remains a source candidate; default native installation stays on craft.4. Tasks9.32/9.33 and50 full-V1 tasks remain open. [Release scope](docs/FilmCraft-Dev53-Release.md).
+
+Current plugin: `0.1.0-dev.53`; skill source: `0.1.0-dev.45`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -142,9 +144,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.52 |
+| Metadata version | 0.1.0-dev.53 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.44 |
+| Skills source | filmcraft-skills / v0.1.0-dev.45 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

@@ -1,0 +1,40 @@
+{
+  "schema": "craft-maintained-runtime-build/v1",
+  "runtimeVersion": "0.2.0-craft.5",
+  "platform": "darwin-arm64",
+  "archive": "filmcraft-cli-0.2.0-craft.5-macos-arm64.zip",
+  "archiveSha256": "eed8b3a23fd4759a20d2f59961fe62b84e621779f998432f5f815f154eaea12d",
+  "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+  "provenance": {
+    "schema": "craft-runtime-patch/v1",
+    "upstreamRepository": "https://github.com/storytold/filmcraft",
+    "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+    "upstreamVersion": "0.2.0",
+    "patch": "runtime/patches/pcm-packet-timing.patch",
+    "patchSha256": "0474c967c96f2673691dea7f77c23598cd81d8c1213d9998246fe2c512a7757a",
+    "runtimeVersion": "0.2.0-craft.5",
+    "status": "built-maintained-runtime",
+    "reason": "Preserve sample-exact PCM packet timing across quantized Matroska timestamps while retaining real gaps, Whisper and prior caption/sequence/sample duration fixes.",
+    "includedCaptionPatchSha256": "d2926845dd713275dca62e51897b6becb49edc728cde8727d93c2915225dd2f8",
+    "limits": [
+      "Existing immutable runtime releases retained; no installer upgrade until candidate acceptance",
+      "Whisper weights are downloaded into a declared data directory, never bundled or committed",
+      "Native fake-transcriber unit tests are not real speech recognition acceptance",
+      "Research remains read-only"
+    ],
+    "includedSequencePatchSha256": "b73f97f8e69a66435725cd8c4aa5bf3eecefa1da417c02da8d6bbdbd87e2c793",
+    "cargoFeatures": [
+      "whisper"
+    ],
+    "includedAudioPatchSha256": "97214d5069be48ed8377a752ecaa25bddef80d8df8015101fbeb79fa968d70c3",
+    "speechDirectoryPatchSha256": "c901854deaa79c0b204eb3fba21f0d685af147d7ed1309037b695424aa76c0b3",
+    "includedWhisperPatchSha256": "7ee28f300778a9a58c9c5f332f1a1a4829742d632f144c8ed0c887ea04f540c4",
+    "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "platform": "darwin-arm64",
+    "cargoLockSha256": "153354b1105f86c6569b45e5d452d1ed2d7e526233eb708f1dc09cf27f4d0b74",
+    "sourceArchiveSha256": "2e6f9d6c3599cf3d1266016d1dcb740ed8a0f6613d1ebee958da97c3c3f69408"
+  },
+  "provenanceSha256": "1eb64336b56914ec393e021c6abbddb3b301b31755347620963f9737cbc42534"
+}

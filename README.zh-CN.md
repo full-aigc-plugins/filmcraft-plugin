@@ -22,7 +22,7 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.52` / `filmcraft-skills@v0.1.0-dev.44`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.53` / `filmcraft-skills@v0.1.0-dev.45`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.4` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -38,7 +38,9 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.52`；技能源：`0.1.0-dev.44`；13 个独立技能。
+开发版 dev.53 锁定技能源 dev.45，纳入真实媒体准备与失败证据；PCM 时序修复仍是独立源仓候选，默认原生运行时保持 craft.4。9.32／9.33 和 50 项完整 V1 任务仍开放。[发行边界](docs/FilmCraft-Dev53-Release.zh_CN.md)。
+
+当前插件：`0.1.0-dev.53`；技能源：`0.1.0-dev.45`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -143,9 +145,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.52 |
+| Metadata version | 0.1.0-dev.53 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.44 |
+| Skills source | filmcraft-skills / v0.1.0-dev.45 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

@@ -4,8 +4,8 @@
     {
       "package": "filmcraft-skills",
       "repo": "https://github.com/full-aigc-skills/filmcraft-skills.git",
-      "ref": "v0.1.0-dev.44",
-      "sha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+      "ref": "v0.1.0-dev.45",
+      "sha": "2933f2dfe35dbf49fedc1fb54bc792b600a7dedd",
       "skills": [
         "filmcraft-use",
         "filmcraft-cli",

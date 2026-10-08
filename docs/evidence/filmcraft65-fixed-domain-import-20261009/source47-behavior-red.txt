@@ -1,0 +1,58 @@
+test_all_asset_issues_reported_without_installation_or_output (workflow_test.WorkflowTests.test_all_asset_issues_reported_without_installation_or_output) ... FAIL
+test_audio_tail_accepts_only_exact_native_frame_padding (workflow_test.WorkflowTests.test_audio_tail_accepts_only_exact_native_frame_padding) ... ok
+test_duplicate_alias_rejected (workflow_test.WorkflowTests.test_duplicate_alias_rejected) ... ok
+test_export_flags_require_real_booleans (workflow_test.WorkflowTests.test_export_flags_require_real_booleans) ... ok
+test_invalid_source_asset_fails_before_install_or_recovery_directory (workflow_test.WorkflowTests.test_invalid_source_asset_fails_before_install_or_recovery_directory) ... ok
+test_public_workflow_reports_asset_list_before_runtime_creation (workflow_test.WorkflowTests.test_public_workflow_reports_asset_list_before_runtime_creation) ... FAIL
+test_revision_output_preserves_existing_directory (workflow_test.WorkflowTests.test_revision_output_preserves_existing_directory) ... ok
+test_short_audio_native_minimum_frame_and_invalid_speed (workflow_test.WorkflowTests.test_short_audio_native_minimum_frame_and_invalid_speed) ... ok
+test_side_effect_command_rejected (workflow_test.WorkflowTests.test_side_effect_command_rejected) ... ok
+test_source_and_new_asset_issues_keep_origin_without_local_paths (workflow_test.WorkflowTests.test_source_and_new_asset_issues_keep_origin_without_local_paths) ... FAIL
+test_static_track_gain_is_supported_and_rejects_invalid_values (workflow_test.WorkflowTests.test_static_track_gain_is_supported_and_rejects_invalid_values) ... ok
+test_ticks_are_decimal_strings (workflow_test.WorkflowTests.test_ticks_are_decimal_strings) ... ok
+test_unresolved_reference_rejected (workflow_test.WorkflowTests.test_unresolved_reference_rejected) ... ok
+test_visible_captions_are_burned_unless_explicitly_disabled (workflow_test.WorkflowTests.test_visible_captions_are_burned_unless_explicitly_disabled) ... ok
+
+======================================================================
+FAIL: test_all_asset_issues_reported_without_installation_or_output (workflow_test.WorkflowTests.test_all_asset_issues_reported_without_installation_or_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_workflow.py", line 27, in test_all_asset_issues_reported_without_installation_or_output
+    self.assertEqual(getattr(caught.exception, 'asset_issues', None), [
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'alias':'missingOne','origin':'plan','reason':'missing_file'},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'alias':'missingTwo','origin':'plan','reason':'missing_file'},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'alias':'changed','origin':'plan','reason':'digest_mismatch'}])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != [{'alias': 'missingOne', 'origin': 'plan'[161 chars]ch'}]
+
+======================================================================
+FAIL: test_public_workflow_reports_asset_list_before_runtime_creation (workflow_test.WorkflowTests.test_public_workflow_reports_asset_list_before_runtime_creation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_workflow.py", line 56, in test_public_workflow_reports_asset_list_before_runtime_creation
+    self.assertEqual(body.get('assetIssues'),[{'alias':'first','origin':'plan','reason':'missing_file'},
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                             {'alias':'second','origin':'plan','reason':'missing_file'}])
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != [{'alias': 'first', 'origin': 'plan', 're[83 chars]le'}]
+
+======================================================================
+FAIL: test_source_and_new_asset_issues_keep_origin_without_local_paths (workflow_test.WorkflowTests.test_source_and_new_asset_issues_keep_origin_without_local_paths)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_workflow.py", line 40, in test_source_and_new_asset_issues_keep_origin_without_local_paths
+    self.assertEqual(getattr(caught.exception, 'asset_issues', None), [
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'alias':'prior','origin':'source','reason':'missing_file'},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'alias':'new','origin':'plan','reason':'missing_file'}])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != [{'alias': 'prior', 'origin': 'source', '[82 chars]le'}]
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.107s
+
+FAILED (failures=3)

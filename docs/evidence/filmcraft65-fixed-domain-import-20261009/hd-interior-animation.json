@@ -1,0 +1,71 @@
+{
+  "schema": "filmcraft-fixed-hd-interior-animation/v1",
+  "result": "PASS",
+  "checkpointSha256": "d3509ed44aab0120625fbaf2db214d58b9edee63ab4ed06fc55b3ed3ce7ea5b6",
+  "coordinateSelection": "Independent source alpha:transparent at0,opaque throughout7x7 neighborhood at60;middle candidate selected before decoding movies.",
+  "maximumChannelError": 12,
+  "samples": [
+    {
+      "movieSha256": "e54c6f53f259449577f24c64ac80d0a367f455aa534065e22e240a9f156fef93",
+      "frame": 0,
+      "sourceFrame": 0,
+      "xy": [
+        697,
+        508
+      ],
+      "actual": [
+        0,
+        128,
+        1
+      ],
+      "expected": [
+        0,
+        128,
+        0
+      ],
+      "maximumChannelError": 1
+    },
+    {
+      "movieSha256": "e54c6f53f259449577f24c64ac80d0a367f455aa534065e22e240a9f156fef93",
+      "frame": 60,
+      "sourceFrame": 60,
+      "xy": [
+        697,
+        508
+      ],
+      "actual": [
+        246,
+        248,
+        250
+      ],
+      "expected": [
+        247,
+        248,
+        250
+      ],
+      "maximumChannelError": 1
+    },
+    {
+      "movieSha256": "d9397b9675b4870c386994ff20ae98dff7b39a24aa504090f67970526dba2fcf",
+      "frame": 61,
+      "sourceFrame": 60,
+      "xy": [
+        697,
+        508
+      ],
+      "actual": [
+        246,
+        248,
+        250
+      ],
+      "expected": [
+        247,
+        248,
+        250
+      ],
+      "maximumChannelError": 1
+    }
+  ],
+  "animationAndOneFrameRevisionAlignment": true,
+  "driverSha256": "5b8a52a2b01659c9beb5fffa2def74db44854bd4ad187e601190ae12bc254580"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "filmcraft-fixed-sequence-subgate/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.65",
+  "pluginSha": "32bef4b8d439e600054cd76fd50f99c987ef644d",
+  "sourceRef": "v0.1.0-dev.48",
+  "sourceSha": "4e955df5a4d5d95e6ef27723223d3fafb0109dec",
+  "runtime": {
+    "version": "0.2.0-craft.5",
+    "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "coldPublicCliInstall": true
+  },
+  "cases": [
+    "fractional-public-workflow",
+    "moved-sequence-revision",
+    "source-refusals",
+    "native-collect",
+    "native-collect-refusals"
+  ],
+  "evidenceFiles": {
+    "report.json": {
+      "originalPrivateSha256": "b5e4078caaa6922cf96a3f1cb4c5077b68ea668549eb1c03952d9ab95c4dde36",
+      "publishedProjectionSha256": "827449e99c0ea0b95872ae99d6d365aae14bdc73f5b2cf23a4330772a543cd2c"
+    },
+    "initial-fixture-failure.json": {
+      "originalPrivateSha256": "58e2e7ae9b4dfb8ea68fbaad6bc51a068b0164df9456794727c47c8d6f8d3672",
+      "publishedProjectionSha256": "dec76f811be63df2a43096b1a9fa9a4614e1444355facac5bff853d583fd3aa1"
+    },
+    "initial-driver.py.txt": {
+      "originalPrivateSha256": "6b59dfaa9ba6cf94f8eefa02771bc017493ed2d8b7548ebc9de88eeb4b3c2753",
+      "publishedProjectionSha256": "692a4160bed36878ea0d76bb259301a3fe154c78b27377aa000a8bb4c1746662"
+    },
+    "resume-driver.py.txt": {
+      "originalPrivateSha256": "1827913996230982940727d8f973b8cbfb5d8ccef7872b126299b21048cd1b76",
+      "publishedProjectionSha256": "aea5fb5afed0dc87de1b65f662bd715152050c59ef2762205b7dbd487927bfc1"
+    },
+    "initial-run.txt": {
+      "originalPrivateSha256": "6dd3ba96838d1f6f611bf30e78d974e454c64b1855fe55b71eea5bafb3b2c6df",
+      "publishedProjectionSha256": "10a2466c7b0f4e315f36209ca30b4bdd94400bc21db6ffd74534d1dfa1c45c95"
+    },
+    "resumed-run.txt": {
+      "originalPrivateSha256": "3bffb5db3e7dc902fcc6b438923e778ace96a5f3d94b036f2a6caca93a81ca19",
+      "publishedProjectionSha256": "7b3cf0b8a82705803ca80cf39938193e372467bed5571bd775450a43646ce10d"
+    }
+  },
+  "fixtureFailure": "Initial verifier confused V1 command track with saved Video 1 name. Failure retained; resumed using saved track id and bound background item. Native execution was already successful and not replayed.",
+  "scope": "FC-DM-001 sequence subset at fixed65/source48; not HD/Effect/Art/creative acceptance",
+  "tasksClosed": [],
+  "remaining": "Complete FC-DM-001 HD/SEGMENT and historical target behavior-red mapping remain to be qualified."
+}

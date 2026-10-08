@@ -1,0 +1,67 @@
+{
+  "schema": "filmcraft-fixed-segment-refusals/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.65",
+  "sourceRef": "v0.1.0-dev.48",
+  "installedModuleSha256": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+  "driverSha256": "0f9894801adb906caae22539677b97c565e0108ee9dfb822d46644e0bcb61884",
+  "cases": [
+    {
+      "case": "checkpoint-version",
+      "result": "PASS",
+      "error": "sequence_segment_checkpoint_invalid",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    },
+    {
+      "case": "child-version",
+      "result": "PASS",
+      "error": "sequence_manifest_invalid",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    },
+    {
+      "case": "per-segment-budget",
+      "result": "PASS",
+      "error": "sequence_segment_ranges_invalid",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    },
+    {
+      "case": "total-frame-budget",
+      "result": "PASS",
+      "error": "sequence_segment_budget_invalid",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    },
+    {
+      "case": "logical-byte-budget",
+      "result": "PASS",
+      "error": "sequence_segment_budget_invalid",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    },
+    {
+      "case": "chunk-budget",
+      "result": "PASS",
+      "error": "sequence_segment_budget_invalid",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    },
+    {
+      "case": "composition-rate-conflict",
+      "result": "PASS",
+      "error": "sequence_segment_timing_invalid",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    },
+    {
+      "case": "frame-pixel-conflict",
+      "result": "PASS",
+      "error": "sequence_frame_metadata_mismatch",
+      "outputAbsent": true,
+      "sourcePreserved": true
+    }
+  ],
+  "scope": "Owned tiny synthetic checkpoints passed to actual installed fixed65 consumer; separate from actual120-frame native HD proof."
+}

@@ -1,0 +1,5 @@
+moved-sequence-revision PASS
+source-refusals PASS
+rendered 64x36 in 1.0 ms → [WORK]/plugin65-sequence-audit/native-nonfirst.png
+native-collect PASS
+PASS

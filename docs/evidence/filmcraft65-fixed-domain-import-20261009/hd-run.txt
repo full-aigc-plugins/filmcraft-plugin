@@ -1,0 +1,2 @@
+actual-effect-hd PASS
+fixed-film-hd PASS

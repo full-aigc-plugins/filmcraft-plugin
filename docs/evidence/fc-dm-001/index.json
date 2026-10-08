@@ -1,0 +1,54 @@
+{
+  "requirement": "FC-DM-001",
+  "result": "PASS",
+  "fixedPluginRef": "v0.1.0-dev.65",
+  "fixedPluginSha": "32bef4b8d439e600054cd76fd50f99c987ef644d",
+  "sourceRef": "v0.1.0-dev.48",
+  "sourceSha": "4e955df5a4d5d95e6ef27723223d3fafb0109dec",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "acceptanceEvidence": "docs/evidence/filmcraft65-fixed-domain-import-20261009/acceptance.json",
+  "acceptanceSha256": "bb2c2cf31596fd53aa7d77883a045cadeeb803bdb1ef75d6178fc6992deba267",
+  "scenarios": [
+    {
+      "id": "FC-DM-001-P",
+      "result": "PASS",
+      "observed": "Three current native video/image/audio registrations with byte hashes, stream/duration and timeline references; actual hash-checked relink after originals unavailable."
+    },
+    {
+      "id": "FC-DM-001-N",
+      "result": "PASS",
+      "observed": "Actual fixed64 omitted two aliases; source47 three behavior failures; fixed65 all13 actual skills and public Node entry safe complete issues, no installation/output/task/attempt."
+    },
+    {
+      "id": "FC-DM-001-SEQUENCE",
+      "result": "PASS",
+      "observed": "Explicit24000/1001 transparent native sequence, complete12 frames/duration, native reopen and independent decode; unsupported241fps/missing/hash conflicts reject; native preferences unchanged."
+    },
+    {
+      "id": "FC-DM-001-SEQUENCE-COLLECT",
+      "result": "PASS",
+      "observed": "Native same-basename two-sequence collection,24 per-frame from/to hash checks and distinct directories; missing middle/tail and registered duration mismatch refuse before directory; non-first frame decoded after source unavailable."
+    },
+    {
+      "id": "FC-DM-001-SEQUENCE-RELINK",
+      "result": "PASS",
+      "observed": "Native ImageSequence and saved rational rate retained in actual public CLI moved revision; non-target/old bytes preserved; missing/truncated/pixel metadata conflicts refused;12→13 and120→121 frame revisions independently decoded/aligned."
+    },
+    {
+      "id": "FC-DM-001-HD",
+      "result": "PASS",
+      "observed": "Actual Effect55 pinned-Git producer reference generated four30-frame1080p segments/995328000 logical RGBA bytes. Actual fixed65 Film skill copied alone cold public native install, all120 frame RGBA/alpha and full native video dimensions24fps/5.013s;independent animated interior pixel changes error1. All5 PNG filters/wrap/cross-row and11 structure/CRC/decompression/resource refusals; source/skills preserved."
+    },
+    {
+      "id": "FC-DM-001-SEGMENT",
+      "result": "PASS",
+      "observed": "Actual verified Effect native checkpoint consumed; segment ranges/source hashes and120 frames preserved through save/reopen/moved revision; current installed consumer rejects gaps/overlap/rational/child hash/corrupt frame/unverified state plus8 schema/resource/metadata conflicts; original v1 limits unchanged."
+    }
+  ],
+  "tasksQualified": [
+    "4.1",
+    "4.2",
+    "4.3"
+  ],
+  "fullV1": "OPEN"
+}

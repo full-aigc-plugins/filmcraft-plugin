@@ -1,0 +1,22 @@
+{
+  "schema": "filmcraft-fixed-media-evidence-projection/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.65",
+  "pluginSha": "32bef4b8d439e600054cd76fd50f99c987ef644d",
+  "sourceRef": "v0.1.0-dev.48",
+  "sourceSha": "4e955df5a4d5d95e6ef27723223d3fafb0109dec",
+  "originalPrivateSha256": "1ad9465021f3240fb5a093f7dcc77c60ea4d6e10cfaf2a03f7d21ba3320143c5",
+  "publishedProjectionSha256": "47d2a32a1016353775359cbdce6c6777647674fb0bf93d4a1afd773e8393c844",
+  "cases": [
+    "vfr",
+    "long-audio-tail",
+    "font-change",
+    "transparent-sequence",
+    "bad-file",
+    "missing-font",
+    "dependency-move"
+  ],
+  "scope": "seven real-derived/synthetic media cases in actual isolated fixed Codex installation; bounded platform/codec scope; full V1 remains open",
+  "requirements": "Bounded media evidence for FC-DM-001-P and FC-DM-006-REAL-MEDIA-MATRIX. Does not prove all sequence/HD or timeline/export scenarios.",
+  "tasksClosed": []
+}

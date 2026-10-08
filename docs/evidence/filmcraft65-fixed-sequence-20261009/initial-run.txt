@@ -1,0 +1,6 @@
+fractional-public-workflow PASS
+Traceback (most recent call last):
+  File "[WORK]/verify-fixed65-sequence.py", line 86, in <module>
+    oldtrack=next(x for x in oldnative['sequence']['video'] if x['name']=='V1') if any('name' in x for x in oldnative['sequence']['video']) else oldnative['sequence']['video'][0]
+             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration

@@ -1,0 +1,54 @@
+"""在固定安装代码上核验PNG/序列结构拒绝与HD动画像素变化。"""
+from pathlib import Path
+import hashlib,importlib.util,json,struct,subprocess,sys,types,unittest,zlib
+from PIL import Image
+sys.dont_write_bytecode=True
+BASE=Path('[HOME]/workspaces/workspace-agent-skills');W=BASE/'.local/filmcraft-recovery-01a11a34-20261008';R=BASE/'full-aigc-plugins-repositories/filmcraft-plugin';S=BASE/'full-aigc-skills-repositories/filmcraft-skills';O=W/'plugin65-domain-integrity';O.mkdir(exist_ok=False)
+dirs=json.loads((W/'host65/installed-directories.private.json').read_text());skill=Path(dirs['filmcraft-use']);payload=skill.parent.parent
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def load(p,name):
+ spec=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+sys.path.insert(0,str(R/'scripts'));from verify_fixed_install import release_entry,owner_helper,verify_code_files
+expected=release_entry(R,'v0.1.0-dev.65');helper,_=owner_helper(R.parent/'artcraft-plugin')
+def verify():
+ for p in dirs.values():helper.verify_installed_skill(Path(p),expected)
+ verify_code_files(payload,expected['codeFilesSha256'])
+verify();assert subprocess.check_output(['git','-C',str(S),'rev-parse','v0.1.0-dev.48']).decode().strip()==expected['skillSourceSha']
+modules=[];test_hashes={}
+for name in ['test_sequence_assets','test_segmented_assets','test_rgba_filters']:
+ data=subprocess.check_output(['git','-C',str(S),'show','v0.1.0-dev.48:tests/'+name+'.py']);assert (S/'tests'/f'{name}.py').read_bytes()==data
+ m=types.ModuleType(name);m.__file__=str(payload/'tests'/f'{name}.py');sys.modules[name]=m
+ exec(compile(data,m.__file__,'exec'),m.__dict__);modules.append(m);test_hashes[name]=hashlib.sha256(data).hexdigest()
+with (O/'installed-unit-tests.txt').open('w') as stream:
+ suite=unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromModule(m) for m in modules);result=unittest.TextTestRunner(stream=stream,verbosity=2).run(suite)
+assert result.wasSuccessful() and not result.skipped
+png=load(skill/'scripts/png_inspection.py','installed_png_bounds')
+def chunk(kind,body):return struct.pack('>I',len(body))+kind+body+struct.pack('>I',zlib.crc32(kind+body))
+def fixture(scan=b'\x00\xff\x00\x00\x80',width=1,height=1,compressed=None):
+ return png.SIGNATURE+chunk(b'IHDR',struct.pack('>IIBBBBB',width,height,8,6,0,0,0))+chunk(b'IDAT',zlib.compress(scan) if compressed is None else compressed)+chunk(b'IEND',b'')
+base=fixture();invalid={'crc':base[:-1]+bytes([base[-1]^1]),'filter':fixture(b'\x05\xff\x00\x00\x80'),'short-scan':fixture(b'\0'),'long-scan':fixture(b'\0'+b'x'*40),'truncated-zlib':fixture(compressed=zlib.compress(b'\0\xff\0\0\x80')[:-2]),'extra-zlib-stream':fixture(compressed=zlib.compress(b'\0\xff\0\0\x80')+zlib.compress(b'\0')),'scan-budget':fixture(width=16384,height=16384),'missing-iend':base[:-12],'trailing-bytes':base+b'bad','chunk-order':png.SIGNATURE+chunk(b'IDAT',zlib.compress(b'\0\xff\0\0\x80'))+base[8:]}
+rows=[]
+for name,data in invalid.items():
+ p=O/(name+'.png');p.write_bytes(data)
+ try:png.inspect_png(p)
+ except ValueError as e:rows.append({'case':name,'result':'PASS','error':str(e),'inputSha256':sha(p)})
+ else:raise AssertionError(name)
+# 稀疏文件越过编码字节上限，拒绝发生在读取其内容前。
+p=O/'file-budget.png'
+with p.open('wb') as f:f.truncate(png.MAX_FILE+1)
+try:png.inspect_png(p)
+except ValueError as e:assert str(e)=='provided_png_too_large';rows.append({'case':'encoded-file-budget','result':'PASS','error':str(e),'logicalBytes':p.stat().st_size,'sparseOwnedFixture':True})
+else:raise AssertionError('encoded-file-budget')
+hd=W/'plugin65-hd-audit';effect=hd/'effect';delivery=json.loads((effect/'manifest.json').read_text());descriptor=effect/delivery['imageSequence']['path'];seg=json.loads(descriptor.read_text())
+def frame_source(i):
+ part=next(p for p in seg['segments'] if p['firstFrame']<=i<p['firstFrame']+p['frameCount']);m=json.loads((descriptor.parent/part['location']).read_text());return descriptor.parent/Path(part['location']).parent/m['frames'][i-part['firstFrame']]['location']
+with Image.open(frame_source(0)) as a,Image.open(frame_source(60)) as b:
+ left=a.convert('RGBA');right=b.convert('RGBA');delta=bytes(abs(x-y) for x,y in zip(left.getchannel('A').tobytes(),right.getchannel('A').tobytes()));maximum=max(delta);assert maximum>=128;index=delta.index(maximum);xy=(index%1920,index//1920);source_pixels=[left.getpixel(xy),right.getpixel(xy)]
+def linear(v):return v/12.92 if v<=0.04045 else ((v+0.055)/1.055)**2.4
+def srgb(v):return 12.92*v if v<=0.0031308 else 1.055*v**(1/2.4)-0.055
+samples=[]
+for i,pixel in zip([0,60],source_pixels):
+ raw=subprocess.check_output(['/opt/homebrew/bin/ffmpeg','-v','error','-i',str(hd/'film/film.mp4'),'-vf',f'select=eq(n\\,{i})','-frames:v','1','-f','rawvideo','-pix_fmt','rgb24','-']);assert len(raw)==1920*1080*3
+ start=index*3;actual=list(raw[start:start+3]);alpha=pixel[3]/255;want=[round(255*srgb(alpha*linear(pixel[c]/255)+(1-alpha)*linear([0,128,0][c]/255))) for c in range(3)];error=max(abs(x-y) for x,y in zip(actual,want));assert error<=24,(i,actual,want);samples.append({'frame':i,'xy':list(xy),'sourceRgba':list(pixel),'expected':want,'actual':actual,'maximumChannelError':error})
+assert max(abs(x-y) for x,y in zip(samples[0]['actual'],samples[1]['actual']))>=60
+verify();report={'schema':'filmcraft-fixed-domain-integrity/v1','result':'PASS','pluginSha':expected['sha'],'sourceSha':expected['skillSourceSha'],'installedTests':{'run':result.testsRun,'fail':len(result.failures),'errors':len(result.errors),'skipped':len(result.skipped),'testGitFilesSha256':test_hashes,'scope':'Unmodified source48 Git test bytes with __file__ relocated to actual fixed65 payload; production module paths bind installed files.'},'pngRefusals':rows,'hdAnimationSamples':samples,'driverSha256':sha(__file__),'allInstalledSkillsAndCodePreserved':True};(O/'report.private.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'result':'PASS','installedTests':result.testsRun,'pngRefusals':len(rows),'animationSamples':len(samples)}))

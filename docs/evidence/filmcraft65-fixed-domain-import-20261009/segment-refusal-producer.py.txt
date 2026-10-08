@@ -1,0 +1,31 @@
+"""固定安装消费器的分段版本、范围及资源限制补充验证。"""
+from pathlib import Path
+import hashlib,importlib.util,json,subprocess,sys,types
+sys.dont_write_bytecode=True
+B=Path('[HOME]/workspaces/workspace-agent-skills');W=B/'.local/filmcraft-recovery-01a11a34-20261008';R=B/'full-aigc-plugins-repositories/filmcraft-plugin';S=B/'full-aigc-skills-repositories/filmcraft-skills';O=W/'plugin65-segment-refusals';O.mkdir(exist_ok=False)
+payload=Path(json.loads((W/'host65/installed-directories.private.json').read_text())['filmcraft-use']).parent.parent
+for name in ['test_sequence_assets','test_segmented_assets']:
+ data=subprocess.check_output(['git','-C',str(S),'show','v0.1.0-dev.48:tests/'+name+'.py']);m=types.ModuleType(name);m.__file__=str(payload/'tests'/f'{name}.py');sys.modules[name]=m;exec(compile(data,m.__file__,'exec'),m.__dict__)
+spec=importlib.util.spec_from_file_location('actual_installed_segment_refusals',payload/'skills/filmcraft-use/scripts/sequence_assets.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+def hashes(p):return {str(f.relative_to(p)):module.digest(f) for f in p.rglob('*') if f.is_file()}
+rows=[]
+for fault in ['checkpoint-version','child-version','per-segment-budget','total-frame-budget','logical-byte-budget','chunk-budget','composition-rate-conflict','frame-pixel-conflict']:
+ source=O/fault;source.mkdir();path,value=m.segmented(source)
+ if fault=='checkpoint-version':value['schema']='craft-segmented-render-checkpoint/v2'
+ elif fault=='per-segment-budget':value['binding']['chunkBytes']=8
+ elif fault=='total-frame-budget':value['frameCount']=10001
+ elif fault=='logical-byte-budget':value['frameCount']=10000;value['binding']['composition'].update(width=16384,height=16384)
+ elif fault=='chunk-budget':value['binding']['chunkBytes']=512*1024*1024+1
+ elif fault=='composition-rate-conflict':value['binding']['composition']['frameRate']=24
+ elif fault in ['child-version','frame-pixel-conflict']:
+  child=source/value['segments'][0]['location'];v=json.loads(child.read_text())
+  if fault=='child-version':v['schema']='craft-image-sequence/v2'
+  else:v['frames'][0]['rgbaSha256']='0'*64
+  child.write_text(json.dumps(v));value['segments'][0]['sha256']=module.digest(child)
+ path.write_text(json.dumps(value));before=hashes(source);out=O/('output-'+fault)
+ try:module.copy_segmented_sequence(path,module.digest(path),out)
+ except ValueError as e:error=str(e)
+ else:raise AssertionError(fault)
+ assert not out.exists() and hashes(source)==before
+ rows.append({'case':fault,'result':'PASS','error':error,'outputAbsent':True,'sourcePreserved':True})
+report={'schema':'filmcraft-fixed-segment-refusals/v1','result':'PASS','pluginRef':'v0.1.0-dev.65','sourceRef':'v0.1.0-dev.48','installedModuleSha256':module.digest(payload/'skills/filmcraft-use/scripts/sequence_assets.py'),'driverSha256':module.digest(Path(__file__)),'cases':rows,'scope':'Owned tiny synthetic checkpoints passed to actual installed fixed65 consumer; separate from actual120-frame native HD proof.'};(O/'report.private.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({'result':'PASS','cases':len(rows)}))

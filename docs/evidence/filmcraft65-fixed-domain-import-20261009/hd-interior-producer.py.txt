@@ -1,0 +1,13 @@
+"""独立核验HD文字内部像素的动画与移动后一帧对齐，避开有损编码字形边缘。"""
+from pathlib import Path
+import hashlib,json,subprocess
+from PIL import Image,ImageFilter
+W=Path('[WORK]');R=W/'plugin65-hd-revision';effect=R/'original-effect-unavailable';m=json.loads((effect/'manifest.json').read_text());descriptor=effect/m['imageSequence']['path'];seg=json.loads(descriptor.read_text())
+def image(i):
+ part=next(x for x in seg['segments'] if x['firstFrame']<=i<x['firstFrame']+x['frameCount']);value=json.loads((descriptor.parent/part['location']).read_text());p=descriptor.parent/Path(part['location']).parent/value['frames'][i-part['firstFrame']]['location'];return Image.open(p).convert('RGBA')
+a=image(0);b=image(60);left=a.getchannel('A').tobytes();interior=b.getchannel('A').filter(ImageFilter.MinFilter(7)).tobytes();candidates=[i for i,(x,y) in enumerate(zip(left,interior)) if x==0 and y==255];assert candidates;index=candidates[len(candidates)//2];xy=(index%1920,index//1920)
+rows=[]
+for folder,frame,source in [(R/'moved',0,a),(R/'moved',60,b),(R/'revised',61,b)]:
+ raw=subprocess.check_output(['/opt/homebrew/bin/ffmpeg','-v','error','-i',str(folder/'film.mp4'),'-vf',f'select=eq(n\\,{frame})','-frames:v','1','-f','rawvideo','-pix_fmt','rgb24','-']);assert len(raw)==1920*1080*3;rgba=source.getpixel(xy);assert rgba[3] in [0,255];want=[0,128,0] if rgba[3]==0 else list(rgba[:3]);actual=list(raw[index*3:index*3+3]);error=max(abs(x-y) for x,y in zip(actual,want));assert error<=12,(actual,want);rows.append({'movieSha256':hashlib.sha256((folder/'film.mp4').read_bytes()).hexdigest(),'frame':frame,'sourceFrame':0 if frame==0 else 60,'xy':xy,'actual':actual,'expected':want,'maximumChannelError':error})
+assert max(abs(x-y) for x,y in zip(rows[0]['actual'],rows[1]['actual']))>=100
+report={'schema':'filmcraft-fixed-hd-interior-animation/v1','result':'PASS','checkpointSha256':hashlib.sha256(descriptor.read_bytes()).hexdigest(),'coordinateSelection':'Independent source alpha:transparent at0,opaque throughout7x7 neighborhood at60;middle candidate selected before decoding movies.','maximumChannelError':12,'samples':rows,'animationAndOneFrameRevisionAlignment':True,'driverSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()};(R/'interior-animation.private.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({'result':'PASS','actualErrors':[x['maximumChannelError'] for x in rows]}))

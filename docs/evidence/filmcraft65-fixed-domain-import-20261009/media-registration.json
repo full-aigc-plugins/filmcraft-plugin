@@ -1,0 +1,123 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "kind": "video",
+      "alias": "video",
+      "sha256": "b9908226c67fff95fdb56441e55fe8af483ab18035344008efcddd0f0de49754",
+      "probe": {
+        "audio": {
+          "bits_per_sample": 16,
+          "channels": 2,
+          "codec": "PCM 16-bit",
+          "sample_rate": 44100
+        },
+        "container": "Matroska",
+        "duration": "762048000000",
+        "file_size": 606321,
+        "kind": "Movie",
+        "name": "video.mkv",
+        "start_timecode": null,
+        "video": {
+          "bitrate": 199805,
+          "codec": "H.264",
+          "color": {
+            "matrix": "Bt601",
+            "primaries": "Bt709",
+            "range": "Limited",
+            "transfer": "Bt709"
+          },
+          "frame_rate": {
+            "den": 1,
+            "num": 24
+          },
+          "has_alpha": false,
+          "height": 180,
+          "par": [
+            120,
+            89
+          ],
+          "pixel_format": "",
+          "width": 320
+        }
+      },
+      "item": 8,
+      "collectedPath": "video.mkv",
+      "manifestSha256": "148dacdf82ece694b1c086ece38a818a958d56a8f9b03bd265470942e79b0390",
+      "nativeInspectSha256": "ee7de5ab9713fa55375890cedabe1da04d26468d6ffea52ff148af0822f9f15b",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "collectedBytesMatch": true,
+      "nativeTimelineReferenceConfirmed": true
+    },
+    {
+      "kind": "audio",
+      "alias": "audio",
+      "sha256": "e382bdc729beedb9e9694ac4f908fb0af95960a003c79ea215d0fbe680026b0e",
+      "probe": {
+        "audio": {
+          "bits_per_sample": 16,
+          "channels": 2,
+          "codec": "PCM",
+          "sample_rate": 48000
+        },
+        "container": "WAV",
+        "duration": "46030578048000",
+        "file_size": 34792654,
+        "kind": "AudioOnly",
+        "name": "audio.wav",
+        "start_timecode": null,
+        "video": null
+      },
+      "item": 8,
+      "collectedPath": "audio.wav",
+      "manifestSha256": "37b7d1e4e69c7a261928f88ec0a644b1b17192754bd06f41dae7e5c10634667c",
+      "nativeInspectSha256": "9f3476f3b91fd6e195ba07bc6a5df8329e394d9996a7856c71c10c1e70641e68",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "collectedBytesMatch": true,
+      "nativeTimelineReferenceConfirmed": true
+    },
+    {
+      "kind": "image",
+      "alias": "background",
+      "sha256": "ff5d91a445cf1095551190d2e844894195595d8b8e8b0f807f56932cddb89bc4",
+      "probe": {
+        "audio": null,
+        "container": "Image",
+        "duration": "1270080000000",
+        "file_size": 8590,
+        "kind": "Still",
+        "name": "background.png",
+        "start_timecode": null,
+        "video": {
+          "bitrate": null,
+          "codec": "PNG",
+          "color": {
+            "matrix": "Bt709",
+            "primaries": "Bt709",
+            "range": "Full",
+            "transfer": "Srgb"
+          },
+          "frame_rate": {
+            "den": 1001,
+            "num": 30000
+          },
+          "has_alpha": false,
+          "height": 1080,
+          "par": [
+            1,
+            1
+          ],
+          "pixel_format": "RGB 8-bit",
+          "width": 1920
+        }
+      },
+      "item": 8,
+      "collectedPath": "background.png",
+      "manifestSha256": "1ce90111fa0780fbbcbdbded8e57e3cd7812b040a2be82ebb13a1ea8821bd291",
+      "nativeInspectSha256": "e143a844413243d6207aa792af59e01042439a95f8b2481516065104700dc46d",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "collectedBytesMatch": true,
+      "nativeTimelineReferenceConfirmed": true
+    }
+  ]
+}

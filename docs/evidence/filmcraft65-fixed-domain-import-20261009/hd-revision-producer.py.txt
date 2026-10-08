@@ -1,0 +1,33 @@
+"""从固定65 HD分段消费交付继续执行原目录不可用后的局部修订。"""
+from pathlib import Path
+import hashlib,json,subprocess,sys,traceback
+from PIL import Image
+sys.dont_write_bytecode=True
+B=Path('[HOME]/workspaces/workspace-agent-skills');W=B/'.local/filmcraft-recovery-01a11a34-20261008';R=B/'full-aigc-plugins-repositories/filmcraft-plugin';H=W/'plugin65-hd-audit';O=W/'plugin65-hd-revision';O.mkdir(exist_ok=False)
+sys.path.insert(0,str(R/'scripts'));from verify_fixed_install import release_entry,owner_helper,verify_code_files
+from vendor.skill_vendor import hash_skill_dir
+expected=release_entry(R,'v0.1.0-dev.65');dirs={k:Path(v) for k,v in json.loads((W/'host65/installed-directories.private.json').read_text()).items()};helper,_=owner_helper(R.parent/'artcraft-plugin');skill=H/'single-skill/.agents/skills/filmcraft-cli-media';assert hash_skill_dir(skill)==expected['skills']['filmcraft-cli-media']
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def hashes(p):return {str(f.relative_to(p)):sha(f) for f in p.rglob('*') if f.is_file()}
+report={'schema':'filmcraft-fixed-hd-segment-revision/v1','result':'RUNNING','pluginSha':expected['sha'],'sourceSha':expected['skillSourceSha'],'driverSha256':sha(__file__),'priorHdReportSha256':sha(H/'report.private.json')}
+def save():(O/'report.private.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+try:
+ assert json.loads((H/'report.private.json').read_text())['result']=='PASS'
+ old=H/'film';moved=O/'moved';old.rename(moved);effect_old=H/'effect';effect=O/'original-effect-unavailable';effect_old.rename(effect);(H/'background.png').rename(O/'original-background-unavailable.png')
+ before=hashes(moved);source=json.loads((moved/'manifest.json').read_text());effect_before=hashes(effect)
+ plan={'expectedProjectSha256':source['files']['project.fcproj'],'operations':[{'command':'timeline.move','params':{'moves':[{'clip':source['bindings']['overlayClip']['clips'][0],'track':'V2','time':str(254016000000//24)}],'insert':False}}],'frames':['0',str(254016000000*61//24)],'export':{'audioRequired':False}}
+ p=O/'plan.json';p.write_text(json.dumps(plan));output=O/'revised'
+ r=subprocess.run([sys.executable,'-I','-B',str(skill/'scripts/workflow.py'),str(p),'--output',str(output),'--source',str(moved),'--runtime-home',str(H/'empty-film-public-runtime'),'--data-dir',str(H/'data')],capture_output=True,text=True,timeout=600)
+ (O/'cli.private.json').write_text(json.dumps({'exitCode':r.returncode,'stdout':r.stdout,'stderr':r.stderr}));assert r.returncode==0,(r.stdout,r.stderr)
+ result=json.loads(r.stdout);assert hashes(moved)==before;assert hashes(effect)==effect_before
+ a=json.loads((moved/'native.json').read_text());b=json.loads((output/'native.json').read_text());track=next(t for t in a['sequence']['video'] if any(c['item']==source['assets']['background']['item'] for c in t['items']));assert track==next(t for t in b['sequence']['video'] if t['id']==track['id'])
+ assert result['assets']['overlay']['probe']['kind']=='ImageSequence' and result['assets']['overlay']['probe']['video']['frame_rate']=={'num':24,'den':1};assert len([k for k in result['files'] if '/frame_' in k])==120
+ subprocess.run(['/opt/homebrew/bin/ffmpeg','-v','error','-i',str(output/'film.mp4'),'-f','null','-'],check=True,capture_output=True)
+ probe=json.loads(subprocess.check_output(['/opt/homebrew/bin/ffprobe','-v','error','-count_frames','-show_streams','-show_format','-of','json',str(output/'film.mp4')],text=True));v=next(x for x in probe['streams'] if x['codec_type']=='video');assert (v['width'],v['height'],v['r_frame_rate'],int(v['nb_read_frames']))==(1920,1080,'24/1',121)
+ # 以先前独立oracle定位的真实文字alpha变化像素，验证一帧位移后第61帧仍对应源第60帧。
+ integrity=json.loads((W/'plugin65-domain-integrity/report.private.json').read_text());oracle=integrity['hdAnimationSamples'][1];xy=oracle['xy'];raw=subprocess.check_output(['/opt/homebrew/bin/ffmpeg','-v','error','-i',str(output/'film.mp4'),'-vf','select=eq(n\\,61)','-frames:v','1','-f','rawvideo','-pix_fmt','rgb24','-']);index=(xy[1]*1920+xy[0])*3;actual=list(raw[index:index+3]);error=max(abs(x-y) for x,y in zip(actual,oracle['expected']));assert error<=24,(actual,oracle)
+ assert not old.exists() and not effect_old.exists() and not (H/'background.png').exists();assert source['assets']['background']['sha256']==result['assets']['background']['sha256'];assert source['assets']['overlay']['sha256']==result['assets']['overlay']['sha256'];assert source['assets']['overlay']['sourceSequenceSha256']==result['assets']['overlay']['sourceSequenceSha256']
+ for name,p in dirs.items():helper.verify_installed_skill(p,expected)
+ verify_code_files(dirs['filmcraft-use'].parent.parent,expected['codeFilesSha256']);assert hash_skill_dir(skill)==expected['skills']['filmcraft-cli-media']
+ report.update(result='PASS',originalProjectAndSourcePathsUnavailable=True,oldDeliveryBytesPreserved=True,nonTargetTrackAndBackgroundPreserved=True,sourceEffectBytesPreserved=True,sourceCheckpointAndAll120FramesPreserved=True,nativeProbe=result['assets']['overlay']['probe'],independentFullDecode=True,decodedFrames=121,geometry=[1920,1080],frameRate='24/1',duration=probe['format']['duration'],animationFrameAlignment={'movieFrame':61,'sourceFrame':60,'xy':xy,'actual':actual,'expected':oracle['expected'],'maximumChannelError':error},projectSha256=sha(output/'project.fcproj'),movieSha256=sha(output/'film.mp4'),allInstalledSkillsAndCodePreserved=True,scope='Actual fixed65/source48 Film single-skill copy, original HD package moved and original Effect/background paths unavailable. Public CLI timeline-only revision; not Art orchestration or arbitrary creative revision acceptance.');save();print('PASS',flush=True)
+except BaseException as error:report.update(result='FAIL',error=repr(error),traceback=traceback.format_exc());save();raise

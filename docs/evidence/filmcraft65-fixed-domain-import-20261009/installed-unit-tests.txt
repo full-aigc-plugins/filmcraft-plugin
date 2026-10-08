@@ -1,0 +1,17 @@
+test_budget_and_noninteger_timebase_rejected_without_output (test_sequence_assets.SequenceAssetTests.test_budget_and_noninteger_timebase_rejected_without_output) ... ok
+test_manifest_digest_and_duplicate_fields_rejected_before_copy (test_sequence_assets.SequenceAssetTests.test_manifest_digest_and_duplicate_fields_rejected_before_copy) ... ok
+test_missing_extra_symlink_and_digest_conflict_are_rejected (test_sequence_assets.SequenceAssetTests.test_missing_extra_symlink_and_digest_conflict_are_rejected) ... ok
+test_real_frames_and_rational_timebase_and_copy (test_sequence_assets.SequenceAssetTests.test_real_frames_and_rational_timebase_and_copy) ... ok
+test_single_installed_skill_has_no_sibling_resource_dependency (test_sequence_assets.SequenceAssetTests.test_single_installed_skill_has_no_sibling_resource_dependency) ... ok
+test_wrong_duration_rate_pixels_and_resource_budget_rejected (test_sequence_assets.SequenceAssetTests.test_wrong_duration_rate_pixels_and_resource_budget_rejected) ... ok
+test_bad_frame_symlink_and_unverified_checkpoint_rejected (test_segmented_assets.SegmentedAssetTests.test_bad_frame_symlink_and_unverified_checkpoint_rejected) ... ok
+test_copy_segments_normalizes_global_frames_and_preserves_source (test_segmented_assets.SegmentedAssetTests.test_copy_segments_normalizes_global_frames_and_preserves_source) ... ok
+test_gap_overlap_wrong_rational_and_child_digest_rejected_before_output (test_segmented_assets.SegmentedAssetTests.test_gap_overlap_wrong_rational_and_child_digest_rejected_before_output) ... ok
+test_malformed_binding_shapes_return_domain_error_without_output (test_segmented_assets.SegmentedAssetTests.test_malformed_binding_shapes_return_domain_error_without_output) ... ok
+test_all_filters_with_wraparound_and_cross_row_dependencies (test_rgba_filters.RgbaFilterTests.test_all_filters_with_wraparound_and_cross_row_dependencies) ... ok
+test_repeated_zero_residual_rows_keep_pixels (test_rgba_filters.RgbaFilterTests.test_repeated_zero_residual_rows_keep_pixels) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.131s
+
+OK

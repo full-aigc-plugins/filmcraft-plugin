@@ -125,7 +125,10 @@
     "6.6": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
     "2.4": "docs/evidence/fc-rt-002/index.json",
     "2.5": "docs/evidence/fc-rt-002/index.json",
-    "2.6": "docs/evidence/fc-rt-002/index.json"
+    "2.6": "docs/evidence/fc-rt-002/index.json",
+    "4.1": "docs/evidence/fc-dm-001/index.json",
+    "4.2": "docs/evidence/fc-dm-001/index.json",
+    "4.3": "docs/evidence/fc-dm-001/index.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -247,5 +250,11 @@
   "assetImportIssueCandidateEvidence": "docs/evidence/filmcraft65-asset-issues-candidate-20261009/acceptance.json",
   "assetImportIssueCandidateStatus": "dev65/source48 candidate aggregates registered ordinary-media missing/hash/symlink issues before install/output. Public Python CLI and Harness/workflow/runtime CLI preserve safe alias/origin/reason lists; malformed diagnostics refuse, long aliases compatible. Source224 tests188PASS36NOT_RUN; plugin169/169 native,86Python and166/169Node with3 declared gaps. Full FC-DM-001 sequence/HD/relink and fixed65 pending;26 V1 tasks remain.",
   "assetImportIssueFixedEvidence": "docs/evidence/filmcraft65-fixed-asset-issues-20261009/acceptance.json",
-  "assetImportIssueFixedStatus": "Actual immutable65/source48 macOS arm64 installed13 skill CLI/Harness refusals and both authorized public Node CLI issue lists PASS;0 tasks/attempts or native install/output.169/169 installed native tests,50 matrix and real craft.4->craft.5->craft.4 execution/decode PASS;13 skills/69code/23test files preserved. Full FC-DM-001 sequence/HD/relink and26 V1 tasks remain open."
+  "assetImportIssueFixedStatus": "Actual immutable65/source48 macOS arm64 installed13 skill CLI/Harness refusals and both authorized public Node CLI issue lists PASS;0 tasks/attempts or native install/output.169/169 installed native tests,50 matrix and real craft.4->craft.5->craft.4 execution/decode PASS;13 skills/69code/23test files preserved. Full FC-DM-001 sequence/HD/relink and26 V1 tasks remain open.",
+  "mediaMatrixFixed65Evidence": "docs/evidence/filmcraft65-fixed-media-20261009/acceptance.json",
+  "mediaMatrixFixed65Status": "7/7 actual fixed65/source48/craft.5 media cases PASS;13 skills/execution files preserved; bounded macOS arm64/Codex; full FC-DM-001/006 and26 V1 tasks remain open",
+  "sequenceFixed65Evidence": "docs/evidence/filmcraft65-fixed-sequence-20261009/acceptance.json",
+  "sequenceFixed65Status": "Fractional transparent import/native full collection/relocated revision and refusal subgates PASS; actual fixed65/source48/craft.5 macOS arm64; full FC-DM-001 HD/SEGMENT and behavior-red mapping pending;26 tasks remain",
+  "domainImportContractEvidence": "docs/evidence/fc-dm-001/index.json",
+  "domainImportContractStatus": "Tasks4.1-4.3 qualified:actual fixed65/source48/craft.5 all7 FC-DM-001 scenarios PASS; historical behavior reds retained;12 installed-code unit tests plus actual120-frame HD/121-frame moved revision;169/169 unchanged installed native regression reused with identity recheck;23 V1 tasks remain open"
 }

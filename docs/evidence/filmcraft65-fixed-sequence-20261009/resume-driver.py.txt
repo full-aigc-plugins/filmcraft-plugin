@@ -1,0 +1,139 @@
+"""对固定65实际安装技能执行序列有理帧率、原生收集及移动修订验收。"""
+import hashlib,importlib.util,json,shutil,subprocess,sys,traceback
+from pathlib import Path
+from PIL import Image
+sys.dont_write_bytecode=True
+BASE=Path('[HOME]/workspaces/workspace-agent-skills')
+WORK=BASE/'.local/filmcraft-recovery-01a11a34-20261008'
+REPO=BASE/'full-aigc-plugins-repositories/filmcraft-plugin'
+ROOT=WORK/'plugin65-sequence-audit'
+assert ROOT.is_dir()
+sys.path.insert(0,str(REPO/'scripts'))
+from verify_fixed_install import release_entry,owner_helper,verify_code_files
+expected=release_entry(REPO,'v0.1.0-dev.65')
+host=WORK/'host65'
+directories={k:Path(v) for k,v in json.loads((host/'installed-directories.private.json').read_text()).items()}
+helper,_=owner_helper(REPO.parent/'artcraft-plugin')
+def identity():
+ for p in directories.values():helper.verify_installed_skill(p,expected)
+ verify_code_files(directories['filmcraft-use'].parent.parent,expected['codeFilesSha256'])
+identity()
+skill=directories['filmcraft-cli-media']
+def load(path,name):
+ spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+film=load(skill/'scripts/workflow.py','actual_fixed_media_workflow')
+mcp=load(skill/'scripts/mcp_session.py','actual_fixed_media_mcp')
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def hashes(p):return {str(f.relative_to(p)):sha(f) for f in p.rglob('*') if f.is_file()}
+rate={'num':24000,'den':1001};frame_ticks=film.TICKS*1001//24000;duration=12*frame_ticks
+report={'schema':'filmcraft-fixed-sequence-audit/v1','result':'RUNNING','plugin':expected,'runtime':{},'cases':{},'driverSha256':sha(__file__),'fixtureProvenance':'Owned synthetic RGBA sequences; no user media.','scope':'FC-DM-001 sequence subset at fixed65/source48; not HD/Effect/Art/creative acceptance'}
+def save():
+ (ROOT/'report.private.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+def sequence(folder,offset=0):
+ folder.mkdir();frames=[]
+ for i in range(12):
+  im=Image.new('RGBA',(64,36),(0,0,0,0))
+  for y in range(4,24):
+   for x in range(4,24):im.putpixel((x,y),((i*20+offset)%256,0,0,255))
+  im.putpixel((30,10),(255,0,0,128));p=folder/f'frame_{i:05d}.png';im.save(p)
+  frames.append({'index':i,'location':p.name,'sha256':sha(p),'bytes':p.stat().st_size,'alphaExtrema':[0,255],'rgbaSha256':hashlib.sha256(im.tobytes()).hexdigest()})
+ value={'schema':'craft-image-sequence/v1','encoding':'png','width':64,'height':36,'bitDepth':8,'channels':'rgba','alphaRepresentation':'straight-png','colorSpace':'unknown','frameRate':rate,'frameCount':12,'durationTicks':'12','timeBase':{'num':1001,'den':24000},'frames':frames}
+ p=folder/'sequence.json';p.write_text(json.dumps(value));return p
+
+def run_cli(plan,out,runtime,source=None):
+ p=ROOT/(out.name+'-plan.json');p.write_text(json.dumps(plan))
+ argv=[sys.executable,'-I','-B',str(skill/'scripts/workflow.py'),str(p),'--output',str(out),'--runtime-home',str(runtime),'--data-dir',str(ROOT/'data')]
+ if source:argv+=['--source',str(source)]
+ r=subprocess.run(argv,capture_output=True,text=True,timeout=240)
+ (ROOT/(out.name+'-cli.private.json')).write_text(json.dumps({'argv':argv,'exitCode':r.returncode,'stdout':r.stdout,'stderr':r.stderr}))
+ return r,json.loads(r.stdout)
+
+def command(session,name,params):
+ result=session.request('tools/call',{'name':'command_run','arguments':{'id':name,'params':params}})
+ if result.get('isError'):raise RuntimeError(json.dumps(result))
+ return json.loads(next(x['text'] for x in result['content'] if x.get('type')=='text'))
+
+def native(argv):return subprocess.check_output([str(binary),'--data-dir',str(ROOT/'data'),*argv],text=True)
+
+def decode(folder,shift=0):
+ raw=subprocess.check_output(['/opt/homebrew/bin/ffmpeg','-v','error','-i',str(folder/'film.mp4'),'-f','rawvideo','-pix_fmt','rgb24','-'])
+ count=len(raw)//(64*36*3);assert count==12+shift,count
+ rows=[]
+ for frame in [1,6,11]:
+  off=(frame*64*36+10*64+10)*3;pixel=list(raw[off:off+3]);want=[(frame-shift)*20,0,0];error=max(abs(a-b) for a,b in zip(pixel,want));assert error<=20,(frame,pixel,want)
+  rows.append({'frame':frame,'pixel':pixel,'expected':want,'maximumChannelError':error})
+ probe=json.loads(subprocess.check_output(['/opt/homebrew/bin/ffprobe','-v','error','-count_frames','-show_streams','-show_format','-of','json',str(folder/'film.mp4')],text=True))
+ video=next(x for x in probe['streams'] if x['codec_type']=='video');assert video['width']==64 and video['height']==36 and video['r_frame_rate']=='24000/1001' and int(video['nb_read_frames'])==count,video
+ return {'decodedFrames':count,'frameRate':video['r_frame_rate'],'duration':probe['format']['duration'],'pixels':rows,'movieSha256':sha(folder/'film.mp4')}
+report=json.loads((ROOT/'report.private.json').read_text())
+report['resumedAfterFixtureFailure']={'failure':'Track name V1 did not match saved native name Video 1','nativeWorkflowFailure':False,'originalReportSha256':sha(ROOT/'initial-failure.private.json'),'originalDriverSha256':sha(ROOT/'initial-driver.py')}
+report['driverSha256']=sha(__file__)
+report.pop('error',None);report.pop('traceback',None);report['result']='RUNNING'
+runtime=ROOT/'empty-public-runtime'
+binary=Path(film.load_module('bootstrap').install(json.loads((skill/'scripts/runtime.lock.json').read_text()),runtime)['executable'])
+delivery=json.loads(json.loads((ROOT/'first-cli.private.json').read_text())['stdout'])
+revised=json.loads(json.loads((ROOT/'revised-cli.private.json').read_text())['stdout'])
+moved=ROOT/'moved';before=hashes(moved)
+for name,digest in delivery['files'].items():assert sha(moved/name)==digest
+change=json.loads((ROOT/'revised-plan.json').read_text())
+oldnative=json.loads((moved/'native.json').read_text());newnative=json.loads((ROOT/'revised/native.json').read_text())
+try:
+ oldtrack=next(x for x in oldnative['sequence']['video'] if any(c['item']==delivery['assets']['background']['item'] for c in x['items']))
+ newtrack=next(x for x in newnative['sequence']['video'] if x['id']==oldtrack['id'])
+ assert oldtrack==newtrack,(oldtrack,newtrack)
+ assert delivery['assets']['background']['sha256']==revised['assets']['background']['sha256']
+ assert revised['assets']['overlay']['probe']['video']['frame_rate']==rate
+ report['cases']['moved-sequence-revision']={'result':'PASS','oldBytesPreserved':True,'nonTargetTrackPreserved':True,'originalSequenceUnavailable':True,'nativeProbe':revised['assets']['overlay']['probe'],'delivery':decode(ROOT/'revised',1)};save();print('moved-sequence-revision PASS',flush=True)
+ # 修订包三种破坏均须在输出/原生执行前拒绝；像素元数据冲突重绑文件摘要以避免只检验外层哈希。
+ report['cases']['source-refusals']=[]
+ for fault in ['missing-middle','missing-tail','truncated','pixel-metadata']:
+  bad=ROOT/('bad-'+fault);shutil.copytree(moved,bad);manifest=bad/delivery['assets']['overlay']['path'];value=json.loads(manifest.read_text());frame=manifest.parent/'frame_00006.png'
+  if fault.startswith('missing'): (manifest.parent/('frame_00006.png' if fault.endswith('middle') else 'frame_00011.png')).unlink()
+  elif fault=='truncated':frame.write_bytes(frame.read_bytes()[:20])
+  else:
+   value['frames'][6]['rgbaSha256']='0'*64;manifest.write_text(json.dumps(value));m=json.loads((bad/'manifest.json').read_text());m['assets']['overlay']['sha256']=sha(manifest);(bad/'manifest.json').write_text(json.dumps(m))
+  bad_before=hashes(bad);out=ROOT/('refusal-'+fault);r,failure=run_cli(change,out,runtime,bad);assert r.returncode!=0 and not out.exists(),(fault,failure);assert hashes(bad)==bad_before
+  report['cases']['source-refusals'].append({'fault':fault,'result':'PASS','error':failure['error'],'outputAbsent':True,'sourcePreserved':True})
+ save();print('source-refusals PASS',flush=True)
+ # 原生直接收集同名序列，检查逐帧来源/目标隔离以及默认偏好不被显式帧率覆盖。
+ a=sequence(ROOT/'native-source-a');b=sequence(ROOT/'native-source-b',13)
+ with mcp.Session([str(binary),'--data-dir',str(ROOT/'data'),'mcp']) as session:
+  prefs=command(session,'prefs.get',{})
+  command(session,'file.newProject',{'name':'native identical basenames'});command(session,'file.newSequence',{'name':'native','width':64,'height':36,'fps':24000/1001})
+  items=[]
+  for manifest,track in [(a,'V1'),(b,'V2')]:
+   item=command(session,'file.importImageSequence',{'path':str(manifest.parent/'frame_00000.png'),'frameRate':rate})['items'][0];items.append(item)
+   command(session,'timeline.place',{'item':item,'track':track,'time':0,'sourceIn':0,'duration':duration,'insert':False})
+  collected=command(session,'file.projectManager',{'destination':str(ROOT/'native-collected'),'mode':'collect','projectName':'project','excludeUnused':False,'includeProxies':False,'wait':True})
+  after=command(session,'prefs.get',{});assert prefs==after
+  rows=[];parents=set()
+  for item in items:
+   entry=next(x for x in collected['files'] if x['item']==item);assert len(entry['sequenceFiles'])==12;parents.add(str(Path(entry['to']).parent))
+   for f in entry['sequenceFiles']:assert sha(f['from'])==sha(f['to'])
+   rows.append(entry)
+  assert len(parents)==2,parents
+ a.parent.rename(ROOT/'native-source-a-unavailable');b.parent.rename(ROOT/'native-source-b-unavailable')
+ output=ROOT/'native-nonfirst.png';native(['--project',str(ROOT/'native-collected/project.fcproj'),'render','--seconds',str(6*1001/24000),'--out',str(output)])
+ with Image.open(output) as im:assert max(abs(x-y) for x,y in zip(im.convert('RGB').getpixel((10,10)),(133,0,0)))<=2
+ report['cases']['native-collect']={'result':'PASS','records':rows,'sameBasenamesIsolated':True,'all24FramesHashVerified':True,'preferencesUnchanged':True,'preferencesSha256':hashlib.sha256(json.dumps(prefs,sort_keys=True).encode()).hexdigest(),'nonFirstDecodedAfterSourceUnavailable':True};save();print('native-collect PASS',flush=True)
+ # 原生层的缺帧／导入时长冲突不能在创建交付目录后才报告失败。
+ report['cases']['native-collect-refusals']=[]
+ for fault in ['middle','tail','duration']:
+  manifest=sequence(ROOT/('native-refusal-'+fault));out=ROOT/('native-output-'+fault)
+  with mcp.Session([str(binary),'--data-dir',str(ROOT/'data'),'mcp']) as session:
+   command(session,'file.newProject',{'name':fault});command(session,'file.newSequence',{'name':fault,'width':64,'height':36,'fps':24000/1001})
+   item=command(session,'file.importImageSequence',{'path':str(manifest.parent/'frame_00000.png'),'frameRate':rate})['items'][0]
+   command(session,'timeline.place',{'item':item,'track':'V1','time':0,'sourceIn':0,'duration':duration,'insert':False})
+   (manifest.parent/('frame_00006.png' if fault=='middle' else 'frame_00011.png')).unlink()
+   if fault=='duration':
+    # 保留连续前11帧但原生登记时长仍为12帧。
+    assert len(list(manifest.parent.glob('frame_*.png')))==11
+   try:command(session,'file.projectManager',{'destination':str(out),'mode':'collect','projectName':'project','excludeUnused':False,'includeProxies':False,'wait':True})
+   except RuntimeError as error:failure=str(error)
+   else:raise AssertionError('native_missing_sequence_accepted:'+fault)
+   assert not out.exists(),fault
+   report['cases']['native-collect-refusals'].append({'fault':fault,'result':'PASS','error':failure,'outputAbsent':True})
+  save()
+ identity();report['all13SkillsAndCodePreserved']=True;report['result']='PASS';save();print('PASS',flush=True)
+except BaseException as error:
+ report['result']='FAIL';report['error']=repr(error);report['traceback']=traceback.format_exc();save();raise

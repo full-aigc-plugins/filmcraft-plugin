@@ -1,0 +1,78 @@
+"""固定65单技能公开冷安装消费固定Effect参考源生成的1080p分段透明动画。"""
+from pathlib import Path
+import hashlib,importlib.util,json,shutil,subprocess,sys,traceback
+from PIL import Image
+sys.dont_write_bytecode=True
+BASE=Path('[HOME]/workspaces/workspace-agent-skills');WORK=BASE/'.local/filmcraft-recovery-01a11a34-20261008';REPO=BASE/'full-aigc-plugins-repositories/filmcraft-plugin';ROOT=WORK/'plugin65-hd-audit';ROOT.mkdir(exist_ok=False)
+sys.path.insert(0,str(REPO/'scripts'))
+from verify_fixed_install import release_entry,owner_helper,verify_code_files
+from vendor.skill_vendor import hash_skill_dir
+expected=release_entry(REPO,'v0.1.0-dev.65');helper,_=owner_helper(REPO.parent/'artcraft-plugin')
+dirs={k:Path(v) for k,v in json.loads((WORK/'host65/installed-directories.private.json').read_text()).items()}
+def identity():
+ for name,p in dirs.items():helper.verify_installed_skill(p,expected)
+ verify_code_files(dirs['filmcraft-use'].parent.parent,expected['codeFilesSha256'])
+identity();effect_skill=WORK/'effect55-export-reference';effect_identity=json.loads((WORK/'effect55-export-reference.identity.json').read_text());assert hash_skill_dir(effect_skill)==effect_identity['expectedSkillTreeSha256']
+film_skill=ROOT/'single-skill/.agents/skills/filmcraft-cli-media';shutil.copytree(dirs['filmcraft-cli-media'],film_skill);assert hash_skill_dir(film_skill)==expected['skills']['filmcraft-cli-media']
+def load(p,name):
+ s=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def hashes(p):return {str(f.relative_to(p)):sha(f) for f in p.rglob('*') if f.is_file()}
+effect=load(effect_skill/'scripts/workflow.py','fixed_effect_reference');film=load(film_skill/'scripts/workflow.py','fixed_film_hd')
+report={'schema':'filmcraft-fixed-hd-segment-consumer/v1','result':'RUNNING','plugin':expected,'effectReference':effect_identity,'driverSha256':sha(__file__),'cases':{},'scope':'Actual isolated fixed65 Film skill copied alone from verified installed payload; exact Effect55 Git snapshot used only as producer reference, not a host installation claim; no Art or creative acceptance.'}
+def save():(ROOT/'report.private.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+try:
+ plan=json.loads((effect_skill/'examples/brand-intro.json').read_text());plan['document'].update(width=1920,height=1080,frameRate=24,duration=5);plan['exports']=[{'format':'png-segmented','chunkFrames':30}];plan['frames']=[0,2.5,119/24]
+ for op in plan['operations']:
+  p=op['params']
+  for key in ['position','size']:
+   if isinstance(p.get(key),list):p[key]=[x*6 for x in p[key]]
+  if op['command']=='layer.newText':p['size']=180
+  if op['command']=='prop.addKey' and p['time']==0.5:p['time']=2.5
+ effect_plan=ROOT/'effect-plan.json';effect_plan.write_text(json.dumps(plan));effect_out=ROOT/'effect';runtime=ROOT/'public-runtimes'
+ # Effect公开工作流产生真实verified分段检查点；未改原生安装器或渲染器。
+ r=subprocess.run([sys.executable,'-I','-B',str(effect_skill/'scripts/workflow.py'),str(effect_plan),'--output',str(effect_out),'--runtime-home',str(runtime)],capture_output=True,text=True,timeout=600)
+ (ROOT/'effect-cli.private.json').write_text(json.dumps({'exitCode':r.returncode,'stdout':r.stdout,'stderr':r.stderr}));assert r.returncode==0,(r.stdout,r.stderr)
+ delivery=json.loads(r.stdout);descriptor=effect_out/delivery['imageSequence']['path'];seg=json.loads(descriptor.read_text());assert seg['frameCount']==120 and seg['frameRate']=={'num':24,'den':1};assert [x['firstFrame'] for x in seg['segments']]==[0,30,60,90]
+ sequences=film.load_module('sequence_assets');parsed,parts=sequences.validate_segmented_source(descriptor,sha(descriptor));assert sum(x['frameCount'] for x,_ in parts)==120
+ report['cases']['actual-effect-hd']={'result':'PASS','effectRuntimeSha256':delivery['runtimeSha256'],'checkpointSha256':sha(descriptor),'frameCount':120,'frameRate':seg['frameRate'],'logicalRgbaBytes':120*1920*1080*4,'oldV1BudgetBytes':512*1024*1024,'segments':[{'firstFrame':x['firstFrame'],'frameCount':x['frameCount'],'sha256':x['sha256']} for x,_ in parts]};save();print('actual-effect-hd PASS',flush=True)
+ effect_before=hashes(effect_out);background=ROOT/'background.png';Image.new('RGB',(1920,1080),(0,128,0)).save(background)
+ filmplan={'document':{'name':'fixed65 HD segmented overlay','width':1920,'height':1080,'frameRate':{'num':24,'den':1}},'assets':{'background':{'path':str(background),'sha256':sha(background)},'overlay':{'kind':'segmented-image-sequence','path':str(descriptor),'sha256':sha(descriptor)}},'operations':[{'command':'asset.import','params':{'asset':'background'},'as':'background'},{'command':'asset.import','params':{'asset':'overlay'},'as':'overlay'},{'command':'timeline.place','params':{'item':{'$ref':'background.item'},'track':'V1','duration':str(5*film.TICKS),'insert':False}},{'command':'timeline.place','params':{'item':{'$ref':'overlay.item'},'track':'V2','duration':str(5*film.TICKS),'insert':False},'as':'overlayClip'}],'frames':['0',str(film.TICKS*5//2),str(film.TICKS*119//24)],'export':{'audioRequired':False}}
+ fp=ROOT/'film-plan.json';fp.write_text(json.dumps(filmplan));out=ROOT/'film';film_runtime=ROOT/'empty-film-public-runtime';assert not film_runtime.exists()
+ r=subprocess.run([sys.executable,'-I','-B',str(film_skill/'scripts/workflow.py'),str(fp),'--output',str(out),'--runtime-home',str(film_runtime),'--data-dir',str(ROOT/'data'),'--segmented-sequence-asset','overlay='+str(descriptor)],capture_output=True,text=True,timeout=600)
+ (ROOT/'film-cli.private.json').write_text(json.dumps({'exitCode':r.returncode,'stdout':r.stdout,'stderr':r.stderr}));assert r.returncode==0,(r.stdout,r.stderr)
+ result=json.loads(r.stdout);assert result['runtimeSha256']=='b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f'
+ assert result['assets']['overlay']['sourceSequenceSha256']==sha(descriptor);assert result['assets']['overlay']['probe']['kind']=='ImageSequence';assert len([k for k in result['files'] if '/frame_' in k])==120
+ collected=sequences.validate_sequence(out/result['assets']['overlay']['path'],result['assets']['overlay']['sha256']);assert collected['frameCount']==120 and collected['schema']=='filmcraft-collected-sequence/v1'
+ # 独立全帧解码采用流输出，不写近1GB原始帧临时文件。
+ proc=subprocess.Popen(['/opt/homebrew/bin/ffmpeg','-v','error','-i',str(out/'film.mp4'),'-f','rawvideo','-pix_fmt','rgb24','-'],stdout=subprocess.PIPE,stderr=subprocess.PIPE);decoded=0;frame_size=1920*1080*3;digests=[];samples=[]
+ def exact(stream,n):
+  chunks=[];left=n
+  while left:
+   b=stream.read(left)
+   if not b:break
+   chunks.append(b);left-=len(b)
+  return b''.join(chunks)
+ while True:
+  raw=exact(proc.stdout,frame_size)
+  if not raw:break
+  assert len(raw)==frame_size
+  digests.append(hashlib.sha256(raw).hexdigest())
+  if decoded in [0,60,119]:
+   part=next((p,m) for p,m in parts if p['firstFrame']<=decoded<p['firstFrame']+p['frameCount']);p,m=part;frame=descriptor.parent/Path(p['location']).parent/m['frames'][decoded-p['firstFrame']]['location']
+   with Image.open(frame) as im:rgba=im.convert('RGBA');points=[]
+   for x,y in [(10,10),(360,510),(840,570)]:
+    pixel=rgba.getpixel((x,y));start=(y*1920+x)*3;actual=list(raw[start:start+3])
+    # 独立sRGB线性光alpha合成oracle，与编码误差分开。
+    def linear(v):return v/12.92 if v<=0.04045 else ((v+0.055)/1.055)**2.4
+    def srgb(v):return v*12.92 if v<=0.0031308 else 1.055*v**(1/2.4)-0.055
+    alpha=pixel[3]/255;want=[round(255*srgb(alpha*linear(pixel[c]/255)+(1-alpha)*linear([0,128,0][c]/255))) for c in range(3)];error=max(abs(a-b) for a,b in zip(actual,want));assert error<=24,(decoded,x,y,actual,want)
+    points.append({'xy':[x,y],'actual':actual,'expected':want,'maximumChannelError':error})
+   samples.append({'frame':decoded,'points':points})
+  decoded+=1
+ stderr=proc.stderr.read().decode();assert proc.wait()==0,stderr;assert decoded==120 and len(set(digests))>1
+ probe=json.loads(subprocess.check_output(['/opt/homebrew/bin/ffprobe','-v','error','-count_frames','-show_streams','-show_format','-of','json',str(out/'film.mp4')],text=True));video=next(v for v in probe['streams'] if v['codec_type']=='video');assert (video['width'],video['height'],video['r_frame_rate'],int(video['nb_read_frames']))==(1920,1080,'24/1',120);assert abs(float(probe['format']['duration'])-5)<=1/24
+ assert hashes(effect_out)==effect_before;assert hash_skill_dir(film_skill)==expected['skills']['filmcraft-cli-media'];assert hash_skill_dir(effect_skill)==effect_identity['expectedSkillTreeSha256'];identity()
+ report['cases']['fixed-film-hd']={'result':'PASS','independentDecodedFrames':decoded,'geometry':[1920,1080],'frameRate':'24/1','durationSeconds':probe['format']['duration'],'movieSha256':sha(out/'film.mp4'),'projectSha256':sha(out/'project.fcproj'),'allFramesPixelAndAlphaVerified':True,'sampledCompositePixels':samples,'distinctDecodedFrames':len(set(digests)),'nativeProbe':result['assets']['overlay']['probe'],'all120FrameSourceAndCollectedDigestsMatch':True,'publicSingleSkillColdInstall':True,'noSiblingSkillsPresent':len(list(film_skill.parent.iterdir()))==1,'sourceAndSkillsPreserved':True};report['result']='PASS';save();print('fixed-film-hd PASS',flush=True)
+except BaseException as error:
+ report['result']='FAIL';report['error']=repr(error);report['traceback']=traceback.format_exc();save();raise

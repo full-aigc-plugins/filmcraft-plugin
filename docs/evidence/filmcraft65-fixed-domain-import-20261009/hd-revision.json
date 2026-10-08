@@ -1,0 +1,85 @@
+{
+  "schema": "filmcraft-fixed-hd-segment-revision/v1",
+  "result": "PASS",
+  "pluginSha": "32bef4b8d439e600054cd76fd50f99c987ef644d",
+  "sourceSha": "4e955df5a4d5d95e6ef27723223d3fafb0109dec",
+  "driverSha256": "abe460cad76d7ce53d74faef3eaf253012e0bdc0f129562f8e41ce609d3e61d0",
+  "priorHdReportSha256": "43894a8a33fbca2f1860346115547d18579f21a885a137f1995974057fb3e4e9",
+  "originalProjectAndSourcePathsUnavailable": true,
+  "oldDeliveryBytesPreserved": true,
+  "nonTargetTrackAndBackgroundPreserved": true,
+  "sourceEffectBytesPreserved": true,
+  "sourceCheckpointAndAll120FramesPreserved": true,
+  "nativeProbe": {
+    "kind": "ImageSequence",
+    "duration": "1270080000000",
+    "audio": null,
+    "video": {
+      "width": 1920,
+      "height": 1080,
+      "frame_rate": {
+        "den": 1,
+        "num": 24
+      },
+      "has_alpha": true
+    },
+    "nativeProperties": {
+      "container": "Image Sequence",
+      "dataRateKbps": null,
+      "duration": {
+        "seconds": 5.0,
+        "ticks": 1270080000000,
+        "timecode": "00:00:05:00"
+      },
+      "fileSize": null,
+      "item": 9,
+      "name": "frame_00000.png",
+      "offline": false,
+      "startTimecode": null,
+      "type": "ImageSequence",
+      "video": {
+        "alpha": true,
+        "bitrate": null,
+        "codec": "PNG sequence",
+        "color": "Bt709 / Srgb / Bt709",
+        "frameRate": 24.0,
+        "frameRateLabel": "24",
+        "height": 1080,
+        "pixelAspectRatio": "1:1",
+        "pixelFormat": "RGBA 8-bit",
+        "width": 1920
+      }
+    }
+  },
+  "independentFullDecode": true,
+  "decodedFrames": 121,
+  "geometry": [
+    1920,
+    1080
+  ],
+  "frameRate": "24/1",
+  "duration": "5.056000",
+  "animationFrameAlignment": {
+    "movieFrame": 61,
+    "sourceFrame": 60,
+    "xy": [
+      790,
+      439
+    ],
+    "actual": [
+      224,
+      253,
+      226
+    ],
+    "expected": [
+      247,
+      248,
+      250
+    ],
+    "maximumChannelError": 24
+  },
+  "projectSha256": "bbbaa24bf9984c4e331a6b714b03aef437f9efe639ee1fad191839e96f821898",
+  "movieSha256": "d9397b9675b4870c386994ff20ae98dff7b39a24aa504090f67970526dba2fcf",
+  "allInstalledSkillsAndCodePreserved": true,
+  "scope": "Actual fixed65/source48 Film single-skill copy, original HD package moved and original Effect/background paths unavailable. Public CLI timeline-only revision; not Art orchestration or arbitrary creative revision acceptance."
+}

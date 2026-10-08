@@ -1,0 +1,139 @@
+{
+  "schema": "filmcraft-fixed-domain-integrity/v1",
+  "result": "PASS",
+  "pluginSha": "32bef4b8d439e600054cd76fd50f99c987ef644d",
+  "sourceSha": "4e955df5a4d5d95e6ef27723223d3fafb0109dec",
+  "installedTests": {
+    "run": 12,
+    "fail": 0,
+    "errors": 0,
+    "skipped": 0,
+    "testGitFilesSha256": {
+      "test_sequence_assets": "cb0c040186de6f165af65bdec05072768be7adb727c0c9d1104b7c14f8cf57cf",
+      "test_segmented_assets": "1d6ca3e04284bd948064e1ff23ee3c044b9cdf983a0b10a2d5af9875ae8c06b3",
+      "test_rgba_filters": "689497eef7963ba36c6518037c40cfbe7e43bdc7cd3b29bbdcd7a8a7b5b87ee2"
+    },
+    "scope": "Unmodified source48 Git test bytes with __file__ relocated to actual fixed65 payload; production module paths bind installed files."
+  },
+  "pngRefusals": [
+    {
+      "case": "crc",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "0de932bb5e6bdca9ff1b06fe14ba3a6eb65a661d5f31bcd744906b77cab49891"
+    },
+    {
+      "case": "filter",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "fdd780d6c78db38d1be519f86f153c043f1b4f3f88082b19bdcca005b65500c2"
+    },
+    {
+      "case": "short-scan",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "ffcdbd2228bd1d9b31c35fd430f28375d21e150e8fcac8f1b406f25adb199523"
+    },
+    {
+      "case": "long-scan",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "757a6bdbcc5dc329c783377a87ed37b3d52922b0665aa70e1da4cbd9841ee9a7"
+    },
+    {
+      "case": "truncated-zlib",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "a226b5f26ba2800e495fa2efe0bafff1720b679330bfd481d8965040ffb0b932"
+    },
+    {
+      "case": "extra-zlib-stream",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "0104bc865e0a6ecccebfee870f16400a77463b282a0c5c3a24514f11f213906d"
+    },
+    {
+      "case": "scan-budget",
+      "result": "PASS",
+      "error": "provided_png_too_large",
+      "inputSha256": "09b0585c9cab3fe51e8fae75aff706eee1689329cee26f55df75968511d404fb"
+    },
+    {
+      "case": "missing-iend",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "3eb6f8847a07c66c73285847151bc1042e630583c9591da653dc920dd6c97707"
+    },
+    {
+      "case": "trailing-bytes",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "a96982ae18aeee63a3ea64c27ee32c379da7e2dac738741cc8a3821000145ed0"
+    },
+    {
+      "case": "chunk-order",
+      "result": "PASS",
+      "error": "provided_png_invalid",
+      "inputSha256": "4ba58ed97808fdfcd934f2e0d352b1f8e14acc93b2a489d3033b7690bae6d2de"
+    },
+    {
+      "case": "encoded-file-budget",
+      "result": "PASS",
+      "error": "provided_png_too_large",
+      "logicalBytes": 67108865,
+      "sparseOwnedFixture": true
+    }
+  ],
+  "hdAnimationSamples": [
+    {
+      "frame": 0,
+      "xy": [
+        790,
+        439
+      ],
+      "sourceRgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        128,
+        0
+      ],
+      "actual": [
+        0,
+        128,
+        1
+      ],
+      "maximumChannelError": 1
+    },
+    {
+      "frame": 60,
+      "xy": [
+        790,
+        439
+      ],
+      "sourceRgba": [
+        247,
+        248,
+        250,
+        255
+      ],
+      "expected": [
+        247,
+        248,
+        250
+      ],
+      "actual": [
+        225,
+        254,
+        227
+      ],
+      "maximumChannelError": 23
+    }
+  ],
+  "driverSha256": "6f4f713bc6b2e1eceff309bc4a7bc69557c4b6f3e41eb0334b6ef033bfa025a5",
+  "allInstalledSkillsAndCodePreserved": true
+}

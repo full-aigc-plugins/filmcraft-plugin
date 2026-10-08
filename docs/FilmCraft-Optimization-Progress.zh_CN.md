@@ -39,3 +39,5 @@ Node/SQLite Harness 与回执血缘已有 [源码候选](FilmCraft-Harness-Candi
 资源任务9.19—9.21已有[源码候选](FilmCraft-Resource-Architecture.zh_CN.md)及[版本证据](evidence/filmcraft49-resources-candidate-20261008.json)，原生／状态81/81、Python47/47通过。固定dev49安装待执行，三项任务保持开放，质量与完整V1不由此验收。
 
 固定dev49／源42资源验收完成9.19—9.21：81安装测试无跳过、32类矩阵记录（16类资源专项）及发布四次CI通过，取代上文候选待验收状态。[证据](evidence/filmcraft49-fixed-resources-20261008.json)。完整计划仍有60项开放。
+
+2026-10-09 完成4.1—4.3／FC-DM-001：固定dev.65/source48/craft.5全部七场景逐项资格通过。实际登记视频／图片／音频摘要、流属性、时长及原生引用；完整缺失清单子修复目标红灯与固定13技能拒绝保留。24000/1001透明序列、24帧同名隔离原生收集、缺中／尾帧及登记时长冲突安装前拒绝，移动后保留非目标和旧包；缺帧／截断／像素冲突拒绝。固定Effect55 Git来源仅作真实原生生产参考，生成4×30帧1080p透明动画；固定Film65实际安装media技能独立复制、公开冷安装，收集120帧／995328000逻辑RGBA字节并全解码，移动修订121帧和源检查点保全。五PNG滤波／跨行溢出、11结构CRC解压资源拒绝、8分段版本范围资源拒绝及12安装代码专项单测通过；内部文字动画／修订帧对齐实际误差1/255。复用未变化的169/169安装原生与50矩阵，重新核验13技能及执行代码。索引 `docs/evidence/fc-dm-001/index.json`；验收 `docs/evidence/filmcraft65-fixed-domain-import-20261009/acceptance.json`。仅当前macOS arm64/Codex/headless；Art HD、全命令／GUI与其他平台、创作manual_review及用户NOT_RUN门禁仍独立开放。完整V1余23项，不归档、不改写旧标签或ZIP。

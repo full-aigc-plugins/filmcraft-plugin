@@ -1,0 +1,207 @@
+{
+  "schema": "filmcraft-fixed-sequence-audit/v1",
+  "result": "FAIL",
+  "plugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.65",
+    "ref": "v0.1.0-dev.65",
+    "sha": "32bef4b8d439e600054cd76fd50f99c987ef644d",
+    "skillSourceSha": "4e955df5a4d5d95e6ef27723223d3fafb0109dec",
+    "skillSourceRef": "v0.1.0-dev.48",
+    "pluginManifestSha256": "1907b692f55050b256519df2e5ecb7f685c0ef7eba684e3b7274d5d8272b48a8",
+    "skillSha256": "74f22335c7193e599f59b2efd6d04d5a89c47caba763948a4a9542786ed7a916",
+    "skills": {
+      "filmcraft-use": "74f22335c7193e599f59b2efd6d04d5a89c47caba763948a4a9542786ed7a916",
+      "filmcraft-cli": "d1f32ee99997120a98cff1f79ec20710ae363811cf35349773924147dda928fa",
+      "filmcraft-cli-setup": "b480f873a6f922b1929ebab5d8c61db1c5f6004adf9dc785d46f3c323f3df791",
+      "filmcraft-cli-project": "b11c4ed74a113c1774764ed72b83a5623c0ff10b4fa9eb2d908804cb6c3c40cb",
+      "filmcraft-cli-media": "e98af6d3ce64a985ed45770df777c2f62eea7d51e82927292f4d922316131879",
+      "filmcraft-cli-timeline": "8752029a65a133339e47a218dc53a17765141cbf3863be08538f250f44b6b5d1",
+      "filmcraft-cli-audio": "31dc6d8fb655ebc7b6ac907472742591e17e10752d6bfa9384c70555e268c6e4",
+      "filmcraft-cli-subtitles": "5d5862c78c4f328280b36669746faaa3320a61255e043431840fc0afe391ddc7",
+      "filmcraft-cli-color": "e793128839b7b49b618abdd9f094501734bb9700482fd8328deb300c948fd61d",
+      "filmcraft-cli-motion": "27e25786d99c23c13b3436ff3eecffc8bb181c57b9a889181642c332cf5f1ea9",
+      "filmcraft-cli-export": "7370fb8504bb74b6bf4eee519e5f9191a379d1e313a952d0c9856e0054924c1f",
+      "filmcraft-cli-multicam": "936cbd0fb8a52ccb0eecb6b20c8e921b00586b0f0d759d104f5d1bbace23ea82",
+      "filmcraft-cli-transcript": "9b31fc18a4edcb798be4af2de26814a4b016de707d5d4a3ee59518dd57eeefce"
+    },
+    "codeFilesSha256": {
+      "package.json": "8b6236aafce455a22087fa37068cedb343ee7b24f39fb050354722304f72b757",
+      "scripts/check_release.py": "bb8abba5a0dbc895bf93b30c6796add551983560430989d1cb57c58cee150ea6",
+      "scripts/collect_release_layers.py": "064b89ad37ae1156bff782fd0e70666ce24e5794ed97c8e8ae1444de26d891f7",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/media_matrix.py": "762e9047131b4e41a8ccbaf7413442686cafb77f4b2e6645f982ca1d403e15d9",
+      "scripts/native_preflight.py": "ee46b5e978fa626fb73f54e7033e3f4baef95ee8d7254eb711314e8fe29a1f05",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/probe_workflow_writer.py": "27126388902856a91d2c443570fb33f4af2eb4dcdceba30942309afd90ac0570",
+      "scripts/process_identity.py": "2d239b424b34092e32b8c8105b71672511ad3253ccf177f9b633618e98bd1ae8",
+      "scripts/protocol_fixture.ts": "4729d8ccbb4f9718e00451f02ee1352a4b8484fe0b56ac0846e42fe9fd26fccb",
+      "scripts/release_evidence.py": "05b06b6cc5c7c7536f0067a3d103596026ddba83e553046c40970a79b0450008",
+      "scripts/review_media.py": "2b8b55958a032fc6a625c280a5a9f74bd3ee78ff0a17343ca36d69967fbf033b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "fe8d39c98acaa8334c9576f842b850c2cb2f86932ddc4ce64c9c4ef2dd5edcc7",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_artifact_contract.ts": "3f3c0c3e6e5c6b5aa337ca7e7a7617e3ac16e1b354968d4333d5388e3b0a9694",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_admission.py": "5316d5e6622d1f28ba688ff0762c6116da8b005986b2ab190e4ee06d80dcd5c4",
+      "scripts/verify_fixed_artifacts.py": "6008c8e599465bd89ed26fe2b97b89245a934685152997278757dfd68262e78f",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "37aef833272f99d6f9c3a4e53cdbe86946302f2a063d55be1c3d0c59ec15faa1",
+      "scripts/verify_fixed_media.py": "bdf14e498066b979b95707d507937e75943d060eacae06b182ea40854c3c4421",
+      "scripts/verify_fixed_quality.py": "840f59f78cafbff9cff1f6a7bebdc80f97123ac152ed3979fc3e8bb69bd5bf1d",
+      "scripts/verify_fixed_recovery.py": "e7225bb0a35fbea4d5bfe689148909cb3abecc7e2b22c074aca6debe9fb59c8b",
+      "scripts/verify_fixed_resources.py": "205352ad76c275a134d4c17845ee19e59e452ad627ef42270891585ca7ac98b1",
+      "scripts/verify_fixed_revision.py": "908009395a515166b1fc0f8f69f8d54157a7af3363b1432bd16439a9f353fe1f",
+      "scripts/verify_media_matrix.py": "80fd452e32d27f0ecd0d75cea2afc3643c30909ccdb59ec5a879b9008811aee4",
+      "scripts/verify_protocol_gate.py": "3388c8654f6239a775748ac450ac0e9653a88cbc37672811330dc89e0c9a3ea5",
+      "scripts/verify_recovery_contract.py": "34b9b9c7b976ff5677fcd53127e9c14bebc31ed45c682599773bddba1186b9d6",
+      "scripts/verify_runtime_transition.py": "87b149096560cf035ff1e71ab0e7abe56d6d49d49c5b20bfe3c78eb6a7755064",
+      "scripts/verify_workflow_admission.ts": "7c24b8d3540df1f8250046d82da2ac25ce698ed3400877d8359558ac1dcf7414",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "scripts/verify_writer_boundaries.py": "b5936502c52ed7f60b7be2e3eaf1693b9f654a20e2869a7dbc437053751174a4",
+      "src/adapters/asset_refusal.ts": "c00715d34a007a2f758973f111b89e542dbf174d1329e48763396e8365cccf7d",
+      "src/adapters/capability_refusal.ts": "759105f53eb4bb044b70d31e335206c56ffd18a83dd0a56498ca89d5b5814605",
+      "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "57e571e355a3e9822c9788856b6588ea1f961655cec9d1b888105e86af6a6b1e",
+      "src/adapters/runtime_candidate.ts": "9d953e0ede332b49019717affa7be691ed6b8420cec2db28762c5c8f9b2b39a0",
+      "src/adapters/runtime_deployment.ts": "36842d4ca170da882c1e54c108fa1bdad72a2a533f7b8c69bd536a9e55fbeedf",
+      "src/adapters/runtime_upgrade.ts": "1110f7ae5571c6e3b043a0ad65fdcd9e3e1467cf48d4a642585d81c57654ea27",
+      "src/artifacts/exchange_loss.ts": "213bf786ec7be2c2c462900ebdb5e5a29ffcbc6e278230cc6137453e43581cff",
+      "src/artifacts/receipt_index.ts": "d93cda02a97852345005e0a7ed57663a47ed319dda8b7749a508287ff9c0c090",
+      "src/cli/recovery.ts": "c4838abe071cebe0bb97befb9b3316d0338d3548845cef9b8842bc742dc8c35f",
+      "src/cli/runtime.ts": "1388292cdd6a93fc261381ee4827646b7d4b114e2d32eb4daeaf2b767d4a32c6",
+      "src/cli/workflow.ts": "c488c76042d0db259e883c2e9c14a7eea8dff62fd03ae6ea542edb970156bc4e",
+      "src/harness/authorization.ts": "dcf9f031e6a00c1249b39beff99d627cbf82a50730595c9d63d873c287ab3dfb",
+      "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+      "src/harness/continuation.ts": "5660d11ffb5045c095b00faf7314cf1e28ae064edb65956d96da6d59a2fc83ed",
+      "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+      "src/harness/process_identity.ts": "a0e66f96d8a62953ae73d98b2de9ca683961d2b8a24e2afb70ecb6d05a0c0584",
+      "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+      "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+      "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+      "src/harness/state_maintenance.ts": "5eac10270615aca8b80ffe1d4c7e1fb2db1f4b42a235c0bbc1855ad859f31b6e",
+      "src/harness/task_ledger.ts": "dd7dfa57fbd1876cfcd27ee88d2cf681e65e34648da9acd6580588e4b49e5691",
+      "src/harness/workflow_admission.ts": "f441f5f10027926e6f3328e35c5436bde258714b6e1c1d30b9a45e276e7637b8",
+      "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+      "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+      "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+      "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+      "src/quality/revision_service.ts": "9972065d55744551627f94c8b8ee98139ac7f1c4e32199d479f7995833e8df66",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62"
+    }
+  },
+  "runtime": {
+    "version": "0.2.0-craft.5",
+    "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "coldPublicCliInstall": true
+  },
+  "cases": {
+    "fractional-public-workflow": {
+      "result": "PASS",
+      "probe": {
+        "kind": "ImageSequence",
+        "duration": "127135008000",
+        "audio": null,
+        "video": {
+          "width": 64,
+          "height": 36,
+          "frame_rate": {
+            "num": 24000,
+            "den": 1001
+          },
+          "has_alpha": true
+        },
+        "nativeProperties": {
+          "container": "Image Sequence",
+          "dataRateKbps": null,
+          "duration": {
+            "seconds": 0.5005,
+            "ticks": 127135008000,
+            "timecode": "00:00:00:12"
+          },
+          "fileSize": null,
+          "item": 9,
+          "name": "frame_00000.png",
+          "offline": false,
+          "startTimecode": null,
+          "type": "ImageSequence",
+          "video": {
+            "alpha": true,
+            "bitrate": null,
+            "codec": "PNG sequence",
+            "color": "Bt709 / Srgb / Bt709",
+            "frameRate": 23.976023976023978,
+            "frameRateLabel": "23.976",
+            "height": 36,
+            "pixelAspectRatio": "1:1",
+            "pixelFormat": "RGBA 8-bit",
+            "width": 64
+          }
+        }
+      },
+      "sourcePreserved": true,
+      "delivery": {
+        "decodedFrames": 12,
+        "frameRate": "24000/1001",
+        "duration": "0.512000",
+        "pixels": [
+          {
+            "frame": 1,
+            "pixel": [
+              21,
+              0,
+              0
+            ],
+            "expected": [
+              20,
+              0,
+              0
+            ],
+            "maximumChannelError": 1
+          },
+          {
+            "frame": 6,
+            "pixel": [
+              121,
+              0,
+              0
+            ],
+            "expected": [
+              120,
+              0,
+              0
+            ],
+            "maximumChannelError": 1
+          },
+          {
+            "frame": 11,
+            "pixel": [
+              220,
+              0,
+              0
+            ],
+            "expected": [
+              220,
+              0,
+              0
+            ],
+            "maximumChannelError": 0
+          }
+        ],
+        "movieSha256": "eacc425593109470dba2846e25f7fa55bafd41bdc7959916c0e2ceeab97f655b"
+      }
+    }
+  },
+  "driverSha256": "6b59dfaa9ba6cf94f8eefa02771bc017493ed2d8b7548ebc9de88eeb4b3c2753",
+  "fixtureProvenance": "Owned synthetic RGBA sequences; no user media.",
+  "scope": "FC-DM-001 sequence subset at fixed65/source48; not HD/Effect/Art/creative acceptance",
+  "error": "StopIteration()",
+  "traceback": "Traceback (most recent call last):\n  File \"[WORK]/verify-fixed65-sequence.py\", line 86, in <module>\n    oldtrack=next(x for x in oldnative['sequence']['video'] if x['name']=='V1') if any('name' in x for x in oldnative['sequence']['video']) else oldnative['sequence']['video'][0]\n             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration\n"
+}

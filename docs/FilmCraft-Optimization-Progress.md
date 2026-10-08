@@ -37,3 +37,5 @@ See [candidate evidence](evidence/filmcraft-optimization-candidate-20261008.json
 Continue with pinned-install and full compatibility qualification of capability and receipt candidates, complete Node/SQLite single-writer/recovery/resource contracts, independent review, restricted revisions, real media, and layered release verification. New pinned releases, actual hosts, exhaustive commands, and full V1 remain open. Check tasks only when their own implementation and verification evidence exists.
 
 Resource tasks9.19–9.21 now have a [source candidate](FilmCraft-Resource-Architecture.md) and [version-bound evidence](evidence/filmcraft49-resources-candidate-20261008.json). Native/state81/81 and Python47/47 pass. Fixed dev49 installation remains pending, so these tasks stay open; quality and complete V1 are not qualified.
+
+Fixed dev49/source42 resource acceptance supersedes the pending candidate status for tasks9.19–9.21:81 installed tests without skips,32 matrix records including16 resource cases and four release CI runs pass. [Evidence](evidence/filmcraft49-fixed-resources-20261008.json).60 full-plan tasks remain open.

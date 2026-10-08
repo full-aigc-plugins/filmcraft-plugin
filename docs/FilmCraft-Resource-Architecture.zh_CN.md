@@ -1,6 +1,6 @@
 # FilmCraft 资源预留与取消
 
-[English](FilmCraft-Resource-Architecture.md)。行为事实源为 OpenSpec `establish-v1-plugin` 的 FC-TX-003，任务为9.19—9.21。当前为源码候选，固定公开标签安装验收尚待执行；完整V1继续开放。
+[English](FilmCraft-Resource-Architecture.md)。行为事实源为 OpenSpec `establish-v1-plugin` 的 FC-TX-003，任务为9.19—9.21。固定公开标签安装资源验收已通过，版本证据见下文；完整V1继续开放。
 
 ```mermaid
 flowchart TD
@@ -33,3 +33,5 @@ flowchart TD
 `node src/cli/recovery.ts --help` 提供实际参数：`cancel` 仅持久化请求，需私有宿主授权；`cancel-reconcile` 观察结束状态，只有显式 `--signal` 才尝试受支持停止，并需有效授权。CLI不创建授权记录。该观察会写取消诊断，不替代原有只读 `inspect/reconcile`。
 
 schema1/2/3 可隔离只读诊断，写打开要求显式备份升级到4。升级保留全部旧表记录；回退核对所有旧记录及新表是否为空，有预算/取消/新任务记录则拒绝丢弃数据。旧发布标签和历史schema3验收报告保持不变。
+
+固定dev.49／源42验收通过：13技能／36执行文件保全，81安装测试无跳过、32类矩阵记录（16类资源专项）通过；真实原生超限拒绝与私有宿主授权取消通过，发布四次CI成功。9.19—9.21完成，[固定证据](evidence/filmcraft49-fixed-resources-20261008.json)。完整V1仍未完成，余60项任务。

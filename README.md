@@ -1,8 +1,8 @@
 # FilmCraft Agent Plugin
 
-Source candidate dev.49 adds durable shared resource reservations and identity-bound POSIX cancellation, preserving independent source42/13 skills. Native/state81/81 and Python47/47 pass; fixed-tag installed acceptance is pending and tasks9.19–9.21 remain open. [Architecture](docs/FilmCraft-Resource-Architecture.md) · [Evidence](docs/evidence/filmcraft49-resources-candidate-20261008.json).
+Fixed dev.49/source42 completes OpenSpec9.19–9.21:13 skills/36 execution files preserved,81 installed tests without skips,32 matrix records including16 resource cases, actual native output-limit refusal and authorized cancellation pass. All four release CI runs succeed. [Architecture](docs/FilmCraft-Resource-Architecture.md) · [Fixed evidence](docs/evidence/filmcraft49-fixed-resources-20261008.json). Complete V1 remains open (60 tasks).
 
-Fixed dev.48/source42 completes OpenSpec 9.16–9.18: 13 skills / 30 execution files retain identity; 60 installed tests without skips, 14 recovery scenarios, actual native continuation and schema1/2 backed upgrade/compatible rollback pass. Three tasks / 26 artifacts validate against the pinned owner; main/tag CI passes. [Fixed evidence](docs/evidence/filmcraft48-fixed-recovery-20261008.json). Full V1 remains open (63 tasks).
+Fixed dev.48/source42 completes OpenSpec 9.16–9.18: 13 skills / 30 execution files retain identity; 60 installed tests without skips, 14 recovery scenarios, actual native continuation and schema1/2 backed upgrade/compatible rollback pass. Three tasks / 26 artifacts validate against the pinned owner; main/tag CI passes. [Fixed evidence](docs/evidence/filmcraft48-fixed-recovery-20261008.json). At dev.48,63 full-V1 tasks remained open.
 
 [Recovery matrix and compatibility](docs/FilmCraft-Fixed-Recovery.md). Failed dev.46/dev.47 collection history remains in the version-bound evidence; prior tags and packages are unchanged.
 

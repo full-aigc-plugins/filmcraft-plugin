@@ -37,3 +37,5 @@ Node/SQLite Harness 与回执血缘已有 [源码候选](FilmCraft-Harness-Candi
 后续继续完成能力快照与回执候选的固定安装及完整兼容验收、Node/SQLite Harness 的完整单写/恢复/资源预算、独立评审、受限修订、真实媒体及分层发行验证。新固定发行、实际宿主、全量命令和完整 V1 均保持开放；仅已有明确实现及验证证据的任务可勾选。
 
 资源任务9.19—9.21已有[源码候选](FilmCraft-Resource-Architecture.zh_CN.md)及[版本证据](evidence/filmcraft49-resources-candidate-20261008.json)，原生／状态81/81、Python47/47通过。固定dev49安装待执行，三项任务保持开放，质量与完整V1不由此验收。
+
+固定dev49／源42资源验收完成9.19—9.21：81安装测试无跳过、32类矩阵记录（16类资源专项）及发布四次CI通过，取代上文候选待验收状态。[证据](evidence/filmcraft49-fixed-resources-20261008.json)。完整计划仍有60项开放。

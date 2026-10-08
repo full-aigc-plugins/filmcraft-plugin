@@ -67,3 +67,5 @@ Fixed native gateway first use passes:48 independently installed domain skills a
 ## 0.1.0-dev.35
 
 Plugin dev.35 vendors published Film skills dev.34/native craft.4 with real Whisper and persistent workflow model directories. All13 public-source cold installs pass (40.11s); source real model first use plus CLI/workflow recognition passes (52.497s). Fixed plugin host and Art acceptance remain pending. [Evidence](docs/evidence/workflow-model-directory-20261008.json).
+
+Post-publication dev49 acceptance completes tasks9.19–9.21. Isolated Codex install preserves13 skills/36 code files;81 tests without skips,32 matrix records including16 resource cases and four release CI runs pass. [Evidence](docs/evidence/filmcraft49-fixed-resources-20261008.json). Original tag/ZIP unchanged; complete V1 still has60 open tasks.

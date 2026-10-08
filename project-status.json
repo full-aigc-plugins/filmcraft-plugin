@@ -88,7 +88,10 @@
     "9.15": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
     "9.16": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
     "9.17": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
-    "9.18": "docs/evidence/filmcraft48-fixed-recovery-20261008.json"
+    "9.18": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
+    "9.19": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
+    "9.20": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
+    "9.21": "docs/evidence/filmcraft49-fixed-resources-20261008.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -154,8 +157,10 @@
     "lineageStatus": "four legacy formats, original CAS, same-attempt context, stale/conflict refusal and bounded partial handoff repair passed actual fixed install",
     "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
     "resourceCandidateEvidence": "docs/evidence/filmcraft49-resources-candidate-20261008.json",
-    "resourceStatus": "source candidate81/81 native/state and47 Python passed; schema4 durable scope, quota refusal, shared continuation budget and identity-bound POSIX cancellation; fixed49 installed acceptance pending; tasks9.19-9.21 remain open"
+    "resourceStatus": "tasks9.19-9.21 qualified in actual installed plugin49/source42:81/81 native/state,16 required resource cases among32 matrix records, durable shared budgets, native output refusal and authorized POSIX cancellation; full Harness/public admission, quality, other platforms and V1 open",
+    "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json"
   },
   "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
-  "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json"
+  "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
+  "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json"
 }

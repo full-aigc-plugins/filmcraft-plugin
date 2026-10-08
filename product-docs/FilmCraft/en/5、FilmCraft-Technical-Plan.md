@@ -95,3 +95,5 @@ Snapshot `0.1.0-dev.2` has scoped installation/discovery and installed-entrypoin
 [FilmCraft CLI / setup / task suite](../../../docs/FilmCraft-Skill-Suite-Architecture.md)
 
 Resource implementation update: the schema4 resource architecture in docs/FilmCraft-Resource-Architecture.md defines persistent reservations, shared continuation budgets and identity-bound POSIX cancellation. Source tests pass; fixed dev49 installed acceptance remains pending. Tasks9.19–9.21 and complete V1 remain open.
+
+Fixed dev49/source42 resource acceptance is now complete for tasks9.19–9.21:81 installed tests without skips,32 matrix records and four release CI runs pass. Full V1 remains open with60 tasks.

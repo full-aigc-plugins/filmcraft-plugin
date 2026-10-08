@@ -1,6 +1,6 @@
 # FilmCraft resource reservations and cancellation
 
-[简体中文](FilmCraft-Resource-Architecture.zh_CN.md). FC-TX-003 in OpenSpec `establish-v1-plugin` is authoritative for tasks9.19–9.21. This is a source candidate; fixed public-tag installed acceptance remains pending. Complete V1 remains open.
+[简体中文](FilmCraft-Resource-Architecture.zh_CN.md). FC-TX-003 in OpenSpec `establish-v1-plugin` is authoritative for tasks9.19–9.21. Fixed public-tag installed resource acceptance passes; see the version-bound evidence below. Complete V1 remains open.
 
 ```mermaid
 flowchart TD
@@ -33,3 +33,5 @@ Only a supported, identity-matching owned POSIX process group receives SIGTERM. 
 `node src/cli/recovery.ts --help` documents actual arguments. `cancel` persists the request using a private host grant. `cancel-reconcile` observes completion and only attempts a supported stop with explicit `--signal` and valid authorization. The CLI never creates grants. Cancellation observation writes diagnostic state; it does not replace the existing read-only `inspect/reconcile`.
 
 Schemas1/2/3 remain readable through isolated diagnosis and require explicit backed upgrade for schema4 writes. Migration preserves every old table record. Rollback compares all old records and requires newly added tables empty, refusing to discard budgets, cancellation or new tasks. Existing release tags and historical schema3 reports remain immutable.
+
+Fixed dev.49/source42 acceptance now passes:13 skills/36 execution files preserved,81 installed tests without skips and32 matrix records including16 required resource cases. Actual native output-limit refusal and private-host-authorized cancellation pass; all four release CI runs succeed. Tasks9.19–9.21 are complete. [Fixed evidence](evidence/filmcraft49-fixed-resources-20261008.json). Full V1 remains incomplete with60 open tasks.

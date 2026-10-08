@@ -67,3 +67,5 @@ Film独立工作流的同目标执行保护源码候选：原生启动前认领�
 ## 0.1.0-dev.35
 
 插件 dev.35 接入已发布 Film 技能源 dev.34／原生 craft.4，包含真实 Whisper 和工作流模型目录。公开技能源13项独立冷安装通过（40.11秒），源技能真实模型首次使用与 CLI／工作流识别通过（52.497秒）。固定插件宿主及 Art 验收仍待完成。 [Evidence](docs/evidence/workflow-model-directory-20261008.json).
+
+dev49发布后完成9.19—9.21：隔离Codex安装13技能／36执行文件保全，81测试无跳过、32类矩阵记录（16类资源专项）、四次发布CI通过。[证据](docs/evidence/filmcraft49-fixed-resources-20261008.json)。原标签／ZIP不改写，完整V1仍有60项开放。

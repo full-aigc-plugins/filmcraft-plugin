@@ -95,13 +95,16 @@
         "9.18"
       ],
       "owner": "Harness owner",
-      "status": "planned",
+      "status": "verified-bounded",
       "optimizationStatus": "planned",
       "optimizationTasks": [
         "9.16",
         "9.17",
         "9.18"
-      ]
+      ],
+      "fixedAcceptanceEvidence": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json",
+      "fixedAcceptanceScope": "All FC-TX-002 scenarios in recorded fixed installation; real native lost handoff/continuation, actual SQLite and controlled process faults are separate layers; other hosts/platforms and native binary upgrades remain open",
+      "implementationScope": "tasks3.4/3.5 existing tests and implementation verified;3.6 all10 current scenarios qualified on fixed58 macOS arm64 installation; full V1 remains open"
     },
     {
       "requirement": "FC-TX-003",

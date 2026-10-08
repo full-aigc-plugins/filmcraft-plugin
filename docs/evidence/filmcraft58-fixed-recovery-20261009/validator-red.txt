@@ -1,0 +1,44 @@
+test_all_ten_contract_scenarios_map_to_actual_assertion_rows (test_recovery_contract.RecoveryContractTests.test_all_ten_contract_scenarios_map_to_actual_assertion_rows) ... ERROR
+test_counts_replay_fences_processes_backups_and_continuation_are_required (test_recovery_contract.RecoveryContractTests.test_counts_replay_fences_processes_backups_and_continuation_are_required) ... ERROR
+test_missing_or_duplicate_rows_and_changed_original_bytes_are_rejected (test_recovery_contract.RecoveryContractTests.test_missing_or_duplicate_rows_and_changed_original_bytes_are_rejected) ... ERROR
+
+======================================================================
+ERROR: test_all_ten_contract_scenarios_map_to_actual_assertion_rows (test_recovery_contract.RecoveryContractTests.test_all_ten_contract_scenarios_map_to_actual_assertion_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_recovery_contract.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[PLUGIN_ROOT]/scripts/verify_recovery_contract.py'
+
+======================================================================
+ERROR: test_counts_replay_fences_processes_backups_and_continuation_are_required (test_recovery_contract.RecoveryContractTests.test_counts_replay_fences_processes_backups_and_continuation_are_required)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_recovery_contract.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[PLUGIN_ROOT]/scripts/verify_recovery_contract.py'
+
+======================================================================
+ERROR: test_missing_or_duplicate_rows_and_changed_original_bytes_are_rejected (test_recovery_contract.RecoveryContractTests.test_missing_or_duplicate_rows_and_changed_original_bytes_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_recovery_contract.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[PLUGIN_ROOT]/scripts/verify_recovery_contract.py'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=3)

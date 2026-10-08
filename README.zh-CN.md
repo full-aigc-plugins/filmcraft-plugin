@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定 dev.58／source46／craft.5 的恢复合同验收通过：133项安装测试无跳过、14类恢复必选矩阵及FC-TX-002十个场景全部PASS，13项技能与执行代码保全。复核既有目标失败与当前实现后，OpenSpec3.4—3.6已完成；完整V1余42项。实际原生丢失交接与继续、SQLite故障、受控进程和合成回执分别标明；限macOS arm64、Codex/headless，其他平台、原生二进制升级、创作与用户验收仍开放。 [Evidence](docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json).
+
 dev.58 增加恢复合同逐场景证据门禁。固定dev.57的133项安装测试无跳过、47行综合矩阵（含14类恢复必选）及FC-TX-002十个场景校验通过。缺失／重复证据、原文件变化、重复应用、失效epoch、活子进程占用和备份缺失均拒绝；合成回执、实际SQLite／受控进程及实际原生继续分别标记。新dev.58安装复验待执行，不提前关闭3.4—3.6，完整V1仍45项开放。 [Evidence](docs/evidence/filmcraft58-recovery-candidate-20261009/contract.json).
 
 固定 dev.57／source46／公开 craft.5 的真实隔离安装验收通过：FC-TX-001 全部五个场景与七类身份冲突拒绝 PASS，13 项技能及执行代码摘要保全。OpenSpec 3.3 已完成，完整 V1 余45项开放。范围限 macOS arm64、Codex/headless及所属签名桌面桥接；不宣称人工UI点击或其他平台验收。 [Evidence](docs/evidence/filmcraft57-fixed-writer-20261009/report.json).

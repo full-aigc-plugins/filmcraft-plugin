@@ -106,7 +106,10 @@
     "9.33": "docs/evidence/filmcraft54-fixed-media-20261009/report.json",
     "3.1": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
     "3.2": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
-    "3.3": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json"
+    "3.3": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json",
+    "3.4": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json",
+    "3.5": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json",
+    "3.6": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -205,5 +208,6 @@
   "writerBoundaryStatus": "task3.3 qualified: fixed57/source46/craft.5 all5 FC-TX-001 scenarios and7 identity rejection vectors PASS; installed13 skills and code unchanged; macOS arm64 Codex/headless and owned signed desktop bridge only;45 V1 tasks remain open",
   "writerBoundaryFixedEvidence": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json",
   "recoveryContractCandidateEvidence": "docs/evidence/filmcraft58-recovery-candidate-20261009/contract.json",
-  "recoveryContractStatus": "fixed57 133/133 installed regressions,47 matrix rows and10 FC-TX-002 scenarios passed;dev58 verifier/fixed install pending;tasks3.4-3.6 and45 full V1 tasks remain open"
+  "recoveryContractStatus": "tasks3.4-3.6 qualified: actual fixed58/source46/craft.5;133/133 installed tests without skips,14 required recovery rows among47 total rows and10/10 FC-TX-002 scenarios;13 installed skills and code preserved; bounded macOS arm64 Codex/headless only;42 V1 tasks remain open",
+  "recoveryContractFixedEvidence": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json"
 }

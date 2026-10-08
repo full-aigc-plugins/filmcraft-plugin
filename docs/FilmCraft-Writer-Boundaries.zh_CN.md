@@ -26,3 +26,5 @@ flowchart TD
 [固定dev.56的候选QA证据](evidence/filmcraft57-writer-candidate-20261009/report.json)包含五个场景；首次探针误用工具名的失败单独保留。新dev.57复验待执行。覆盖范围是当前 macOS arm64、Codex、headless和所属签名桌面；其他宿主／平台、完整任务恢复及完整V1继续开放。
 
 补充实际CLI验证七类已获精确测试授权但身份不符的请求：planHash、nativePlanHash、inputHashes、projectRevision、sourceTreeSha256、sourceRevision与runtimeIdentity。每类返回对应冲突，原生尝试为0且未创建交付。[补充证据](evidence/filmcraft57-writer-candidate-20261009/binding-dimensions-report.json)。
+
+固定 dev.57／source46／公开 craft.5 的真实隔离安装验收通过：FC-TX-001 全部五个场景与七类身份冲突拒绝 PASS，13 项技能及执行代码摘要保全。OpenSpec 3.3 已完成，完整 V1 余45项开放。范围限 macOS arm64、Codex/headless及所属签名桌面桥接；不宣称人工UI点击或其他平台验收。 [Evidence](evidence/filmcraft57-fixed-writer-20261009/report.json).

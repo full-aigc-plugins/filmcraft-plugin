@@ -75,11 +75,13 @@
         "3.14"
       ],
       "owner": "Harness owner",
-      "status": "planned",
+      "status": "verified-bounded",
       "candidateStatus": "bounded-source-candidate; full single-writer and fixed-release acceptance open",
       "candidateEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json",
       "implementationEvidence": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
-      "implementationScope": "tasks3.1/3.2 tests and minimum implementation complete; full acceptance3.3 remains open"
+      "implementationScope": "tasks3.1/3.2 complete; task3.3 fixed57 acceptance complete in the recorded platform scope",
+      "fixedAcceptanceEvidence": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json",
+      "fixedAcceptanceScope": "all5 scenarios and7 binding rejection vectors on fixed57/source46/craft.5 macOS arm64 Codex/headless and owned signed desktop bridge; other hosts/platforms and full V1 remain open"
     },
     {
       "requirement": "FC-TX-002",

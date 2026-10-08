@@ -1,5 +1,7 @@
 # 版本绑定的历史发行记录
 
+固定 dev.57／source46／公开 craft.5 的真实隔离安装验收通过：FC-TX-001 全部五个场景与七类身份冲突拒绝 PASS，13 项技能及执行代码摘要保全。OpenSpec 3.3 已完成，完整 V1 余45项开放。范围限 macOS arm64、Codex/headless及所属签名桌面桥接；不宣称人工UI点击或其他平台验收。 [Evidence](docs/evidence/filmcraft57-fixed-writer-20261009/report.json).
+
 dev.57 增加版本绑定与单写逐场景QA：固定dev.56的五个规范场景已通过，包括真实工作流同目标竞争、不同目标并行、用户目录保全、真实保存后强杀所有者／拒绝重放／工程重开，以及签名桌面桥接保存后旧计划冲突。新dev.57安装复验待执行，3.3与完整V1继续开放。
 
 固定dev.56／source46／craft.5的7项原生宿主准入验收通过，13项技能与全部执行文件摘要不变。OpenSpec3.1、3.2的测试和最小实现已完成；3.3的完整版本绑定／单写边界、其他调用路径、平台及完整V1仍开放，余46项。dev.55验证器误比较失败保留，不提升旧证据。 [Evidence](docs/evidence/filmcraft56-fixed-admission-20261009/report.json).

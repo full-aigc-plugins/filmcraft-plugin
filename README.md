@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Actual fixed dev.57/source46/public craft.5 installation passes all five FC-TX-001 scenarios and seven identity rejection vectors, preserving all13 skill and executable identities. OpenSpec3.3 is complete;45 full-V1 tasks remain open. Scope is macOS arm64, Codex/headless and the owned signed desktop bridge; manual UI clicks and other platforms are not claimed. [Evidence](docs/evidence/filmcraft57-fixed-writer-20261009/report.json).
+
 dev.57 adds per-scenario version-binding/writer QA. All five specified scenarios pass against fixed dev.56: actual same-target contention, independent-target progress, user-directory preservation, SIGKILL after real native save with no replay and checkpoint reopen, and stale-plan refusal after an owned signed desktop bridge save. New fixed dev.57 verification is pending;3.3 and full V1 remain open.
 
 Fixed dev.56/source46/craft.5 passes seven actual-native host admission cases, preserving13 skills and all executable identities. OpenSpec3.1 and3.2 tests/minimum implementation are complete; full version-binding/writer acceptance3.3, other dispatch paths/platforms and full V1 remain open, with46 tasks remaining. The dev.55 verifier failure is preserved. [Evidence](docs/evidence/filmcraft56-fixed-admission-20261009/report.json).

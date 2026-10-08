@@ -105,7 +105,8 @@
     "9.32": "docs/evidence/filmcraft54-fixed-media-20261009/report.json",
     "9.33": "docs/evidence/filmcraft54-fixed-media-20261009/report.json",
     "3.1": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
-    "3.2": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json"
+    "3.2": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
+    "3.3": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -197,9 +198,10 @@
   "mediaMatrixFixedEvidence": "docs/evidence/filmcraft54-fixed-media-20261009/report.json",
   "mediaMatrixFixedStatus": "tasks9.32/9.33 qualified: fixed54/source46/public craft.5;7/7 cases PASS;13 installed skills and code identities preserved; bounded macOS arm64 Codex/codecs only; full V1 remains48 tasks open",
   "workflowAdmissionCandidateEvidence": "docs/evidence/filmcraft55-admission-candidate-20261009/report.json",
-  "workflowAdmissionStatus": "tasks3.1/3.2 source tests and minimum implementation complete; fixed56/source46/craft.5 seven actual-native admission cases PASS;13 skills and all code unchanged; two tree hash algorithms independently verified; full TX-001 acceptance3.3 and46 V1 tasks open",
+  "workflowAdmissionStatus": "tasks3.1/3.2 source tests and minimum implementation complete; fixed56/source46/craft.5 seven actual-native admission cases PASS;13 skills and all code unchanged; two tree hash algorithms independently verified; full TX-001 acceptance3.3 and46 V1 tasks open; subsequent fixed57 completes task3.3, see writerBoundaryFixedEvidence;45 V1 tasks remain open",
   "workflowAdmissionFailedFixedEvidence": "docs/evidence/filmcraft55-fixed-admission-failure-20261009/failure.json",
   "workflowAdmissionFixedEvidence": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
   "writerBoundaryCandidateEvidence": "docs/evidence/filmcraft57-writer-candidate-20261009/binding-dimensions-report.json",
-  "writerBoundaryStatus": "5/5 FC-TX-001 scenarios passed against fixed56 with hash-bound external QA; new fixed57 verifier/installation pending; task3.3 and46 full V1 tasks remain open"
+  "writerBoundaryStatus": "task3.3 qualified: fixed57/source46/craft.5 all5 FC-TX-001 scenarios and7 identity rejection vectors PASS; installed13 skills and code unchanged; macOS arm64 Codex/headless and owned signed desktop bridge only;45 V1 tasks remain open",
+  "writerBoundaryFixedEvidence": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json"
 }

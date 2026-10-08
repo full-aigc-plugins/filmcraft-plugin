@@ -1,0 +1,47 @@
+{
+  "domain": "filmcraft",
+  "result": "PASS",
+  "pathCase": {
+    "unicodeAndSpaces": false,
+    "skillName": "single-skill",
+    "parentName": "tmp0k8kk9_o",
+    "runtimeInitiallyAbsent": true,
+    "offlineOverridesExcluded": true
+  },
+  "guardRecords": [
+    {
+      "identity": {
+        "inputHashes": {},
+        "planHash": "3c2a5567e8859638e5079020065cf30867b5ce4ac8df133eaccc1e8d6e911277",
+        "projectRevision": "20b150fcac40751dbf80b5da5179ab4e3f22377ce6875b3c5aa3e7662c9e731a",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "ownerPid": 68333,
+      "replayAllowed": false,
+      "schema": "filmcraft-output-execution/v1",
+      "state": "finished",
+      "targetHash": "9d6584eeb3a6d5662bd166bab75ebc6ef4b6219646984385782bb9a723fff4cf"
+    },
+    {
+      "identity": {
+        "inputHashes": {
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "planHash": "c3730704c5446f4ada8dcae37a4c3371bdaadf08f959c93cb81a0bd82d48cef0",
+        "projectRevision": null,
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "ownerPid": 63020,
+      "replayAllowed": false,
+      "schema": "filmcraft-output-execution/v1",
+      "state": "finished",
+      "targetHash": "f7b5382e77747e9d4e0fa61723f6625e0d15c7ddaa7f39912b7f6c0a2d4f9b10"
+    }
+  ],
+  "workflowSha256": "cf69f706c7df408386d79cba4742e7242b70ee8489628204dd7ba88508e945c1",
+  "guardSha256": "5555f0560d956678a38a2753ea0f7746fba69401940b25b49a81d3a03f4e315c",
+  "entrySha256": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+  "projectSha256": "20b150fcac40751dbf80b5da5179ab4e3f22377ce6875b3c5aa3e7662c9e731a",
+  "revisionSha256": "0dbbf84aefc3dce83b1c3986295ab6f6704349713c8d9514030a776bddd07835",
+  "scope": "source candidate single-skill cold native workflow delivery/revision; no full DAG acceptance"
+}

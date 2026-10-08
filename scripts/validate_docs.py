@@ -149,5 +149,13 @@ for path in ROOT.rglob('*.json'):
         except (json.JSONDecodeError,UnicodeDecodeError) as exc:
             errors.append(f'{path.relative_to(ROOT)}: invalid JSON: {exc}')
 result={'status':'failed' if errors else 'passed','scope':'documentation structure, local links, status honesty and spec/task traceability only','markdownFiles':len(markdown),'capabilities':len(spec_files),'requirements':len(requirements),'scenarios':scenario_count,'openImplementationTasks':len(re.findall(r'^- \[ \] ',tasks,re.M)),'errors':errors}
+facts_spec = importlib.util.spec_from_file_location('current_facts', ROOT / 'scripts/current_facts.py')
+facts_module = importlib.util.module_from_spec(facts_spec)
+facts_spec.loader.exec_module(facts_module)
+try:
+    facts_module.update(check=True, root=ROOT)
+except (ValueError, KeyError, OSError) as error:
+    errors.append('current facts: ' + str(error))
+    result['status'] = 'failed'
 print(json.dumps(result,ensure_ascii=False,indent=2))
 sys.exit(bool(errors))

@@ -1,0 +1,66 @@
+{
+  "schema": "filmcraft-current-facts/v1",
+  "pluginId": "filmcraft",
+  "pluginVersion": "0.1.0-dev.42",
+  "sourcePackage": "filmcraft-skills",
+  "sourceRef": "v0.1.0-dev.39",
+  "sourceSha": "6c29e50b5fe85f98a1c5f77977158bb1b00bde5a",
+  "suiteSha256": "2dd02eb4eb3ff2d9d4312b05569f5cfbc22e896a253e5fa528ee2945c33feb80",
+  "skillCount": 13,
+  "commandCount": 666,
+  "referenceCatalogIdentity": {
+    "path": "skills/filmcraft-use/references/commands.json",
+    "version": "0.2.0-craft.4",
+    "binarySha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
+    "status": "MISMATCH"
+  },
+  "activeRuntime": {
+    "role": "skill-execution-authority",
+    "path": "skills/filmcraft-use/scripts/runtime.lock.json",
+    "version": "0.2.0-craft.4",
+    "releaseRef": "runtime-v0.2.0-craft.4",
+    "platform": "darwin-arm64",
+    "binarySha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+  },
+  "desktop": {
+    "role": "bridge-desktop-identity",
+    "version": "0.2.0",
+    "binarySha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa"
+  },
+  "historicalRuntime": {
+    "role": "historical-bootstrap-baseline",
+    "path": "runtime/filmcraft-cli.lock.json",
+    "version": "0.2.0"
+  },
+  "implementation": "in-progress",
+  "marketplaceEligible": false,
+  "supportedPluginHosts": [],
+  "completeCommandAcceptance": "incomplete",
+  "currentQualification": "NOT_PROVEN",
+  "qualificationScope": "full current plugin/skill/runtime/host combination",
+  "historicalEvidenceReferences": [
+    "docs/evidence/codex-complete-command-first-use-20261007.json",
+    "docs/evidence/codex-complete-command-revision-first-use-20261007.json",
+    "docs/evidence/codex-current-domain-task-matrix-20261006.json",
+    "docs/evidence/codex-failed-stage-first-use-20261007.json",
+    "docs/evidence/codex-filmcraft7-temporal-timeline-first-use-20261006.json",
+    "docs/evidence/codex-native-download-first-use-20261007.json",
+    "docs/evidence/codex-protocol-fault-first-use-20261007.json",
+    "docs/evidence/codex-public-workflow-session-first-use-20261007.json",
+    "docs/evidence/complete-command-revision-first-use-20261007.json",
+    "docs/evidence/complete-commands-20261007.json",
+    "docs/evidence/complete-commands-cold-first-use-20261007.json",
+    "docs/evidence/craft-art103-audio-tail-fixed-first-use-20261007.json",
+    "docs/evidence/craft-art104-sample-audio-fixed-first-use-20261007.json",
+    "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
+    "docs/evidence/effect-film-segment-hd-candidate-20261007.json",
+    "docs/evidence/failed-stage-candidate-20261007.json",
+    "docs/evidence/filmcraft-audio-sample-source-public-20261007.json",
+    "docs/evidence/filmcraft32-local-tag-13-cold-first-use-20261007.json",
+    "docs/evidence/filmcraft34-ten-scene-first-use-20261008.json",
+    "docs/evidence/motion-lut-workflow-candidate-20261006.json",
+    "docs/evidence/protocol-fault-first-use-20261007.json",
+    "docs/evidence/public-workflow-session-candidate-20261007.json",
+    "docs/evidence/vendor-self-contained-20261008.json"
+  ]
+}

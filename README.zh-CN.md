@@ -1,10 +1,24 @@
 # FilmCraft Agent Plugin
 
+<!-- FILMCRAFT_CURRENT_FACTS_START -->
+
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.42` / `filmcraft-skills@v0.1.0-dev.39`; 13 / 666。
+
+执行 CLI / bridge 桌面：`0.2.0-craft.4` / `0.2.0`；根运行时锁仅作历史基线。
+
+实现状态：`in-progress`；当前完整组合验收：`NOT_PROVEN`。目录数量及历史报告不推导为当前执行或发行通过。[机器可读身份与范围](docs/current-facts.json)。
+
+参考目录身份：`MISMATCH`；不一致须显式保留，不能覆盖实际执行运行时锁。
+
+<!-- FILMCRAFT_CURRENT_FACTS_END -->
+
+[dev.42 开发发行验证](docs/FilmCraft-Dev42-Release.zh_CN.md)：锁定技能 dev.39，验证 Node/SQLite 任务与回执血缘、只读诊断及有界状态修复；当前源码与内置快照原生回归通过。宿主安装、完整恢复、授权执行、预算、质量及完整 V1 仍开放；历史候选报告保留原身份。
+
 四领域RT-001运行时来源与完整性已完成当前全部场景验收，固定技能字节保持不变；运行时升级与完整首版仍开放。[验收架构](docs/Craft-Fixed-Runtime-Integrity-Architecture.zh_CN.md)。
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.41`；技能源：`0.1.0-dev.38`；13 个独立技能。
+当前插件：`0.1.0-dev.42`；技能源：`0.1.0-dev.39`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -105,9 +119,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.41 |
+| Metadata version | 0.1.0-dev.42 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.38 |
+| Skills source | filmcraft-skills / v0.1.0-dev.39 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

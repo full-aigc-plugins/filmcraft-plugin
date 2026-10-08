@@ -1,0 +1,25 @@
+✖ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (793.662583ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 872.068708
+
+✖ failing tests:
+
+test at test/harness/native_workflow.test.ts:13:1
+✖ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (793.662583ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file://[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/test/harness/native_workflow.test.ts:38:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /input_identity_conflict/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

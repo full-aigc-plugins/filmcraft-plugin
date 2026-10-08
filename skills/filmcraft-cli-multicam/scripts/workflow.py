@@ -122,8 +122,14 @@ def native_module():
 
 
 def validate(plan, prior_assets=None):
+    if isinstance(plan, dict) and plan.get('schema') == 'craft-command-plan/v1':
+        raise ValueError('invalid_workflow_plan: use commands.py check/run for craft-command-plan/v1')
     if not isinstance(plan, dict) or not isinstance(plan.get('operations'), list):
         raise ValueError('operations_required')
+    if 'requires' in plan:
+        load_module('capabilities').validate_requirements(plan['requires'])
+        if plan['requires'].get('mode', 'headless') != 'headless':
+            raise ValueError('capability_identity_mismatch: workflow_mode_is_headless')
     if not isinstance(plan.get('assets', {}), dict):
         raise ValueError('invalid_assets')
     aliases = set()
@@ -131,7 +137,7 @@ def validate(plan, prior_assets=None):
         if not isinstance(item, dict):
             raise ValueError('invalid_operation')
         if item.get('command') == 'native.command':
-            native_module().validate(item.get('params'))
+            native_module().validate(item.get('params'), allow_references=True)
         if item.get('command') not in ALLOWED:
             raise ValueError('unsupported_command')
         alias = item.get('as')
@@ -343,6 +349,21 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
                 assets[alias] = {'sha256': asset['sha256'], 'probe': precise(probe), 'staging': str(target)}
         argv = [cli] + (['--data-dir', str(data_dir)] if data_dir is not None else []) + (['--project', str(source_project)] if source_project else []) + ['mcp']
         with load_module('mcp_session').Session(argv) as session:
+            gateway = native_module().commands
+            capability_module = load_module('capabilities')
+            current_rows = gateway.runtime_rows(session)
+            current = {row['id']: row for row in current_rows}
+            requirements = dict(plan.get('requires', {}))
+            required_resources = list(requirements.get('resources', []))
+            # 本公开工作流固定导出 H.264，预先探测原生导出器，不借系统 ffmpeg 推断。
+            if not any(row == {'kind': 'codec', 'name': 'h264'} for row in required_resources):
+                required_resources.append({'kind': 'codec', 'name': 'h264'})
+            requirements['resources'] = required_resources
+            capability_record = gateway.capability_snapshot(session, installed, current_rows, requires=requirements)
+            recovery_state['capabilitySnapshot'] = capability_record
+            required_commands = [item['params']['command'] for item in plan['operations']
+                                 if item['command'] == 'native.command']
+            capability_module.enforce(capability_record, requirements, required_commands)
             def call(name, args):
                 recovery_state['lastAttempt'] = {'tool': name, 'arguments': args, 'phase': 'submitted'}
                 result = session.request('tools/call', {'name': name, 'arguments': args})
@@ -356,6 +377,18 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
                 receipts.append({'tool': name, 'arguments': args, 'result': value})
                 return value
             def command(identifier, params):
+                fresh_rows = gateway.runtime_rows(session, {'filter': identifier})
+                actual = next((row for row in fresh_rows if row['id'] == identifier), None)
+                expected = next(row for row in gateway.catalog()['commands'] if row['id'] == identifier)
+                check = capability_module.compare_command(expected, actual)
+                recovery_state.setdefault('commandCapabilities', []).append(check)
+                capability_module.assert_command(check)
+                needed = capability_module.infer_resources(identifier, params)
+                if needed:
+                    resources = gateway.probe_required_resources(session, needed, fresh_rows)
+                    recovery_state.setdefault('resourceCapabilities', []).extend(resources)
+                    capability_module.enforce(dict(capability_record, resources=resources),
+                                              {'resources': needed}, [identifier])
                 return call('command_run', {'id': identifier, 'params': params})
             def sequence_probe(asset):
                 # 核验原生实际媒体属性；不能把单张图片 probe 伪装为序列。
@@ -549,7 +582,9 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
                     native_run(['--project', str(output / 'project.fcproj'), 'exec', 'captions.export', json.dumps({'path': str(output / 'captions.srt'), 'format': 'srt'})])
                 if source_project and sha(source_project) != source_hash:
                     raise ValueError('revision_conflict')
-                for name, value in [('plan.json', plan), ('native.json', precise(reopened)), ('captions.json', precise(captions)), ('export-probe.json', precise(exported)), ('operations.json', precise(receipts))]:
+                capability_record['commandChecks'] = recovery_state.get('commandCapabilities', [])
+                capability_record['resourceChecks'] = recovery_state.get('resourceCapabilities', [])
+                for name, value in [('plan.json', plan), ('capabilities.json', capability_record), ('native.json', precise(reopened)), ('captions.json', precise(captions)), ('export-probe.json', precise(exported)), ('operations.json', precise(receipts))]:
                     (output / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
                 (output / 'decode.txt').write_text(decoded)
                 exchange_report(output,[f'frame-{index:04d}.png' for index,_ in enumerate(plan.get('frames',['0']))]+['film.mp4']+(['captions.srt'] if captions['tracks'] else []),{})

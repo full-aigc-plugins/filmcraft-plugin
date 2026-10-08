@@ -1,0 +1,6 @@
+test_isolated_native_snapshot_reopen_and_dependency_blocks (test_native_capabilities.NativeCapabilitiesTests.test_isolated_native_snapshot_reopen_and_dependency_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.975s
+
+OK

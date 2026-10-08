@@ -45,12 +45,22 @@
         "2.5",
         "2.6",
         "2.9",
-        "2.10"
+        "2.10",
+        "9.10",
+        "9.11",
+        "9.12"
       ],
       "owner": "Runtime owner",
       "status": "in-progress",
       "candidateEvidence": "docs/evidence/filmcraft-native-download-candidate-20261007.json",
-      "fixedNativeDownloadEvidence": "docs/evidence/codex-native-download-first-use-20261007.json"
+      "fixedNativeDownloadEvidence": "docs/evidence/codex-native-download-first-use-20261007.json",
+      "optimizationStatus": "in-progress",
+      "optimizationTasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-capability-candidate-20261008.json"
     },
     {
       "requirement": "FC-TX-001",
@@ -63,7 +73,9 @@
         "3.14"
       ],
       "owner": "Harness owner",
-      "status": "planned"
+      "status": "planned",
+      "candidateStatus": "bounded-source-candidate; full single-writer and fixed-release acceptance open",
+      "candidateEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json"
     },
     {
       "requirement": "FC-TX-002",
@@ -71,10 +83,19 @@
       "tasks": [
         "3.4",
         "3.5",
-        "3.6"
+        "3.6",
+        "9.16",
+        "9.17",
+        "9.18"
       ],
       "owner": "Harness owner",
-      "status": "planned"
+      "status": "planned",
+      "optimizationStatus": "planned",
+      "optimizationTasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ]
     },
     {
       "requirement": "FC-TX-003",
@@ -82,10 +103,19 @@
       "tasks": [
         "3.7",
         "3.8",
-        "3.9"
+        "3.9",
+        "9.19",
+        "9.20",
+        "9.21"
       ],
       "owner": "Harness owner",
-      "status": "planned"
+      "status": "planned",
+      "optimizationStatus": "planned",
+      "optimizationTasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ]
     },
     {
       "requirement": "FC-DM-001",
@@ -164,11 +194,20 @@
       "tasks": [
         "4.16",
         "4.17",
-        "4.18"
+        "4.18",
+        "9.31",
+        "9.32",
+        "9.33"
       ],
       "owner": "Domain owner",
       "status": "in-progress",
-      "evidence": "docs/evidence/film-workflow-tests.json"
+      "evidence": "docs/evidence/film-workflow-tests.json",
+      "optimizationStatus": "planned",
+      "optimizationTasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ]
     },
     {
       "requirement": "FC-AR-001",
@@ -176,10 +215,20 @@
       "tasks": [
         "5.1",
         "5.2",
-        "5.3"
+        "5.3",
+        "9.13",
+        "9.14",
+        "9.15"
       ],
       "owner": "Harness owner",
-      "status": "planned"
+      "status": "planned",
+      "optimizationStatus": "in-progress",
+      "optimizationTasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json"
     },
     {
       "requirement": "FC-AR-002",
@@ -198,10 +247,19 @@
       "tasks": [
         "6.1",
         "6.2",
-        "6.3"
+        "6.3",
+        "9.22",
+        "9.23",
+        "9.24"
       ],
       "owner": "Harness owner",
-      "status": "planned"
+      "status": "planned",
+      "optimizationStatus": "planned",
+      "optimizationTasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ]
     },
     {
       "requirement": "FC-QA-002",
@@ -209,10 +267,19 @@
       "tasks": [
         "6.4",
         "6.5",
-        "6.6"
+        "6.6",
+        "9.25",
+        "9.26",
+        "9.27"
       ],
       "owner": "Harness owner",
-      "status": "planned"
+      "status": "planned",
+      "optimizationStatus": "planned",
+      "optimizationTasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ]
     },
     {
       "requirement": "FC-RL-001",
@@ -220,10 +287,26 @@
       "tasks": [
         "7.1",
         "7.2",
-        "7.3"
+        "7.3",
+        "9.4",
+        "9.5",
+        "9.6",
+        "9.28",
+        "9.29",
+        "9.30"
       ],
       "owner": "Release owner",
-      "status": "planned"
+      "status": "planned",
+      "optimizationStatus": "in-progress",
+      "optimizationTasks": [
+        "9.4",
+        "9.5",
+        "9.6",
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json"
     },
     {
       "requirement": "FC-RL-002",
@@ -244,11 +327,21 @@
         "1.8",
         "1.9",
         "1.10",
-        "1.11"
+        "1.11",
+        "9.7",
+        "9.8",
+        "9.9"
       ],
       "owner": "Skills owner",
       "status": "bounded-verification-passed",
-      "evidence": "docs/evidence/skill-suite.json"
+      "evidence": "docs/evidence/skill-suite.json",
+      "optimizationStatus": "in-progress",
+      "optimizationTasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json"
     },
     {
       "requirement": "FC-CM-001",
@@ -265,7 +358,10 @@
         "8.9",
         "8.10",
         "8.11",
-        "8.12"
+        "8.12",
+        "9.1",
+        "9.2",
+        "9.3"
       ],
       "owner": "Skills owner",
       "status": "in-progress",
@@ -276,7 +372,14 @@
       "protocolFaultHostEvidence": "docs/evidence/codex-protocol-fault-first-use-20261007.json",
       "publicWorkflowCandidateEvidence": "docs/evidence/public-workflow-session-candidate-20261007.json",
       "publicWorkflowFixedHostEvidence": "docs/evidence/codex-public-workflow-session-first-use-20261007.json",
-      "fixedNativeDownloadEvidence": "docs/evidence/codex-native-download-first-use-20261007.json"
+      "fixedNativeDownloadEvidence": "docs/evidence/codex-native-download-first-use-20261007.json",
+      "optimizationStatus": "in-progress",
+      "optimizationTasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json"
     },
     {
       "requirement": "FC-TX-004",

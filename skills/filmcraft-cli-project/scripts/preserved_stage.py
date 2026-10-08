@@ -38,6 +38,12 @@ def preserved_stage(output, prefix, state=None):
         try:
             operations = state.get('operations', [])
             _write_record(stage / 'recovery-operations.json', operations)
+            if 'capabilitySnapshot' in state:
+                # 独立诊断文件沿用领域快照，不扩充公共失败回执的协议字段。
+                capabilities = dict(state['capabilitySnapshot'],
+                                    resourceChecks=state.get('resourceCapabilities', []),
+                                    commandChecks=state.get('commandCapabilities', []))
+                _write_record(stage / 'capabilities.json', capabilities)
             files = {}
             for path in sorted(stage.rglob('*')):
                 if path.is_file() and not path.is_symlink() and path.name != 'failure.json':

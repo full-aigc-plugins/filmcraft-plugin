@@ -1,0 +1,38 @@
+{
+  "schema": "craft-native-command-sample/v1",
+  "domain": "filmcraft",
+  "result": "PASS",
+  "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+  "entrySha256": "0d07b9b07a8df3e12db67c460d72212fd6c4ee9d13fff299566b5a268fc0438f",
+  "catalogSha256": "34dcd5d53c1bbe73625b8c4aaac2d97f892d80d1ba12463f591d2793695f749c",
+  "createOperations": 11,
+  "reopenOperations": 3,
+  "executedCommands": [
+    "clip.speedDuration",
+    "file.newColorMatte",
+    "file.newProject",
+    "file.newSequence",
+    "file.open",
+    "file.saveAs",
+    "sequence.applyVideoTransition",
+    "sequence.inspect",
+    "timeline.place"
+  ],
+  "savedProjectSha256": "6af0787caea5616ebb81e2a8eb3351f7fbadf30e069ec183b0cbea03ee59ee76",
+  "checks": [
+    "isolated single-skill copy",
+    "live command context",
+    "actual return references",
+    "native save and reopen",
+    "persisted domain settings",
+    "96x64 rendered output",
+    "source project and skill unchanged"
+  ],
+  "guiAcceptance": "NOT_RUN",
+  "fullPerCommandAcceptance": "NOT_RUN",
+  "coldInstall": "NOT_RUN",
+  "skill": "filmcraft-cli",
+  "skillSha256": "739d0c99ef5f4fda1a3ac3e500eb8d323397860b7c132c29262c0b08eda063f3",
+  "archiveUrl": null,
+  "installationMode": "existing runtime reuse"
+}

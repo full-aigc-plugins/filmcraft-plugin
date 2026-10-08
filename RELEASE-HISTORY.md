@@ -2,6 +2,8 @@
 
 These records were moved verbatim from the README preface. They describe their own versions and are not the current installation contract.
 
+Development release `0.1.0-dev.42` pins skills `v0.1.0-dev.39` / `6c29e50b5fe85f98a1c5f77977158bb1b00bde5a`, includes the Dreamina optimization specs/tasks, and adds Node/SQLite receipt lineage plus bounded read-only diagnosis and same-attempt repair. Local plugin Python regression passed 28 tests; independent-source and vendored native runs each passed 33 tests without skips. Actual export-reply-loss repair preserves files and does not replay native work; two tasks and 13 artifacts pass pinned public schemas. See [bound report](docs/evidence/filmcraft-dev42-release-20261008.json). Host installation, complete recovery/backup/rollback, authorization, budgets/cancellation, quality and full V1 remain open; publication is not acceptance.
+
 Fixed FilmCraft plugin31/source29 first-use acceptance passes:64 host skills discovered with zero loading errors,13 Film skills each cold-install the public native runtime and query666 commands,7 installed output-guard tests and1 real installed native create/export/reopen/revise case pass. Public source ZIPs match Git archives byte for byte;all64 installed hashes remain unchanged. Art integration, other domain guards and complete task/V1 gates remain open. [Evidence / 证据](docs/evidence/filmcraft31-fixed-output-execution-first-use-20261007.json).
 
 Plugin dev.31 pins released Film skills dev.29 with pre-native output execution registration and canonical-path agreement. Runtime remains0.2.0-craft.2. Source native acceptance passed; fixed installed first-use and interrupted-owner checks remain pending until their version-bound reports pass. Full task contracts remain open.

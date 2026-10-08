@@ -1,0 +1,74 @@
+
+> @full-aigc-plugins/filmcraft@0.1.0-dev.41-runtime.1 test
+> node --test test/harness/*.test.ts
+
+﹣ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (0.4ms) # SKIP
+✔ legacy command receipt is linked without rewriting native integers or declaring completion (37.169083ms)
+✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (39.270084ms)
+✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (39.043875ms)
+✔ receipt paths reject traversal and symlinks before reading their targets (28.386625ms)
+✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (0.164042ms)
+✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (99.324083ms)
+✔ same idempotency key returns the original task; changed identity conflicts without replacing it (6.920459ms)
+✔ task IDs cannot overwrite another caller and input versions remain bound (2.471458ms)
+✔ project occupancy survives close/reopen and unknown execution does not free the writer (3.913625ms)
+✔ expired leases are fenced without automatically taking over or accepting an old completion (2.354ms)
+✔ intent is committed before submission and accepted execution is not completed delivery (2.788625ms)
+✔ missing stop confirmation remains unknown; receipts cannot be spliced across attempts (3.775208ms)
+✔ deadline and unsupported state database refuse execution without editing user files (2.011125ms)
+✔ two actual processes cannot acquire the same project writer (69.008083ms)
+✖ aliased output parents share idempotency and occupancy even with a different project key (3.153875ms)
+✖ an unrelated SQLite database with user_version 1 is rejected without changing its bytes (1.709459ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 14
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 328.968083
+
+✖ failing tests:
+
+test at test/harness/task_ledger.test.ts:113:1
+✖ aliased output parents share idempotency and occupancy even with a different project key (3.153875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '[TEMP_PATH]'
+  - '[TEMP_PATH]'
+  
+      at TestContext.<anonymous> (file://[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/test/harness/task_ledger.test.ts:119:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '[TEMP_PATH]',
+    expected: '[TEMP_PATH]',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/task_ledger.test.ts:126:1
+✖ an unrelated SQLite database with user_version 1 is rejected without changing its bytes (1.709459ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/test/harness/task_ledger.test.ts:130:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ledger_schema_unknown/,
+    operator: 'throws',
+    diff: 'simple'
+  }

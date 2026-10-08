@@ -1,0 +1,252 @@
+{
+  "schema": "filmcraft-optimization-candidate/v1",
+  "recordedAt": "2026-10-08T09:38:34.482682+00:00",
+  "scope": "source candidate for native entry validation, routing structure and plugin current facts; not a published snapshot qualification",
+  "source": {
+    "baseCommit": "3aba8777b7bfaaf0f571e9290a32e4549e1d566d",
+    "workingTree": "modified candidate",
+    "fileSha256": {
+      "skill-suite.json": "ac33fc2d74374c5703cc5424b45b835a9f2737db63d6f35b8f9f5d9f9befb966",
+      "scripts/sync_skill_suite.py": "3027a1120de0d99f3673e54fefae5dd13c112721461f8faf9836a8e923e0b5d1",
+      "docs/routing-corpus.json": "4ec767712adc9ca2868870d8f2df38e4f985d7a9e519816e607796f7e14af0bc",
+      "skills/filmcraft-cli/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-audio/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-color/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-export/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-media/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-motion/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-multicam/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-project/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-setup/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-subtitles/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-timeline/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli-transcript/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-use/scripts/commands.py": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "skills/filmcraft-cli/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-audio/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-color/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-export/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-media/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-motion/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-multicam/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-project/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-setup/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-subtitles/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-timeline/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli-transcript/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-use/scripts/native_workflow.py": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "skills/filmcraft-cli/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-audio/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-color/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-export/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-media/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-motion/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-multicam/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-project/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-setup/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-subtitles/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-timeline/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli-transcript/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-use/scripts/workflow.py": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "skills/filmcraft-cli/SKILL.md": "55224f43e31f66a579b8235080c11a003fdf9d50dd66f94121b5111651bc0e32",
+      "skills/filmcraft-cli-audio/SKILL.md": "757557dc8e4a7624474cb6924ad1f80d516257a69b45b0ec5363a47fe358098e",
+      "skills/filmcraft-cli-color/SKILL.md": "40cf90c5c64877ca408caf37ee2db48b3fbfa01f35875f07b0fa2f7118143c2e",
+      "skills/filmcraft-cli-export/SKILL.md": "5639e8a31c8de62b2933898746bc45ac4c39f7bf4e0417e8afe527fa1109575c",
+      "skills/filmcraft-cli-media/SKILL.md": "426b2dacf3969682256049697a147229db1cec2cc57c1cbc8f467eb01f13bd76",
+      "skills/filmcraft-cli-motion/SKILL.md": "7e6da69ef611fb9d2cf8b4b5224f76661cd50435908c8ae85a96c6e85eed829a",
+      "skills/filmcraft-cli-multicam/SKILL.md": "6b7c6ba3f6480f8b34bb39c5b3ef202b67fb864cb0aadf56566a678ced84956f",
+      "skills/filmcraft-cli-project/SKILL.md": "85fe9dd235e87b88ced17c6b3f3da83c0f37a90356ae919d7fa26525b1dc9835",
+      "skills/filmcraft-cli-setup/SKILL.md": "8358bc3d4aeedc2b1dfc72482ff9acd768c71d78546d0fd96563a2f4197f8642",
+      "skills/filmcraft-cli-subtitles/SKILL.md": "d9922e80214ff9bc1802c92306350b6b123ec252ad1a6b5b0a8501cc69948b88",
+      "skills/filmcraft-cli-timeline/SKILL.md": "0706b5baa203ebc43440bcbcfb1294eb9735c0c094a793205ea6e05fd33ba5e3",
+      "skills/filmcraft-cli-transcript/SKILL.md": "4e06625ec12e0e63504dacc7d95a530cbb0e486b5ace385cdc33d41603661bcb",
+      "skills/filmcraft-use/SKILL.md": "d99581114f6fd977e318b0a33fe4e90d851caf4c95296cf524f296045bdc0c98",
+      "skills/filmcraft-cli/references/task-scene.md": "a0225d85e11e1e9a6ad251af4b8b756355ed53a01b7232194d0445c052d913c9",
+      "skills/filmcraft-cli-audio/references/task-scene.md": "9dea081be856b803a6f6b0cf456aebea2f478e0ab2b57af6ee20df7043ab49f6",
+      "skills/filmcraft-cli-color/references/task-scene.md": "df7dc41990a9b6dc1b219ab3be089d41125bea55ec8363cc87d5fb0d98838667",
+      "skills/filmcraft-cli-export/references/task-scene.md": "8387080892c179b4e5a49a03fa183094e5d19a05e32439e1a7b02b510134437c",
+      "skills/filmcraft-cli-media/references/task-scene.md": "d8815e691fb37e22b6277300262d9d43ba83ce6c826617c98d7654a4e865bd55",
+      "skills/filmcraft-cli-motion/references/task-scene.md": "0eec35fac30aa51d38d772a0f544ded31aae466ff966a3d857acdd2c147b813c",
+      "skills/filmcraft-cli-multicam/references/task-scene.md": "7ab3ab05a131de843a6371ba9f3fb62202f82e83871b31248cf507fa2855e736",
+      "skills/filmcraft-cli-project/references/task-scene.md": "3ba86e8c77c2d399f6a17a2a9f5313e01dbd673272879d1088c13cbdaf1a934d",
+      "skills/filmcraft-cli-setup/references/task-scene.md": "1e1edb329ecd6b2ee64d5e29b94d08cd05fda10e73d31034c520571b3749d945",
+      "skills/filmcraft-cli-subtitles/references/task-scene.md": "91d83bedb3525f18967b66d47659477efbb37fc27a5f5ff449e507518bba95e7",
+      "skills/filmcraft-cli-timeline/references/task-scene.md": "b3514492671e95974ef9cc535dec5e8e6896dd2a2aa318ce4b1331a83801b745",
+      "skills/filmcraft-cli-transcript/references/task-scene.md": "c8ba36431d3567192252d6a3d4026a8b3f78654a35e6f5aafa17f6de39f1d386",
+      "skills/filmcraft-use/references/task-scene.md": "27acaa880936e82c593698daa23312c5f819452b23a8f46c34d7cde167f009ef",
+      "tests/test_native_entry_parity.py": "08a2276fbb3e94cf7a2f7dc71fc40d11df59960086d9ddab6271ce4e26e403da",
+      "tests/test_intent_routing.py": "a5a1ca82583d4bde877fe2e699b88843e6592e2f5325b12a7bb6641c55fee1e7"
+    }
+  },
+  "plugin": {
+    "baseCommit": "90da28efa55a2da99761a414ee05811e82a9f02c",
+    "version": "0.1.0-dev.41",
+    "lockedSourceRef": "v0.1.0-dev.38",
+    "fileSha256": {
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "tests/test_current_facts.py": "f766a1569474dade44ca926df98f039b738f235fd1ac1fb39ee64cbf1d14994f",
+      "docs/skills-source-suite.json": "b2212b1b61748a28acfa3773ffa30f43cdc4171f3a43843a3492a48278860520"
+    }
+  },
+  "red": {
+    "entryParity": {
+      "tests": 7,
+      "failedAssertions": 29,
+      "errorsFromUnexpectedNativeRequests": 2,
+      "logSha256": "171f0253111d25b928490a800300313e75b6b7106ebb596e32b34871a3949b5f"
+    },
+    "currentFacts": {
+      "tests": 4,
+      "failures": 4,
+      "reason": "current fact generator missing",
+      "logSha256": "2148819c61db8860e4fb6912fd8c223f57e0d21fa9c6bc66bd33f70a33e84559"
+    },
+    "routing": {
+      "tests": 4,
+      "failedAssertions": 26,
+      "reason": "missing corpus/playbooks and unrelated multicam triggers",
+      "logSha256": "e80052ece3fa347c78d900f26f1ff1532f933eec8c23b912c3e752cd6be643a9"
+    }
+  },
+  "green": {
+    "entryParity": {
+      "tests": 7,
+      "passed": 7,
+      "skipped": 0
+    },
+    "currentFacts": {
+      "tests": 5,
+      "passed": 5,
+      "skipped": 0
+    },
+    "routingStructure": {
+      "tests": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "sourceRegression": {
+      "tests": 180,
+      "passed": 145,
+      "skipped": 35,
+      "logSha256": "9df2c5a21d88b7bad7c280060ee86c93f137e3ab953cc2807f077e86b950e4de"
+    },
+    "pluginRegression": {
+      "tests": 28,
+      "passed": 28,
+      "skipped": 0
+    },
+    "selfContainedResources": "PASS",
+    "skillMarkdownLinks": "PASS"
+  },
+  "native": {
+    "commandSample": {
+      "schema": "craft-native-command-sample/v1",
+      "domain": "filmcraft",
+      "result": "PASS",
+      "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+      "entrySha256": "da47388878c5342a979b8b3ab56e1dfc0cb7eb1f5dc58d24307de86f49c0a1b4",
+      "catalogSha256": "34dcd5d53c1bbe73625b8c4aaac2d97f892d80d1ba12463f591d2793695f749c",
+      "createOperations": 11,
+      "reopenOperations": 3,
+      "executedCommands": [
+        "clip.speedDuration",
+        "file.newColorMatte",
+        "file.newProject",
+        "file.newSequence",
+        "file.open",
+        "file.saveAs",
+        "sequence.applyVideoTransition",
+        "sequence.inspect",
+        "timeline.place"
+      ],
+      "savedProjectSha256": "6af0787caea5616ebb81e2a8eb3351f7fbadf30e069ec183b0cbea03ee59ee76",
+      "checks": [
+        "isolated single-skill copy",
+        "live command context",
+        "actual return references",
+        "native save and reopen",
+        "persisted domain settings",
+        "96x64 rendered output",
+        "source project and skill unchanged"
+      ],
+      "guiAcceptance": "NOT_RUN",
+      "fullPerCommandAcceptance": "NOT_RUN",
+      "coldInstall": "NOT_RUN",
+      "skill": "filmcraft-cli",
+      "skillSha256": "811a70de954ce3eb44764bdfe66622a6e62eddcd4fcf9902b4d701cfce693c00",
+      "archiveUrl": null,
+      "installationMode": "existing runtime reuse"
+    },
+    "workflowSample": {
+      "domain": "filmcraft",
+      "result": "PASS",
+      "pathCase": {
+        "unicodeAndSpaces": false,
+        "skillName": "single-skill",
+        "parentName": "tmp2zpjukh6",
+        "runtimeInitiallyAbsent": true,
+        "offlineOverridesExcluded": true
+      },
+      "guardRecords": [
+        {
+          "identity": {
+            "inputHashes": {},
+            "planHash": "502713bcc7a44788af1030a309ee1baea992e5868e528d422a10138f9102cb8c",
+            "projectRevision": "f098fd539070a99a90ba51b3de7ab6c91fc0fa98ff168518575e203c010ab243",
+            "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+          },
+          "ownerPid": 29261,
+          "replayAllowed": false,
+          "schema": "filmcraft-output-execution/v1",
+          "state": "finished",
+          "targetHash": "a2b57ab7a2af3b7ac19146a8910fdb0c7178d1ede7f29bf59e1f2dbf73319047"
+        },
+        {
+          "identity": {
+            "inputHashes": {
+              "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+            },
+            "planHash": "3eab7a00c0f55a73a6a2b04736349b97107acdd6ee003beaa7266d6df3fb0510",
+            "projectRevision": null,
+            "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+          },
+          "ownerPid": 26354,
+          "replayAllowed": false,
+          "schema": "filmcraft-output-execution/v1",
+          "state": "finished",
+          "targetHash": "fc4f7e45ae6687783012a2098cf05dce3a081b2c44b6524c982f6b879c01d394"
+        }
+      ],
+      "workflowSha256": "dd2c79e49245192694b3624cec9539d8cb8b5f99294acc1f43978d27aa2063f5",
+      "guardSha256": "5555f0560d956678a38a2753ea0f7746fba69401940b25b49a81d3a03f4e315c",
+      "entrySha256": "e8c247037e5dfc9a8b6b722d16e7f529539bc72af6fd55f1de2647c1fd81d4ea",
+      "projectSha256": "f098fd539070a99a90ba51b3de7ab6c91fc0fa98ff168518575e203c010ab243",
+      "revisionSha256": "695e498f81ef1b8cde3030aab23da3208df635c18f696f135c8c734499537446",
+      "scope": "source candidate single-skill cold native workflow delivery/revision; no full DAG acceptance"
+    },
+    "bindingNote": "Execution scripts are digest-bound. Subsequent routing guide edits do not receive native or fixed-install qualification from these reports."
+  },
+  "completedTasks": [
+    "9.1",
+    "9.2",
+    "9.4",
+    "9.5",
+    "9.7",
+    "9.8"
+  ],
+  "remainingGates": {
+    "newPinnedRelease": "NOT_RUN",
+    "actualHostRouting": "NOT_RUN",
+    "everySkillNewNativeTask": "NOT_RUN",
+    "fullCommandMatrix": "NOT_RUN",
+    "fullV1": "NOT_PROVEN"
+  },
+  "knownDiscrepancy": {
+    "referenceCatalogIdentity": "MISMATCH",
+    "parameterComparison": {
+      "count": 666,
+      "differences": 0,
+      "scope": "existing native snapshot; not runtime execution of every command"
+    }
+  }
+}

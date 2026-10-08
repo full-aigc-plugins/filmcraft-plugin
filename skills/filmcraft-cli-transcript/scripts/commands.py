@@ -76,11 +76,14 @@ def validate_tick_parameters(command, params, allow_references=False, contract=N
 
 
 def validate(plan, input_names=()):
-    if (not isinstance(plan, dict) or set(plan) != {"schema", "operations"}
+    if (not isinstance(plan, dict) or not {"schema", "operations"}.issubset(plan)
+            or set(plan) - {"schema", "operations", "requires"}
             or plan["schema"] != "craft-command-plan/v1"
             or not isinstance(plan["operations"], list)
             or not 1 <= len(plan["operations"]) <= 1000):
-        raise ValueError("invalid_command_plan")
+        raise ValueError("invalid_command_plan: expected craft-command-plan/v1; use workflow.py for domain workflow plans")
+    if 'requires' in plan:
+        load('capabilities').validate_requirements(plan['requires'])
     rows = {r["id"]: r for r in catalog()["commands"]}
     tools = set(catalog()["nativeTools"])
     aliases = {"output", *input_names}
@@ -247,8 +250,34 @@ def runtime_rows(session, params=None):
         raise RuntimeError("outcome_unknown: unexpected_registry")
     return rows
 
+
+def check_runtime_parameters(identifier, observed):
+    expected = next((row for row in catalog()['commands'] if row['id'] == identifier), None)
+    if expected is None:
+        raise ValueError('capability_missing: ' + identifier)
+    module = load('capabilities')
+    module.assert_command(module.compare_command(expected, observed))
+
+
+def probe_required_resources(session, requirements, rows):
+    def query(identifier):
+        current = {row['id']: row for row in runtime_rows(session, {'filter': identifier})}
+        row = current.get(identifier)
+        check_runtime_parameters(identifier, row)
+        if row.get('enabled') is not True:
+            raise ValueError('capability_unknown: resource_probe_disabled: ' + identifier)
+        tool, arguments = native_call(identifier, {})
+        return parse_reply(session.request('tools/call', {'name': tool, 'arguments': arguments}))
+    return load('capabilities').probe_resources(requirements, query)
+
+
+def capability_snapshot(session, installed, rows, mode='headless', desktop=None, requires=None):
+    requires = requires if requires is not None else {}
+    resources = probe_required_resources(session, requires.get('resources', []), rows)
+    return load('capabilities').snapshot(installed, catalog(), rows, mode, desktop, resources)
+
 def execute(plan, output, runtime_home=None, mode="headless", connect=None, token_file=None,
-            installer=None, session_factory=None, inputs=None):
+            installer=None, session_factory=None, inputs=None, desktop_identity=None):
     inputs = inputs or {}
     if not isinstance(inputs, dict) or any(not isinstance(k, str) or not re.fullmatch(r"[a-zA-Z][\w-]*", k) or k == "output" for k in inputs):
         raise ValueError("invalid_input_name")
@@ -311,11 +340,19 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
             # 目录查询也是原生能力合同；旧服务不能冒充新入口。
             if not required.issubset(available) or ROUTES[DOMAIN][0] not in available:
                 raise RuntimeError("native_tool_missing")
-            current = {r["id"]: r for r in runtime_rows(session)}
+            observed_rows = runtime_rows(session)
+            current = {r["id"]: r for r in observed_rows}
             expected = {r["id"] for r in catalog()["commands"]}
             if not expected.issubset(current):
                 raise RuntimeError("native_registry_drift")
             receipt["registeredCommands"] = len(current)
+            requirements = plan.get('requires', {})
+            capabilities = load('capabilities')
+            receipt['capabilitySnapshot'] = capability_snapshot(session, installed, observed_rows, mode,
+                                                                 desktop_identity, requirements)
+            write(output / 'journal.json', receipt)
+            capabilities.enforce(receipt['capabilitySnapshot'], requirements,
+                                 [step['command'] for step in plan['operations'] if 'command' in step])
             for index, step in enumerate(plan["operations"]):
                 params = resolve(step["params"], bindings)
                 if "command" in step:
@@ -330,6 +367,22 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
                         record["reason"] = row.get("why", "native_context_disabled") if row else "native_command_missing"
                         receipt["steps"].append(record)
                         raise RuntimeError("precondition_failed: " + step["command"] + ": " + record["reason"])
+                    expected_row = next(r for r in catalog()['commands'] if r['id'] == step['command'])
+                    record['capabilityCheck'] = capabilities.compare_command(expected_row, row)
+                    try:
+                        capabilities.assert_command(record['capabilityCheck'])
+                        needed = capabilities.infer_resources(step['command'], params)
+                        if needed:
+                            resources = probe_required_resources(session, needed, observed_rows)
+                            local_snapshot = dict(receipt['capabilitySnapshot'], resources=resources)
+                            record['resourceCapabilities'] = resources
+                            capabilities.enforce(local_snapshot, {'resources': needed}, [step['command']])
+                    except ValueError as error:
+                        # 此时尚未提交编辑；把阻断证据保留为 blocked，而非丢失当前尝试。
+                        record['state'] = 'blocked'
+                        record['reason'] = str(error)
+                        receipt['steps'].append(record)
+                        raise
                     tool, args = native_call(step["command"], params)
                 else:
                     tool, args = step["tool"], params
@@ -364,6 +417,7 @@ def main():
     run = sub.add_parser("run"); run.add_argument("plan", type=Path); run.add_argument("--output", type=Path, required=True)
     run.add_argument("--input", action="append", default=[]); run.add_argument("--runtime-home"); run.add_argument("--mode", choices=["headless", "bridge"], default="headless")
     run.add_argument("--connect"); run.add_argument("--control-token-file")
+    run.add_argument('--desktop-app', type=Path, help='existing pinned signed app for manual bridge; owned desktop.py supplies its verified identity')
     args = parser.parse_args()
     try:
         if args.action == "list":
@@ -386,7 +440,17 @@ def main():
                 result = {"result": "PASS", "scope": "plan structure and catalog membership only",
                           "nativeExecution": "NOT_RUN", "operations": len(plan["operations"])}
             else:
-                result = execute(plan, args.output, args.runtime_home, args.mode, args.connect, args.control_token_file, inputs=inputs)
+                desktop_identity = None
+                if args.desktop_app:
+                    if args.mode != 'bridge':
+                        raise ValueError('desktop_app_requires_bridge_mode')
+                    desktop_lock = json.loads((ROOT / 'scripts/desktop.lock.json').read_text())
+                    if args.desktop_app.name != desktop_lock['app']:
+                        raise ValueError('desktop_app_identity_mismatch')
+                    desktop_identity = load('desktop').inspect(args.desktop_app.absolute().parent,
+                        desktop_lock)
+                result = execute(plan, args.output, args.runtime_home, args.mode, args.connect, args.control_token_file,
+                                 inputs=inputs, desktop_identity=desktop_identity)
         print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
         return 0 if not isinstance(result, dict) or result.get("result", "PASS") == "PASS" else 1
     except (ValueError, OSError) as error:

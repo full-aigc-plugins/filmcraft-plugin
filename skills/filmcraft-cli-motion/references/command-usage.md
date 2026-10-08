@@ -54,6 +54,8 @@ check validates all operations before installation; it is not native parameter o
 
 ## 4. GUI 与真实工程状态 / GUI and real project state
 
+源码候选的可选 `requires`、资源探测及失败快照见 [计划能力合同](capabilities.md)。手工 bridge 连接还需 `--desktop-app /absolute/FilmCraft.app` 核验固定桌面；需要进程与监听者身份保证时使用本技能 `desktop.py run`。
+
 默认显式 headless。依赖面板、指针、窗口或交互的命令可能要求运行中的应用；不得把 headless 禁用解释为命令永久不存在。先在应用打开授权工程并建立选择状态，再指定 --mode bridge --connect 127.0.0.1:PORT。此入口映射各工具实际 --bridge／--connect 参数，不偷偷回退到其他会话。PhotoCraft 本地控制访问需要时使用 --control-token-file FILE；令牌不放计划、参数或回执。
 
 Default mode is explicitly headless. UI-dependent commands require the running application and its project/selection state. Use --mode bridge --connect 127.0.0.1:PORT. PhotoCraft can use --control-token-file. GUI execution acceptance remains separately recorded; do not silently fall back to headless.

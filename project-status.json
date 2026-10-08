@@ -71,7 +71,15 @@
     "2.3": "docs/evidence/craft-fixed-runtime-integrity-20261008.json",
     "4.30": "docs/evidence/craft-art118-segment-guide-fixed-first-use-20261008.json",
     "4.31": "docs/evidence/craft-art118-segment-guide-fixed-first-use-20261008.json",
-    "4.43": "docs/evidence/craft-art118-segment-guide-fixed-first-use-20261008.json"
+    "4.43": "docs/evidence/craft-art118-segment-guide-fixed-first-use-20261008.json",
+    "9.1": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+    "9.2": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+    "9.4": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+    "9.5": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+    "9.7": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+    "9.8": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+    "9.10": "docs/evidence/filmcraft-capability-candidate-20261008.json",
+    "9.11": "docs/evidence/filmcraft-capability-candidate-20261008.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -117,5 +125,16 @@
   "currentSceneFirstUseEvidence": "docs/evidence/filmcraft34-ten-scene-first-use-20261008.json",
   "currentSceneFirstUseStatus": "ten current installed scene skills passed with fresh runtimes; automatic ASR, generic Skills CLI and full V1 remain open",
   "skillSourceContractEvidence": "docs/evidence/vendor-self-contained-20261008.json",
-  "skillSourceContractStatus": "current fixed source and self-contained snapshot boundaries verified; complete V1 remains in progress"
+  "skillSourceContractStatus": "current fixed source and self-contained snapshot boundaries verified; complete V1 remains in progress",
+  "optimizationCandidate": {
+    "status": "in-progress",
+    "evidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
+    "scope": "source candidate only; pinned installation and complete V1 remain open",
+    "capabilityEvidence": "docs/evidence/filmcraft-capability-candidate-20261008.json",
+    "capabilityStatus": "source implementation and bounded headless/owned-bridge verified; pinned installation and full compatibility remain open",
+    "harnessEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json",
+    "harnessStatus": "bounded Node/SQLite and native Python source candidate verified; fixed installs, authorization, recovery, budgets, quality and full V1 open",
+    "releaseEvidence": "docs/evidence/filmcraft-dev42-release-20261008.json",
+    "recoveryStatus": "bounded read-only diagnosis and same-attempt repair verified; continuation, backup/rollback, authorization enforcement and full recovery acceptance open"
+  }
 }

@@ -1,6 +1,6 @@
 ---
 name: filmcraft-cli
-description: 查询 FilmCraft 原生命令和参数，或处理多机位切换、主录音连续性与通用剪辑命令；首次使用安装固定 CLI。
+description: 当用户明确指定 FilmCraft 原生命令 ID、参数查询、CLI/MCP 调用，或专项技能尚未覆盖的高级操作时使用；按实际工程上下文执行并保留回执。
 license: Apache-2.0
 ---
 
@@ -67,10 +67,9 @@ GUI任务可先使用本技能自带的 [固定桌面安装](references/desktop-
 
 完整归属命令按命令族列于 [分类使用清单](references/scenario.md)，每项可通过本技能的 `commands.py describe` 查看参数；通用 CLI 清单也保留未归入专项技能的全部命令。
 
-业务任务从 [场景操作手册](references/business-scenes.md) 开始，按输入检查、模板适配、原生交付、局部返工和结果核验执行。
+本技能任务先读取 [专项任务模板](references/task-scene.md)，按对应输入、首次任务、失败边界、局部修订和核验执行。跨能力组合时再读取 [完整业务场景](references/business-scenes.md)。
 
 安装失败时读取 [首次使用诊断](references/first-use-failures.md)，按回执定位当前技能自身的 setup 入口；安装失败与原生调用失败分别处理。
 
-多机位访谈、演出与主录音连续性任务，读取 [多机位场景](references/multicam-scene.md)，核对机位编号、同步依据和切点验收。
 
 同目标执行竞争与中断登记见本技能 [执行登记](references/output-execution.md)；技能源dev.29收录实现，插件固定安装验收单独记录。

@@ -1,0 +1,13 @@
+test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) ... ok
+test_failed_stage_preserves_snapshot_and_resource_check_hashes (test_capability_evidence.CapabilityEvidenceTests.test_failed_stage_preserves_snapshot_and_resource_check_hashes) ... ok
+test_inferred_missing_font_is_recorded_as_blocked_without_edit (test_capability_evidence.CapabilityEvidenceTests.test_inferred_missing_font_is_recorded_as_blocked_without_edit) ... ok
+test_late_parameter_drift_retains_prior_success_and_blocked_attempt (test_capability_evidence.CapabilityEvidenceTests.test_late_parameter_drift_retains_prior_success_and_blocked_attempt) ... ok
+test_model_is_reprobed_after_explicit_install (test_capability_evidence.CapabilityEvidenceTests.test_model_is_reprobed_after_explicit_install) ... ok
+test_partial_desktop_metadata_stays_unknown (test_capability_evidence.CapabilityEvidenceTests.test_partial_desktop_metadata_stays_unknown) ... ok
+test_resource_query_uses_current_contract_not_cached_catalog (test_capability_evidence.CapabilityEvidenceTests.test_resource_query_uses_current_contract_not_cached_catalog) ... ok
+test_workflow_checks_contract_again_before_first_edit (test_capability_evidence.CapabilityEvidenceTests.test_workflow_checks_contract_again_before_first_edit) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.215s
+
+OK

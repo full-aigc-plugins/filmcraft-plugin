@@ -1,0 +1,162 @@
+{
+  "sourceRef": "v0.1.0-dev.39",
+  "sourceSha": "6c29e50b5fe85f98a1c5f77977158bb1b00bde5a",
+  "suiteSha256": "2dd02eb4eb3ff2d9d4312b05569f5cfbc22e896a253e5fa528ee2945c33feb80",
+  "suite": {
+    "schema": "craft-skill-suite/v1",
+    "pluginId": "filmcraft",
+    "version": "0.1.0-dev.39",
+    "source": {
+      "repository": "https://github.com/storytold/filmcraft",
+      "commit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
+      "analysis": "CodeGraph CLI/engine or Tauri scene/task flow; current installed runtime checked separately"
+    },
+    "skills": [
+      {
+        "name": "filmcraft-use",
+        "title": "完整任务路由",
+        "description": "使用 FilmCraft 编辑可重新打开的 fcproj 视频工程，编排素材、音频与字幕并导出预览或成片；首次使用时安装并检查锁定 CLI。",
+        "kind": "router",
+        "commandCount": 666,
+        "commandPrefixes": []
+      },
+      {
+        "name": "filmcraft-cli",
+        "title": "CLI 公共操作",
+        "description": "当用户明确指定 FilmCraft 原生命令 ID、参数查询、CLI/MCP 调用，或专项技能尚未覆盖的高级操作时使用；按实际工程上下文执行并保留回执。",
+        "kind": "cli",
+        "commandCount": 666,
+        "commandPrefixes": []
+      },
+      {
+        "name": "filmcraft-cli-setup",
+        "title": "CLI 安装诊断",
+        "description": "当需要首次安装、摘要校验、版本检查与缺失运行时排障时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "setup",
+        "commandCount": 666,
+        "commandPrefixes": []
+      },
+      {
+        "name": "filmcraft-cli-project",
+        "title": "工程与序列",
+        "description": "当需要创建、打开、保存 fcproj 和组织序列、素材箱时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 131,
+        "commandPrefixes": [
+          "file.",
+          "project.",
+          "sequence."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-media",
+        "title": "素材检查与导入",
+        "description": "当需要检查已有音视频、图片和素材引用，导入并收集或重关联素材时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 31,
+        "commandPrefixes": [
+          "media.",
+          "mediaBrowser.",
+          "source."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-timeline",
+        "title": "时间线剪辑",
+        "description": "当需要排序、裁切、移动镜头，组织轨道与单镜头修改时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 135,
+        "commandPrefixes": [
+          "timeline.",
+          "clip.",
+          "trim."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-audio",
+        "title": "音频与配音组织",
+        "description": "当需要组织已有配音和音乐、增益、混音与音画同步时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 38,
+        "commandPrefixes": [
+          "mixer.",
+          "essentialSound.",
+          "clipMixer.",
+          "audio."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-subtitles",
+        "title": "字幕编辑",
+        "description": "当需要导入、创建、修改字幕文本、时间、样式并交付 SRT时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 22,
+        "commandPrefixes": [
+          "captions."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-color",
+        "title": "调色与 LUT",
+        "description": "当需要调整镜头色彩、使用许可明确的 LUT 与颜色预设时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 13,
+        "commandPrefixes": [
+          "lumetri.",
+          "lut.",
+          "color.",
+          "scopes."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-motion",
+        "title": "图文与镜头动画",
+        "description": "当需要创建文字图形、效果参数与镜头关键帧时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 105,
+        "commandPrefixes": [
+          "graphics.",
+          "effects.",
+          "masks."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-export",
+        "title": "预览与成片输出",
+        "description": "当需要导出预览帧、成片、交换文件与输出验证时使用 FilmCraft；本技能自带首次安装与公开 CLI 入口。",
+        "kind": "scenario",
+        "commandCount": 33,
+        "commandPrefixes": [
+          "export.",
+          "file.export",
+          "jobs."
+        ]
+      },
+      {
+        "name": "filmcraft-cli-multicam",
+        "title": "多机位剪辑",
+        "description": "使用 FilmCraft 剪辑已同步的多机位访谈、演讲或演出，切换机位并保持指定主录音；首次使用安装固定 CLI。",
+        "kind": "scenario",
+        "commandCount": 38,
+        "commandPrefixes": [
+          "multicam.",
+          "clip.createMulticam",
+          "clip.multicamEnable",
+          "clip.multicamFlatten"
+        ]
+      },
+      {
+        "name": "filmcraft-cli-transcript",
+        "title": "转录与按文字剪辑",
+        "description": "导入或生成逐词转录、搜索口播、管理说话人、按文字剪辑及生成字幕；首次使用安装固定 FilmCraft CLI。",
+        "kind": "scenario",
+        "commandCount": 14,
+        "commandPrefixes": [
+          "transcript."
+        ]
+      }
+    ],
+    "resourceSource": "filmcraft-use",
+    "runtimeVersion": "0.2.0-craft.4"
+  }
+}

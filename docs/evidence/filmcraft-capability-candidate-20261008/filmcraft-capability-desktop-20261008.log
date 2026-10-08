@@ -1,0 +1,12 @@
+test_duplicate_and_nonfinite_plan_json_rejected (test_desktop_session.DesktopPlanAndInterruptTests.test_duplicate_and_nonfinite_plan_json_rejected) ... ok
+test_interruption_preserves_completed_step_and_unknown_request (test_desktop_session.DesktopPlanAndInterruptTests.test_interruption_preserves_completed_step_and_unknown_request) ... ok
+test_invalid_plan_does_not_create_output_or_install (test_desktop_session.DesktopSessionTests.test_invalid_plan_does_not_create_output_or_install) ... ok
+test_owned_session_start_failure_terminates_only_its_process (test_desktop_session.DesktopSessionTests.test_owned_session_start_failure_terminates_only_its_process) ... ok
+test_unsupported_platform_has_no_output (test_desktop_session.DesktopSessionTests.test_unsupported_platform_has_no_output) ... ok
+test_single_skill_empty_cache_install_launch_save_reopen_and_cleanup (test_desktop_session.OwnedDesktopPublicFirstUse.test_single_skill_empty_cache_install_launch_save_reopen_and_cleanup) ... ok
+test_desktop_metadata_cannot_be_named_as_deliverable (test_desktop_session.ReservedDesktopOutputTests.test_desktop_metadata_cannot_be_named_as_deliverable) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 46.180s
+
+OK

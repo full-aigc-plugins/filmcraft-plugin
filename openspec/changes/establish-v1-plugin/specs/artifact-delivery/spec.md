@@ -2,7 +2,7 @@
 
 ## Purpose
 
-本能力定义 FilmCraft 在 artifact-delivery 范围内对用户、宿主与下游系统承诺的可观察行为、失败语义和验收证据，确保规划、执行与实际交付之间保持可验证的边界。当前为目标规范，尚未实现。
+本能力定义 FilmCraft 在 artifact-delivery 范围内对用户、宿主与下游系统承诺的可观察行为、失败语义和验收证据，确保规划、执行与实际交付之间保持可验证的边界。当前为目标规范；回执映射已有源码候选，完整交付合同尚未验收。
 
 ## ADDED Requirements
 
@@ -20,6 +20,25 @@
 
 - **WHEN** 输出文件被替换但文件名未变
 - **THEN** 哈希校验失败并使原验收失效
+
+#### Scenario: FC-AR-001-RECEIPT-LINEAGE 回执关联与公共协议映射
+
+- **WHEN** 一次执行产生命令回执、交付清单、失败阶段记录、输出执行记录或质量评审回执
+- **THEN** FilmCraft SHALL 通过显式映射关联 taskId、计划摘要、输入摘要、技能源修订、运行时身份、操作尝试及产物摘要，使每个结论可以回到实际执行及候选产物
+- **AND** craft-task/v1 与 craft-artifact/v1 继续由 ArtCraft 持有；FilmCraft 仅定义领域字段与映射，保留既有公开格式，必要的不兼容变更采用显式版本迁移
+
+#### Scenario: FC-AR-001-RECEIPT-MISMATCH 缺失或冲突的回执
+
+- **WHEN** 回执缺失、输入或候选摘要变化，或不同记录的执行身份相互冲突
+- **THEN** 系统 SHALL 保留原始记录并报告 unknown、stale 或 conflict，不拼接成完整成功证据
+- **AND** 原生工程承担编辑数据事实源、执行账本承担操作状态事实源、质量证据承担评审结论事实源；各回执是关联记录，不新建相互竞争的任务状态权威
+
+#### Scenario: FC-AR-001-LEGACY-MAPPING 旧格式回执与操作尝试关联
+
+- **WHEN** 消费既有 command receipt、filmcraft-delivery/v1、craft-failed-stage/v1 或 filmcraft-output-execution/v1
+- **THEN** 领域适配 SHALL 保留原始字节和摘要，以明确算法区分公共规范化计划、Python 命令计划和工作流计划摘要，关联当前账本中的 taskId、attemptId、输入版本、技能源身份和运行时
+- **AND** 缺失的旧字段保持 unknown，不补造历史身份；相同种类的冲突回执不得覆盖原记录，跨尝试数据不得拼接；文件内容变化后当前证据标记 stale
+- **AND** 领域映射仅使用固定 ArtCraft 公共协议字段，不创建另一套公共 schema；成功命令或关联完整不自动提升技术、创作或用户接受状态
 
 ### Requirement: FC-AR-002 原生工程与交换损失
 

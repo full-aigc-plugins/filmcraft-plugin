@@ -1,0 +1,116 @@
+{
+  "schema": "filmcraft-development-release-verification/v1",
+  "pluginVersion": "0.1.0-dev.42",
+  "source": {
+    "ref": "v0.1.0-dev.39",
+    "sha": "6c29e50b5fe85f98a1c5f77977158bb1b00bde5a",
+    "skillTreeSha256": "fd3b1f10cb05271ffd0a4c9b341d412eec0f0adbc9297639bfda622e6ebb1e45"
+  },
+  "platform": {
+    "os": "macOS",
+    "arch": "arm64",
+    "node": "v24.18.0",
+    "python": "3.13.5"
+  },
+  "runtimeIdentity": {
+    "pluginId": "filmcraft",
+    "pluginVersion": "0.1.0-dev.42",
+    "cliVersion": "0.2.0-craft.4",
+    "sha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "450548b2ca12c7e5a497109e7ac26ed925bd5b0616f808c88791bbbe9d839452"
+  },
+  "sourceFiles": {
+    ".github/workflows/implementation.yml": "e127fae475bedd86bed951b6d5e17b8a39b1de02f62d73e76c094281af64c083",
+    "package.json": "69e86a59a9d9df444a237db8402461067e5a93b17065b592930f69c9462e0971",
+    "plugin.json": "588fe5a2b9cbab8b330d4f0e03f47976a00e18b8d37b2efccaf10252e285f19e",
+    "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+    "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+    "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+    "scripts/validate_protocol_mapping.py": "60ddb28a89e2e30df847dec658ed19cc482f994f17d7c6bdf76f2d4e24be0413",
+    "skills.lock.json": "91fde2270afe71e99e86e1a1165f7ba657e9adc13b0f5c689daf1ead5599c1cf",
+    "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+    "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+    "src/adapters/python_workflow.ts": "d3a7df2fbd909b934afb6201b92daa9ece9fae1ab3afc432007d9e2bc28433e8",
+    "src/artifacts/receipt_index.ts": "d1f45568eb826f9bbc4572c6c751db6723def6755fe7fb802a6f2cafe356e329",
+    "src/cli/recovery.ts": "637e8ad0c0e623c2d5f68d8de5fb2096543a5d60d1eb977e4e6548c77701efc5",
+    "src/harness/forensic_snapshot.ts": "22a5ee297855d7121b5eeb85bb6256003ed41dbd52b86defbffb4e85f5b3e234",
+    "src/harness/recovery.ts": "d634906d812e07b170055a99e1f14c778233c935daeda5e2c45c656b38178a32",
+    "src/harness/task_ledger.ts": "212f25e145066200b32c3de823f80ae092f7e6a987b80eecb8c74e9013f32371",
+    "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+    "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62",
+    "test/harness/fixtures.ts": "a20dec899c782b74a2ed8d662f9456717967538caaeec495c561b8a4ecbe98ca",
+    "test/harness/native_workflow.test.ts": "988c7332b51b97eb1cf4a47147a3f3ba42db88fff4eed485c669919af8e3ccd9",
+    "test/harness/protocol_mapping.test.ts": "51a343405b131a1a195e6efe855635ac3d3a7609dd8ad6d8e96531e331f99ee8",
+    "test/harness/receipt_index.test.ts": "1da75d119ca80d9497ffee97ad0c3c92bbee2c9267f28b94cfaca06e637d5d7d",
+    "test/harness/recovery.test.ts": "f2bb723c287d65a0dd73448ef1124a363dff639e25f566f2840e7e41a8622605",
+    "test/harness/task_ledger.test.ts": "fc4af8a587d992d4d0e93a93fc42a87998df487a1e84b0757834dbc18a476341"
+  },
+  "evidenceFiles": {
+    "docs/evidence/filmcraft-dev42-release-20261008/native-source.json": "d0e23ae15f1ff876c7ea470a2c31b0e3668eac72e51e4de6feaddfdbce8de4f1",
+    "docs/evidence/filmcraft-dev42-release-20261008/native-source.log": "e3f719ce25b0555385d538cf642e3dd872c52f1c779730a094dff4ae661923cb",
+    "docs/evidence/filmcraft-dev42-release-20261008/native-vendored.json": "fd990ca00645d26c6dc648a41c8c19032c325b128dd77bfb9145dace4d66d96d",
+    "docs/evidence/filmcraft-dev42-release-20261008/native-vendored.log": "ad43dab29e293d325f60f5683b13d4f467e87daf9d99dc68fdf2e8a1a8f8b272",
+    "docs/evidence/filmcraft-dev42-release-20261008/plugin-node-default.log": "cd76b5bc5078782398eb80699eaf457330f21aa5c301fa8b816102afd9e10c1b",
+    "docs/evidence/filmcraft-dev42-release-20261008/plugin-python.log": "bcd7e5f2eeb1846b744d4b26bd494609a3a680d15206733b54935ec0322ac105",
+    "docs/evidence/filmcraft-dev42-release-20261008/protocol-source.json": "04b59538a0a29d334e1d086103931fc7fabc98caad2eee7535f0ee402dadc572",
+    "docs/evidence/filmcraft-dev42-release-20261008/protocol-vendored.json": "04b59538a0a29d334e1d086103931fc7fabc98caad2eee7535f0ee402dadc572",
+    "docs/evidence/filmcraft-dev42-release-20261008/source-regression.log": "8ca8f2cb564b1bc9a15034901aedd35489567764d2c141d41d751966b2f1f9fc",
+    "docs/evidence/filmcraft-dev42-release-20261008/vendor.log": "11af7ba11cd4036fcb2fe377d0b669e3b6271de7ff317c88c379e19ad30a731c"
+  },
+  "results": {
+    "sourceRegression": {
+      "tests": 201,
+      "passed": 165,
+      "skipped": 36
+    },
+    "sourceResources": "PASS",
+    "pluginPython": {
+      "tests": 28,
+      "passed": 28,
+      "skipped": 0
+    },
+    "nodeDefault": {
+      "tests": 33,
+      "passed": 32,
+      "skipped": 1
+    },
+    "nativeIndependentSource": {
+      "tests": 33,
+      "passed": 33,
+      "skipped": 0
+    },
+    "nativeVendoredSnapshot": {
+      "tests": 33,
+      "passed": 33,
+      "skipped": 0
+    },
+    "publishedVendorCheck": "PASS",
+    "publicMapping": {
+      "tasks": 2,
+      "artifacts": 13,
+      "authorityRef": "v0.1.0-dev.109"
+    },
+    "recovery": {
+      "actualNativeFault": "receipt transfer lost after native export",
+      "readOnlyFilesPreserved": true,
+      "nativeFilesPreserved": true,
+      "originalAttemptCount": 1,
+      "state": "verifying",
+      "replayed": false
+    }
+  },
+  "notAccepted": [
+    "actual GitHub CI (queried after push)",
+    "host installation of dev.42",
+    "full command/mode/platform and media matrices",
+    "TypeScript static typechecking",
+    "authorization-scope enforcement",
+    "budget and cancellation enforcement",
+    "independent technical/creative review and user acceptance",
+    "full backup/upgrade/rollback and continuation",
+    "complete V1"
+  ],
+  "historicalHarnessEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json",
+  "scope": "current source and vendored native regression, not host installation or full-product acceptance"
+}

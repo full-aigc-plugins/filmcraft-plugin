@@ -1,0 +1,130 @@
+test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) ... 
+  test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) (kind='codec') ... FAIL
+  test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) (kind='model') ... FAIL
+  test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) (kind='font') ... FAIL
+test_failed_stage_preserves_snapshot_and_resource_check_hashes (test_capability_evidence.CapabilityEvidenceTests.test_failed_stage_preserves_snapshot_and_resource_check_hashes) ... FAIL
+test_inferred_missing_font_is_recorded_as_blocked_without_edit (test_capability_evidence.CapabilityEvidenceTests.test_inferred_missing_font_is_recorded_as_blocked_without_edit) ... FAIL
+test_late_parameter_drift_retains_prior_success_and_blocked_attempt (test_capability_evidence.CapabilityEvidenceTests.test_late_parameter_drift_retains_prior_success_and_blocked_attempt) ... FAIL
+test_model_is_reprobed_after_explicit_install (test_capability_evidence.CapabilityEvidenceTests.test_model_is_reprobed_after_explicit_install) ... ok
+test_partial_desktop_metadata_stays_unknown (test_capability_evidence.CapabilityEvidenceTests.test_partial_desktop_metadata_stays_unknown) ... ERROR
+test_resource_query_uses_current_contract_not_cached_catalog (test_capability_evidence.CapabilityEvidenceTests.test_resource_query_uses_current_contract_not_cached_catalog) ... FAIL
+test_workflow_checks_contract_again_before_first_edit (test_capability_evidence.CapabilityEvidenceTests.test_workflow_checks_contract_again_before_first_edit) ... ERROR
+
+======================================================================
+ERROR: test_partial_desktop_metadata_stays_unknown (test_capability_evidence.CapabilityEvidenceTests.test_partial_desktop_metadata_stays_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 63, in test_partial_desktop_metadata_stays_unknown
+    snapshot = module.snapshot({}, expected, [], 'bridge', desktop=desktop)
+  File "[filmcraft-skills]/skills/filmcraft-use/scripts/capabilities.py", line 71, in snapshot
+    and re.fullmatch('[a-f0-9]{64}', desktop.get('binarySha256', ''))
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/re/__init__.py", line 172, in fullmatch
+    return _compile(pattern, flags).fullmatch(string)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+======================================================================
+ERROR: test_workflow_checks_contract_again_before_first_edit (test_capability_evidence.CapabilityEvidenceTests.test_workflow_checks_contract_again_before_first_edit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 185, in test_workflow_checks_contract_again_before_first_edit
+    workflow.execute(plan, output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "[filmcraft-skills]/skills/filmcraft-use/scripts/workflow.py", line 492, in execute
+    sequence = call('sequence_inspect', {})
+  File "[filmcraft-skills]/skills/filmcraft-use/scripts/workflow.py", line 369, in call
+    result = session.request('tools/call', {'name': name, 'arguments': args})
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 163, in changed
+    reply = original_request(method, params)
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 46, in request
+    identifier = params['arguments']['id']
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'id'
+
+======================================================================
+FAIL: test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) (kind='codec')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 79, in test_conflicting_native_resource_rows_are_unknown
+    self.assertEqual(result[0]['status'], 'unknown')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'missing' != 'unknown'
+- missing
++ unknown
+
+
+======================================================================
+FAIL: test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) (kind='model')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 79, in test_conflicting_native_resource_rows_are_unknown
+    self.assertEqual(result[0]['status'], 'unknown')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'missing' != 'unknown'
+- missing
++ unknown
+
+
+======================================================================
+FAIL: test_conflicting_native_resource_rows_are_unknown (test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown) (kind='font')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 79, in test_conflicting_native_resource_rows_are_unknown
+    self.assertEqual(result[0]['status'], 'unknown')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'available' != 'unknown'
+- available
++ unknown
+
+
+======================================================================
+FAIL: test_failed_stage_preserves_snapshot_and_resource_check_hashes (test_capability_evidence.CapabilityEvidenceTests.test_failed_stage_preserves_snapshot_and_resource_check_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 92, in test_failed_stage_preserves_snapshot_and_resource_check_hashes
+    self.assertIn('capabilities.json', failure['files'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'capabilities.json' not found in {'recovery-operations.json': {'sha256': '37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570', 'bytes': 3}}
+
+======================================================================
+FAIL: test_inferred_missing_font_is_recorded_as_blocked_without_edit (test_capability_evidence.CapabilityEvidenceTests.test_inferred_missing_font_is_recorded_as_blocked_without_edit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 109, in test_inferred_missing_font_is_recorded_as_blocked_without_edit
+    self.assertEqual(len(receipt['steps']), 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_late_parameter_drift_retains_prior_success_and_blocked_attempt (test_capability_evidence.CapabilityEvidenceTests.test_late_parameter_drift_retains_prior_success_and_blocked_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 125, in test_late_parameter_drift_retains_prior_success_and_blocked_attempt
+    self.assertEqual([step['state'] for step in receipt['steps']], ['succeeded', 'blocked'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['succeeded'] != ['succeeded', 'blocked']
+
+Second list contains 1 additional elements.
+First extra element 1:
+'blocked'
+
+- ['succeeded']
++ ['succeeded', 'blocked']
+
+======================================================================
+FAIL: test_resource_query_uses_current_contract_not_cached_catalog (test_capability_evidence.CapabilityEvidenceTests.test_resource_query_uses_current_contract_not_cached_catalog)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[filmcraft-skills]/tests/test_capability_evidence.py", line 144, in test_resource_query_uses_current_contract_not_cached_catalog
+    self.assertEqual(result[0]['status'], 'unknown')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'available' != 'unknown'
+- available
++ unknown
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.202s
+
+FAILED (failures=7, errors=2)

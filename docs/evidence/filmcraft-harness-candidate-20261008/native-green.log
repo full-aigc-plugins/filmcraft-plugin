@@ -1,0 +1,34 @@
+
+> @full-aigc-plugins/filmcraft@0.1.0-dev.41-runtime.1 test:native
+> FILMCRAFT_NATIVE_HARNESS=1 node --test --test-concurrency=1 test/harness/*.test.ts
+
+✔ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (2060.081958ms)
+✔ public task mapping uses registered identity and keeps internal fields in the domain ledger (4.524584ms)
+✔ legacy command receipt is linked without rewriting native integers or declaring completion (28.037458ms)
+✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (26.847667ms)
+✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (27.377041ms)
+✔ receipt paths reject traversal and symlinks before reading their targets (27.884583ms)
+✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (0.226916ms)
+✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (98.122042ms)
+✔ delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS (91.308958ms)
+✔ missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered (113.146875ms)
+✔ legacy output execution maps declared new inputs separately from inherited project inputs (102.71075ms)
+✔ failed-stage receipts retain original bytes and missing historical identities without following stage paths (28.686667ms)
+✔ same idempotency key returns the original task; changed identity conflicts without replacing it (4.542625ms)
+✔ task IDs cannot overwrite another caller and input versions remain bound (2.927458ms)
+✔ project occupancy survives close/reopen and unknown execution does not free the writer (5.069875ms)
+✔ expired leases are fenced without automatically taking over or accepting an old completion (2.855167ms)
+✔ intent is committed before submission and accepted execution is not completed delivery (3.929542ms)
+✔ missing stop confirmation remains unknown; receipts cannot be spliced across attempts (3.219542ms)
+✔ deadline and unsupported state database refuse execution without editing user files (2.6275ms)
+✔ two actual processes cannot acquire the same project writer (73.899041ms)
+✔ aliased output parents share idempotency and occupancy even with a different project key (3.541917ms)
+✔ an unrelated SQLite database with user_version 1 is rejected without changing its bytes (1.753958ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3018.598

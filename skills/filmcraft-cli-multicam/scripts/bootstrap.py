@@ -122,10 +122,11 @@ def inspect_install(destination, artifact, expected, version, platform_key):
     if any(record.get(key) != value for key, value in identity.items()):
         raise ValueError('installation_receipt_mismatch; preserve directory for inspection')
     if expected.get('provenanceSha256'):
-        record = destination / 'PROVENANCE.json'
-        if record.is_symlink() or not record.is_file() or digest(record) != expected['provenanceSha256']:
+        provenance = destination / 'PROVENANCE.json'
+        if provenance.is_symlink() or not provenance.is_file() or digest(provenance) != expected['provenanceSha256']:
             raise ValueError('installed_provenance_checksum_mismatch')
-    return {'executable': str(binary), 'reused': True, 'binarySha256': expected['binarySha256']}
+    return {'executable': str(binary), 'reused': True, 'binarySha256': expected['binarySha256'],
+            'version': record['version'], 'versionOutput': record['versionOutput'], 'platform': record['platform']}
 
 
 def install(lock, runtime_home, archive=None, platform_key=None):

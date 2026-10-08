@@ -2,7 +2,7 @@
 
 ## Context
 
-动机和边界见 [proposal.md](proposal.md)。当前只有文档、元数据与运行时基础证据；专业技能、Harness 和原生交付验收仍待实现。FilmCraft 的代表任务是：使用已有素材制作带字幕和配音的短片；重新打开工程；替换一个镜头后再次导出，未修改的片段参数保持不变。
+动机和边界见 [proposal.md](proposal.md)。当前已有独立技能源、固定插件快照及有界原生场景验收，具体范围以任务表及其版本绑定证据为准；完整 Harness、质量闭环和完整 V1 验收仍未完成。下文组件表描述完整目标合同，不否定已完成的有界实现。FilmCraft 的代表任务是：使用已有素材制作带字幕和配音的短片；重新打开工程；替换一个镜头后再次导出，未修改的片段参数保持不变。
 
 ## Goals / Non-Goals
 
@@ -65,3 +65,30 @@
 ## CLI 场景技能增量设计
 
 参考 Dreamina 的 use / CLI / setup / 业务场景分层，但按真实命令划分任务。四原生 CLI 保持各自 argv 和工程保存语义；每个技能打包自己的最小运行资源，禁止跨技能文件路径。共有资源在仓库发布脚本中按摘要同步，避免手工维护多份逻辑。上游 ArtCraft 的 scene 保存、生成请求与异步轮询仅作为设计参考，不复制受限代码；本项目 ArtCraft CLI 的事实源为现有 src/cli.ts。原有 use 公开入口保持兼容。插件从新不可变技能源标签同步全部清单，宿主验收锁按新版本单独更新。
+
+## Dreamina 对照优化增量（2026-10-08）
+
+本轮补充既有 7 项能力的场景与任务，不建立新的规格事实源。规范仍为本变更的 specs；[中文优化设计](../../../docs/FilmCraft-Optimization-Architecture.zh_CN.md) 与 [English optimization design](../../../docs/FilmCraft-Optimization-Architecture.md) 说明取舍和实施顺序，追踪见 [任务第 9 节](tasks.md#9-dreamina-对照优化增量2026-10-08)。新增任务按源码候选、固定安装及完整验收分别记录；历史通过记录不覆盖新增验收。实施记录见 [中文进展](../../../docs/FilmCraft-Optimization-Progress.zh_CN.md) 与 [English progress](../../../docs/FilmCraft-Optimization-Progress.md)。
+
+保留既定 Node.js 24/TypeScript + SQLite Harness 方案，用于编排、租约、操作意图与资源账本；已验证的 Python CLI 适配继续负责原生操作，不复制编辑逻辑。公共协议归 ArtCraft，领域侧以兼容映射关联现有回执。借鉴 Dreamina 的路由、持久化尝试记录、独立评审、证据绑定及受限修订；本地编辑预算采用时间、磁盘、输出字节、并发和修订轮数，不直接套用云端积分、授权或 submitId 语义。
+
+依赖顺序为入口一致性及身份/能力快照 → 回执映射 → 恢复与资源边界 → 独立评审和受限修订；技能路由可独立推进，CI 和真实媒体矩阵为各阶段提供验证。只读诊断不改账本、不重放操作；有副作用的状态修复与继续执行另走租约和意图门禁。原授权范围内持续执行，作品变化使旧质量证据失效，授权范围或约束改变才需要新授权。
+
+恢复验收进一步区分“读取状态”“修复账本”“继续原生执行”。SQLite 只读连接仍可能处理 WAL/SHM，因此诊断采用一致的隔离快照并验证原文件保全；读取期间变化返回 unknown。恢复意图先持久化，证据摘要与预期 epoch 在应用前重新检查，并发或过期所有者不能重复提交。已修复尝试的重复请求以新鲜诊断复用原结果，不能提升质量状态。只读不迁移；受支持升级遵循备份策略，未知版本或外来账本不认领。行为以 FC-TX-002 的四项专项场景为准，具体故障矩阵与交付物见 9.16—9.18；本次细化不证明候选实现或固定安装已经通过。
+
+### 参考出处与领域取舍
+
+下表对应本次直接读取的 Dreamina Canvas 插件固定提交 `3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b`；只是设计参考，不是 FilmCraft 验收证据。两个 Dreamina 仓库及 FilmCraft 插件的 CodeGraph 均未初始化，因此本次依据当前文件静态分析，未创建索引。独立 Dreamina 技能源的 `dreamina-canvas-use`、`dreamina-video-evaluator` 和 `dreamina-video-production` 补充了按意图交接、先测量后评审和分阶段制作的参考；技能中声明的工具仍需核对实际可用性。
+
+| 可借鉴设计与固定来源 | FilmCraft 落点 | 不照搬的语义 |
+| :--- | :--- | :--- |
+| [use 路由](https://github.com/full-aigc-plugins/dreamina-canvas-plugin/blob/3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b/skills/dreamina-canvas-use/SKILL.md)：入口唯一、按需加载 | FC-SK-003；9.7—9.9，13 技能主次意图与自身资源 | 不新增没有真实账户接口的 auth 技能，不复制全部技能正文 |
+| [operation_ledger.py](https://github.com/full-aigc-plugins/dreamina-canvas-plugin/blob/3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b/scripts/operation_ledger.py)：持久身份、未知结果不重提 | FC-AR-001 / FC-TX-002；9.13—9.18，task/attempt 与租约、epoch | 云端 submitId 不等于本地进程、工程或操作尝试身份 |
+| [artifact_guard.py](https://github.com/full-aigc-plugins/dreamina-canvas-plugin/blob/3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b/scripts/artifact_guard.py)：目录、字节数与摘要校验 | FC-AR-001 / FC-DM-006；9.13—9.15、9.31—9.33，依赖包、原生重开及解码 | 下载摘要正确不等于原生工程完整、音画正确或创作通过 |
+| [judge_exchange.py](https://github.com/full-aigc-plugins/dreamina-canvas-plugin/blob/3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b/scripts/judge_exchange.py)：独立请求/回执、候选绑定 | FC-QA-001；9.22—9.24，增加时间线、音频与用户接受维度 | 图像单轮控制器不证明视频时序或音频评审，声明 freshContext 不代替实际上下文隔离 |
+| [prompt_revision.py](https://github.com/full-aigc-plugins/dreamina-canvas-plugin/blob/3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b/scripts/prompt_revision.py)：源版本检查、字段保全 | FC-QA-002；9.25—9.27，时间区间、对象、轨道和依赖差异 | 生成块整块替换规则不套用于 FilmCraft 工程局部编辑 |
+| [budget.py](https://github.com/full-aigc-plugins/dreamina-canvas-plugin/blob/3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b/scripts/budget.py) 与 [harness](https://github.com/full-aigc-plugins/dreamina-canvas-plugin/blob/3d21ce5e7ddb164a626f18701f9f4ed8ba279f2b/skills/dreamina-canvas-harness/SKILL.md)：保守预留、停滞停止与 draining | FC-TX-003 / FC-QA-002；9.19—9.21、9.25—9.27，本地资源与停止确认 | 积分审批不替代已有本地授权；draining 不等于原生 cancelled |
+
+统一整数校验、运行时参数漂移、当前身份提取、分层 CI 和真实媒体矩阵是 FilmCraft 自身差距补强，不声称 Dreamina 已提供这些领域实现。全部 11 组的规范场景与任务对应关系见 [tasks.md 第 9 节验收索引](tasks.md#验收索引与交付记录)。
+
+能力声明采用既有领域计划的可选 `requires` 扩展，不改变 ArtCraft 公共协议。声明只表达所需模式、身份、参数契约摘要及资源名称，实际状态由执行器探测。无声明的旧计划继续接受必要实时检查；bridge 必须核验桌面身份。资源探测复用同一原生上下文，区分目录发现与实际安装/显示/推理/导出，并在依赖操作前重新确认变化的资源与契约。成功交付和失败阶段均保留能力证据；详细合同见 FC-RT-002-PLAN-REQUIRES 与 FC-RT-002-RESOURCE-PROBE，实施仍由 9.10—9.12 验收。

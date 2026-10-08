@@ -1,0 +1,13 @@
+{
+  "name": "@full-aigc-plugins/filmcraft",
+  "version": "0.1.0-dev.42",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "scripts": {
+    "test": "node --test test/harness/*.test.ts",
+    "test:native": "FILMCRAFT_NATIVE_HARNESS=1 node --test --test-concurrency=1 test/harness/*.test.ts"
+  }
+}

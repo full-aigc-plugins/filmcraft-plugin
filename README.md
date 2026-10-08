@@ -1,10 +1,24 @@
 # FilmCraft Agent Plugin
 
+<!-- FILMCRAFT_CURRENT_FACTS_START -->
+
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.42` / `filmcraft-skills@v0.1.0-dev.39`; 13 / 666.
+
+Execution CLI / bridge desktop: `0.2.0-craft.4` / `0.2.0`; root runtime lock is historical only.
+
+Implementation: `in-progress`; full current-combination qualification: `NOT_PROVEN`. Discovery counts and historical reports do not imply current execution or release acceptance. [Machine-readable identities and scope](docs/current-facts.json).
+
+Reference catalog identity: `MISMATCH`; a mismatch remains visible and does not override the execution runtime lock.
+
+<!-- FILMCRAFT_CURRENT_FACTS_END -->
+
+[dev.42 development verification](docs/FilmCraft-Dev42-Release.md): pinned skills dev.39, Node/SQLite task/receipt lineage and bounded read-only diagnosis/state repair. Current source and vendored native regressions pass; host installation, complete recovery, authorization, budgets, quality and full V1 remain open. Historical candidate reports retain their original identities.
+
 Four-domain RT-001 runtime source/integrity acceptance now covers every current scenario; existing pinned skill bytes remain unchanged. Runtime upgrades and fullV1 remain open. [Acceptance architecture](docs/Craft-Fixed-Runtime-Integrity-Architecture.md).
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.41`; skill source: `0.1.0-dev.38`; 13 independent skills.
+Current plugin: `0.1.0-dev.42`; skill source: `0.1.0-dev.39`; 13 independent skills.
 
 Verified first-use platform: macOS arm64 and Python 3.11+. Pinned runtimes install into the user data directory; skill files stay in their host-loaded directory. These are development releases; complete V1 acceptance and generic Skills CLI installation remain open.
 
@@ -104,9 +118,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.41 |
+| Metadata version | 0.1.0-dev.42 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.38 |
+| Skills source | filmcraft-skills / v0.1.0-dev.39 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

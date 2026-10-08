@@ -8,7 +8,7 @@ commands = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(commands)
 
 
-def validate(params):
+def validate(params, allow_references=False):
     if not isinstance(params, dict) or set(params) != {'command', 'params'} or not isinstance(params['params'], dict):
         raise ValueError('invalid_native_operation')
     lock = json.loads(Path(__file__).with_name('runtime.lock.json').read_text())
@@ -21,6 +21,10 @@ def validate(params):
         json.dumps(params['params'], allow_nan=False)
     except (ValueError, TypeError):
         raise ValueError('invalid_native_parameters') from None
+    # 两类公开入口共享原生 tick 合同；解析后的参数在 execute 中再次核验。
+    row = next(row for row in catalog['commands'] if row['id'] == params['command'])
+    commands.validate_tick_parameters(params['command'], params['params'],
+                                      allow_references=allow_references, contract=row)
 
 
 def execute(session, params, state, receipts, stage):
@@ -30,8 +34,19 @@ def execute(session, params, state, receipts, stage):
     if not {row['id'] for row in commands.catalog()['commands']}.issubset({row['id'] for row in rows}):
         raise RuntimeError('native_registry_drift')
     row = next((row for row in rows if row['id'] == identifier), None)
+    capabilities = commands.load('capabilities')
+    expected = next(r for r in commands.catalog()['commands'] if r['id'] == identifier)
+    check = capabilities.compare_command(expected, row)
+    state.setdefault('commandCapabilities', []).append(check)
+    capabilities.assert_command(check)
     if row is None or row.get('enabled') is not True:
         raise RuntimeError('precondition_failed: ' + identifier + ': ' + str(row.get('why', 'native_context_disabled') if row else 'native_command_missing'))
+    needed = capabilities.infer_resources(identifier, params['params'])
+    if needed:
+        resources = commands.probe_required_resources(session, needed, rows)
+        context = capabilities.snapshot({}, commands.catalog(), rows, 'headless', resources=resources)
+        state.setdefault('resourceCapabilities', []).extend(resources)
+        capabilities.enforce(context, {'resources': needed}, [identifier])
     tool, arguments = commands.native_call(identifier, params['params'])
     state['lastAttempt'] = {'tool': tool, 'arguments': arguments, 'phase': 'submitted'}
     reply = session.request('tools/call', {'name': tool, 'arguments': arguments})

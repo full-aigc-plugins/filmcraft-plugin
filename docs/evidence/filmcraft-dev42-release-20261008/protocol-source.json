@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "fixed owner schema mapping only; no host, budget or quality acceptance",
+  "authority": {
+    "repository": "https://github.com/full-aigc-plugins/artcraft-plugin.git",
+    "ref": "v0.1.0-dev.109",
+    "sha": "09d4ac5b8ff82f8fe819189e4be487b45ab2472b"
+  },
+  "schemaSha256": {
+    "taskSchema": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "artifactSchema": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d"
+  },
+  "validated": {
+    "publicTasks": 2,
+    "publicArtifacts": 13
+  }
+}

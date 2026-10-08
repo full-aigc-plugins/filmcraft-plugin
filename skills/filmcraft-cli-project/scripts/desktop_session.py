@@ -69,7 +69,7 @@ def run(plan,output,runtime_home=None,inputs=None):
    session=OwnedSession(argv,desktop,commands.DOMAIN,output,port,token);sessions.append(session);return session
   interrupted=False
   try:
-   receipt=commands.execute(plan,output,home,'bridge','127.0.0.1:'+str(port),str(token) if token else None,installer=install,session_factory=factory,inputs=inputs)
+   receipt=commands.execute(plan,output,home,'bridge','127.0.0.1:'+str(port),str(token) if token else None,installer=install,session_factory=factory,inputs=inputs,desktop_identity=desktop)
   except KeyboardInterrupt:
    if not output.is_dir():raise
    interrupted=True

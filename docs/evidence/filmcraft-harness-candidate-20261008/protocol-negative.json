@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "case": "unknown_task_field",
+      "result": "PASS",
+      "observed": "rejected",
+      "reason": "publicTasks[0] $: Additional properties are not allowed ('unrecognized' was unexpected)"
+    },
+    {
+      "case": "invalid_runtime_digest",
+      "result": "PASS",
+      "observed": "rejected",
+      "reason": "publicTasks[0] $.runtimeIdentity.sha256: 'bad' does not match '^[a-f0-9]{64}$'"
+    },
+    {
+      "case": "missing_input_version",
+      "result": "PASS",
+      "observed": "rejected",
+      "reason": "publicTasks[0] $.inputRefs[0]: 'version' is a required property"
+    },
+    {
+      "case": "invalid_artifact_size",
+      "result": "PASS",
+      "observed": "rejected",
+      "reason": "publicArtifacts[0] $.bytes: '13' is not of type 'integer'"
+    },
+    {
+      "case": "unknown_artifact_field",
+      "result": "PASS",
+      "observed": "rejected",
+      "reason": "publicArtifacts[0] $: Additional properties are not allowed ('unrecognized' was unexpected)"
+    }
+  ]
+}

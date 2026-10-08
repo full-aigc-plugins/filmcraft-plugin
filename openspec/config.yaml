@@ -2,7 +2,7 @@ schema: spec-driven
 context: |
   Language: zh-CN. Keep structural headings and SHALL/MUST in English.
   Product: FilmCraft Agent Plugin. Current stage: implementation-in-progress.
-  Plugin id: filmcraft; source skills package: filmcraft-skills (in progress, not published).
+  Plugin id: filmcraft; source skills package: filmcraft-skills (published pinned snapshots; source candidates under verification).
   OpenSpec active change is the only normative V1 authority; bilingual product docs explain it.
   Runtime bootstrap implementation is under test; marketplace and full product acceptance are not claimed.
   Shared craft-task/v1 and craft-artifact/v1 are owned by artcraft-plugin; consumers reference them.

@@ -1,0 +1,159 @@
+{
+  "schema": "filmcraft-quality-source-candidate/v1",
+  "result": "PASS",
+  "scope": "FC-QA-001 tasks9.22-9.24 source candidate; fixed install pending, not complete V1",
+  "intendedPluginVersion": "0.1.0-dev.50",
+  "testedNativePluginVersion": "0.1.0-dev.50",
+  "skillSourceRef": "v0.1.0-dev.42",
+  "skillSourceSha": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+  "sourceFilesSha256": {
+    "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+    "src/quality/review_service.ts": "4bd5925e2d1a0b5cd3858ba4c32f7a35e89b3c14dc2bee5b841c5c9ea6109b2d",
+    "scripts/review_media.py": "2b8b55958a032fc6a625c280a5a9f74bd3ee78ff0a17343ca36d69967fbf033b",
+    "scripts/verify_fixed_quality.py": "840f59f78cafbff9cff1f6a7bebdc80f97123ac152ed3979fc3e8bb69bd5bf1d",
+    "test/harness/quality_review.test.ts": "d0a2eca1204f6cd6de0811e2cbbf629526bfa4d19debf046c697337c382d7c55",
+    "test/harness/quality_service.test.ts": "3ed6d7ba1caa28e23ddc3ed4faaba450fc79ee76c9d284b3017b7434b5a6b80f",
+    "test/harness/quality_media_native.test.ts": "b3ae709b515eb324858b4ca7e4d23a42a2b0bed90aa75b6a01105ce6aba3838c",
+    "test/harness/native_workflow.test.ts": "c78d154a70aba86622154f779fcebadc3c893c0bee94bfee417a6f6422ad676a",
+    "tests/test_review_media.py": "2a52b11caef96ffc06f8e10984ea80627121af5fe08c008f896a48406b4e050c",
+    "tests/test_fixed_quality.py": "d1a05977c3132c0cf363403f0a1ce370eaf15c3ac932ded8b4099ea8fb84b478"
+  },
+  "tests": {
+    "node": {
+      "tests": 107,
+      "pass": 107,
+      "fail": 0,
+      "skipped": 0
+    },
+    "python": {
+      "tests": 53,
+      "pass": 53,
+      "fail": 0
+    },
+    "qualityContractService": 25,
+    "qualityScenarios": 8,
+    "ordinaryNode": {
+      "tests": 107,
+      "pass": 104,
+      "fail": 0,
+      "skipped": 3,
+      "scope": "explicit native, temporal-media and previous-installed-core environment gates; independently executed above"
+    }
+  },
+  "redEvidence": {
+    "actualFailures": [
+      "opposite stereo phase hid clipping after mono downmix",
+      "Python number rendering changed frozen request digest",
+      "known technical failure outside rubric did not block",
+      "candidate mutated during trusted host verification was accepted before a final recheck"
+    ],
+    "gateLog": "docs/evidence/filmcraft50-quality-gate-red.log",
+    "initialFullNativeFailure": "cancel_requested was asserted cancelled before kernel group disappearance",
+    "repair": "test now observes bounded confirmation without another signal; production semantics unchanged",
+    "importRaceLog": "docs/evidence/filmcraft50-quality-import-race-red.log"
+  },
+  "logs": {
+    "media-red": {
+      "path": "docs/evidence/filmcraft50-quality-media-red.log",
+      "originalPrivateSha256": "73d7760b6ca65d085e703910ef93b51fecf417e77250d7c56cb625282e65800d",
+      "publicProjectionSha256": "9075bd528caeaf04fc02b2c897a3084ece8f92c8126b2a909035eeef659ae686"
+    },
+    "native-first-failure": {
+      "path": "docs/evidence/filmcraft50-quality-native-first-failure.log",
+      "originalPrivateSha256": "22f52f1599cc792bda27649885085233f249872c81586654a0f1e67c5584cc0e",
+      "publicProjectionSha256": "baa891117cf1fedd8319d413f497e90c9ef7a7af369713b2b23331793f940913"
+    },
+    "native-pass": {
+      "path": "docs/evidence/filmcraft50-quality-native-pass.log",
+      "originalPrivateSha256": "7d627a53d1d826bb6466bde5648dbda276247dddf7692577a3e9e57a74f04fcb",
+      "publicProjectionSha256": "7d627a53d1d826bb6466bde5648dbda276247dddf7692577a3e9e57a74f04fcb"
+    },
+    "python-pass": {
+      "path": "docs/evidence/filmcraft50-quality-python-pass.log",
+      "originalPrivateSha256": "e45355cd3dc86b87c59746d782f92c75ce79639c0eacdf99a1344c6cea722566",
+      "publicProjectionSha256": "e2c42df67a97793ac84509f3ea3faabde323ca1ea8533936bde6a1bca0ce99d8"
+    },
+    "unit-pass": {
+      "path": "docs/evidence/filmcraft50-quality-unit-pass.log",
+      "originalPrivateSha256": "a198f25982ab19f714b82ae1013313fd842d035ceda3f85086a16b2fd9f5ccad",
+      "publicProjectionSha256": "a198f25982ab19f714b82ae1013313fd842d035ceda3f85086a16b2fd9f5ccad"
+    }
+  },
+  "qualityScenarios": [
+    {
+      "scenario": "actual-native-independent-quality",
+      "engineering": "PASS",
+      "technical": "PASS",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "manual_review"
+    },
+    {
+      "scenario": "quality-media-aligned",
+      "engineering": "NOT_RUN",
+      "technical": "PASS",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "manual_review"
+    },
+    {
+      "scenario": "quality-media-bad-subtitle",
+      "engineering": "NOT_RUN",
+      "technical": "FAIL",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "blocked"
+    },
+    {
+      "scenario": "quality-media-broken",
+      "engineering": "NOT_RUN",
+      "technical": "FAIL",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "blocked"
+    },
+    {
+      "scenario": "quality-media-missing-audio",
+      "engineering": "NOT_RUN",
+      "technical": "FAIL",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "blocked"
+    },
+    {
+      "scenario": "quality-media-missing-tools",
+      "engineering": "NOT_RUN",
+      "technical": "NOT_RUN",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "manual_review"
+    },
+    {
+      "scenario": "quality-media-shifted",
+      "engineering": "NOT_RUN",
+      "technical": "FAIL",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "blocked"
+    },
+    {
+      "scenario": "quality-media-stereo-clipped",
+      "engineering": "NOT_RUN",
+      "technical": "FAIL",
+      "creative": "manual_review",
+      "user": "NOT_RUN",
+      "decision": "blocked"
+    }
+  ],
+  "technicalAcceptance": "bounded calibration and native reopen only",
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN",
+  "fixedInstall": "PENDING",
+  "fullV1": "INCOMPLETE",
+  "limitations": [
+    "Procedural generated calibration is not user footage",
+    "No OS sandbox or dynamic library pinning",
+    "Continuity, rhythm and subtitle readability require capable independent review",
+    "Trusted user-decision interface and bounded revision loop remain open"
+  ]
+}

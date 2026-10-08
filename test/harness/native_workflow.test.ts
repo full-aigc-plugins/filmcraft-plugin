@@ -13,6 +13,7 @@ import { RecoveryService } from '../../src/harness/recovery.ts';
 import { ResourceController, outputBytes } from '../../src/harness/resources.ts';
 import { CancellationService, cancellationSubject } from '../../src/harness/cancellation.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
+import { ReviewService, reviewerIdentity } from '../../src/quality/review_service.ts';
 import { binding, workspace, captureEvidence } from './fixtures.ts';
 
 test('actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt',
@@ -49,6 +50,22 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
     assert.equal(made.state, 'verifying'); assert.equal(made.process?.stopped, true);
     assert.equal(made.receipt?.status, 'linked'); assert.ok(made.receipt!.outputRefs.length > 0);
     assert.equal(made.receipt?.technicalAcceptance, 'NOT_RUN');
+    if(process.env.FILMCRAFT_QUALITY_TOOLS){
+      const tools={...JSON.parse(process.env.FILMCRAFT_QUALITY_TOOLS),native:join(options.runtimeHome,'filmcraft',prepared.runtimeIdentity.cliVersion,'filmcraft-cli')};
+      const command={id:'filmcraft-independent-media',version:'1',executable:python,
+        script:new URL('../../scripts/review_media.py',import.meta.url).pathname,tools};
+      const quality=new ReviewService(db,index,join(root,'quality'));
+      const criteria={goal:{text:'A one-second editable orange still',constraints:['Preserve the original project'],audioRequired:false,expectedDurationMs:1000},
+        rubric:{id:'native-first-use',version:'1',required:['decode','videoTiming','continuity'],
+          thresholds:{syncToleranceMs:50,clippingAmplitude:.999,clippingFraction:.001}},reviewer:reviewerIdentity(command)};
+      const originalProject=sha256(readFileSync(join(output,'project.fcproj'))),created=quality.create(task.taskId,criteria);
+      const reviewed=quality.runExternal(created.requestRef,command),result=quality.readCurrent(created.requestRef,reviewed.receiptRef,criteria);
+      assert.equal(result.engineeringAcceptance,'PASS');assert.equal(result.technicalAcceptance,'PASS');
+      assert.equal(result.creativeAcceptance,'manual_review');assert.equal(result.userAcceptance,'NOT_RUN');
+      assert.equal(db.getTask(task.taskId).state,'verifying');assert.equal(sha256(readFileSync(join(output,'project.fcproj'))),originalProject);
+      captureEvidence('actual-native-independent-quality','fresh independent process with pinned native reopen and full video decode',
+        {request:created.request,receipt:JSON.parse(readFileSync(join(root,'quality',reviewed.receiptRef),'utf8')),result,originalProjectPreserved:true});
+    }
     const project = join(output, 'project.fcproj'), originalHash = sha256(readFileSync(project));
     const reused = await runner.run(task, planFile);
     assert.equal(reused.reused, true); assert.equal(reused.attemptId, made.attemptId);
@@ -186,6 +203,17 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
     },10);
     let cancelled;
     try{cancelled=await runner.run(cancelTask,planFile);}finally{clearInterval(timer);}
+    // Python 退出与内核进程组消失之间可以有短暂窗口；只观察，不把已发送信号当停止。
+    if(cancelled.state==='cancel_requested'){
+      assert.equal(cancelled.process?.stopped,false);
+      for(let observation=0;observation<40;observation++){
+        const confirmed=cancellation.reconcile(cancelTask.taskId);
+        if(confirmed.state==='cancelled'){
+          cancelled={...cancelled,state:confirmed.state,process:{...cancelled.process!,stopped:confirmed.process==='stopped'}};break;
+        }
+        await new Promise(resolve=>setTimeout(resolve,50));
+      }
+    }
     assert.equal(cancelError,null);assert.equal(cancelIssued,true);assert.equal(cancelled.state,'cancelled');assert.equal(cancelled.process?.stopped,true);
     assert.equal(db.listAttempts(cancelTask.taskId).length,1);
     const resourcesEvidence={schemaVersion:Number(db.db.prepare('PRAGMA user_version').get()!.user_version),

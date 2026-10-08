@@ -69,3 +69,5 @@ Every P0 requirement needs positive and negative evidence; unexecuted cases are 
 Resource acceptance update: the source candidate implements shared durable budgets and explicit cancellation confirmation. Fixed public-tag installed validation is pending; tasks9.19–9.21 and complete V1 remain open.
 
 Fixed dev49/source42 resources and cancellation pass tasks9.19–9.21. Complete product/V1 acceptance remains incomplete with60 open tasks; creative and user acceptance remain NOT_RUN.
+
+The independent quality candidate separates engineering, technical, creative and user acceptance. Scores cannot override technical failures and stale candidate evidence cannot replay. Built-in measurement retains manual readability, continuity and rhythm review. Fixed dev.50 acceptance, tasks9.22–9.24 and full V1 remain open.

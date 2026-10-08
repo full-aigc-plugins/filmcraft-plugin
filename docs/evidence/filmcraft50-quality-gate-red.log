@@ -1,0 +1,44 @@
+✔ request binds candidate, project, input, goal, rubric, execution and reviewer identities without generator commentary (1.243125ms)
+✔ a high creative score cannot cover a real decode failure or manufacture user acceptance (0.598959ms)
+✖ a known technical failure blocks even when the rubric did not request that dimension (0.61975ms)
+✔ a static frame cannot pass synchronization, clipping, subtitle timing, continuity or rhythm (0.246875ms)
+✔ missing temporal evidence is explicit and cannot become PASS from an empty required set (0.189459ms)
+✔ even complete independent quality PASS is review-ready rather than user-accepted or completed (0.268333ms)
+✔ changing candidate changes the review identity and invalidates the old request (0.255ms)
+✔ changing project changes the review identity and invalidates the old request (0.145625ms)
+✔ changing inputs changes the review identity and invalidates the old request (0.156875ms)
+✔ changing execution changes the review identity and invalidates the old request (0.744959ms)
+✔ changing goal changes the review identity and invalidates the old request (0.167542ms)
+✔ changing rubric changes the review identity and invalidates the old request (0.137875ms)
+✔ changing reviewer changes the review identity and invalidates the old request (0.107458ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 90.241958
+
+✖ failing tests:
+
+test at test/harness/quality_review.test.ts:29:1
+✖ a known technical failure blocks even when the rubric did not request that dimension (0.61975ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'PASS' !== 'FAIL'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/quality_review.test.ts:33:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'PASS',
+    expected: 'FAIL',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

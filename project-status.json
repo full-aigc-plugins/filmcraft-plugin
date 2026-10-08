@@ -158,7 +158,9 @@
     "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
     "resourceCandidateEvidence": "docs/evidence/filmcraft49-resources-candidate-20261008.json",
     "resourceStatus": "tasks9.19-9.21 qualified in actual installed plugin49/source42:81/81 native/state,16 required resource cases among32 matrix records, durable shared budgets, native output refusal and authorized POSIX cancellation; full Harness/public admission, quality, other platforms and V1 open",
-    "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json"
+    "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
+    "qualityCandidateEvidence": "docs/evidence/filmcraft50-quality-candidate-20261008.json",
+    "qualityStatus": "tasks9.22-9.24 source candidate passed107/107 native/state tests,53 Python tests,25 quality contract/service cases and8 native/calibration scenarios; fixed dev50 install pending; creative/manual review, user acceptance and full V1 remain open"
   },
   "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
   "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",

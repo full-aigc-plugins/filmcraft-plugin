@@ -1,0 +1,33 @@
+test_missing_tools_leave_technical_and_creative_unconfirmed (test_review_media.ReviewMediaTests.test_missing_tools_leave_technical_and_creative_unconfirmed) ... ok
+test_opposite_stereo_polarity_cannot_hide_channel_clipping (test_review_media.ReviewMediaTests.test_opposite_stereo_polarity_cannot_hide_channel_clipping) ... FAIL
+test_request_digest_uses_frozen_wire_bytes_not_python_number_rendering (test_review_media.ReviewMediaTests.test_request_digest_uses_frozen_wire_bytes_not_python_number_rendering) ... FAIL
+test_subtitle_outside_duration_fails_and_empty_timeline_is_not_run (test_review_media.ReviewMediaTests.test_subtitle_outside_duration_fails_and_empty_timeline_is_not_run) ... ok
+
+======================================================================
+FAIL: test_opposite_stereo_polarity_cannot_hide_channel_clipping (test_review_media.ReviewMediaTests.test_opposite_stereo_polarity_cannot_hide_channel_clipping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_review_media.py", line 49, in test_opposite_stereo_polarity_cannot_hide_channel_clipping
+    self.assertEqual(result["dimensions"]["audioClipping"]["status"], "FAIL")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+======================================================================
+FAIL: test_request_digest_uses_frozen_wire_bytes_not_python_number_rendering (test_review_media.ReviewMediaTests.test_request_digest_uses_frozen_wire_bytes_not_python_number_rendering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_review_media.py", line 30, in test_request_digest_uses_frozen_wire_bytes_not_python_number_rendering
+    self.assertEqual(json.loads(result.stdout)["requestSha256"], hashlib.sha256(raw[:-1]).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'a6350c1b824e9e67f04ec5ba1a1ebc526247a2d70bdc13aa354e89bd94922a1c' != '0bbbd698960dbb440391033491ab132ebe02b018c483e34345547bb2311c016d'
+- a6350c1b824e9e67f04ec5ba1a1ebc526247a2d70bdc13aa354e89bd94922a1c
++ 0bbbd698960dbb440391033491ab132ebe02b018c483e34345547bb2311c016d
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.060s
+
+FAILED (failures=2)

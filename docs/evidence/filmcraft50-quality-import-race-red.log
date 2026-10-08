@@ -1,0 +1,27 @@
+✖ candidate mutation during trusted context verification cannot commit a successful receipt (198.701708ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 283.924458
+
+✖ failing tests:
+
+test at test/harness/quality_service.test.ts:109:1
+✖ candidate mutation during trusted context verification cannot commit a successful receipt (198.701708ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/quality_service.test.ts:111:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /review_evidence_stale|review_source_unconfirmed/,
+    operator: 'throws',
+    diff: 'simple'
+  }

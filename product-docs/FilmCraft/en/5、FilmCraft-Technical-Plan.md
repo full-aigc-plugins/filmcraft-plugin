@@ -120,3 +120,5 @@ First fixed52/source44 real-derived VFR probe for9.32 saves/exports and fully de
 2026-10-09 dev.54 pins source dev.46/public craft.5. Seven candidate native media cases, actual Whisper28 words/100% reference coverage and public native first use pass. New fixed-host/media qualification follows publication; tasks9.32/9.33 and50 full-V1 tasks remain open.
 
 Fixed dev.54/source46/public craft.5 passes all seven native media cases in an actual isolated Codex installation, preserving all13 skill and executable identities. OpenSpec9.32 and9.33 are complete;48 full-V1 tasks remain open. Scope is bounded to current macOS arm64, Codex and codecs; creative, user and other-platform acceptance remain open. [Fixed evidence](../../../docs/evidence/filmcraft54-fixed-media-20261009/report.json).
+
+dev.55 adds trusted host admission for initial workflows: execute subjects bind the complete task and resource policy; authority is re-read before preflight and native submission. Missing, expired, revoked or mismatched decisions refuse execution. Seven unit and seven actual-native candidate cases pass; fixed installation and full V1 remain open.

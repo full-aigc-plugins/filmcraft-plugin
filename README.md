@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.55 adds trusted host admission for initial workflows: execute subjects bind the complete task and resource policy; authority is re-read before preflight and native submission. Missing, expired, revoked or mismatched decisions refuse execution. Seven unit and seven actual-native candidate cases pass; fixed installation and full V1 remain open.
+
 Fixed dev.54/source46/public craft.5 passes all seven native media cases in an actual isolated Codex installation, preserving all13 skill and executable identities. OpenSpec9.32 and9.33 are complete;48 full-V1 tasks remain open. Scope is bounded to current macOS arm64, Codex and codecs; creative, user and other-platform acceptance remain open. [Fixed evidence](docs/evidence/filmcraft54-fixed-media-20261009/report.json).
 
 Fixed dev.51/source42 completes OpenSpec9.25–9.27:126 installed native/state tests without skips,49 matrix records including9 bounded revision cases,13 skills/44 execution files preserved; public protocol validation and all four release CI runs pass. Creative/manual and user acceptance remain open, with54 V1 tasks remaining. [Revision architecture](docs/FilmCraft-Revision-Architecture.md) · [Fixed evidence](docs/evidence/filmcraft51-fixed-revision-20261008.json).
@@ -24,7 +26,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.54` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.55` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -44,7 +46,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.54`; skill source: `0.1.0-dev.46`; 13 independent skills.
+Current plugin: `0.1.0-dev.55`; skill source: `0.1.0-dev.46`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -148,7 +150,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.54 |
+| Metadata version | 0.1.0-dev.55 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.46 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |

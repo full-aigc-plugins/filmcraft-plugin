@@ -4,7 +4,7 @@ import { readBoundFile } from '../artifacts/receipt_index.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
 
 export type AuthorizationRequest = { authorizationRef: string; authorizationScopeSha256: string };
-export type AuthorizationSubject = { action: 'repair' | 'continue' | 'upgrade' | 'rollback' | 'cancel'; identitySha256: string };
+export type AuthorizationSubject = { action: 'execute' | 'repair' | 'continue' | 'upgrade' | 'rollback' | 'cancel'; identitySha256: string };
 export type AuthorizationDecision = AuthorizationRequest & { subjectSha256: string; expiresAt: number };
 /** 宿主提供可信授权查询；每个有副作用门禁重新查询，不能把回执引用当作授权。 */
 export type Authorizer = (subject: AuthorizationSubject, request: AuthorizationRequest) => AuthorizationDecision | null;
@@ -13,7 +13,7 @@ export function requireAuthorization(authorize: Authorizer | undefined, request:
   subject: AuthorizationSubject, now = Date.now()) {
   check(typeof request.authorizationRef === 'string' && request.authorizationRef.length > 0
     && request.authorizationRef.length <= 256 && isHash(request.authorizationScopeSha256)
-    && ['repair','continue','upgrade','rollback','cancel'].includes(subject.action) && isHash(subject.identitySha256), 'invalid_authorization_request');
+    && ['execute','repair','continue','upgrade','rollback','cancel'].includes(subject.action) && isHash(subject.identitySha256), 'invalid_authorization_request');
   check(typeof authorize === 'function', 'authorization_verifier_required');
   const decision = authorize(subject, request);
   check(decision, 'authorization_required');

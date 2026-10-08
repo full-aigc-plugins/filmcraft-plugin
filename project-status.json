@@ -193,5 +193,7 @@
   "mediaMatrixCandidateEvidence": "docs/evidence/filmcraft54-media-candidate-20261009/report.json",
   "mediaMatrixCandidateStatus": "7/7 private candidate PASS; superseded for bounded acceptance by actual fixed54 public-runtime matrix",
   "mediaMatrixFixedEvidence": "docs/evidence/filmcraft54-fixed-media-20261009/report.json",
-  "mediaMatrixFixedStatus": "tasks9.32/9.33 qualified: fixed54/source46/public craft.5;7/7 cases PASS;13 installed skills and code identities preserved; bounded macOS arm64 Codex/codecs only; full V1 remains48 tasks open"
+  "mediaMatrixFixedStatus": "tasks9.32/9.33 qualified: fixed54/source46/public craft.5;7/7 cases PASS;13 installed skills and code identities preserved; bounded macOS arm64 Codex/codecs only; full V1 remains48 tasks open",
+  "workflowAdmissionCandidateEvidence": "docs/evidence/filmcraft55-admission-candidate-20261009/report.json",
+  "workflowAdmissionStatus": "7 actual-native candidate cases and7 units PASS; fixed55 installation pending; full TX-001 and full V1 remain open"
 }

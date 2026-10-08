@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑定 execute 主体，预检及原生提交前复核授权；缺失、过期、撤销或不匹配拒绝。7项单元、7个真实原生候选场景通过；固定安装验收待执行，完整V1仍开放。
+
 固定 dev.54／source46／公开 craft.5 在真实隔离 Codex 安装完成七类原生媒体矩阵，13项技能与执行代码摘要保持不变；OpenSpec 9.32、9.33 已完成，完整 V1 仍有48项开放。验证仅覆盖当前 macOS arm64、Codex 和编码范围；创意、用户及其他平台验收仍开放。[固定安装证据](docs/evidence/filmcraft54-fixed-media-20261009/report.json)。
 
 固定dev.51／源42完成OpenSpec9.25—9.27：126项安装原生／状态测试无跳过、49类矩阵含9类受限修订专项、13技能／44执行文件保全，公共协议与四次发布CI通过。创作人工复核与用户接受仍开放，完整V1余54项。[修订架构](docs/FilmCraft-Revision-Architecture.zh_CN.md) · [固定证据](docs/evidence/filmcraft51-fixed-revision-20261008.json)。
@@ -24,7 +26,7 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.54` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.55` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -44,7 +46,7 @@
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.54`；技能源：`0.1.0-dev.46`；13 个独立技能。
+当前插件：`0.1.0-dev.55`；技能源：`0.1.0-dev.46`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -149,7 +151,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.54 |
+| Metadata version | 0.1.0-dev.55 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.46 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |

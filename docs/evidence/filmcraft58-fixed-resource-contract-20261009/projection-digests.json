@@ -1,0 +1,5 @@
+{
+  "originalQualificationScriptSha256": "cbfd2db656284e30c244f611d89d66d17f8d0368b54a3e5c06a0069e069f81da",
+  "publicProjectionSha256": "1544d2fd384c498ce742923a65b0bdd618eb8f4f22eeb71e145609908437868e",
+  "note": "Public source is a sanitized review projection; use installed public tag tools for execution. No private grant, media or ledger is included."
+}

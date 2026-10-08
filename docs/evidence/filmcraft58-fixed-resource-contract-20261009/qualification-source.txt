@@ -1,0 +1,54 @@
+from pathlib import Path
+import importlib.util,json,hashlib,subprocess,re
+w=Path(__file__).parent;repo=Path('[PLUGIN_ROOT]');authority=repo.parent/'artcraft-plugin'
+paths=json.loads((w/'host58/installed-directories.private.json').read_text());core=Path(paths['filmcraft-use']).parent.parent
+import sys
+sys.path.insert(0,str(core/'scripts'))
+import verify_fixed_install as fixed
+import verify_fixed_resources as resources
+expected=fixed.release_entry(repo,'v0.1.0-dev.58');receipt=json.loads((w/'host58/host-receipt.json').read_text())
+helper,identity=fixed.owner_helper(authority)
+assert receipt['result']=='PASS' and receipt['plugin']==expected and receipt['helper']==identity and receipt['loadingErrors']==0
+assert set(paths)==set(expected['skills']) and len(paths)==13
+for name,directory in paths.items():
+ assert Path(directory).resolve()==core/'skills'/name
+ helper.verify_installed_skill(directory,expected)
+fixed.verify_code_files(core,expected['codeFilesSha256'])
+data=(w/'fixed58-recovery/report.json').read_bytes();report=json.loads(data)
+assert report['fixedPlugin']==expected and report['testCounts']==dict(tests=133,**{'pass':133},fail=0,skipped=0)
+native=resources.validate_resources(report)
+assert report['native']['sourceRevision']==expected['skillSourceSha'] and report['native']['runtimeIdentity']['pluginVersion']==expected['version']
+for name,h in report['testFilesSha256'].items():
+ raw=subprocess.check_output(['git','-C',str(repo),'show',expected['sha']+':'+name]);assert hashlib.sha256(raw).hexdigest()==h
+ assert (core/name).read_bytes()==raw
+rows={x['scenario']:x for x in report['matrix']};assert len(rows)==len(report['matrix'])
+checks={
+'budget-restart-unknown':{'reservations':1,'reused':True,'state':'reserved','releaseRefused':True},
+'budget-disk-shortage':{'freeBytes':1,'refused':'disk_space_insufficient','reservations':0},
+'budget-parent-child':{'sameScope':True,'sharedDeadline':True,'reservations':2,'dependencyRefused':'budget_output_exceeded'},
+'budget-reservation-owner-killed':{'ownerSignal':'SIGKILL','reused':True,'reservations':1},
+'actual-budget-cancel-confirmed':{'requestState':'cancel_requested','finalState':'cancelled','signalled':True,'partialPreserved':True},
+'budget-cancel-unsupported':{'state':'cancel_requested','process':'running','signalled':False,'reservation':'reserved','occupancy':1},
+'budget-cancel-pid-reuse':{'state':'cancel_requested','process':'unknown','signalled':False,'originalStillRunning':True},
+'budget-cancel-reply-lost':{'state':'cancelled','attempts':1,'cancelIntents':1,'duplicateSignal':False},
+'budget-parent-cancel-live-child':{'childState':'cancel_requested','childStillRunning':True,'sameScope':True,'newDependencyRefused':True},
+'budget-host-exited-child-alive':{'hostExitCode':0,'child':'running','state':'cancel_requested','reservation':'reserved','occupancy':1},
+'budget-cancel-private-cli':{'requestOnlyKeptRunning':True,'unauthorizedSignalRefused':True,'confirmed':'cancelled'}}
+for key,code in [('timeMs','budget_time_exceeded'),('diskBytes','budget_disk_exceeded'),('outputBytes','budget_output_exceeded'),('slots','budget_concurrency_exceeded'),('revisions','budget_revisions_exceeded')]:checks['budget-limit-'+key]={'refused':code,'attempts':0,'persistedReason':code}
+for name,fields in checks.items():
+ assert all(rows[name][key]==value for key,value in fields.items()),name
+ assert rows[name]['layer']
+assert rows['actual-native-budget-and-cancellation']==dict(scenario='actual-native-budget-and-cancellation',layer=rows['actual-native-budget-and-cancellation']['layer'],**native)
+scenarios={
+'FC-TX-003-P':['actual-native-budget-and-cancellation','budget-parent-child','budget-restart-unknown'],
+'FC-TX-003-N':['budget-parent-cancel-live-child','budget-host-exited-child-alive'],
+'FC-TX-003-DURABLE-BUDGET':['budget-restart-unknown','budget-reservation-owner-killed','budget-disk-shortage','budget-parent-child']+['budget-limit-'+x for x in ['timeMs','diskBytes','outputBytes','slots','revisions']],
+'FC-TX-003-CANCEL-CONFIRM':['actual-native-budget-and-cancellation','actual-budget-cancel-confirmed','budget-cancel-unsupported','budget-cancel-pid-reuse','budget-cancel-reply-lost','budget-parent-cancel-live-child','budget-host-exited-child-alive','budget-cancel-private-cli']}
+text=(repo/'openspec/changes/establish-v1-plugin/specs/task-execution/spec.md').read_text();section=text.split('### Requirement: FC-TX-003 ',1)[1].split('### Requirement: FC-TX-004 ',1)[0]
+assert set(re.findall(r'#### Scenario: (FC-TX-003-[A-Z-]+)',section))==set(scenarios)
+for name,directory in paths.items():helper.verify_installed_skill(directory,expected)
+fixed.verify_code_files(core,expected['codeFilesSha256'])
+value={'schema':'filmcraft-resource-contract-acceptance/v1','result':'PASS','fixedPlugin':expected,'runtimeIdentity':report['native']['runtimeIdentity'],'platform':'darwin-arm64','codexVersion':receipt['codexVersion'],'testCounts':report['testCounts'],'requiredResourceCases':len(resources.REQUIRED),'extraPrivateCliCase':True,'sourceReportSha256':hashlib.sha256(data).hexdigest(),'sourceEvidence':'docs/evidence/filmcraft58-fixed-recovery-20261009/report.json','sourceTestHashes':report['testFilesSha256'],'scenarios':{name:{'status':'PASS','matrixRows':names,'layers':sorted({rows[x]['layer'] for x in names})} for name,names in scenarios.items()},'resourceEvidence':{k:rows[k] for k in sorted(resources.REQUIRED|{'budget-cancel-private-cli'})},'installedVerifierSha256':hashlib.sha256((core/'scripts/verify_fixed_resources.py').read_bytes()).hexdigest(),'qualificationScriptSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'allInstalledFilesUnchanged':True,'reexecution':'NOT_RUN: same fixed58 code/inputs/artifacts and actual installed tests reused; identities verified again','retryOwner':'Python workflow adapter submits once; continuation has its own task/idempotency key; cancellation observation does not replay or automatically escalate signals','completedTasks':['3.7','3.8','3.9'],'remainingImplementationTasks':39,'scope':'all four current FC-TX-003 scenarios for macOS arm64 Codex/headless/POSIX owned process groups; quota observations stop new dependent dispatch, not OS-level CPU/disk throttling; other hosts/platforms and full V1 remain open','fullV1':'NOT_PROVEN'}
+assert value['installedVerifierSha256']==expected['codeFilesSha256']['scripts/verify_fixed_resources.py']
+(w/'fixed58-resources-contract.json').write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')
+print(json.dumps({'result':'PASS','scenarios':len(scenarios),'requiredResourceCases':len(resources.REQUIRED),'extraPrivateCliCase':True,'allInstalledFilesUnchanged':True}))

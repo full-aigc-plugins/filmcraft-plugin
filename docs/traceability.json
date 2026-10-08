@@ -118,13 +118,16 @@
         "9.21"
       ],
       "owner": "Harness owner",
-      "status": "planned",
+      "status": "verified-bounded",
       "optimizationStatus": "planned",
       "optimizationTasks": [
         "9.19",
         "9.20",
         "9.21"
-      ]
+      ],
+      "fixedAcceptanceEvidence": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json",
+      "fixedAcceptanceScope": "all four current FC-TX-003 scenarios for macOS arm64 Codex/headless/POSIX owned process groups; quota observations stop new dependent dispatch, not OS-level CPU/disk throttling; other hosts/platforms and full V1 remain open",
+      "implementationScope": "tasks3.7/3.8 prior red/green implementation and current tests verified;3.9 all4 current scenarios qualified using actual fixed58 installed run"
     },
     {
       "requirement": "FC-DM-001",

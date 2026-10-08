@@ -1,0 +1,386 @@
+{
+  "schema": "filmcraft-resource-contract-acceptance/v1",
+  "result": "PASS",
+  "fixedPlugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.58",
+    "ref": "v0.1.0-dev.58",
+    "sha": "3a107fa42014bb3950d321aa7e6ed8637b7b1a59",
+    "skillSourceSha": "472289353c4e08c58dab75b9cb994c3c526431b7",
+    "skillSourceRef": "v0.1.0-dev.46",
+    "pluginManifestSha256": "32303b654de293f7b0bb0cba92b8c8dcf5a7c883505f4a360e7f2b53d666da71",
+    "skillSha256": "781563b33d3f20ed1f1077feac417c13c8230796d7de9bdb438633f4a4a7d29d",
+    "skills": {
+      "filmcraft-use": "781563b33d3f20ed1f1077feac417c13c8230796d7de9bdb438633f4a4a7d29d",
+      "filmcraft-cli": "20959a9da1fe17ad4b3db0df00b1788ed654ff25b2d5f88f61dbc617fdda64cf",
+      "filmcraft-cli-setup": "1a0ac5eea2c0008d26266263f0f3f39d590339e452bc56a4579632f05271df30",
+      "filmcraft-cli-project": "93ed9a47ba55e5de9dea0a2c2f8bad96e05dc1076232feca441c2c54989bbffe",
+      "filmcraft-cli-media": "2e7f5aed842f95049976ecf20e9482207884a00506a77c047a3cc1feb624fc51",
+      "filmcraft-cli-timeline": "e54947eaaf9614d59e067769c8d39611773f75b2ee4383538a6c5558870cce42",
+      "filmcraft-cli-audio": "1dbdd446efaa76f7f229a12ea4cf27dac638719a3fa5d0032aafc077537e2842",
+      "filmcraft-cli-subtitles": "c1571185f80b06d974be2a62d6d6539ed9292756818a8c1398c5a3e8917901c4",
+      "filmcraft-cli-color": "eafb41cb2ba8e515d4ef127df5f3db40c48054d06f983e60b0df568a029731a5",
+      "filmcraft-cli-motion": "6d2e229066ab58d98ec52ae3304963b8cda8830822840c1f9a268aa2d6e18d83",
+      "filmcraft-cli-export": "874d1bd07c99622237221bad11d226deadea62aa6b7cf5c07e11fd986ac355f8",
+      "filmcraft-cli-multicam": "6e1ee65ada297cd9f49bfa5c4e6803fb391981017537301f3d8a68b70090e166",
+      "filmcraft-cli-transcript": "e5fb5c70f9390a6248bb5653dea23a5fc7a6b8a9ffbc38a2c6ab6f6d294afc8f"
+    },
+    "codeFilesSha256": {
+      "package.json": "c1c946e1b6b637abd212de8a05ff49ac11e932c740fe258def4d9eb6e315f97f",
+      "scripts/check_release.py": "2c56885534cf63b5d2fc063f9c1bed320d0a9002e7662c3ed4a522b83cc0b1f3",
+      "scripts/collect_release_layers.py": "064b89ad37ae1156bff782fd0e70666ce24e5794ed97c8e8ae1444de26d891f7",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/media_matrix.py": "762e9047131b4e41a8ccbaf7413442686cafb77f4b2e6645f982ca1d403e15d9",
+      "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/probe_workflow_writer.py": "27126388902856a91d2c443570fb33f4af2eb4dcdceba30942309afd90ac0570",
+      "scripts/process_identity.py": "2d239b424b34092e32b8c8105b71672511ad3253ccf177f9b633618e98bd1ae8",
+      "scripts/protocol_fixture.ts": "4729d8ccbb4f9718e00451f02ee1352a4b8484fe0b56ac0846e42fe9fd26fccb",
+      "scripts/release_evidence.py": "05b06b6cc5c7c7536f0067a3d103596026ddba83e553046c40970a79b0450008",
+      "scripts/review_media.py": "2b8b55958a032fc6a625c280a5a9f74bd3ee78ff0a17343ca36d69967fbf033b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "fe8d39c98acaa8334c9576f842b850c2cb2f86932ddc4ce64c9c4ef2dd5edcc7",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_admission.py": "5316d5e6622d1f28ba688ff0762c6116da8b005986b2ab190e4ee06d80dcd5c4",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "2b97f40437d59289099af74b454711da9c842ad771fa802600b943b910fe87e9",
+      "scripts/verify_fixed_media.py": "bdf14e498066b979b95707d507937e75943d060eacae06b182ea40854c3c4421",
+      "scripts/verify_fixed_quality.py": "840f59f78cafbff9cff1f6a7bebdc80f97123ac152ed3979fc3e8bb69bd5bf1d",
+      "scripts/verify_fixed_recovery.py": "e7225bb0a35fbea4d5bfe689148909cb3abecc7e2b22c074aca6debe9fb59c8b",
+      "scripts/verify_fixed_resources.py": "8396fa07b9d627d4d07c07c24822c7c8ef2de90599a7116f147b46590c8288a4",
+      "scripts/verify_fixed_revision.py": "d5cd327586a74f27de504a70076099ff4503fef46820323e6307f6160237b19f",
+      "scripts/verify_media_matrix.py": "80fd452e32d27f0ecd0d75cea2afc3643c30909ccdb59ec5a879b9008811aee4",
+      "scripts/verify_protocol_gate.py": "3388c8654f6239a775748ac450ac0e9653a88cbc37672811330dc89e0c9a3ea5",
+      "scripts/verify_recovery_contract.py": "34b9b9c7b976ff5677fcd53127e9c14bebc31ed45c682599773bddba1186b9d6",
+      "scripts/verify_workflow_admission.ts": "7c24b8d3540df1f8250046d82da2ac25ce698ed3400877d8359558ac1dcf7414",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "scripts/verify_writer_boundaries.py": "b5936502c52ed7f60b7be2e3eaf1693b9f654a20e2869a7dbc437053751174a4",
+      "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "62961a27ae80c4ec562bc2dbd722c29cb6706505869bacabb8aa396cc3ea4d94",
+      "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+      "src/cli/recovery.ts": "c4838abe071cebe0bb97befb9b3316d0338d3548845cef9b8842bc742dc8c35f",
+      "src/cli/workflow.ts": "dcf6803877cd94b1c623e7766cf50b92e5a7e1845e9ef15b59b646b7dd310968",
+      "src/harness/authorization.ts": "dcf9f031e6a00c1249b39beff99d627cbf82a50730595c9d63d873c287ab3dfb",
+      "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+      "src/harness/continuation.ts": "5660d11ffb5045c095b00faf7314cf1e28ae064edb65956d96da6d59a2fc83ed",
+      "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+      "src/harness/process_identity.ts": "a0e66f96d8a62953ae73d98b2de9ca683961d2b8a24e2afb70ecb6d05a0c0584",
+      "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+      "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+      "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+      "src/harness/state_maintenance.ts": "e598cce24fe11323c446eb55206f155555253c206a62734bfa2bdf13c961798a",
+      "src/harness/task_ledger.ts": "0179a2babb329b9b5641c6db4e875fbf93b04175db4a4d20bdf03e7d32e996dd",
+      "src/harness/workflow_admission.ts": "f441f5f10027926e6f3328e35c5436bde258714b6e1c1d30b9a45e276e7637b8",
+      "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+      "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+      "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+      "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+      "src/quality/revision_service.ts": "9972065d55744551627f94c8b8ee98139ac7f1c4e32199d479f7995833e8df66",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62"
+    }
+  },
+  "runtimeIdentity": {
+    "pluginId": "filmcraft",
+    "pluginVersion": "0.1.0-dev.58",
+    "cliVersion": "0.2.0-craft.5",
+    "sha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "3cc20e3118e209ee5e9b1d64c004ba92d3973f9569ca79c4073b38a28d094226"
+  },
+  "platform": "darwin-arm64",
+  "codexVersion": "codex-cli 0.147.0",
+  "testCounts": {
+    "tests": 133,
+    "pass": 133,
+    "fail": 0,
+    "skipped": 0
+  },
+  "requiredResourceCases": 16,
+  "extraPrivateCliCase": true,
+  "sourceReportSha256": "43be777da1d6a5dc57abbb69e96c6b4930212de69cac0816042ba1ad25ccb030",
+  "sourceEvidence": "docs/evidence/filmcraft58-fixed-recovery-20261009/report.json",
+  "sourceTestHashes": {
+    "test/harness/authorization.test.ts": "89681a5e5f92e2f1676bf1ef9e238646d44084d85b91034a7214b3ba2d06eeef",
+    "test/harness/cancellation.test.ts": "ffcf0cacc3ebb94ceb5d7263e7a70ed01138b307872641789189459f952bf189",
+    "test/harness/fixtures.ts": "d1b5e2c60f0d9237b0400f6cb7e46038d6da7e245ed7c5589bf65ed474cb1039",
+    "test/harness/native_revision_fixture.ts": "f10a9cf1a6e3e5a91e181971aebf61fbd073f795c04cbc572fe544f43da56e1e",
+    "test/harness/native_workflow.test.ts": "bffe18a57b3247d89929c571c695716cec7af3db901e3e598117040ef05c47f4",
+    "test/harness/protocol_mapping.test.ts": "51a343405b131a1a195e6efe855635ac3d3a7609dd8ad6d8e96531e331f99ee8",
+    "test/harness/quality_fixtures.ts": "8f379a3d9018cd2fa17af806623c3074add5fb16ec1836be1b794e3fc2ce8aba",
+    "test/harness/quality_media_native.test.ts": "b3ae709b515eb324858b4ca7e4d23a42a2b0bed90aa75b6a01105ce6aba3838c",
+    "test/harness/quality_review.test.ts": "d0a2eca1204f6cd6de0811e2cbbf629526bfa4d19debf046c697337c382d7c55",
+    "test/harness/quality_service.test.ts": "ce024d99e76e366f02b1a6030084766350aeb0082224df554d75c886da991746",
+    "test/harness/receipt_index.test.ts": "16809c9f0abfedcb4d3fd20bbe4d73cbcdfac724578bedd7e6fbe6decce03786",
+    "test/harness/recovery.test.ts": "f299e32c38e23885166e225bdc4927c480b43a26e9a797908c9f911b62200010",
+    "test/harness/resources.test.ts": "918844302a506dd20780de70fc9a183fe2292f42c02659cbed373ab46c3da78f",
+    "test/harness/revision_loop.test.ts": "ce3f62288416f08b900068fd35cc91ad81304fe950997c550652468e221269f2",
+    "test/harness/revision_scope.test.ts": "e90b095bb4df1d01732006ceef79a2ab44870021508985a06427f6955317a8e3",
+    "test/harness/state_maintenance.test.ts": "1c5cdabc31c6f7f5abb0267d20aecf8e703158ca30630353afa19ed5e1a8b8e6",
+    "test/harness/task_ledger.test.ts": "fc4af8a587d992d4d0e93a93fc42a87998df487a1e84b0757834dbc18a476341",
+    "test/harness/workflow_admission.test.ts": "30873a6efbd219419773b70d2c63ea547accc2f9811ef8522f975a67959fb255"
+  },
+  "scenarios": {
+    "FC-TX-003-P": {
+      "status": "PASS",
+      "matrixRows": [
+        "actual-native-budget-and-cancellation",
+        "budget-parent-child",
+        "budget-restart-unknown"
+      ],
+      "layers": [
+        "actual Python/native output, shared continuation budget and authorized stop",
+        "actual SQLite parent-child shared reservation",
+        "actual reopened SQLite with synthetic unknown attempt"
+      ]
+    },
+    "FC-TX-003-N": {
+      "status": "PASS",
+      "matrixRows": [
+        "budget-parent-cancel-live-child",
+        "budget-host-exited-child-alive"
+      ],
+      "layers": [
+        "actual host exit and identity-bound detached child",
+        "actual identity-bound detached child"
+      ]
+    },
+    "FC-TX-003-DURABLE-BUDGET": {
+      "status": "PASS",
+      "matrixRows": [
+        "budget-restart-unknown",
+        "budget-reservation-owner-killed",
+        "budget-disk-shortage",
+        "budget-parent-child",
+        "budget-limit-timeMs",
+        "budget-limit-diskBytes",
+        "budget-limit-outputBytes",
+        "budget-limit-slots",
+        "budget-limit-revisions"
+      ],
+      "layers": [
+        "actual SIGKILL after durable reservation",
+        "actual SQLite parent-child shared reservation",
+        "actual reopened SQLite with synthetic unknown attempt",
+        "deterministic quota boundary",
+        "fault injected available-byte probe"
+      ]
+    },
+    "FC-TX-003-CANCEL-CONFIRM": {
+      "status": "PASS",
+      "matrixRows": [
+        "actual-native-budget-and-cancellation",
+        "actual-budget-cancel-confirmed",
+        "budget-cancel-unsupported",
+        "budget-cancel-pid-reuse",
+        "budget-cancel-reply-lost",
+        "budget-parent-cancel-live-child",
+        "budget-host-exited-child-alive",
+        "budget-cancel-private-cli"
+      ],
+      "layers": [
+        "actual CLI, private grant and controlled POSIX process",
+        "actual Python/native output, shared continuation budget and authorized stop",
+        "actual controlled POSIX process group",
+        "actual controlled process and reopened SQLite",
+        "actual controlled process, declared stop unsupported",
+        "actual host exit and identity-bound detached child",
+        "actual identity-bound detached child",
+        "injected birth mismatch on actual controlled process"
+      ]
+    }
+  },
+  "resourceEvidence": {
+    "actual-budget-cancel-confirmed": {
+      "scenario": "actual-budget-cancel-confirmed",
+      "layer": "actual controlled POSIX process group",
+      "requestState": "cancel_requested",
+      "finalState": "cancelled",
+      "signalled": true,
+      "partialPreserved": true
+    },
+    "actual-native-budget-and-cancellation": {
+      "scenario": "actual-native-budget-and-cancellation",
+      "layer": "actual Python/native output, shared continuation budget and authorized stop",
+      "schemaVersion": 5,
+      "sharedScope": "lost-reply",
+      "parentTaskId": "lost-reply",
+      "childTaskId": "continue-1",
+      "reservations": [
+        {
+          "task_id": "lost-reply",
+          "scope_id": "lost-reply",
+          "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":0,\"slots\":1,\"timeMs\":300000}",
+          "state": "settled",
+          "reserved_at": 1791480630410,
+          "consumed": "{\"diskBytes\":438598,\"outputBytes\":438598,\"revisions\":0,\"slots\":0,\"timeMs\":799}",
+          "process_identity": "{\"attemptId\":\"6486db4d-58f1-424c-9d6b-0b99943a18b8\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":80881,\"pid\":80881,\"ppid\":80011,\"started\":\"1791480630.434122\",\"uid\":501},\"stopSupported\":true}"
+        },
+        {
+          "task_id": "continue-1",
+          "scope_id": "lost-reply",
+          "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":1,\"slots\":1,\"timeMs\":300000}",
+          "state": "settled",
+          "reserved_at": 1791480631760,
+          "consumed": "{\"diskBytes\":416868,\"outputBytes\":416868,\"revisions\":1,\"slots\":0,\"timeMs\":369}",
+          "process_identity": "{\"attemptId\":\"2af631be-2e36-4092-b4fc-853d925f7eba\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":80928,\"pid\":80928,\"ppid\":80011,\"started\":\"1791480631.784326\",\"uid\":501},\"stopSupported\":true}"
+        }
+      ],
+      "outputLimit": {
+        "state": "failed",
+        "reason": "budget_output_exceeded",
+        "bytes": 438603,
+        "partialProjectPreserved": true,
+        "dependencyAttempts": 0
+      },
+      "cancellation": {
+        "taskId": "cancel-native",
+        "attempts": 1,
+        "state": "cancelled",
+        "stopped": true,
+        "authorization": "actual private host LocalAuthorizationStore"
+      }
+    },
+    "budget-cancel-pid-reuse": {
+      "scenario": "budget-cancel-pid-reuse",
+      "layer": "injected birth mismatch on actual controlled process",
+      "state": "cancel_requested",
+      "process": "unknown",
+      "signalled": false,
+      "originalStillRunning": true
+    },
+    "budget-cancel-private-cli": {
+      "scenario": "budget-cancel-private-cli",
+      "layer": "actual CLI, private grant and controlled POSIX process",
+      "requestOnlyKeptRunning": true,
+      "unauthorizedSignalRefused": true,
+      "confirmed": "cancelled"
+    },
+    "budget-cancel-reply-lost": {
+      "scenario": "budget-cancel-reply-lost",
+      "layer": "actual controlled process and reopened SQLite",
+      "state": "cancelled",
+      "attempts": 1,
+      "cancelIntents": 1,
+      "duplicateSignal": false
+    },
+    "budget-cancel-unsupported": {
+      "scenario": "budget-cancel-unsupported",
+      "layer": "actual controlled process, declared stop unsupported",
+      "state": "cancel_requested",
+      "process": "running",
+      "signalled": false,
+      "reservation": "reserved",
+      "occupancy": 1
+    },
+    "budget-disk-shortage": {
+      "scenario": "budget-disk-shortage",
+      "layer": "fault injected available-byte probe",
+      "freeBytes": 1,
+      "refused": "disk_space_insufficient",
+      "reservations": 0
+    },
+    "budget-host-exited-child-alive": {
+      "scenario": "budget-host-exited-child-alive",
+      "layer": "actual host exit and identity-bound detached child",
+      "hostExitCode": 0,
+      "child": "running",
+      "state": "cancel_requested",
+      "reservation": "reserved",
+      "occupancy": 1
+    },
+    "budget-limit-diskBytes": {
+      "scenario": "budget-limit-diskBytes",
+      "layer": "deterministic quota boundary",
+      "refused": "budget_disk_exceeded",
+      "attempts": 0,
+      "persistedReason": "budget_disk_exceeded"
+    },
+    "budget-limit-outputBytes": {
+      "scenario": "budget-limit-outputBytes",
+      "layer": "deterministic quota boundary",
+      "refused": "budget_output_exceeded",
+      "attempts": 0,
+      "persistedReason": "budget_output_exceeded"
+    },
+    "budget-limit-revisions": {
+      "scenario": "budget-limit-revisions",
+      "layer": "deterministic quota boundary",
+      "refused": "budget_revisions_exceeded",
+      "attempts": 0,
+      "persistedReason": "budget_revisions_exceeded"
+    },
+    "budget-limit-slots": {
+      "scenario": "budget-limit-slots",
+      "layer": "deterministic quota boundary",
+      "refused": "budget_concurrency_exceeded",
+      "attempts": 0,
+      "persistedReason": "budget_concurrency_exceeded"
+    },
+    "budget-limit-timeMs": {
+      "scenario": "budget-limit-timeMs",
+      "layer": "deterministic quota boundary",
+      "refused": "budget_time_exceeded",
+      "attempts": 0,
+      "persistedReason": "budget_time_exceeded"
+    },
+    "budget-parent-cancel-live-child": {
+      "scenario": "budget-parent-cancel-live-child",
+      "layer": "actual identity-bound detached child",
+      "childState": "cancel_requested",
+      "childStillRunning": true,
+      "sameScope": true,
+      "newDependencyRefused": true
+    },
+    "budget-parent-child": {
+      "scenario": "budget-parent-child",
+      "layer": "actual SQLite parent-child shared reservation",
+      "sameScope": true,
+      "sharedDeadline": true,
+      "reservations": 2,
+      "dependencyRefused": "budget_output_exceeded"
+    },
+    "budget-reservation-owner-killed": {
+      "scenario": "budget-reservation-owner-killed",
+      "layer": "actual SIGKILL after durable reservation",
+      "ownerSignal": "SIGKILL",
+      "reused": true,
+      "reservations": 1
+    },
+    "budget-restart-unknown": {
+      "scenario": "budget-restart-unknown",
+      "layer": "actual reopened SQLite with synthetic unknown attempt",
+      "reservations": 1,
+      "reused": true,
+      "state": "reserved",
+      "releaseRefused": true
+    }
+  },
+  "installedVerifierSha256": "8396fa07b9d627d4d07c07c24822c7c8ef2de90599a7116f147b46590c8288a4",
+  "qualificationScriptSha256": "cbfd2db656284e30c244f611d89d66d17f8d0368b54a3e5c06a0069e069f81da",
+  "allInstalledFilesUnchanged": true,
+  "reexecution": "NOT_RUN: same fixed58 code/inputs/artifacts and actual installed tests reused; identities verified again",
+  "retryOwner": "Python workflow adapter submits once; continuation has its own task/idempotency key; cancellation observation does not replay or automatically escalate signals",
+  "completedTasks": [
+    "3.7",
+    "3.8",
+    "3.9"
+  ],
+  "remainingImplementationTasks": 39,
+  "scope": "all four current FC-TX-003 scenarios for macOS arm64 Codex/headless/POSIX owned process groups; quota observations stop new dependent dispatch, not OS-level CPU/disk throttling; other hosts/platforms and full V1 remain open",
+  "fullV1": "NOT_PROVEN",
+  "behaviorRedEvidence": "docs/evidence/filmcraft49-resources-candidate-20261008.json",
+  "behaviorRedLogsSha256": {
+    "docs/evidence/filmcraft49-resources-candidate-20261008/resources-red-20261008.log": "c44f0e9fa8441c5052f237b2bf6483b2902ec40b1a98bd808c563eeb1c7fa3e7",
+    "docs/evidence/filmcraft49-resources-candidate-20261008/cancel-settlement-red-20261008.log": "b319c5f3b9c23969fc613349ca5dabfe37c12df5e58cd501c569212f56bce35d"
+  },
+  "redScope": "existing target failures: changed consumed accounting was accepted, and confirmed cancellation restart left reservation reserved; current fixed58 tests verify both corrected behaviors; no red run reconstructed or claimed this turn",
+  "verificationMethod": "Actual installed fixed58 resource validator plus explicit assertions for each matrix field; all installed file/test hashes rechecked. Same fixed58 full native run reused without changing source/input/environment."
+}

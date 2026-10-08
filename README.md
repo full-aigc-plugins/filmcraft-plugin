@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+[Fixed-install capability acceptance](docs/FilmCraft-Fixed-Capabilities.md): task 9.12 completes 273 malformed-declaration preflights, 32 native command cases and 13 domain cases; full upgrade, exhaustive commands and other platforms remain open.
+
 [Fixed command entry parity and dimension matrix](docs/FilmCraft-Command-Parity.md): dev.44/source41 qualifies task 9.3 and renews identity evidence; exhaustive commands and V1 remain open.
 
 [Previous fixed identity acceptance](docs/FilmCraft-Fixed-Identity.md): dev.43 pins recaptured source dev.40; installed identity and tamper-rejection results are recorded separately.

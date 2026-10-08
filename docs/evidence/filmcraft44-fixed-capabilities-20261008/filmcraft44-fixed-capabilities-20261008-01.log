@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_capabilities.py", line 314, in <module>
+    report = verify(args.host, args.authority, args.ref, args.output)
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_capabilities.py", line 114, in verify
+    reply = json.loads(result.stdout)
+  File "/opt/anaconda3/lib/python3.13/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/anaconda3/lib/python3.13/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

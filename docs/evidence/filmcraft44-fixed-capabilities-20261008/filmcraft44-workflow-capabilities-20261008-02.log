@@ -1,0 +1,14 @@
+default PASS 
+bound PASS 
+revision PASS 
+mismatch-platform FAIL capability_identity_mismatch: platform
+mismatch-runtimeVersion FAIL capability_identity_mismatch: runtimeVersion
+mismatch-runtimeSha256 FAIL capability_identity_mismatch: runtimeSha256
+mismatch-parametersSha256 FAIL capability_identity_mismatch: parametersSha256
+missing-codec FAIL capability_missing: codec:missing-filmcraft-fixed-resource
+unknown-codec FAIL capability_unknown: codec:missing-filmcraft-fixed-resource
+missing-font FAIL capability_missing: font:missing-filmcraft-fixed-resource
+unknown-font FAIL capability_unknown: font:missing-filmcraft-fixed-resource
+missing-model FAIL capability_missing: model:missing-filmcraft-fixed-resource
+unknown-model FAIL capability_unknown: model:missing-filmcraft-fixed-resource
+{"result": "PASS", "nativeCases": 13}

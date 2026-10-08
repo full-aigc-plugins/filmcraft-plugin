@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+[固定安装能力快照验收](docs/FilmCraft-Fixed-Capabilities.zh_CN.md)：9.12 已完成；273 个非法声明预检、32 个命令原生场景及 13 个领域场景，完整升级／全命令／其他平台仍开放。
+
 [固定命令入口与分维矩阵](docs/FilmCraft-Command-Parity.zh_CN.md)：dev.44/source41 完成 9.3 并补证当前身份；完整逐命令和 V1 仍开放。
 
 [上一固定身份验收](docs/FilmCraft-Fixed-Identity.zh_CN.md)：dev.43 锁定重新采集目录的源 dev.40，实际安装与篡改拒绝结果单独记录。

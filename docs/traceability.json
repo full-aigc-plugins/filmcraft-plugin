@@ -60,7 +60,9 @@
         "9.11",
         "9.12"
       ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-capability-candidate-20261008.json"
+      "optimizationCandidateEvidence": "docs/evidence/filmcraft-capability-candidate-20261008.json",
+      "fixedCapabilityEvidence": "docs/evidence/filmcraft44-fixed-capabilities-20261008.json",
+      "fixedCapabilityScope": "task 9.12 fixed44/source41 macOS arm64 headless/owned bridge and domain headless; complete upgrade/drain/rollback remains open"
     },
     {
       "requirement": "FC-TX-001",

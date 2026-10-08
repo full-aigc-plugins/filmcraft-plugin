@@ -1,0 +1,12 @@
+fixed requires preflight: 273
+headless-default PASS 
+headless-bound-reopen PASS 
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_capabilities.py", line 315, in <module>
+    report = verify(args.host, args.authority, args.ref, args.output)
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_capabilities.py", line 221, in verify
+    require(before == after, 'native_reopen_project_changed')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_capabilities.py", line 27, in require
+    raise ValueError(reason)
+ValueError: native_reopen_project_changed

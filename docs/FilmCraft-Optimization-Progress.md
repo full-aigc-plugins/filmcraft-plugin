@@ -8,6 +8,8 @@ Plugin dev.44 / skills dev.41 renewed fixed identity task 9.6: current catalog i
 
 The sections below retain the initial dev.41 source-candidate state, including its old catalog MISMATCH, test counts and then-unrun CI. They do not describe the current snapshot. Later dev.42/43 recovery, actual installation and CI results retain their own version-bound evidence.
 
+Task 9.12 [fixed capability acceptance](FilmCraft-Fixed-Capabilities.md) is complete: actual dev.44/source41 installed files passed 273 public preflight cases, 32 headless/owned bridge command cases and 13 domain workflow cases. Three missing/controlled-unknown resource kinds, preservation, failure-stage capability digests and reprobe after an actual isolated model download are verified. Other platforms, exhaustive commands, model inference quality and complete isolated upgrade/drain/rollback remain open.
+
 ## Initial candidate implementation (historical)
 
 The independent skill source reuses `commands.validate_tick_parameters` in `native_workflow.validate`. Preflight permits return-value references, with exact integers checked again after resolution and before execution. Invalid literals fail before installation or output writes; invalid references fail before dependent native requests. Wrong plan entry points explain the correct runner. Explicit conversion from domain string timing remains valid. The shared generator synchronizes 13 self-contained copies.

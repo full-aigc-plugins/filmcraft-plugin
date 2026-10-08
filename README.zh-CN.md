@@ -53,7 +53,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.63` / `filmcraft-skills@v0.1.0-dev.47`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.64` / `filmcraft-skills@v0.1.0-dev.47`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -77,7 +77,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.63`；技能源：`0.1.0-dev.47`；13 个独立技能。
+当前插件：`0.1.0-dev.64`；技能源：`0.1.0-dev.47`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -182,7 +182,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.63 |
+| Metadata version | 0.1.0-dev.64 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.47 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
@@ -391,3 +391,5 @@ Film35固定标签宿主验收：五插件64技能身份与加载通过，错误
 dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自含字号换算。源码原生首用通过；新固定插件安装另验。[证据](docs/Caption-Size-First-Use.zh_CN.md)。
 
 固定 Film41/source38 与 Art118/source90 首用通过：64项安装身份一致；Film13和Art10分别独立冷安装，41项未变技能仅复用摘要匹配的历史冷安装证据。新Art安装副本通过1080p／24fps／120帧混合创建、Logo依赖返工、坏帧恢复及五子工程迁移；Film通过移动工程文字返工与关键帧保全。完整V1仍开放。 [Evidence](docs/evidence/craft-art118-segment-guide-fixed-first-use-20261008.json).
+
+开发版64补齐保留技能源的公开工作流CLI路由，严格核验绑定、既有执行授权及账本激活选择；真实回退执行与解码、164/164源码原生回归通过。固定64及完整V1资格仍待验收（29项开放）。 Evidence: `docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json`.

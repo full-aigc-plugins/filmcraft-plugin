@@ -8,9 +8,10 @@ import type { AuthorizationRequest, Authorizer, AuthorizationSubject } from '../
 import { readBoundFile } from '../artifacts/receipt_index.ts';
 import { canonicalTarget } from '../support/paths.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
-import { fingerprintSkill, PythonWorkflowRunner } from './python_workflow.ts';
+import { PythonWorkflowRunner } from './python_workflow.ts';
 import { deploymentHistory, RuntimeDeployment } from './runtime_deployment.ts';
 import type { DeploymentDescriptor } from './runtime_deployment.ts';
+import {readRuntimeCandidate} from './runtime_candidate.ts';
 
 export type UpgradeOptions={candidateFile:string;planFile:string;ledgerFile:string;runtimeHome:string;python?:string};
 function read(path:string){const p=resolve(path);return parseJson(readBoundFile(dirname(p),basename(p)).toString('utf8'));}
@@ -19,11 +20,7 @@ export class RuntimeUpgrade{
  options:UpgradeOptions;authorize?:Authorizer;
  constructor(options:UpgradeOptions,authorize?:Authorizer){this.options={...options};this.authorize=authorize;}
  private context(){
-  const c=read(this.options.candidateFile);
-  check(isObject(c)&&Object.keys(c).sort().join(',')==='schema,skillDirectory,sourceRevision,sourceTreeSha256'
-   &&c.schema==='filmcraft-runtime-candidate/v1'&&typeof c.skillDirectory==='string'
-   &&typeof c.sourceRevision==='string'&&/^[a-f0-9]{40}$/.test(c.sourceRevision)&&isHash(c.sourceTreeSha256),'runtime_candidate_invalid');
-  const skill=realpathSync(c.skillDirectory);check(fingerprintSkill(skill)===c.sourceTreeSha256,'runtime_candidate_changed');
+  const c=readRuntimeCandidate(this.options.candidateFile),skill=c.skillDirectory;
   const lock=read(join(skill,'scripts/runtime.lock.json'));
   const platformKey=process.platform==='darwin'?'darwin-'+process.arch:process.platform+'-'+process.arch;
   const artifact=lock.artifacts?.[platformKey];

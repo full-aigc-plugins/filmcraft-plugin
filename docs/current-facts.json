@@ -1,7 +1,7 @@
 {
   "schema": "filmcraft-current-facts/v1",
   "pluginId": "filmcraft",
-  "pluginVersion": "0.1.0-dev.63",
+  "pluginVersion": "0.1.0-dev.64",
   "sourcePackage": "filmcraft-skills",
   "sourceRef": "v0.1.0-dev.47",
   "sourceSha": "0cb4c59de5e54cc34594b9374a6bf1cb86a19e33",
@@ -81,6 +81,7 @@
     "docs/evidence/filmcraft62-capability-diagnostic-20261009/acceptance.json",
     "docs/evidence/filmcraft62-fixed-runtime-20261009/acceptance.json",
     "docs/evidence/filmcraft63-download-error-candidate-20261009/acceptance.json",
+    "docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json",
     "docs/evidence/motion-lut-workflow-candidate-20261006.json",
     "docs/evidence/protocol-fault-first-use-20261007.json",
     "docs/evidence/public-workflow-session-candidate-20261007.json",

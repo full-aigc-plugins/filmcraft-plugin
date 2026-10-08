@@ -471,3 +471,5 @@ dev.42 发行进展：已实现只读诊断和原尝试状态修复；本地原�
 2026-10-09 FC-RT-002 固定dev.61补证：`docs/evidence/filmcraft61-fixed-runtime-20261009/acceptance.json`，13项宿主安装身份、273项前置检查、32项有界headless/bridge与13项领域工作流、真实版本切换/解码/回退通过。继续审计发现预检跨进程仅返回错误码，新增dev.62安全差异诊断：红例3项Python与1项Node，当前86 Python、157/157源码原生、21项目标测试及5类原生拒绝通过。`docs/evidence/filmcraft62-capability-diagnostic-20261009/acceptance.json`；新固定安装和完整逐场景资格仍待验收，2.4—2.6保持开放，未勾选未完成任务。
 
 2026-10-09 FC-RT-002下载故障审计发现固定dev.62/source46对urllib包装的权限及磁盘满各重试3次，违反非临时错误边界；保留失败和宿主审计缓存干扰记录（新隔离安装复验通过）。独立技能源dev.47修复并同步13技能，9个子用例红错后22项安装器绿例通过，完整离线220项/184通过/36环境NOT_RUN；插件dev.63锁定公开源47，86 Python、157/157源码原生、13技能分别公开空缓存CLI安装/复用/技能保全及升级回退通过。证据 `docs/evidence/filmcraft63-download-error-candidate-20261009/acceptance.json`；新固定插件及完整逐场景资格仍待验收，2.4—2.6与其余29项不勾选。
+
+2026-10-09 dev.64 回退工作流候选：公开 CLI 新增 --candidate，只接受与绑定一致、账本已激活的保留技能源，仍需既有精确执行授权；候选不能自授权或自激活。保留旧版真实路由拒绝与6项目标行为红灯、首轮夹具错误记录。当前26项目标测试、86 Python、161/164常规Node（3项环境NOT_RUN）、164/164真实源码原生及50行矩阵通过；craft.5交付后回退craft.4，由公开CLI执行第二个独立任务，两次各一次尝试及独立全解码，新版原工程和旧二进制保全。证据 docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json。固定dev.64安装与FC-RT-002完整资格尚待验收，2.4—2.6与其余29项保持开放。

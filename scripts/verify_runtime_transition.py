@@ -6,6 +6,7 @@ parser=argparse.ArgumentParser(description='实际运行时版本切换、独立
 for key in ['output','previous-core','node','python','ffmpeg']:parser.add_argument('--'+key,required=True)
 parser.add_argument('--runtime-home')
 parser.add_argument('--require-diagnostics', action='store_true')
+parser.add_argument('--require-rollback-execution', action='store_true')
 args=parser.parse_args()
 ROOT=Path(__file__).resolve().parents[1];WORK=Path(args.output).absolute()
 if WORK.exists() or WORK.is_symlink():raise ValueError('runtime_transition_output_exists')
@@ -61,8 +62,20 @@ decoded=subprocess.run([str(Path(args.ffmpeg).resolve(strict=True)),'-v','error'
 project=WORK/'delivery/project.fcproj';projectsha=sha(project)
 back=select(OLD,'rollback',1);assert back['generation']==3
 refused=run(workflowargs,expect=1);assert refused['error']['code']=='runtime_selection_mismatch';assert sha(project)==projectsha and sha(oldbinary)==oldbinarysha
+rollback_execution=None
+if args.require_rollback_execution:
+ old_binding=nodejs("import{TaskLedger}from'./src/harness/task_ledger.ts';import{PythonWorkflowRunner}from'./src/adapters/python_workflow.ts';import{readFileSync}from'node:fs';import{join}from'node:path';const root=process.argv[2],db=new TaskLedger(join(root,'state.sqlite'));const c=JSON.parse(readFileSync(join(root,'old.candidate.json'),'utf8')),b=JSON.parse(readFileSync(join(root,'binding.json'),'utf8')),manifest=JSON.parse(readFileSync('plugin.json','utf8'));const runner=new PythonWorkflowRunner(db,null,{skillDirectory:c.skillDirectory,sourceRevision:c.sourceRevision,pluginVersion:manifest.version,python:process.argv[3],runtimeHome:process.argv[4]});const p=runner.prepare(join(root,'plan.json'),join(root,'rollback-old-delivery'));Object.assign(b,{taskId:'rollback-old-source',idempotencyKey:'rollback-old-source',deadline:Date.now()+3600000,outputRoot:p.outputRoot,projectKey:p.projectKey,projectRevision:p.projectRevision,planHash:p.planIdentity.canonicalPlanSha256,nativePlanHash:p.planIdentity.workflowPlanSha256,inputHashes:p.inputHashes,inputRefs:Object.entries(p.inputHashes).map(([assetId,sha256])=>({assetId,sha256,version:sha256})),sourceRevision:c.sourceRevision,sourceTreeSha256:p.sourceTreeSha256,runtimeIdentity:p.runtimeIdentity});db.close();console.log(JSON.stringify(b));",WORK,PYTHON,RUNTIME)
+ old_binding_file=WORK/'rollback-old-binding.json';old_binding_file.write_text(json.dumps(old_binding))
+ old_subject_result=run([NODE,workflow,'subject','--binding',old_binding_file,'--resources',resources,'--candidate',OLD])
+ old_grant=json.loads(executionfile.read_text());old_grant['subjects'].append(hashlib.sha256(json.dumps(old_subject_result,separators=(',',':'),sort_keys=True).encode()).hexdigest());executionfile.write_text(json.dumps(old_grant));executionfile.chmod(0o600)
+ old_args=list(workflowargs);old_args[old_args.index('--binding')+1]=old_binding_file;old_args.extend(['--candidate',OLD])
+ old_created=run(old_args);assert old_created['state']=='verifying'
+ old_decode=subprocess.run([str(Path(args.ffmpeg).resolve(strict=True)),'-v','error','-i',str(WORK/'rollback-old-delivery/film.mp4'),'-f','null','-'],capture_output=True,text=True,timeout=120);assert old_decode.returncode==0,old_decode.stderr
+ assert sha(project)==projectsha and sha(oldbinary)==oldbinarysha
+ rollback_execution={'result':'PASS','runtimeVersion':oldversion,'sourceRevision':old_binding['sourceRevision'],'workflow':old_created,'independentFullDecode':'PASS','projectSha256':sha(WORK/'rollback-old-delivery/project.fcproj'),'originalNewProjectPreserved':True}
 history=nodejs("import{TaskLedger}from'./src/harness/task_ledger.ts';import{RuntimeDeployment}from'./src/adapters/runtime_deployment.ts';import{fingerprintSkill}from'./src/adapters/python_workflow.ts';const db=new TaskLedger(process.argv[2]);console.log(JSON.stringify({history:new RuntimeDeployment(db).history(),attempts:db.listAttempts('task-1'),oldTree:fingerprintSkill(process.argv[3]),newTree:fingerprintSkill(process.argv[4])}));db.close();",LEDGER,oldskill,ROOT/'skills/filmcraft-use');assert len(history['attempts'])==1 and history['oldTree']==OLD_TREE and history['newTree']==NEW_TREE
 report={'schema':'filmcraft-native-runtime-transition-candidate/v1','result':'PASS','phases':phases,'oldVersion':oldversion,'newVersion':newversion,'oldBinaryPreserved':True,'oldBinarySha256':oldbinarysha,'projectPreservedAfterRollback':True,'independentFullDecode':'PASS','projectSha256':projectsha,'newWorkflow':created,'staleWorkflowRefusal':refused,'history':history,'scope':'Actual source candidate CLI, private host grants, owned synthetic input; not fixed plugin installation, full FC-RT-002 qualification or other-platform/creative/user acceptance'}
+if rollback_execution:report['rollbackExecution']=rollback_execution
 # 真实能力缺失与过期探测均保持原选择；不以成功下载证明可执行。
 missing=json.loads(PLAN.read_text());missing['requires']={'resources':[{'kind':'codec','name':'missing-owned-runtime61-codec'}]};missingplan=WORK/'missing-codec.plan.json';missingplan.write_text(json.dumps(missing))
 missingargs=[*flags,'--candidate',NEW];missingargs[missingargs.index('--plan')+1]=missingplan

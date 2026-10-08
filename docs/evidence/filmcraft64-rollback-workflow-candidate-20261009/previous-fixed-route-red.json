@@ -1,0 +1,25 @@
+{
+  "schema": "filmcraft-rollback-workflow-entry-red/v1",
+  "result": "EXPECTED_RED",
+  "pluginSourceVersion": "0.1.0-dev.63",
+  "oldSourceRevision": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+  "oldRuntimeIdentity": {
+    "pluginId": "filmcraft",
+    "pluginVersion": "0.1.0-dev.63",
+    "cliVersion": "0.2.0-craft.4",
+    "sha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "450548b2ca12c7e5a497109e7ac26ed925bd5b0616f808c88791bbbe9d839452"
+  },
+  "apiOldCandidatePreflight": "PASS: actual selected retained source42/craft.4",
+  "trustedExactOldWorkflowGrant": "issued in owned fixture",
+  "publicCliResult": {
+    "schema": "filmcraft-workflow-admission-error/v1",
+    "replayAllowed": false,
+    "error": {
+      "code": "runtime_selection_mismatch"
+    }
+  },
+  "cause": "Current CLI always uses bundled source47 and has no selected candidate input; API can prepare the retained old source, public CLI cannot route it.",
+  "requiredNext": "Add validated candidate execution route tied to existing binding and active deployment; then execute/decode old workflow after rollback without weakening selection fencing."
+}

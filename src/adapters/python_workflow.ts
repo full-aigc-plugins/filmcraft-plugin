@@ -103,7 +103,9 @@ export class PythonWorkflowRunner {
         '--output', binding.outputRoot, '--runtime-home', resolve(this.options.runtimeHome)];
       if (source) { argv.push('--source', resolve(source)); }
       const child = spawn(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
-        { shell: false, detached: true, stdio: ['ignore', 'pipe', 'pipe'] });
+        { shell: false, detached: true, stdio: ['ignore', 'pipe', 'pipe'],
+          env: { ...process.env, FILMCRAFT_EXECUTION_CONTEXT: JSON.stringify({ taskId: registered.taskId,
+            attemptId: lease.attemptId, sourceRevision: binding.sourceRevision, sourceTreeSha256: binding.sourceTreeSha256 }) } });
       launched = true;
       let log = '', spawnError: Error | null = null;
       child.stdout.on('data', chunk => { if (log.length < 128 * 1024) { log += chunk; } });

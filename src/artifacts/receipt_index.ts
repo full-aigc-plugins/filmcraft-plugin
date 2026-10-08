@@ -56,7 +56,7 @@ export class ReceiptIndex {
   }
   inspect(taskId: string, attemptId: string, kind: ReceiptKind, path: string): Observation {
     check(['command', 'delivery', 'failed-stage', 'output-execution'].includes(kind), 'unsupported_receipt_kind');
-    this.ledger.verifyAttempt(taskId, attemptId);
+    const attempt = this.ledger.verifyAttempt(taskId, attemptId);
     const binding = this.ledger.getTask(taskId).binding;
     let root = binding.outputRoot;
     if (kind === 'output-execution') {
@@ -125,6 +125,14 @@ export class ReceiptIndex {
       summary.planIdentity = 'unknown'; results.push('unknown');
     } else {
       check(raw.schema === 'filmcraft-output-execution/v1', 'unsupported_receipt_format');
+      // 核对账本已提交的进程与 guard 原所有者；进程匹配仅是尝试身份的一部分。
+      if (Number.isSafeInteger(attempt.pid) && attempt.pid > 0) {
+        compare('attemptProcessIdentity', raw.ownerPid, attempt.pid);
+      } else { summary.attemptProcessIdentity = 'unknown'; results.push('unknown'); }
+      // PID 可被系统复用；新受控执行的上下文须逐项匹配，旧格式缺失字段不补造。
+      const context = isObject(raw.context) ? raw.context : {};
+      for (const [key, expected] of Object.entries({ taskId, attemptId, sourceRevision: binding.sourceRevision,
+        sourceTreeSha256: binding.sourceTreeSha256 })) { compare('executionContext.' + key, context[key], expected); }
       compare('targetIdentity', raw.targetHash, sha256(binding.outputRoot));
       const identity = isObject(raw.identity) ? raw.identity : {};
       compare('nativePlanIdentity', identity.planHash, binding.nativePlanHash);
@@ -160,17 +168,21 @@ export class ReceiptIndex {
     this.ledger.verifyAttempt(taskId, attemptId);
     const task = this.ledger.getTask(taskId), records = this.ledger.receipts(taskId, attemptId);
     let status: Status = records.length ? 'linked' : 'unknown';
+    const kinds = new Set(records.map(record => record.kind));
+    const missingReceiptKinds = kinds.has('delivery') || kinds.has('output-execution')
+      ? ['delivery', 'output-execution'].filter(kind => !kinds.has(kind)) : [];
+    if (missingReceiptKinds.length) { status = 'unknown'; }
     const evidenceRefs = [], outputRefs = [];
     for (const record of records) {
       try {
         const current = this.inspect(taskId, attemptId, record.kind as ReceiptKind, record.summary.path);
         const archived = readBoundFile(this.blobs, record.sha256);
         if (current.sha256 !== record.sha256 || sha256(archived) !== record.sha256) { status = 'stale'; continue; }
-        if (record.status === 'conflict') { status = 'conflict'; }
-        else if (record.status !== 'linked' && status === 'linked') { status = 'unknown'; }
+        if (record.status === 'conflict' || current.status === 'conflict') { status = 'conflict'; }
+        else if ((record.status !== 'linked' || current.status !== 'linked') && status === 'linked') { status = 'unknown'; }
         evidenceRefs.push({ assetId: 'receipt:' + record.kind, version: record.sha256, sha256: record.sha256, location: record.summary.path });
-        if (record.kind === 'delivery' && record.status === 'linked') {
-          const files = record.summary.files;
+        if (record.kind === 'delivery' && record.status === 'linked' && current.status === 'linked') {
+          const files = current.summary.files;
           const native = files['project.fcproj'];
           for (const [path, file] of Object.entries(files) as [string, any][]) {
             outputRefs.push({ protocolVersion: 'craft-artifact/v1', assetId: assetId(taskId, path),
@@ -178,7 +190,7 @@ export class ReceiptIndex {
               // 格式识别与技术核验尚未执行时使用诚实的二进制类型，不猜测媒体属性。
               mediaType: 'application/octet-stream', producerTaskId: taskId, sourceRefs: refs(task.binding),
               nativeProjectRef: { assetId: assetId(taskId, 'project.fcproj'), version: native.sha256, sha256: native.sha256, location: 'project.fcproj' },
-              renditions: [], dependencies: record.summary.dependencies, technicalMetadata: {},
+              renditions: [], dependencies: current.summary.dependencies, technicalMetadata: {},
               lossReportRef: files['exchange-loss.json'] ? { assetId: assetId(taskId, 'exchange-loss.json'),
                 version: files['exchange-loss.json'].sha256, sha256: files['exchange-loss.json'].sha256, location: 'exchange-loss.json' } : null,
               evidenceRefs: [{ assetId: 'receipt:' + record.kind, version: record.sha256, sha256: record.sha256, location: record.summary.path }], location: path });
@@ -188,7 +200,7 @@ export class ReceiptIndex {
     }
     // 任一冲突或过期不能混合成可消费产物；不更改账本任务或质量状态。
     return { taskId, attemptId, state: task.state, runtimeIdentity: task.binding.runtimeIdentity,
-      status, outputRefs: status === 'linked' ? outputRefs : [], evidenceRefs,
+      status, missingReceiptKinds, outputRefs: status === 'linked' ? outputRefs : [], evidenceRefs,
       technicalAcceptance: 'NOT_RUN', creativeAcceptance: 'NOT_RUN', userAcceptance: 'NOT_RUN',
       error: status === 'linked' ? null : { code: status === 'conflict' ? 'receipt_conflict' : status === 'stale' ? 'artifact_invalid' : 'outcome_unknown' } };
   }

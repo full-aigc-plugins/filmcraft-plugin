@@ -46,7 +46,13 @@ export class RecoveryService {
           check(raw.ownerPid === attempt.pid, 'process_identity_conflict');
           check(delivery.status === 'linked' && execution.status === 'linked', 'recovery_evidence_unknown');
           const existing = db.receipts(taskId, task.attemptId!);
-          if (existing.length) { check(index.collect(taskId, task.attemptId!).status === 'linked', 'recovery_evidence_stale'); }
+          // 交接可在两个索引写入之间丢失；诊断仍须独立核对当前两份记录及已归档部分，不能消费残缺集合。
+          for (const record of existing) {
+            const current = record.kind === 'delivery' ? delivery : record.kind === 'output-execution' ? execution : null;
+            check(current && record.status === 'linked' && record.sha256 === current.sha256
+              && record.summary.path === current.summary.path
+              && sha256(readBoundFile(this.blobs, record.sha256)) === record.sha256, 'recovery_evidence_stale');
+          }
           result.receipts = { delivery: delivery.sha256, execution: execution.sha256 };
           result.contentSha256 = sha256(stableJson({ bindingSha256: result.bindingSha256, attemptId: task.attemptId,
             process, delivery: delivery.sha256, execution: execution.sha256, files: delivery.summary.files }));

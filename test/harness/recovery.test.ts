@@ -5,6 +5,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync
 import { join, relative } from 'node:path';
 import { TaskLedger } from '../../src/harness/task_ledger.ts';
 import { RecoveryService } from '../../src/harness/recovery.ts';
+import { ReceiptIndex } from '../../src/artifacts/receipt_index.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { normalizePlan } from '../../src/adapters/plan_identity.ts';
 import { binding, hash, workspace } from './fixtures.ts';
@@ -84,7 +85,7 @@ function lostReply(t: Parameters<typeof workspace>[0]) {
     sourceProjectSha256: null, assets: {}, files: Object.fromEntries(Object.entries(payloads).map(([name,text]) => [name,sha256(text)])) }));
   const guard = '.filmcraft-execution-' + sha256(task.outputRoot) + '.json';
   writeFileSync(join(root, guard), JSON.stringify({ schema: 'filmcraft-output-execution/v1', targetHash: sha256(task.outputRoot),
-    state: 'finished', ownerPid: process.pid, identity: { planHash: task.nativePlanHash, inputHashes: {}, projectRevision: null, runtimeSha256: task.runtimeIdentity.sha256 } }));
+    state: 'finished', ownerPid: process.pid, context: { taskId: task.taskId, attemptId: lease.attemptId, sourceRevision: task.sourceRevision, sourceTreeSha256: task.sourceTreeSha256 }, identity: { planHash: task.nativePlanHash, inputHashes: {}, projectRevision: null, runtimeSha256: task.runtimeIdentity.sha256 } }));
   db.finishAttempt(lease, { outcome: 'unknown', stopped: true, receiptSha256: null });
   const service = new RecoveryService(dbFile, join(root, 'blobs'));
   return { root, output, db, dbFile, task, lease, service, guard };
@@ -141,6 +142,20 @@ test('recovery intent survives reopening; an active or expired old recovery owne
   assert.throws(() => db.finishRecovery(second, hash(), hash(), hash(), now + 22), /recovery_evidence_missing/);
   assert.deepEqual(db.listRecoveryIntents(task.taskId).map(row => row.state), ['abandoned', 'pending']);
   assert.equal(db.getTask(task.taskId).state, 'reconciling');
+});
+
+test('a partial receipt handoff remains diagnostically complete only when both current native records agree', t => {
+  const { root, db, dbFile, task, lease, service } = lostReply(t);
+  const index = new ReceiptIndex(db, join(root, 'blobs'));
+  index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json');
+  assert.equal(index.collect(task.taskId, lease.attemptId).status, 'unknown');
+  const before = files(root), observation = service.inspect(task.taskId);
+  assert.equal(observation.diagnosis, 'executed'); assert.deepEqual(files(root), before);
+  const result = service.repair(task.taskId, { expectedEpoch: observation.task!.epoch,
+    inspectionSha256: observation.evidenceSha256, authorizationRef: task.authorizationRef,
+    authorizationScopeSha256: task.authorizationScopeSha256 });
+  assert.equal(result.state, 'verifying'); assert.equal(result.receipt.status, 'linked');
+  assert.equal(db.listAttempts(task.taskId).length, 1);
 });
 
 test('legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities', t => {

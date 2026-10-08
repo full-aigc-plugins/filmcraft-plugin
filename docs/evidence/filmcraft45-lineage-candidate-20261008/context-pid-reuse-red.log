@@ -1,0 +1,71 @@
+✔ legacy command receipt is linked without rewriting native integers or declaring completion (34.739834ms)
+✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (29.880459ms)
+✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (29.614583ms)
+✔ receipt paths reject traversal and symlinks before reading their targets (29.051666ms)
+✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (0.189375ms)
+✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (107.503291ms)
+✔ delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS (225.594084ms)
+✔ missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered (123.31025ms)
+✖ legacy output execution maps declared new inputs separately from inherited project inputs (64.585167ms)
+✔ failed-stage receipts retain original bytes and missing historical identities without following stage paths (31.38475ms)
+✔ delivery without the same-attempt execution record remains unknown and cannot expose output artifacts (88.688042ms)
+✔ execution owner PID must match the attempt and legacy missing process identity stays unknown (110.465125ms)
+✖ old artifacts cannot be relabeled as a later task attempt even when plan and runtime match (299.4195ms)
+✔ conflicting same-kind observations retain original CAS bytes and do not replace the original association (128.363709ms)
+✔ current missing process evidence cannot inherit an older linked conclusion from the receipt index (185.296417ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 13
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1570.205833
+
+✖ failing tests:
+
+test at test/harness/receipt_index.test.ts:150:1
+✖ legacy output execution maps declared new inputs separately from inherited project inputs (64.585167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'linked'
+  - 'unknown'
+  
+      at TestContext.<anonymous> (file://[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/test/harness/receipt_index.test.ts:157:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'linked',
+    expected: 'unknown',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/receipt_index.test.ts:211:1
+✖ old artifacts cannot be relabeled as a later task attempt even when plan and runtime match (299.4195ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'linked'
+  - 'conflict'
+  
+      at TestContext.<anonymous> (file://[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/test/harness/receipt_index.test.ts:222:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'linked',
+    expected: 'conflict',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,5 +1,7 @@
 # Version-bound release records
 
+Development snapshot `0.1.0-dev.45` pins source dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`. Controlled workflow context binds task/attempt/source; missing context remains unknown. Receipt collection requires delivery and same-attempt execution, rechecks current identity/content and preserves conflicting originals. Partial handoff repair never replays. Native regression 39/39, Python 42/42 and 10 candidate cases passed; fixed public-tag installation follows publication. [Mapping](docs/FilmCraft-Receipt-Lineage.md) · [Evidence](docs/evidence/filmcraft45-lineage-candidate-20261008.json). Quality, authorization/budgets, complete recovery and full V1 remain open.
+
 Development snapshot `0.1.0-dev.44` pins skills dev.41 / `f47a2ff6e47e64767d82fd8d88ffa225b204879e`. Resolved whole parameters must remain objects before native submission. Adds separate command evidence dimensions and a fixed parity QA producer; actual new-tag acceptance follows publication, task 9.3 remains open until then.
 
 

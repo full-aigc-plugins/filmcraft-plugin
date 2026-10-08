@@ -4,6 +4,7 @@ import fcntl
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import stat
 
@@ -16,7 +17,7 @@ def _write(stream, value):
 
 
 @contextmanager
-def claim(output, identity):
+def claim(output, identity, context=None):
     """认领不存在的目标；失败或中断必须先核对原结果，不能自动重放。"""
     output = Path(output).absolute()
     output = output.parent.resolve()/output.name
@@ -55,6 +56,8 @@ def claim(output, identity):
             raise ValueError('output_exists')
         record = {'schema':'filmcraft-output-execution/v1', 'targetHash':target_hash,
                   'identity':identity, 'ownerPid':os.getpid(), 'state':'running', 'replayAllowed':False}
+        if context is not None:
+            record['context'] = context
         _write(stream, record)
         try:
             yield record
@@ -68,3 +71,27 @@ def claim(output, identity):
         else:
             record['state']='finished'
             _write(stream, record)
+
+
+def execution_context():
+    """读取受控 Harness 的内部关联信息；不是授权凭据，独立调用可不提供。"""
+    raw = os.environ.get('FILMCRAFT_EXECUTION_CONTEXT')
+    if raw is None:
+        return None
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            if key in result:
+                raise ValueError('invalid_execution_context: duplicate_field')
+            result[key] = value
+        return result
+    try:
+        value = json.loads(raw, object_pairs_hook=pairs)
+    except (ValueError, TypeError):
+        raise ValueError('invalid_execution_context: json') from None
+    if (not isinstance(value, dict) or set(value) != {'taskId', 'attemptId', 'sourceRevision', 'sourceTreeSha256'}
+            or any(not isinstance(value[key], str) or not 0 < len(value[key]) <= 256 for key in ('taskId', 'attemptId'))
+            or not isinstance(value['sourceRevision'], str) or not re.fullmatch('[a-f0-9]{40}', value['sourceRevision'])
+            or not isinstance(value['sourceTreeSha256'], str) or not re.fullmatch('[a-f0-9]{64}', value['sourceTreeSha256'])):
+        raise ValueError('invalid_execution_context')
+    return value

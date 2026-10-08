@@ -277,6 +277,7 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
         raise ValueError('document_required')
     validate(plan, prior.get('assets', {}))
     preflight_assets(plan.get('assets', {}), prior.get('assets', {}), source)
+    execution_context = load_module('output_guard').execution_context()
     installed = load_module('bootstrap').install(
         json.loads(Path(__file__).with_name('runtime.lock.json').read_text()),
         runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
@@ -289,7 +290,7 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
     execution_identity = {'planHash': hashlib.sha256(json.dumps(plan, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest(),
                           'inputHashes': {name: asset['sha256'] for name, asset in plan.get('assets', {}).items()},
                           'projectRevision': source_hash, 'runtimeSha256': installed['binarySha256']}
-    with load_module('output_guard').claim(output, execution_identity), load_module('preserved_stage').preserved_stage(output, '.filmcraft-', recovery_state) as temporary:
+    with load_module('output_guard').claim(output, execution_identity, execution_context), load_module('preserved_stage').preserved_stage(output, '.filmcraft-', recovery_state) as temporary:
         stage = Path(temporary)
         media = stage / 'assets'
         media.mkdir()

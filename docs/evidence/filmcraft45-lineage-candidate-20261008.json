@@ -1,0 +1,59 @@
+{
+  "schema": "filmcraft-lineage-candidate/v1",
+  "result": "PASS",
+  "pluginVersion": "0.1.0-dev.45",
+  "sourceRef": "v0.1.0-dev.42",
+  "sourceSha": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+  "node": "24.18.0",
+  "python": "3.13.5",
+  "platform": "darwin-arm64",
+  "targetRegression": {
+    "total": 27,
+    "passed": 27
+  },
+  "nativeRegression": {
+    "total": 39,
+    "passed": 39,
+    "skipped": 0
+  },
+  "pythonRegression": {
+    "total": 42,
+    "passed": 42
+  },
+  "nativeCases": 10,
+  "protocolObjects": {
+    "tasks": 1,
+    "artifacts": 13
+  },
+  "redEvidence": {
+    "missing-pid-cross-attempt-red.log": "three assertions expose incomplete provenance accepted as linked",
+    "partial-handoff-red.log": "one corrected behavioral assertion exposes partial receipt handoff becoming unknown diagnosis",
+    "context-pid-reuse-red.log": "two assertions expose legacy context omission and same-PID cross-attempt relabeling"
+  },
+  "evidenceFiles": {
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/unit-final.log": "0f23bc409e867e5d91b9c30863e19c94cdc586d1aa60588dce1d3bd5fb050d48",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/native-cases.log": "a7bc3121f731a4765a55db2ea4763317386a50c944451311fe3e54eda900e141",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/partial-handoff-red.log": "757967697c2a620b332f9386d3f2d7109a5e866143be1541cec4e50f1b110f80",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/context-pid-reuse-red.log": "cedb412ec5dc4f1c44ce701898c5d11ad31683b8917595fa21d8748ec980fd24",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/missing-pid-cross-attempt-red.log": "f3407a4b65a5505cb18ae897fcdedf7ca2c8b0fccdc544563c7f640f3b6f4f1a",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/protocol.json": "1c6de3da195675dbca0fbb8d9f482c0af16b5620b91f8400073bb3690081e083",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/native-final.log": "4750b3003639e540ced0abe2ad7c51c43950bc7ea4a7c8f25a181cc2b1977d0c",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/native-cases.json": "0432cb7b15a0211ef124dc2ebc791a59b83a80226595bec7ce9157437cec1a88",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/python-final.log": "da8e26708361586b1fbd8f8991af0c42ed06f255afb7efad76c7120091dc8815",
+    "docs/evidence/filmcraft45-lineage-candidate-20261008/target-green.log": "ffc5d7da0fa00411ea89ab2fbaba746fff79a3f9536551fc3d9461a616207e54"
+  },
+  "implementationFiles": {
+    "src/adapters/python_workflow.ts": "e203291e69ab70279f34ce62d6af298f2b6b27cda479020d5cd5f7ac61a1beea",
+    "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+    "src/harness/recovery.ts": "a49761c0ca9740b0c43b99ebc75f541f6b96e56dfbc91e6cc734f2ae01cd23b1",
+    "test/harness/receipt_index.test.ts": "16809c9f0abfedcb4d3fd20bbe4d73cbcdfac724578bedd7e6fbe6decce03786",
+    "test/harness/recovery.test.ts": "b3e3fcd22ace78876bda8e2300043e4e6382376293b5a94e2c45d4f27fc7f20e",
+    "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+    "scripts/verify_fixed_lineage.ts": "1e9462968fbcef1b70a0837a690d6c364e6e5b2f46943dca9282eb4dae144d64"
+  },
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN",
+  "fixedInstall": "NOT_RUN; immutable tag and actual installation required",
+  "fullV1": "INCOMPLETE"
+}

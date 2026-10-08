@@ -1,0 +1,47 @@
+﹣ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (0.311ms) # SKIP
+✔ public task mapping uses registered identity and keeps internal fields in the domain ledger (5.303334ms)
+✔ legacy command receipt is linked without rewriting native integers or declaring completion (67.509833ms)
+✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (30.29375ms)
+✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (29.64775ms)
+✔ receipt paths reject traversal and symlinks before reading their targets (29.451334ms)
+✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (0.220833ms)
+✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (98.130917ms)
+✔ delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS (182.378916ms)
+✔ missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered (106.468875ms)
+✔ legacy output execution maps declared new inputs separately from inherited project inputs (167.123416ms)
+✔ failed-stage receipts retain original bytes and missing historical identities without following stage paths (31.368459ms)
+✔ delivery without the same-attempt execution record remains unknown and cannot expose output artifacts (81.89ms)
+✔ execution owner PID must match the attempt and legacy missing process identity stays unknown (100.83225ms)
+✔ old artifacts cannot be relabeled as a later task attempt even when plan and runtime match (225.424166ms)
+✔ conflicting same-kind observations retain original CAS bytes and do not replace the original association (102.186167ms)
+✔ current missing process evidence cannot inherit an older linked conclusion from the receipt index (184.801875ms)
+✔ read-only diagnosis sees committed WAL state without changing database, sidecars, projects or missing blob directories (10.574583ms)
+✔ damaged database and missing receipts remain structured unknown and never create or overwrite state (1.881166ms)
+✔ an actually running detached process remains occupied after its host state becomes unknown (38.276792ms)
+✔ lost replies are diagnosed without writes and repaired only with fresh evidence, matching authorization and fenced intent (501.938834ms)
+✔ changed candidate, missing export record or missing process identity cannot unlock or repair an unknown task (191.76325ms)
+✔ recovery intent survives reopening; an active or expired old recovery owner cannot commit (106.673542ms)
+✔ a partial receipt handoff remains diagnostically complete only when both current native records agree (424.593875ms)
+✔ legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities (5.300542ms)
+✔ CLI inspect and reconcile are both read-only; unknown diagnosis is explicit (144.095583ms)
+✔ freshly requested repair of an already reconciled attempt is read-only and does not create another recovery intent (514.973042ms)
+✔ two actual recovery processes cannot apply the same uncertain attempt twice (433.337458ms)
+✔ logical task identity corruption is diagnosed as unknown without rewriting corrupt bytes (4.109667ms)
+✔ same idempotency key returns the original task; changed identity conflicts without replacing it (4.503375ms)
+✔ task IDs cannot overwrite another caller and input versions remain bound (2.267875ms)
+✔ project occupancy survives close/reopen and unknown execution does not free the writer (3.529292ms)
+✔ expired leases are fenced without automatically taking over or accepting an old completion (2.450708ms)
+✔ intent is committed before submission and accepted execution is not completed delivery (2.538459ms)
+✔ missing stop confirmation remains unknown; receipts cannot be spliced across attempts (2.635375ms)
+✔ deadline and unsupported state database refuse execution without editing user files (2.473417ms)
+✔ two actual processes cannot acquire the same project writer (66.855666ms)
+✔ aliased output parents share idempotency and occupancy even with a different project key (2.999834ms)
+✔ an unrelated SQLite database with user_version 1 is rejected without changing its bytes (1.669916ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 4282.913166

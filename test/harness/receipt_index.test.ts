@@ -118,8 +118,10 @@ function delivery(t: Parameters<typeof workspace>[0], inherited = false) {
 }
 
 test('delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS', t => {
-  const { output, task, lease, db, index, manifest, mediaHash } = delivery(t);
+  const { root, output, task, lease, db, index, manifest, mediaHash } = delivery(t);
   assert.equal(index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json').status, 'linked');
+  db.markSubmitted(lease, 123456);
+  index.ingest(task.taskId, lease.attemptId, 'output-execution', executionFixture(root, task, 123456, lease.attemptId));
   const result = index.collect(task.taskId, lease.attemptId);
   assert.equal(result.status, 'linked'); assert.equal(result.outputRefs.length, Object.keys(manifest.files).length);
   for (const artifact of result.outputRefs) {
@@ -146,12 +148,14 @@ test('missing capability evidence remains unknown and a mismatching packaged dep
 });
 
 test('legacy output execution maps declared new inputs separately from inherited project inputs', t => {
-  const { root, output, task, lease, index } = delivery(t, true);
+  const { root, output, task, lease, index, db } = delivery(t, true);
+  db.markSubmitted(lease, 123456);
   const name = '.filmcraft-execution-' + sha256(task.outputRoot) + '.json';
-  const raw = { schema: 'filmcraft-output-execution/v1', targetHash: sha256(task.outputRoot), state: 'finished',
+  const raw = { schema: 'filmcraft-output-execution/v1', targetHash: sha256(task.outputRoot), state: 'finished', ownerPid: 123456,
     identity: { planHash: task.nativePlanHash, inputHashes: {}, projectRevision: task.projectRevision, runtimeSha256: task.runtimeIdentity.sha256 } };
   writeFileSync(join(root, name), JSON.stringify(raw));
-  assert.equal(index.ingest(task.taskId, lease.attemptId, 'output-execution', name).status, 'linked');
+  assert.equal(index.ingest(task.taskId, lease.attemptId, 'output-execution', name).status, 'unknown');
+  assert.equal(index.inspect(task.taskId, lease.attemptId, 'output-execution', name).summary.inputIdentity, 'match');
   raw.identity.inputHashes = { forged: hash() }; writeFileSync(join(root, name), JSON.stringify(raw));
   assert.equal(index.inspect(task.taskId, lease.attemptId, 'output-execution', name).status, 'conflict');
   assert.equal(index.collect(task.taskId, lease.attemptId).status, 'stale');
@@ -168,4 +172,79 @@ test('failed-stage receipts retain original bytes and missing historical identit
   const summary = db.receipts(task.taskId, lease.attemptId)[0].summary;
   assert.equal(summary.replayAllowed, false); assert.equal(summary.planIdentity, 'unknown');
   assert.equal(summary.nativeOutcome, 'outcome_unknown'); assert.equal(index.collect(task.taskId, lease.attemptId).outputRefs.length, 0);
+});
+
+function executionFixture(root: string, task: ReturnType<typeof binding>, ownerPid: number | undefined, attemptId: string) {
+  const name = '.filmcraft-execution-' + sha256(task.outputRoot) + '.json';
+  const plan = parseJson(readFileSync(join(task.outputRoot, 'plan.json'), 'utf8'));
+  const inputHashes = Object.fromEntries(Object.entries(plan.assets ?? {}).map(([key, value]: [string, any]) => [key, value.sha256]));
+  const raw = { schema: 'filmcraft-output-execution/v1', targetHash: sha256(task.outputRoot), state: 'finished',
+    ...(ownerPid === undefined ? {} : { ownerPid }),
+    context: { taskId: task.taskId, attemptId, sourceRevision: task.sourceRevision, sourceTreeSha256: task.sourceTreeSha256 },
+    identity: { planHash: task.nativePlanHash, inputHashes, projectRevision: task.projectRevision,
+      runtimeSha256: task.runtimeIdentity.sha256 } };
+  writeFileSync(join(root, name), JSON.stringify(raw));
+  return name;
+}
+
+test('delivery without the same-attempt execution record remains unknown and cannot expose output artifacts', t => {
+  const { output, task, lease, index, db } = delivery(t);
+  const original = readFileSync(join(output, 'manifest.json'));
+  const record = index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json');
+  assert.equal(record.status, 'linked', 'a delivery may link individually without proving complete provenance');
+  const result = index.collect(task.taskId, lease.attemptId);
+  assert.equal(result.status, 'unknown'); assert.deepEqual(result.outputRefs, []);
+  assert.deepEqual(result.missingReceiptKinds, ['output-execution']);
+  assert.deepEqual(readFileSync(index.blobPath(record.sha256)), original);
+  assert.equal(db.getTask(task.taskId).state, 'running');
+});
+
+test('execution owner PID must match the attempt and legacy missing process identity stays unknown', t => {
+  const { root, task, lease, index, db } = delivery(t);
+  db.markSubmitted(lease, 123456);
+  for (const [pid, expected] of [[undefined, 'unknown'], [123457, 'conflict'], [123456, 'linked']] as const) {
+    const name = executionFixture(root, task, pid, lease.attemptId);
+    assert.equal(index.inspect(task.taskId, lease.attemptId, 'output-execution', name).status, expected);
+  }
+});
+
+test('old artifacts cannot be relabeled as a later task attempt even when plan and runtime match', t => {
+  const { root, output, task, lease, db, index } = delivery(t);
+  db.markSubmitted(lease, 123456);
+  const name = executionFixture(root, task, 123456, lease.attemptId);
+  index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json');
+  const original = index.ingest(task.taskId, lease.attemptId, 'output-execution', name);
+  db.finishAttempt(lease, { outcome: 'failed', stopped: true, receiptSha256: original.sha256 });
+  const later = { ...task, taskId: 'later-task', idempotencyKey: 'later-request' };
+  db.register(later); const next = db.claim(later.taskId, 'later-worker', 60_000);
+  db.beginAttempt(next, 'native'); db.markSubmitted(next, 123456); // 模拟 OS 复用 PID，仍不能继承旧尝试。
+  assert.equal(index.ingest(later.taskId, next.attemptId, 'delivery', 'manifest.json').status, 'linked');
+  assert.equal(index.ingest(later.taskId, next.attemptId, 'output-execution', name).status, 'conflict');
+  const result = index.collect(later.taskId, next.attemptId);
+  assert.equal(result.status, 'conflict'); assert.deepEqual(result.outputRefs, []);
+  assert.equal(index.collect(task.taskId, lease.attemptId).status, 'linked');
+  assert.equal(readFileSync(join(output, 'project.fcproj'), 'utf8'), 'fixture-native-project; not a real project');
+});
+
+test('conflicting same-kind observations retain original CAS bytes and do not replace the original association', t => {
+  const { output, task, lease, db, index } = delivery(t);
+  const original = index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json');
+  const bytes = readFileSync(index.blobPath(original.sha256));
+  const changed = parseJson(readFileSync(join(output, 'manifest.json'), 'utf8'));
+  changed.runtimeSha256 = hash('a'); writeFileSync(join(output, 'manifest.json'), JSON.stringify(changed));
+  assert.throws(() => index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json'), /receipt_conflict/);
+  assert.equal(db.receipts(task.taskId, lease.attemptId)[0].sha256, original.sha256);
+  assert.deepEqual(readFileSync(index.blobPath(original.sha256)), bytes);
+  assert.equal(index.collect(task.taskId, lease.attemptId).status, 'stale');
+});
+
+test('current missing process evidence cannot inherit an older linked conclusion from the receipt index', t => {
+  const { root, task, lease, index, db } = delivery(t);
+  db.markSubmitted(lease, 123456);
+  index.ingest(task.taskId, lease.attemptId, 'delivery', 'manifest.json');
+  index.ingest(task.taskId, lease.attemptId, 'output-execution', executionFixture(root, task, 123456, lease.attemptId));
+  assert.equal(index.collect(task.taskId, lease.attemptId).status, 'linked');
+  db.db.prepare('UPDATE attempts SET pid=NULL WHERE attempt_id=?').run(lease.attemptId);
+  const current = index.collect(task.taskId, lease.attemptId);
+  assert.equal(current.status, 'unknown'); assert.deepEqual(current.outputRefs, []);
 });

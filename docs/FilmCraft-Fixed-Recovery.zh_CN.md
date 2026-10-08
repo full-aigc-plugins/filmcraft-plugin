@@ -30,3 +30,5 @@
 原dev.46相对路径和dev.47采集窗口汇总失败保留，未据此关闭恢复任务；旧标签及ZIP不改写。原字节摘要与公开脱敏投影摘要分开记录，私有库／媒体／授权记录不提交。完整Harness、公共admission、授权配置、预算取消、运行时升级、类型检查、其他平台与质量／用户接受继续开放；V1余63项未完成，规格未同步或归档。
 
 [Fixed evidence / 固定证据](evidence/filmcraft48-fixed-recovery-20261008.json). [Architecture / 架构](FilmCraft-Recovery-Architecture.zh_CN.md).
+
+dev.58 增加恢复合同逐场景证据门禁。固定dev.57的133项安装测试无跳过、47行综合矩阵（含14类恢复必选）及FC-TX-002十个场景校验通过。缺失／重复证据、原文件变化、重复应用、失效epoch、活子进程占用和备份缺失均拒绝；合成回执、实际SQLite／受控进程及实际原生继续分别标记。新dev.58安装复验待执行，不提前关闭3.4—3.6，完整V1仍45项开放。 [Evidence](evidence/filmcraft58-recovery-candidate-20261009/contract.json).

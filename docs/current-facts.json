@@ -1,7 +1,7 @@
 {
   "schema": "filmcraft-current-facts/v1",
   "pluginId": "filmcraft",
-  "pluginVersion": "0.1.0-dev.57",
+  "pluginVersion": "0.1.0-dev.58",
   "sourcePackage": "filmcraft-skills",
   "sourceRef": "v0.1.0-dev.46",
   "sourceSha": "472289353c4e08c58dab75b9cb994c3c526431b7",
@@ -71,6 +71,7 @@
     "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
     "docs/evidence/filmcraft57-fixed-writer-20261009/report.json",
     "docs/evidence/filmcraft57-writer-candidate-20261009/binding-dimensions-report.json",
+    "docs/evidence/filmcraft58-recovery-candidate-20261009/contract.json",
     "docs/evidence/motion-lut-workflow-candidate-20261006.json",
     "docs/evidence/protocol-fault-first-use-20261007.json",
     "docs/evidence/public-workflow-session-candidate-20261007.json",

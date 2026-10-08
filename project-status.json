@@ -203,5 +203,7 @@
   "workflowAdmissionFixedEvidence": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
   "writerBoundaryCandidateEvidence": "docs/evidence/filmcraft57-writer-candidate-20261009/binding-dimensions-report.json",
   "writerBoundaryStatus": "task3.3 qualified: fixed57/source46/craft.5 all5 FC-TX-001 scenarios and7 identity rejection vectors PASS; installed13 skills and code unchanged; macOS arm64 Codex/headless and owned signed desktop bridge only;45 V1 tasks remain open",
-  "writerBoundaryFixedEvidence": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json"
+  "writerBoundaryFixedEvidence": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json",
+  "recoveryContractCandidateEvidence": "docs/evidence/filmcraft58-recovery-candidate-20261009/contract.json",
+  "recoveryContractStatus": "fixed57 133/133 installed regressions,47 matrix rows and10 FC-TX-002 scenarios passed;dev58 verifier/fixed install pending;tasks3.4-3.6 and45 full V1 tasks remain open"
 }

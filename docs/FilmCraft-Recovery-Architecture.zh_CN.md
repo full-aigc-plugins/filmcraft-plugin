@@ -59,3 +59,5 @@ flowchart TD
 [Current dev.48 source candidate / 当前源码候选](evidence/filmcraft48-recovery-candidate-20261008.json).
 
 [Fixed dev.48 installed acceptance / 固定安装验收](evidence/filmcraft48-fixed-recovery-20261008.json).
+
+dev.58 增加恢复合同逐场景证据门禁。固定dev.57的133项安装测试无跳过、47行综合矩阵（含14类恢复必选）及FC-TX-002十个场景校验通过。缺失／重复证据、原文件变化、重复应用、失效epoch、活子进程占用和备份缺失均拒绝；合成回执、实际SQLite／受控进程及实际原生继续分别标记。新dev.58安装复验待执行，不提前关闭3.4—3.6，完整V1仍45项开放。 [Evidence](evidence/filmcraft58-recovery-candidate-20261009/contract.json).

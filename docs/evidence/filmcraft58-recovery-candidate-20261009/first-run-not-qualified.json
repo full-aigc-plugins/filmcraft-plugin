@@ -1,0 +1,10 @@
+{
+  "result": "NOT_QUALIFIED",
+  "ref": "v0.1.0-dev.57",
+  "tests": 133,
+  "pass": 132,
+  "fail": 0,
+  "skipped": 1,
+  "reason": "explicit ffmpeg/ffprobe measurement tools were not supplied; collector refused recovery_test_not_passed",
+  "originalLogSha256": "bd96b7ff50b8d00bd7d3a5446a4ab12a2be0839c4a3766416c21a16862ace93e"
+}

@@ -59,3 +59,5 @@ Observation-window correction: dev.47 passed 60 installed tests, but two fixture
 [Current dev.48 source candidate / 当前源码候选](evidence/filmcraft48-recovery-candidate-20261008.json).
 
 [Fixed dev.48 installed acceptance / 固定安装验收](evidence/filmcraft48-fixed-recovery-20261008.json).
+
+dev.58 adds per-scenario recovery evidence gates. Fixed dev.57 passes133 installed tests without skips,47 total matrix rows including14 required recovery rows and all10 FC-TX-002 scenario checks. Missing/duplicate evidence, changed originals, duplicate repair, expired epochs, live-child occupancy and incomplete backups are checked. Synthetic receipts, actual SQLite/controlled processes and actual native continuation are separate layers. New fixed58 qualification is pending;3.4–3.6 and45 full-V1 tasks remain open. [Evidence](evidence/filmcraft58-recovery-candidate-20261009/contract.json).

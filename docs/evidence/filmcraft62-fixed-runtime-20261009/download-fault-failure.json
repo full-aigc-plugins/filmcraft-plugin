@@ -1,0 +1,51 @@
+{
+  "schema": "filmcraft-fixed-download-fault-audit/v1",
+  "pluginRef": "v0.1.0-dev.62",
+  "sourceRef": "v0.1.0-dev.46",
+  "result": "FAIL",
+  "layer": "Controlled urllib errors injected into actual immutable installed bootstrap; no network or native editing",
+  "cases": [
+    {
+      "case": "wrapped-certificate",
+      "attempts": 1,
+      "expectedAttempts": 1,
+      "exception": "URLError",
+      "result": "PASS"
+    },
+    {
+      "case": "permission",
+      "attempts": 1,
+      "expectedAttempts": 1,
+      "exception": "PermissionError",
+      "result": "PASS"
+    },
+    {
+      "case": "wrapped-permission",
+      "attempts": 3,
+      "expectedAttempts": 1,
+      "exception": "ValueError",
+      "result": "FAIL"
+    },
+    {
+      "case": "disk-full",
+      "attempts": 1,
+      "expectedAttempts": 1,
+      "exception": "OSError",
+      "result": "PASS"
+    },
+    {
+      "case": "wrapped-disk-full",
+      "attempts": 3,
+      "expectedAttempts": 1,
+      "exception": "ValueError",
+      "result": "FAIL"
+    },
+    {
+      "case": "http403",
+      "attempts": 1,
+      "expectedAttempts": 1,
+      "exception": "HTTPError",
+      "result": "PASS"
+    }
+  ]
+}

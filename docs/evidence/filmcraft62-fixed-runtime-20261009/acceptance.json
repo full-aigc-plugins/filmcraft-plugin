@@ -1,0 +1,95 @@
+{
+  "schema": "filmcraft-fixed-runtime-qualification/v1",
+  "result": "PARTIAL",
+  "pluginRef": "v0.1.0-dev.62",
+  "pluginRevision": "c163d13ac2199e2e00bea3088937c4c4c8354275",
+  "sourceRef": "v0.1.0-dev.46",
+  "platform": "darwin-arm64",
+  "skills": 13,
+  "preflightCases": 273,
+  "commandCases": 32,
+  "workflowCases": 13,
+  "transition": {
+    "result": "PASS",
+    "old": "0.2.0-craft.4",
+    "new": "0.2.0-craft.5",
+    "generations": 3,
+    "nativeAttempts": 1,
+    "negativeCases": 5,
+    "diagnostics": "PASS"
+  },
+  "downloadFaults": "FAIL: wrapped permission/disk errors retried3 times; fixed in source47 candidate",
+  "hostCorrection": "Original host62 gained bootstrap bytecode from our own audit import, causing final skill identity refusal. Kept failure and old directory; new host62b installed immutable identical tag and passed full bounded mode/workflow and final identity verification with bytecode disabled.",
+  "files": {
+    "fresh-host.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/fresh-host.json",
+      "originalPrivateSha256": "e913fa14701f3228b2b7bbd0534b87ff9dc0cc657a76a611bfabf8ed682f37cc",
+      "publicProjectionSha256": "e913fa14701f3228b2b7bbd0534b87ff9dc0cc657a76a611bfabf8ed682f37cc"
+    },
+    "final-identity.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/final-identity.json",
+      "originalPrivateSha256": "a54572795e2cf8b17beee8b99c8b0effdc9af438c71e3e87f4fe6894d4f88e19",
+      "publicProjectionSha256": "a54572795e2cf8b17beee8b99c8b0effdc9af438c71e3e87f4fe6894d4f88e19"
+    },
+    "transition.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/transition.json",
+      "originalPrivateSha256": "1f08cc9f4960c356d142e67f58a73c0aae90c0224f1d579b7e076b4925fb2157",
+      "publicProjectionSha256": "1f08cc9f4960c356d142e67f58a73c0aae90c0224f1d579b7e076b4925fb2157"
+    },
+    "contaminated-host-failure.txt": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/contaminated-host-failure.txt",
+      "originalPrivateSha256": "c4022e0faf0a45479454f734e1bd17ddf16b664f4539f432a9fe814d912f805f",
+      "publicProjectionSha256": "c4022e0faf0a45479454f734e1bd17ddf16b664f4539f432a9fe814d912f805f"
+    },
+    "download-fault-failure.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/download-fault-failure.json",
+      "originalPrivateSha256": "df65038ac6834dbeb55afd3b191ec72b6bdc27725fb0826071cac08f4b6760c5",
+      "publicProjectionSha256": "df65038ac6834dbeb55afd3b191ec72b6bdc27725fb0826071cac08f4b6760c5"
+    },
+    "commands-report.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/commands-report.json",
+      "originalPrivateSha256": "95d82309399bdea1b2707ca73b426049cc026b5d5d2360764f2fd642d7ee6a8b",
+      "publicProjectionSha256": "95d82309399bdea1b2707ca73b426049cc026b5d5d2360764f2fd642d7ee6a8b"
+    },
+    "commands-native-traces.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/commands-native-traces.json",
+      "originalPrivateSha256": "7c1d42adbbf024ff941ec399a10459ff1604f9f389e77a9772b6ba09602dfb00",
+      "publicProjectionSha256": "7c1d42adbbf024ff941ec399a10459ff1604f9f389e77a9772b6ba09602dfb00"
+    },
+    "commands-catalogs.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/commands-catalogs.json",
+      "originalPrivateSha256": "b92d3e3283c6542dc5f4055af3e0a38a05c3031230b7e3ec12ccabfc45162f4e",
+      "publicProjectionSha256": "b92d3e3283c6542dc5f4055af3e0a38a05c3031230b7e3ec12ccabfc45162f4e"
+    },
+    "commands-cases.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/commands-cases.json",
+      "originalPrivateSha256": "35fe75952f79e1190f32bd5bb3b9751c573d92fa0d1122e35f185861a6fd269b",
+      "publicProjectionSha256": "35fe75952f79e1190f32bd5bb3b9751c573d92fa0d1122e35f185861a6fd269b"
+    },
+    "commands-preflight.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/commands-preflight.json",
+      "originalPrivateSha256": "4e00d150c44bcfc3dcf0a08216666a72586f3f8e054a29d922c343b7c9de4dfa",
+      "publicProjectionSha256": "4e00d150c44bcfc3dcf0a08216666a72586f3f8e054a29d922c343b7c9de4dfa"
+    },
+    "workflow-report.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/workflow-report.json",
+      "originalPrivateSha256": "f2322a59b6eca47a6b9015376a44f774eda4cab1a0211a2cb77f783b0f48af03",
+      "publicProjectionSha256": "f2322a59b6eca47a6b9015376a44f774eda4cab1a0211a2cb77f783b0f48af03"
+    },
+    "workflow-native-traces.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/workflow-native-traces.json",
+      "originalPrivateSha256": "289c245c0d7d39126643f33f852d0af6e043f170f38273c3bbfffc4e46532b96",
+      "publicProjectionSha256": "289c245c0d7d39126643f33f852d0af6e043f170f38273c3bbfffc4e46532b96"
+    },
+    "workflow-cases.json": {
+      "path": "docs/evidence/filmcraft62-fixed-runtime-20261009/workflow-cases.json",
+      "originalPrivateSha256": "15685895182c6ebb96663a8c8d373f8b351f0f4951e475a94e448a1e72c0ebfc",
+      "publicProjectionSha256": "15685895182c6ebb96663a8c8d373f8b351f0f4951e475a94e448a1e72c0ebfc"
+    }
+  },
+  "scope": "Exact fixed62/source46 predecessor. Actual native and controlled replies remain separate in case files. New source47/plugin63 requires its own qualification.",
+  "otherPlatforms": "NOT_RUN",
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "fullV1": "INCOMPLETE",
+  "openTasks": 29
+}

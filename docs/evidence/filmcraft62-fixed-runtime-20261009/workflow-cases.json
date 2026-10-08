@@ -1,0 +1,2027 @@
+[
+  {
+    "case": "default",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      }
+    },
+    "planSha256": "a3e822a98c2669c5de2b8681c65cc8789753225c73092de9d9aa95aa5ee77512",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "PASS",
+    "error": null,
+    "capabilityEvidenceSha256": "8dac974847b92f1d13f8e632afaeb005534c3a8cf65d66f3665c424e5117da51",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "commandChecks": [
+        {
+          "id": "file.newProject",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "6c146f0f36051d8ffd5155566351d0f0670383d07ced34e97dc6b07d7bdb089d",
+          "observedParametersSha256": "6c146f0f36051d8ffd5155566351d0f0670383d07ced34e97dc6b07d7bdb089d",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.newSequence",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "d311dad9a189d2ae922ff102df53f1738206534c67d8af9bbd0baca4e4b10748",
+          "observedParametersSha256": "d311dad9a189d2ae922ff102df53f1738206534c67d8af9bbd0baca4e4b10748",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.import",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "024881ae47aa23300115052431a2b6eef8d4d8192708323a9b36324c0abf5c78",
+          "observedParametersSha256": "024881ae47aa23300115052431a2b6eef8d4d8192708323a9b36324c0abf5c78",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "timeline.place",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "03b89bd4c326c7064c1d39e59766973ae5442af049a156eeddc5901c2b65de38",
+          "observedParametersSha256": "03b89bd4c326c7064c1d39e59766973ae5442af049a156eeddc5901c2b65de38",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "clip.speedDuration",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "a99142673ac612e2f043b19a9eaa4c16b23327bcd9d3969ebfc6329acdcc812e",
+          "observedParametersSha256": "a99142673ac612e2f043b19a9eaa4c16b23327bcd9d3969ebfc6329acdcc812e",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "captions.list",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "22f806e15fa16e2d51f7bc96af0eb4abb6d567115a742432c5b63496ca8afcbc",
+          "observedParametersSha256": "22f806e15fa16e2d51f7bc96af0eb4abb6d567115a742432c5b63496ca8afcbc",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "fonts.list",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "631259b4b8afdbb6ece8cf11c824d6aed9f7e78b4dada829438da4c6620ab458",
+          "observedParametersSha256": "631259b4b8afdbb6ece8cf11c824d6aed9f7e78b4dada829438da4c6620ab458",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.saveAs",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "be5373b39e461bde3db5448f9cbb7f025928f6ba3fbbbf4de76eeefb0c4fbede",
+          "observedParametersSha256": "be5373b39e461bde3db5448f9cbb7f025928f6ba3fbbbf4de76eeefb0c4fbede",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.projectManager",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "60fb157977cb90930aff9dd60ad882a4423a1ea1e0a32f01cf460b97cab01bf6",
+          "observedParametersSha256": "60fb157977cb90930aff9dd60ad882a4423a1ea1e0a32f01cf460b97cab01bf6",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        }
+      ],
+      "resourceChecks": []
+    },
+    "failure": null,
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": false,
+    "artifactHashes": {
+      "audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "capabilities.json": "c283384e8208551a6fb3285531741643a6522b4e3c1afd548f781acebd26a699",
+      "captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "decode.txt": "c188516c1c251ae056a8f1cf53dc6aaaf2248eef4a125deafc34694872895dfc",
+      "exchange-loss.json": "e7acd2369650ee7f5b6f3176caf0d08a3054d8a847cf1d8bde8bd95ab6e61497",
+      "export-probe.json": "95d3cffb41e3d269702a769f322dfc82ef118a0b9aadfe7121027f291ec5afbd",
+      "film.mp4": "a9702bca4ddb0f167f3f468e9992b22df459a6fbd310e31b363876b5e4d4e22f",
+      "frame-0000.png": "bfa0fbb53abb8315da9ac5747d5996e692ad9012a145207b9a0c38c895431d81",
+      "manifest.json": "2d1f82f8975d036cc79edfcf1488919a0224abbef3b4d7dac55d44eb0375c4f9",
+      "native.json": "bcdae6f384a8561f6a48864282eb758db042baa31ec8db34af9dc538ef1873b7",
+      "operations.json": "67d8e750e665e9afadde0b033098cd0dab6ae99b76738c48ca29c7c404234bbd",
+      "plan.json": "77f4239efbc1f44852b15f4df595756ce5ca8b71e38f6e26d4dc8827bb90b636",
+      "project.fcproj": "ff930f4aab1f48fcf1cef4969b47f48451da7b59277bd3b97a0b9ba9fd8ee778",
+      "still.png": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+    }
+  },
+  {
+    "case": "bound",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "mode": "headless",
+        "platform": "darwin-arm64",
+        "runtimeVersion": "0.2.0-craft.5",
+        "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+        "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb"
+      }
+    },
+    "planSha256": "152f2ea1f21acf771b995693c8f2612c8f737b117acda47b4a8a4955f2bf2986",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "PASS",
+    "error": null,
+    "capabilityEvidenceSha256": "8dac974847b92f1d13f8e632afaeb005534c3a8cf65d66f3665c424e5117da51",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "commandChecks": [
+        {
+          "id": "file.newProject",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "6c146f0f36051d8ffd5155566351d0f0670383d07ced34e97dc6b07d7bdb089d",
+          "observedParametersSha256": "6c146f0f36051d8ffd5155566351d0f0670383d07ced34e97dc6b07d7bdb089d",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.newSequence",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "d311dad9a189d2ae922ff102df53f1738206534c67d8af9bbd0baca4e4b10748",
+          "observedParametersSha256": "d311dad9a189d2ae922ff102df53f1738206534c67d8af9bbd0baca4e4b10748",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.import",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "024881ae47aa23300115052431a2b6eef8d4d8192708323a9b36324c0abf5c78",
+          "observedParametersSha256": "024881ae47aa23300115052431a2b6eef8d4d8192708323a9b36324c0abf5c78",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "timeline.place",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "03b89bd4c326c7064c1d39e59766973ae5442af049a156eeddc5901c2b65de38",
+          "observedParametersSha256": "03b89bd4c326c7064c1d39e59766973ae5442af049a156eeddc5901c2b65de38",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "clip.speedDuration",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "a99142673ac612e2f043b19a9eaa4c16b23327bcd9d3969ebfc6329acdcc812e",
+          "observedParametersSha256": "a99142673ac612e2f043b19a9eaa4c16b23327bcd9d3969ebfc6329acdcc812e",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "captions.list",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "22f806e15fa16e2d51f7bc96af0eb4abb6d567115a742432c5b63496ca8afcbc",
+          "observedParametersSha256": "22f806e15fa16e2d51f7bc96af0eb4abb6d567115a742432c5b63496ca8afcbc",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "fonts.list",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "631259b4b8afdbb6ece8cf11c824d6aed9f7e78b4dada829438da4c6620ab458",
+          "observedParametersSha256": "631259b4b8afdbb6ece8cf11c824d6aed9f7e78b4dada829438da4c6620ab458",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.saveAs",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "be5373b39e461bde3db5448f9cbb7f025928f6ba3fbbbf4de76eeefb0c4fbede",
+          "observedParametersSha256": "be5373b39e461bde3db5448f9cbb7f025928f6ba3fbbbf4de76eeefb0c4fbede",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.projectManager",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "60fb157977cb90930aff9dd60ad882a4423a1ea1e0a32f01cf460b97cab01bf6",
+          "observedParametersSha256": "60fb157977cb90930aff9dd60ad882a4423a1ea1e0a32f01cf460b97cab01bf6",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        }
+      ],
+      "resourceChecks": []
+    },
+    "failure": null,
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "capabilities.json": "c283384e8208551a6fb3285531741643a6522b4e3c1afd548f781acebd26a699",
+      "captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "decode.txt": "879753b67cb9c11c694f22cee0034a9e24ffd107cb9673d5ed03bb3dc3d80561",
+      "exchange-loss.json": "9b759760952f44b6c014dd31fc9b0e4cede79bd92fee09a39b6dc2b4b82b69d0",
+      "export-probe.json": "95d3cffb41e3d269702a769f322dfc82ef118a0b9aadfe7121027f291ec5afbd",
+      "film.mp4": "a9702bca4ddb0f167f3f468e9992b22df459a6fbd310e31b363876b5e4d4e22f",
+      "frame-0000.png": "bfa0fbb53abb8315da9ac5747d5996e692ad9012a145207b9a0c38c895431d81",
+      "manifest.json": "24192ab5d7f36c9076e30848c0b132785c6facb4943ed18f4fd547d6221f0d29",
+      "native.json": "9805e3e7dcfb5210879ae59358b559f937dc4ba8d8f8adabf3d4a850c8089628",
+      "operations.json": "3ecdec9d88ffe59e0d8ae9f91c10fccd46cec2fb5a4243cf4e56a6c97d1a44ca",
+      "plan.json": "def32d8a87c48ef559d8f474155ce170f87c6dab036cb7af0a5740de5eb303e5",
+      "project.fcproj": "dc7d9826bc84d8c2ef84a5b5f57748cc47a9ad1ac20a9766fd2fe3cb6f0fa58a",
+      "still.png": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+    }
+  },
+  {
+    "case": "revision",
+    "plan": {
+      "expectedProjectSha256": "ff930f4aab1f48fcf1cef4969b47f48451da7b59277bd3b97a0b9ba9fd8ee778",
+      "requires": {
+        "mode": "headless",
+        "platform": "darwin-arm64",
+        "runtimeVersion": "0.2.0-craft.5",
+        "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+        "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb"
+      },
+      "operations": [
+        {
+          "command": "native.command",
+          "params": {
+            "command": "sequence.inspect",
+            "params": {}
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      }
+    },
+    "planSha256": "3633505626d80bf7cbf7edbbc299051edd0618554d0106d6fb9204e33080e345",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "PASS",
+    "error": null,
+    "capabilityEvidenceSha256": "4d4f28f87293ffc54b1d6ded7fa118bbd522beaa87c8e4df9e71c641f42db71f",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "cb393bb83a8c9f154c2c44a42c69fa6475281d1027b2adb937b6eac672d60d5a",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "commandChecks": [
+        {
+          "id": "media.relink",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "1ce9242f3e70c0abdc06356878043202da7ae366df6d34a60613e174e6eb97a4",
+          "observedParametersSha256": "1ce9242f3e70c0abdc06356878043202da7ae366df6d34a60613e174e6eb97a4",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "sequence.inspect",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "2f5d3dbf71876263526163b84ad3fbde9f8835370edf1b1e9e663fc03a5217f8",
+          "observedParametersSha256": "2f5d3dbf71876263526163b84ad3fbde9f8835370edf1b1e9e663fc03a5217f8",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "captions.list",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "22f806e15fa16e2d51f7bc96af0eb4abb6d567115a742432c5b63496ca8afcbc",
+          "observedParametersSha256": "22f806e15fa16e2d51f7bc96af0eb4abb6d567115a742432c5b63496ca8afcbc",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "fonts.list",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "631259b4b8afdbb6ece8cf11c824d6aed9f7e78b4dada829438da4c6620ab458",
+          "observedParametersSha256": "631259b4b8afdbb6ece8cf11c824d6aed9f7e78b4dada829438da4c6620ab458",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.saveAs",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "be5373b39e461bde3db5448f9cbb7f025928f6ba3fbbbf4de76eeefb0c4fbede",
+          "observedParametersSha256": "be5373b39e461bde3db5448f9cbb7f025928f6ba3fbbbf4de76eeefb0c4fbede",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        },
+        {
+          "id": "file.projectManager",
+          "discovery": "PASS",
+          "parameterStatus": "match",
+          "expectedParametersSha256": "60fb157977cb90930aff9dd60ad882a4423a1ea1e0a32f01cf460b97cab01bf6",
+          "observedParametersSha256": "60fb157977cb90930aff9dd60ad882a4423a1ea1e0a32f01cf460b97cab01bf6",
+          "enabled": true,
+          "execution": "NOT_RUN",
+          "negativeExecution": "NOT_RUN",
+          "reopen": "NOT_RUN",
+          "nonTargetPreservation": "NOT_RUN"
+        }
+      ],
+      "resourceChecks": []
+    },
+    "failure": null,
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "capabilities.json": "ac49cb2fed82d8958bc6fee44732055dca43ef0b7add79a5b7fe40a19d685116",
+      "captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "decode.txt": "d8c66c318c0b891c6597687ba4ac6df9e0e61a6bfece102ae29b9afd07f186e3",
+      "exchange-loss.json": "48e7bedaad17090e670a8dc084de02f7dff3f0b2d1d2e7e10fcd76a8d7b598e2",
+      "export-probe.json": "95d3cffb41e3d269702a769f322dfc82ef118a0b9aadfe7121027f291ec5afbd",
+      "film.mp4": "a9702bca4ddb0f167f3f468e9992b22df459a6fbd310e31b363876b5e4d4e22f",
+      "frame-0000.png": "bfa0fbb53abb8315da9ac5747d5996e692ad9012a145207b9a0c38c895431d81",
+      "manifest.json": "5642e2970cdb07d7e29482d3c5be9ed87e67577ab11cf54b02fc8aefdb3c71e4",
+      "native.json": "590b1b820bc387d14c76e809ee9838cf308c1961507a3995b01e5a54f5a4479e",
+      "operations.json": "d1378d461cd6e56f3b296e7d3c3bbf6c241e6527844879811df1361c01b90dfe",
+      "plan.json": "1f902d882acd7e8118f4514ec2a5b2578c053507bfe9612800fee08edbec116c",
+      "project.fcproj": "84423595ba2d941dc870785273c17274461ea641b866e221941181eabf682392",
+      "still.png": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+    }
+  },
+  {
+    "case": "mismatch-platform",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "platform": "unsupported-platform"
+      }
+    },
+    "planSha256": "ad95aaa8b37fc03f55cf21d8ee73d7c64d9a8818d3677d80d37af1b60cdf12f9",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "FAIL",
+    "error": "capability_identity_mismatch: platform",
+    "capabilityEvidenceSha256": "c3494121b7e27516ce71722da8e4f9a89f25090ba350b7bce6222d3dbfe057aa",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_identity_mismatch: platform",
+      "stage": "../.filmcraft-wri3upl7",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "35be6d4cc7e8d4ff6e33ce30b8e4ea289a370ec21d8b1a09c2a6cc15e3af542f",
+          "bytes": 315902
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "063e37809ad29dcce60d2300c6a8dfa4afec0b9ef1bc129255a959f15e7317e5"
+    }
+  },
+  {
+    "case": "mismatch-runtimeVersion",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "runtimeVersion": "incompatible"
+      }
+    },
+    "planSha256": "16c158ca146c2790677c3366e674be6e2901eb6a4a504a957c4008722eb908e7",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "FAIL",
+    "error": "capability_identity_mismatch: runtimeVersion",
+    "capabilityEvidenceSha256": "c3494121b7e27516ce71722da8e4f9a89f25090ba350b7bce6222d3dbfe057aa",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_identity_mismatch: runtimeVersion",
+      "stage": "../.filmcraft-dr2hjpdf",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "35be6d4cc7e8d4ff6e33ce30b8e4ea289a370ec21d8b1a09c2a6cc15e3af542f",
+          "bytes": 315902
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "410ffef11763cb6d22887d3fe17809c9bfd02b8e7a2648af92e7fbc507b4513a"
+    }
+  },
+  {
+    "case": "mismatch-runtimeSha256",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "runtimeSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "planSha256": "ceca8ddd1a26d0861ad7501386c503b4a5c44190bb1053cd74494ac1480cd4a4",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "FAIL",
+    "error": "capability_identity_mismatch: runtimeSha256",
+    "capabilityEvidenceSha256": "c3494121b7e27516ce71722da8e4f9a89f25090ba350b7bce6222d3dbfe057aa",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_identity_mismatch: runtimeSha256",
+      "stage": "../.filmcraft-34ff_u9b",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "35be6d4cc7e8d4ff6e33ce30b8e4ea289a370ec21d8b1a09c2a6cc15e3af542f",
+          "bytes": 315902
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "50d68bd8a33dcfb419cdba73cc458e87a9b5726e3c99ce9f2fcb029dcb9b34c4"
+    }
+  },
+  {
+    "case": "mismatch-parametersSha256",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "parametersSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "planSha256": "013bda0d2ca53f055ed6892d45c2e140f6264f2019726cd426e7f1658d3a8c17",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "FAIL",
+    "error": "capability_identity_mismatch: parametersSha256",
+    "capabilityEvidenceSha256": "c3494121b7e27516ce71722da8e4f9a89f25090ba350b7bce6222d3dbfe057aa",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_identity_mismatch: parametersSha256",
+      "stage": "../.filmcraft-c_c1k7yt",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "35be6d4cc7e8d4ff6e33ce30b8e4ea289a370ec21d8b1a09c2a6cc15e3af542f",
+          "bytes": 315902
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "008b7a1b0f88cab187f47388526726966e0e13016150e516be7308263143120a"
+    }
+  },
+  {
+    "case": "missing-codec",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "resources": [
+          {
+            "kind": "codec",
+            "name": "missing-filmcraft-fixed-resource"
+          }
+        ]
+      }
+    },
+    "planSha256": "2fcac6f1badfc158cfa747cd136bcbe9e22be0f68a58ea7b26bdfeecb95c1525",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "FAIL",
+    "error": "capability_missing: codec:missing-filmcraft-fixed-resource",
+    "capabilityEvidenceSha256": "01c561dd6a4c6e78a6764675d1bf5156b0ea7bf3cbaf8cc102e5f6d4e9354e89",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "missing-filmcraft-fixed-resource",
+          "status": "missing",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        },
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_missing: codec:missing-filmcraft-fixed-resource",
+      "stage": "../.filmcraft-94nk1s0i",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "cc931244e34fed4470b0713327a828a238cb4223eab7965950c64eae162af2bc",
+          "bytes": 316248
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "dbfeb6384b995892a500f42f4dd22eb6e6e4094615c7ee6164b7c35b8c024662"
+    }
+  },
+  {
+    "case": "unknown-codec",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "resources": [
+          {
+            "kind": "codec",
+            "name": "missing-filmcraft-fixed-resource"
+          }
+        ]
+      }
+    },
+    "planSha256": "2fcac6f1badfc158cfa747cd136bcbe9e22be0f68a58ea7b26bdfeecb95c1525",
+    "fault": "codec",
+    "executionLayer": "actual native plus controlled reply fault",
+    "result": "FAIL",
+    "error": "capability_unknown: codec:missing-filmcraft-fixed-resource",
+    "capabilityEvidenceSha256": "e56a18b1a4ed919da77893d11c0b70f3ab73429227a86760cb9d8d91866f8ce3",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "codec",
+          "name": "missing-filmcraft-fixed-resource",
+          "status": "unknown",
+          "probeCommand": "export.formats",
+          "probeSha256": "625aae0b36b922f3a84e829fcdcb0e5e8f81884b4fcefc6506cc939903b63de9",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        },
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "unknown",
+          "probeCommand": "export.formats",
+          "probeSha256": "625aae0b36b922f3a84e829fcdcb0e5e8f81884b4fcefc6506cc939903b63de9",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_unknown: codec:missing-filmcraft-fixed-resource",
+      "stage": "../.filmcraft-ons1pit2",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "94347d1d9a7b7bd5cb3bbc0a6ddc6463ec59edfb015aa9a4de77a0cc5758eee5",
+          "bytes": 316246
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "d722e7d3b13a01170ff0d85a92db25897e7e6fd895902ec2ca4c087960e6a616"
+    }
+  },
+  {
+    "case": "missing-font",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "resources": [
+          {
+            "kind": "font",
+            "name": "missing-filmcraft-fixed-resource"
+          }
+        ]
+      }
+    },
+    "planSha256": "4d5f835faec9e5cd13e12c974117bd975abb1dc2035ae14525663a7b487ec412",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "FAIL",
+    "error": "capability_missing: font:missing-filmcraft-fixed-resource",
+    "capabilityEvidenceSha256": "d6c67466f74c97ffb4c49ec398c162b90352263c5410bfe5c17492b76566fe86",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "font",
+          "name": "missing-filmcraft-fixed-resource",
+          "status": "missing",
+          "probeCommand": "fonts.list",
+          "probeSha256": "58723b4417a447383c7783dbc1b24a80d4169c397ab0fed6069fd4e851a4ec04",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        },
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_missing: font:missing-filmcraft-fixed-resource",
+      "stage": "../.filmcraft-oe_l3g61",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "d0679eb0d3365a7ab05486e06bd30591dd7487489f9b9ff4a94b0be1ba37c8d0",
+          "bytes": 316243
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "9615dad4aad922ae36b4226da9ecb0559568262e903d991a5beb62853490ab9f"
+    }
+  },
+  {
+    "case": "unknown-font",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "resources": [
+          {
+            "kind": "font",
+            "name": "missing-filmcraft-fixed-resource"
+          }
+        ]
+      }
+    },
+    "planSha256": "4d5f835faec9e5cd13e12c974117bd975abb1dc2035ae14525663a7b487ec412",
+    "fault": "font",
+    "executionLayer": "actual native plus controlled reply fault",
+    "result": "FAIL",
+    "error": "capability_unknown: font:missing-filmcraft-fixed-resource",
+    "capabilityEvidenceSha256": "7fbb4de9b25670f1cbb7a4a51e8bd38e20c45359b5e1fb7b79b0305e468d6381",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "font",
+          "name": "missing-filmcraft-fixed-resource",
+          "status": "unknown",
+          "probeCommand": "fonts.list",
+          "probeSha256": "625aae0b36b922f3a84e829fcdcb0e5e8f81884b4fcefc6506cc939903b63de9",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        },
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_unknown: font:missing-filmcraft-fixed-resource",
+      "stage": "../.filmcraft-x3irr5pu",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "274f494280d0b309411660ea2a116590a33abd329d9ef1dc252a02435e405b5f",
+          "bytes": 316243
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "38faaf5b631d38d10575b483fcbbd49fc5e0c1807ec418d35ecfd87f93a5c5f5"
+    }
+  },
+  {
+    "case": "missing-model",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "resources": [
+          {
+            "kind": "model",
+            "name": "missing-filmcraft-fixed-resource"
+          }
+        ]
+      }
+    },
+    "planSha256": "1bda2a5cbcd49f7565a726a2738c01e0d01e702304a71be853145ff263d6b429",
+    "fault": null,
+    "executionLayer": "actual native",
+    "result": "FAIL",
+    "error": "capability_missing: model:missing-filmcraft-fixed-resource",
+    "capabilityEvidenceSha256": "7352b2071f94adda2df09508abaa31b3d9179e781baa25279d71cac1c27967c0",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "model",
+          "name": "missing-filmcraft-fixed-resource",
+          "status": "missing",
+          "probeCommand": "transcript.models",
+          "probeSha256": "a9ffeb6cdfc2cf62418a88ce8f6ef8c9b5b1a796e523684c9b1ce59a48be438d",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        },
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_missing: model:missing-filmcraft-fixed-resource",
+      "stage": "../.filmcraft-jqza8gte",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "a7e8e32d0a9096d63006dee46b06b3ea24a4371c9bcb0ba6c9dab1f7dcbb62b6",
+          "bytes": 316251
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "b9b4944653571753b09d73b64e7072c9f1dab9d1efffd686e99046b240cd827d"
+    }
+  },
+  {
+    "case": "unknown-model",
+    "plan": {
+      "document": {
+        "name": "Native gateway",
+        "width": 32,
+        "height": 32,
+        "frameRate": {
+          "num": 12,
+          "den": 1
+        }
+      },
+      "operations": [
+        {
+          "command": "asset.import",
+          "params": {
+            "asset": "still"
+          },
+          "as": "still"
+        },
+        {
+          "command": "timeline.place",
+          "params": {
+            "item": {
+              "$ref": "still.item"
+            },
+            "track": "V1",
+            "time": "0",
+            "sourceIn": "0",
+            "duration": "254016000000",
+            "insert": false
+          },
+          "as": "clip"
+        },
+        {
+          "command": "native.command",
+          "params": {
+            "command": "clip.speedDuration",
+            "params": {
+              "clips": {
+                "$ref": "clip.clips"
+              },
+              "speed": 100,
+              "reverse": false,
+              "ripple": false
+            }
+          }
+        }
+      ],
+      "frames": [
+        "0"
+      ],
+      "export": {
+        "audioRequired": false
+      },
+      "assets": {
+        "still": {
+          "path": "[TEST_ROOT]/work/still.png",
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c"
+        }
+      },
+      "requires": {
+        "resources": [
+          {
+            "kind": "model",
+            "name": "missing-filmcraft-fixed-resource"
+          }
+        ]
+      }
+    },
+    "planSha256": "1bda2a5cbcd49f7565a726a2738c01e0d01e702304a71be853145ff263d6b429",
+    "fault": "model",
+    "executionLayer": "actual native plus controlled reply fault",
+    "result": "FAIL",
+    "error": "capability_unknown: model:missing-filmcraft-fixed-resource",
+    "capabilityEvidenceSha256": "def2cdf77ede1cdfe481a341a444b449867750381aa4e5ceda24348f4b05dda1",
+    "snapshot": {
+      "schema": "filmcraft-capability-snapshot/v1",
+      "pluginId": "filmcraft",
+      "runtime": {
+        "version": "0.2.0-craft.5",
+        "versionOutput": "filmcraft-cli 0.2.0-craft.5",
+        "platform": "darwin-arm64",
+        "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "mode": "headless",
+      "desktop": {
+        "status": "unknown"
+      },
+      "parametersSha256": "6f71eab3bb39dd7400ec1e1d4c9fc1b65fbe4d8d5ef3e5d70a45f075665114fb",
+      "catalogSha256": "eceea402028672ad61c9fa4090c06b8e4dc848c007cd0d688ca252e4abfac389",
+      "parameterRepresentation": "verbatim native documentation; not JSON Schema",
+      "resources": [
+        {
+          "kind": "model",
+          "name": "missing-filmcraft-fixed-resource",
+          "status": "unknown",
+          "probeCommand": "transcript.models",
+          "probeSha256": "625aae0b36b922f3a84e829fcdcb0e5e8f81884b4fcefc6506cc939903b63de9",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        },
+        {
+          "kind": "codec",
+          "name": "h264",
+          "status": "available",
+          "probeCommand": "export.formats",
+          "probeSha256": "388b2841647e393f8e163e326f711cd0aafd0e8b71acb71f543fbc9ad8219e35",
+          "scope": "native discovery only; font appearance, model inference and codec output not qualified"
+        }
+      ],
+      "scope": "discovery and prerequisites only; execution remains separately verified",
+      "resourceChecks": [],
+      "commandChecks": []
+    },
+    "failure": {
+      "schema": "craft-failed-stage/v1",
+      "status": "failed",
+      "outcome": "failed",
+      "error": "capability_unknown: model:missing-filmcraft-fixed-resource",
+      "stage": "../.filmcraft-562e4a4p",
+      "files": {
+        "assets/still.png": {
+          "sha256": "68eb562430b8508f014985a342ffc9f43e30a0f13577658c86260df838785d6c",
+          "bytes": 110
+        },
+        "capabilities.json": {
+          "sha256": "f32c2af350a3b26aa0b211f0e19e0fb27fd6b54b3b05a8ae88e321087b20a59f",
+          "bytes": 316251
+        },
+        "recovery-operations.json": {
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3
+        }
+      },
+      "completedOperations": 0,
+      "lastAttempt": null,
+      "replayAllowed": false,
+      "acceptance": "not-a-successful-delivery",
+      "recovery": "verify hashes and reopen original project in a new read-only session before any explicit revision"
+    },
+    "sourceMediaPreserved": true,
+    "originalDeliveryPreserved": true,
+    "artifactHashes": {
+      "failure.json": "a0d8422f6d5715dd1b6b97d2af5f20b63baf3c1af08ba2cd226ab66011199a4b"
+    }
+  }
+]

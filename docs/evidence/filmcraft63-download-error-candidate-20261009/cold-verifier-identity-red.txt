@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<PLUGIN_ROOT>/../../.local/filmcraft-recovery-01a11a34-20261008/verify-source47-cold.py", line 11, in <module>
+    own=OUT/name;own.mkdir(mode=0o700);skill=own/'skill';shutil.copytree(ROOT/'skills'/name,skill);before=tree(skill);assert before==source['sha256'][name]
+                                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

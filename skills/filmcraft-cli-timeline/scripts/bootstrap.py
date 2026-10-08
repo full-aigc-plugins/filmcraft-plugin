@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """仅用标准库安装锁定的 CLI；技能单独复制后仍可运行。"""
 import argparse
+import errno
 import hashlib
 import http.client
 import ssl
@@ -38,6 +39,26 @@ def trusted_release_url(url):
                 '/full-aigc-skills/filmcraft-skills/releases/download/')))
 
 
+def retryable_download_error(error):
+    """先展开 urllib 的错误包装；本地权限、磁盘和证书失败不是网络重试。"""
+    cause, seen = error, set()
+    while isinstance(cause, urllib.error.URLError) and not isinstance(cause, urllib.error.HTTPError):
+        if id(cause) in seen:
+            return False
+        seen.add(id(cause))
+        if not isinstance(cause.reason, BaseException):
+            break
+        cause = cause.reason
+    if isinstance(cause, urllib.error.HTTPError):
+        return cause.code in (408, 429) or 500 <= cause.code <= 599
+    if isinstance(cause, (ssl.SSLCertVerificationError, PermissionError)):
+        return False
+    if isinstance(cause, OSError) and cause.errno in {errno.EACCES, errno.EPERM, errno.ENOSPC, errno.EROFS, errno.EDQUOT}:
+        return False
+    return isinstance(error, urllib.error.URLError) or isinstance(cause, (
+        TimeoutError, ConnectionError, ssl.SSLEOFError, http.client.IncompleteRead))
+
+
 def download(url, destination):
     """下载完成并核对摘要之前，永不运行内容。"""
     if not trusted_release_url(url):
@@ -63,9 +84,7 @@ def download(url, destination):
             # 只读制品下载可以恢复；半包不可复用，不重试原生编辑或完整性失败。
             if destination.exists():
                 destination.unlink()
-            if isinstance(error, urllib.error.HTTPError) and error.code not in (408, 429) and not 500 <= error.code <= 599:
-                raise
-            if isinstance(error, urllib.error.URLError) and isinstance(error.reason, ssl.SSLCertVerificationError):
+            if not retryable_download_error(error):
                 raise
             if attempt == 2:
                 raise ValueError('artifact_download_failed: three read-only attempts exhausted') from error

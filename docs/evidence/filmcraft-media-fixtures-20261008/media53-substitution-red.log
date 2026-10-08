@@ -1,0 +1,42 @@
+test_all_required_cases_and_each_expected_observation_are_mandatory (test_media_matrix.MediaMatrixTests.test_all_required_cases_and_each_expected_observation_are_mandatory) ... ok
+test_dependency_cycle_is_rejected (test_media_matrix.MediaMatrixTests.test_dependency_cycle_is_rejected) ... ok
+test_preparer_refuses_substituted_download_before_creating_output (test_media_matrix.MediaMatrixTests.test_preparer_refuses_substituted_download_before_creating_output) ... ERROR
+test_synthetic_input_cannot_be_promoted_to_real_capture (test_media_matrix.MediaMatrixTests.test_synthetic_input_cannot_be_promoted_to_real_capture) ... ok
+
+======================================================================
+ERROR: test_preparer_refuses_substituted_download_before_creating_output (test_media_matrix.MediaMatrixTests.test_preparer_refuses_substituted_download_before_creating_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_media_matrix.py", line 22, in test_preparer_refuses_substituted_download_before_creating_output
+    prepare(substituted, substituted, substituted, output, 'unused', 'unused')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[PLUGIN_ROOT]/scripts/media_matrix.py", line 128, in prepare
+    transform('vfr', 'vfr.mkv', ['-ss', '30', '-i', str(output/'source-film.mov'), '-t', '3',
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        '-vf', "scale=320:180,select='if(lt(t,1.5),1,not(mod(n,2)))'", '-fps_mode', 'vfr',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'pcm_s16le'])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[PLUGIN_ROOT]/scripts/media_matrix.py", line 122, in transform
+    result = subprocess.run(command, capture_output=True, timeout=180)
+  File "/opt/anaconda3/lib/python3.13/subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/subprocess.py", line 1972, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'unused'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.012s
+
+FAILED (errors=1)

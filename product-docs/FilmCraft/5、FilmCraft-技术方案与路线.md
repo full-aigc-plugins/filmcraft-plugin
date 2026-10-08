@@ -110,3 +110,5 @@
 固定 dev.52／源 dev.44 分层发行验收完成 OpenSpec 9.28—9.30：源真实 CI 181 PASS／36 环境 NOT_RUN；插件四次真实 CI 成功；固定安装原生／状态 126/126、零跳过，273 项前置检查和 32 项 headless／bridge 场景。11 组 30 场景的 180 条分层记录中 28 PASS、152 NOT_RUN；收集完整性 PASS，整体资格仍 NOT_PROVEN。真实媒体、其他宿主／平台、完整命令、创作／用户接受和完整 V1 保持开放，余 51 项。
 
 证据 / Evidence: docs/evidence/filmcraft52-layered-release-20261008/report.json。
+
+媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。

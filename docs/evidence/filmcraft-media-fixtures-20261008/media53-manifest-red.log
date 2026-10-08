@@ -1,0 +1,32 @@
+test_all_required_cases_and_each_expected_observation_are_mandatory (test_media_matrix.MediaMatrixTests.test_all_required_cases_and_each_expected_observation_are_mandatory) ... ERROR
+test_dependency_cycle_is_rejected (test_media_matrix.MediaMatrixTests.test_dependency_cycle_is_rejected) ... ERROR
+test_synthetic_input_cannot_be_promoted_to_real_capture (test_media_matrix.MediaMatrixTests.test_synthetic_input_cannot_be_promoted_to_real_capture) ... ERROR
+
+======================================================================
+ERROR: test_all_required_cases_and_each_expected_observation_are_mandatory (test_media_matrix.MediaMatrixTests.test_all_required_cases_and_each_expected_observation_are_mandatory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_media_matrix.py", line 16, in test_all_required_cases_and_each_expected_observation_are_mandatory
+    from media_matrix import CASES, validate
+ModuleNotFoundError: No module named 'media_matrix'
+
+======================================================================
+ERROR: test_dependency_cycle_is_rejected (test_media_matrix.MediaMatrixTests.test_dependency_cycle_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_media_matrix.py", line 53, in test_dependency_cycle_is_rejected
+    from media_matrix import validate_parent_graph
+ModuleNotFoundError: No module named 'media_matrix'
+
+======================================================================
+ERROR: test_synthetic_input_cannot_be_promoted_to_real_capture (test_media_matrix.MediaMatrixTests.test_synthetic_input_cannot_be_promoted_to_real_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/tests/test_media_matrix.py", line 43, in test_synthetic_input_cannot_be_promoted_to_real_capture
+    from media_matrix import validate_provenance
+ModuleNotFoundError: No module named 'media_matrix'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=3)

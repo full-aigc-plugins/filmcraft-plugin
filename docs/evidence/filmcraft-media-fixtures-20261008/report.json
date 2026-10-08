@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "scope": "fixture provenance, input bytes and expected boundaries only",
+  "cases": 7,
+  "inputs": 18,
+  "nativeAcceptance": "NOT_RUN",
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN",
+  "manifestSha256": "293620f598b465d8d6260339472a5dbac45d939e04a3da736fb41c87ba05c205",
+  "measurements": {
+    "vfrFrames": 54,
+    "vfrIntervalsSeconds": [
+      0.041,
+      0.042,
+      0.083,
+      0.084
+    ],
+    "audioSamplesPerChannel": 8698144,
+    "audioRate": 48000,
+    "audioDurationSeconds": 181.21133333333333,
+    "audioChannels": 2,
+    "tailSamplesPerChannel": 544,
+    "tailRms": 0.21819747478561088,
+    "timestampProbeSha256": "b887b8c2276558f7e0d4820b7b4c90f02babc1928c0ed665e2a6b780723fccef"
+  },
+  "commands": [
+    {
+      "case": "vfr",
+      "exitCode": 0,
+      "stderr": ""
+    },
+    {
+      "case": "long-audio",
+      "exitCode": 0,
+      "stderr": ""
+    }
+  ]
+}

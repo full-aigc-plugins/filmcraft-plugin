@@ -110,3 +110,5 @@ Fixed dev.51/source42 completes OpenSpec9.25–9.27:126 installed native/state t
 Fixed dev.52/source dev.44 completes OpenSpec9.28–9.30: source CI181 PASS/36 environment NOT_RUN; all four plugin CI runs succeed; installed native/state126/126 with no skips,273 preflight checks and32 bounded headless/bridge cases. Eleven groups/30 scenarios produce180 layer records:28 PASS and152 NOT_RUN. Collection integrity PASS; overall qualification NOT_PROVEN. Real media, other hosts/platforms, exhaustive commands, creative/user acceptance and full V1 remain open with51 tasks.
 
 证据 / Evidence: docs/evidence/filmcraft52-layered-release-20261008/report.json。
+
+OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.

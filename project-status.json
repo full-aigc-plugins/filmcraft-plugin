@@ -100,7 +100,8 @@
     "9.27": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
     "9.28": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
     "9.29": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
-    "9.30": "docs/evidence/filmcraft52-layered-release-20261008/report.json"
+    "9.30": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
+    "9.31": "docs/evidence/filmcraft-media-fixtures-20261008/summary.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -175,7 +176,9 @@
     "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
     "revisionStatus": "tasks9.25-9.27 qualified in fixed installed plugin51/source42:126/126 no skips,49 matrix records including9 revision scenarios, native scoped save/reopen and new independent review, bounded stops and verified best preservation; creative/manual, user acceptance and full V1 remain open with54 tasks",
     "fixedLayeredReleaseEvidence": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
-    "layeredReleaseStatus": "tasks9.28-9.30 qualified for current fixed plugin52/source44: mandatory source/plugin CI; installed126/126,273 preflight and32 bounded headless/bridge cases;11 groups30 scenarios180 layer records (28 PASS,152 NOT_RUN); collection PASS, overall NOT_PROVEN, full V1 remains51 tasks open"
+    "layeredReleaseStatus": "tasks9.28-9.30 qualified for current fixed plugin52/source44: mandatory source/plugin CI; installed126/126,273 preflight and32 bounded headless/bridge cases;11 groups30 scenarios180 layer records (28 PASS,152 NOT_RUN); collection PASS, overall NOT_PROVEN, full V1 remains51 tasks open",
+    "realMediaFixtureEvidence": "docs/evidence/filmcraft-media-fixtures-20261008/summary.json",
+    "realMediaStatus": "task9.31 prepared7 source/license/hash-bound cases and18 inputs;64 Python pass; real-derived video/audio and explicitly synthetic alpha/corruption separated; native9.32/fixed9.33 NOT_RUN; full V1 remains50 tasks open"
   },
   "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
   "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",

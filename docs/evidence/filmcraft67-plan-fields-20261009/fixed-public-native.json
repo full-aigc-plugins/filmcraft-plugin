@@ -1,0 +1,295 @@
+{
+  "schema": "filmcraft-fixed-plan-fields/v1",
+  "result": "PASS",
+  "fixedRef": "v0.1.0-dev.67",
+  "sourceRef": "v0.1.0-dev.50",
+  "hostReceiptSha256": "2a63b122ad899699ecf7253b3622afddacb865fc3f966b2dd96bf9ebbab82581",
+  "rows": [
+    {
+      "skill": "filmcraft-cli",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "root",
+      "result": "PASS",
+      "error": "invalid_workflow_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "operation",
+      "result": "PASS",
+      "error": "invalid_operation_fields",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "canaryEchoed": false,
+      "scriptSha256": "1dbfbd5263de7ccec3121b3e8cb3e3e3d72514541479b409835ec4f3ef9b389a"
+    }
+  ],
+  "validNativeRevision": {
+    "result": "PASS",
+    "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "sourcePreserved": true,
+    "installed13Preserved": true,
+    "fakeCanaryAbsent": true,
+    "files": {
+      "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+      "plan.json": "ca960ae7c965731809c9019d8236d6d25a9fc52d01d8798bed514d90f58088c8",
+      "decode.txt": "242696e11ac194d0e3f9fa459ff4e01c1e2d7d5004537c4da43328550cec3aa3",
+      "export-probe.json": "a1ed3393d1014e4d0006a07e291c86d4275de5375bbe3d3e27d704ebb855fea9",
+      "capabilities.json": "21611fd101904328726fb26c5c16b6e902ef9ab5868535295d3a6b39190fd249",
+      "captions.json": "9de6f8f7f4c679983647efa95236a22c49de7a3c0bee34551b874f47d2b66fff",
+      "exchange-loss.json": "ee5b4cf61d32c09920335e7f4bc43d9394477885224c372f3b798f289ad3f976",
+      "film.mp4": "9dcfecf9f65d898cd1c3e103bfb99d2183a7a49922a64716543f4f5b6a99c3e3",
+      "captions.srt": "b7fc340c37eb04e430c5309218ba66edba1ff916432823e54e4beedba80d185b",
+      "native.json": "dbf79166e4367a4f4142489bccd871e705ffecdd74c97b3627427cc2e169ba6e",
+      "voice.wav": "cb04da6932e6dd99cf27c48db5c1add473cd73a4187daa74d02cda5e87304c19",
+      "shot.mp4": "82709c2fe88a6100c5d1fc4d28d6ab90d3dd2224966fcc969591d63c07441fcd",
+      "frame-0000.png": "c5947255ceddb78183be8e98896df1a8505d85ca7bd73b5b95beee505b20caeb",
+      "manifest.json": "f8c5c2bf12b3ec8037601db2096eecf0d9d27a85f17f1653846de84c156c2f49",
+      "project.fcproj": "4df0470f06f0537de28445700c8edfc7ac3f0dba5128258759227bf6f151449e",
+      "operations.json": "72bfa66dd4840c6d14a8f4bb212c90a0e656ee124d29301f3f23e530e39d4fa2"
+    }
+  },
+  "fullV1": "NOT_PROVEN"
+}

@@ -5,8 +5,11 @@
   "sourceSha": "d99d3e194bcee2d77932b14901b614033bd911dd",
   "sourceChecks": "PASS",
   "sourceBehaviorEvidence": "https://github.com/full-aigc-skills/filmcraft-skills/tree/v0.1.0-dev.50/docs/evidence/source50-plan-field-boundary-20261009",
-  "fixedInstall": "NOT_RUN",
+  "fixedInstall": "PASS",
   "remainingOpenTasks": 8,
   "fullV1": "NOT_PROVEN",
-  "scope": "Reject undefined workflow root and operation fields before asset access, installation and output. Native parameter, trusted roots and host secret reference qualification remain open."
+  "scope": "Reject undefined workflow root and operation fields before asset access, installation and output. Native parameter, trusted roots and host secret reference qualification remain open.",
+  "fixed13FieldRefusals": 26,
+  "fixedNativeRevision": "PASS",
+  "priorDeliveryAndInstalled13Preserved": true
 }

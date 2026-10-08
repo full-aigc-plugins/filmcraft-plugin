@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.59准备产物合同固定验收：源码候选10类血缘／15类产物用例覆盖FC-AR-001/002全部8场景，包含工程迁移重关联、缺失依赖、独立原生重开及质量回执身份。逐场景门禁拒绝证据缺失或拼接。源46／craft.5技能快照不变；新固定59安装待验收，5.1—5.3／5.6与39项完整V1任务仍开放。[候选证据](docs/evidence/filmcraft59-artifact-candidate-20261009/acceptance.json)。
+
 固定 dev.58 的预算／取消合同补充验收通过：FC-TX-003四个场景、16类必选边界及额外私有CLI场景通过。复用同一固定版本133项无跳过安装回归，重新核验13技能、执行与测试源码身份；本轮未重复运行原生。已完成OpenSpec3.7—3.9，完整V1余39项。未知原生结果保留占用／预留；预算限制后续调度，不作为OS资源配额或其他平台验收。 [Evidence](docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json).
 
 固定 dev.58／source46／craft.5 的恢复合同验收通过：133项安装测试无跳过、14类恢复必选矩阵及FC-TX-002十个场景全部PASS，13项技能与执行代码保全。复核既有目标失败与当前实现后，OpenSpec3.4—3.6已完成；完整V1余42项。实际原生丢失交接与继续、SQLite故障、受控进程和合成回执分别标明；限macOS arm64、Codex/headless，其他平台、原生二进制升级、创作与用户验收仍开放。 [Evidence](docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json).
@@ -40,7 +42,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.58` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.59` / `filmcraft-skills@v0.1.0-dev.46`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -60,7 +62,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.58`；技能源：`0.1.0-dev.46`；13 个独立技能。
+当前插件：`0.1.0-dev.59`；技能源：`0.1.0-dev.46`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -165,7 +167,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.58 |
+| Metadata version | 0.1.0-dev.59 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.46 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |

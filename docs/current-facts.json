@@ -1,7 +1,7 @@
 {
   "schema": "filmcraft-current-facts/v1",
   "pluginId": "filmcraft",
-  "pluginVersion": "0.1.0-dev.58",
+  "pluginVersion": "0.1.0-dev.59",
   "sourcePackage": "filmcraft-skills",
   "sourceRef": "v0.1.0-dev.46",
   "sourceSha": "472289353c4e08c58dab75b9cb994c3c526431b7",

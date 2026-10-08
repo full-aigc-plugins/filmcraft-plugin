@@ -1,0 +1,26 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [Object: null prototype] {
+- {
+    still: 'f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47'
+  }
+
+    at file://[PLUGIN_ROOT]/scripts/verify_artifact_contract.ts:103:52 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object: null prototype] {
+    still: 'f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47'
+  },
+  expected: {
+    still: 'f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47'
+  },
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

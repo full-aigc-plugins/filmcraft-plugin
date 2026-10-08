@@ -1,0 +1,15 @@
+{
+  "result": "SOURCE_NATIVE_CANDIDATE_PASS",
+  "lineageCases": 10,
+  "artifactCases": 15,
+  "scenarios": 8,
+  "publicTasks": 2,
+  "publicArtifacts": 26,
+  "fixedInstallation": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "evidenceFiles": {
+    "candidate1-failure.txt": "49a06e94022165b01d65ac8ce7d56266b5ef91ff9f770bc2f6841e8bf73e55a9",
+    "candidate4-green.txt": "4e2b772c107122c61f6174f270b6020267118ead7097864d460c5275eca93088",
+    "report.json": "63c70230464157ac2c8bcacd151498fd88ef7fc9f40512b6f4b03a5b057769ea"
+  }
+}

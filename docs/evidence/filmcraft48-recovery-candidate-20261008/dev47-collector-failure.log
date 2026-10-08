@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/scripts/verify_fixed_recovery.py", line 110, in <module>
+    print(json.dumps(verify(args.host, args.previous_host, args.authority, args.ref, args.output, args.python, args.node)))
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[PLUGIN_ROOT]/scripts/verify_fixed_recovery.py", line 83, in verify
+    if row['scenario'] in readonly and row['before'] != row['after']: raise ValueError('original_files_changed')
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: original_files_changed

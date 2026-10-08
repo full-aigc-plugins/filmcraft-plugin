@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+当前 dev.48 修正恢复矩阵采集窗口，在用例补充 SQL 查询前固定 after 摘要。60项原生／状态、45项Python测试通过，7类只读矩阵原文件全字节保全；公开标签验收仍待完成。[候选证据](docs/evidence/filmcraft48-recovery-candidate-20261008.json)。
+
 当前 dev.47 修复验收证据相对路径并保留悬空输出链接拒绝：60项原生／状态测试、45项Python测试通过；公开标签验收仍待完成。[候选证据](docs/evidence/filmcraft47-recovery-candidate-20261008.json)。
 
 [恢复源码候选 dev.46](docs/FilmCraft-Recovery-Architecture.zh_CN.md)：60 项原生／状态测试及 14 类恢复场景通过，包含真实继续执行、schema 1/2 备份升级及兼容回退。技能源保持42；公开标签安装验收及9.16—9.18在独立验证前继续开放。
@@ -16,7 +18,7 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.47` / `filmcraft-skills@v0.1.0-dev.42`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.48` / `filmcraft-skills@v0.1.0-dev.42`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.4` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -32,7 +34,7 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.47`；技能源：`0.1.0-dev.42`；13 个独立技能。
+当前插件：`0.1.0-dev.48`；技能源：`0.1.0-dev.42`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -133,7 +135,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.47 |
+| Metadata version | 0.1.0-dev.48 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.42 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |

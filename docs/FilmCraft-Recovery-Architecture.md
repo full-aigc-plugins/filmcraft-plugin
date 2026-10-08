@@ -1,6 +1,6 @@
 # FilmCraft read-only diagnosis, repair and continuation
 
-[简体中文](FilmCraft-Recovery-Architecture.zh_CN.md). FC-TX-002 in `establish-v1-plugin` remains the behavioral authority; this page explains tasks 9.16–9.18. Candidate plugin dev.47 retains independent skills dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a` and their Python editing implementation. The source candidate passes 60 native/state tests without skips. Public-tag installed acceptance is separate; these tasks stay open until it passes.
+[简体中文](FilmCraft-Recovery-Architecture.zh_CN.md). FC-TX-002 in `establish-v1-plugin` remains the behavioral authority; this page explains tasks 9.16–9.18. Candidate plugin dev.48 retains independent skills dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a` and their Python editing implementation. The source candidate passes 60 native/state tests without skips. Public-tag installed acceptance is separate; these tasks stay open until it passes.
 
 ```mermaid
 flowchart TD
@@ -53,3 +53,7 @@ The source candidate covers 14 recovery matrix rows. Synthetic receipts/real SQL
 Release correction: dev.46 installed tests passed all 60 cases, but relative collector output paths followed the installed child cwd and evidence aggregation failed. Dev.47 resolves all input/output paths before launching, with a target red test and destination/existing-evidence preservation regressions. The dev.46 tag/ZIP remains unchanged; complete installed acceptance runs against the new tag separately.
 
 [Current dev.47 candidate / 当前源码候选](evidence/filmcraft47-recovery-candidate-20261008.json).
+
+Observation-window correction: dev.47 passed 60 installed tests, but two fixtures queried the original ledger after their preservation assertions, changing SHM read marks before matrix capture; aggregation correctly refused acceptance. Dev.48 freezes matrix after-digests at the existing preservation assertion, before supplemental fixture SQL reads. Full DB/WAL/SHM byte comparison and refusal gates remain. The dev.47 tag/ZIP is unchanged.
+
+[Current dev.48 source candidate / 当前源码候选](evidence/filmcraft48-recovery-candidate-20261008.json).

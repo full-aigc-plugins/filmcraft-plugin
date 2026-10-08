@@ -41,9 +41,10 @@ test('read-only diagnosis sees committed WAL state without changing database, si
   assert.throws(() => service.repair(task.taskId, { expectedEpoch: inspection.task!.epoch,
     inspectionSha256: inspection.evidenceSha256, authorizationRef: task.authorizationRef,
     authorizationScopeSha256: task.authorizationScopeSha256 }), /outcome_unknown/);
-  assert.deepEqual(files(root), before);
+  // 在测试自身读取原 SQLite 之前固定诊断保全窗口；额外查询可能更新 SHM 读标记。
+  const after = files(root); assert.deepEqual(after, before);
   assert.equal(db.getTask(task.taskId).state, 'reconciling');
-  captureEvidence('readonly-wal-and-missing-receipts', 'synthetic receipts; actual SQLite WAL', { before, after: files(root), inspection, state: db.getTask(task.taskId), attempts: db.listAttempts(task.taskId) });
+  captureEvidence('readonly-wal-and-missing-receipts', 'synthetic receipts; actual SQLite WAL', { before, after, inspection, state: db.getTask(task.taskId), attempts: db.listAttempts(task.taskId) });
 });
 
 test('damaged database and missing receipts remain structured unknown and never create or overwrite state', t => {
@@ -202,8 +203,8 @@ test('freshly requested repair of an already reconciled attempt is read-only and
   service.repair(task.taskId, request());
   const fresh = request(), before = files(root), reused = service.repair(task.taskId, fresh);
   assert.equal(reused.reused, true); assert.equal(reused.replayed, false); assert.equal(reused.state, 'verifying');
-  assert.deepEqual(files(root), before); assert.equal(db.listRecoveryIntents(task.taskId).length, 1);
-  captureEvidence('repeat-repair', 'synthetic native receipts', { before, after: files(root), result: reused, intents: db.listRecoveryIntents(task.taskId) });
+  const after = files(root); assert.deepEqual(after, before); assert.equal(db.listRecoveryIntents(task.taskId).length, 1);
+  captureEvidence('repeat-repair', 'synthetic native receipts', { before, after, result: reused, intents: db.listRecoveryIntents(task.taskId) });
 });
 
 test('two actual recovery processes cannot apply the same uncertain attempt twice', async t => {
@@ -300,8 +301,8 @@ test('an exited actual host does not imply its detached controlled child stopped
   db.db.prepare('UPDATE attempts SET pid=? WHERE attempt_id=?').run(pid, db.getTask(task.taskId).attemptId);
   const before = files(root), observation = service.inspect(task.taskId);
   assert.equal(observation.diagnosis, 'running'); assert.equal(observation.process.status, 'alive');
-  assert.deepEqual(files(root), before); assert.equal(db.db.prepare('SELECT COUNT(*) AS n FROM project_leases').get()!.n, 1);
-  captureEvidence('host-exited-child-alive', 'actual exited Node host and detached controlled Node child; not native editing', { before, after: files(root), hostExitCode: host.status, childPid: pid, observation, occupancy: 1 });
+  const after = files(root); assert.deepEqual(after, before); assert.equal(db.db.prepare('SELECT COUNT(*) AS n FROM project_leases').get()!.n, 1);
+  captureEvidence('host-exited-child-alive', 'actual exited Node host and detached controlled Node child; not native editing', { before, after, hostExitCode: host.status, childPid: pid, observation, occupancy: 1 });
   process.kill(-pid, 'SIGTERM');
 });
 

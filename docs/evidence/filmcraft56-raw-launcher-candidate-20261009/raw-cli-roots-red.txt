@@ -1,0 +1,47 @@
+test_discovery_with_project_cannot_bypass_required_policy (test_raw_cli_permissions.RawCliPermissionsTests.test_discovery_with_project_cannot_bypass_required_policy) ... FAIL
+test_exact_version_discovery_filters_environment_without_requiring_edit_roots (test_raw_cli_permissions.RawCliPermissionsTests.test_exact_version_discovery_filters_environment_without_requiring_edit_roots) ... FAIL
+test_native_edit_refuses_missing_policy_before_installer (test_raw_cli_permissions.RawCliPermissionsTests.test_native_edit_refuses_missing_policy_before_installer) ... FAIL
+
+======================================================================
+FAIL: test_discovery_with_project_cannot_bypass_required_policy (test_raw_cli_permissions.RawCliPermissionsTests.test_discovery_with_project_cannot_bypass_required_policy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/tests/test_raw_cli_permissions.py", line 40, in test_discovery_with_project_cannot_bypass_required_policy
+    self.assertEqual(json.loads(result.stdout)['error'], 'execution_permissions_required')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'owned_installer_would_run' != 'execution_permissions_required'
+- owned_installer_would_run
++ execution_permissions_required
+
+
+======================================================================
+FAIL: test_exact_version_discovery_filters_environment_without_requiring_edit_roots (test_raw_cli_permissions.RawCliPermissionsTests.test_exact_version_discovery_filters_environment_without_requiring_edit_roots)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/tests/test_raw_cli_permissions.py", line 52, in test_exact_version_discovery_filters_environment_without_requiring_edit_roots
+    self.assertEqual(json.loads(result.stdout), {'canaryPresent':False, 'proxyPresent':False})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'canaryPresent': True, 'proxyPresent': True} != {'canaryPresent': False, 'proxyPresent': False}
+- {'canaryPresent': True, 'proxyPresent': True}
+?                   ^^^                   ^^^
+
++ {'canaryPresent': False, 'proxyPresent': False}
+?                   ^^^^                   ^^^^
+
+
+======================================================================
+FAIL: test_native_edit_refuses_missing_policy_before_installer (test_raw_cli_permissions.RawCliPermissionsTests.test_native_edit_refuses_missing_policy_before_installer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/tests/test_raw_cli_permissions.py", line 31, in test_native_edit_refuses_missing_policy_before_installer
+    self.assertEqual(json.loads(result.stdout)['error'], 'execution_permissions_required')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'owned_installer_would_run' != 'execution_permissions_required'
+- owned_installer_would_run
++ execution_permissions_required
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.703s
+
+FAILED (failures=3)

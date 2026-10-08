@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "layer": "current candidate actual public runtime upgrade CLI, private owned exact grants and pinned native MCP sandbox probe",
+  "sourceRevision": "b1d8e962f1bc95d308f8a2bcc44380b227737dda",
+  "expandedRootsRefused": true,
+  "revokedGrantRefused": true,
+  "probeLedgerUnchanged": true,
+  "activatedGeneration": 1,
+  "skillPreserved": true,
+  "runtimeBinaryPreserved": true,
+  "inputPreserved": true,
+  "executionPermissionsSha256": "49cc4e75d1e4704242f5fff2c57579e80e57f90780def68df6afc9b63c8270cd",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "fixedHostQualification": "NOT_RUN"
+}

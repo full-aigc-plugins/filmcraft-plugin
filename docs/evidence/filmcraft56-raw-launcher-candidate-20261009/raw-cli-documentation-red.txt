@@ -1,0 +1,22 @@
+test_every_public_mutation_example_declares_trusted_roots_and_runtime (test_documented_execution_permissions.DocumentedExecutionPermissionsTests.test_every_public_mutation_example_declares_trusted_roots_and_runtime) ... FAIL
+test_policy_variables_are_required_before_documented_execution (test_documented_execution_permissions.DocumentedExecutionPermissionsTests.test_policy_variables_are_required_before_documented_execution) ... ok
+
+======================================================================
+FAIL: test_every_public_mutation_example_declares_trusted_roots_and_runtime (test_documented_execution_permissions.DocumentedExecutionPermissionsTests.test_every_public_mutation_example_declares_trusted_roots_and_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/tests/test_documented_execution_permissions.py", line 30, in test_every_public_mutation_example_declares_trusted_roots_and_runtime
+    self.assertEqual(missing, [], 'Incomplete public examples: ' + str(missing[:12]))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [('skills/filmcraft-cli/references/transcr[12413 chars]me')] != []
+
+First list contains 156 additional elements.
+First extra element 0:
+('skills/filmcraft-cli/references/transcript-scene.md', '--read-root')
+
+Diff is 13253 characters long. Set self.maxDiff to None to see it. : Incomplete public examples: [('skills/filmcraft-cli/references/transcript-scene.md', '--read-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--write-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--runtime-home'), ('skills/filmcraft-cli/references/transcript-scene.md', '--read-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--write-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--runtime-home'), ('skills/filmcraft-cli/references/transcript-scene.md', '--read-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--write-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--runtime-home'), ('skills/filmcraft-cli/references/transcript-scene.md', '--read-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--write-root'), ('skills/filmcraft-cli/references/transcript-scene.md', '--runtime-home')]
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.105s
+
+FAILED (failures=1)

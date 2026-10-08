@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.73
+
+dev.73 pins published source56, enforcing trusted roots and filtered child environments at the legacy raw CLI. Model download has a separate validated maintenance mode with data-directory-only writes and outbound-only network permission. Three target reds become six passes;39 actual raw entry cases, cold model download/28-word recognition/reopen/SRT and thirteen independently copied candidate skill tasks pass. Fixed72 evidence remains version-bound, including185 installed native tests and all1775 frozen files preserved. Full host intent routing, permission/command qualification and eight V1 tasks remain open; fixed73 qualification is NOT_RUN. [Evidence](docs/evidence/filmcraft56-raw-launcher-candidate-20261009/report.json).
+
 ## 0.1.0-dev.72
 
 dev.72 pins published source54, preserving the explicit read-only model directory for complete-command, owned desktop and MCP execution. Four target regressions and actual CLI Whisper inference (28 words, unchanged model hashes) pass. The official signed desktop discovers the same cache but reports speech unavailable and correctly refuses inference. Full FC-RL-002, fixed72 qualification and eight V1 tasks remain open. [Evidence](docs/evidence/source54-readonly-model-20261009/report.json).

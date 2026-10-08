@@ -5,6 +5,10 @@
 Public workflow and full-command run require independent --read-root / --write-root grants before reading the plan. Existing canonical directories only; symlink and disk-wide grants are rejected. Plan and asset paths cannot grant access themselves.
 
 ```bash
+: "${PROJECT_ROOT:?Set PROJECT_ROOT to an existing independently authorized directory}"
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
 python3 -I -B "$SKILL_DIR/scripts/workflow.py" "$PLAN" --output "$OUTPUT" \
   --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" \
   --write-root "$PROJECT_ROOT" --write-root "$RUNTIME_HOME"
@@ -17,3 +21,9 @@ Installer maintenance and editor access are separate: explicitly authorize the r
 此为在研接入，尚不证明全部权限／秘密合同、固定发行安装或完整GUI上下文通过。旧的低层Python测试API保留兼容调用，不属于带宿主准入的公开入口；仍须完成审计，不能用其无策略调用作为授权路径。
 
 完整命令与所属桌面共用显式 FILMCRAFT_DATA_DIR 的只读缓存；根外／非绝对／控制字符引用在安装前拒绝。截图 TMPDIR 与缓存分离，不扩大模型写入权限。Complete-command and owned desktop use the same explicitly granted read-only cache; temporary screenshots use a separate authorized directory.
+
+## 原生转发与模型维护
+
+`cli.py` 的工程读取、exec/run/render/export/import/MCP 等入口同样要求在 `--` 前提供 `--read-root`、`--write-root` 和 `--runtime-home`；原生进程保护源工程、技能与固定运行时，所有子进程均过滤宿主环境。仅精确 `--version`、`help`、`commands`、`commands --json` 无工程查询保留旧调用方式，附加工程参数不属于豁免。
+
+模型下载必须单独使用 `--model-maintenance -- exec transcript.downloadModel '{"model":"whisper-tiny"}' --data-dir "$MODEL_DATA_DIR"`；该目录须已存在并有独立可信写入授权，不能位于技能、运行时或解释器目录。维护进程的写根缩小为该目录，独立开放网络出站；不允许混合工程参数或其他命令，普通编辑不获得模型维护权限。完整示例见 [转录场景](transcript-scene.md)。

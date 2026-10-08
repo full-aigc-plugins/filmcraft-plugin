@@ -1,0 +1,11 @@
+test_discovery_with_project_cannot_bypass_required_policy (test_raw_cli_permissions.RawCliPermissionsTests.test_discovery_with_project_cannot_bypass_required_policy) ... ok
+test_exact_version_discovery_filters_environment_without_requiring_edit_roots (test_raw_cli_permissions.RawCliPermissionsTests.test_exact_version_discovery_filters_environment_without_requiring_edit_roots) ... ok
+test_model_download_requires_separate_maintenance_before_installer (test_raw_cli_permissions.RawCliPermissionsTests.test_model_download_requires_separate_maintenance_before_installer) ... ok
+test_model_maintenance_refuses_combined_editing_and_duplicate_model_fields (test_raw_cli_permissions.RawCliPermissionsTests.test_model_maintenance_refuses_combined_editing_and_duplicate_model_fields) ... ok
+test_model_maintenance_refuses_runtime_cache_as_data_directory (test_raw_cli_permissions.RawCliPermissionsTests.test_model_maintenance_refuses_runtime_cache_as_data_directory) ... ok
+test_native_edit_refuses_missing_policy_before_installer (test_raw_cli_permissions.RawCliPermissionsTests.test_native_edit_refuses_missing_policy_before_installer) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.871s
+
+OK

@@ -17,7 +17,11 @@ English: install only when GUI is required. This standalone installer pins offic
 设置 SKILL_DIR 为当前技能真实目录，PLAN 为完整 command-plan/v1 文件，OUTPUT 为尚不存在的输出目录。
 
 ```bash
-python3 -I -B "$SKILL_DIR/scripts/desktop.py" run "$PLAN" --output "$OUTPUT"
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
+python3 -I -B "$SKILL_DIR/scripts/desktop.py" run "$PLAN" --output "$OUTPUT" --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 可用 `--runtime-home` 指定独立缓存；`--input NAME=PATH` 显式导入素材。有效计划会安装已固定的桌面与 CLI，启动隔离应用，在同一桌面会话执行 `commands.py` 工作流，并保留原生工程、导出、journal、desktop.log 与 desktop-session.json。后者记录应用身份、监听端口归属及本次进程已退出。Photo 的 token 文件在退出时删除，GUI 与 CLI 使用同一输出根。只关闭本次拥有的进程，不连接其他用户会话。失败或未知编辑结果保留回执，不自动重放。安装平台仍为 macOS arm64。

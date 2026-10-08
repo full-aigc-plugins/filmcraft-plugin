@@ -1,0 +1,14 @@
+test_actual_child_read_write_and_environment_boundaries (test_execution_permissions.ExecutionPermissionsTests.test_actual_child_read_write_and_environment_boundaries) ... ok
+test_actual_mcp_session_does_not_inherit_host_secret_or_injection (test_execution_permissions.ExecutionPermissionsTests.test_actual_mcp_session_does_not_inherit_host_secret_or_injection) ... ok
+test_minimal_environment_excludes_host_keys_proxies_and_interpreter_injection (test_execution_permissions.ExecutionPermissionsTests.test_minimal_environment_excludes_host_keys_proxies_and_interpreter_injection) ... ok
+test_model_maintenance_limits_writes_and_rejects_listener_and_symlink_escape (test_execution_permissions.ExecutionPermissionsTests.test_model_maintenance_limits_writes_and_rejects_listener_and_symlink_escape) ... ok
+test_owned_bridge_control_port_does_not_grant_other_network_access (test_execution_permissions.ExecutionPermissionsTests.test_owned_bridge_control_port_does_not_grant_other_network_access) ... ok
+test_parent_link_replacement_does_not_reauthorize_an_outside_root (test_execution_permissions.ExecutionPermissionsTests.test_parent_link_replacement_does_not_reauthorize_an_outside_root) ... ok
+test_policy_identity_canonicalizes_roots_but_rejects_symlink_grants (test_execution_permissions.ExecutionPermissionsTests.test_policy_identity_canonicalizes_roots_but_rejects_symlink_grants) ... ok
+test_unknown_policy_fields_and_broad_roots_fail_without_echo (test_execution_permissions.ExecutionPermissionsTests.test_unknown_policy_fields_and_broad_roots_fail_without_echo) ... ok
+test_unsupported_platform_refuses_instead_of_unisolated_fallback (test_execution_permissions.ExecutionPermissionsTests.test_unsupported_platform_refuses_instead_of_unisolated_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.154s
+
+OK

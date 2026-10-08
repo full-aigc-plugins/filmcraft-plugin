@@ -3,7 +3,11 @@
 公开工作流支持通过 segmented-image-sequence 登记 Effect 已完成的分段生产检查点，逐段校验并归一成连续的 Film 收集素材，保留原检查点与段摘要。CLI 身份从本技能 runtime.lock.json 和实际安装回执读取；不要使用历史候选版本判断当前是否支持。
 
 ```bash
-python3 -I -B "$SKILL_DIR/scripts/workflow.py" /absolute/plan.json --output /absolute/film --segmented-sequence-asset overlay=/absolute/segments/segments.json
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
+python3 -I -B "$SKILL_DIR/scripts/workflow.py" /absolute/plan.json --output /absolute/film --segmented-sequence-asset overlay=/absolute/segments/segments.json --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 SKILL_DIR 来自当前实际加载的 SKILL.md 目录。计划使用已有 asset.import／timeline.place，安装器按技能自身锁安装固定原生 CLI，不依赖兄弟技能。每段仍最多 512 MiB，原 v1 限制不变。缺段、重叠、错位、坏帧及未完成检查点拒绝。

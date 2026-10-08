@@ -26,11 +26,15 @@ Query each current parameter contract with `commands.py describe COMMAND_ID`. Wo
 ## 参数、计划与执行 / Parameters, plan and execution
 
 ```bash
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
 python3 -I -B "$SKILL_DIR/scripts/commands.py" list --filter transcript.
 python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.set
 python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.createCaptions
 python3 -I -B "$SKILL_DIR/scripts/commands.py" check /absolute/transcript-plan.json
-python3 -I -B "$SKILL_DIR/scripts/commands.py" run /absolute/transcript-plan.json --output /absolute/new-transcript-result
+python3 -I -B "$SKILL_DIR/scripts/commands.py" run /absolute/transcript-plan.json --output /absolute/new-transcript-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 使用本技能 command-usage.md 的计划合同，返回值通过 $ref 连接后续步骤，保存工程必须在同一会话。重新剪辑后旧词索引可能失效，必须再次 inspect。enabled 反映当前状态，不把空会话状态当作完成前置条件。失败、禁用或超时按原生回执处理；未知结果先检查原任务，不能重放删除。
@@ -51,24 +55,27 @@ The bounded example imports supplied word timings; it is not an ASR benchmark. R
 
 ## 固定 Whisper 首次安装与识别 / Fixed Whisper first use
 
-当前源技能锁定维护运行时 `0.2.0-craft.4`，启用真实CPU Whisper和模型下载。旧的不可变插件快照可能仍锁定craft.3，必须按自身锁和实际 `transcript.models.available` 判断，不能根据本指南推断旧安装已升级。
+当前源技能锁定维护运行时 `0.2.0-craft.5`，启用真实CPU Whisper和模型下载。旧的不可变插件快照可能仍锁定craft.3，必须按自身锁和实际 `transcript.models.available` 判断，不能根据本指南推断旧安装已升级。
 
 设定 `MODEL_DATA_DIR` 为任务授权的持久数据目录（绝对路径）；模型不写入技能目录，也不纳入成片/工程交付包。以下调用只使用本技能资源；先检查原生模型目录、来源、许可和体积。tiny多语言模型约154MB，base默认模型更大；按语言、素材和任务选型，不能把一个样例识别率推广为通用准确率。
 
 ```bash
 : "${SKILL_DIR:?当前技能实际目录}"
 : "${MODEL_DATA_DIR:?声明的持久模型数据目录}"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" -- exec transcript.models --data-dir "$MODEL_DATA_DIR"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" -- exec transcript.downloadModel '{"model":"whisper-tiny"}' --data-dir "$MODEL_DATA_DIR"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" -- exec transcript.generate '{"model":"whisper-tiny","language":"en"}' --project /absolute/source.fcproj --save-as /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" -- exec transcript.inspect --project /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
+python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.models --data-dir "$MODEL_DATA_DIR"
+python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$MODEL_DATA_DIR" --write-root "$MODEL_DATA_DIR" --write-root "$RUNTIME_HOME" --model-maintenance -- exec transcript.downloadModel '{"model":"whisper-tiny"}' --data-dir "$MODEL_DATA_DIR"
+python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.generate '{"model":"whisper-tiny","language":"en"}' --project /absolute/source.fcproj --save-as /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
+python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.inspect --project /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
 ```
 
 下载依当前任务已授权的必要依赖范围执行；未授权且体积/来源会实质影响任务时只询问新增范围。原生下载按固定revision与SHA-256校验；模型查询的installed只反映文件体积，不能作为内容校验的替代。查询available=false时停止自动识别并报告该固定版本不支持，不用transcript.set伪装识别成功。此处省略items仅适用于活动序列已有音轨；明确媒体时传真实items，language按实际语言使用zh/en/auto。不得将参考文本输入识别器。
 
 另存工程重开后核对词句、媒体时间、音视频和原工程摘要，再使用本指南的createCaptions与captions.export流程。同步识别耗时或超时后先查实际进程及产物，不重放写操作。模型缺失、下载摘要不符、语言或音频不可用均按真实非零回执处理。
 
-Source skills pin maintainedcraft.4 with real native CPU Whisper. Immutable older plugin snapshots retain their own locks. Select a declared persistent model directory, inspect source/license/size, download the pinned model and recognize actual audio. Use the language and media IDs appropriate to the project. Preserve the source, reopen the new project, verify media-time words, then create/export captions. Installed state alone checks sizes; actual model checksums and inference are separate evidence. Public/fixed-host acceptance must be stated separately from a local candidate test.
+Source skills pin maintainedcraft.5 with real native CPU Whisper. Immutable older plugin snapshots retain their own locks. Select a declared persistent model directory, inspect source/license/size, download the pinned model and recognize actual audio. Use the language and media IDs appropriate to the project. Preserve the source, reopen the new project, verify media-time words, then create/export captions. Installed state alone checks sizes; actual model checksums and inference are separate evidence. Public/fixed-host acceptance must be stated separately from a local candidate test.
 
 ### 公共工作流的模型目录 / Model directory in public workflows
 
@@ -91,3 +98,5 @@ After an explicit network download failure, retry only `transcript.downloadModel
 已有工程先用 captions.list 查询轨道ID、名字、文本、时间和enabled。仅在任务明确替换模板占位轨道时，用 captions.setTrack 将该实际ID的enabled设false，另存并保留文字/时间；无关用户字幕保持。新增轨道会改变C1/C2标签。仅重做版式时复用已识别词，不再次识别音频。重开后核对单一目标字幕、SRT无占位文字、音画与原工程摘要不变。自动识别正确不等于字幕版式合格。
 
 For new ASR films, use this skill's asr-short-film.json without supplied captions. Download the pinned model into the declared directory first. Copy asr-captions-revision.json and replace its zero digest with the base manifest's actual project digest. Adapt language, media IDs and timing. Run the revision through this skill's workflow.py with source, a new output directory and the same data directory. The template recognizes audio and styles the actual returned speechCaptions.track ID. Size84 means nominal14px at180 height, not a universal font size. Inspect the native preview, SRT, reopened project and preserved audio/video. For existing projects, disable only the explicitly superseded placeholder track after querying its actual ID; retain text/timing and unrelated captions. Layout-only revisions reuse existing transcripts rather than recognizing audio again.
+
+原生转发读取／编辑需要独立根授权；模型下载仅在显式 `--model-maintenance` 下执行固定模型维护，原生进程只能写入已授权模型数据目录并使用网络出站。普通编辑不获得这些权限。模型目录必须已存在，不得使用技能、运行时或解释器目录；仅查询版本和无工程命令目录时保留旧调用方式。

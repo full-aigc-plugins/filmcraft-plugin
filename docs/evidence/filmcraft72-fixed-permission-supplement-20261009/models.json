@@ -1,0 +1,87 @@
+{
+  "schema": "filmcraft-fixed-model-directory/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.72",
+  "sourceRef": "v0.1.0-dev.54",
+  "layer": "actual installed public commands and owned signed desktop",
+  "cases": [
+    {
+      "case": "cli-inference",
+      "exit": 0,
+      "result": "PASS",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "inference": {
+        "items": [
+          {
+            "item": 1,
+            "language": "en",
+            "source": "whisper-tiny",
+            "speakers": 0,
+            "words": 28
+          }
+        ],
+        "skipped": []
+      }
+    },
+    {
+      "case": "desktop-discovery",
+      "exit": 0,
+      "result": "PASS",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "available": false,
+      "tinyInstalled": true,
+      "explicitModelDirectoryMatched": true,
+      "desktopSessionFields": [
+        "schema",
+        "result",
+        "domain",
+        "desktop",
+        "ownedProcessesStopped",
+        "listenerOwnedByPID",
+        "sessionsStarted",
+        "control",
+        "scope",
+        "fullCommandAcceptance"
+      ],
+      "desktopSha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa",
+      "ownedProcessesStopped": true,
+      "listenerOwnedByPID": true,
+      "sessionReceiptSha256": "ff4c3cdc22775e1a9ad64db0686654a375f39d77a8c810dc555ac978578b8524"
+    },
+    {
+      "case": "desktop-inference-refusal",
+      "exit": 1,
+      "result": "FAIL",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "expectedRefusal": "capability_missing: model:whisper-tiny",
+      "desktopSessionFields": [
+        "schema",
+        "result",
+        "domain",
+        "desktop",
+        "ownedProcessesStopped",
+        "listenerOwnedByPID",
+        "sessionsStarted",
+        "control",
+        "scope",
+        "fullCommandAcceptance"
+      ],
+      "desktopSha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa",
+      "ownedProcessesStopped": true,
+      "listenerOwnedByPID": true,
+      "sessionReceiptSha256": "14dfb2751bc334f124d1a8a4c7a06311721c43cb3f22f1e853e6ff9d1c99c545"
+    }
+  ],
+  "modelFilesSha256": {
+    "models/whisper-tiny/model.safetensors": "7ebd0e69e78190ffe1438491fa05cc1f5c1aa3a4c4db3bc1723adbb551ea2395",
+    "models/whisper-tiny/config.json": "ffdccec4f3211f4c63310f2b7098f309fe70f3952cedc5e4d11e43f5b2379b98",
+    "models/whisper-tiny/tokenizer.json": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566",
+    "models/whisper-tiny/generation_config.json": "a5d5325911f16e74001a72fa13d6e208eee51548f994646de1f4b4cc8b35b512"
+  },
+  "modelsPreserved": true,
+  "modelDownload": "NOT_REQUESTED",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "scope": "Current macOS arm64 fixed72; desktop native speech unavailable, no GUI inference claimed",
+  "voiceSha256": "f1e7ac960c5d42db99fa8913061dc7dd0a6aa8c6644f265584b973b3713ef03c",
+  "driverSha256": "1e0c2afc4f8e67cc38307239aff1301754fae2f67f9dc179851efe71a0ac8d60"
+}

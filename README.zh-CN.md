@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.73锁定已发布source56：旧原生CLI强制可信根并过滤子进程环境；模型下载采用独立校验的维护模式，仅可写指定数据目录并使用网络出站。三项目标红灯转六项通过；39项真实原生入口、模型冷下载／28词识别／重开／SRT及十三个独立复制技能候选业务通过。固定72补证保留原版本身份，包括185项安装原生回归与1775文件保全。宿主意图路由、完整权限／全命令及八项V1任务仍开放；固定73验收NOT_RUN。 [Evidence](docs/evidence/filmcraft56-raw-launcher-candidate-20261009/report.json).
+
 dev.72锁定公开source54：完整命令、所属桌面和MCP保留显式只读模型目录。四项目标回归及CLI真实Whisper识别通过（28词，模型摘要不变）；官方签名桌面发现同一缓存，但报告语音能力不可用并正确拒绝推理。完整FC-RL-002、固定72验收及八项V1任务保持开放。 [Evidence](docs/evidence/source54-readonly-model-20261009/report.json).
 
 固定dev.71安装核验：隔离Codex0.147.0加载13技能，185项安装回归零跳过通过，26项公开原生根边界及17项所属签名桌面操作通过，执行代码／测试／技能身份保全。该证据仅覆盖上述范围。另行只读模型探测实际FAIL：完整命令入口用输出私有目录覆盖已声明的whisper-tiny缓存并误报缺失。完整权限及命令资格仍为NOT_PROVEN，八项任务保持开放。[当前证据](docs/evidence/filmcraft71-fixed-boundaries-20261009/report.json)。
@@ -63,7 +65,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.72` / `filmcraft-skills@v0.1.0-dev.54`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.73` / `filmcraft-skills@v0.1.0-dev.56`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -87,7 +89,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.72`；技能源：`0.1.0-dev.54`；13 个独立技能。
+当前插件：`0.1.0-dev.73`；技能源：`0.1.0-dev.56`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -192,9 +194,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.72 |
+| Metadata version | 0.1.0-dev.73 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.54 |
+| Skills source | filmcraft-skills / v0.1.0-dev.56 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

@@ -1,0 +1,186 @@
+{
+  "schema": "filmcraft-fixed-host-verification/v1",
+  "result": "PASS",
+  "codexVersion": "codex-cli 0.147.0",
+  "userAgent": "Codex Desktop/0.147.0 (Mac OS 27.0.1; arm64) dumb (craft-host-acceptance; 0.2.0)",
+  "platform": "darwin-arm64",
+  "plugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.72",
+    "ref": "v0.1.0-dev.72",
+    "sha": "94e653af74a2dd863df6cf97b7153173bcd8096b",
+    "skillSourceSha": "b1d8e962f1bc95d308f8a2bcc44380b227737dda",
+    "skillSourceRef": "v0.1.0-dev.54",
+    "pluginManifestSha256": "7d8e107dcfbee1af0d10cd7b525276b0c5511014950c00cb25c4959487bb53ce",
+    "skillSha256": "42f39d76a581b99745c7ea4462343d6080b339328638181e513cc20d4efe6bf2",
+    "skills": {
+      "filmcraft-use": "42f39d76a581b99745c7ea4462343d6080b339328638181e513cc20d4efe6bf2",
+      "filmcraft-cli": "c3319782654d1777f58be6df94e0b766233773784743905df0126a4c5de9b8c3",
+      "filmcraft-cli-setup": "a36ab7efee0dd46ef5f39cbdff429e91b5a0c64147ee8453fb73d5e3f9c7df6c",
+      "filmcraft-cli-project": "8f89bc2e123398d3f336967811b680eccbc3b38cb0dc2c2945e89e0f42e466b1",
+      "filmcraft-cli-media": "7b5a16bfe45c5488203d70e74631b6dd2785ad3b1b498413c6eb1d6213f93fcd",
+      "filmcraft-cli-timeline": "20d7061c72efe75c338e1bba5610482e1aab359d1869a13d9f31ad6619bbbebd",
+      "filmcraft-cli-audio": "2798885a35b98e3df673954efe0c4bf3f0088e5beec1dc9c6e68255b0b319cb3",
+      "filmcraft-cli-subtitles": "f783dae977f20762faab7956997e89cf409033348d90caa233c6e2026a36fdfb",
+      "filmcraft-cli-color": "b08691287724a2240878a23acca61366cffaeb873f1b7f2ab6bb2f047cd08082",
+      "filmcraft-cli-motion": "193485d6ad77559a2dc9092654e1a5f659c44153fdbb17595be879fca0c474ba",
+      "filmcraft-cli-export": "3d5c6a9c25ef36ec0ed3c2ce88e0366bc9aeb8d798f9721ced8ef48a26fa8ab2",
+      "filmcraft-cli-multicam": "ae0d4ad1099a0992032dd21b7bdf92563a1ae400e5a770b55d98a107923f288c",
+      "filmcraft-cli-transcript": "f5fcebaa5ba06f458aa82124a6f24c3690770768c019240e50f36703dad1802e"
+    },
+    "codeFilesSha256": {
+      "package.json": "2a24c23f0468ca229a3d4486c8b871bb65e0221edc0288aa9b0253cd63d02fc3",
+      "scripts/check_release.py": "bb8abba5a0dbc895bf93b30c6796add551983560430989d1cb57c58cee150ea6",
+      "scripts/collect_release_layers.py": "064b89ad37ae1156bff782fd0e70666ce24e5794ed97c8e8ae1444de26d891f7",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/media_matrix.py": "762e9047131b4e41a8ccbaf7413442686cafb77f4b2e6645f982ca1d403e15d9",
+      "scripts/native_preflight.py": "ce2c08bc6f90f7125cfd7eaa40b698c3d6d82e634a1142bdcf235d495e9bd472",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/probe_workflow_writer.py": "27126388902856a91d2c443570fb33f4af2eb4dcdceba30942309afd90ac0570",
+      "scripts/process_identity.py": "2d239b424b34092e32b8c8105b71672511ad3253ccf177f9b633618e98bd1ae8",
+      "scripts/protocol_fixture.ts": "4729d8ccbb4f9718e00451f02ee1352a4b8484fe0b56ac0846e42fe9fd26fccb",
+      "scripts/release_evidence.py": "05b06b6cc5c7c7536f0067a3d103596026ddba83e553046c40970a79b0450008",
+      "scripts/review_media.py": "2b8b55958a032fc6a625c280a5a9f74bd3ee78ff0a17343ca36d69967fbf033b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "fe8d39c98acaa8334c9576f842b850c2cb2f86932ddc4ce64c9c4ef2dd5edcc7",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_artifact_contract.ts": "3f3c0c3e6e5c6b5aa337ca7e7a7617e3ac16e1b354968d4333d5388e3b0a9694",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_admission.py": "5316d5e6622d1f28ba688ff0762c6116da8b005986b2ab190e4ee06d80dcd5c4",
+      "scripts/verify_fixed_artifacts.py": "6008c8e599465bd89ed26fe2b97b89245a934685152997278757dfd68262e78f",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "37aef833272f99d6f9c3a4e53cdbe86946302f2a063d55be1c3d0c59ec15faa1",
+      "scripts/verify_fixed_media.py": "bdf14e498066b979b95707d507937e75943d060eacae06b182ea40854c3c4421",
+      "scripts/verify_fixed_quality.py": "840f59f78cafbff9cff1f6a7bebdc80f97123ac152ed3979fc3e8bb69bd5bf1d",
+      "scripts/verify_fixed_recovery.py": "e7225bb0a35fbea4d5bfe689148909cb3abecc7e2b22c074aca6debe9fb59c8b",
+      "scripts/verify_fixed_resources.py": "205352ad76c275a134d4c17845ee19e59e452ad627ef42270891585ca7ac98b1",
+      "scripts/verify_fixed_revision.py": "908009395a515166b1fc0f8f69f8d54157a7af3363b1432bd16439a9f353fe1f",
+      "scripts/verify_media_matrix.py": "80fd452e32d27f0ecd0d75cea2afc3643c30909ccdb59ec5a879b9008811aee4",
+      "scripts/verify_protocol_gate.py": "3388c8654f6239a775748ac450ac0e9653a88cbc37672811330dc89e0c9a3ea5",
+      "scripts/verify_recovery_contract.py": "34b9b9c7b976ff5677fcd53127e9c14bebc31ed45c682599773bddba1186b9d6",
+      "scripts/verify_runtime_transition.py": "87b149096560cf035ff1e71ab0e7abe56d6d49d49c5b20bfe3c78eb6a7755064",
+      "scripts/verify_workflow_admission.ts": "7c24b8d3540df1f8250046d82da2ac25ce698ed3400877d8359558ac1dcf7414",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "scripts/verify_writer_boundaries.py": "b5936502c52ed7f60b7be2e3eaf1693b9f654a20e2869a7dbc437053751174a4",
+      "src/adapters/asset_refusal.ts": "c00715d34a007a2f758973f111b89e542dbf174d1329e48763396e8365cccf7d",
+      "src/adapters/capability_refusal.ts": "759105f53eb4bb044b70d31e335206c56ffd18a83dd0a56498ca89d5b5814605",
+      "src/adapters/clip_refusal.ts": "16d8f1355d1b048be93f65bdb585f745195bb11433a866ef8dc58849d435db74",
+      "src/adapters/plan_identity.ts": "241462a1c67c8ec885f8b7c22ff7f4dfce1ea1f12b9c1ea258411998e07b6768",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "ee8ebe09bb3934b6e5f07b59d747698ab6fcccc12621a23d79602e7b30145a54",
+      "src/adapters/runtime_candidate.ts": "9d953e0ede332b49019717affa7be691ed6b8420cec2db28762c5c8f9b2b39a0",
+      "src/adapters/runtime_deployment.ts": "36842d4ca170da882c1e54c108fa1bdad72a2a533f7b8c69bd536a9e55fbeedf",
+      "src/adapters/runtime_upgrade.ts": "5c91ef98f18c8844b03a9acf497a67dda88a167d3466ebc6a642f15c77675e69",
+      "src/artifacts/exchange_loss.ts": "213bf786ec7be2c2c462900ebdb5e5a29ffcbc6e278230cc6137453e43581cff",
+      "src/artifacts/receipt_index.ts": "d93cda02a97852345005e0a7ed57663a47ed319dda8b7749a508287ff9c0c090",
+      "src/cli/recovery.ts": "e9884dc9b3c0f169b431864e141abc4b0dc3b2bb7fa75a7ae641a197a7c9759b",
+      "src/cli/runtime.ts": "d8e00a073d4cafa786862dba66cddad876f1d99e280355e7fe71dc36a346c0a8",
+      "src/cli/workflow.ts": "512f9d1f1c1e59c2512ba64719217b67feb62fe8a0e8f230be95d0a8a66f11ab",
+      "src/harness/authorization.ts": "dcf9f031e6a00c1249b39beff99d627cbf82a50730595c9d63d873c287ab3dfb",
+      "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+      "src/harness/continuation.ts": "305d7873b1537b6640614e6e682a3b41135567558d9c5c733db416e2899cdc77",
+      "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+      "src/harness/process_identity.ts": "1f967923e2ca76f1482342818923f9f82b72b7a8960400db682d389b5bcfb6d2",
+      "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+      "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+      "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+      "src/harness/state_maintenance.ts": "5eac10270615aca8b80ffe1d4c7e1fb2db1f4b42a235c0bbc1855ad859f31b6e",
+      "src/harness/task_ledger.ts": "f74fdb58a4ce125109647a7abdc3c84c2c7db3d1d42458ab4aadb368155941eb",
+      "src/harness/workflow_admission.ts": "85a1cc2d74fd4a163f8f9a834259648b77f2e273d5df114b0bd83cd02e3e5d7b",
+      "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+      "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+      "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+      "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+      "src/quality/revision_service.ts": "816b632ddeabd2f10df8c9b359d3c812358cc741f83e489ad83eb9ec8ea5f49d",
+      "src/support/execution_permissions.ts": "f85a38180984f8cca846613286242e045ad339257846e7aeba64c845d91e507b",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62",
+      "src/support/process_environment.ts": "3eca29ae07b8739a90d60d5e76542772969338a33b2579cc82f3416bf8bd6668"
+    }
+  },
+  "helper": {
+    "commit": "09d4ac5b8ff82f8fe819189e4be487b45ab2472b",
+    "path": "scripts/verify_codex_host.py",
+    "sha256": "8708c984e0e64a96196eee2745a6742b0ec53a17a402bb70b92d878443a13a35"
+  },
+  "skills": [
+    {
+      "name": "filmcraft:filmcraft-cli",
+      "sha256": "c3319782654d1777f58be6df94e0b766233773784743905df0126a4c5de9b8c3",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-audio",
+      "sha256": "2798885a35b98e3df673954efe0c4bf3f0088e5beec1dc9c6e68255b0b319cb3",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-color",
+      "sha256": "b08691287724a2240878a23acca61366cffaeb873f1b7f2ab6bb2f047cd08082",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-export",
+      "sha256": "3d5c6a9c25ef36ec0ed3c2ce88e0366bc9aeb8d798f9721ced8ef48a26fa8ab2",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-media",
+      "sha256": "7b5a16bfe45c5488203d70e74631b6dd2785ad3b1b498413c6eb1d6213f93fcd",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-motion",
+      "sha256": "193485d6ad77559a2dc9092654e1a5f659c44153fdbb17595be879fca0c474ba",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-multicam",
+      "sha256": "ae0d4ad1099a0992032dd21b7bdf92563a1ae400e5a770b55d98a107923f288c",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-project",
+      "sha256": "8f89bc2e123398d3f336967811b680eccbc3b38cb0dc2c2945e89e0f42e466b1",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-setup",
+      "sha256": "a36ab7efee0dd46ef5f39cbdff429e91b5a0c64147ee8453fb73d5e3f9c7df6c",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-subtitles",
+      "sha256": "f783dae977f20762faab7956997e89cf409033348d90caa233c6e2026a36fdfb",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-timeline",
+      "sha256": "20d7061c72efe75c338e1bba5610482e1aab359d1869a13d9f31ad6619bbbebd",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-cli-transcript",
+      "sha256": "f5fcebaa5ba06f458aa82124a6f24c3690770768c019240e50f36703dad1802e",
+      "enabled": true
+    },
+    {
+      "name": "filmcraft:filmcraft-use",
+      "sha256": "42f39d76a581b99745c7ea4462343d6080b339328638181e513cc20d4efe6bf2",
+      "enabled": true
+    }
+  ],
+  "loadingErrors": 0,
+  "scope": "fixed public-tag isolated install, executable files, immutable skill identities and real app-server discovery",
+  "notAccepted": [
+    "model dispatch and routing accuracy",
+    "native workflow execution",
+    "other hosts/platforms",
+    "complete V1"
+  ]
+}

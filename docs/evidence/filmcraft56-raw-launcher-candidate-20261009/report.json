@@ -1,0 +1,28 @@
+{
+  "schema": "filmcraft-raw-launcher-candidate/v1",
+  "result": "PARTIAL",
+  "fixedFailure": "fixed72-red.json",
+  "candidateNative": "native.json",
+  "targetRegression": {
+    "red": 3,
+    "green": 6
+  },
+  "modelMaintenanceSandbox": "raw-cli-maintenance-sandbox.txt",
+  "documentationRedGreen": [
+    "raw-cli-documentation-red.txt",
+    "raw-cli-documentation-green.txt"
+  ],
+  "platform": "darwin-arm64",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sourceRef": "candidate-v0.1.0-dev.56",
+  "newFixedHost": "NOT_RUN",
+  "coldModelDownload": "PASS",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "coldModelEvidence": "cold-model.json",
+  "primarySkillTasks": {
+    "pass": 13,
+    "evidence": "primary-tasks.json"
+  },
+  "coldDriverSha256": "e0607e56e1d9732470ffc5b47d15920eee9cf81c7ac2c703dae25ac30b2a169c",
+  "primaryDriverSha256": "451bbd00c3bf4d64ce52719ba7ac667e600695d9a23615f3a55660e4eeb0f8b1"
+}

@@ -8,7 +8,16 @@
 
 示例请求：核验锁定 CLI 的版本和安装摘要。
 
-先检查平台和锁；使用本技能 bootstrap 与 cli 入口。本地示例 `examples/desktop-first-use.json` 用于理解参数与交接；先复制到工作目录并按真实素材、工程和对象调整，不把示例 ID 或规格套入用户工程。参数入口见 [本地命令参考](command-reference.md)。
+先检查平台和本技能自己的固定锁；使用本技能 bootstrap 与 cli 入口验证安装和版本。本任务不启动桌面或编辑工程。
+
+```bash
+: "${SKILL_DIR:?Set SKILL_DIR to the actually loaded skill directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an independently authorized runtime directory}"
+python3 -I -B "$SKILL_DIR/scripts/bootstrap.py" --runtime-home "$RUNTIME_HOME"
+python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" -- --version
+```
+
+核对回执中的固定版本、平台和二进制摘要。损坏既有安装会被拒绝，不覆盖原目录；保留诊断后，在另一个已获授权的新缓存目录安装同一固定版本，再核对摘要。桌面创作属于另一个任务，按需读取 [固定桌面安装](desktop-install.md)。
 
 ## 失败
 
@@ -16,7 +25,7 @@
 
 ## 局部修订
 
-修订请求：安装修复限于已确认损坏的固定版本，不编辑用户工程。核对预期源工程摘要，以新输出目录另存；原目标内复用已有授权，超出范围或授权约束变化才重新确认。
+修订请求：安装修复限于已确认损坏的固定版本；保留损坏缓存，在独立授权的新运行时目录安装并核对固定摘要，不编辑用户工程。原目标内复用已有授权，超出范围或授权约束变化才重新确认。
 
 ## 核验
 

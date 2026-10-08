@@ -46,8 +46,12 @@ Inputs are copied and hash-checked via --input NAME=FILE and referenced as NAME.
 ## 3. 预检与执行 / Check and execute
 
 ```bash
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
 python3 -I -B "$SKILL_DIR/scripts/commands.py" check "$SKILL_DIR/examples/commands-advanced.json"
-python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-advanced.json" --output /absolute/new-command-result
+python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-advanced.json" --output /absolute/new-command-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 check 检查完整计划的命令／工具身份、字段、JSON 数值及引用，不安装、不编辑。run 首次自动安装并校验固定 CLI；输出目录必须不存在。它检查实际 tools/list、完整注册表及每条命令的当前 enabled 状态。禁用立即停止并报告 why；不移除原生守卫、不自动选中另一对象、不忽略参数错误。原生 MCP 错误和返回对象中的 error 都算失败，包括表达式保存后被禁用的情况。
@@ -81,8 +85,12 @@ A complete command acceptance binds runtime identity, real prerequisites, inputs
 先运行下面的创建示例，再从它的原生工程返工。两次输出目录均须不存在；工程扩展名依本领域为 .fcproj／.ecproj／.pcraft／.vectorcraft。
 
 ```bash
-python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-revision-create.json" --output /absolute/new-original
-python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-revision.json" --input project=/absolute/new-original/project.EXT --output /absolute/new-revision
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
+python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-revision-create.json" --output /absolute/new-original --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
+python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-revision.json" --input project=/absolute/new-original/project.EXT --output /absolute/new-revision --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 将 EXT 替换为本领域原生扩展名；路径替换为真实新目录。这个返工计划只适用于对应创建示例的对象与顺序；真实用户工程必须先检查并按实际对象重新构造引用，不能照搬数组下标。
@@ -112,7 +120,11 @@ Keep the failed directory and inspect its receipts and any native file. When a t
 需要 GUI 上下文而尚未运行桌面应用时，读取本技能自带 [桌面安装与执行指南](desktop-install.md)。使用独立入口安装固定桌面与 CLI，在同一拥有的桌面会话执行真实命令，并在结束时关闭本次启动的进程：
 
 ```bash
-python3 -I -B "$SKILL_DIR/scripts/desktop.py" run "$SKILL_DIR/examples/desktop-first-use.json" --output /absolute/new-desktop-result
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
+python3 -I -B "$SKILL_DIR/scripts/desktop.py" run "$SKILL_DIR/examples/desktop-first-use.json" --output /absolute/new-desktop-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 该入口采用相同 craft-command-plan/v1 格式；先用 commands.py describe 查阅命令及前置状态，再组织真实计划。desktop-session.json 记录桌面身份、监听进程身份和会话退出结果，逐步命令结果仍在 journal.json、success.json 或 failure.json。固定桌面安装不等于所有 GUI 指令可在空工程运行；禁用项须根据原生原因建立所需文档、对象、选择或界面状态，不能绕过检查。

@@ -1,0 +1,62 @@
+{
+  "result": "PASS",
+  "layer": "fixed72 installed Harness actual native workflow with owned Python observer delegating unchanged interpreter",
+  "rows": [
+    {
+      "script": "plan_identity.py",
+      "secretPresent": false,
+      "proxyPresent": false,
+      "injectionPresent": false,
+      "dataDirPresent": true
+    },
+    {
+      "script": "native_preflight.py",
+      "secretPresent": false,
+      "proxyPresent": false,
+      "injectionPresent": false,
+      "dataDirPresent": true
+    },
+    {
+      "script": "plan_identity.py",
+      "secretPresent": false,
+      "proxyPresent": false,
+      "injectionPresent": false,
+      "dataDirPresent": true
+    },
+    {
+      "script": "native_preflight.py",
+      "secretPresent": false,
+      "proxyPresent": false,
+      "injectionPresent": false,
+      "dataDirPresent": true
+    },
+    {
+      "script": "plan_identity.py",
+      "secretPresent": false,
+      "proxyPresent": false,
+      "injectionPresent": false,
+      "dataDirPresent": true
+    },
+    {
+      "script": "workflow.py",
+      "secretPresent": false,
+      "proxyPresent": false,
+      "injectionPresent": false,
+      "dataDirPresent": true
+    },
+    {
+      "script": "process_identity.py",
+      "secretPresent": false,
+      "proxyPresent": false,
+      "injectionPresent": false,
+      "dataDirPresent": true
+    }
+  ],
+  "deliveryState": "verifying",
+  "receipt": "linked",
+  "skillPreserved": true,
+  "inputPreserved": true,
+  "modelDirectoryReferencePreserved": true,
+  "fullFC_RL_002": "NOT_PROVEN",
+  "scope": "Auxiliary Python process environment including plan/preflight/workflow/identity; no real credentials used or recorded"
+}

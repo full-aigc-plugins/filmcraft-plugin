@@ -66,7 +66,7 @@ def child_environment(environment=None):
     return result
 
 
-def command(argv, policy, platform=None, protected_roots=(), control_port=None, graphics=False):
+def command(argv, policy, platform=None, protected_roots=(), control_port=None, graphics=False, model_maintenance=False):
     """构造实际系统隔离命令；缺少支持时拒绝，不回退无隔离执行。"""
     policy = validate(policy)
     if (sys.platform if platform is None else platform) != 'darwin' or not Path('/usr/bin/sandbox-exec').is_file():
@@ -90,6 +90,10 @@ def command(argv, policy, platform=None, protected_roots=(), control_port=None, 
              '(allow file-read-data (literal "/dev/null") (literal "/dev/random") (literal "/dev/urandom") (literal "/dev/zero"))',
              '(allow file-write* ' + ' '.join(subpath(path) for path in policy['writeRoots']) + ')',
              '(allow file-write-data (literal "/dev/null"))']
+    if type(model_maintenance) is not bool:
+        raise ValueError('invalid_execution_permissions')
+    if model_maintenance:
+        rules.append('(allow network-outbound)')
     if graphics:
         rules.extend(['(allow iokit-open)', '(allow iokit-get-properties)'])
     if control_port is not None:

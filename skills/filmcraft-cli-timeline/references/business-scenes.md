@@ -15,11 +15,15 @@ Choose capabilities using the local scenario and command references. Workflow op
 复制本技能 `examples/short-film.json` 到工作目录，按用户需求修改其文档参数、操作和输出设置；保留技能安装副本。以下演示原模板，路径占位符必须替换为真实绝对路径，输出目录必须不存在。
 
 ```bash
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
 python3 -I -B "$SKILL_DIR/scripts/workflow.py" \
   "$SKILL_DIR/examples/short-film.json" \
   --asset shot=/absolute/input/shot.mp4 \
   --asset voice=/absolute/input/voice.wav \
-  --output /absolute/new-delivery
+  --output /absolute/new-delivery --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 操作顺序：导入镜头与声音 → 按实际 sourceIn/start/duration 编排视频和音轨 → 建字幕轨与样式 → 写入字幕 → 收集素材 → 保存重开 → 预览及成片导出。

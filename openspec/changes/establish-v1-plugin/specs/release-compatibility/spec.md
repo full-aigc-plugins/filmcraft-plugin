@@ -96,6 +96,14 @@
 - **AND** 越界或畸形模型引用在安装、素材摘要读取及输出创建前拒绝；原生编辑沙箱保护该显式模型目录，临时截图与其他输出仍落在独立授权写入目录
 - **AND** 无显式模型目录时保留本次私有数据目录；真实缓存推理、模型摘要保全和缺失模型拒绝分别验收，禁止以目录存在代替推理成功。
 
+#### Scenario: FC-RL-002-RAW-LAUNCHER 原生转发入口同等隔离
+
+- **WHEN** 宿主使用独立技能的 cli.py 公开入口读取工程、执行原生命令或启动原生会话
+- **THEN** 入口 SHALL 在安装及工程读取前要求独立可信读写根，原生执行使用同一目录沙箱并保护技能、固定运行时、源工程和显式模型缓存；子进程仅接收允许的运行环境
+- **AND** 仅精确 --version、help、commands、commands --json 四种无工程发现形式可保留无编辑根兼容；追加 --project、数据路径或其他参数不享有豁免
+- **AND** 模型维护 SHALL 使用独立 --model-maintenance 标志，仅接受 exec transcript.downloadModel、唯一合法 model 字段和显式 --data-dir；数据目录须已存在且具有独立写入授权，不得位于技能、运行时或解释器目录
+- **AND** 模型维护原生进程仅可写该数据目录，使用独立限定网络出站权限；普通编辑不获得该权限，维护入口不得组合工程或编辑参数。既有损坏安装诊断、原错误及未知结果不重放语义保持兼容。
+
 ## Implementation evidence (non-normative)
 
 `docs/evidence/codex-current-release.json` binds current fixed releases to two actual Codex CLI/app-server versions, five enabled namespaced skills, installed public workflow outcomes and explicit exclusions. The corresponding bilingual Host-Verification-Architecture documents specify the repeatable check. RL-001 tasks remain unchecked until their full P0 prerequisites and scenarios pass.

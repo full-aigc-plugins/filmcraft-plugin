@@ -1,0 +1,10 @@
+{
+  "result": "FAIL",
+  "expected": "missing independent root policy refuses before native write",
+  "actualExit": 0,
+  "outsidePolicyProjectCreated": true,
+  "scope": "Actual fixed72 public raw cli.py with owned synthetic target, no permission flags or grant supplied",
+  "pluginRef": "v0.1.0-dev.72",
+  "sourceRef": "v0.1.0-dev.54",
+  "targetSha256": "75149579254cc4cca945affc7159848d8ccb9f7c9d584cac1300738f219b7551"
+}

@@ -13,11 +13,15 @@ The example produces a two-second 320×180 film at 12 fps. Input footage and voi
 以下 `SKILL_DIR` 沿用本技能 `SKILL.md` 的实际加载目录，脚本和示例均来自同一技能。
 
 ```bash
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
 python3 "$SKILL_DIR/scripts/workflow.py" \
   "$SKILL_DIR/examples/short-film.json" \
   --asset shot=/absolute/path/shot.mp4 \
   --asset voice=/absolute/path/voice.wav \
-  --output /absolute/path/film-v1
+  --output /absolute/path/film-v1 --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 替换技能根为当前已加载技能的真实绝对位置。`--asset name=path` 计算输入摘要；也可在 JSON 的 `assets` 中提供 `path` 和 `sha256`。助手复制素材到隔离工作目录，复制前后均检查摘要。它使用已有声音，不生成声音或上传素材。
@@ -99,12 +103,16 @@ This candidate needs the maintained CLI with explicit rate, complete collection 
 The candidate source workflow accepts these three commands. Immutable plugin dev.10 does not yet contain this mapping; fixed-release installation and Art integration remain pending.
 
 ```bash
+: "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
+: "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
+: "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
+: "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
 python3 -I -B "$SKILL_DIR/scripts/workflow.py" \
   "$SKILL_DIR/examples/motion-lut-film.json" \
   --asset shot=/absolute/path/shot.mp4 \
   --asset voice=/absolute/path/voice.wav \
   --lut-asset grade=/absolute/path/grade.cube \
-  --output /absolute/path/film-motion-v1
+  --output /absolute/path/film-motion-v1 --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 `effects.setParam` 必须显式提供 `clip`、`effect`、`param`、`value`；可选 `mask` 为非负整数，`time` 为十进制 ticks 字符串。目标片段可用原生 ID 或 `$ref`；数值必须有限。具体参数类型、效果是否存在及关键帧时间语义由固定原生命令检查。示例对应从序列零点开始的片段；其他起点场景需要单独核验。

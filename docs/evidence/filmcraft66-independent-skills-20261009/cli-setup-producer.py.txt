@@ -1,0 +1,19 @@
+from pathlib import Path
+import json,os,sys,shutil,subprocess,hashlib
+W=Path(__file__).resolve().parent;D={n:Path(p) for n,p in json.loads((W/'host66/installed-directories.private.json').read_text()).items()};root=W/'fixed66-cli-setup2';root.mkdir();rows=[]
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def run(args,ok=True):
+ r=subprocess.run([str(x) for x in args],capture_output=True,text=True,timeout=180,env=dict(os.environ,PATH='/usr/bin:/bin'));assert (r.returncode==0)==ok,r.stdout+r.stderr;return r
+for name in ['filmcraft-cli-setup','filmcraft-cli']:
+ home=root/name;home.mkdir();skill=home/'single-skill';shutil.copytree(D[name],skill,ignore=shutil.ignore_patterns('__pycache__'));runtime=home/'fresh-runtime';assert not runtime.exists();calls=[]
+ setup=[sys.executable,'-I','-B',skill/'scripts/bootstrap.py','--runtime-home',runtime];first=json.loads(run(setup).stdout);assert not first['reused'];assert json.loads(run(setup).stdout)['reused'];cli=Path(first['executable']);assert sha(cli)=='b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f'
+ launcher=[sys.executable,'-I','-B',skill/'scripts/cli.py','--runtime-home',runtime,'--'];assert '0.2.0-craft.5' in run(launcher+['--version']).stdout
+ catalog=json.loads(run(launcher+['commands','--json']).stdout);assert len(catalog)==666
+ marker=home/'untouched.fcproj';marker.write_bytes(b'existing user project is not an installation repair target');saved=sha(marker)
+ if name=='filmcraft-cli-setup':
+  receipt=cli.parent/'installation.json';original=receipt.read_bytes();bad=json.loads(original);bad['platform']='wrong-platform';receipt.write_text(json.dumps(bad));snapshot={p.name:sha(p) for p in cli.parent.iterdir() if p.is_file()};r=run(setup,False);assert 'installation_receipt_mismatch' in json.loads(r.stdout)['error'];assert snapshot=={p.name:sha(p) for p in cli.parent.iterdir() if p.is_file()};receipt.write_bytes(original);assert json.loads(run(setup).stdout)['reused'];negative={'error':json.loads(r.stdout),'installationPreservedOnRefusal':True}
+ else:
+  plan=json.loads((skill/'examples/commands-advanced.json').read_text());planfile=home/'plan.json';planfile.write_text(json.dumps(plan));out=home/'advanced';args=[sys.executable,'-I','-B',skill/'scripts/commands.py','run',planfile,'--output',out,'--runtime-home',runtime];r=run(args);project=out/'project.fcproj';assert project.is_file();native=json.loads(run(launcher+['inspect','--project',project,'--data-dir',home/'data']).stdout);assert native['sequence']['settings']['width']==96
+  before=sha(project);badplan={'schema':'craft-command-plan/v1','operations':[{'command':'craft.nonexistent.command','params':{}}]};badpath=home/'bad.json';badpath.write_text(json.dumps(badplan));badout=home/'bad-output';r=run([sys.executable,'-I','-B',skill/'scripts/commands.py','run',badpath,'--output',badout,'--runtime-home',runtime],False);assert not (badout/'project.fcproj').exists();assert sha(project)==before;negative={'stdout':r.stdout,'stderr':r.stderr,'originalProjectPreserved':True};calls.append({'exampleSha256':sha(skill/'examples/commands-advanced.json'),'nativeProjectSha256':before,'sequence':native['sequence']})
+ assert sha(marker)==saved;assert {str(p.relative_to(skill)):sha(p) for p in skill.rglob('*') if p.is_file()}=={str(p.relative_to(D[name])):sha(p) for p in D[name].rglob('*') if p.is_file()};rows.append({'skill':name,'result':'PASS','runtimeInitiallyAbsent':True,'binarySha256':sha(cli),'catalogCommands':666,'coldInstallAndReuse':True,'negative':negative,'observations':calls,'nonTargetProjectPreserved':True,'singleSkillBytesPreserved':True})
+(root/'report.private.json').write_text(json.dumps({'result':'PASS','fixedRef':'v0.1.0-dev.66','sourceRef':'v0.1.0-dev.49','rows':rows},indent=2)+'\n');print('PASS: isolated CLI advanced example and setup corruption/refusal/reuse')

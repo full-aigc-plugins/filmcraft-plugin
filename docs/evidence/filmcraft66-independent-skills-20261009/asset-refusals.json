@@ -1,0 +1,347 @@
+{
+  "schema": "filmcraft-source-actual-asset-issues/v1",
+  "result": "PASS",
+  "sourceRevision": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "pluginCandidate": "0.1.0-dev.66",
+  "scope": "Actual immutable installed66/source49 each13 skill public workflow CLI and new Harness preflight with owned missing/digest fixtures; no native installation/editing or creative acceptance; immutable fixed installation independently verified.",
+  "rows": [
+    {
+      "skill": "filmcraft-use",
+      "result": "PASS",
+      "sourceTreeSha256": "5f157a7ae34e3129f952690617ca379256ff94c9b054df232c2e9862ad92be82",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli",
+      "result": "PASS",
+      "sourceTreeSha256": "5a40b7bc030abc3a07ebd1add39e9941ee30cde3e5867c090bf1f020da08924b",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "result": "PASS",
+      "sourceTreeSha256": "1c059ae805bd98538e92101867947b054727b5e7ef8e8464ae87e24a7c196294",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "result": "PASS",
+      "sourceTreeSha256": "a5081cc3bf92fa01d47133ce33b90fb662c0e976ff2bd60d7c2c0edc8e8a125b",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "result": "PASS",
+      "sourceTreeSha256": "f5c8e773c8d3cd6b2c134c57258365b56825a98c2c20153c86013fb0848abb2a",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "result": "PASS",
+      "sourceTreeSha256": "66ea7c697ec75357bf987553e67f12a98e386dd933276a4a452e78115719a577",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "result": "PASS",
+      "sourceTreeSha256": "cf39536f55219ad31ef9a6ef95f70ef6b54dce180fe87fa1a059af57d2eb59b2",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "result": "PASS",
+      "sourceTreeSha256": "6bc76161723e45fdbbaa354fab7d5a7e28d6b76fca152b6b52a1f8a58b37bdb7",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "result": "PASS",
+      "sourceTreeSha256": "66e496caf43a971629e6ad1ea502233a2939e79460b16ac5a97682b8ae4b0e59",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "result": "PASS",
+      "sourceTreeSha256": "7a10e4f67950e3d5b393a7eba38ced1cb7f45b3b035cb77ab433df228244299b",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "result": "PASS",
+      "sourceTreeSha256": "06bb1bc5fb2c100e73fabd74a3426a1778692ffc4407a24774c7af5c701078e9",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "result": "PASS",
+      "sourceTreeSha256": "bf5a3ac1ad8f9e2c1ca90bd6860b80bfa09d7aa2821eadc7152ff8052bccf167",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "result": "PASS",
+      "sourceTreeSha256": "1ffb2dd7e97f3123e2e09d7e4f499dbab1b8214307702eb7782f21d8623f90d7",
+      "issues": [
+        {
+          "alias": "missingOne",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "missingTwo",
+          "origin": "plan",
+          "reason": "missing_file"
+        },
+        {
+          "alias": "changed",
+          "origin": "plan",
+          "reason": "digest_mismatch"
+        }
+      ],
+      "harnessCode": "asset_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "skillPreserved": true
+    }
+  ]
+}

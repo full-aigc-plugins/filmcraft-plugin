@@ -1,0 +1,6 @@
+test_public_delivery_and_revision (fixed66_router.NativeFirstUse.test_public_delivery_and_revision) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 5.912s
+
+OK

@@ -1,0 +1,47 @@
+{
+  "domain": "filmcraft",
+  "result": "PASS",
+  "pathCase": {
+    "unicodeAndSpaces": true,
+    "skillName": "single-skill",
+    "parentName": "首次 使用 中文路径",
+    "runtimeInitiallyAbsent": true,
+    "offlineOverridesExcluded": true
+  },
+  "guardRecords": [
+    {
+      "identity": {
+        "inputHashes": {
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "planHash": "2974c687266baf6eb259b2ed5a3e3c65403e43b7840084e9726124ce8fc4eca9",
+        "projectRevision": null,
+        "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "ownerPid": 15618,
+      "replayAllowed": false,
+      "schema": "filmcraft-output-execution/v1",
+      "state": "finished",
+      "targetHash": "593a0dbf28b0b1d8e162ba63e895ae9b9de1f12828db1a881e2ceccec2621612"
+    },
+    {
+      "identity": {
+        "inputHashes": {},
+        "planHash": "7a2e0a8a1ebcba31681cca3035b4301ccefb100cb9b260d90296b4c3be3b0548",
+        "projectRevision": "1ba1a650337856f9b9ddee19077ae7f9826b10a66c0d4bcfa767f33f4e483104",
+        "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "ownerPid": 17908,
+      "replayAllowed": false,
+      "schema": "filmcraft-output-execution/v1",
+      "state": "finished",
+      "targetHash": "9b801057e836fef0174984a907e5169b91e15a14992380f6e35bba1545712709"
+    }
+  ],
+  "workflowSha256": "c882cf15bed07410fbe510916ef2f9b958bc344d83ff345d0aa0ab148b4f3445",
+  "guardSha256": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+  "entrySha256": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+  "projectSha256": "1ba1a650337856f9b9ddee19077ae7f9826b10a66c0d4bcfa767f33f4e483104",
+  "revisionSha256": "ac2d76e90d7cc85cb6ced4c7637fed39f47b1a8f6bd5fc44b419d6610dc86465",
+  "scope": "fixed installed single-skill cold native workflow delivery/revision; no full DAG acceptance"
+}

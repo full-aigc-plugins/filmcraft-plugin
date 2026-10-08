@@ -1,0 +1,15 @@
+from pathlib import Path
+import os,json,subprocess,hashlib,unittest,sys
+W=Path(__file__).resolve().parent;S=W.parent.parent/'full-aigc-skills-repositories/filmcraft-skills';P=W.parent.parent/'full-aigc-plugins-repositories/filmcraft-plugin';D={n:Path(p) for n,p in json.loads((W/'host66/installed-directories.private.json').read_text()).items()};core=D['filmcraft-use'].parent.parent
+sys.path.insert(0,str(P/'scripts'))
+from verify_fixed_install import release_entry,owner_helper,verify_code_files
+E=release_entry(P,'v0.1.0-dev.66');h,_=owner_helper(P.parent/'artcraft-plugin')
+for p in D.values():h.verify_installed_skill(p,E)
+verify_code_files(core,E['codeFilesSha256'])
+os.environ.update(CRAFT_TASK_FIRST_USE='1',CRAFT_INSTALLED_TASK_SKILLS_ROOT=str(D['filmcraft-use'].parent),CRAFT_TASK_EVIDENCE_FILE=str(W/'fixed66-task-skills-observations.private.json'))
+raw=subprocess.check_output(['git','show','v0.1.0-dev.49:tests/test_task_skill_first_use.py'],cwd=S);ns={'__file__':str(core/'tests/test_task_skill_first_use.py'),'__name__':'fixed66_task_firstuse'};exec(compile(raw,ns['__file__'],'exec'),ns)
+suite=unittest.defaultTestLoader.loadTestsFromTestCase(ns['TaskSkillFirstUseTests']);result=unittest.TextTestRunner(verbosity=2).run(suite)
+for p in D.values():h.verify_installed_skill(p,E)
+verify_code_files(core,E['codeFilesSha256'])
+report={'result':'PASS' if result.wasSuccessful() and not result.skipped else 'FAIL','tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skips':len(result.skipped),'fixedRef':E['ref'],'fixedSha':E['sha'],'sourceRef':E['skillSourceRef'],'testSourceSha256':hashlib.sha256(raw).hexdigest(),'allInstalledSkillsAndCodePreserved':True}
+(W/'fixed66-task-skills.private.json').write_text(json.dumps(report,indent=2)+'\n');sys.exit(0 if report['result']=='PASS' else 1)

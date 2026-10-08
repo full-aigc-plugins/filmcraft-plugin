@@ -1,0 +1,15 @@
+test_audio_gain_survives_reopen_and_changes_exported_samples (fixed66_task_firstuse.TaskSkillFirstUseTests.test_audio_gain_survives_reopen_and_changes_exported_samples) ... ok
+test_color_lut_survives_source_removal_and_empty_library (fixed66_task_firstuse.TaskSkillFirstUseTests.test_color_lut_survives_source_removal_and_empty_library) ... ok
+test_export_video_preview_and_interchange_keep_native_project (fixed66_task_firstuse.TaskSkillFirstUseTests.test_export_video_preview_and_interchange_keep_native_project) ... ok
+test_media_probes_imports_and_preserves_existing_timeline (fixed66_task_firstuse.TaskSkillFirstUseTests.test_media_probes_imports_and_preserves_existing_timeline) ... ok
+test_motion_keyframes_survive_reopen_and_change_rendered_frames (fixed66_task_firstuse.TaskSkillFirstUseTests.test_motion_keyframes_survive_reopen_and_change_rendered_frames) ... ok
+test_multicam_switch_reopens_renders_other_camera_and_preserves_existing_tracks (fixed66_task_firstuse.TaskSkillFirstUseTests.test_multicam_switch_reopens_renders_other_camera_and_preserves_existing_tracks) ... ok
+test_project_creates_and_reopens_sequence_and_bin (fixed66_task_firstuse.TaskSkillFirstUseTests.test_project_creates_and_reopens_sequence_and_bin) ... ok
+test_subtitles_updates_text_without_changing_timing_and_exports_srt (fixed66_task_firstuse.TaskSkillFirstUseTests.test_subtitles_updates_text_without_changing_timing_and_exports_srt) ... ok
+test_timeline_razor_preserves_audio_and_duration (fixed66_task_firstuse.TaskSkillFirstUseTests.test_timeline_razor_preserves_audio_and_duration) ... ok
+test_transcript_import_reopens_and_generates_timed_captions (fixed66_task_firstuse.TaskSkillFirstUseTests.test_transcript_import_reopens_and_generates_timed_captions) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 66.824s
+
+OK

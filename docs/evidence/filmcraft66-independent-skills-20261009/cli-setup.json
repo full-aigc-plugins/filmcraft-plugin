@@ -1,0 +1,286 @@
+{
+  "result": "PASS",
+  "fixedRef": "v0.1.0-dev.66",
+  "sourceRef": "v0.1.0-dev.49",
+  "rows": [
+    {
+      "skill": "filmcraft-cli-setup",
+      "result": "PASS",
+      "runtimeInitiallyAbsent": true,
+      "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "catalogCommands": 666,
+      "coldInstallAndReuse": true,
+      "negative": {
+        "error": {
+          "error": "installation_receipt_mismatch; preserve directory for inspection",
+          "installed": false,
+          "dependencySetup": {
+            "skill": "filmcraft-cli-setup",
+            "bootstrapScript": "[WORK]/fixed66-cli-setup2/filmcraft-cli-setup/single-skill/scripts/bootstrap.py",
+            "runtimeHome": "[WORK]/fixed66-cli-setup2/filmcraft-cli-setup/fresh-runtime",
+            "automaticRetry": false
+          }
+        },
+        "installationPreservedOnRefusal": true
+      },
+      "observations": [],
+      "nonTargetProjectPreserved": true,
+      "singleSkillBytesPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli",
+      "result": "PASS",
+      "runtimeInitiallyAbsent": true,
+      "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "catalogCommands": 666,
+      "coldInstallAndReuse": true,
+      "negative": {
+        "stdout": "{\"result\": \"FAIL\", \"error\": \"unknown_command: craft.nonexistent.command\"}\n",
+        "stderr": "",
+        "originalProjectPreserved": true
+      },
+      "observations": [
+        {
+          "exampleSha256": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+          "nativeProjectSha256": "6a4d2347c32d9b989dc4a42698934e88b64e79ff53d77da54b1c961d51fe3b13",
+          "sequence": {
+            "audio": [
+              {
+                "enabled": true,
+                "id": 2,
+                "items": [],
+                "locked": false,
+                "muted": false,
+                "name": "Audio 1",
+                "solo": false,
+                "syncLock": true,
+                "transitions": []
+              }
+            ],
+            "duration": 1524096000000,
+            "durationFrames": 72,
+            "id": 3,
+            "in": null,
+            "markers": [],
+            "name": "Coverage",
+            "out": null,
+            "playhead": null,
+            "selection": [],
+            "settings": {
+              "audio_master": "Stereo",
+              "color": {
+                "auto_tone_map": true,
+                "wide_gamut": false,
+                "working": "Rec709"
+              },
+              "drop_frame": false,
+              "frame_rate": {
+                "den": 1,
+                "num": 12
+              },
+              "height": 64,
+              "max_bit_depth": false,
+              "max_render_quality": false,
+              "par": [
+                1,
+                1
+              ],
+              "preset": "96x64 12",
+              "preview_codec": "ProRes 422",
+              "sample_rate": 48000,
+              "width": 96,
+              "working_space": "Rec. 709"
+            },
+            "split": {
+              "audioIn": null,
+              "audioOut": null,
+              "videoIn": null,
+              "videoOut": null
+            },
+            "video": [
+              {
+                "enabled": true,
+                "id": 1,
+                "items": [
+                  {
+                    "clip": 5,
+                    "duration": 1016064000000,
+                    "durationFrames": 48,
+                    "effects": [
+                      {
+                        "effect": "motion",
+                        "enabled": true,
+                        "masks": 0,
+                        "params": {
+                          "anchor": {
+                            "keyframes": 0,
+                            "value": "Vec2(Vec2 { x: 48.0, y: 32.0 })"
+                          },
+                          "anti_flicker": {
+                            "keyframes": 0,
+                            "value": "Float(0.0)"
+                          },
+                          "position": {
+                            "keyframes": 0,
+                            "value": "Vec2(Vec2 { x: 48.0, y: 32.0 })"
+                          },
+                          "rotation": {
+                            "keyframes": 0,
+                            "value": "Float(0.0)"
+                          },
+                          "scale": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          },
+                          "scale_width": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          },
+                          "uniform_scale": {
+                            "keyframes": 0,
+                            "value": "Bool(true)"
+                          }
+                        }
+                      },
+                      {
+                        "effect": "opacity",
+                        "enabled": true,
+                        "masks": 0,
+                        "params": {
+                          "blend": {
+                            "keyframes": 0,
+                            "value": "Choice(0)"
+                          },
+                          "opacity": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          }
+                        }
+                      },
+                      {
+                        "effect": "time_remap",
+                        "enabled": true,
+                        "masks": 0,
+                        "params": {
+                          "speed": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          }
+                        }
+                      }
+                    ],
+                    "enabled": true,
+                    "item": 4,
+                    "label": "Lavender",
+                    "link": null,
+                    "name": "Color Matte",
+                    "sourceIn": 0,
+                    "speed": 0.5,
+                    "start": 0,
+                    "startFrame": 0
+                  },
+                  {
+                    "clip": 7,
+                    "duration": 508032000000,
+                    "durationFrames": 24,
+                    "effects": [
+                      {
+                        "effect": "motion",
+                        "enabled": true,
+                        "masks": 0,
+                        "params": {
+                          "anchor": {
+                            "keyframes": 0,
+                            "value": "Vec2(Vec2 { x: 48.0, y: 32.0 })"
+                          },
+                          "anti_flicker": {
+                            "keyframes": 0,
+                            "value": "Float(0.0)"
+                          },
+                          "position": {
+                            "keyframes": 0,
+                            "value": "Vec2(Vec2 { x: 48.0, y: 32.0 })"
+                          },
+                          "rotation": {
+                            "keyframes": 0,
+                            "value": "Float(0.0)"
+                          },
+                          "scale": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          },
+                          "scale_width": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          },
+                          "uniform_scale": {
+                            "keyframes": 0,
+                            "value": "Bool(true)"
+                          }
+                        }
+                      },
+                      {
+                        "effect": "opacity",
+                        "enabled": true,
+                        "masks": 0,
+                        "params": {
+                          "blend": {
+                            "keyframes": 0,
+                            "value": "Choice(0)"
+                          },
+                          "opacity": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          }
+                        }
+                      },
+                      {
+                        "effect": "time_remap",
+                        "enabled": true,
+                        "masks": 0,
+                        "params": {
+                          "speed": {
+                            "keyframes": 0,
+                            "value": "Float(100.0)"
+                          }
+                        }
+                      }
+                    ],
+                    "enabled": true,
+                    "item": 6,
+                    "label": "Lavender",
+                    "link": null,
+                    "name": "Color Matte",
+                    "sourceIn": 0,
+                    "speed": 1.0,
+                    "start": 1016064000000,
+                    "startFrame": 48
+                  }
+                ],
+                "locked": false,
+                "muted": false,
+                "name": "Video 1",
+                "solo": false,
+                "syncLock": true,
+                "transitions": [
+                  {
+                    "duration": 127008000000,
+                    "effect": "cross_dissolve",
+                    "from": 5,
+                    "id": 8,
+                    "params": {},
+                    "reverse": false,
+                    "start": 952560000000,
+                    "to": 7
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "nonTargetProjectPreserved": true,
+      "singleSkillBytesPreserved": true
+    }
+  ]
+}

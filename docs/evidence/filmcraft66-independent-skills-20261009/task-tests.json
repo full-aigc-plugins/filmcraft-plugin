@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "fixedRef": "v0.1.0-dev.66",
+  "fixedSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "testSourceSha256": "0f8d03166812fabaf5f0b1bb53056025d7d07f6ef7c6c2029e47dea0a1390413",
+  "allInstalledSkillsAndCodePreserved": true
+}

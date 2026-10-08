@@ -1,0 +1,131 @@
+{
+  "schema": "filmcraft-independent-skill-qualification/v1",
+  "result": "PASS",
+  "scope": "Actual13 isolated professional skill tasks and13 public/Harness preflight refusal checks; not full FC-SK-003 acceptance",
+  "fixedRef": "v0.1.0-dev.66",
+  "fixedSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "runtime": "0.2.0-craft.5",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "platform": "macOS arm64",
+  "mode": "headless",
+  "skills": [
+    "filmcraft-cli",
+    "filmcraft-cli-audio",
+    "filmcraft-cli-color",
+    "filmcraft-cli-export",
+    "filmcraft-cli-media",
+    "filmcraft-cli-motion",
+    "filmcraft-cli-multicam",
+    "filmcraft-cli-project",
+    "filmcraft-cli-setup",
+    "filmcraft-cli-subtitles",
+    "filmcraft-cli-timeline",
+    "filmcraft-cli-transcript",
+    "filmcraft-use"
+  ],
+  "professionalTests": {
+    "tests": 10,
+    "PASS": 10,
+    "skips": 0
+  },
+  "routerNativeWorkflow": {
+    "tests": 1,
+    "PASS": 1,
+    "skips": 0,
+    "unicodeSpacesPath": true
+  },
+  "cliAndSetup": {
+    "skills": 2,
+    "PASS": 2
+  },
+  "assetRefusals": {
+    "skills": 13,
+    "PASS": 13,
+    "checksPerSkill": [
+      "Harness preflight",
+      "public workflow CLI"
+    ],
+    "noRuntimeOrOutputCreated": true
+  },
+  "allInstalledSkillAndCodeBytesPreserved": true,
+  "fixtureError": "Initial setup driver assumed commands--json object; actual native contract is array. Driver corrected and fresh root used. No production change; not behavior red.",
+  "artifactHashes": [
+    {
+      "path": "task-tests.json",
+      "originalSha256": "6ce1a1457377eec094171ff18f65594c503dd0d99e08140e20d07a3c47aede64",
+      "projectionSha256": "6ce1a1457377eec094171ff18f65594c503dd0d99e08140e20d07a3c47aede64"
+    },
+    {
+      "path": "task-observations.json",
+      "originalSha256": "fb60a2e1193082db78d5ab0e0d6ad50cc119979d15fc81cda4004b9feac00384",
+      "projectionSha256": "fb60a2e1193082db78d5ab0e0d6ad50cc119979d15fc81cda4004b9feac00384"
+    },
+    {
+      "path": "task-tests.txt",
+      "originalSha256": "106f9e2bf559c08d5d879b5405cfd281c60b414f93a307ce8677f762158ea729",
+      "projectionSha256": "106f9e2bf559c08d5d879b5405cfd281c60b414f93a307ce8677f762158ea729"
+    },
+    {
+      "path": "router-native-test.json",
+      "originalSha256": "1ed859340e61741403c6c47acf2b126b9fcb2ad9b4e5de80d9f14c0d4f20c23b",
+      "projectionSha256": "1ed859340e61741403c6c47acf2b126b9fcb2ad9b4e5de80d9f14c0d4f20c23b"
+    },
+    {
+      "path": "router-native-observations.json",
+      "originalSha256": "a568c87f778a7af8a1c2772413c0240f781e34c479790088395405b8f4e65e19",
+      "projectionSha256": "a98e9df30f00b49df97ee0eaf065671d91cf7ab11f6e15a86365b0774da482b9"
+    },
+    {
+      "path": "router-native.txt",
+      "originalSha256": "032beccd1c61c917029311fdab0a9860424db2cf1f2456fd83a980b895f86edb",
+      "projectionSha256": "032beccd1c61c917029311fdab0a9860424db2cf1f2456fd83a980b895f86edb"
+    },
+    {
+      "path": "cli-setup.json",
+      "originalSha256": "8c3138a87eb1858c7a2cd847aa834f41d174e53563a5a2789318db760ec8363b",
+      "projectionSha256": "e2c931fd574b7ae9780003b266bb1c99f3b46b5a9d2ab8feecd6d2a823ae09f2"
+    },
+    {
+      "path": "initial-driver-catalog-shape.txt",
+      "originalSha256": "298d44020bedeec43508702c0ea5c01943e4495d6cb5d8ca9e10f6830bf52de1",
+      "projectionSha256": "cba63088f6ca3cdccfec5cd93f0f9bf540a5cb17a7eb45c0f31731eef50583a2"
+    },
+    {
+      "path": "asset-refusals.json",
+      "originalSha256": "b61c6564f9057d50ddbb0a1e30b6ea42575159faba491cf743f56f980dcf0fbe",
+      "projectionSha256": "b61c6564f9057d50ddbb0a1e30b6ea42575159faba491cf743f56f980dcf0fbe"
+    },
+    {
+      "path": "task-producer.py.txt",
+      "originalSha256": "9364ae59ee0d37b65e873cacb4a1337b8ed02f460a76b3fb6977846dedcf11c6",
+      "projectionSha256": "9364ae59ee0d37b65e873cacb4a1337b8ed02f460a76b3fb6977846dedcf11c6"
+    },
+    {
+      "path": "router-producer.py.txt",
+      "originalSha256": "29d0539203c7b8e4c478d5def8c872d6ebbe44fd9a309629c926964d44013cba",
+      "projectionSha256": "29d0539203c7b8e4c478d5def8c872d6ebbe44fd9a309629c926964d44013cba"
+    },
+    {
+      "path": "cli-setup-producer.py.txt",
+      "originalSha256": "6af199af682c0e2045c811064ef3d434405de0414207132c5db9ff438528071b",
+      "projectionSha256": "6af199af682c0e2045c811064ef3d434405de0414207132c5db9ff438528071b"
+    },
+    {
+      "path": "asset-producer.mjs.txt",
+      "originalSha256": "033074351071914abf4204e89047f05af8b1463896e4763d86c8a860361608ea",
+      "projectionSha256": "9ea360b0bfc46ed91c4b931d6f91be9a2f27af5edc9fad05ce52f2b6baf91b90"
+    }
+  ],
+  "notAccepted": [
+    "host model intent routing accuracy",
+    "Art four-domain adapter compatibility",
+    "all666commands/GUI",
+    "otherhosts/platforms",
+    "creative/user acceptance",
+    "complete V1"
+  ],
+  "task9.9": "OPEN pending actual host intent routing acceptance",
+  "remainingTasks": 8
+}

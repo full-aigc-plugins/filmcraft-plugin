@@ -1,0 +1,150 @@
+✖ retained candidate subject is read-only and remains bound to the exact source (74.345042ms)
+✖ candidate caller cannot supply availability or a mismatched source identity (73.296875ms)
+✖ retained source drift refuses the subject before installation (72.640167ms)
+✖ candidate selection never replaces the required execution grant (73.979167ms)
+✖ an execution grant cannot bypass runtime selection for a retained candidate (73.970125ms)
+✖ a selected different runtime fences an otherwise authorized retained candidate (74.846875ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 525.697458
+
+✖ failing tests:
+
+test at test/harness/workflow_candidate.test.ts:25:1
+✖ retained candidate subject is read-only and remains bound to the exact source (74.345042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/workflow_candidate.test.ts:26:36)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/workflow_candidate.test.ts:29:1
+✖ candidate caller cannot supply availability or a mismatched source identity (73.296875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'workflow_admission_failed'
+  - 'runtime_candidate_invalid'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/workflow_candidate.test.ts:32:58)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'workflow_admission_failed',
+    expected: 'runtime_candidate_invalid',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/workflow_candidate.test.ts:36:1
+✖ retained source drift refuses the subject before installation (72.640167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'workflow_admission_failed'
+  - 'runtime_candidate_changed'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/workflow_candidate.test.ts:37:80)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'workflow_admission_failed',
+    expected: 'runtime_candidate_changed',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/workflow_candidate.test.ts:39:1
+✖ candidate selection never replaces the required execution grant (73.979167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'workflow_admission_failed'
+  - 'authorization_required'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/workflow_candidate.test.ts:40:26)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'workflow_admission_failed',
+    expected: 'authorization_required',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/workflow_candidate.test.ts:42:1
+✖ an execution grant cannot bypass runtime selection for a retained candidate (73.970125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'workflow_admission_failed'
+  - 'runtime_selection_required'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/workflow_candidate.test.ts:43:40)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'workflow_admission_failed',
+    expected: 'runtime_selection_required',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/workflow_candidate.test.ts:45:1
+✖ a selected different runtime fences an otherwise authorized retained candidate (74.846875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'workflow_admission_failed'
+  - 'runtime_selection_mismatch'
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/workflow_candidate.test.ts:47:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'workflow_admission_failed',
+    expected: 'runtime_selection_mismatch',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

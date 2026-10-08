@@ -183,8 +183,9 @@
         "4.22"
       ],
       "owner": "Domain owner",
-      "status": "in-progress",
-      "evidence": "docs/evidence/film-workflow-tests.json"
+      "status": "verified",
+      "evidence": "docs/evidence/fc-dm-004/index.json",
+      "implementationScope": "Tasks4.10,4.11,4.12: all4 scenarios verified using actual fixed66/source49 install on macOS arm64/Codex/headless; Art/fullV1 separate"
     },
     {
       "requirement": "FC-DM-005",
@@ -199,8 +200,9 @@
         "4.41"
       ],
       "owner": "Domain owner",
-      "status": "in-progress",
-      "evidence": "docs/evidence/film-workflow-tests.json"
+      "status": "verified",
+      "evidence": "docs/evidence/fc-dm-005/index.json",
+      "implementationScope": "Tasks4.13,4.14,4.15: all3 scenarios verified using actual fixed66/source49 install on macOS arm64/Codex/headless; Art/fullV1 separate"
     },
     {
       "requirement": "FC-DM-006",

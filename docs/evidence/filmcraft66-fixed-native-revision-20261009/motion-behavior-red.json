@@ -1,0 +1,21 @@
+{
+  "result": "EXPECTED_BEHAVIOR_FAILURE",
+  "sourceRef": "v0.1.0-dev.6",
+  "sourceSha": "85866c064c7d91abd8da63b0570d78bee3202bf5",
+  "workflowSha256": "3424c7cc9a5cc8e5e29a30f27ffaf7e9fcf65c47ee9d3f0f24cf7edd4b0e8aa6",
+  "actual": "unsupported_command",
+  "expected": "Explicit supported native motion animation must be accepted by declarative workflow",
+  "plan": {
+    "operations": [
+      {
+        "command": "effects.toggleAnimation",
+        "params": {
+          "clip": 11,
+          "effect": "motion",
+          "param": "position"
+        }
+      }
+    ]
+  },
+  "scope": "Unmodified published historical source6 validation; no missing helper, runtime or fixture errors counted as red"
+}

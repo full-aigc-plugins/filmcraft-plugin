@@ -1,0 +1,6 @@
+test_single_skill_downloads_recognizes_reopens_and_exports_captions (test_native_asr_first_use.NativeAsrFirstUseTests.test_single_skill_downloads_recognizes_reopens_and_exports_captions) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 45.756s
+
+OK

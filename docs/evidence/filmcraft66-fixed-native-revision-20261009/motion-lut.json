@@ -1,0 +1,48 @@
+{
+  "schema": "filmcraft-motion-lut-first-use/v1",
+  "result": "PASS",
+  "scope": "candidate single copied motion skill; empty runtime; public download; synthetic existing media; native LUT/keyframes and moved revision; not immutable plugin or Art acceptance",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "independentlyDecodedFrames": 24,
+  "lutSourceRemoved": true,
+  "lutPixel": {
+    "red": 0,
+    "green": 254,
+    "blue": 0
+  },
+  "motionKeyframes": 2,
+  "sourcePreserved": true,
+  "captionsPreserved": true,
+  "audioClipsPreserved": true,
+  "decodedAudioPreserved": true,
+  "decodedLutPixel": [
+    0,
+    253,
+    0
+  ],
+  "nonTargetLumetriPreserved": true,
+  "invalidRevisionRejected": true,
+  "corruptedPackagedLutRejected": true,
+  "publicLutAssetArgumentVerified": true,
+  "skillFilesPreserved": true,
+  "initialProjectSha256": "12f9df9bbd1146bed9878ad3b31d1cca8341b8e132b21c695aa79f152125049b",
+  "revisedFiles": {
+    "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+    "plan.json": "bed33d3806947264ccb81471836cc649f6383b7366c84b9f751c6ff45d123431",
+    "decode.txt": "3e64d61c873330377eb101ab19f733d5460cfa3eed60df39c8e569c8c8d8445a",
+    "export-probe.json": "57a7b6f59636d29722dd25d30e1094fc85dabe7a3bdb351825988c01293a88d8",
+    "capabilities.json": "2c437cd87d7316c7c0889d34c5a61b1e709e58d882d6e0cf5e9728925694094f",
+    "captions.json": "eaa0997488a6925a5367b99fd32aca0ca23be5f80bafc146ddc9f6204131d513",
+    "exchange-loss.json": "460a668877754561a1fe639e8e20ea219b0cb379099e329d2626d438b291ade3",
+    "film.mp4": "1a76bbc516cf3f8ac3731094a52ab882fa5d1bb4a26cae654a17774b8ebb1a60",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "60c2dbf5f82980a98946df3aca5d92ea88f0d138ee213bf44a892e2567a7a068",
+    "voice.wav": "7637819c1f3a0ffdd1795f462d633749f7e944521d6b0b20bfc78ae64e441ec4",
+    "shot.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+    "frame-0000.png": "444b0d81c0cf2db28ffde559506640dd952d3095696fec3f40fb287465fb9586",
+    "frame-0001.png": "50400d9cf70ed12fb74526dc7bb99bdab28d3e5d0581727e55367f6f652fff76",
+    "project.fcproj": "ba6c421acf388c41eef39a2c428d66e1aab099db9d6fd62c2516f1f533ba8c9c",
+    "operations.json": "1ed05aa6df273ad4199a70f4b826a6cec0343590a92db68ca2feb2298a6b5ab1",
+    "luts/grade.cube": "8bf29291918a487e815b1522ee5efeac791f19c7b9ce422a8b18125b04b670a7"
+  }
+}

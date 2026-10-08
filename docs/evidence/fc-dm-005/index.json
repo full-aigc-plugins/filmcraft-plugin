@@ -1,0 +1,46 @@
+{
+  "requirement": "FC-DM-005",
+  "result": "PASS",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-005-P",
+      "result": "PASS",
+      "evidence": [
+        "motion-lut.json",
+        "native-harness.json",
+        "native-harness-observations.json"
+      ],
+      "observed": "Actual immutable installed workflow saves/reopens .fcproj; stable target IDs drive local speed/gain/motion revision; full semantic diff/dependency hashes and source/othertrack preservation,independent current review andoneattempt/no replay verified. Actual installed Harness scoped native loops/budget-best retain priorcheckpoint."
+    },
+    {
+      "id": "FC-DM-005-N",
+      "result": "PASS",
+      "evidence": [
+        "non-target-negative.json"
+      ],
+      "observed": "Own controlled candidate derived from actual native project appliesauthorizedaudio gain but altersnon-target videoenabled; current native binary reopensit,installed scope guard rejectsrevision_scope_violation. Valid target-only change passes; originalcheckpoint hash remains identical."
+    },
+    {
+      "id": "FC-DM-005-MOTION-LUT",
+      "result": "PASS",
+      "evidence": [
+        "motion-lut.json",
+        "motion-units.json"
+      ],
+      "observed": "Actual installed motion skill copiedalone/cold public nativeinstall; explicit clip/keyframe decimal ticks/registered LUTSHA;2nativekeyframes and LUTpixels preserved after save/reopen/moved delivery/originalLUTremoval. Originalpackage/audio/captions/otherLumetri preserved; all24frames anddecodedaudio verified; malformedunknown/nonfinite/targetless/unregistered/corrupted LUT refuse. Historical source6 real animation refusal reproduced."
+    }
+  ],
+  "tasksQualified": [
+    "4.13",
+    "4.14",
+    "4.15"
+  ],
+  "fullV1": "OPEN",
+  "acceptanceEvidence": "docs/evidence/filmcraft66-fixed-native-revision-20261009/acceptance.json",
+  "acceptanceSha256": "703530713f46c29688bd25c3fe0e30a13bc8ed37b0821dbe9e79bdb060b74c45"
+}

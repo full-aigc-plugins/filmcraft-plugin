@@ -1,0 +1,30 @@
+✖ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (5757.568917ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5856.47675
+
+✖ failing tests:
+
+test at .local/filmcraft-recovery-01a11a34-20261008/host66/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.66/test/harness/native_workflow.test.ts:20:1
+✖ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (5757.568917ms)
+  AssertionError [ERR_ASSERTION]: {"schema":"filmcraft-recovery-error/v1","replayAllowed":false,"error":{"code":"source_identity_conflict"}}
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file://[WORK]/host66/host-config/plugins/cache/filmcraft-fixed-verification/filmcraft/0.1.0-dev.66/test/harness/native_workflow.test.ts:170:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

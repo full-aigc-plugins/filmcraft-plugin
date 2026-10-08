@@ -1,0 +1,12 @@
+test_lut_must_be_registered_and_cannot_be_imported_as_media (fixed66_test_motion_lut_workflow.MotionLutTests.test_lut_must_be_registered_and_cannot_be_imported_as_media) ... ok
+test_motion_requires_explicit_target_and_finite_values (fixed66_test_motion_lut_workflow.MotionLutTests.test_motion_requires_explicit_target_and_finite_values) ... ok
+test_toggle_is_explicit_and_does_not_accept_value (fixed66_test_motion_lut_workflow.MotionLutTests.test_toggle_is_explicit_and_does_not_accept_value) ... ok
+test_auxiliary_native_process_receives_same_directory (fixed66_test_workflow_data_directory.WorkflowDataDirectoryTests.test_auxiliary_native_process_receives_same_directory) ... ok
+test_environment_directory_reaches_mcp_without_explicit_option (fixed66_test_workflow_data_directory.WorkflowDataDirectoryTests.test_environment_directory_reaches_mcp_without_explicit_option) ... ok
+test_explicit_directory_overrides_environment_for_mcp (fixed66_test_workflow_data_directory.WorkflowDataDirectoryTests.test_explicit_directory_overrides_environment_for_mcp) ... ok
+test_unconfigured_auxiliary_process_preserves_original_arguments (fixed66_test_workflow_data_directory.WorkflowDataDirectoryTests.test_unconfigured_auxiliary_process_preserves_original_arguments) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.046s
+
+OK

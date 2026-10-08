@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "tests": 7,
+  "skips": 0,
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "testHashes": {
+    "tests/test_motion_lut_workflow.py": "a1c74718cc74fb05461ee9da1933b32b0ad13398ab986f94b7b059698bf4f8c0",
+    "tests/test_workflow_data_directory.py": "56d7365a049b721a44ba522cfbf098b8d492cce15b7544640329dfd620980f63"
+  },
+  "scope": "Original fixed source tests applied to actual installed66 production scripts; isolated mocks cover parameter/env forwarding; real ASR/cold motion execution separately recorded"
+}

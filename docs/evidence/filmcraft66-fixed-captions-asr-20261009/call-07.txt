@@ -1,0 +1,289 @@
+{
+  "project": {
+    "activeSequence": 7,
+    "dirty": false,
+    "name": "captioned",
+    "path": "[WORK]/fixed66-real-asr/captioned.fcproj",
+    "revision": 2,
+    "root": {
+      "children": [
+        {
+          "duration": 2286144000000,
+          "item": 7,
+          "label": "Forest",
+          "name": "Speech film",
+          "type": "Sequence"
+        },
+        {
+          "duration": 2307312000000,
+          "item": 8,
+          "label": "Violet",
+          "name": "shot.mp4",
+          "type": "Movie"
+        },
+        {
+          "duration": 2291965200000,
+          "item": 9,
+          "label": "Caribbean",
+          "name": "voice.wav",
+          "type": "Audio"
+        }
+      ],
+      "id": 0,
+      "name": "captioned"
+    },
+    "sourceItem": null
+  },
+  "sequence": {
+    "audio": [
+      {
+        "enabled": true,
+        "id": 4,
+        "items": [
+          {
+            "clip": 11,
+            "duration": 2286144000000,
+            "durationFrames": 108,
+            "effects": [
+              {
+                "effect": "volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "level": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "channel_volume",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "bypass": {
+                    "keyframes": 0,
+                    "value": "Bool(false)"
+                  },
+                  "left": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "right": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              },
+              {
+                "effect": "panner",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "balance": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  }
+                }
+              }
+            ],
+            "enabled": true,
+            "item": 9,
+            "label": "Caribbean",
+            "link": null,
+            "name": "voice.wav",
+            "sourceIn": 0,
+            "speed": 1.0,
+            "start": 0,
+            "startFrame": 0
+          }
+        ],
+        "locked": false,
+        "muted": false,
+        "name": "Audio 1",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 5,
+        "items": [],
+        "locked": false,
+        "muted": false,
+        "name": "Audio 2",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 6,
+        "items": [],
+        "locked": false,
+        "muted": false,
+        "name": "Audio 3",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      }
+    ],
+    "duration": 2286144000000,
+    "durationFrames": 108,
+    "id": 7,
+    "in": null,
+    "markers": [],
+    "name": "Speech film",
+    "out": null,
+    "playhead": null,
+    "selection": [],
+    "settings": {
+      "audio_master": "Stereo",
+      "color": {
+        "auto_tone_map": true,
+        "wide_gamut": false,
+        "working": "Rec709"
+      },
+      "drop_frame": false,
+      "frame_rate": {
+        "den": 1,
+        "num": 12
+      },
+      "height": 180,
+      "max_bit_depth": false,
+      "max_render_quality": false,
+      "par": [
+        1,
+        1
+      ],
+      "preset": "320x180 12",
+      "preview_codec": "ProRes 422",
+      "sample_rate": 48000,
+      "width": 320,
+      "working_space": "Rec. 709"
+    },
+    "split": {
+      "audioIn": null,
+      "audioOut": null,
+      "videoIn": null,
+      "videoOut": null
+    },
+    "video": [
+      {
+        "enabled": true,
+        "id": 1,
+        "items": [
+          {
+            "clip": 10,
+            "duration": 2286144000000,
+            "durationFrames": 108,
+            "effects": [
+              {
+                "effect": "motion",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "anchor": {
+                    "keyframes": 0,
+                    "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+                  },
+                  "anti_flicker": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "position": {
+                    "keyframes": 0,
+                    "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+                  },
+                  "rotation": {
+                    "keyframes": 0,
+                    "value": "Float(0.0)"
+                  },
+                  "scale": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  },
+                  "scale_width": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  },
+                  "uniform_scale": {
+                    "keyframes": 0,
+                    "value": "Bool(true)"
+                  }
+                }
+              },
+              {
+                "effect": "opacity",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "blend": {
+                    "keyframes": 0,
+                    "value": "Choice(0)"
+                  },
+                  "opacity": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  }
+                }
+              },
+              {
+                "effect": "time_remap",
+                "enabled": true,
+                "masks": 0,
+                "params": {
+                  "speed": {
+                    "keyframes": 0,
+                    "value": "Float(100.0)"
+                  }
+                }
+              }
+            ],
+            "enabled": true,
+            "item": 8,
+            "label": "Violet",
+            "link": null,
+            "name": "shot.mp4",
+            "sourceIn": 0,
+            "speed": 1.0,
+            "start": 0,
+            "startFrame": 0
+          }
+        ],
+        "locked": false,
+        "muted": false,
+        "name": "Video 1",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 2,
+        "items": [],
+        "locked": false,
+        "muted": false,
+        "name": "Video 2",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      },
+      {
+        "enabled": true,
+        "id": 3,
+        "items": [],
+        "locked": false,
+        "muted": false,
+        "name": "Video 3",
+        "solo": false,
+        "syncLock": true,
+        "transitions": []
+      }
+    ]
+  }
+}

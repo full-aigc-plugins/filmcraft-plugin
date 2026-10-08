@@ -1,0 +1,611 @@
+[
+  {
+    "scenario": "actual-native-independent-quality",
+    "layer": "fresh independent process with pinned native reopen and full video decode",
+    "request": {
+      "createdAt": 1791493531087,
+      "criteria": {
+        "goal": {
+          "audioRequired": false,
+          "constraints": [
+            "Preserve the original project"
+          ],
+          "expectedDurationMs": 1000,
+          "text": "A one-second editable orange still"
+        },
+        "reviewer": {
+          "id": "filmcraft-independent-media",
+          "implementationSha256": "ee9287a07a814356af52af3ebb409e6db8e3955f6ec5a52d28c7907927e43fe0",
+          "kind": "external",
+          "version": "1"
+        },
+        "rubric": {
+          "id": "native-first-use",
+          "required": [
+            "decode",
+            "videoTiming",
+            "continuity"
+          ],
+          "thresholds": {
+            "clippingAmplitude": 0.999,
+            "clippingFraction": 0.001,
+            "syncToleranceMs": 50
+          },
+          "version": "1"
+        }
+      },
+      "requestId": "45fcda56-8f59-413b-90b9-97690b4b9add",
+      "schema": "filmcraft-review-request/v1",
+      "subject": {
+        "attemptId": "5c837c61-1947-4e50-a482-341b8b6016e0",
+        "bindingSha256": "a8cc15962fea69f7153d9dd82e9a9dea3ee56ab45fb0c3dbe73cbc72c4e52cb2",
+        "candidateSha256": "c4b219729ce28dcc3010d627241c217ee938b932d136e2a382ea4192aa6d0d64",
+        "epoch": 1,
+        "executionSha256": "80a71960dbbd9fa5b5feee56861303f96f4574fefaafec55c31d1bb03b6be26c",
+        "files": {
+          "audio-check.json": {
+            "bytes": 206,
+            "sha256": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a"
+          },
+          "capabilities.json": {
+            "bytes": 320108,
+            "sha256": "c283384e8208551a6fb3285531741643a6522b4e3c1afd548f781acebd26a699"
+          },
+          "captions.json": {
+            "bytes": 38,
+            "sha256": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5"
+          },
+          "decode.txt": {
+            "bytes": 100,
+            "sha256": "99cdefd3a0dadfbfe79a640de443b9a99217185a15a51307c966bd06ab514703"
+          },
+          "exchange-loss.json": {
+            "bytes": 3320,
+            "sha256": "428b23f7636241fab433bcfb6756483005b5d722eeadf9d3f8abb1f30b8d6141"
+          },
+          "export-probe.json": {
+            "bytes": 646,
+            "sha256": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852"
+          },
+          "film.mp4": {
+            "bytes": 42814,
+            "sha256": "a9f759742dcb9f87930f66ab8bdf97a6800c6ec1c8d676209b7779ad26089ec2"
+          },
+          "frame-0000.png": {
+            "bytes": 221,
+            "sha256": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07"
+          },
+          "native.json": {
+            "bytes": 5308,
+            "sha256": "8c88ff21c0db18b969acbcc42d03baf4580e09e30760b5157bc19f7881245622"
+          },
+          "operations.json": {
+            "bytes": 56426,
+            "sha256": "e929a3fd5f90dc2dbd9a8ca9358534aa65f1e9c73841a479e4ec56814cf3be5e"
+          },
+          "plan.json": {
+            "bytes": 1164,
+            "sha256": "52672dee54bb3d805e4042e1ff6f463251cec14f384d26da32164f8d711fb2d7"
+          },
+          "project.fcproj": {
+            "bytes": 4823,
+            "sha256": "97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081"
+          },
+          "still.png": {
+            "bytes": 113,
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+          }
+        },
+        "inputHashes": {
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "projectSha256": "97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081",
+        "taskId": "task-1"
+      }
+    },
+    "receipt": {
+      "assessment": {
+        "dimensions": {
+          "audioClipping": {
+            "evidence": [
+              "decoded-audio-pcm"
+            ],
+            "metrics": {
+              "sampleRate": 48000,
+              "streams": [
+                {
+                  "channels": 2,
+                  "clippedFractions": [
+                    0,
+                    0
+                  ],
+                  "peak": 0,
+                  "samplesPerChannel": 48096,
+                  "stream": 0
+                }
+              ]
+            },
+            "reason": "Per-channel PCM clipping across every audio stream",
+            "status": "PASS"
+          },
+          "avSync": {
+            "evidence": [],
+            "reason": "Required independent media evidence is unavailable",
+            "status": "NOT_RUN"
+          },
+          "continuity": {
+            "evidence": [],
+            "reason": "Independent temporal/creative review is required",
+            "status": "manual_review"
+          },
+          "decode": {
+            "evidence": [
+              "ffmpeg-full-decode"
+            ],
+            "metrics": {
+              "durationSeconds": 1.002
+            },
+            "reason": "Full video/audio stream decode completed",
+            "status": "PASS"
+          },
+          "rhythm": {
+            "evidence": [],
+            "reason": "Independent temporal/creative review is required",
+            "status": "manual_review"
+          },
+          "subtitleReadability": {
+            "evidence": [],
+            "reason": "Independent temporal/creative review is required",
+            "status": "manual_review"
+          },
+          "subtitleTiming": {
+            "evidence": [],
+            "reason": "Required independent media evidence is unavailable",
+            "status": "NOT_RUN"
+          },
+          "videoTiming": {
+            "evidence": [
+              "full-video-pts"
+            ],
+            "metrics": {
+              "durationSeconds": 1.002,
+              "firstPts": 0,
+              "frames": 12,
+              "lastPts": 0.916667
+            },
+            "reason": "Decoded presentation timestamps and requested duration",
+            "status": "PASS"
+          }
+        },
+        "engineering": {
+          "evidence": [
+            "native-inspect"
+          ],
+          "metrics": {
+            "inspectionSha256": "bb5879bdfc9f9137765905dae0d9a694ac0dba18e483702e57bdeee0141569e0"
+          },
+          "reason": "Independent pinned native project reopen succeeded",
+          "status": "PASS"
+        },
+        "evidenceCapabilities": [
+          "native-reopen",
+          "full-video",
+          "decoded-audio"
+        ]
+      },
+      "context": {
+        "contextId": "86c836d4-298b-4b45-a2c6-8f93943dcd1f",
+        "environmentKeys": [
+          "PATH",
+          "HOME",
+          "TMPDIR",
+          "LANG"
+        ],
+        "exitCode": 0,
+        "exposedFiles": {
+          "film.mp4": "a9f759742dcb9f87930f66ab8bdf97a6800c6ec1c8d676209b7779ad26089ec2",
+          "project.fcproj": "97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081",
+          "still.png": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "implementationSha256": "ee9287a07a814356af52af3ebb409e6db8e3955f6ec5a52d28c7907927e43fe0",
+        "pid": 56631,
+        "responseSha256": "561f2b669ee3caf9b8b40debcd02034f97779e08df06a81e8cc3b87a50bb0b4a",
+        "source": "external-process",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "workingDirectory": "fresh-private"
+      },
+      "requestRef": "9202a126e02620abec81fc35ec784a264c94ad7c56382949a9b6f71c4000860f",
+      "requestSha256": "5ba1cf2b242e1b1b86c4624f8991fde606d1609364429774b82e1225b3660a89",
+      "reviewer": {
+        "id": "filmcraft-independent-media",
+        "implementationSha256": "ee9287a07a814356af52af3ebb409e6db8e3955f6ec5a52d28c7907927e43fe0",
+        "kind": "external",
+        "version": "1"
+      },
+      "schema": "filmcraft-review-receipt/v1"
+    },
+    "result": {
+      "requestSha256": "5ba1cf2b242e1b1b86c4624f8991fde606d1609364429774b82e1225b3660a89",
+      "engineering": {
+        "evidence": [
+          "native-inspect"
+        ],
+        "metrics": {
+          "inspectionSha256": "bb5879bdfc9f9137765905dae0d9a694ac0dba18e483702e57bdeee0141569e0"
+        },
+        "reason": "Independent pinned native project reopen succeeded",
+        "status": "PASS"
+      },
+      "dimensions": {
+        "decode": {
+          "evidence": [
+            "ffmpeg-full-decode"
+          ],
+          "metrics": {
+            "durationSeconds": 1.002
+          },
+          "reason": "Full video/audio stream decode completed",
+          "status": "PASS"
+        },
+        "videoTiming": {
+          "evidence": [
+            "full-video-pts"
+          ],
+          "metrics": {
+            "durationSeconds": 1.002,
+            "firstPts": 0,
+            "frames": 12,
+            "lastPts": 0.916667
+          },
+          "reason": "Decoded presentation timestamps and requested duration",
+          "status": "PASS"
+        },
+        "audioClipping": {
+          "evidence": [
+            "decoded-audio-pcm"
+          ],
+          "metrics": {
+            "sampleRate": 48000,
+            "streams": [
+              {
+                "channels": 2,
+                "clippedFractions": [
+                  0,
+                  0
+                ],
+                "peak": 0,
+                "samplesPerChannel": 48096,
+                "stream": 0
+              }
+            ]
+          },
+          "reason": "Per-channel PCM clipping across every audio stream",
+          "status": "PASS"
+        },
+        "avSync": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "subtitleTiming": {
+          "evidence": [],
+          "reason": "Required independent media evidence is unavailable",
+          "status": "NOT_RUN"
+        },
+        "subtitleReadability": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "continuity": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        },
+        "rhythm": {
+          "evidence": [],
+          "reason": "Independent temporal/creative review is required",
+          "status": "manual_review"
+        }
+      },
+      "engineeringAcceptance": "PASS",
+      "technicalAcceptance": "PASS",
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN",
+      "creativeScore": null,
+      "decision": "manual_review"
+    },
+    "originalProjectPreserved": true
+  },
+  {
+    "scenario": "actual-native-budget-and-cancellation",
+    "layer": "actual Python/native output, shared continuation budget and authorized stop",
+    "schemaVersion": 6,
+    "sharedScope": "lost-reply",
+    "parentTaskId": "lost-reply",
+    "childTaskId": "continue-1",
+    "reservations": [
+      {
+        "task_id": "lost-reply",
+        "scope_id": "lost-reply",
+        "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":0,\"slots\":1,\"timeMs\":300000}",
+        "state": "settled",
+        "reserved_at": 1791493532904,
+        "consumed": "{\"diskBytes\":437976,\"outputBytes\":437976,\"revisions\":0,\"slots\":0,\"timeMs\":827}",
+        "process_identity": "{\"attemptId\":\"b6c865ec-9aea-4d84-ae8b-101f06103f53\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":56680,\"pid\":56680,\"ppid\":56586,\"started\":\"1791493532.930303\",\"uid\":501},\"stopSupported\":true}"
+      },
+      {
+        "task_id": "continue-1",
+        "scope_id": "lost-reply",
+        "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":1,\"slots\":1,\"timeMs\":300000}",
+        "state": "settled",
+        "reserved_at": 1791493534305,
+        "consumed": "{\"diskBytes\":416238,\"outputBytes\":416238,\"revisions\":1,\"slots\":0,\"timeMs\":386}",
+        "process_identity": "{\"attemptId\":\"f8a162c5-4dbd-491f-9231-807679b9d389\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":57433,\"pid\":57433,\"ppid\":56586,\"started\":\"1791493534.330343\",\"uid\":501},\"stopSupported\":true}"
+      }
+    ],
+    "outputLimit": {
+      "state": "failed",
+      "reason": "budget_output_exceeded",
+      "bytes": 437973,
+      "partialProjectPreserved": true,
+      "dependencyAttempts": 0
+    },
+    "cancellation": {
+      "taskId": "cancel-native",
+      "attempts": 1,
+      "state": "cancelled",
+      "stopped": true,
+      "authorization": "actual private host LocalAuthorizationStore"
+    }
+  },
+  {
+    "scenario": "actual-native-repair-and-continuation",
+    "layer": "actual Python/native create, lost reply, repair and continued editing; actual private host grants",
+    "nativeBefore": {
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/capabilities.json": "c283384e8208551a6fb3285531741643a6522b4e3c1afd548f781acebd26a699",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/decode.txt": "7c420dca3a22c95f12d55805b58ac30dbbb274222aa9b1931f8b7239bd98b762",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/exchange-loss.json": "42e9edb8d9758aad3ad57e33768734a576285b6ab35d2e42591eb9a693cff505",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/export-probe.json": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/film.mp4": "a9f759742dcb9f87930f66ab8bdf97a6800c6ec1c8d676209b7779ad26089ec2",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/frame-0000.png": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/manifest.json": "237a9ccb7025e6a7a4a7162961655a1d4ae23b6c086f4ac1d7c9665f46d328d8",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/native.json": "1e7adcd18623c4072fd59a85ed1cc79e1a6ae2fd024fe690d2e893ac8695b5b0",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/operations.json": "a369aec04867c62f8b9ae78f34e7e0d483e58347a32c80b900ca84171865595a",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/plan.json": "52672dee54bb3d805e4042e1ff6f463251cec14f384d26da32164f8d711fb2d7",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/project.fcproj": "a1ad8563afec0c40ce4021b641e98e2b5bf0dc10bd43371988df2b68da3b5065",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/still.png": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+      "[TEMP]/filmcraft-harness-VNuPrM/.filmcraft-execution-acbbf23696576953080b7fdf10c008516131a0d2de92759bb1ed1da79f411371.json": "fb265cdd9e9626cbf60b3791dd6b14acd11b15e689371b68a3a814b30a8e3adc"
+    },
+    "nativeAfter": {
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/audio-check.json": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/capabilities.json": "c283384e8208551a6fb3285531741643a6522b4e3c1afd548f781acebd26a699",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/captions.json": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/decode.txt": "7c420dca3a22c95f12d55805b58ac30dbbb274222aa9b1931f8b7239bd98b762",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/exchange-loss.json": "42e9edb8d9758aad3ad57e33768734a576285b6ab35d2e42591eb9a693cff505",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/export-probe.json": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/film.mp4": "a9f759742dcb9f87930f66ab8bdf97a6800c6ec1c8d676209b7779ad26089ec2",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/frame-0000.png": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/manifest.json": "237a9ccb7025e6a7a4a7162961655a1d4ae23b6c086f4ac1d7c9665f46d328d8",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/native.json": "1e7adcd18623c4072fd59a85ed1cc79e1a6ae2fd024fe690d2e893ac8695b5b0",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/operations.json": "a369aec04867c62f8b9ae78f34e7e0d483e58347a32c80b900ca84171865595a",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/plan.json": "52672dee54bb3d805e4042e1ff6f463251cec14f384d26da32164f8d711fb2d7",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/project.fcproj": "a1ad8563afec0c40ce4021b641e98e2b5bf0dc10bd43371988df2b68da3b5065",
+      "[TEMP]/filmcraft-harness-VNuPrM/lost-reply/still.png": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+      "[TEMP]/filmcraft-harness-VNuPrM/.filmcraft-execution-acbbf23696576953080b7fdf10c008516131a0d2de92759bb1ed1da79f411371.json": "fb265cdd9e9626cbf60b3791dd6b14acd11b15e689371b68a3a814b30a8e3adc"
+    },
+    "originalAttempts": [
+      {
+        "attempt_id": "b6c865ec-9aea-4d84-ae8b-101f06103f53",
+        "task_id": "lost-reply",
+        "epoch": 1,
+        "operation_key": "workflow:c8adaa5561dbd1c6582e1b48580d474e2af66c67f26818cd19bc2ce66c86388c",
+        "state": "succeeded",
+        "pid": 56680,
+        "receipt_sha256": "237a9ccb7025e6a7a4a7162961655a1d4ae23b6c086f4ac1d7c9665f46d328d8"
+      }
+    ],
+    "childAttempts": [
+      {
+        "attempt_id": "f8a162c5-4dbd-491f-9231-807679b9d389",
+        "task_id": "continue-1",
+        "epoch": 1,
+        "operation_key": "workflow:6183f74b0721e153421875dfef2c6db68f63d4bfc0afba5bfb965157df22af46",
+        "state": "succeeded",
+        "pid": 57433,
+        "receipt_sha256": "dfb900bda3299daaf755c4a10760231e091b8f0bfe4de2ef1c63224e707ace7e"
+      }
+    ],
+    "recoveryIntents": [
+      {
+        "intent_id": "60fd7ee2-6654-4e88-bd9b-60d07233fcef",
+        "task_id": "lost-reply",
+        "attempt_id": "b6c865ec-9aea-4d84-ae8b-101f06103f53",
+        "epoch": 3,
+        "owner": "a7162469-6d24-43d3-b372-8e6347d77129",
+        "lease_until": 1791493563381,
+        "evidence_sha256": "114507aa3e0877ad62351f614d6f5df6323f73599ff67be688b60a0bdf7cee8f",
+        "state": "applied",
+        "completion_sha256": "fd04150af3c66f477a1718b3c838f86dcda28700738b00816ae4358f71c2fce1",
+        "reason": null
+      }
+    ],
+    "continuationIntents": [
+      {
+        "intent_id": "7bf5bd08-9c4b-4d2d-a411-4115b837643b",
+        "parent_task_id": "lost-reply",
+        "parent_attempt_id": "b6c865ec-9aea-4d84-ae8b-101f06103f53",
+        "parent_epoch": 3,
+        "child_task_id": "continue-1",
+        "binding_sha256": "2e7bb776a146e58533929bffe79f2dd9018dd4ba83e9278b432df5a4725cbcf8",
+        "evidence_sha256": "731142e6bdc81254f5e15edba657d01d4ddb71d9917bdd9cf3036d304b093565",
+        "state": "applied"
+      }
+    ],
+    "readonlyFilesPreserved": true,
+    "originalReplayed": false,
+    "quality": "NOT_RUN"
+  },
+  {
+    "scenario": "actual-native-scoped-revision",
+    "layer": "actual native save/reopen, complete semantic diff, independent current review and repeated-call no replay",
+    "loop": {
+      "loopId": "4f972729-1cc7-4b7f-a5ee-3bc71b6db5b0",
+      "rootTaskId": "task-1",
+      "state": "stopped",
+      "reason": "issues_resolved",
+      "generation": 4,
+      "rounds": 1,
+      "failures": 0,
+      "stagnant": 0,
+      "pending": null,
+      "best": {
+        "receiptRef": "fe908110034f2b1b80ef3c99a5c12391c62de3850fa8c8bb901b7e249157d5e4",
+        "requestRef": "e350c1e31f5f59b180d3fb101d97c1235411e3ae8951651770b2fd7f05c2e161",
+        "taskId": "quality-revision-1",
+        "projectSha256": "36bded2c6e473424f6bf2c72afa8f2c9d90be70e544c26ada7f65bdb91a12004",
+        "score": 21,
+        "scope": "engineering and every required loop rubric dimension; not user acceptance"
+      },
+      "latestEligible": true,
+      "unresolvedIssues": [],
+      "unresolvedQuality": [],
+      "invalidEvidence": [],
+      "budget": {
+        "scopeId": "task-1",
+        "limits": {
+          "diskBytes": 512000000,
+          "outputBytes": 512000000,
+          "revisions": 2,
+          "slots": 2,
+          "timeMs": 1800000
+        },
+        "deadline": 1791497130289,
+        "state": "active",
+        "reason": null,
+        "reservations": [
+          {
+            "task_id": "task-1",
+            "scope_id": "task-1",
+            "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":0,\"slots\":1,\"timeMs\":300000}",
+            "state": "settled",
+            "reserved_at": 1791493530568,
+            "consumed": "{\"diskBytes\":437957,\"outputBytes\":437957,\"revisions\":0,\"slots\":0,\"timeMs\":398}",
+            "process_identity": "{\"attemptId\":\"5c837c61-1947-4e50-a482-341b8b6016e0\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":56607,\"pid\":56607,\"ppid\":56586,\"started\":\"1791493530.593895\",\"uid\":501},\"stopSupported\":true}"
+          },
+          {
+            "task_id": "quality-revision-1",
+            "scope_id": "task-1",
+            "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":1,\"slots\":1,\"timeMs\":300000}",
+            "state": "settled",
+            "reserved_at": 1791493539580,
+            "consumed": "{\"diskBytes\":416254,\"outputBytes\":416254,\"revisions\":1,\"slots\":0,\"timeMs\":476}",
+            "process_identity": "{\"attemptId\":\"c11fa081-3004-407a-a683-926cc7307ee3\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":58331,\"pid\":58331,\"ppid\":56586,\"started\":\"1791493539.706515\",\"uid\":501},\"stopSupported\":true}"
+          }
+        ]
+      },
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN"
+    },
+    "rounds": [
+      {
+        "loop_id": "4f972729-1cc7-4b7f-a5ee-3bc71b6db5b0",
+        "round_no": 1,
+        "child_task_id": "quality-revision-1",
+        "intent_sha256": "093b1b9c6375420670b0939cdbedb01fda2531295a82c8237d476b7dfdb5e368",
+        "intent": "{\"child\":{\"authorizationRef\":\"grant-1\",\"authorizationScopeSha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"deadline\":1791497130289,\"idempotencyKey\":\"revision:4f972729-1cc7-4b7f-a5ee-3bc71b6db5b0:quality-revision-1\",\"inputHashes\":{\"still\":\"f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47\"},\"inputRefs\":[{\"assetId\":\"still\",\"sha256\":\"f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47\",\"version\":\"fixture-v1\"}],\"namespace\":\"local-host\",\"nativePlanHash\":\"d42e51da0cd35c9bee2c362e411a757f5bd7effd06646a665a80015e10f649b1\",\"outputRoot\":\"[TEMP]\",\"planHash\":\"d42e51da0cd35c9bee2c362e411a757f5bd7effd06646a665a80015e10f649b1\",\"projectKey\":\"4cc152cb9229fe35dd9fe8ac0b7ab23aded445edf817da888423c654aa3251e6\",\"projectRevision\":\"97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081\",\"runtimeIdentity\":{\"capabilitySnapshotSha256\":\"f4709654feacba4f8ecc7d7936d76c40edcb299ea8b7e906efe0f1c08a7e7681\",\"cliVersion\":\"0.2.0-craft.5\",\"mode\":\"headless\",\"pluginId\":\"filmcraft\",\"pluginVersion\":\"0.1.0-dev.66\",\"sha256\":\"b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f\"},\"sourceRevision\":\"b1091e09cbbd7df25f6c5784343f27a414426727\",\"sourceTreeSha256\":\"5f157a7ae34e3129f952690617ca379256ff94c9b054df232c2e9862ad92be82\",\"taskId\":\"quality-revision-1\"},\"compiled\":{\"base\":{\"dependencyHashes\":{\"still\":\"f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47\"},\"project\":{\"format\":\"filmcraft.project\",\"generator\":\"FilmCraft 0.2.0-craft.5\",\"project\":{\"items\":{\"7\":{\"created\":7,\"id\":7,\"kind\":{\"Sequence\":{\"audio_tracks\":[{\"channels\":\"Stereo\",\"effects\":[],\"enabled\":true,\"id\":4,\"items\":[],\"kind\":\"Audio\",\"locked\":false,\"mixer\":{\"input_map\":\"Stereo\",\"mode\":\"Read\",\"output\":null,\"record_arm\":false,\"solo_safe\":false},\"muted\":false,\"name\":\"Audio 1\",\"pan\":0,\"solo\":false,\"sync_lock\":true,\"transitions\":[],\"volume_db\":0},{\"channels\":\"Stereo\",\"effects\":[],\"enabled\":true,\"id\":5,\"items\":[],\"kind\":\"Audio\",\"locked\":false,\"mixer\":{\"input_map\":\"Stereo\",\"mode\":\"Read\",\"output\":null,\"record_arm\":false,\"solo_safe\":false},\"muted\":false,\"name\":\"Audio 2\",\"pan\":0,\"solo\":false,\"sync_lock\":true,\"transitions\":[],\"volume_db\":0},{\"channels\":\"Stereo\",\"effects\":[],\"enabled\":true,\"id\":6,\"items\":[],\"kind\":\"Audio\",\"locked\":false,\"mixer\":{\"input_map\":\"Stereo\",\"mode\":\"Read\",\"output\":null,\"record_arm\":false,\"solo_safe\":false},\"muted\":false,\"name\":\"Audio 3\",\"pan\":0,\"solo\":false,\"sync_lock\":true,\"transitions\":[],\"volume_db\":0}],\"caption_tracks\":[],\"mark_in\":null,\"mark_out\":null,\"markers\":[],\"master_effects\":[],\"master_mixer\":{\"input_map\":\"Stereo\",\"mode\":\"Read\",\"output\":null,\"record_arm\":false,\"solo_safe\":false},\"master_volume_db\":0,\"settings\":{\"audio_master\":\"Stereo\",\"color\":{\"auto_tone_map\":true,\"wide_gamut\":false,\"working\":\"Rec709\"},\"drop_frame\":false,\"frame_rate\":{\"den\":1,\"num\":12},\"height\":32,\"max_bit_depth\":false,\"max_render_quality\":false,\"par\":[1,1],\"preset\":\"32x32 12\",\"preview_codec\":\"ProRes 422\",\"sample_rate\":48000,\"width\":32,\"working_space\":\"Rec. 709\"},\"start_timecode\":0,\"submix_tracks\":[],\"video_tracks\":[{\"channels\":\"Stereo\",\"effects\":[],\"enabled\":true,\"id\":1,\"items\":[{\"duration\":254016000000,\"effects\":[{\"effect\":\"motion\",\"enabled\":true,\"params\":{\"anchor\":{\"value\":{\"Vec2\":{\"x\":16,\"y\":16}}},\"anti_flicker\":{\"value\":{\"Float\":0}},\"position\":{\"value\":{\"Vec2\":{\"x\":16,\"y\":16}}},\"rotation\":{\"value\":{\"Float\":0}},\"scale\":{\"value\":{\"Float\":100}},\"scale_width\":{\"value\":{\"Float\":100}},\"uniform_scale\":{\"value\":{\"Bool\":true}}}},{\"effect\":\"opacity\",\"enabled\":true,\"params\":{\"blend\":{\"value\":{\"Choice\":0}},\"opacity\":{\"value\":{\"Float\":100}}}},{\"effect\":\"time_remap\",\"enabled\":true,\"params\":{\"speed\":{\"value\":{\"Float\":100}}}}],\"enabled\":true,\"frame_hold\":null,\"gain_db\":0,\"group\":null,\"id\":9,\"item\":8,\"label\":\"Lavender\",\"link\":null,\"markers\":[],\"name\":\"still.png\",\"reverse\":false,\"scale_to_frame\":false,\"source_in\":0,\"speed\":1,\"start\":0}],\"kind\":\"Video\",\"locked\":false,\"mixer\":{\"input_map\":\"Stereo\",\"mode\":\"Read\",\"output\":null,\"record_arm\":false,\"solo_safe\":false},\"muted\":false,\"name\":\"Video 1\",\"pan\":0,\"solo\":false,\"sync_lock\":true,\"transitions\":[],\"volume_db\":0},{\"channels\":\"Stereo\",\"effects\":[],\"enabled\":true,\"id\":2,\"items\":[],\"kind\":\"Video\",\"locked\":false,\"mixer\":{\"input_map\":\"Stereo\",\"mode\":\"Read\",\"output\":null,\"record_arm\":false,\"solo_safe\":false},\"muted\":false,\"name\":\"Video 2\",\"pan\":0,\"solo\":false,\"sync_lock\":true,\"transitions\":[],\"volume_db\":0},{\"channels\":\"Stereo\",\"effects\":[],\"enabled\":true,\"id\":3,\"items\":[],\"kind\":\"Video\",\"locked\":false,\"mixer\":{\"input_map\":\"Stereo\",\"mode\":\"Read\",\"output\":null,\"record_arm\":false,\"solo_safe\":false},\"muted\":false,\"name\":\"Video 3\",\"pan\":0,\"solo\":false,\"sync_lock\":true,\"transitions\":[],\"volume_db\":0}],\"work_area\":null}},\"label\":\"Forest\",\"metadata\":{},\"name\":\"Native gateway\"},\"8\":{\"created\":8,\"id\":8,\"kind\":{\"Media\":{\"identity\":{\"fingerprint\":\"dfc6dc378aa7c508\",\"size\":113},\"info\":{\"audio\":null,\"container\":\"Image\",\"duration\":1270080000000,\"file_size\":113,\"kind\":\"Still\",\"name\":\"still.png\",\"start_timecode\":null,\"video\":{\"bitrate\":null,\"codec\":\"PNG\",\"color\":{\"matrix\":\"Bt709\",\"primaries\":\"Bt709\",\"range\":\"Full\",\"transfer\":\"Srgb\"},\"frame_rate\":{\"den\":1001,\"num\":30000},\"has_alpha\":true,\"height\":32,\"par\":[1,1],\"pixel_format\":\"RGBA 8-bit\",\"width\":32}},\"interpret\":{\"frame_rate\":null,\"ignore_alpha\":false,\"invert_alpha\":false,\"par\":null},\"mark_in\":null,\"mark_out\":null,\"markers\":[],\"media\":{\"File\":{\"path\":{\"packagedSha256\":\"f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47\"}}},\"offline\":false,\"proxy\":null}},\"label\":\"Lavender\",\"metadata\":{},\"name\":\"still.png\"}},\"name\":\"checkpoint\",\"next_id\":10,\"root\":{\"children\":[{\"Item\":7},{\"Item\":8}],\"id\":0,\"name\":\"checkpoint\"},\"settings\":{\"action_safe\":[10,10],\"audio_display_samples\":true,\"capture_format\":\"DV\",\"default_audio_transition_duration\":254016000000,\"default_still_duration\":1270080000000,\"default_transition_duration_frames\":24,\"ingest\":{\"action\":\"createProxies\",\"destination\":null,\"enabled\":false,\"preset\":\"\"},\"renderer\":\"FilmCraft GPU Acceleration (wgpu)\",\"scratch\":{\"audioPreviews\":null,\"autoSave\":null,\"captured\":null,\"videoPreviews\":null},\"title_safe\":[20,20],\"video_display\":\"Timecode\"}},\"schema_version\":12},\"sourceSha256\":\"97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081\"},\"issues\":[{\"command\":\"clip.speedDuration\",\"id\":\"double-speed\",\"params\":{\"reverse\":false,\"ripple\":false,\"speed\":200},\"target\":\"7/1/9\"}],\"plan\":{\"expectedProjectSha256\":\"97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081\",\"export\":{\"audioRequired\":false},\"frames\":[\"0\"],\"operations\":[{\"command\":\"timeline.select\",\"params\":{\"add\":false,\"clips\":[9],\"toggle\":false}},{\"command\":\"native.command\",\"params\":{\"command\":\"clip.speedDuration\",\"params\":{\"clips\":[9],\"reverse\":false,\"ripple\":false,\"speed\":200}}}]},\"sourceSha256\":\"97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081\",\"targets\":[{\"dependencies\":[\"still\"],\"endTick\":\"254016000000\",\"fields\":[\"/speed\",\"/reverse\",\"/duration\",\"/effects/2/params/speed/value/Float\"],\"objectId\":\"9\",\"ownerPlugin\":\"filmcraft\",\"sequenceId\":\"7\",\"startTick\":\"0\",\"trackId\":\"1\"}]},\"continuationIntentId\":\"36150541-22fa-4c45-a4ba-a74722158bc0\",\"generation\":2,\"planFileSha256\":\"5f5b86c0b44c82ae4a4493acf2cbf8198290c085d23ed6c4f195438f714f5098\",\"sourceTaskId\":\"task-1\"}",
+        "state": "reviewed",
+        "result": "{\"review\":{\"receiptRef\":\"fe908110034f2b1b80ef3c99a5c12391c62de3850fa8c8bb901b7e249157d5e4\",\"requestRef\":\"e350c1e31f5f59b180d3fb101d97c1235411e3ae8951651770b2fd7f05c2e161\",\"taskId\":\"quality-revision-1\"}}",
+        "result_sha256": "a4a4ddb3c372d66ab7bd56a9a3da8bf012e7ad99665a6af33f22f3ef91952f82"
+      }
+    ],
+    "diff": {
+      "changes": [
+        {
+          "target": "7/1/9",
+          "field": "/speed",
+          "before": 1,
+          "after": 2
+        },
+        {
+          "target": "7/1/9",
+          "field": "/duration",
+          "before": 254016000000,
+          "after": 127008000000
+        }
+      ],
+      "nonTargetsPreserved": true,
+      "dependenciesPreserved": true,
+      "sourceSha256": "97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081",
+      "candidateSha256": "36bded2c6e473424f6bf2c72afa8f2c9d90be70e544c26ada7f65bdb91a12004"
+    },
+    "authorizationRefReused": true,
+    "sourceProjectPreserved": true,
+    "sourceProjectSha256": "97c712c2ab1b9bc3ab5cb6d4eb66a278cfad55a80bce905db6f8aa4577dcb081",
+    "candidateProjectSha256": "36bded2c6e473424f6bf2c72afa8f2c9d90be70e544c26ada7f65bdb91a12004",
+    "sourceAttempts": 1,
+    "candidateAttempts": 1,
+    "oldReviewRejected": true
+  },
+  {
+    "scenario": "actual-native-revision-budget-best",
+    "layer": "actual pinned native source and independent review; durable zero revision budget rejects before attempt",
+    "loop": {
+      "loopId": "f9661dbf-3588-4a8c-8dcc-47de37da314e",
+      "rootTaskId": "quality-budget-source",
+      "state": "stopped",
+      "reason": "budget_revisions_exceeded",
+      "generation": 4,
+      "rounds": 1,
+      "failures": 1,
+      "stagnant": 1,
+      "pending": null,
+      "best": {
+        "receiptRef": "ceb4e27b4081a914692ff080b5532f19e6f48ad8bf6ed2eb479fc21fcd3df2fe",
+        "requestRef": "bb251bdc37cad8b3553a1dc7151dda9eb364cda51610760bfc1a1a35dcd280df",
+        "taskId": "quality-budget-source",
+        "projectSha256": "bf9d9f903eae4b0ba776253d32307439fff88c54bd332cbe3a7b1bfaa0dd4700",
+        "score": 20,
+        "scope": "engineering and every required loop rubric dimension; not user acceptance"
+      },
+      "latestEligible": true,
+      "unresolvedIssues": [
+        "reverse-still"
+      ],
+      "unresolvedQuality": [],
+      "invalidEvidence": [],
+      "budget": {
+        "scopeId": "quality-budget-source",
+        "limits": {
+          "diskBytes": 512000000,
+          "outputBytes": 512000000,
+          "revisions": 0,
+          "slots": 2,
+          "timeMs": 1800000
+        },
+        "deadline": 1791497130289,
+        "state": "halted",
+        "reason": "budget_revisions_exceeded",
+        "reservations": [
+          {
+            "task_id": "quality-budget-source",
+            "scope_id": "quality-budget-source",
+            "allocation": "{\"diskBytes\":64000000,\"outputBytes\":64000000,\"revisions\":0,\"slots\":1,\"timeMs\":300000}",
+            "state": "settled",
+            "reserved_at": 1791493542593,
+            "consumed": "{\"diskBytes\":438022,\"outputBytes\":438022,\"revisions\":0,\"slots\":0,\"timeMs\":408}",
+            "process_identity": "{\"attemptId\":\"0fe9412e-e4b1-4c51-94cd-a0e0d21ef180\",\"epoch\":1,\"identity\":{\"boot\":\"{ sec = 1791336115, usec = 126098 } Wed Oct  7 09:21:55 2026\",\"executable\":\"/opt/anaconda3/bin/python3.13\",\"pgid\":59136,\"pid\":59136,\"ppid\":56586,\"started\":\"1791493542.617447\",\"uid\":501},\"stopSupported\":true}"
+          }
+        ]
+      },
+      "creativeAcceptance": "manual_review",
+      "userAcceptance": "NOT_RUN"
+    },
+    "sourceProjectPreserved": true,
+    "attempts": 0,
+    "bestProjectSha256": "bf9d9f903eae4b0ba776253d32307439fff88c54bd332cbe3a7b1bfaa0dd4700",
+    "authorizationRefReused": true
+  }
+]

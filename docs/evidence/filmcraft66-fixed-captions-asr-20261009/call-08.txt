@@ -1,0 +1,6 @@
+{
+  "bytes": 226,
+  "captions": 2,
+  "format": "SubRip (SRT)",
+  "path": "[WORK]/fixed66-real-asr/recognized.srt"
+}

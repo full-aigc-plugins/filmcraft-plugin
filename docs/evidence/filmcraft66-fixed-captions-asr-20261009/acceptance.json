@@ -1,0 +1,220 @@
+{
+  "schema": "filmcraft-fixed-domain-acceptance/v1",
+  "result": "PASS",
+  "requirement": "FC-DM-004",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "platform": "macOS arm64",
+  "host": "Codex0.147.0 isolated public-tag install",
+  "mode": "headless",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-004-P",
+      "result": "PASS",
+      "evidence": [
+        "chinese.json",
+        "caption-bounds.json"
+      ],
+      "observed": "Actual installed subtitle skill copied alone/cold public runtime; native/SRT Unicodezh-CN,HeitiSC style and exact0..508032000000ticks preserved through text-only revision; native save/reopen and audio/video retained."
+    },
+    {
+      "id": "FC-DM-004-N",
+      "result": "PASS",
+      "evidence": [
+        "caption-bounds.json"
+      ],
+      "observed": "Actual installed public workflow refuses missing declared font and4second caption outside3second sequence; precise error/no successful manifest,source bytes unchanged."
+    },
+    {
+      "id": "FC-DM-004-CN",
+      "result": "PASS",
+      "evidence": [
+        "chinese.json",
+        "chinese-preview.png",
+        "caption-bounds.json"
+      ],
+      "observed": "640x360/24fps/72 native exportedframes,burnedChinese inside caption interval/absent outside,distinct equal-length glyph pixels,existing speech waveformcorrelation>.95 andstreamstarts within1frame. Assistant visually read owned preview as 新品上市，轻松剪辑。 without replacement boxes. Original audio/source/style/timing retained through localized text revision. Synthetic local system-voice test fixture only; no general creative/user acceptance."
+    },
+    {
+      "id": "FC-DM-004-ASR",
+      "result": "PASS",
+      "evidence": [
+        "real-asr.json",
+        "call-00.txt",
+        "actual-native-asr-red.json",
+        "data-dir-units.json"
+      ],
+      "observed": "Actual publiccraft.3 cold native reportsWhisper unavailable (behavior red). Actual installed66 transcript skill copied alone/cold CLI and initially absent model downloads4hash-checked153547868bytes,repeat preservesmtimes; real inference28words/referencecoverage1.0/exactvalidtimes,save/reopen/SRT/source audio/video preserved. Public workflow data_dir overrides deliberately wrongenvironment,passes same native directory,never bundlesweights. Currentcraft.5 same binary preserves caption/sequence/sample fixes; current fixed source/plugin qualifies,Art distribution separately open."
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "chinese.json",
+      "originalSha256": "67a6886eead0f273c40e66f5a0ce872cd88fb64e78279a48d7c2568cf501b646",
+      "projectionSha256": "67a6886eead0f273c40e66f5a0ce872cd88fb64e78279a48d7c2568cf501b646"
+    },
+    {
+      "path": "chinese.txt",
+      "originalSha256": "2f90af635fe0959dbe65d61f8b12629e475d0a593b3ec4170eb17d84d7cfb2e6",
+      "projectionSha256": "2f90af635fe0959dbe65d61f8b12629e475d0a593b3ec4170eb17d84d7cfb2e6"
+    },
+    {
+      "path": "chinese-preview.png",
+      "originalSha256": "c5947255ceddb78183be8e98896df1a8505d85ca7bd73b5b95beee505b20caeb",
+      "projectionSha256": "c5947255ceddb78183be8e98896df1a8505d85ca7bd73b5b95beee505b20caeb"
+    },
+    {
+      "path": "caption-bounds.json",
+      "originalSha256": "04476e5bec765b2913806f5f298432a3f59f1a94b633edd3578b802c33d0db2f",
+      "projectionSha256": "155082add61e3509aa63064bff633426fafb1718f9e9c1a7d8492dd1812dcb6e"
+    },
+    {
+      "path": "real-asr.json",
+      "originalSha256": "992fa2f174570ae78b4c2cd59889cc800c3d9e44c7f868a1d6f1aa29dcee962f",
+      "projectionSha256": "992fa2f174570ae78b4c2cd59889cc800c3d9e44c7f868a1d6f1aa29dcee962f"
+    },
+    {
+      "path": "real-asr.txt",
+      "originalSha256": "a4e96b68e3089a4bc76c39903bba437074c15d5e91e0c9cba1db302984115eb8",
+      "projectionSha256": "a4e96b68e3089a4bc76c39903bba437074c15d5e91e0c9cba1db302984115eb8"
+    },
+    {
+      "path": "actual-native-asr-red.json",
+      "originalSha256": "06143254a1b141dafb3cb1a503cc64e9dce39cb3a21b31c59bcffbf4b7c4c051",
+      "projectionSha256": "e50778ccb53f8f7b489390a996c6fbdc6b2fe36f7b0d6b3bbba669becb2417ef"
+    },
+    {
+      "path": "historical-driver-fixture-error.json",
+      "originalSha256": "77f34daa295091ad78b4c6506f286f0c0f48020828e2674889023a696626eba4",
+      "projectionSha256": "78a48686425dfcd9d7a3588f6d7b2e32869f779296ade494b30e5bcdb3a7780f"
+    },
+    {
+      "path": "data-dir-units.json",
+      "originalSha256": "906a29bee85992c7561cb0b526f5dba03a76604fdd29970fa887aa54c24de1b2",
+      "projectionSha256": "733a0226e679f42f632caa955da843f81409ee4a195aae5d7ff9e093a0504a2c"
+    },
+    {
+      "path": "data-dir-units.txt",
+      "originalSha256": "4d87fbcec62418fc381386e1abd78b723ee9bc1ac924e93bc8bc4886f73ab86b",
+      "projectionSha256": "4d87fbcec62418fc381386e1abd78b723ee9bc1ac924e93bc8bc4886f73ab86b"
+    },
+    {
+      "path": "caption-producer.py.txt",
+      "originalSha256": "484d9ddf13b70f4f9182f823dd748169c1b56fc8fbfd49aba06e15a7b65626d9",
+      "projectionSha256": "9b5650eb67abe11206f4f3956f5ca307bb7dae274d9ae51c3cd8c6508b4465a9"
+    },
+    {
+      "path": "red-producer.py.txt",
+      "originalSha256": "d3ce20ebfcd32e89b142f30dc89b166d583ccd1fb8cc189d147ba7a3b97e16c8",
+      "projectionSha256": "c2d3dc8a7d34b180cfa4af962073c2091f2473a73c0da386249cf9ea427f6839"
+    },
+    {
+      "path": "call-00.txt",
+      "originalSha256": "69d4a4502584fb6d5c0f2714f375d2f21ea46116d0d1a6afd3c2a1f50456ad8a",
+      "projectionSha256": "2029bbd8a807cb9171d1de68bf3c39b9824e33ad71102a0d18b4d1adc11862a4"
+    },
+    {
+      "path": "call-01.txt",
+      "originalSha256": "1d0a838dbf5c48db8751aba9d88e6433cd9daa0c23499ce7c94dc405ca9c706c",
+      "projectionSha256": "c74189ba6d8010dfb5e3ec1d2b4cd2c3bf17c03b1e5a55d033af862972dbfb6c"
+    },
+    {
+      "path": "call-02.txt",
+      "originalSha256": "1d0a838dbf5c48db8751aba9d88e6433cd9daa0c23499ce7c94dc405ca9c706c",
+      "projectionSha256": "c74189ba6d8010dfb5e3ec1d2b4cd2c3bf17c03b1e5a55d033af862972dbfb6c"
+    },
+    {
+      "path": "call-03.txt",
+      "originalSha256": "73434f0ace32408221adc783dc41705dac29157eb876d6e73568f6519a0b9af1",
+      "projectionSha256": "61b718c49bb000bcb73b9dcff0044788194fe6dd4ee36bca52d2cff10cf5cfc6"
+    },
+    {
+      "path": "call-04.txt",
+      "originalSha256": "268e18a95e3a8f2ac970003fd431f5bb9fc48a50f534700d34a5879fd9ec519e",
+      "projectionSha256": "268e18a95e3a8f2ac970003fd431f5bb9fc48a50f534700d34a5879fd9ec519e"
+    },
+    {
+      "path": "call-05.txt",
+      "originalSha256": "42537d721c93f945cadc00ec0cc5261ac109fc4cca5f133370c004c28130e2b5",
+      "projectionSha256": "42537d721c93f945cadc00ec0cc5261ac109fc4cca5f133370c004c28130e2b5"
+    },
+    {
+      "path": "call-06.txt",
+      "originalSha256": "6bbd22e3bd5c11c4f5aeb11f7ba89e1bee4597324578cbc66a1311ce0a05611b",
+      "projectionSha256": "6bbd22e3bd5c11c4f5aeb11f7ba89e1bee4597324578cbc66a1311ce0a05611b"
+    },
+    {
+      "path": "call-07.txt",
+      "originalSha256": "b2b420718056b6e00f4eae18f3b3cd8ec83745a6237764c08c385eec95138265",
+      "projectionSha256": "d03e1f0a49cfcd505d054acb9cc6ec0e17f0536e3741baa0135109aa2f1a7369"
+    },
+    {
+      "path": "call-08.txt",
+      "originalSha256": "8f0988586c418ca34e32ce1ac0ab5d5319530dc277bb591355d2dcd6bb1d9bf1",
+      "projectionSha256": "84dbcd9d199533dd522894deb418dcb7b338525807b810acff7f2f9586f38b3c"
+    }
+  ],
+  "installedSkillsAndExecutionCodePreserved": true,
+  "notes": "Original test inputs match immutable source49; actual installed production/copy hashes verified. Historical-driver first usedcraft.2 lock accidentally and stopped before installation; separate fixture failure not behavior red. Current red uses original source32/craft.3 public artifact.",
+  "notAccepted": [
+    "all666commands/GUI",
+    "otherhosts/platforms",
+    "separate Art distribution integration",
+    "creative/user acceptance",
+    "complete V1"
+  ],
+  "tasksQualified": [
+    "4.10",
+    "4.11",
+    "4.12"
+  ],
+  "fullV1": "OPEN",
+  "modelContract": {
+    "model": {
+      "description": "39 M parameters. Fastest; fine for clear speech, rough on noisy audio.",
+      "id": "whisper-tiny",
+      "installed": false,
+      "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+      "multilingual": true,
+      "name": "Whisper tiny (multilingual)",
+      "size": 153547868,
+      "source": "https://huggingface.co/openai/whisper-tiny"
+    },
+    "revision": "169d4a4341b33bc18d8881c4b69c2e104e1cc0af",
+    "revisionPresentInVerifiedBinary": true,
+    "files": [
+      {
+        "name": "config.json",
+        "sha256": "ffdccec4f3211f4c63310f2b7098f309fe70f3952cedc5e4d11e43f5b2379b98",
+        "bytes": 1983
+      },
+      {
+        "name": "generation_config.json",
+        "sha256": "a5d5325911f16e74001a72fa13d6e208eee51548f994646de1f4b4cc8b35b512",
+        "bytes": 3747
+      },
+      {
+        "name": "tokenizer.json",
+        "sha256": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566",
+        "bytes": 2480466
+      },
+      {
+        "name": "model.safetensors",
+        "sha256": "7ebd0e69e78190ffe1438491fa05cc1f5c1aa3a4c4db3bc1723adbb551ea2395",
+        "bytes": 151061672
+      }
+    ],
+    "weightsNotPublished": true
+  },
+  "fixtureAttribution": "Owned procedural colored shot and local installed system voicesTingting/Samantha; model catalogue recordsweight/conversion license. No user media or downloadedweights committed.",
+  "visualReview": {
+    "observer": "assistant",
+    "sourceFrameSha256": "c5947255ceddb78183be8e98896df1a8505d85ca7bd73b5b95beee505b20caeb",
+    "readText": "新品上市，轻松剪辑。",
+    "claim": "Only this preview; user/creative acceptance remains open."
+  }
+}

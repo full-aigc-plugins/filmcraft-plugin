@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "scope": "Controlled non-target mutation of an actual fixed66 native project: current native binary reopens the candidate, installed scope guard refuses while source checkpoint remains byte-identical. Valid target-only delta accepted. Not creative/user acceptance.",
+  "targetScope": {
+    "ownerPlugin": "filmcraft",
+    "sequenceId": "7",
+    "trackId": "4",
+    "objectId": "11",
+    "startTick": "0",
+    "endTick": "2286144000000",
+    "fields": [
+      "/gain_db"
+    ],
+    "dependencies": [
+      "voice"
+    ]
+  },
+  "nonTargetClip": "10",
+  "nativeReopened": true,
+  "refused": "revision_scope_violation",
+  "previousCheckpointSha256": "6b7aa151e9c52809df142ac9c06b22ec744d49e6294cc6c7d403a3521a5b9ac8",
+  "candidateSha256": "bd0a7ae1c45fe3aefeb29840062b322d9269526ee438b97071444a984fbc397a",
+  "previousCheckpointPreserved": true
+}

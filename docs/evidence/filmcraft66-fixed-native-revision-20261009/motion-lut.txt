@@ -1,0 +1,6 @@
+test_motion_lut_relocation_revision_and_source_preservation (test_motion_lut_first_use.MotionLutFirstUseTests.test_motion_lut_relocation_revision_and_source_preservation) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 9.343s
+
+OK

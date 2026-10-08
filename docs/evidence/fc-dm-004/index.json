@@ -1,0 +1,57 @@
+{
+  "requirement": "FC-DM-004",
+  "result": "PASS",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-004-P",
+      "result": "PASS",
+      "evidence": [
+        "chinese.json",
+        "caption-bounds.json"
+      ],
+      "observed": "Actual installed subtitle skill copied alone/cold public runtime; native/SRT Unicodezh-CN,HeitiSC style and exact0..508032000000ticks preserved through text-only revision; native save/reopen and audio/video retained."
+    },
+    {
+      "id": "FC-DM-004-N",
+      "result": "PASS",
+      "evidence": [
+        "caption-bounds.json"
+      ],
+      "observed": "Actual installed public workflow refuses missing declared font and4second caption outside3second sequence; precise error/no successful manifest,source bytes unchanged."
+    },
+    {
+      "id": "FC-DM-004-CN",
+      "result": "PASS",
+      "evidence": [
+        "chinese.json",
+        "chinese-preview.png",
+        "caption-bounds.json"
+      ],
+      "observed": "640x360/24fps/72 native exportedframes,burnedChinese inside caption interval/absent outside,distinct equal-length glyph pixels,existing speech waveformcorrelation>.95 andstreamstarts within1frame. Assistant visually read owned preview as 新品上市，轻松剪辑。 without replacement boxes. Original audio/source/style/timing retained through localized text revision. Synthetic local system-voice test fixture only; no general creative/user acceptance."
+    },
+    {
+      "id": "FC-DM-004-ASR",
+      "result": "PASS",
+      "evidence": [
+        "real-asr.json",
+        "call-00.txt",
+        "actual-native-asr-red.json",
+        "data-dir-units.json"
+      ],
+      "observed": "Actual publiccraft.3 cold native reportsWhisper unavailable (behavior red). Actual installed66 transcript skill copied alone/cold CLI and initially absent model downloads4hash-checked153547868bytes,repeat preservesmtimes; real inference28words/referencecoverage1.0/exactvalidtimes,save/reopen/SRT/source audio/video preserved. Public workflow data_dir overrides deliberately wrongenvironment,passes same native directory,never bundlesweights. Currentcraft.5 same binary preserves caption/sequence/sample fixes; current fixed source/plugin qualifies,Art distribution separately open."
+    }
+  ],
+  "tasksQualified": [
+    "4.10",
+    "4.11",
+    "4.12"
+  ],
+  "fullV1": "OPEN",
+  "acceptanceEvidence": "docs/evidence/filmcraft66-fixed-captions-asr-20261009/acceptance.json",
+  "acceptanceSha256": "c6f62526021a4b4c04f6c02ac1793cc266d8b68a2cc029bdd7e30b82a215457c"
+}

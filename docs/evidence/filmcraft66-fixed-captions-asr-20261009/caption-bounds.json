@@ -1,0 +1,43 @@
+{
+  "result": "PASS",
+  "sourceProjectSha256": "4c54f0f8c2112f5658c0a9c03738c739c11b24edb17d0eff2405c312594ae7c5",
+  "captionLanguage": "zh-CN",
+  "captionStyle": {
+    "align": "center",
+    "anchor": "bottom",
+    "background": true,
+    "backgroundColor": "#000000bf",
+    "color": "#ffffffff",
+    "font": "Heiti SC",
+    "lineSpacing": 1.25,
+    "margin": 0.07999999821186066,
+    "outline": 0.0,
+    "outlineColor": "#000000ff",
+    "size": 32.0
+  },
+  "captionTimes": [
+    [
+      "0",
+      "508032000000"
+    ]
+  ],
+  "revisedStyleLanguageTimesPreserved": true,
+  "refusals": [
+    {
+      "name": "missing-font",
+      "actual": {
+        "error": "missing_font: FilmCraft Definitely Missing Font66"
+      },
+      "successfulManifest": false
+    },
+    {
+      "name": "caption-out",
+      "actual": {
+        "error": "caption_out_of_range"
+      },
+      "successfulManifest": false
+    }
+  ],
+  "sourceBytesPreserved": true,
+  "driverSha256": "484d9ddf13b70f4f9182f823dd748169c1b56fc8fbfd49aba06e15a7b65626d9"
+}

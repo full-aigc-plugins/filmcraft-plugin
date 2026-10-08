@@ -1,0 +1,49 @@
+{
+  "result": "EXPECTED_BEHAVIOR_FAILURE",
+  "scope": "Actual public historicalcraft.3 binary with its original source32 immutable lock; native real Whisper unavailable, no models downloaded",
+  "sourceRef": "v0.1.0-dev.32",
+  "sourceSha": "057ffcd1af35a5ba138cc6dbc955d2a7ea497583",
+  "runtimeVersion": "0.2.0-craft.3",
+  "runtimeSha256": "d74aa4639e7f012e2273cea346037a15a02a245a516020c86bf6fb2200a6bb3b",
+  "lockSha256": "90123e2259c79175ef004127a26c1043ac5f8343587473efa38a92b6319c0a98",
+  "actual": {
+    "available": false,
+    "default": "whisper-base",
+    "dir": "[HOME]/Library/Application Support/FilmCraft/models",
+    "models": [
+      {
+        "description": "39 M parameters. Fastest; fine for clear speech, rough on noisy audio.",
+        "id": "whisper-tiny",
+        "installed": false,
+        "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+        "multilingual": true,
+        "name": "Whisper tiny (multilingual)",
+        "size": 153547868,
+        "source": "https://huggingface.co/openai/whisper-tiny"
+      },
+      {
+        "description": "74 M parameters. The default: a good balance of speed and accuracy.",
+        "id": "whisper-base",
+        "installed": false,
+        "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+        "multilingual": true,
+        "name": "Whisper base (multilingual)",
+        "size": 292890192,
+        "source": "https://huggingface.co/openai/whisper-base"
+      },
+      {
+        "description": "244 M parameters. Most accurate here; about 4× slower than base.",
+        "id": "whisper-small",
+        "installed": false,
+        "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+        "multilingual": true,
+        "name": "Whisper small (multilingual)",
+        "size": 969481381,
+        "source": "https://huggingface.co/openai/whisper-small"
+      }
+    ]
+  },
+  "expected": "FC-DM-004-ASR requires real Whisper available on first-use",
+  "publicColdInstall": true,
+  "driverSha256": "d3ce20ebfcd32e89b142f30dc89b166d583ccd1fb8cc189d147ba7a3b97e16c8"
+}

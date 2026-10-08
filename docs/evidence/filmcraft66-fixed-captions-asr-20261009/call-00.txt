@@ -1,0 +1,37 @@
+{
+  "available": true,
+  "default": "whisper-base",
+  "dir": "[WORK]/fixed66-real-asr/declared-data/models",
+  "models": [
+    {
+      "description": "39 M parameters. Fastest; fine for clear speech, rough on noisy audio.",
+      "id": "whisper-tiny",
+      "installed": false,
+      "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+      "multilingual": true,
+      "name": "Whisper tiny (multilingual)",
+      "size": 153547868,
+      "source": "https://huggingface.co/openai/whisper-tiny"
+    },
+    {
+      "description": "74 M parameters. The default: a good balance of speed and accuracy.",
+      "id": "whisper-base",
+      "installed": false,
+      "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+      "multilingual": true,
+      "name": "Whisper base (multilingual)",
+      "size": 292890192,
+      "source": "https://huggingface.co/openai/whisper-base"
+    },
+    {
+      "description": "244 M parameters. Most accurate here; about 4× slower than base.",
+      "id": "whisper-small",
+      "installed": false,
+      "license": "MIT (OpenAI Whisper weights); Hugging Face conversion: Apache-2.0",
+      "multilingual": true,
+      "name": "Whisper small (multilingual)",
+      "size": 969481381,
+      "source": "https://huggingface.co/openai/whisper-small"
+    }
+  ]
+}

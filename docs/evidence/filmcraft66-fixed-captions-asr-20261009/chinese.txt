@@ -1,0 +1,7 @@
+test_isolated_skill_installs_renders_chinese_and_preserves_spoken_audio (fixed66_chinese.ChineseFirstUseTests.test_isolated_skill_installs_renders_chinese_and_preserves_spoken_audio) ... ok
+test_subtitle_skill_has_own_chinese_template (fixed66_chinese.ChineseTemplateContractTests.test_subtitle_skill_has_own_chinese_template) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 12.362s
+
+OK

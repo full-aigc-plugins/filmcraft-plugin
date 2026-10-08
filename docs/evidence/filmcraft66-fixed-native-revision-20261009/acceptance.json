@@ -1,0 +1,115 @@
+{
+  "schema": "filmcraft-fixed-domain-acceptance/v1",
+  "result": "PASS",
+  "requirement": "FC-DM-005",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "platform": "macOS arm64",
+  "host": "Codex0.147.0 isolated public-tag install",
+  "mode": "headless",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-005-P",
+      "result": "PASS",
+      "evidence": [
+        "motion-lut.json",
+        "native-harness.json",
+        "native-harness-observations.json"
+      ],
+      "observed": "Actual immutable installed workflow saves/reopens .fcproj; stable target IDs drive local speed/gain/motion revision; full semantic diff/dependency hashes and source/othertrack preservation,independent current review andoneattempt/no replay verified. Actual installed Harness scoped native loops/budget-best retain priorcheckpoint."
+    },
+    {
+      "id": "FC-DM-005-N",
+      "result": "PASS",
+      "evidence": [
+        "non-target-negative.json"
+      ],
+      "observed": "Own controlled candidate derived from actual native project appliesauthorizedaudio gain but altersnon-target videoenabled; current native binary reopensit,installed scope guard rejectsrevision_scope_violation. Valid target-only change passes; originalcheckpoint hash remains identical."
+    },
+    {
+      "id": "FC-DM-005-MOTION-LUT",
+      "result": "PASS",
+      "evidence": [
+        "motion-lut.json",
+        "motion-units.json"
+      ],
+      "observed": "Actual installed motion skill copiedalone/cold public nativeinstall; explicit clip/keyframe decimal ticks/registered LUTSHA;2nativekeyframes and LUTpixels preserved after save/reopen/moved delivery/originalLUTremoval. Originalpackage/audio/captions/otherLumetri preserved; all24frames anddecodedaudio verified; malformedunknown/nonfinite/targetless/unregistered/corrupted LUT refuse. Historical source6 real animation refusal reproduced."
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "motion-lut.json",
+      "originalSha256": "05ad2aedb5586bc27d10d1823ee3348a8425f55eb8795e1524215d822fb1d3fc",
+      "projectionSha256": "919cb7e3b7de7b55b744f7f52a2dde25daedcaf346c37fcf1338016f3581f465"
+    },
+    {
+      "path": "motion-lut.txt",
+      "originalSha256": "3278f6ed65f48c17a63fc3aa5388ef07931d54b92f259fe0fbb935b5c7932d06",
+      "projectionSha256": "3278f6ed65f48c17a63fc3aa5388ef07931d54b92f259fe0fbb935b5c7932d06"
+    },
+    {
+      "path": "native-harness.json",
+      "originalSha256": "93637f6877c514b28805f87355a8c0c2be35ca73791217e7336d825247c1856c",
+      "projectionSha256": "93637f6877c514b28805f87355a8c0c2be35ca73791217e7336d825247c1856c"
+    },
+    {
+      "path": "native-harness-observations.json",
+      "originalSha256": "2a2809f21017325d138c7d0c6745682071309b16312ed0602329c45132d57e4d",
+      "projectionSha256": "e4136c7d3d0d5a7c48152372d4f5d073dc149a7d06f42067d09eb264385f5cf3"
+    },
+    {
+      "path": "native-harness.txt",
+      "originalSha256": "f4c49cf945b8dc511e011412243afb7e41249ce9d36c2c14eb84b2e7c3a3f98a",
+      "projectionSha256": "f4c49cf945b8dc511e011412243afb7e41249ce9d36c2c14eb84b2e7c3a3f98a"
+    },
+    {
+      "path": "initial-driver-skill-mismatch.txt",
+      "originalSha256": "04368ff2bc15a3f322c3ac1aa263cbd5af211ea64ce7a8c4033ab57066bedb16",
+      "projectionSha256": "45e85ff44a0a4ee7aac739b2a919b71670822a3404af25fcea66720325b1d170"
+    },
+    {
+      "path": "non-target-negative.json",
+      "originalSha256": "798a04f347bdfd0080da1c04997aa13439d156e2af8e6336844a79ea82afc76d",
+      "projectionSha256": "26aac896ef18202b794774331d8754ddf185fb76de5a11f9d5efc439e2b35a01"
+    },
+    {
+      "path": "non-target-producer.ts.txt",
+      "originalSha256": "4c7bc5c4a4b736978f7c1da3bf2eee445c448e3eedec0546668888297216d8fc",
+      "projectionSha256": "517b77f5d787fd9a5247f8ecff19594cb27fd12e78e4ebda72f93459ce22f93d"
+    },
+    {
+      "path": "motion-behavior-red.json",
+      "originalSha256": "3baa1999afb3254eab89a3a80b4481e07ae300223cc00114668557952c2a2c63",
+      "projectionSha256": "0409f2319b8da45ca400187d456d34c0777ccae23c94ac09af0d215dec51e499"
+    },
+    {
+      "path": "motion-units.json",
+      "originalSha256": "906a29bee85992c7561cb0b526f5dba03a76604fdd29970fa887aa54c24de1b2",
+      "projectionSha256": "733a0226e679f42f632caa955da843f81409ee4a195aae5d7ff9e093a0504a2c"
+    },
+    {
+      "path": "motion-units.txt",
+      "originalSha256": "4d87fbcec62418fc381386e1abd78b723ee9bc1ac924e93bc8bc4886f73ab86b",
+      "projectionSha256": "4d87fbcec62418fc381386e1abd78b723ee9bc1ac924e93bc8bc4886f73ab86b"
+    }
+  ],
+  "installedSkillsAndExecutionCodePreserved": true,
+  "notes": "Initial fullHarness driver selectedprojectskill while published recoveryCLI intentionallypinsrouter; source_identity_conflict safelyrefused. Corrected existing fixture usesactual installedrouter andpasses16.356s/no skips. This fixture mismatch is not behavior red; historicalsource6 unsupported explicit animation is behavior red.",
+  "notAccepted": [
+    "all666commands/GUI",
+    "otherhosts/platforms",
+    "separate Art distribution integration",
+    "creative/user acceptance",
+    "complete V1"
+  ],
+  "tasksQualified": [
+    "4.13",
+    "4.14",
+    "4.15"
+  ],
+  "fullV1": "OPEN"
+}

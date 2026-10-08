@@ -1,18 +1,18 @@
 {
   "schema": "filmcraft-current-facts/v1",
   "pluginId": "filmcraft",
-  "pluginVersion": "0.1.0-dev.42",
+  "pluginVersion": "0.1.0-dev.43",
   "sourcePackage": "filmcraft-skills",
-  "sourceRef": "v0.1.0-dev.39",
-  "sourceSha": "6c29e50b5fe85f98a1c5f77977158bb1b00bde5a",
-  "suiteSha256": "2dd02eb4eb3ff2d9d4312b05569f5cfbc22e896a253e5fa528ee2945c33feb80",
+  "sourceRef": "v0.1.0-dev.40",
+  "sourceSha": "2eb9e0f169b3cfea1bf810aa0293c51bdbed4177",
+  "suiteSha256": "6bf59642bb91b19641ea53f1f55d9ee1446bd5fa51c2587cfc9e78081119e1cc",
   "skillCount": 13,
   "commandCount": 666,
   "referenceCatalogIdentity": {
     "path": "skills/filmcraft-use/references/commands.json",
     "version": "0.2.0-craft.4",
-    "binarySha256": "cd30e5bbcdfb7cdc510752de8451600636f926263e83510c619c7b0741b20433",
-    "status": "MISMATCH"
+    "binarySha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+    "status": "MATCH"
   },
   "activeRuntime": {
     "role": "skill-execution-authority",

@@ -1,0 +1,70 @@
+test_ambiguous_missing_or_malformed_tag_results_are_rejected (test_fixed_install.FixedInstallTests.test_ambiguous_missing_or_malformed_tag_results_are_rejected) ... ERROR
+test_foreign_manifest_or_missing_source_digest_is_rejected (test_fixed_install.FixedInstallTests.test_foreign_manifest_or_missing_source_digest_is_rejected) ... ERROR
+test_invalid_or_mutable_ref_fails_before_output_or_host_configuration (test_fixed_install.FixedInstallTests.test_invalid_or_mutable_ref_fails_before_output_or_host_configuration) ... ERROR
+test_remote_annotated_and_lightweight_tags_resolve_to_the_commit (test_fixed_install.FixedInstallTests.test_remote_annotated_and_lightweight_tags_resolve_to_the_commit) ... ERROR
+test_tagged_entry_binds_manifest_source_and_all_skill_digests (test_fixed_install.FixedInstallTests.test_tagged_entry_binds_manifest_source_and_all_skill_digests) ... ERROR
+
+======================================================================
+ERROR: test_ambiguous_missing_or_malformed_tag_results_are_rejected (test_fixed_install.FixedInstallTests.test_ambiguous_missing_or_malformed_tag_results_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py'
+
+======================================================================
+ERROR: test_foreign_manifest_or_missing_source_digest_is_rejected (test_fixed_install.FixedInstallTests.test_foreign_manifest_or_missing_source_digest_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py'
+
+======================================================================
+ERROR: test_invalid_or_mutable_ref_fails_before_output_or_host_configuration (test_fixed_install.FixedInstallTests.test_invalid_or_mutable_ref_fails_before_output_or_host_configuration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py'
+
+======================================================================
+ERROR: test_remote_annotated_and_lightweight_tags_resolve_to_the_commit (test_fixed_install.FixedInstallTests.test_remote_annotated_and_lightweight_tags_resolve_to_the_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py'
+
+======================================================================
+ERROR: test_tagged_entry_binds_manifest_source_and_all_skill_digests (test_fixed_install.FixedInstallTests.test_tagged_entry_binds_manifest_source_and_all_skill_digests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 15, in setUp
+    spec.loader.exec_module(self.verifier)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (errors=5)

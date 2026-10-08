@@ -1,0 +1,937 @@
+{
+  "schema": "filmcraft-harness-native-candidate/v1",
+  "result": "PASS",
+  "nodeVersion": "v24.18.0",
+  "scope": "source candidate internal Node/SQLite adapter and actual Python workflow; not host, pinned install, quality or full Harness acceptance",
+  "sourceRevision": "2eb9e0f169b3cfea1bf810aa0293c51bdbed4177",
+  "sourceTreeSha256": "5e59a5e63eacea8b9458988759ce72148101d55d9a56819d2a4bb4a1822e24dc",
+  "runtimeIdentity": {
+    "pluginId": "filmcraft",
+    "pluginVersion": "0.1.0-dev.43",
+    "cliVersion": "0.2.0-craft.4",
+    "sha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "450548b2ca12c7e5a497109e7ac26ed925bd5b0616f808c88791bbbe9d839452"
+  },
+  "taskId": "task-1",
+  "attemptId": "178e186f-aef5-490b-8d1e-5c02159d6f1d",
+  "revisionAttemptId": "ab7e1ced-6b32-436c-b10b-b6e44bcf6d83",
+  "createState": "verifying",
+  "revisionState": "verifying",
+  "idempotentReuse": true,
+  "actualProjectSha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+  "revisedProjectSha256": "d2e07bb5421c570549afdc4e936eb5e42c2ec74f843985ccd1b34ac6938b93e2",
+  "originalPreserved": true,
+  "outputParentAliasVerified": true,
+  "processesStopped": true,
+  "receipts": [
+    {
+      "kind": "delivery",
+      "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+      "status": "linked",
+      "summary": {
+        "attemptId": "178e186f-aef5-490b-8d1e-5c02159d6f1d",
+        "capabilityIdentity": "match",
+        "creativeAcceptance": "NOT_RUN",
+        "dependencies": [
+          {
+            "assetRef": {
+              "assetId": "still",
+              "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+              "version": "fixture-v1"
+            },
+            "kind": "media",
+            "missingReason": null,
+            "packaged": true
+          }
+        ],
+        "files": {
+          "audio-check.json": {
+            "bytes": 206,
+            "sha256": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a"
+          },
+          "capabilities.json": {
+            "bytes": 320108,
+            "sha256": "969ca67cafc98b01f4fa6617f1bd0ac8710d8ddcd997155be10a85171357f8c4"
+          },
+          "captions.json": {
+            "bytes": 38,
+            "sha256": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5"
+          },
+          "decode.txt": {
+            "bytes": 100,
+            "sha256": "45157ed74d9d557f180cfdf40131c068d0d0eed40cce78b79f66a3f965d5eb52"
+          },
+          "exchange-loss.json": {
+            "bytes": 3320,
+            "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06"
+          },
+          "export-probe.json": {
+            "bytes": 646,
+            "sha256": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852"
+          },
+          "film.mp4": {
+            "bytes": 42814,
+            "sha256": "73bb18aa66928337592ece4485972b8f03de6038313883695acdccd140b3a0f8"
+          },
+          "frame-0000.png": {
+            "bytes": 221,
+            "sha256": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07"
+          },
+          "native.json": {
+            "bytes": 5308,
+            "sha256": "4c98b751bae20c036e993329b26409e23aeb4fe1ed29011e290793976e683643"
+          },
+          "operations.json": {
+            "bytes": 56427,
+            "sha256": "e6f81d188a1a4592dd5cee80f64e472468cccede30caa34f257feefe3009c937"
+          },
+          "plan.json": {
+            "bytes": 1164,
+            "sha256": "7c00fe20ed6ff1fde9ca7210ebf14b5190489b163ac1fb14c56e01e00aa16e90"
+          },
+          "project.fcproj": {
+            "bytes": 4823,
+            "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d"
+          },
+          "still.png": {
+            "bytes": 113,
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+          }
+        },
+        "format": "filmcraft-delivery/v1",
+        "inputIdentity": "match",
+        "nativePlanHash": "77d645e0ff28eaa4bf74e8f3572b3e03f5f2892a85a22b9d3dadd605dadce17a",
+        "nativePlanIdentity": "match",
+        "path": "manifest.json",
+        "planHash": "77d645e0ff28eaa4bf74e8f3572b3e03f5f2892a85a22b9d3dadd605dadce17a",
+        "projectRevision": "match",
+        "publicPlanIdentity": "match",
+        "runtimeIdentity": "match",
+        "sourceRevision": "2eb9e0f169b3cfea1bf810aa0293c51bdbed4177",
+        "sourceTreeSha256": "5e59a5e63eacea8b9458988759ce72148101d55d9a56819d2a4bb4a1822e24dc",
+        "taskId": "task-1",
+        "technicalAcceptance": "NOT_RUN",
+        "userAcceptance": "NOT_RUN"
+      }
+    },
+    {
+      "kind": "output-execution",
+      "sha256": "af967605453259ac0298eb8feba809653ceec1269a2ed2a0a7a30c3a3f647f0b",
+      "status": "linked",
+      "summary": {
+        "attemptId": "178e186f-aef5-490b-8d1e-5c02159d6f1d",
+        "compiledPlanIdentity": "match",
+        "creativeAcceptance": "NOT_RUN",
+        "format": "filmcraft-output-execution/v1",
+        "inputIdentity": "match",
+        "nativeOutcome": "finished",
+        "nativePlanHash": "77d645e0ff28eaa4bf74e8f3572b3e03f5f2892a85a22b9d3dadd605dadce17a",
+        "nativePlanIdentity": "match",
+        "path": ".filmcraft-execution-40b25c51abfcc87d42a5f0769c973dcc89d3585b8772a7285374d9342f1d9427.json",
+        "planHash": "77d645e0ff28eaa4bf74e8f3572b3e03f5f2892a85a22b9d3dadd605dadce17a",
+        "projectRevision": "match",
+        "runtimeIdentity": "match",
+        "sourceRevision": "2eb9e0f169b3cfea1bf810aa0293c51bdbed4177",
+        "sourceTreeSha256": "5e59a5e63eacea8b9458988759ce72148101d55d9a56819d2a4bb4a1822e24dc",
+        "targetIdentity": "match",
+        "taskId": "task-1",
+        "technicalAcceptance": "NOT_RUN",
+        "userAcceptance": "NOT_RUN"
+      }
+    }
+  ],
+  "publicArtifacts": [
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:fcd0139f713ecb5b30ea7584572a106fd06c8094f332ac3fd5be97519ce8b8d9",
+      "version": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "sha256": "c2399455cedfcbb2f599659e8c66fef3caa8e93aff8099f248e43128754ce68a",
+      "bytes": 206,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "audio-check.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:3c5bbe1910d457ab600d741b4c6c02b68349655c8535dd7782e962406ff5469c",
+      "version": "969ca67cafc98b01f4fa6617f1bd0ac8710d8ddcd997155be10a85171357f8c4",
+      "sha256": "969ca67cafc98b01f4fa6617f1bd0ac8710d8ddcd997155be10a85171357f8c4",
+      "bytes": 320108,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "capabilities.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:9c13093a4b6638ba7c0c4bc7d8c7a8e826d476237000dfe36c8fd6371569c105",
+      "version": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "sha256": "9e645b13295080f54a857c9378efbb047d34eefaf8a68c0fa3b73d8e3ad42eb5",
+      "bytes": 38,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "captions.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:51284f22354dcd56444f99977844730a5bf828f7c0d475e0337172c502a8410d",
+      "version": "45157ed74d9d557f180cfdf40131c068d0d0eed40cce78b79f66a3f965d5eb52",
+      "sha256": "45157ed74d9d557f180cfdf40131c068d0d0eed40cce78b79f66a3f965d5eb52",
+      "bytes": 100,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "decode.txt"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+      "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+      "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+      "bytes": 3320,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "exchange-loss.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:1d9ce260e60546deac2ce8d44bfc4753fc178e153ab5fd881fd24b60e9ba733f",
+      "version": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852",
+      "sha256": "93f3ab9f2da5d388a7e8d50210fa8d03a27a8a32fdde7208bd229d14a6272852",
+      "bytes": 646,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "export-probe.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:7a8f5094848db7cd01321c9ac00b515dddccaf29afd91ed57a8b220aac2b9018",
+      "version": "73bb18aa66928337592ece4485972b8f03de6038313883695acdccd140b3a0f8",
+      "sha256": "73bb18aa66928337592ece4485972b8f03de6038313883695acdccd140b3a0f8",
+      "bytes": 42814,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "film.mp4"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:65292287eb2e4d85ce6170910d1699661a0d95f3efa2ff3c803a8187f984a5aa",
+      "version": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07",
+      "sha256": "eebecfedf7ec0398c89ed250381eeed28c266a87b20d2c3c5ad872f893775c07",
+      "bytes": 221,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "frame-0000.png"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:4ff1065f48c1989df00c79b56d011ecb44d93ea43277f2c133b113935ba2d12b",
+      "version": "4c98b751bae20c036e993329b26409e23aeb4fe1ed29011e290793976e683643",
+      "sha256": "4c98b751bae20c036e993329b26409e23aeb4fe1ed29011e290793976e683643",
+      "bytes": 5308,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "native.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:5a1f903f3d0e58d89e59f24a41b90b3e858b4b8d967a89f54a6c2cd8cf4f105c",
+      "version": "e6f81d188a1a4592dd5cee80f64e472468cccede30caa34f257feefe3009c937",
+      "sha256": "e6f81d188a1a4592dd5cee80f64e472468cccede30caa34f257feefe3009c937",
+      "bytes": 56427,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "operations.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:23222b874e506a35a7c3e7717d7103cb9d4691ad144175c65fc418bc6d56e7b4",
+      "version": "7c00fe20ed6ff1fde9ca7210ebf14b5190489b163ac1fb14c56e01e00aa16e90",
+      "sha256": "7c00fe20ed6ff1fde9ca7210ebf14b5190489b163ac1fb14c56e01e00aa16e90",
+      "bytes": 1164,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "plan.json"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+      "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+      "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+      "bytes": 4823,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "project.fcproj"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "filmcraft:592d2ec9a55e1722c28fe5a0403c1f80a11243ac5641b88fac6837c4adc3b75f",
+      "version": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+      "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+      "bytes": 113,
+      "mediaType": "application/octet-stream",
+      "producerTaskId": "task-1",
+      "sourceRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "filmcraft:c02d2b8a541195b9870c402e3409477baf968e168e89c637f25b2024966fc2e7",
+        "version": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "sha256": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+        "location": "project.fcproj"
+      },
+      "renditions": [],
+      "dependencies": [
+        {
+          "assetRef": {
+            "assetId": "still",
+            "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+            "version": "fixture-v1"
+          },
+          "kind": "media",
+          "missingReason": null,
+          "packaged": true
+        }
+      ],
+      "technicalMetadata": {},
+      "lossReportRef": {
+        "assetId": "filmcraft:bda21cb9077433467d434a804d4ce814862331d9ad15df1c6ec0d88e272b03ad",
+        "version": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "sha256": "db1d60520d497749090c8ef1724d013e5a7f4625fb36bb77331fadd060f43c06",
+        "location": "exchange-loss.json"
+      },
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:delivery",
+          "version": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "sha256": "025735b8c5c37f239dbffebe2f3fbe7315ff73738ceddb397082798fc181198b",
+          "location": "manifest.json"
+        }
+      ],
+      "location": "still.png"
+    }
+  ],
+  "publicTasks": [
+    {
+      "protocolVersion": "craft-task/v1",
+      "taskId": "task-1",
+      "idempotencyKey": "request-1",
+      "planHash": "77d645e0ff28eaa4bf74e8f3572b3e03f5f2892a85a22b9d3dadd605dadce17a",
+      "inputRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "expectedRevision": null,
+      "runtimeIdentity": {
+        "capabilitySnapshotSha256": "450548b2ca12c7e5a497109e7ac26ed925bd5b0616f808c88791bbbe9d839452",
+        "cliVersion": "0.2.0-craft.4",
+        "mode": "headless",
+        "pluginId": "filmcraft",
+        "pluginVersion": "0.1.0-dev.43",
+        "sha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "authorizationRef": "grant-1",
+      "budget": {
+        "currency": "USD",
+        "maxMinorUnits": 0,
+        "maxRevisions": 1,
+        "maxExternalCalls": 0
+      },
+      "deadline": "2026-10-08T12:20:06.683Z",
+      "payload": {
+        "nativePlanHash": "77d645e0ff28eaa4bf74e8f3572b3e03f5f2892a85a22b9d3dadd605dadce17a",
+        "schemaVersion": "filmcraft-native-workflow/v1"
+      }
+    },
+    {
+      "protocolVersion": "craft-task/v1",
+      "taskId": "revision-1",
+      "idempotencyKey": "revision-request",
+      "planHash": "f060cc4c7dc8947b9839b6b5bc8ed59fe9b89c2218c6cf925e9f6c2f2b815ae9",
+      "inputRefs": [
+        {
+          "assetId": "still",
+          "sha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+          "version": "fixture-v1"
+        }
+      ],
+      "expectedRevision": "a3f7fc38bde3e92e97f7e7de5a1e67535701b0c60e7a25f9a17c8c575450bb8d",
+      "runtimeIdentity": {
+        "capabilitySnapshotSha256": "b60eef0ba3d468afe71d9317b772af07afed105aa57d24867a61aad7dc54a9cf",
+        "cliVersion": "0.2.0-craft.4",
+        "mode": "headless",
+        "pluginId": "filmcraft",
+        "pluginVersion": "0.1.0-dev.43",
+        "sha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "authorizationRef": "grant-1",
+      "budget": {
+        "currency": "USD",
+        "maxMinorUnits": 0,
+        "maxRevisions": 1,
+        "maxExternalCalls": 0
+      },
+      "deadline": "2026-10-08T12:20:06.683Z",
+      "payload": {
+        "nativePlanHash": "f060cc4c7dc8947b9839b6b5bc8ed59fe9b89c2218c6cf925e9f6c2f2b815ae9",
+        "schemaVersion": "filmcraft-native-workflow/v1"
+      }
+    }
+  ],
+  "recovery": {
+    "injected": "receipt transfer lost after actual native export",
+    "inspection": {
+      "schema": "filmcraft-inspection/v1",
+      "taskId": "lost-reply",
+      "task": {
+        "state": "reconciling",
+        "epoch": 2,
+        "attemptId": "0f296fc0-cec7-430d-a69a-1f08feca77ca"
+      },
+      "process": {
+        "status": "stopped",
+        "pid": 72832
+      },
+      "bindingSha256": "c2686af727b227aeefd455e8b968440794d33195137e372736370e74c7ccd881",
+      "contentSha256": "f098a96c759269f75b926504a4090b77a683c68fb2396bd267dfd2121ef7a268",
+      "receipts": {
+        "delivery": "af325a9e688d3f5ffbf06919534aa643993bcdb2cfbc9073389d586e0cb0dde9",
+        "execution": "e3a5d174b2fc304c6ca84453cfdaad7ee800f1e82075cb7711df30f1dca4c77c"
+      },
+      "replayAllowed": false,
+      "ledgerIdentity": {
+        "database": "1fb00422b4c1ccd5b14abbdd19a59dfceb0c69f39326949327950980a6c3e2f6",
+        "wal": "e21d46c2ab7a8c0768fb67872e0aeb45e1b47fc8525a70989e349f7ee13c9507"
+      },
+      "diagnosis": "executed",
+      "error": null,
+      "observedAt": "2026-10-08T11:20:09.192Z",
+      "evidenceSha256": "168b799cdf291f26b9cc06993a0a0593367880ee58fd7e2df99ec889a7bf08a3"
+    },
+    "state": "verifying",
+    "attemptId": "0f296fc0-cec7-430d-a69a-1f08feca77ca",
+    "recoveryId": "433d58a7-74a5-4db2-b670-e9ffb8b900c6",
+    "replayed": false,
+    "readonlyFilesPreserved": true,
+    "nativeFilesPreserved": true,
+    "originalAttemptCount": 1,
+    "idempotentReuse": true,
+    "intents": [
+      {
+        "intent_id": "433d58a7-74a5-4db2-b670-e9ffb8b900c6",
+        "task_id": "lost-reply",
+        "attempt_id": "0f296fc0-cec7-430d-a69a-1f08feca77ca",
+        "epoch": 3,
+        "owner": "b091a55e-4575-4ae0-9555-5cfed5410edc",
+        "lease_until": 1791458439248,
+        "evidence_sha256": "168b799cdf291f26b9cc06993a0a0593367880ee58fd7e2df99ec889a7bf08a3",
+        "state": "applied",
+        "completion_sha256": "b74db62e42f0d4e5578d73b3ab7cdf484d170470003095faf8852e119fde671b",
+        "reason": null
+      }
+    ]
+  },
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN",
+  "authScopeValidation": "HOST_REQUIRED",
+  "budgetEnforcement": "NOT_IMPLEMENTED"
+}

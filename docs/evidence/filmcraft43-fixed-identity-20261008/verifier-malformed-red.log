@@ -1,0 +1,64 @@
+test_ambiguous_missing_or_malformed_tag_results_are_rejected (test_fixed_install.FixedInstallTests.test_ambiguous_missing_or_malformed_tag_results_are_rejected) ... ok
+test_foreign_manifest_or_missing_source_digest_is_rejected (test_fixed_install.FixedInstallTests.test_foreign_manifest_or_missing_source_digest_is_rejected) ... ok
+test_installed_executable_content_and_path_escape_are_rejected_without_writes (test_fixed_install.FixedInstallTests.test_installed_executable_content_and_path_escape_are_rejected_without_writes) ... ok
+test_invalid_or_mutable_ref_fails_before_output_or_host_configuration (test_fixed_install.FixedInstallTests.test_invalid_or_mutable_ref_fails_before_output_or_host_configuration) ... ok
+test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) ... 
+  test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock=None) ... ERROR
+  test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock=[]) ... ERROR
+  test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock={'version': 1, 'sources': [None]}) ... ERROR
+  test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock={'version': 1, 'sources': ['foreign']}) ... ERROR
+test_remote_annotated_and_lightweight_tags_resolve_to_the_commit (test_fixed_install.FixedInstallTests.test_remote_annotated_and_lightweight_tags_resolve_to_the_commit) ... ok
+test_tagged_entry_binds_manifest_source_and_all_skill_digests (test_fixed_install.FixedInstallTests.test_tagged_entry_binds_manifest_source_and_all_skill_digests) ... ok
+
+======================================================================
+ERROR: test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 57, in test_malformed_source_objects_are_rejected_as_identity_errors
+    self.verifier.entry_from_objects(manifest, json.dumps(lock).encode(), 'a' * 40, ref)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py", line 45, in entry_from_objects
+    or manifest.get('version') != ref.removeprefix('v') or lock.get('version') != 1
+                                                           ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+======================================================================
+ERROR: test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 57, in test_malformed_source_objects_are_rejected_as_identity_errors
+    self.verifier.entry_from_objects(manifest, json.dumps(lock).encode(), 'a' * 40, ref)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py", line 45, in entry_from_objects
+    or manifest.get('version') != ref.removeprefix('v') or lock.get('version') != 1
+                                                           ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+
+======================================================================
+ERROR: test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock={'version': 1, 'sources': [None]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 57, in test_malformed_source_objects_are_rejected_as_identity_errors
+    self.verifier.entry_from_objects(manifest, json.dumps(lock).encode(), 'a' * 40, ref)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py", line 47, in entry_from_objects
+    or source.get('package') != 'filmcraft-skills'
+       ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+======================================================================
+ERROR: test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) (lock={'version': 1, 'sources': ['foreign']})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/tests/test_fixed_install.py", line 57, in test_malformed_source_objects_are_rejected_as_identity_errors
+    self.verifier.entry_from_objects(manifest, json.dumps(lock).encode(), 'a' * 40, ref)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[USER_HOME]/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/scripts/verify_fixed_install.py", line 47, in entry_from_objects
+    or source.get('package') != 'filmcraft-skills'
+       ^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.124s
+
+FAILED (errors=4)

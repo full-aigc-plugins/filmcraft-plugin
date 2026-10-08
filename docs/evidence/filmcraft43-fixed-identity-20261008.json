@@ -1,0 +1,49 @@
+{
+  "schema": "filmcraft-fixed-identity-acceptance/v1",
+  "result": "NOT_RUN",
+  "pluginRef": "v0.1.0-dev.43",
+  "skillSourceRef": "v0.1.0-dev.40",
+  "skillSourceSha": "2eb9e0f169b3cfea1bf810aa0293c51bdbed4177",
+  "scope": "pending actual fixed installation, current identity, tamper rejection and history-preservation checks",
+  "baseline42": {
+    "result": "PASS",
+    "skills": 13,
+    "loadingErrors": 0,
+    "executableFiles": 18
+  },
+  "notAccepted": [
+    "task 9.6 until fixed dev.43 evidence completes",
+    "complete release/host/runtime/V1 acceptance"
+  ],
+  "candidateTests": {
+    "python": {
+      "passed": 36,
+      "skipped": 0
+    },
+    "native": {
+      "passed": 33,
+      "skipped": 0
+    },
+    "protocol": {
+      "tasks": 2,
+      "artifacts": 13
+    }
+  },
+  "candidateFiles": {
+    "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+    "tests/test_fixed_install.py": "baa406a6273ee50b59f1db19198f7983f0723355b471544f25136473dfb250e4",
+    "plugin.json": "9f98f287f3f6a778e7d037c7e03e306e8a1e4440847f5e8e68edfd57ae41ec09",
+    "package.json": "c87ace17ae945ac65d7bdcb1442f099027c0a77798cc3d957d049c996e3b5fb9",
+    "skills.lock.json": "041689a71bf2bb6c9178c79243892394f925b23515772c0f6ebdc8feaf003c37",
+    "docs/current-facts.json": "b83a0c33a4211d315663249208f5be07f17851d49764cf32bdc2637ad121e4c5"
+  },
+  "evidenceFiles": {
+    "docs/evidence/filmcraft43-fixed-identity-20261008/native-candidate.log": "54fe8cd57808b98eb8c92f1af4723efdad1d793ec79f41d1451df0cf4edc6959",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/verifier-malformed-red.log": "846804f03432d4c5f49826b24e43f51f573627618b6da7fc5523b9a6889f96a4",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/verifier-red.log": "ed9b80fe405c731049f9c8ec5d6f8dd182273f185f7690a02f20dba7cfcf63c7",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/python-green.log": "b192bf3975b6da2691974ea1219c777231d14332fce8c06ad7f920ae050ef88b",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/baseline42-host.json": "f5a66e323d698703f027b572b580a507476b7408983702c05f70bae725891e5a",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/protocol.json": "04b59538a0a29d334e1d086103931fc7fabc98caad2eee7535f0ee402dadc572",
+    "docs/evidence/filmcraft43-fixed-identity-20261008/native-candidate.json": "b1d0365f52121e8a463a69b120bd08ae8104fb5fad16e2d367da5d091b05ffa3"
+  }
+}

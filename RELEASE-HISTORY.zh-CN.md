@@ -2,6 +2,8 @@
 
 以下记录逐字移自 README 前部，描述各自版本，不作为当前安装合同。
 
+开发快照 `0.1.0-dev.43` 锁定源 dev.40 / `2eb9e0f169b3cfea1bf810aa0293c51bdbed4177`，通过实际原生重采集修复目录身份为 MATCH，参数行和已有子集保持不变。新增隔离固定安装验证，复用 ArtCraft 固定辅助函数，支持附注标签及执行文件身份核验。本地 Python 36 项通过，原生 Harness 33 项无跳过通过。dev.43 固定验收在 [身份报告](docs/evidence/filmcraft43-fixed-identity-20261008.json) 单独记录；发布本身不关闭 9.6 或完整宿主/V1 验收。
+
 开发发行 `0.1.0-dev.42` 锁定技能源 `v0.1.0-dev.39` / `6c29e50b5fe85f98a1c5f77977158bb1b00bde5a`，包含 Dreamina 对照优化规范/任务、Node/SQLite 回执血缘、只读诊断及有界同尝试修复。本地插件 Python 28 项通过；独立源和内置快照原生回归各 33 项通过，零跳过。实际导出后回复丢失修复保全文件、不重放原生工作；2 个任务与 13 个产物通过固定公共 schema。见 [绑定报告](docs/evidence/filmcraft-dev42-release-20261008.json)。宿主安装、完整恢复/备份/回退、授权、预算/取消、质量及完整 V1 仍开放，发布不等于验收。
 
 固定Film插件31／源29首用验收通过：宿主发现64技能，加载错误0；13个Film技能各自独立空运行时安装公开原生CLI并查询666命令；7项安装后执行保护及1项实际原生创建／导出／重开／返工通过。公开源ZIP与Git归档逐字节一致，全部64安装摘要保持。Art接入、其他领域保护及完整任务／首版仍开放。 [Evidence / 证据](docs/evidence/filmcraft31-fixed-output-execution-first-use-20261007.json).

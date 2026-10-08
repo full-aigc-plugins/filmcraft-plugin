@@ -1,0 +1,269 @@
+{
+  "schema": "filmcraft-fixed-parameter-harness/v1",
+  "result": "PASS",
+  "fixedRef": "v0.1.0-dev.68",
+  "sourceRef": "v0.1.0-dev.51",
+  "rows": [
+    {
+      "skill": "filmcraft-cli",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "e4b44b9f37af5a8fd1ff48489bbe70a1464712a15a52109a25e3af599b9af765"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "e4b44b9f37af5a8fd1ff48489bbe70a1464712a15a52109a25e3af599b9af765"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "7d988f741e4eb9fbd374cdbfc26322e0cf9b7e572bf98223acba1cad138f44f1"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "7d988f741e4eb9fbd374cdbfc26322e0cf9b7e572bf98223acba1cad138f44f1"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "163b38f7fc37513c85718c5a9d022f044b41d8bbfe1709143b1d485a4d4e3896"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "163b38f7fc37513c85718c5a9d022f044b41d8bbfe1709143b1d485a4d4e3896"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "a248c6003f0d3652f107408e75b928f11b06150d9a9d40730e86c3065d8f14fe"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "a248c6003f0d3652f107408e75b928f11b06150d9a9d40730e86c3065d8f14fe"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "dfe58e64f4968c60aa53da19ca92166539af005ff16170046270b416d0a65b5b"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "dfe58e64f4968c60aa53da19ca92166539af005ff16170046270b416d0a65b5b"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "8fb8baca990306f106b41b9d5fc7e24e5dc72cc27e28a09f02c9cc95c3bce49a"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "8fb8baca990306f106b41b9d5fc7e24e5dc72cc27e28a09f02c9cc95c3bce49a"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "73631e1fa63f6a886853e3656af556623e849a780647a6c4059b7f963953dcaf"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "73631e1fa63f6a886853e3656af556623e849a780647a6c4059b7f963953dcaf"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "78f0ece7e3ae70953eaa26e0f04142a5adf00977de0c60a583e815165ddd4e53"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "78f0ece7e3ae70953eaa26e0f04142a5adf00977de0c60a583e815165ddd4e53"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "916a5449cb20aca87dc82d011f115993b791cb24d9948bc6f77789cae29202d8"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "916a5449cb20aca87dc82d011f115993b791cb24d9948bc6f77789cae29202d8"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "ed3f764f4f8c0ce64dfbe343e9ad010e0d425f2811e214ce6d594b21b8535b83"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "ed3f764f4f8c0ce64dfbe343e9ad010e0d425f2811e214ce6d594b21b8535b83"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "06f97f82665be3977e625ed87744671707ec59e63f853c7987eb96cc730b5001"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "06f97f82665be3977e625ed87744671707ec59e63f853c7987eb96cc730b5001"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "3b4f91419afc8def027403f8e581410eb7894f6055a175d5962d07263467fb78"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "3b4f91419afc8def027403f8e581410eb7894f6055a175d5962d07263467fb78"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "field",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "3710f4486edf4c506ee76e51a729fda20dcba48f4c37d4683cc8b3f9057483ce"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "move",
+      "result": "PASS",
+      "harnessError": "native_preflight_failed",
+      "outputCreated": false,
+      "runtimeCreated": false,
+      "installedSkillPreserved": true,
+      "sourceTreeSha256": "3710f4486edf4c506ee76e51a729fda20dcba48f4c37d4683cc8b3f9057483ce"
+    }
+  ],
+  "scope": "Installed real PythonWorkflowRunner.prepare refuses26 undefined-parameter inputs before native runtime or output; not full permission qualification"
+}

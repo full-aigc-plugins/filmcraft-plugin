@@ -425,4 +425,6 @@ Developmentcandidate dev.67 pins source50 and rejects undefined workflow-root/op
 
 Fixed public dev.67/source50 installation passes: Codex discovers13 skills without errors;26 public unknown-field refusals and valid native revision/save/reopen pass. Original delivery and all13 installed skill bytes are preserved. Eight full-V1 tasks remain open. [Evidence](docs/evidence/filmcraft67-plan-fields-20261009/summary.json).
 
-Candidate dev.68/source51 rejects undefined domain-wrapper parameter and nested move fields before assets, installation and output; creative text is preserved. Fixed68 installation and complete V1 remain pending;8 tasks stay open.
+Candidate dev.68/source51 rejects undefined domain-wrapper parameter and nested move fields before assets, installation and output; creative text is preserved. Fixed68 installation and bounded parameter acceptance pass; full V1 remains open with8 tasks unchecked.
+
+Fixed68/source51 acceptance:13 installed skills load without errors;26 public and26 installed Harness parameter refusals pass before runtime/output. A valid native subtitle revision/save/reopen preserves creative text, original delivery and all13 skill bytes. Task7.7 is complete;8 original full-V1 tasks remain open. [Evidence](docs/evidence/filmcraft68-parameter-fields-20261009/summary.json).

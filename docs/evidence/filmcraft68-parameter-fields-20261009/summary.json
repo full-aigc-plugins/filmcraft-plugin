@@ -5,8 +5,13 @@
   "sourceSha": "e65dc5b64da8102a242da3e94fbd83caef5a5c7a",
   "sourceChecks": "PASS",
   "sourceBehaviorEvidence": "https://github.com/full-aigc-skills/filmcraft-skills/tree/v0.1.0-dev.51/docs/evidence/source51-parameter-fields-20261009",
-  "fixedInstall": "NOT_RUN",
+  "fixedInstall": "PASS",
   "remainingOpenTasks": 8,
   "fullV1": "NOT_PROVEN",
-  "scope": "Undefined domain wrapper and nested move parameters refused before assets, installation or output; creative text preserved. Full native registry parameters, trusted roots and host secrets remain open."
+  "scope": "Undefined domain wrapper and nested move parameters refused before assets, installation or output; creative text preserved. Full native registry parameters, trusted roots and host secrets remain open.",
+  "fixedPublicRefusals": 26,
+  "fixedHarnessRefusals": 26,
+  "fixedNativeRevision": "PASS",
+  "creativeTextPreserved": true,
+  "originalDeliveryAndInstalled13Preserved": true
 }

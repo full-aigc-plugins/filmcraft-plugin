@@ -97,7 +97,10 @@
     "9.24": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
     "9.25": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
     "9.26": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
-    "9.27": "docs/evidence/filmcraft51-fixed-revision-20261008.json"
+    "9.27": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
+    "9.28": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
+    "9.29": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
+    "9.30": "docs/evidence/filmcraft52-layered-release-20261008/report.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -170,11 +173,14 @@
     "fixedQualityEvidence": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
     "revisionCandidateEvidence": "docs/evidence/filmcraft51-revision-candidate-20261008.json",
     "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
-    "revisionStatus": "tasks9.25-9.27 qualified in fixed installed plugin51/source42:126/126 no skips,49 matrix records including9 revision scenarios, native scoped save/reopen and new independent review, bounded stops and verified best preservation; creative/manual, user acceptance and full V1 remain open with54 tasks"
+    "revisionStatus": "tasks9.25-9.27 qualified in fixed installed plugin51/source42:126/126 no skips,49 matrix records including9 revision scenarios, native scoped save/reopen and new independent review, bounded stops and verified best preservation; creative/manual, user acceptance and full V1 remain open with54 tasks",
+    "fixedLayeredReleaseEvidence": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
+    "layeredReleaseStatus": "tasks9.28-9.30 qualified for current fixed plugin52/source44: mandatory source/plugin CI; installed126/126,273 preflight and32 bounded headless/bridge cases;11 groups30 scenarios180 layer records (28 PASS,152 NOT_RUN); collection PASS, overall NOT_PROVEN, full V1 remains51 tasks open"
   },
   "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
   "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
   "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
   "fixedQualityEvidence": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
-  "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json"
+  "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
+  "fixedLayeredReleaseEvidence": "docs/evidence/filmcraft52-layered-release-20261008/report.json"
 }

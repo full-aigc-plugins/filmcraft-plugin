@@ -1,0 +1,4590 @@
+{
+  "schema": "filmcraft-layered-release-trace/v1",
+  "result": "PASS",
+  "scope": "collection integrity and explicit current layer results, not complete runtime/creative/V1 qualification",
+  "identity": {
+    "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+    "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+    "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+  },
+  "plugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.52",
+    "ref": "v0.1.0-dev.52",
+    "sha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+    "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+    "skillSourceRef": "v0.1.0-dev.44",
+    "pluginManifestSha256": "99939b15e0b5fd47aebf08351c2c9b1f6407100494ae7a7398de95253b931b0b",
+    "skillSha256": "d29a3afe6b598318f50a07c2b1fde44dcdc09596bdae7bb24f30c9ea7b96e35e",
+    "skills": {
+      "filmcraft-use": "d29a3afe6b598318f50a07c2b1fde44dcdc09596bdae7bb24f30c9ea7b96e35e",
+      "filmcraft-cli": "aadecb795112aebeac105068d0089964b22847562fc7796d043c9b3fd8d57f9a",
+      "filmcraft-cli-setup": "c8acdb7e44724db0f8f15f8870edaba10ed20e16b16ab64e481b1dd4ef108c55",
+      "filmcraft-cli-project": "b63d701466090f8ee697382ae0da1c44bf8e6914f2e0ec70c1f86431dbf5d493",
+      "filmcraft-cli-media": "4d595609bb084c5b96ac69b47b6476e5aa678d6841bcbf5af8ef7bfbc17a0d0d",
+      "filmcraft-cli-timeline": "0340c25beb73813981914b7d4aca9c68c9aa235954c87cf130608913d1fff6de",
+      "filmcraft-cli-audio": "bcdf2a4b84b5d25e0d33ed5a72ceee650b065d6ea678d025cc37c7d38f93839c",
+      "filmcraft-cli-subtitles": "01484c0c176f423961bd2b6c93370f700b74d7c84039346e0b5885040acedce3",
+      "filmcraft-cli-color": "5897d702da75ccc8d2f62c267290523aaea1e0963fc0ba3c7b0d966302178cea",
+      "filmcraft-cli-motion": "eb2bb93e9280af05b74f1f7ee65d6462e74f1b3d144e60e099a621367d3dc61e",
+      "filmcraft-cli-export": "a8bc867d06d347893e6af0b0a8c2070760bad437a04d2d0eb4617882d308cc00",
+      "filmcraft-cli-multicam": "512ef24a14dd253def36b2d05b41d2b00b20938df2eb94b8e3caae68267da6b1",
+      "filmcraft-cli-transcript": "c672c5dfbaf16654f3488432dc4c8d9925d561748de1c01914745c9749220669"
+    },
+    "codeFilesSha256": {
+      "package.json": "2a463494cd36b4d1f2ad0f8a557251ef6f6b752220081853fc63fa4f82714659",
+      "scripts/check_release.py": "2c56885534cf63b5d2fc063f9c1bed320d0a9002e7662c3ed4a522b83cc0b1f3",
+      "scripts/collect_release_layers.py": "064b89ad37ae1156bff782fd0e70666ce24e5794ed97c8e8ae1444de26d891f7",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/process_identity.py": "2d239b424b34092e32b8c8105b71672511ad3253ccf177f9b633618e98bd1ae8",
+      "scripts/protocol_fixture.ts": "4729d8ccbb4f9718e00451f02ee1352a4b8484fe0b56ac0846e42fe9fd26fccb",
+      "scripts/release_evidence.py": "05b06b6cc5c7c7536f0067a3d103596026ddba83e553046c40970a79b0450008",
+      "scripts/review_media.py": "2b8b55958a032fc6a625c280a5a9f74bd3ee78ff0a17343ca36d69967fbf033b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "fe8d39c98acaa8334c9576f842b850c2cb2f86932ddc4ce64c9c4ef2dd5edcc7",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "2b97f40437d59289099af74b454711da9c842ad771fa802600b943b910fe87e9",
+      "scripts/verify_fixed_quality.py": "840f59f78cafbff9cff1f6a7bebdc80f97123ac152ed3979fc3e8bb69bd5bf1d",
+      "scripts/verify_fixed_recovery.py": "e7225bb0a35fbea4d5bfe689148909cb3abecc7e2b22c074aca6debe9fb59c8b",
+      "scripts/verify_fixed_resources.py": "8396fa07b9d627d4d07c07c24822c7c8ef2de90599a7116f147b46590c8288a4",
+      "scripts/verify_fixed_revision.py": "d5cd327586a74f27de504a70076099ff4503fef46820323e6307f6160237b19f",
+      "scripts/verify_protocol_gate.py": "3388c8654f6239a775748ac450ac0e9653a88cbc37672811330dc89e0c9a3ea5",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "62961a27ae80c4ec562bc2dbd722c29cb6706505869bacabb8aa396cc3ea4d94",
+      "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+      "src/cli/recovery.ts": "c4838abe071cebe0bb97befb9b3316d0338d3548845cef9b8842bc742dc8c35f",
+      "src/harness/authorization.ts": "bed45a0b6758d8a1d2e9b71a6dfdc0ee5f71436f3353c74d63269f772022ee80",
+      "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+      "src/harness/continuation.ts": "5660d11ffb5045c095b00faf7314cf1e28ae064edb65956d96da6d59a2fc83ed",
+      "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+      "src/harness/process_identity.ts": "a0e66f96d8a62953ae73d98b2de9ca683961d2b8a24e2afb70ecb6d05a0c0584",
+      "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+      "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+      "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+      "src/harness/state_maintenance.ts": "e598cce24fe11323c446eb55206f155555253c206a62734bfa2bdf13c961798a",
+      "src/harness/task_ledger.ts": "0179a2babb329b9b5641c6db4e875fbf93b04175db4a4d20bdf03e7d32e996dd",
+      "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+      "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+      "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+      "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+      "src/quality/revision_service.ts": "9972065d55744551627f94c8b8ee98139ac7f1c4e32199d479f7995833e8df66",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62"
+    }
+  },
+  "sourceCounts": {
+    "tests": 217,
+    "pass": 181,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 36
+  },
+  "pluginNodeCounts": {
+    "tests": 126,
+    "pass": 123,
+    "fail": 0,
+    "skipped": 3
+  },
+  "fixedInstalledCounts": {
+    "tests": 126,
+    "pass": 126,
+    "fail": 0,
+    "skipped": 0
+  },
+  "index": [
+    {
+      "name": "原生参数一致性",
+      "scenarios": [
+        "FC-CM-001-ENTRY-TICK-PARITY",
+        "FC-CM-001-RESOLVED-TICK",
+        "FC-CM-001-COMMAND-EVIDENCE"
+      ],
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ]
+    },
+    {
+      "name": "当前事实",
+      "scenarios": [
+        "FC-RL-001-CURRENT-FACTS"
+      ],
+      "tasks": [
+        "9.4",
+        "9.5",
+        "9.6"
+      ]
+    },
+    {
+      "name": "技能路由",
+      "scenarios": [
+        "FC-SK-003-ROUTING",
+        "FC-SK-003-SCENARIO-ISOLATION"
+      ],
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ]
+    },
+    {
+      "name": "能力快照",
+      "scenarios": [
+        "FC-RT-002-CAPABILITY-SNAPSHOT",
+        "FC-RT-002-CONTRACT-DRIFT",
+        "FC-RT-002-PLAN-REQUIRES",
+        "FC-RT-002-RESOURCE-PROBE"
+      ],
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ]
+    },
+    {
+      "name": "回执血缘",
+      "scenarios": [
+        "FC-AR-001-RECEIPT-LINEAGE",
+        "FC-AR-001-RECEIPT-MISMATCH",
+        "FC-AR-001-LEGACY-MAPPING"
+      ],
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ]
+    },
+    {
+      "name": "诊断与恢复",
+      "scenarios": [
+        "FC-TX-002-READONLY-INSPECT",
+        "FC-TX-002-RESUME-GATE",
+        "FC-TX-002-FORENSIC-SNAPSHOT",
+        "FC-TX-002-REPAIR-FENCING",
+        "FC-TX-002-REPAIR-REUSE",
+        "FC-TX-002-STATE-COMPATIBILITY",
+        "FC-TX-002-EXPLICIT-CONTINUATION",
+        "FC-TX-002-BACKED-MIGRATION"
+      ],
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ]
+    },
+    {
+      "name": "预算与取消",
+      "scenarios": [
+        "FC-TX-003-DURABLE-BUDGET",
+        "FC-TX-003-CANCEL-CONFIRM"
+      ],
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ]
+    },
+    {
+      "name": "独立评审",
+      "scenarios": [
+        "FC-QA-001-INDEPENDENT-JUDGE",
+        "FC-QA-001-TEMPORAL-REVIEW"
+      ],
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ]
+    },
+    {
+      "name": "受限修订",
+      "scenarios": [
+        "FC-QA-002-REVISION-SCOPE",
+        "FC-QA-002-BOUNDED-LOOP"
+      ],
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ]
+    },
+    {
+      "name": "分层发行",
+      "scenarios": [
+        "FC-RL-001-LAYERED-CI",
+        "FC-RL-001-OPTIMIZATION-TRACE"
+      ],
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ]
+    },
+    {
+      "name": "真实媒体",
+      "scenarios": [
+        "FC-DM-006-REAL-MEDIA-MATRIX"
+      ],
+      "tasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "scenario": "FC-CM-001-ENTRY-TICK-PARITY",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-ENTRY-TICK-PARITY",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-ENTRY-TICK-PARITY",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-ENTRY-TICK-PARITY",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-ENTRY-TICK-PARITY",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-ENTRY-TICK-PARITY",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-RESOLVED-TICK",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-RESOLVED-TICK",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-RESOLVED-TICK",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-RESOLVED-TICK",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-RESOLVED-TICK",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-RESOLVED-TICK",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-COMMAND-EVIDENCE",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-COMMAND-EVIDENCE",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-COMMAND-EVIDENCE",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-COMMAND-EVIDENCE",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-COMMAND-EVIDENCE",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-CM-001-COMMAND-EVIDENCE",
+      "tasks": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-CURRENT-FACTS",
+      "tasks": [
+        "9.4",
+        "9.5",
+        "9.6"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "github-actions",
+      "platform": "linux-x86_64",
+      "mode": "offline",
+      "expected": "Mandatory layered gates and optimization trace rejection tests execute; no native promotion",
+      "actual": "Current immutable CI artifacts and negative gates passed",
+      "inputHashes": {
+        "evidenceInput": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39"
+      },
+      "candidateSha256": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39",
+      "log": {
+        "path": "logs/c8c09d4af0afd462de368d7c3474a5fc8f789034b2bd2f0339e8444b81bda489.json",
+        "sha256": "2b123367ac181e3f7fa57168860207e72207f94b036a72cb936fc93da0552576",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39"
+        },
+        "candidateSha256": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39",
+        "host": "github-actions",
+        "platform": "linux-x86_64",
+        "mode": "offline"
+      }
+    },
+    {
+      "scenario": "FC-RL-001-CURRENT-FACTS",
+      "tasks": [
+        "9.4",
+        "9.5",
+        "9.6"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-CURRENT-FACTS",
+      "tasks": [
+        "9.4",
+        "9.5",
+        "9.6"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-CURRENT-FACTS",
+      "tasks": [
+        "9.4",
+        "9.5",
+        "9.6"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-CURRENT-FACTS",
+      "tasks": [
+        "9.4",
+        "9.5",
+        "9.6"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-CURRENT-FACTS",
+      "tasks": [
+        "9.4",
+        "9.5",
+        "9.6"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "python-unittest",
+      "platform": "linux-x86_64",
+      "mode": "offline",
+      "expected": "Mandatory layered gates and optimization trace rejection tests execute; no native promotion",
+      "actual": "Current immutable CI artifacts and negative gates passed",
+      "inputHashes": {
+        "evidenceInput": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56"
+      },
+      "candidateSha256": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56",
+      "log": {
+        "path": "logs/b0530c121ce9898d590feaadd3f19cead1115b8454dc2183826d2c23ea5f354f.json",
+        "sha256": "54906acf9214fa352ba1a57974f4c2891554b6fbeb59c4940c3ea3de0ffe3a5b",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56"
+        },
+        "candidateSha256": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56",
+        "host": "python-unittest",
+        "platform": "linux-x86_64",
+        "mode": "offline"
+      }
+    },
+    {
+      "scenario": "FC-SK-003-ROUTING",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-ROUTING",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-ROUTING",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-ROUTING",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-ROUTING",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-ROUTING",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-SCENARIO-ISOLATION",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-SCENARIO-ISOLATION",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-SCENARIO-ISOLATION",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-SCENARIO-ISOLATION",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-SCENARIO-ISOLATION",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-SK-003-SCENARIO-ISOLATION",
+      "tasks": [
+        "9.7",
+        "9.8",
+        "9.9"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CAPABILITY-SNAPSHOT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CAPABILITY-SNAPSHOT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless+bridge",
+      "expected": "Current capability and parameter/resource gates; native save/reopen in both declared modes",
+      "actual": "Bounded current owned bridge/headless cases pass; controlled faults remain labeled; exhaustive commands and runtime upgrade NOT_RUN",
+      "inputHashes": {
+        "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+      },
+      "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+      "log": {
+        "path": "logs/9f75b160cde7bb8660b23e3069a09d990619cc480668f2813169d3ee19a139a4.json",
+        "sha256": "60e29e548f0ce2cca6fc0e1959c6c3bd1237c59fe22d376c4921bef27f2e682a",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+          "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+        },
+        "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless+bridge"
+      }
+    },
+    {
+      "scenario": "FC-RT-002-CAPABILITY-SNAPSHOT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CAPABILITY-SNAPSHOT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CAPABILITY-SNAPSHOT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CAPABILITY-SNAPSHOT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CONTRACT-DRIFT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CONTRACT-DRIFT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless+bridge",
+      "expected": "Current capability and parameter/resource gates; native save/reopen in both declared modes",
+      "actual": "Bounded current owned bridge/headless cases pass; controlled faults remain labeled; exhaustive commands and runtime upgrade NOT_RUN",
+      "inputHashes": {
+        "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+      },
+      "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+      "log": {
+        "path": "logs/6b2d742e1647fee8fdedea7e48c5d7a3cd00eb01e5bea96e3577492384cc3201.json",
+        "sha256": "60e29e548f0ce2cca6fc0e1959c6c3bd1237c59fe22d376c4921bef27f2e682a",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+          "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+        },
+        "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless+bridge"
+      }
+    },
+    {
+      "scenario": "FC-RT-002-CONTRACT-DRIFT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CONTRACT-DRIFT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CONTRACT-DRIFT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-CONTRACT-DRIFT",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-PLAN-REQUIRES",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-PLAN-REQUIRES",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless+bridge",
+      "expected": "Current capability and parameter/resource gates; native save/reopen in both declared modes",
+      "actual": "Bounded current owned bridge/headless cases pass; controlled faults remain labeled; exhaustive commands and runtime upgrade NOT_RUN",
+      "inputHashes": {
+        "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+      },
+      "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+      "log": {
+        "path": "logs/4932a3bf5aadafd137f728be6241a2840e2c8b005809b5f3c7b1248a5658c2f3.json",
+        "sha256": "60e29e548f0ce2cca6fc0e1959c6c3bd1237c59fe22d376c4921bef27f2e682a",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+          "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+        },
+        "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless+bridge"
+      }
+    },
+    {
+      "scenario": "FC-RT-002-PLAN-REQUIRES",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-PLAN-REQUIRES",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-PLAN-REQUIRES",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-PLAN-REQUIRES",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-RESOURCE-PROBE",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-RESOURCE-PROBE",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless+bridge",
+      "expected": "Current capability and parameter/resource gates; native save/reopen in both declared modes",
+      "actual": "Bounded current owned bridge/headless cases pass; controlled faults remain labeled; exhaustive commands and runtime upgrade NOT_RUN",
+      "inputHashes": {
+        "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+      },
+      "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+      "log": {
+        "path": "logs/d9fe66be462bda403526364956ead92a7fd4bbedbfee17ee680ee71dcd226a2a.json",
+        "sha256": "60e29e548f0ce2cca6fc0e1959c6c3bd1237c59fe22d376c4921bef27f2e682a",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+          "nativeCases": "e9f00a8bce989be75e5fd564272b3c58e54d39b33f914a5429567945f1cb3048"
+        },
+        "candidateSha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless+bridge"
+      }
+    },
+    {
+      "scenario": "FC-RT-002-RESOURCE-PROBE",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-RESOURCE-PROBE",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-RESOURCE-PROBE",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RT-002-RESOURCE-PROBE",
+      "tasks": [
+        "9.10",
+        "9.11",
+        "9.12"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-LINEAGE",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-LINEAGE",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/2ad04581281aadfb940ea545e0d4500ef01f97e3ae77bb9ecfc1e44b5eae7d85.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-LINEAGE",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-LINEAGE",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-LINEAGE",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-LINEAGE",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-MISMATCH",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-MISMATCH",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/b257e4a03635957e81251b66cef0a1816ab585eb4f66638e913366442de6137d.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-MISMATCH",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-MISMATCH",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-MISMATCH",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-RECEIPT-MISMATCH",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-LEGACY-MAPPING",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-LEGACY-MAPPING",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/eabcc49df0684b505a30c843766aeef482b39afbbbf3b375b766e46efd4289b9.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-AR-001-LEGACY-MAPPING",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-LEGACY-MAPPING",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-LEGACY-MAPPING",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-AR-001-LEGACY-MAPPING",
+      "tasks": [
+        "9.13",
+        "9.14",
+        "9.15"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-READONLY-INSPECT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-READONLY-INSPECT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/d46d0317112bd363699d979bc90d9b42536bdba9b0e9c4e2ec0e20b581ce4516.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-READONLY-INSPECT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-READONLY-INSPECT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-READONLY-INSPECT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-READONLY-INSPECT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-RESUME-GATE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-RESUME-GATE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/117f56a695741ca92882afff49132e16126ce6cb42d5c488355f658448fd6e04.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-RESUME-GATE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-RESUME-GATE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-RESUME-GATE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-RESUME-GATE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-FORENSIC-SNAPSHOT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-FORENSIC-SNAPSHOT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/039a0791d18a40bc24c84b29c37982493a56200f64fa9d1242cc729f0ef8f57b.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-FORENSIC-SNAPSHOT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-FORENSIC-SNAPSHOT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-FORENSIC-SNAPSHOT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-FORENSIC-SNAPSHOT",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-FENCING",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-FENCING",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/82e0af96157eda91a8fa0c8e57c8d2dafd1cee9aab95460219ec9e5d76549c18.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-FENCING",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-FENCING",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-FENCING",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-FENCING",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-REUSE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-REUSE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/f1f3f59c203e33c8fabcac69a8fb74815607d9d4fcc5cbc40d00dc69652e31f2.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-REUSE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-REUSE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-REUSE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-REPAIR-REUSE",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-STATE-COMPATIBILITY",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-STATE-COMPATIBILITY",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/d40ab71f9b32c83799c8fcf6865aff80d421427b3111a054c3be8d46c1214a0e.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-STATE-COMPATIBILITY",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-STATE-COMPATIBILITY",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-STATE-COMPATIBILITY",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-STATE-COMPATIBILITY",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-EXPLICIT-CONTINUATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-EXPLICIT-CONTINUATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/12c1627c934cba39e9296c6da4c83d4f5f3c16625137724ec5598a6d64b3f8f7.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-EXPLICIT-CONTINUATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-EXPLICIT-CONTINUATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-EXPLICIT-CONTINUATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-EXPLICIT-CONTINUATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-BACKED-MIGRATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-BACKED-MIGRATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/1ed68b8cae716c28bc4e277778c8c4fce925e4d7b9a2c2bba3e7e1ec4bd7006b.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-002-BACKED-MIGRATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-BACKED-MIGRATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-BACKED-MIGRATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-002-BACKED-MIGRATION",
+      "tasks": [
+        "9.16",
+        "9.17",
+        "9.18"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-DURABLE-BUDGET",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-DURABLE-BUDGET",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/b6e617db98480eb4980170b7aecbd04138d680d40df2cfb12c306c8ac61cc8cc.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-003-DURABLE-BUDGET",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-DURABLE-BUDGET",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-DURABLE-BUDGET",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-DURABLE-BUDGET",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-CANCEL-CONFIRM",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-CANCEL-CONFIRM",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/05cc072c1ff6ee54a522058870d43205bb3ea5b3215f1e772d9e89c21d0e7b37.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-TX-003-CANCEL-CONFIRM",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-CANCEL-CONFIRM",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-CANCEL-CONFIRM",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-TX-003-CANCEL-CONFIRM",
+      "tasks": [
+        "9.19",
+        "9.20",
+        "9.21"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-INDEPENDENT-JUDGE",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-INDEPENDENT-JUDGE",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/433193850eae45bbae10ee2829a3d84c081a2256f4ecf42d5550161bc97f49db.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-QA-001-INDEPENDENT-JUDGE",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-INDEPENDENT-JUDGE",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-INDEPENDENT-JUDGE",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-INDEPENDENT-JUDGE",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-TEMPORAL-REVIEW",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-TEMPORAL-REVIEW",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/5bda432b3fb1e56b0a770c3d5f1a5118562e93525c5d6c66ef5d0c89ffe2a8ec.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-QA-001-TEMPORAL-REVIEW",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-TEMPORAL-REVIEW",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-TEMPORAL-REVIEW",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-001-TEMPORAL-REVIEW",
+      "tasks": [
+        "9.22",
+        "9.23",
+        "9.24"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-REVISION-SCOPE",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-REVISION-SCOPE",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/40ac78c824c31cbca24327926d65ddf17c11462066655b3bb866d9bdbe7a18b1.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-QA-002-REVISION-SCOPE",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-REVISION-SCOPE",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-REVISION-SCOPE",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-REVISION-SCOPE",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-BOUNDED-LOOP",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-BOUNDED-LOOP",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "headless",
+      "expected": "Current installed regression verifies the named state/receipt/quality/revision boundary",
+      "actual": "Installed test and implementation hashes unchanged; no skips; raw native/state log retained; bounded actual native plus explicitly synthetic state tests",
+      "inputHashes": {
+        "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+        "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+      },
+      "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+      "log": {
+        "path": "logs/8e907160bc71942c92566c49848f98c109e545f60c2af6f80d0de1218661e440.json",
+        "sha256": "21dab0c681e632406f8cf318d431ecc58b17a98b295e0433ececb1247a363189",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+          "still": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47"
+        },
+        "candidateSha256": "c3a221c2a0433c54a04f34c0900f787e54335e7baf465d3921c4969be153fd5a",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "headless"
+      }
+    },
+    {
+      "scenario": "FC-QA-002-BOUNDED-LOOP",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-BOUNDED-LOOP",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-BOUNDED-LOOP",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-QA-002-BOUNDED-LOOP",
+      "tasks": [
+        "9.25",
+        "9.26",
+        "9.27"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-LAYERED-CI",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "github-actions",
+      "platform": "linux-x86_64",
+      "mode": "offline",
+      "expected": "Mandatory layered gates and optimization trace rejection tests execute; no native promotion",
+      "actual": "Current immutable CI artifacts and negative gates passed",
+      "inputHashes": {
+        "evidenceInput": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39"
+      },
+      "candidateSha256": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39",
+      "log": {
+        "path": "logs/3d517730a7af730c9aa608dd44f367d98f77a91c7a08955d5da28a603ab7bc62.json",
+        "sha256": "2b123367ac181e3f7fa57168860207e72207f94b036a72cb936fc93da0552576",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39"
+        },
+        "candidateSha256": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39",
+        "host": "github-actions",
+        "platform": "linux-x86_64",
+        "mode": "offline"
+      }
+    },
+    {
+      "scenario": "FC-RL-001-LAYERED-CI",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-LAYERED-CI",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "codex-cli 0.147.0",
+      "platform": "darwin-arm64",
+      "mode": "app-server-discovery",
+      "expected": "Actual isolated current public tag install and 13 enabled skill discoveries with no load errors",
+      "actual": "Actual app-server installation identity passed; model routing and other hosts remain NOT_RUN",
+      "inputHashes": {
+        "evidenceInput": "dacba883797fdeb8dad8c0ff0494c7c72d3ebe5fb9ed58e50bbafa519ce05542"
+      },
+      "candidateSha256": "dacba883797fdeb8dad8c0ff0494c7c72d3ebe5fb9ed58e50bbafa519ce05542",
+      "log": {
+        "path": "logs/4d8093f7016474873cc661f4d92b63b5d4cbbbe8188e616f8acd71433741d463.json",
+        "sha256": "cb6998549d2ee399a3aab2a56a35d5db9530ee1da1087ec5dfe14842a58b91ea",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "dacba883797fdeb8dad8c0ff0494c7c72d3ebe5fb9ed58e50bbafa519ce05542"
+        },
+        "candidateSha256": "dacba883797fdeb8dad8c0ff0494c7c72d3ebe5fb9ed58e50bbafa519ce05542",
+        "host": "codex-cli 0.147.0",
+        "platform": "darwin-arm64",
+        "mode": "app-server-discovery"
+      }
+    },
+    {
+      "scenario": "FC-RL-001-LAYERED-CI",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-LAYERED-CI",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-LAYERED-CI",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "python-unittest",
+      "platform": "linux-x86_64",
+      "mode": "offline",
+      "expected": "Mandatory layered gates and optimization trace rejection tests execute; no native promotion",
+      "actual": "Current immutable CI artifacts and negative gates passed",
+      "inputHashes": {
+        "evidenceInput": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56"
+      },
+      "candidateSha256": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56",
+      "log": {
+        "path": "logs/250384733da718518bf5ff8030ded005b114d93779e1bf3da6d58cd81a64852d.json",
+        "sha256": "54906acf9214fa352ba1a57974f4c2891554b6fbeb59c4940c3ea3de0ffe3a5b",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56"
+        },
+        "candidateSha256": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56",
+        "host": "python-unittest",
+        "platform": "linux-x86_64",
+        "mode": "offline"
+      }
+    },
+    {
+      "scenario": "FC-RL-001-OPTIMIZATION-TRACE",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "github-actions",
+      "platform": "linux-x86_64",
+      "mode": "offline",
+      "expected": "Mandatory layered gates and optimization trace rejection tests execute; no native promotion",
+      "actual": "Current immutable CI artifacts and negative gates passed",
+      "inputHashes": {
+        "evidenceInput": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39"
+      },
+      "candidateSha256": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39",
+      "log": {
+        "path": "logs/a75a68544ec4d4e67e8f78b248b6bcfa2afdd5b9bd9141904e540659b709da78.json",
+        "sha256": "2b123367ac181e3f7fa57168860207e72207f94b036a72cb936fc93da0552576",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39"
+        },
+        "candidateSha256": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39",
+        "host": "github-actions",
+        "platform": "linux-x86_64",
+        "mode": "offline"
+      }
+    },
+    {
+      "scenario": "FC-RL-001-OPTIMIZATION-TRACE",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-OPTIMIZATION-TRACE",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-OPTIMIZATION-TRACE",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-OPTIMIZATION-TRACE",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-RL-001-OPTIMIZATION-TRACE",
+      "tasks": [
+        "9.28",
+        "9.29",
+        "9.30"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "PASS",
+      "executed": true,
+      "host": "python-unittest",
+      "platform": "linux-x86_64",
+      "mode": "offline",
+      "expected": "Mandatory layered gates and optimization trace rejection tests execute; no native promotion",
+      "actual": "Current immutable CI artifacts and negative gates passed",
+      "inputHashes": {
+        "evidenceInput": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56"
+      },
+      "candidateSha256": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56",
+      "log": {
+        "path": "logs/94e778e23d1b788a01bd14337e24339d66a0d934096e4184b203d024d77b41e7.json",
+        "sha256": "54906acf9214fa352ba1a57974f4c2891554b6fbeb59c4940c3ea3de0ffe3a5b",
+        "identity": {
+          "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+          "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+          "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+        },
+        "inputHashes": {
+          "evidenceInput": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56"
+        },
+        "candidateSha256": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56",
+        "host": "python-unittest",
+        "platform": "linux-x86_64",
+        "mode": "offline"
+      }
+    },
+    {
+      "scenario": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "tasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ],
+      "layer": "ci",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "tasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ],
+      "layer": "fixed-install",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "tasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ],
+      "layer": "host",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "tasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ],
+      "layer": "platform",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "tasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ],
+      "layer": "real-media",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    },
+    {
+      "scenario": "FC-DM-006-REAL-MEDIA-MATRIX",
+      "tasks": [
+        "9.31",
+        "9.32",
+        "9.33"
+      ],
+      "layer": "source",
+      "identity": {
+        "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+      },
+      "status": "NOT_RUN",
+      "executed": false,
+      "reason": "No current independently sufficient evidence for this scenario at this layer; historical or aggregate totals do not promote it.",
+      "host": "not-qualified",
+      "platform": "not-qualified",
+      "mode": "not-qualified"
+    }
+  ],
+  "counts": {
+    "scenarios": 30,
+    "records": 180,
+    "pass": 28,
+    "fail": 0,
+    "notRun": 152
+  },
+  "ci": {
+    "source": [
+      {
+        "conclusion": "success",
+        "databaseId": 37800765401,
+        "headBranch": "main",
+        "headSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "status": "completed",
+        "workflowName": "Source offline contracts and distribution",
+        "url": "https://github.com/full-aigc-skills/filmcraft-skills/actions/runs/37800765401"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37800764025,
+        "headBranch": "v0.1.0-dev.44",
+        "headSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+        "status": "completed",
+        "workflowName": "Source offline contracts and distribution",
+        "url": "https://github.com/full-aigc-skills/filmcraft-skills/actions/runs/37800764025"
+      }
+    ],
+    "plugin": [
+      {
+        "conclusion": "success",
+        "databaseId": 37802148244,
+        "headBranch": "v0.1.0-dev.52",
+        "headSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "status": "completed",
+        "workflowName": "Skill snapshots and implementation units",
+        "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37802148244"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37802147486,
+        "headBranch": "main",
+        "headSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "status": "completed",
+        "workflowName": "Skill snapshots and implementation units",
+        "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37802147486"
+      }
+    ],
+    "documentation": [
+      {
+        "conclusion": "success",
+        "databaseId": 37802148270,
+        "headBranch": "v0.1.0-dev.52",
+        "headSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "status": "completed",
+        "workflowName": "Documentation and specification integrity",
+        "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37802148270"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37802147475,
+        "headBranch": "main",
+        "headSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+        "status": "completed",
+        "workflowName": "Documentation and specification integrity",
+        "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37802147475"
+      }
+    ]
+  },
+  "qualification": "NOT_PROVEN",
+  "realMedia": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "otherHosts": "NOT_RUN",
+  "otherPlatforms": "NOT_RUN",
+  "completeCommandAcceptance": "NOT_PROVEN",
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN",
+  "artifacts": {
+    "source": {
+      "path": "artifacts/source.json",
+      "sha256": "3af3f14f070ab5fa2217f604b2cc9fe317fd0f384ed71bbb0ac24044efd73508",
+      "rawPath": "logs/source-original.log",
+      "rawSha256": "6d341dd11356ea95980d555e301b89b5480c78d8dfdaf745c55c5f732668a097"
+    },
+    "plugin": {
+      "path": "artifacts/plugin.json",
+      "sha256": "40f99bf739069a41d3752f6ce2c18f6b563f0312043fbfae89a616af6de88c56",
+      "rawPath": "logs/plugin-original.log",
+      "rawSha256": "2ffc8eb7f3bf50ed8cd402d1cc047c60285f71165c496a49f4b3f825fea4e739"
+    },
+    "host": {
+      "path": "artifacts/host.json",
+      "sha256": "dacba883797fdeb8dad8c0ff0494c7c72d3ebe5fb9ed58e50bbafa519ce05542"
+    },
+    "native": {
+      "path": "artifacts/native.json",
+      "sha256": "75818b40a6eea57338ebf50f91b5d563098612c923c7922c852b211bb9d0de43",
+      "rawPath": "logs/native-original.log",
+      "rawSha256": "a693d97b2248a15f467b860a2b53c9cad91f7ad3c4e63cd7faabb14e0d4a54b4"
+    },
+    "modes": {
+      "path": "artifacts/modes.json",
+      "sha256": "d97e7883e21a5f05204fee468f81bee6040d57dfc90a6bccb53653f90f592525"
+    },
+    "ci": {
+      "path": "artifacts/ci.json",
+      "sha256": "6bfd596ad049f0b2dc8098c4748eb9ed0652275c818807aaf051560be8b00f39"
+    }
+  },
+  "sourceFileManifestSha256": "97e30235a61e54657876d8f0690ab4b29f99df9a90b5dec90136b6eaf479383c",
+  "pluginFileManifestSha256": "921dc82e4074b6ed08a949829797907433cb20a2da065ecc50ada4857ec5ebd7"
+}

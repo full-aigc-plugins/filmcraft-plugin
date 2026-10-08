@@ -1,0 +1,766 @@
+TAP version 13
+# Subtest: private host grant binds the exact operation and is re-read for revocation and expiry
+ok 1 - private host grant binds the exact operation and is re-read for revocation and expiry
+  ---
+  duration_ms: 7.363512
+  type: 'test'
+  ...
+# Subtest: host grant files reject shared permissions, symlinks and ambiguous JSON
+ok 2 - host grant files reject shared permissions, symlinks and ambiguous JSON
+  ---
+  duration_ms: 1.123647
+  type: 'test'
+  ...
+# Subtest: cancel request persists before signalling, invalidates the writer, and confirms only after native group stops
+ok 3 - cancel request persists before signalling, invalidates the writer, and confirms only after native group stops
+  ---
+  duration_ms: 109.831984
+  type: 'test'
+  ...
+# Subtest: unsupported cancellation retains running process, occupancy, reservation and partial diagnostics after reopen
+ok 4 - unsupported cancellation retains running process, occupancy, reservation and partial diagnostics after reopen
+  ---
+  duration_ms: 66.162358
+  type: 'test'
+  ...
+# Subtest: PID reuse or changed birth identity cannot signal a process even when its numeric PID matches
+ok 5 - PID reuse or changed birth identity cannot signal a process even when its numeric PID matches
+  ---
+  duration_ms: 62.623578
+  type: 'test'
+  ...
+# Subtest: lost cancellation reply is recovered from durable request without new attempts or double settlement
+ok 6 - lost cancellation reply is recovered from durable request without new attempts or double settlement
+  ---
+  duration_ms: 87.377865
+  type: 'test'
+  ...
+# Subtest: restart after confirmed cancellation but before settlement finishes accounting exactly once
+ok 7 - restart after confirmed cancellation but before settlement finishes accounting exactly once
+  ---
+  duration_ms: 89.001207
+  type: 'test'
+  ...
+# Subtest: parent cancellation fences its running child and prevents any new dependent dispatch
+ok 8 - parent cancellation fences its running child and prevents any new dependent dispatch
+  ---
+  duration_ms: 45.336848
+  type: 'test'
+  ...
+# Subtest: revocation before the supported stop action leaves a requested cancellation and running native group
+ok 9 - revocation before the supported stop action leaves a requested cancellation and running native group
+  ---
+  duration_ms: 62.292262
+  type: 'test'
+  ...
+# Subtest: an exited actual host leaves its identity-bound detached child running, budget held and cancellation unconfirmed
+ok 10 - an exited actual host leaves its identity-bound detached child running, budget held and cancellation unconfirmed
+  ---
+  duration_ms: 152.130334
+  type: 'test'
+  ...
+# Subtest: actual cancellation CLI uses a private host grant and requires an explicit signal action
+ok 11 - actual cancellation CLI uses a private host grant and requires an explicit signal action
+  ---
+  duration_ms: 605.842882
+  type: 'test'
+  ...
+# Subtest: actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt
+ok 12 - actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt # SKIP
+  ---
+  duration_ms: 0.667719
+  type: 'test'
+  ...
+# Subtest: public task mapping uses registered identity and keeps internal fields in the domain ledger
+ok 13 - public task mapping uses registered identity and keeps internal fields in the domain ledger
+  ---
+  duration_ms: 15.964708
+  type: 'test'
+  ...
+# Subtest: actual temporal/audio fixtures detect synchronization, per-channel clipping and decode failure
+ok 14 - actual temporal/audio fixtures detect synchronization, per-channel clipping and decode failure # SKIP
+  ---
+  duration_ms: 0.663202
+  type: 'test'
+  ...
+# Subtest: request binds candidate, project, input, goal, rubric, execution and reviewer identities without generator commentary
+ok 15 - request binds candidate, project, input, goal, rubric, execution and reviewer identities without generator commentary
+  ---
+  duration_ms: 1.610612
+  type: 'test'
+  ...
+# Subtest: a high creative score cannot cover a real decode failure or manufacture user acceptance
+ok 16 - a high creative score cannot cover a real decode failure or manufacture user acceptance
+  ---
+  duration_ms: 0.88045
+  type: 'test'
+  ...
+# Subtest: a known technical failure blocks even when the rubric did not request that dimension
+ok 17 - a known technical failure blocks even when the rubric did not request that dimension
+  ---
+  duration_ms: 0.424882
+  type: 'test'
+  ...
+# Subtest: a static frame cannot pass synchronization, clipping, subtitle timing, continuity or rhythm
+ok 18 - a static frame cannot pass synchronization, clipping, subtitle timing, continuity or rhythm
+  ---
+  duration_ms: 0.525354
+  type: 'test'
+  ...
+# Subtest: missing temporal evidence is explicit and cannot become PASS from an empty required set
+ok 19 - missing temporal evidence is explicit and cannot become PASS from an empty required set
+  ---
+  duration_ms: 0.432524
+  type: 'test'
+  ...
+# Subtest: even complete independent quality PASS is review-ready rather than user-accepted or completed
+ok 20 - even complete independent quality PASS is review-ready rather than user-accepted or completed
+  ---
+  duration_ms: 0.683783
+  type: 'test'
+  ...
+# Subtest: changing candidate changes the review identity and invalidates the old request
+ok 21 - changing candidate changes the review identity and invalidates the old request
+  ---
+  duration_ms: 0.598704
+  type: 'test'
+  ...
+# Subtest: changing project changes the review identity and invalidates the old request
+ok 22 - changing project changes the review identity and invalidates the old request
+  ---
+  duration_ms: 0.386363
+  type: 'test'
+  ...
+# Subtest: changing inputs changes the review identity and invalidates the old request
+ok 23 - changing inputs changes the review identity and invalidates the old request
+  ---
+  duration_ms: 0.422928
+  type: 'test'
+  ...
+# Subtest: changing execution changes the review identity and invalidates the old request
+ok 24 - changing execution changes the review identity and invalidates the old request
+  ---
+  duration_ms: 2.431482
+  type: 'test'
+  ...
+# Subtest: changing goal changes the review identity and invalidates the old request
+ok 25 - changing goal changes the review identity and invalidates the old request
+  ---
+  duration_ms: 0.232942
+  type: 'test'
+  ...
+# Subtest: changing rubric changes the review identity and invalidates the old request
+ok 26 - changing rubric changes the review identity and invalidates the old request
+  ---
+  duration_ms: 0.155434
+  type: 'test'
+  ...
+# Subtest: changing reviewer changes the review identity and invalidates the old request
+ok 27 - changing reviewer changes the review identity and invalidates the old request
+  ---
+  duration_ms: 0.200022
+  type: 'test'
+  ...
+# Subtest: import requires a trusted independent context verifier; body declarations cannot authorize it
+ok 28 - import requires a trusted independent context verifier; body declarations cannot authorize it
+  ---
+  duration_ms: 709.554719
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after candidate changes
+ok 29 - stored PASS cannot replay after candidate changes
+  ---
+  duration_ms: 240.491328
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after project changes
+ok 30 - stored PASS cannot replay after project changes
+  ---
+  duration_ms: 232.945431
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after input changes
+ok 31 - stored PASS cannot replay after input changes
+  ---
+  duration_ms: 222.26138
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after execution changes
+ok 32 - stored PASS cannot replay after execution changes
+  ---
+  duration_ms: 254.375749
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after epoch changes
+ok 33 - stored PASS cannot replay after epoch changes
+  ---
+  duration_ms: 263.701864
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after goal changes
+ok 34 - stored PASS cannot replay after goal changes
+  ---
+  duration_ms: 212.232948
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after rubric changes
+ok 35 - stored PASS cannot replay after rubric changes
+  ---
+  duration_ms: 205.27903
+  type: 'test'
+  ...
+# Subtest: stored PASS cannot replay after reviewer changes
+ok 36 - stored PASS cannot replay after reviewer changes
+  ---
+  duration_ms: 216.618221
+  type: 'test'
+  ...
+# Subtest: external process receives only frozen work and explicit environment, excludes generator context
+ok 37 - external process receives only frozen work and explicit environment, excludes generator context
+  ---
+  duration_ms: 325.29382
+  type: 'test'
+  ...
+# Subtest: private review CAS refuses replaced originals
+ok 38 - private review CAS refuses replaced originals
+  ---
+  duration_ms: 117.982616
+  type: 'test'
+  ...
+# Subtest: candidate mutation during trusted context verification cannot commit a successful receipt
+ok 39 - candidate mutation during trusted context verification cannot commit a successful receipt
+  ---
+  duration_ms: 182.723719
+  type: 'test'
+  ...
+# Subtest: legacy command receipt is linked without rewriting native integers or declaring completion
+ok 40 - legacy command receipt is linked without rewriting native integers or declaring completion
+  ---
+  duration_ms: 36.197246
+  type: 'test'
+  ...
+# Subtest: conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt
+ok 41 - conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt
+  ---
+  duration_ms: 28.364991
+  type: 'test'
+  ...
+# Subtest: a moved or replaced candidate makes evidence stale and does not overwrite stored originals
+ok 42 - a moved or replaced candidate makes evidence stale and does not overwrite stored originals
+  ---
+  duration_ms: 28.885061
+  type: 'test'
+  ...
+# Subtest: receipt paths reject traversal and symlinks before reading their targets
+ok 43 - receipt paths reject traversal and symlinks before reading their targets
+  ---
+  duration_ms: 27.257144
+  type: 'test'
+  ...
+# Subtest: strict lossless parsing preserves unsafe native integers and rejects ambiguity
+ok 44 - strict lossless parsing preserves unsafe native integers and rejects ambiguity
+  ---
+  duration_ms: 0.375246
+  type: 'test'
+  ...
+# Subtest: plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values
+ok 45 - plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values
+  ---
+  duration_ms: 81.815611
+  type: 'test'
+  ...
+# Subtest: delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS
+ok 46 - delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS
+  ---
+  duration_ms: 161.015315
+  type: 'test'
+  ...
+# Subtest: missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered
+ok 47 - missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered
+  ---
+  duration_ms: 92.304248
+  type: 'test'
+  ...
+# Subtest: legacy output execution maps declared new inputs separately from inherited project inputs
+ok 48 - legacy output execution maps declared new inputs separately from inherited project inputs
+  ---
+  duration_ms: 113.823043
+  type: 'test'
+  ...
+# Subtest: failed-stage receipts retain original bytes and missing historical identities without following stage paths
+ok 49 - failed-stage receipts retain original bytes and missing historical identities without following stage paths
+  ---
+  duration_ms: 27.580707
+  type: 'test'
+  ...
+# Subtest: delivery without the same-attempt execution record remains unknown and cannot expose output artifacts
+ok 50 - delivery without the same-attempt execution record remains unknown and cannot expose output artifacts
+  ---
+  duration_ms: 71.796983
+  type: 'test'
+  ...
+# Subtest: execution owner PID must match the attempt and legacy missing process identity stays unknown
+ok 51 - execution owner PID must match the attempt and legacy missing process identity stays unknown
+  ---
+  duration_ms: 94.584903
+  type: 'test'
+  ...
+# Subtest: old artifacts cannot be relabeled as a later task attempt even when plan and runtime match
+ok 52 - old artifacts cannot be relabeled as a later task attempt even when plan and runtime match
+  ---
+  duration_ms: 206.647146
+  type: 'test'
+  ...
+# Subtest: conflicting same-kind observations retain original CAS bytes and do not replace the original association
+ok 53 - conflicting same-kind observations retain original CAS bytes and do not replace the original association
+  ---
+  duration_ms: 92.762976
+  type: 'test'
+  ...
+# Subtest: current missing process evidence cannot inherit an older linked conclusion from the receipt index
+ok 54 - current missing process evidence cannot inherit an older linked conclusion from the receipt index
+  ---
+  duration_ms: 160.095667
+  type: 'test'
+  ...
+# Subtest: read-only diagnosis sees committed WAL state without changing database, sidecars, projects or missing blob directories
+ok 55 - read-only diagnosis sees committed WAL state without changing database, sidecars, projects or missing blob directories
+  ---
+  duration_ms: 19.329464
+  type: 'test'
+  ...
+# Subtest: damaged database and missing receipts remain structured unknown and never create or overwrite state
+ok 56 - damaged database and missing receipts remain structured unknown and never create or overwrite state
+  ---
+  duration_ms: 2.095835
+  type: 'test'
+  ...
+# Subtest: an actually running detached process remains occupied after its host state becomes unknown
+ok 57 - an actually running detached process remains occupied after its host state becomes unknown
+  ---
+  duration_ms: 37.167973
+  type: 'test'
+  ...
+# Subtest: lost replies are diagnosed without writes and repaired only with fresh evidence, matching authorization and fenced intent
+ok 58 - lost replies are diagnosed without writes and repaired only with fresh evidence, matching authorization and fenced intent
+  ---
+  duration_ms: 438.528701
+  type: 'test'
+  ...
+# Subtest: changed candidate, missing export record or missing process identity cannot unlock or repair an unknown task
+ok 59 - changed candidate, missing export record or missing process identity cannot unlock or repair an unknown task
+  ---
+  duration_ms: 174.954284
+  type: 'test'
+  ...
+# Subtest: recovery intent survives reopening; an active or expired old recovery owner cannot commit
+ok 60 - recovery intent survives reopening; an active or expired old recovery owner cannot commit
+  ---
+  duration_ms: 100.911151
+  type: 'test'
+  ...
+# Subtest: a partial receipt handoff remains diagnostically complete only when both current native records agree
+ok 61 - a partial receipt handoff remains diagnostically complete only when both current native records agree
+  ---
+  duration_ms: 382.746375
+  type: 'test'
+  ...
+# Subtest: legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities
+ok 62 - legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities
+  ---
+  duration_ms: 25.03353
+  type: 'test'
+  ...
+# Subtest: CLI inspect and reconcile are both read-only; unknown diagnosis is explicit
+ok 63 - CLI inspect and reconcile are both read-only; unknown diagnosis is explicit
+  ---
+  duration_ms: 212.059911
+  type: 'test'
+  ...
+# Subtest: freshly requested repair of an already reconciled attempt is read-only and does not create another recovery intent
+ok 64 - freshly requested repair of an already reconciled attempt is read-only and does not create another recovery intent
+  ---
+  duration_ms: 502.684539
+  type: 'test'
+  ...
+# Subtest: two actual recovery processes cannot apply the same uncertain attempt twice
+ok 65 - two actual recovery processes cannot apply the same uncertain attempt twice
+  ---
+  duration_ms: 477.038199
+  type: 'test'
+  ...
+# Subtest: logical task identity corruption is diagnosed as unknown without rewriting corrupt bytes
+ok 66 - logical task identity corruption is diagnosed as unknown without rewriting corrupt bytes
+  ---
+  duration_ms: 9.006504
+  type: 'test'
+  ...
+# Subtest: matching authorization references alone cannot authorize state repair
+ok 67 - matching authorization references alone cannot authorize state repair
+  ---
+  duration_ms: 154.749236
+  type: 'test'
+  ...
+# Subtest: expired or revoked host authorization cannot change an uncertain attempt
+ok 68 - expired or revoked host authorization cannot change an uncertain attempt
+  ---
+  duration_ms: 204.88497
+  type: 'test'
+  ...
+# Subtest: legacy writer must require an explicit verified backup before migration
+ok 69 - legacy writer must require an explicit verified backup before migration
+  ---
+  duration_ms: 9.004631
+  type: 'test'
+  ...
+# Subtest: continuation cannot substitute for independent state repair of an executed but uncertain attempt
+ok 70 - continuation cannot substitute for independent state repair of an executed but uncertain attempt
+  ---
+  duration_ms: 152.399628
+  type: 'test'
+  ...
+# Subtest: authorization revoked after recovery intent is durable abandons repair without releasing unknown occupancy
+ok 71 - authorization revoked after recovery intent is durable abandons repair without releasing unknown occupancy
+  ---
+  duration_ms: 296.29023
+  type: 'test'
+  ...
+# Subtest: an exited actual host does not imply its detached controlled child stopped
+ok 72 - an exited actual host does not imply its detached controlled child stopped
+  ---
+  duration_ms: 36.242174
+  type: 'test'
+  ...
+# Subtest: CLI repair checks an actual private host grant rather than trusting reference flags
+ok 73 - CLI repair checks an actual private host grant rather than trusting reference flags
+  ---
+  duration_ms: 583.73883
+  type: 'test'
+  ...
+# Subtest: reservations survive reopening without a second charge; unknown retains concurrency and disk
+ok 74 - reservations survive reopening without a second charge; unknown retains concurrency and disk
+  ---
+  duration_ms: 14.684298
+  type: 'test'
+  ...
+# Subtest: deterministic rejection for timeMs preserves reason and starts no attempt
+ok 75 - deterministic rejection for timeMs preserves reason and starts no attempt
+  ---
+  duration_ms: 6.573394
+  type: 'test'
+  ...
+# Subtest: deterministic rejection for diskBytes preserves reason and starts no attempt
+ok 76 - deterministic rejection for diskBytes preserves reason and starts no attempt
+  ---
+  duration_ms: 9.839186
+  type: 'test'
+  ...
+# Subtest: deterministic rejection for outputBytes preserves reason and starts no attempt
+ok 77 - deterministic rejection for outputBytes preserves reason and starts no attempt
+  ---
+  duration_ms: 4.970958
+  type: 'test'
+  ...
+# Subtest: deterministic rejection for slots preserves reason and starts no attempt
+ok 78 - deterministic rejection for slots preserves reason and starts no attempt
+  ---
+  duration_ms: 4.9058
+  type: 'test'
+  ...
+# Subtest: deterministic rejection for revisions preserves reason and starts no attempt
+ok 79 - deterministic rejection for revisions preserves reason and starts no attempt
+  ---
+  duration_ms: 5.378864
+  type: 'test'
+  ...
+# Subtest: physical disk shortage rejects before reservation even when numeric quota permits it
+ok 80 - physical disk shortage rejects before reservation even when numeric quota permits it
+  ---
+  duration_ms: 4.552516
+  type: 'test'
+  ...
+# Subtest: parent and child share reservation, deadline, concurrency and revision count
+ok 81 - parent and child share reservation, deadline, concurrency and revision count
+  ---
+  duration_ms: 8.01786
+  type: 'test'
+  ...
+# Subtest: expired time reservation halts new dependencies without releasing unknown work
+ok 82 - expired time reservation halts new dependencies without releasing unknown work
+  ---
+  duration_ms: 4.881313
+  type: 'test'
+  ...
+# Subtest: schema4 forensic integrity rejects altered consumed accounting before trusting recovered reservations
+ok 83 - schema4 forensic integrity rejects altered consumed accounting before trusting recovered reservations
+  ---
+  duration_ms: 5.506147
+  type: 'test'
+  ...
+# Subtest: an actual killed reservation owner cannot reset durable charges or create a second reservation
+ok 84 - an actual killed reservation owner cannot reset durable charges or create a second reservation
+  ---
+  duration_ms: 80.688339
+  type: 'test'
+  ...
+# Subtest: persisted policy cannot reset rounds or expand field/goal scope; original authorization reference is reused
+ok 85 - persisted policy cannot reset rounds or expand field/goal scope; original authorization reference is reused
+  ---
+  duration_ms: 2329.231488
+  type: 'test'
+  ...
+# Subtest: a new candidate needs its own review; old task PASS cannot be relabeled
+ok 86 - a new candidate needs its own review; old task PASS cannot be relabeled
+  ---
+  duration_ms: 2624.249346
+  type: 'test'
+  ...
+# Subtest: non-target mutation rejects candidate and retains original verified best
+ok 87 - non-target mutation rejects candidate and retains original verified best
+  ---
+  duration_ms: 1795.029672
+  type: 'test'
+  ...
+# Subtest: failure limit retains a verified best and unresolved technical findings
+ok 88 - failure limit retains a verified best and unresolved technical findings
+  ---
+  duration_ms: 2574.0915
+  type: 'test'
+  ...
+# Subtest: stagnation_limit stops with explicit null when no candidate is verified
+ok 89 - stagnation_limit stops with explicit null when no candidate is verified
+  ---
+  duration_ms: 2530.970332
+  type: 'test'
+  ...
+# Subtest: round_limit stops with explicit null when no candidate is verified
+ok 90 - round_limit stops with explicit null when no candidate is verified
+  ---
+  duration_ms: 2735.106526
+  type: 'test'
+  ...
+# Subtest: unknown pending round blocks dispatch and cannot reuse its slot after a restart
+ok 91 - unknown pending round blocks dispatch and cannot reuse its slot after a restart
+  ---
+  duration_ms: 1993.664051
+  type: 'test'
+  ...
+# Subtest: budget stop and stale best remain explicit; no last candidate is promoted
+ok 92 - budget stop and stale best remain explicit; no last candidate is promoted
+  ---
+  duration_ms: 1916.321512
+  type: 'test'
+  ...
+# Subtest: state integrity refuses a modified round rather than trusting stored self-evaluation
+ok 93 - state integrity refuses a modified round rather than trusting stored self-evaluation
+  ---
+  duration_ms: 1598.63827
+  type: 'test'
+  ...
+# Subtest: goal or rubric change invalidates all previous best evidence and permanently fences dispatch
+ok 94 - goal or rubric change invalidates all previous best evidence and permanently fences dispatch
+  ---
+  duration_ms: 1559.425777
+  type: 'test'
+  ...
+# Subtest: local scope compiles pinned source, target and no-ripple commands; relocation retains identity
+ok 95 - local scope compiles pinned source, target and no-ripple commands; relocation retains identity
+  ---
+  duration_ms: 2.95953
+  type: 'test'
+  ...
+# Subtest: stale project and unknown target reject before a native plan can be used
+ok 96 - stale project and unknown target reject before a native plan can be used
+  ---
+  duration_ms: 0.736812
+  type: 'test'
+  ...
+# Subtest: revision rejects field drift rather than approving the candidate
+ok 97 - revision rejects field drift rather than approving the candidate
+  ---
+  duration_ms: 0.71495
+  type: 'test'
+  ...
+# Subtest: revision rejects track drift rather than approving the candidate
+ok 98 - revision rejects track drift rather than approving the candidate
+  ---
+  duration_ms: 0.526535
+  type: 'test'
+  ...
+# Subtest: revision rejects dependency drift rather than approving the candidate
+ok 99 - revision rejects dependency drift rather than approving the candidate
+  ---
+  duration_ms: 0.41655
+  type: 'test'
+  ...
+# Subtest: revision rejects interval drift rather than approving the candidate
+ok 100 - revision rejects interval drift rather than approving the candidate
+  ---
+  duration_ms: 0.386323
+  type: 'test'
+  ...
+# Subtest: revision rejects wrong-result drift rather than approving the candidate
+ok 101 - revision rejects wrong-result drift rather than approving the candidate
+  ---
+  duration_ms: 0.321515
+  type: 'test'
+  ...
+# Subtest: unsupported operation, ripple, owner, broad object field and dependency scope are refused
+ok 102 - unsupported operation, ripple, owner, broad object field and dependency scope are refused
+  ---
+  duration_ms: 0.66888
+  type: 'test'
+  ...
+# Subtest: schema1 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+ok 103 - schema1 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+  ---
+  duration_ms: 52.387062
+  type: 'test'
+  ...
+# Subtest: schema2 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+ok 104 - schema2 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+  ---
+  duration_ms: 40.481619
+  type: 'test'
+  ...
+# Subtest: schema3 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+ok 105 - schema3 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+  ---
+  duration_ms: 43.588637
+  type: 'test'
+  ...
+# Subtest: schema4 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+ok 106 - schema4 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy
+  ---
+  duration_ms: 43.636089
+  type: 'test'
+  ...
+# Subtest: committed uncheckpointed WAL is preserved in backup and read-only diagnosis cannot alter any original sidecar
+ok 107 - committed uncheckpointed WAL is preserved in backup and read-only diagnosis cannot alter any original sidecar
+  ---
+  duration_ms: 36.859334
+  type: 'test'
+  ...
+# Subtest: a changed original during isolated inspection is unknown rather than a reusable old snapshot
+ok 108 - a changed original during isolated inspection is unknown rather than a reusable old snapshot
+  ---
+  duration_ms: 13.961378
+  type: 'test'
+  ...
+# Subtest: rollback refuses to discard new task records and does not overwrite the immutable old backup
+ok 109 - rollback refuses to discard new task records and does not overwrite the immutable old backup
+  ---
+  duration_ms: 36.503205
+  type: 'test'
+  ...
+# Subtest: corrupt backups, unsupported ledgers and logical damage cannot be upgraded or claimed
+ok 110 - corrupt backups, unsupported ledgers and logical damage cannot be upgraded or claimed
+  ---
+  duration_ms: 21.098517
+  type: 'test'
+  ...
+# Subtest: maintenance cannot run without authorization or while a live write lease is held
+ok 111 - maintenance cannot run without authorization or while a live write lease is held
+  ---
+  duration_ms: 16.169673
+  type: 'test'
+  ...
+# Subtest: an existing empty SQLite database is unknown, never an invitation to initialize FilmCraft state
+ok 112 - an existing empty SQLite database is unknown, never an invitation to initialize FilmCraft state
+  ---
+  duration_ms: 2.015564
+  type: 'test'
+  ...
+# Subtest: foreign and logically damaged ledgers are rejected before any backup or original SQLite write
+ok 113 - foreign and logically damaged ledgers are rejected before any backup or original SQLite write
+  ---
+  duration_ms: 13.977361
+  type: 'test'
+  ...
+# Subtest: revocation after backup intent preserves original schema and the complete backup audit
+ok 114 - revocation after backup intent preserves original schema and the complete backup audit
+  ---
+  duration_ms: 20.046238
+  type: 'test'
+  ...
+# Subtest: matching column names without FilmCraft structural constraints cannot claim a ledger
+ok 115 - matching column names without FilmCraft structural constraints cannot claim a ledger
+  ---
+  duration_ms: 11.38072
+  type: 'test'
+  ...
+# Subtest: the actual previous installed dev45 core refuses schema5 without editing current state
+ok 116 - the actual previous installed dev45 core refuses schema5 without editing current state # SKIP
+  ---
+  duration_ms: 0.044807
+  type: 'test'
+  ...
+# Subtest: same idempotency key returns the original task; changed identity conflicts without replacing it
+ok 117 - same idempotency key returns the original task; changed identity conflicts without replacing it
+  ---
+  duration_ms: 9.304413
+  type: 'test'
+  ...
+# Subtest: task IDs cannot overwrite another caller and input versions remain bound
+ok 118 - task IDs cannot overwrite another caller and input versions remain bound
+  ---
+  duration_ms: 5.003502
+  type: 'test'
+  ...
+# Subtest: project occupancy survives close/reopen and unknown execution does not free the writer
+ok 119 - project occupancy survives close/reopen and unknown execution does not free the writer
+  ---
+  duration_ms: 9.316142
+  type: 'test'
+  ...
+# Subtest: expired leases are fenced without automatically taking over or accepting an old completion
+ok 120 - expired leases are fenced without automatically taking over or accepting an old completion
+  ---
+  duration_ms: 5.470503
+  type: 'test'
+  ...
+# Subtest: intent is committed before submission and accepted execution is not completed delivery
+ok 121 - intent is committed before submission and accepted execution is not completed delivery
+  ---
+  duration_ms: 8.797879
+  type: 'test'
+  ...
+# Subtest: missing stop confirmation remains unknown; receipts cannot be spliced across attempts
+ok 122 - missing stop confirmation remains unknown; receipts cannot be spliced across attempts
+  ---
+  duration_ms: 6.894724
+  type: 'test'
+  ...
+# Subtest: deadline and unsupported state database refuse execution without editing user files
+ok 123 - deadline and unsupported state database refuse execution without editing user files
+  ---
+  duration_ms: 4.46219
+  type: 'test'
+  ...
+# Subtest: two actual processes cannot acquire the same project writer
+ok 124 - two actual processes cannot acquire the same project writer
+  ---
+  duration_ms: 109.7275
+  type: 'test'
+  ...
+# Subtest: aliased output parents share idempotency and occupancy even with a different project key
+ok 125 - aliased output parents share idempotency and occupancy even with a different project key
+  ---
+  duration_ms: 6.832215
+  type: 'test'
+  ...
+# Subtest: an unrelated SQLite database with user_version 1 is rejected without changing its bytes
+ok 126 - an unrelated SQLite database with user_version 1 is rejected without changing its bytes
+  ---
+  duration_ms: 6.463042
+  type: 'test'
+  ...
+1..126
+# tests 126
+# suites 0
+# pass 123
+# fail 0
+# cancelled 0
+# skipped 3
+# todo 0
+# duration_ms 33229.926422

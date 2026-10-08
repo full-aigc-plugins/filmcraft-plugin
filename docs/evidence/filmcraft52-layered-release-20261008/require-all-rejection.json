@@ -1,0 +1,15 @@
+{
+  "schema": "filmcraft-complete-qualification-rejection/v1",
+  "result": "PASS",
+  "meaning": "expected refusal of complete qualification",
+  "commandMode": "--require-all",
+  "actualExitCode": 1,
+  "actualError": "complete_release_not_qualified",
+  "collectionIntegrity": "PASS",
+  "overallQualification": "NOT_PROVEN",
+  "notRun": 152,
+  "originalLogSha256": "9c8c317e74c71efbbae770d40be1f644623268dd88c58599a97abc086cfb026f",
+  "publicLog": "require-all-rejection.log",
+  "publicLogSha256": "52645c87992653b211d4f5bb0d24a2aaa6166079b81f494b66253a3f1f82ded8",
+  "note": "Public traceback paths sanitized; original private log retained unchanged."
+}

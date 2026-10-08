@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "[PLUGIN_ROOT]/scripts/collect_release_layers.py", line 169, in <module>
+    print(json.dumps(verify(**vars(parser.parse_args()))))
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[PLUGIN_ROOT]/scripts/collect_release_layers.py", line 161, in verify
+    if require_all and report['qualification']!='PASS':raise ValueError('complete_release_not_qualified')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: complete_release_not_qualified

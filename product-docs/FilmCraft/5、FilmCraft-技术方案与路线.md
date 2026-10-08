@@ -106,4 +106,7 @@
 
 固定dev.51／源42完成OpenSpec9.25—9.27：126项安装原生／状态测试无跳过、49类矩阵含9类受限修订专项、13技能／44执行文件保全，公共协议与四次发布CI通过。创作人工复核与用户接受仍开放，完整V1余54项。docs/evidence/filmcraft51-fixed-revision-20261008.json · docs/evidence/filmcraft51-fixed-revision-20261008.json。
 
-分层发行候选dev.52／源44：强制源／插件CI、逐测试环境NOT_RUN、固定公共schema正反映射和逐场景身份／日志门禁已实现；固定安装及分层收集待执行。详见 docs/FilmCraft-Release-Architecture.zh_CN.md；9.28—9.30及完整V1保持开放。
+
+固定 dev.52／源 dev.44 分层发行验收完成 OpenSpec 9.28—9.30：源真实 CI 181 PASS／36 环境 NOT_RUN；插件四次真实 CI 成功；固定安装原生／状态 126/126、零跳过，273 项前置检查和 32 项 headless／bridge 场景。11 组 30 场景的 180 条分层记录中 28 PASS、152 NOT_RUN；收集完整性 PASS，整体资格仍 NOT_PROVEN。真实媒体、其他宿主／平台、完整命令、创作／用户接受和完整 V1 保持开放，余 51 项。
+
+证据 / Evidence: docs/evidence/filmcraft52-layered-release-20261008/report.json。

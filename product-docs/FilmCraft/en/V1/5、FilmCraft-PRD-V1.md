@@ -78,4 +78,7 @@ Bounded revision preserves non-targets and dependencies, never automatically rep
 
 Fixed dev.51/source42 completes OpenSpec9.25–9.27:126 installed native/state tests without skips,49 matrix records including9 bounded revision cases,13 skills/44 execution files preserved; public protocol validation and all four release CI runs pass. Creative/manual and user acceptance remain open, with54 V1 tasks remaining. docs/evidence/filmcraft51-fixed-revision-20261008.json · docs/evidence/filmcraft51-fixed-revision-20261008.json.
 
-Layered release results bind current commits, inputs, candidates and original logs. Missing real-media, host or platform scenarios remain NOT_RUN. Dev.52/source44 still requires fixed installation and collection; green CI does not qualify user acceptance or full V1.
+
+Fixed dev.52/source dev.44 completes OpenSpec9.28–9.30: source CI181 PASS/36 environment NOT_RUN; all four plugin CI runs succeed; installed native/state126/126 with no skips,273 preflight checks and32 bounded headless/bridge cases. Eleven groups/30 scenarios produce180 layer records:28 PASS and152 NOT_RUN. Collection integrity PASS; overall qualification NOT_PROVEN. Real media, other hosts/platforms, exhaustive commands, creative/user acceptance and full V1 remain open with51 tasks.
+
+证据 / Evidence: docs/evidence/filmcraft52-layered-release-20261008/report.json。

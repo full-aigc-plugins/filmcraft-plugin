@@ -40,6 +40,8 @@
 
 当前插件：`0.1.0-dev.52`；技能源：`0.1.0-dev.44`；13 个独立技能。
 
+固定 dev.52／源 dev.44 分层发行验收完成 OpenSpec 9.28—9.30：源真实 CI 181 PASS／36 环境 NOT_RUN；插件四次真实 CI 成功；固定安装原生／状态 126/126、零跳过，273 项前置检查和 32 项 headless／bridge 场景。11 组 30 场景的 180 条分层记录中 28 PASS、152 NOT_RUN；收集完整性 PASS，整体资格仍 NOT_PROVEN。真实媒体、其他宿主／平台、完整命令、创作／用户接受和完整 V1 保持开放，余 51 项。 [Evidence / 证据](docs/evidence/filmcraft52-layered-release-20261008/report.json).
+
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
 固定音频尾部验收：Film 插件 dev.33／源 dev.31、Art 插件 dev.103／源 dev.77 已通过实际安装首用。64 项安装身份核验；23 项有变更技能逐个空运行时安装通过（258.282 秒），另 41 项摘要未变并复用原冷安装证据。音频尾部、增益另存、显式越界拒绝、五子工程配音混合交付、移动包和品牌返工／无关节点复用通过；不关闭通用 Skills CLI、创作审批或完整 V1。[版本绑定证据](docs/evidence/craft-art103-audio-tail-fixed-first-use-20261007.json)。

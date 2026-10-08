@@ -1,0 +1,28 @@
+{
+  "schema": "filmcraft-maintenance-roots/v1",
+  "result": "PASS",
+  "layer": "candidate",
+  "pluginVersion": "0.1.0-dev.71",
+  "targetRed": {
+    "result": "expected failure",
+    "log": "target-red.txt",
+    "scope": "missing root guard, missing authorization binding and missing preflight forwarding; not environment failure"
+  },
+  "unit": {
+    "tests": 10,
+    "pass": 10,
+    "skipped": 0,
+    "log": "target-green.txt"
+  },
+  "native": "native-candidate.json",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "fixedInstalledHost": "NOT_RUN",
+  "openV1Tasks": 8,
+  "offlineCheck": {
+    "result": "PASS",
+    "pythonPass": 86,
+    "nodePass": 182,
+    "nodeEnvironmentNotRun": 3,
+    "report": "offline-report.json"
+  }
+}

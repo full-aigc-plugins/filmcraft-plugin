@@ -23,7 +23,7 @@ flowchart TD
 
 `subject --probe FILE` 计算切换许可主题；`activate --probe FILE` 使用该已有许可，在同一写事务中检查排空并重新探测。`subject --probe FILE --generation N` 和 `rollback --probe FILE --generation N` 使用回退动作许可，且候选必须匹配保留历史的原版本身份；新的实际探测摘要仍写入新代次，旧记录不改写。回退探测必须在当前代次重新采集，不能重放升级前的旧回执。
 
-所有命令共有参数：`--candidate FILE --plan FILE --ledger FILE --runtime-home DIRECTORY [--python FILE]`。有副作用的命令另需 `--authorization-root DIRECTORY --authorization-ref REF --authorization-scope-sha256 SHA`。CLI 不创建宿主许可，不重试编辑，不删除旧原生版本，不自动处理未知任务。当前入口明确仅探测 headless 领域计划；bridge 的桌面身份与逐命令验收继续由既有能力合同管理。
+所有命令共有参数：`--candidate FILE --plan FILE --ledger FILE --runtime-home DIRECTORY --permissions FILE [--python FILE]`。有副作用的命令另需 `--authorization-root DIRECTORY --authorization-ref REF --authorization-scope-sha256 SHA`。CLI 不创建宿主许可，不重试编辑，不删除旧原生版本，不自动处理未知任务。当前入口明确仅探测 headless 领域计划；bridge 的桌面身份与逐命令验收继续由既有能力合同管理。
 
 已知缺失能力通过 `capability_missing`、证据不足通过 `capability_unknown`、参数或身份漂移通过各自稳定错误码拒绝。未知的 Python/原生输出保持 `native_preflight_failed`，不把堆栈或本地路径作为公共合同返回。
 
@@ -34,3 +34,5 @@ flowchart TD
 回退后可给 `workflow.ts subject|run` 传入 `--candidate retained-candidate.json` 选择保留的技能源。四字段候选须与binding来源匹配；执行另需账本已有匹配激活选择及准确执行许可，候选不能激活或授权自身。不传该参数时继续使用当前捆绑源。验收包含回退后的旧版实际交付与独立解码。
 
 固定dev.64/source47已完成macOS arm64的FC-RT-002七场景验收。实际安装的公开CLI在回退后使用保留技能源及既有精确授权执行；两任务各一次尝试、分别独立解码，164项安装原生、286项安装器及13项公开空缓存首用通过。2.4—2.6完成，V1余26项；索引 `docs/evidence/fc-rt-002/index.json`。旧标签及压缩包保持不可变。
+
+dev.71要求运行时维护探测与选择提供独立读写根，规范根摘要进入探测和选择的精确宿主授权；缺少策略及计划／缓存越界在计划读取和授权查询前拒绝，原生能力探测沿用同一沙箱策略。实际公开CLI探测／激活、根扩张拒绝、撤销授权及输入／技能／二进制保全通过候选验证。完整FC-RL-002与八项V1任务保持开放，固定71宿主安装验收为NOT_RUN。

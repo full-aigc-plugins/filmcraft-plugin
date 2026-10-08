@@ -1,0 +1,18 @@
+✔ upgrade probe subject is read-only and binds ledger, runtime home, source and plan (17.551791ms)
+✔ unauthorized runtime probe installs nothing and leaves ledger untouched (6.602917ms)
+✔ runtime CLI subject does not create a grant, installation, or ledger writes (200.683791ms)
+✔ source drift during authorization is refused before installing a runtime (11.571208ms)
+✔ probe authorization binds another ledger and interpreter rather than trusting a reference (77.015458ms)
+✔ capability refusal survives the Python preflight boundary as capability_missing (93.987708ms)
+✔ an unavailable platform is rejected before authorization, installation or ledger changes (4.409167ms)
+✔ maintenance probe requires roots before opening a plan or invoking authorization (3.383667ms)
+✔ maintenance probe roots bind exact authorization and reject outside plan and runtime (10.918625ms)
+✔ authorized maintenance passes its independent roots to native capability preflight (14.322625ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 539.56525

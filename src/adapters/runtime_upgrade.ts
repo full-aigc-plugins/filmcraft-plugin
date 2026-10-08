@@ -1,3 +1,5 @@
+import { requirePermissions, requireRead, requireWrite } from '../support/execution_permissions.ts';
+import type { ExecutionPermissions } from '../support/execution_permissions.ts';
 import { existsSync, readFileSync, realpathSync, statSync } from 'node:fs';
 import { basename, delimiter, dirname, isAbsolute, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,13 +15,15 @@ import { deploymentHistory, RuntimeDeployment } from './runtime_deployment.ts';
 import type { DeploymentDescriptor } from './runtime_deployment.ts';
 import {readRuntimeCandidate} from './runtime_candidate.ts';
 
-export type UpgradeOptions={candidateFile:string;planFile:string;ledgerFile:string;runtimeHome:string;python?:string};
+export type UpgradeOptions={candidateFile:string;planFile:string;ledgerFile:string;runtimeHome:string;python?:string;permissions?:ExecutionPermissions};
 function read(path:string){const p=resolve(path);return parseJson(readBoundFile(dirname(p),basename(p)).toString('utf8'));}
 /** 两阶段宿主授权：安装/只读探测与发布选择分别绑定，回执本身不能授权任何动作。 */
 export class RuntimeUpgrade{
  options:UpgradeOptions;authorize?:Authorizer;
- constructor(options:UpgradeOptions,authorize?:Authorizer){this.options={...options};this.authorize=authorize;}
+ constructor(options:UpgradeOptions,authorize?:Authorizer){this.options={...options,permissions:options.permissions?requirePermissions(options.permissions):undefined};this.authorize=authorize;}
  private context(){
+  const permissions=requirePermissions(this.options.permissions);
+  requireRead(this.options.planFile,permissions);requireWrite(this.options.runtimeHome,permissions);
   const c=readRuntimeCandidate(this.options.candidateFile),skill=c.skillDirectory;
   const lock=read(join(skill,'scripts/runtime.lock.json'));
   const platformKey=process.platform==='darwin'?'darwin-'+process.arch:process.platform+'-'+process.arch;
@@ -32,20 +36,20 @@ export class RuntimeUpgrade{
   const executable=isAbsolute(selectedPython)?selectedPython:(process.env.PATH??'').split(delimiter).map(p=>join(p,selectedPython)).find(p=>existsSync(p)&&statSync(p).isFile());
   check(executable,'runtime_probe_interpreter_missing');const python=realpathSync(executable);
   const manifest=read(fileURLToPath(new URL('../../plugin.json',import.meta.url)));
-  const identity={schema:'filmcraft-runtime-probe-request/v1',ledgerPathSha256:sha256(ledgerPath),runtimeHomeSha256:sha256(runtimeHome),
+  const identity={schema:'filmcraft-runtime-probe-request/v1',executionPermissionsSha256:sha256(stableJson(permissions)),ledgerPathSha256:sha256(ledgerPath),runtimeHomeSha256:sha256(runtimeHome),
    pythonPathSha256:sha256(python),pythonBinarySha256:sha256(readFileSync(python)),
    preflightSha256:sha256(readFileSync(fileURLToPath(new URL('../../scripts/native_preflight.py',import.meta.url)))),
    ledgerSchema:state.schema,generation:state.generation,sourceRevision:c.sourceRevision,sourceTreeSha256:c.sourceTreeSha256,
    skillPathSha256:sha256(skill),runtimeLockSha256:sha256(stableJson(lock)),planSha256:sha256(readFileSync(this.options.planFile)),
    pluginVersion:manifest.version,runtimeVersion:lock.resolvedVersion,runtimeSha256:artifact.binarySha256,mode:'headless'};
-  return {identity,skill,ledgerPath,runtimeHome,python};
+  return {identity,skill,ledgerPath,runtimeHome,python,permissions};
  }
  /** 只读返回安装/探测主题，不写账本、缓存、授权或媒体。 */
  probeSubject():AuthorizationSubject{return {action:'upgrade',identitySha256:sha256(stableJson(this.context().identity))};}
  private measure(context:ReturnType<RuntimeUpgrade['context']>){
   check(stableJson(this.context().identity)===stableJson(context.identity),'runtime_probe_changed');
   const runner=new PythonWorkflowRunner(null as any,null as any,{skillDirectory:context.skill,sourceRevision:context.identity.sourceRevision,
-   pluginVersion:context.identity.pluginVersion,runtimeHome:context.runtimeHome,python:context.python});
+   pluginVersion:context.identity.pluginVersion,runtimeHome:context.runtimeHome,python:context.python,permissions:context.permissions});
   const prepared=runner.prepare(this.options.planFile,join(context.runtimeHome,'.probe-no-output'));
   check(stableJson(this.context().identity)===stableJson(context.identity),'runtime_probe_changed');
   const r=prepared.runtimeIdentity;

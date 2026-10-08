@@ -1,3 +1,4 @@
+import { requirePermissions } from '../support/execution_permissions.ts';
 import {AssetPreflightRefusal} from '../adapters/asset_refusal.ts';
 import {ClipTimingRefusal} from '../adapters/clip_refusal.ts';
 import { parseArgs } from 'node:util';
@@ -9,11 +10,13 @@ import { readBoundFile } from '../artifacts/receipt_index.ts';
 import { check, HarnessError, parseJson } from '../support/json.ts';
 /** 宿主运行时升级入口；仅使用已有私有授权，不自行创建许可或自动重试。 */
 function main(){
- const {values:v,positionals:p}=parseArgs({allowPositionals:true,options:{help:{type:'boolean'},candidate:{type:'string'},plan:{type:'string'},ledger:{type:'string'},
+ const {values:v,positionals:p}=parseArgs({allowPositionals:true,options:{help:{type:'boolean'},permissions:{type:'string'},candidate:{type:'string'},plan:{type:'string'},ledger:{type:'string'},
   'runtime-home':{type:'string'},python:{type:'string'},probe:{type:'string'},generation:{type:'string'},'authorization-root':{type:'string'},'authorization-ref':{type:'string'},'authorization-scope-sha256':{type:'string'}}});
- if(v.help){console.log('node src/cli/runtime.ts probe-subject|probe|subject|activate|rollback --candidate FILE --plan FILE --ledger FILE --runtime-home DIR [--python FILE]\nprobe: --authorization-root DIR --authorization-ref REF --authorization-scope-sha256 SHA\nsubject/activate/rollback: --probe FILE [--generation INTEGER for rollback subject and rollback]\nactivate/rollback additionally require the existing exact private host grant. Probe and selection are separate grants; no edits are replayed.');return;}
+ if(v.help){console.log('node src/cli/runtime.ts probe-subject|probe|subject|activate|rollback --candidate FILE --plan FILE --ledger FILE --runtime-home DIR --permissions FILE [--python FILE]\nprobe: --authorization-root DIR --authorization-ref REF --authorization-scope-sha256 SHA\nsubject/activate/rollback: --probe FILE [--generation INTEGER for rollback subject and rollback]\nactivate/rollback additionally require the existing exact private host grant. Probe and selection are separate grants; no edits are replayed.');return;}
  check(p.length===1&&['probe-subject','probe','subject','activate','rollback'].includes(p[0])&&v.candidate&&v.plan&&v.ledger&&v['runtime-home'],'invalid_runtime_arguments');
- const service=new RuntimeUpgrade({candidateFile:v.candidate,planFile:v.plan,ledgerFile:v.ledger,runtimeHome:v['runtime-home'],python:v.python},
+ check(v.permissions,'execution_permissions_required');
+ const permissionPath=resolve(v.permissions),permissions=requirePermissions(parseJson(readBoundFile(dirname(permissionPath),basename(permissionPath)).toString('utf8')));
+ const service=new RuntimeUpgrade({candidateFile:v.candidate,planFile:v.plan,ledgerFile:v.ledger,runtimeHome:v['runtime-home'],python:v.python,permissions},
   v['authorization-root']?new LocalAuthorizationStore(v['authorization-root']).authorize:undefined);
  if(p[0]==='probe-subject'){console.log(JSON.stringify(service.probeSubject()));return;}
  const grant={authorizationRef:v['authorization-ref']!,authorizationScopeSha256:v['authorization-scope-sha256']!};

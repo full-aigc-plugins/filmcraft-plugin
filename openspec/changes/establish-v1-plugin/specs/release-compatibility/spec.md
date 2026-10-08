@@ -82,6 +82,13 @@
 - **THEN** 原生编辑及其辅助进程 SHALL 仅接收明确允许的运行环境，不继承宿主全部环境、秘密值或解释器注入项
 - **AND** 本地原生剪辑不要求云端密钥；有凭据需求的新能力须单独定义宿主秘密引用消费合同，不能通过计划中的字面密钥或额外环境字段绕过。
 
+#### Scenario: FC-RL-002-MAINTENANCE-ROOTS 维护探测权限独立绑定
+
+- **WHEN** 宿主请求运行时安装／升级能力探测或使用探测回执切换运行时
+- **THEN** 维护入口 SHALL 要求独立可信的读取／写入根，在计划读取与授权查询之前拒绝缺失策略或越界计划／缓存路径；规范化根摘要进入探测及切换授权主体
+- **AND** 固定安装器仅在对应精确维护授权通过后运行；原生能力探测继续使用目录沙箱，保护技能、固定运行时及显式模型缓存，维护授权不得扩大原生编辑写入范围
+- **AND** 根策略扩张、撤销或探测期间身份变化需重新授权；只读主题计算不得安装、创建许可或修改账本。
+
 ## Implementation evidence (non-normative)
 
 `docs/evidence/codex-current-release.json` binds current fixed releases to two actual Codex CLI/app-server versions, five enabled namespaced skills, installed public workflow outcomes and explicit exclusions. The corresponding bilingual Host-Verification-Architecture documents specify the repeatable check. RL-001 tasks remain unchecked until their full P0 prerequisites and scenarios pass.

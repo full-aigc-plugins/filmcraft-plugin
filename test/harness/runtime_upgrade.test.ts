@@ -21,7 +21,8 @@ function setup(t:any){
  writeFileSync(candidate,JSON.stringify({schema:'filmcraft-runtime-candidate/v1',skillDirectory:skill,
   sourceRevision:'a'.repeat(40),sourceTreeSha256:fingerprintSkill(skill)}));
  writeFileSync(plan,JSON.stringify({document:{name:'Probe',width:32,height:32,frameRate:{num:12,den:1}},operations:[],exports:{}}));
- const options={candidateFile:candidate,planFile:plan,ledgerFile:file,runtimeHome:join(root,'runtime'),python:process.env.FILMCRAFT_PYTHON??'python3'};
+ const permissions={schema:'filmcraft-execution-permissions/v1' as const,readRoots:[root],writeRoots:[root]};
+ const options={permissions,candidateFile:candidate,planFile:plan,ledgerFile:file,runtimeHome:join(root,'runtime'),python:process.env.FILMCRAFT_PYTHON??'python3'};
  return {root,file,candidate,plan,options,service:new RuntimeUpgrade(options)};
 }
 test('upgrade probe subject is read-only and binds ledger, runtime home, source and plan',t=>{
@@ -38,7 +39,8 @@ test('unauthorized runtime probe installs nothing and leaves ledger untouched',t
 });
 test('runtime CLI subject does not create a grant, installation, or ledger writes',t=>{
  const f=setup(t),before=readFileSync(f.file),cli=new URL('../../src/cli/runtime.ts',import.meta.url).pathname;
- const argv=[cli,'probe-subject','--candidate',f.candidate,'--plan',f.plan,'--ledger',f.file,'--runtime-home',f.options.runtimeHome];
+ const permissionFile=join(f.root,'permissions.json');writeFileSync(permissionFile,JSON.stringify(f.options.permissions));
+ const argv=[cli,'probe-subject','--candidate',f.candidate,'--plan',f.plan,'--ledger',f.file,'--runtime-home',f.options.runtimeHome,'--permissions',permissionFile];
  const r=spawnSync(process.execPath,argv,{encoding:'utf8'});assert.equal(r.status,0,r.stdout+r.stderr);
  assert.deepEqual(JSON.parse(r.stdout),f.service.probeSubject());assert.deepEqual(readFileSync(f.file),before);
  const run=spawnSync(process.execPath,[...argv.slice(0,1),'probe',...argv.slice(2),'--authorization-ref','grant','--authorization-scope-sha256',hash(),'--authorization-root',join(f.root,'grants')],{encoding:'utf8'});
@@ -83,4 +85,35 @@ test('an unavailable platform is rejected before authorization, installation or 
  const lock=JSON.parse(readFileSync(p,'utf8'));lock.artifacts={};writeFileSync(p,JSON.stringify(lock));c.sourceTreeSha256=fingerprintSkill(c.skillDirectory);writeFileSync(f.candidate,JSON.stringify(c));
  const before=readFileSync(f.file);assert.throws(()=>f.service.probeSubject(),/unsupported_upgrade_platform/);
  assert.equal(existsSync(f.options.runtimeHome),false);assert.deepEqual(readFileSync(f.file),before);
+});
+
+// 安装维护也要绑定独立可信根，不能由已有升级引用或计划推导授权。
+test('maintenance probe requires roots before opening a plan or invoking authorization',t=>{
+ const f=setup(t);let queries=0;
+ const service=new RuntimeUpgrade({...f.options,permissions:undefined,planFile:join(f.root,'absent')},()=>{queries++;throw new Error('unexpected_authorization');});
+ assert.throws(()=>service.probe({authorizationRef:'grant',authorizationScopeSha256:hash()}),/execution_permissions_required/);
+ assert.equal(queries,0);assert.equal(existsSync(f.options.runtimeHome),false);
+});
+test('maintenance probe roots bind exact authorization and reject outside plan and runtime',t=>{
+ const f=setup(t),outside=workspace(t),subject=f.service.probeSubject();
+ const expanded={...f.options.permissions,readRoots:[f.root,outside].sort()};
+ assert.notEqual(new RuntimeUpgrade({...f.options,permissions:expanded}).probeSubject().identitySha256,subject.identitySha256);
+ assert.throws(()=>new RuntimeUpgrade({...f.options,planFile:join(outside,'unread-plan.json')}).probeSubject(),/permission_read_denied/);
+ assert.throws(()=>new RuntimeUpgrade({...f.options,runtimeHome:join(outside,'runtime')}).probeSubject(),/permission_write_denied/);
+ assert.equal(existsSync(f.options.runtimeHome),false);
+});
+test('authorized maintenance passes its independent roots to native capability preflight',async t=>{
+ const f=setup(t),{PythonWorkflowRunner}=await import('../../src/adapters/python_workflow.ts');
+ const {fixtureAuthorizer}=await import('./fixtures.ts');let observed:any;
+ const original=PythonWorkflowRunner.prototype.prepare;
+ PythonWorkflowRunner.prototype.prepare=function(){
+  observed=this.options.permissions;
+  const c=JSON.parse(readFileSync(f.candidate,'utf8')),lock=JSON.parse(readFileSync(join(c.skillDirectory,'scripts/runtime.lock.json'),'utf8'));
+  return {sourceTreeSha256:c.sourceTreeSha256,snapshot:{schema:'filmcraft-capability-snapshot/v1'},runtimeIdentity:{pluginId:'filmcraft',pluginVersion:'synthetic',cliVersion:lock.resolvedVersion,sha256:Object.values(lock.artifacts)[0].binarySha256,mode:'headless',capabilitySnapshotSha256:hash()}} as any;
+ };
+ try {
+  const result=new RuntimeUpgrade(f.options,fixtureAuthorizer).probe({authorizationRef:'grant',authorizationScopeSha256:hash()});
+  assert.deepEqual(observed,f.options.permissions);assert.match(result.request.executionPermissionsSha256,/^[a-f0-9]{64}$/);
+  assert.equal(existsSync(f.options.runtimeHome),false);
+ } finally {PythonWorkflowRunner.prototype.prepare=original;}
 });

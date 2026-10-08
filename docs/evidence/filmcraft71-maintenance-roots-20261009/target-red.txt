@@ -1,0 +1,120 @@
+✔ upgrade probe subject is read-only and binds ledger, runtime home, source and plan (15.727084ms)
+✔ unauthorized runtime probe installs nothing and leaves ledger untouched (6.313334ms)
+✖ runtime CLI subject does not create a grant, installation, or ledger writes (91.484084ms)
+✔ source drift during authorization is refused before installing a runtime (10.622667ms)
+✔ probe authorization binds another ledger and interpreter rather than trusting a reference (71.269375ms)
+✔ capability refusal survives the Python preflight boundary as capability_missing (96.998709ms)
+✔ an unavailable platform is rejected before authorization, installation or ledger changes (6.447917ms)
+✖ maintenance probe requires roots before opening a plan or invoking authorization (9.7935ms)
+✖ maintenance probe roots bind exact authorization and reject outside plan and runtime (12.741333ms)
+✖ authorized maintenance passes its independent roots to native capability preflight (11.859042ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 6
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 426.178333
+
+✖ failing tests:
+
+test at test/harness/runtime_upgrade.test.ts:40:1
+✖ runtime CLI subject does not create a grant, installation, or ledger writes (91.484084ms)
+  AssertionError [ERR_ASSERTION]: {"schema":"filmcraft-runtime-upgrade-error/v1","replayAllowed":false,"error":{"code":"runtime_upgrade_failed"}}
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:44:68)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/runtime_upgrade.test.ts:91:1
+✖ maintenance probe requires roots before opening a plan or invoking authorization (9.7935ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /execution_permissions_required/. Input:
+  
+  "Error: ENOENT: no such file or directory, open '[OWNED_TEMP_PATH]'"
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:94:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: ENOENT: no such file or directory, open '[OWNED_TEMP_PATH]'
+        at Object.openSync (node:fs:561:18)
+        at readFileSync (node:fs:445:35)
+        at RuntimeUpgrade.context (file://[PLUGIN_ROOT]/src/adapters/runtime_upgrade.ts:39:95)
+        at RuntimeUpgrade.probe (file://[PLUGIN_ROOT]/src/adapters/runtime_upgrade.ts:58:22)
+        at file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:94:28
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:94:9)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25),
+    expected: /execution_permissions_required/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test/harness/runtime_upgrade.test.ts:97:1
+✖ maintenance probe roots bind exact authorization and reject outside plan and runtime (12.741333ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  'a1c2a6b8efe87f8614f01592413eb193c8bbb8532fbca5e08aef582168311549'
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:100:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'a1c2a6b8efe87f8614f01592413eb193c8bbb8532fbca5e08aef582168311549',
+    expected: 'a1c2a6b8efe87f8614f01592413eb193c8bbb8532fbca5e08aef582168311549',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/runtime_upgrade.test.ts:105:1
+✖ authorized maintenance passes its independent roots to native capability preflight (11.859042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - {
+  -   readRoots: [
+  -     '[OWNED_TEMP_PATH]'
+  -   ],
+  -   schema: 'filmcraft-execution-permissions/v1',
+  -   writeRoots: [
+  -     '[OWNED_TEMP_PATH]'
+  -   ]
+  - }
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/runtime_upgrade.test.ts:116:10)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { schema: 'filmcraft-execution-permissions/v1', readRoots: [ '[OWNED_TEMP_PATH]' ], writeRoots: [ '[OWNED_TEMP_PATH]' ] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.71
+
+dev.71 requires independent read/write roots for runtime maintenance probes and selection. Canonical roots are bound into both exact host grants; missing roots and outside plan/cache paths refuse before plan reads or authorization. Native capability probes receive the same sandbox policy. Actual public CLI probes/activation, expanded-root refusal, grant revocation and input/skill/binary preservation pass as candidate evidence. Full FC-RL-002 and eight V1 tasks remain open; fixed71 installed-host qualification is NOT_RUN.
+
 ## 0.1.0-dev.70
 
 dev.70 binds trusted execution roots into exact host authorization and native preflight. Public workflow and recovery continuation accept an independent permissions file; changed roots invalidate the grant. Source53 isolates native and owned desktop execution, including its loopback port and temporary frame files. Actual candidate native and signed-desktop checks pass. Complete FC-RL-002, maintenance separation, secret references and eight V1 tasks remain open; fixed70 host qualification is NOT_RUN.

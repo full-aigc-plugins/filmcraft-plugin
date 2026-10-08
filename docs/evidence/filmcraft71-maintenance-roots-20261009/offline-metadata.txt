@@ -1,0 +1,12 @@
+{"status": "passed", "scope": "current identity consistency only", "skills": 13, "commands": 666}
+
+{
+  "status": "passed",
+  "scope": "documentation structure, local links, status honesty and spec/task traceability only",
+  "markdownFiles": 392,
+  "capabilities": 7,
+  "requirements": 23,
+  "scenarios": 118,
+  "openImplementationTasks": 8,
+  "errors": []
+}

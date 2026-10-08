@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "layer": "current candidate actual public runtime upgrade CLI, private owned exact grants and pinned native MCP sandbox probe",
+  "sourceRevision": "3c2a422db9ff5627aad52c12d7203636cbdc5e11",
+  "expandedRootsRefused": true,
+  "revokedGrantRefused": true,
+  "probeLedgerUnchanged": true,
+  "activatedGeneration": 1,
+  "skillPreserved": true,
+  "runtimeBinaryPreserved": true,
+  "inputPreserved": true,
+  "executionPermissionsSha256": "530bb0932a8880476c8d85b0c95f639ad9673e172fea510542170d9b4c3cd60a",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "fixedHostQualification": "NOT_RUN",
+  "pluginVersion": "0.1.0-dev.71",
+  "executionFilesSha256": {
+    "src/adapters/runtime_upgrade.ts": "5c91ef98f18c8844b03a9acf497a67dda88a167d3466ebc6a642f15c77675e69",
+    "src/cli/runtime.ts": "d8e00a073d4cafa786862dba66cddad876f1d99e280355e7fe71dc36a346c0a8",
+    "scripts/native_preflight.py": "ce2c08bc6f90f7125cfd7eaa40b698c3d6d82e634a1142bdcf235d495e9bd472"
+  }
+}

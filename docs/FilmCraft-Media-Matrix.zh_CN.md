@@ -31,3 +31,11 @@ flowchart LR
 输入验证64项Python测试通过。准备证据及来源摘要见[记录](evidence/filmcraft-media-fixtures-20261008/summary.json)和[完整清单](evidence/filmcraft-media-fixtures-20261008/manifest.json)。下一步执行固定安装副本，保存原生回执、逐帧／采样断言与失败路径；不以文件存在、合成样例、截图或结构评分代替验收。完整V1仍有50项开放。
 
 9.32首个固定52／源44真实派生VFR探针：原生保存／导出及完整解码通过，3.008秒成片，但独立8kHz单声道音频归一化相关性0.49865，低于0.98预期。分窗相关性也下降，根因待查；不关闭9.32或9.33，不降低验收阈值。证据 docs/evidence/filmcraft-media-fixtures-20261008/vfr-native-probe.json。
+
+## craft.5 原生矩阵执行器
+
+`scripts/verify_media_matrix.py` 实际执行公开技能的保存、重开、导出和重关联；`scripts/verify_fixed_media.py` 另绑定真实隔离Codex宿主回执、不可变插件／源身份、全部13技能与执行代码，再用空缓存下载公开运行时执行同一矩阵。候选总体PASS不能提升固定安装资格。
+
+七类craft.5候选通过：VFR成片36帧／3.008秒、音频相关性0.999966零偏移；181秒双声道末544采样的PCM精确保留与AAC相关性>=0.999279；发现并绑定Inter／Noto Serif字节及OFL许可，字体变化1684像素；12帧合成alpha按线性光合成并输出sRGB，半透明红色预期188，逐通道阈值仍3/255；坏输入、缺字体与缺依赖拒绝，失败诊断不冒充成功交付；移动后原生重关联与像素保全通过。Noto Sans未安装，不声称使用该字体。
+
+执行器与固定验收门禁8项专项单元通过；候选来源、许可、输入／输出与运行时摘要见[原生矩阵](evidence/filmcraft54-media-candidate-20261009/report.json)。9.32/9.33须在新公开固定插件完成后再勾选；其他平台／宿主、完整编码与命令、创作／用户接受和V1保持独立开放。

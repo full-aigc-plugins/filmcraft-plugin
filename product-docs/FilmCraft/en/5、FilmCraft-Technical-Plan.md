@@ -116,3 +116,5 @@ OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/ha
 First fixed52/source44 real-derived VFR probe for9.32 saves/exports and fully decodes a3.008-second movie, but independent8kHz mono normalized audio correlation is0.49865, below0.98. Window diagnostics also degrade; root cause remains unconfirmed. Tasks9.32/9.33 stay open and thresholds remain unchanged. Evidence: docs/evidence/filmcraft-media-fixtures-20261008/vfr-native-probe.json.
 
 2026-10-09 development dev.53 pins source dev.45, including fixture preparation and failed-probe evidence. The PCM candidate is outside the default craft.4 installer. Tasks9.32/9.33 and50 full-V1 tasks remain open.
+
+2026-10-09 dev.54 pins source dev.46/public craft.5. Seven candidate native media cases, actual Whisper28 words/100% reference coverage and public native first use pass. New fixed-host/media qualification follows publication; tasks9.32/9.33 and50 full-V1 tasks remain open.

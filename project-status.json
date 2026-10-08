@@ -187,5 +187,7 @@
   "fixedResourceEvidence": "docs/evidence/filmcraft49-fixed-resources-20261008.json",
   "fixedQualityEvidence": "docs/evidence/filmcraft50-fixed-quality-20261008.json",
   "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
-  "fixedLayeredReleaseEvidence": "docs/evidence/filmcraft52-layered-release-20261008/report.json"
+  "fixedLayeredReleaseEvidence": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
+  "mediaMatrixCandidateEvidence": "docs/evidence/filmcraft54-media-candidate-20261009/report.json",
+  "mediaMatrixCandidateStatus": "7/7 private craft.5 candidate media cases PASS; public runtime and source46 published; new fixed54 installation and matrix pending; tasks9.32/9.33 remain open"
 }

@@ -1,7 +1,7 @@
 {
   "schema": "craft-command-coverage/v1",
   "pluginId": "filmcraft",
-  "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
   "upstreamCommit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",
   "scope": "complete documentation and native-session route; not complete native acceptance",
   "workflowOperationCount": 18,

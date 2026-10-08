@@ -1,9 +1,9 @@
 {
   "schema": "craft-native-command-snapshot/v1",
   "pluginId": "filmcraft",
-  "runtimeVersion": "0.2.0-craft.4",
+  "runtimeVersion": "0.2.0-craft.5",
   "platform": "darwin-arm64",
-  "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
   "mode": "headless-empty",
   "scope": "registered commands and empty-session state only; no command execution acceptance",
   "tools": [

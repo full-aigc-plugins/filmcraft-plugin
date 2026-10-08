@@ -1,26 +1,26 @@
 {
   "schema": "filmcraft-current-facts/v1",
   "pluginId": "filmcraft",
-  "pluginVersion": "0.1.0-dev.53",
+  "pluginVersion": "0.1.0-dev.54",
   "sourcePackage": "filmcraft-skills",
-  "sourceRef": "v0.1.0-dev.45",
-  "sourceSha": "2933f2dfe35dbf49fedc1fb54bc792b600a7dedd",
-  "suiteSha256": "bed3244a2ab0b4bca660bcf8d55dc6249ff1533f4c05f381a226a95588fce1d0",
+  "sourceRef": "v0.1.0-dev.46",
+  "sourceSha": "472289353c4e08c58dab75b9cb994c3c526431b7",
+  "suiteSha256": "61f2ab43cd13a090c432866e1d0c59c573a15b94125df0ccd75315ca414a7c33",
   "skillCount": 13,
   "commandCount": 666,
   "referenceCatalogIdentity": {
     "path": "skills/filmcraft-use/references/commands.json",
-    "version": "0.2.0-craft.4",
-    "binarySha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+    "version": "0.2.0-craft.5",
+    "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
     "status": "MATCH"
   },
   "activeRuntime": {
     "role": "skill-execution-authority",
     "path": "skills/filmcraft-use/scripts/runtime.lock.json",
-    "version": "0.2.0-craft.4",
-    "releaseRef": "runtime-v0.2.0-craft.4",
+    "version": "0.2.0-craft.5",
+    "releaseRef": "runtime-v0.2.0-craft.5",
     "platform": "darwin-arm64",
-    "binarySha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893"
+    "binarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
   },
   "desktop": {
     "role": "bridge-desktop-identity",
@@ -64,6 +64,7 @@
     "docs/evidence/filmcraft50-fixed-quality-20261008.json",
     "docs/evidence/filmcraft51-fixed-revision-20261008.json",
     "docs/evidence/filmcraft52-layered-release-20261008/report.json",
+    "docs/evidence/filmcraft54-media-candidate-20261009/report.json",
     "docs/evidence/motion-lut-workflow-candidate-20261006.json",
     "docs/evidence/protocol-fault-first-use-20261007.json",
     "docs/evidence/public-workflow-session-candidate-20261007.json",

@@ -1,0 +1,1 @@
+{"result": "PASS", "cases": {"vfr": "PASS", "long-audio-tail": "PASS", "font-change": "PASS", "transparent-sequence": "PASS", "bad-file": "PASS", "missing-font": "PASS", "dependency-move": "PASS"}, "fixedInstallation": "NOT_RUN"}

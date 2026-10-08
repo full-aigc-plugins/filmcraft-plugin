@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.54
+
+Pins source dev.46 and public craft.5, adding seven-case native media and fixed-host verifiers. Candidate matrix/actual Whisper/public native first use pass; new fixed-host/media qualification follows publication. Full V1 remains open.
+
 ## 0.1.0-dev.53
 
 Pins published source dev.45 and distributes real-media fixtures plus failed native VFR audio evidence. The PCM fix is a source candidate only; default craft.4 is unchanged. Tasks9.32/9.33 and full V1 remain open.

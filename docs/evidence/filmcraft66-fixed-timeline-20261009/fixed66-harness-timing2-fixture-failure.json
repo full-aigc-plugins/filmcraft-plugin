@@ -1,0 +1,5 @@
+{
+  "result": "FIXTURE_ASSERTION_FAILURE",
+  "reason": "driver incorrectly expected successful linked delivery for a known failed-stage; public contract retains unknown receipt identity and no outputRefs",
+  "behaviorRed": false
+}

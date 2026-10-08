@@ -1,0 +1,5 @@
+{
+  "result": "FIXTURE_FAILURE",
+  "reason": "owned driver omitted required resource policy; no native attempt launched",
+  "behaviorRed": false
+}

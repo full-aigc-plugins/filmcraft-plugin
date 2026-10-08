@@ -1,0 +1,6 @@
+test_trim_and_move_preserve_other_clip_audio_captions_and_source (test_timeline_temporal_first_use.TimelineTemporalFirstUseTests.test_trim_and_move_preserve_other_clip_audio_captions_and_source) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 6.818s
+
+OK

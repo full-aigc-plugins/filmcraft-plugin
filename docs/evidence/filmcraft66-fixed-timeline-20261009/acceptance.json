@@ -1,0 +1,200 @@
+{
+  "schema": "filmcraft-fixed-domain-timeline-acceptance/v1",
+  "result": "PASS",
+  "requirement": "FC-DM-002",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "platform": "macOS arm64",
+  "host": "Codex0.147.0 isolated public-tag installation",
+  "mode": "headless",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-002-P",
+      "result": "PASS",
+      "evidence": [
+        "timeline.json",
+        "timeline_temporal.json"
+      ],
+      "observed": "Actual installed66 public CLI 24000/1001 one-frame source in trim and two-frame move; exact integer decimal persisted time fields, other tracks/source preserved, full13frame decode; ordinary12fps colored-source order and gap verified."
+    },
+    {
+      "id": "FC-DM-002-N",
+      "result": "PASS",
+      "evidence": [
+        "timeline.json",
+        "nonintegral.json",
+        "harness.json",
+        "installed-unit.txt"
+      ],
+      "observed": "Fixed65 actual explicit oversource was clamped to success; installed66 refuses float/overflow/oversource with exact clip11. Actual150percent speed/nonintegral source trim refuses ticks_not_exact. Exactu64 diagnostics, no successful manifest; one SQL attempt and no replay. Failed-stage receipt deliberately retains unknown plan identity/outputRefs empty, not successful delivery."
+    },
+    {
+      "id": "FC-DM-002-AUDIO-FRAME",
+      "result": "PASS",
+      "evidence": [
+        "exact-audio_subframe.json",
+        "installed-unit.txt"
+      ],
+      "observed": "Normal audio with561714048000 exact source ticks survives public cold creation/reopen/gain at12fps; fulltail2.17–2.20s decoded and gain matches. Installed production unit rejects invalid in, extra padding, video/non-normal speed; accepts only exact conditional nearest/minimum frame padding. Current craft.5 keeps exact audio sample ticks."
+    },
+    {
+      "id": "FC-DM-002-AUDIO-SAMPLE",
+      "result": "PASS",
+      "evidence": [
+        "exact-audio_downframe.json"
+      ],
+      "observed": "Normal audio2.20s persists duration558835200000/sourceIn0/start0 instead of dropping to26frames; fulltail actual RMS0.12478658 and gain ratio0.50119418; independent copied installed skill empty public runtime, native reopen/gain, source/audio/video/captions/skill preservation; explicit oversource rejected."
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "host.json",
+      "originalSha256": "f484053260f997accbb5bbbedf15a24fe3c43e582abd0f1616a7b041868d5ae1",
+      "projectionSha256": "f484053260f997accbb5bbbedf15a24fe3c43e582abd0f1616a7b041868d5ae1"
+    },
+    {
+      "path": "timeline.json",
+      "originalSha256": "a8cbfdea434ac3d6a38b4df7510cea9905fa375136b443c9bbdd63df21c2be17",
+      "projectionSha256": "a8cbfdea434ac3d6a38b4df7510cea9905fa375136b443c9bbdd63df21c2be17"
+    },
+    {
+      "path": "installed-unit.txt",
+      "originalSha256": "d5d7e81d09e92dd58e3bf1b8433a91ebbd6898d0edaaf6cbe6b7607058eb462d",
+      "projectionSha256": "d5d7e81d09e92dd58e3bf1b8433a91ebbd6898d0edaaf6cbe6b7607058eb462d"
+    },
+    {
+      "path": "harness.json",
+      "originalSha256": "e16c0724250705392b296c215f1e5007371ff73b1c11c4378c68648196dfb397",
+      "projectionSha256": "165669c238e530f0bd8356c748825990a8cde06d03332da7d686b6f7dd255fa4"
+    },
+    {
+      "path": "nonintegral.json",
+      "originalSha256": "2c29795b51641cf84f4b2be5cc6217d5d1afb8bb47703bb57494c2ff6b50d2bb",
+      "projectionSha256": "8db8163827f9ab7b4d6a45febc7af9f469f5d6d519d061919ba2385f5e765977"
+    },
+    {
+      "path": "exact-audio-index.json",
+      "originalSha256": "fef0fe2f107e4a2c024b76698cb327240e54740ed3181fc655c394510d844a00",
+      "projectionSha256": "634fcac7b31b213672a0f6ea1d1f91638822fbe069dfdb47af89ba3df8ad303e"
+    },
+    {
+      "path": "audio_subframe.json",
+      "originalSha256": "3f16d053dd0b4f3da30f61037174ab4a0b308c7da9c79a1c659978051c305410",
+      "projectionSha256": "cc6b5860dd1212476f380cd20218ba2b04b13f5638634e00439346e8f787791e"
+    },
+    {
+      "path": "audio_subframe.txt",
+      "originalSha256": "f4addf02b2e9cd7fc07d11141b28e5a353313f9aa86c19d07de77080df054fe8",
+      "projectionSha256": "f4addf02b2e9cd7fc07d11141b28e5a353313f9aa86c19d07de77080df054fe8"
+    },
+    {
+      "path": "audio_downframe.json",
+      "originalSha256": "c88617f90fa2fe4a6716ca4203aa83457eebabbbcaf451ea3dd032e2af4ec896",
+      "projectionSha256": "ec8571ee3963f4e596f8eb6cf86336c5b7ee8a7ede248b1a96a3155f299ebcb5"
+    },
+    {
+      "path": "audio_downframe.txt",
+      "originalSha256": "b574631da6f3e33330a04c126226dac7ba856faefc09a393a13182aa08369177",
+      "projectionSha256": "b574631da6f3e33330a04c126226dac7ba856faefc09a393a13182aa08369177"
+    },
+    {
+      "path": "timeline_temporal.json",
+      "originalSha256": "165f272ba41932b505d7242e23a4c49101bbfcdbfa5a3620a8fd4b65bb0b4a5a",
+      "projectionSha256": "45477bf87f5e6ea3f4f2654ec8108fd8c42aa2cc45add9cd42126e3af7bbcfbe"
+    },
+    {
+      "path": "timeline_temporal.txt",
+      "originalSha256": "35d73ce6d47b3715d48c0c67f34713b86a818476d3b66a5cfabd0929340ea496",
+      "projectionSha256": "35d73ce6d47b3715d48c0c67f34713b86a818476d3b66a5cfabd0929340ea496"
+    },
+    {
+      "path": "exact-audio_subframe.json",
+      "originalSha256": "7794d69c85c00af0f42587f80a4cccac557534cc6a3c3258b8c1fec955d32896",
+      "projectionSha256": "aeea4d963fdff295d000d8dcd438e1f7f607a6d2fd71d3d17304da28ae730031"
+    },
+    {
+      "path": "exact-audio_subframe.txt",
+      "originalSha256": "86273aa882a9d074bb54c0942c9d93b951a4c748cfc8822d9ab31a32fb346a3f",
+      "projectionSha256": "86273aa882a9d074bb54c0942c9d93b951a4c748cfc8822d9ab31a32fb346a3f"
+    },
+    {
+      "path": "exact-audio_downframe.json",
+      "originalSha256": "695955c71d98b80986b4464de9b2efba19dbf3e88972ca1b3b189d422e6fcc6c",
+      "projectionSha256": "5f7138503d3014ed1e40391d5f60d72537b1617dc21ac7bc0af59c74af25f5be"
+    },
+    {
+      "path": "exact-audio_downframe.txt",
+      "originalSha256": "76d7b66b8bd03c4d4ae20a900bb266937e617e47ffb8a1535ea7b9dd9c83334e",
+      "projectionSha256": "76d7b66b8bd03c4d4ae20a900bb266937e617e47ffb8a1535ea7b9dd9c83334e"
+    },
+    {
+      "path": "producer-verify-fixed66-timeline.py.txt",
+      "originalSha256": "7e7e42e256175bc8be4514ba80c7f9c62c48b7ece7e7aae5ba736c55f136e6f3",
+      "projectionSha256": "868adc2f0ec9becd5df581f13573599d350e9fcbb709edaff06283dcda4fa9ba"
+    },
+    {
+      "path": "producer-verify-fixed66-harness-timing.ts.txt",
+      "originalSha256": "b6ad246388c005739d7e1f5e10879801f12bc4925cba0321f41a9e43deaaa8c2",
+      "projectionSha256": "a53de451e6f2033949fca2a50ef81523caff67e3c2bae57dffc55a7a0161732e"
+    },
+    {
+      "path": "producer-verify-fixed66-nonintegral.py.txt",
+      "originalSha256": "4898b90236a5a0f5ded0de61631e59f2f9ab73efb975f91a38b2781319d39b61",
+      "projectionSha256": "f4932e0b88aa53c119c6f4dd671d2bd59f9ced2fdb8958a24fbb149b35b8f256"
+    },
+    {
+      "path": "producer-verify-fixed66-exact-audio.py.txt",
+      "originalSha256": "fd8ff453606db901f9880c52bfbf424430d7a33aae7119c858bcc1e26284d123",
+      "projectionSha256": "69c0ec9bbab8855bc679d7b4c6861fd267bcf20be8ed3e8397382d87b1bad4bb"
+    },
+    {
+      "path": "fixed66-harness-timing-fixture-failure.json",
+      "originalSha256": "6e14fadfab85a77fdc7664c6ccbaa5213f10be1e7d045625a53753eb33b781b8",
+      "projectionSha256": "418d53aed901e4adf680f235b8ef89faf786923c17bf74fd44b7ed80f2de186f"
+    },
+    {
+      "path": "fixed66-harness-timing2-fixture-failure.json",
+      "originalSha256": "1fe6006ba1bcd7505729669d97fb9c88e6ded0ae7e99807ec3698ba283516768",
+      "projectionSha256": "f753d5c303c870c71f60a92b287bacec41a6cadff1db0a4d8f9e12bd1dcdf2d3"
+    },
+    {
+      "path": "fixed66-nonintegral-fixture-failure.json",
+      "originalSha256": "0f240b3329fd5346a126c452f40583197d8f89942bf8a5bc25caf432fab918b9",
+      "projectionSha256": "6e076f11b3fc0b1df217504234b5d9efb09d9bad9bb943b529a394ffd588e846"
+    },
+    {
+      "path": "fixed66-nonintegral2-fixture-failure.json",
+      "originalSha256": "d8b30c46d8b5283daa8ac1356060b23b6ff53fa218b33bebc59f03b13401f7f7",
+      "projectionSha256": "48c18e09786b215f8a79fc28ee1660d83c49e5923fa034cb30606c24129cf1b7"
+    },
+    {
+      "path": "source49-behavior-red.txt",
+      "originalSha256": "ba06174d2fe0039f9f4abe667b3a90d9e8f18d3936a38c9d6e5f757962f73a08",
+      "projectionSha256": "02978afb57cf1d937c48e5385473b9cde1b098a5d160dd405a4f1baf67ae21c7"
+    }
+  ],
+  "installedSkillsAndExecutionCodePreserved": true,
+  "redEvidence": [
+    "docs/evidence/timeline65-invalid-ticks-gap.json",
+    "docs/evidence/timeline65-range-gap.json",
+    "source49-behavior-red.txt"
+  ],
+  "fixtureFailures": "Four driver fixture/precondition assertions preserved separately; not behavior red. No installed/source code changed for acceptance.",
+  "currentGate": "Native/domain qualification only; source gate170Node PASS/3declared nativeNOT_RUN,86Python PASS remains source evidence; no fabricated173native result.",
+  "notAccepted": [
+    "all666commands and GUI contexts",
+    "other hosts/platforms",
+    "creative/user acceptance",
+    "complete V1"
+  ],
+  "tasksQualified": [
+    "4.4",
+    "4.5",
+    "4.6"
+  ],
+  "fullV1": "OPEN"
+}

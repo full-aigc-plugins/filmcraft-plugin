@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "scope": "Actual installed66 public workflow with real150percent clip speed followed by nonintegral source-in request; no successful delivery or original mutation",
+  "actual": {
+    "error": "ticks_not_exact: clip=11",
+    "clipTiming": {
+      "reason": "ticks_not_exact",
+      "clipIds": [
+        "11"
+      ]
+    }
+  },
+  "originalSourceBytesPreserved": true,
+  "driverSha256": "4898b90236a5a0f5ded0de61631e59f2f9ab73efb975f91a38b2781319d39b61"
+}

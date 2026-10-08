@@ -1,0 +1,98 @@
+{
+  "schema": "filmcraft-audio-subframe-first-use/v1",
+  "scope": "single copied audio skill; empty public runtime installation; synthetic existing audio; static A1 gain only; no creative or GUI acceptance",
+  "exactAudioClip": {
+    "clip": 11,
+    "duration": "561714048000",
+    "durationFrames": 26,
+    "effects": [
+      {
+        "effect": "volume",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "bypass": {
+            "keyframes": 0,
+            "value": "Bool(false)"
+          },
+          "level": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          }
+        }
+      },
+      {
+        "effect": "channel_volume",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "bypass": {
+            "keyframes": 0,
+            "value": "Bool(false)"
+          },
+          "left": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          },
+          "right": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          }
+        }
+      },
+      {
+        "effect": "panner",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "balance": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          }
+        }
+      }
+    ],
+    "enabled": true,
+    "item": 9,
+    "label": "Caribbean",
+    "link": null,
+    "name": "voice.wav",
+    "sourceIn": "0",
+    "speed": 1.0,
+    "start": "0",
+    "startFrame": 0
+  },
+  "sourceDurationSeconds": 2.211333333333333,
+  "decodedTailWindowSeconds": [
+    2.17,
+    2.2
+  ],
+  "decodedTailRms": 0.12477565138693177,
+  "oversizedExplicitRangeRejected": true,
+  "gainDb": -6,
+  "decodedRmsRatio": 0.5012229721999519,
+  "expectedRatio": 0.5011872336272722,
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sourcePreserved": true,
+  "videoAudioClipIdentityPreserved": true,
+  "captionsPreserved": true,
+  "skillFilesPreserved": true,
+  "initialProjectSha256": "0a23428e34d5a229c171e86b3acbba9217b3c6e05e6b2371f736f6ae2fc5dcfa",
+  "revisedFiles": {
+    "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+    "plan.json": "4b80afd6388bd3d88d8f27e8b5271b3cceabc51f38976eb3d48667a76e042354",
+    "decode.txt": "c4755cb39c5363bb0320db18d6b3669439a27001a3c3980f9bd5f21e0f0befff",
+    "export-probe.json": "0a58908fbaa3f60f44e2f39ab6109f148529b2e9a1b3c0e20cb91c0cf862511f",
+    "capabilities.json": "55927a15a831e7217265604ab3ee1c609a851982db8e1c5fddabb8a0b65732d3",
+    "captions.json": "eaa0997488a6925a5367b99fd32aca0ca23be5f80bafc146ddc9f6204131d513",
+    "exchange-loss.json": "7e5964a25b301d663245c8a41c35652383484b0ce61cdca329d139c6cc5d9471",
+    "film.mp4": "8ccbebbdcdbdc3539fc84b182facd147a3e7f7b121cde55d063f86b9e8a3e217",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "9244b857dbf5c444d4fb3f6172266e93c45c74ac99366e43d218c4470594e655",
+    "voice.wav": "0168e16173699c6bc35ea79ec2c8e76421cb2553a95baca4300221204043048e",
+    "shot.mp4": "53e8909dfffc9dccb6241cd25e0bf61f1750c7b33cbb815c860667c8af69a7a8",
+    "frame-0000.png": "b25fc0057f6d1d9e551cfc97d007bb18edd6c3b192612aa1bc6870f08f0c35d3",
+    "project.fcproj": "cd4bbf0b68dc616df8ac63a067ead883f2c71c40a9147956cac9f9b9256c30c6",
+    "operations.json": "cfe1f08d5727b41ebbd0acec34c17bbf9b317f5db2fe8bd51f3e3c5fa8684463"
+  }
+}

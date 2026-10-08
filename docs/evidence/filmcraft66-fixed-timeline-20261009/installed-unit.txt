@@ -1,0 +1,27 @@
+test_exact_trim_range_and_native_audio_padding_remain_distinct (fixed66_test_timeline_bounds.TimelineBoundsTests.test_exact_trim_range_and_native_audio_padding_remain_distinct) ... ok
+test_failed_stage_has_separate_safe_clip_diagnostic_without_protocol_expansion (fixed66_test_timeline_bounds.TimelineBoundsTests.test_failed_stage_has_separate_safe_clip_diagnostic_without_protocol_expansion) ... ok
+test_literal_invalid_trim_ticks_refuse_with_clip_identity (fixed66_test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) ... ok
+test_literal_move_time_has_target_identity (fixed66_test_timeline_bounds.TimelineBoundsTests.test_literal_move_time_has_target_identity) ... ok
+test_trim_in_uses_speed_and_refuses_non_integral_source_ticks (fixed66_test_timeline_bounds.TimelineBoundsTests.test_trim_in_uses_speed_and_refuses_non_integral_source_ticks) ... ok
+test_valid_trim_and_move_and_deferred_reference_remain_accepted (fixed66_test_timeline_bounds.TimelineBoundsTests.test_valid_trim_and_move_and_deferred_reference_remain_accepted) ... ok
+test_zero_trim_keeps_existing_audio_frame_padding (fixed66_test_timeline_bounds.TimelineBoundsTests.test_zero_trim_keeps_existing_audio_frame_padding) ... ok
+test_all_asset_issues_reported_without_installation_or_output (fixed66_test_workflow.WorkflowTests.test_all_asset_issues_reported_without_installation_or_output) ... ok
+test_audio_tail_accepts_only_exact_native_frame_padding (fixed66_test_workflow.WorkflowTests.test_audio_tail_accepts_only_exact_native_frame_padding) ... ok
+test_duplicate_alias_rejected (fixed66_test_workflow.WorkflowTests.test_duplicate_alias_rejected) ... ok
+test_export_flags_require_real_booleans (fixed66_test_workflow.WorkflowTests.test_export_flags_require_real_booleans) ... ok
+test_invalid_source_asset_fails_before_install_or_recovery_directory (fixed66_test_workflow.WorkflowTests.test_invalid_source_asset_fails_before_install_or_recovery_directory) ... ok
+test_public_workflow_reports_asset_list_before_runtime_creation (fixed66_test_workflow.WorkflowTests.test_public_workflow_reports_asset_list_before_runtime_creation) ... ok
+test_revision_output_preserves_existing_directory (fixed66_test_workflow.WorkflowTests.test_revision_output_preserves_existing_directory) ... ok
+test_short_audio_native_minimum_frame_and_invalid_speed (fixed66_test_workflow.WorkflowTests.test_short_audio_native_minimum_frame_and_invalid_speed) ... ok
+test_side_effect_command_rejected (fixed66_test_workflow.WorkflowTests.test_side_effect_command_rejected) ... ok
+test_source_and_new_asset_issues_keep_origin_without_local_paths (fixed66_test_workflow.WorkflowTests.test_source_and_new_asset_issues_keep_origin_without_local_paths) ... ok
+test_static_track_gain_is_supported_and_rejects_invalid_values (fixed66_test_workflow.WorkflowTests.test_static_track_gain_is_supported_and_rejects_invalid_values) ... ok
+test_symlink_issues_are_aggregated_without_reading_target (fixed66_test_workflow.WorkflowTests.test_symlink_issues_are_aggregated_without_reading_target) ... ok
+test_ticks_are_decimal_strings (fixed66_test_workflow.WorkflowTests.test_ticks_are_decimal_strings) ... ok
+test_unresolved_reference_rejected (fixed66_test_workflow.WorkflowTests.test_unresolved_reference_rejected) ... ok
+test_visible_captions_are_burned_unless_explicitly_disabled (fixed66_test_workflow.WorkflowTests.test_visible_captions_are_burned_unless_explicitly_disabled) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.153s
+
+OK

@@ -1,0 +1,12 @@
+import hashlib,io,json,os,subprocess,sys,types,unittest
+from pathlib import Path
+sys.dont_write_bytecode=True
+B=Path('[HOME]/workspaces/workspace-agent-skills');W=B/'.local/filmcraft-recovery-01a11a34-20261008';S=B/'full-aigc-skills-repositories/filmcraft-skills';dirs=json.loads((W/'host66/installed-directories.private.json').read_text());os.environ['PATH']='/opt/homebrew/bin:'+os.environ['PATH'];os.environ['CRAFT_INSTALLED_AUDIO_SKILL_ROOT']=dirs['filmcraft-cli-audio'];rows=[]
+for name,expected in [('audio_subframe','561714048000'),('audio_downframe','558835200000')]:
+ key='CRAFT_'+name.upper();os.environ[key+'_FIRST_USE']='1';os.environ[key+'_EVIDENCE']=str(W/('fixed66-exact-'+name+'.private.json'))
+ file='tests/test_'+name+'_first_use.py';original=subprocess.check_output(['git','-C',str(S),'show','b1091e09cbbd7df25f6c5784343f27a414426727:'+file]);assert original==(S/file).read_bytes();text=original.decode()
+ needle="            after = json.loads((second / 'native.json').read_text())['sequence']"
+ extra="\n            audioClip = next(c for t in before['audio'] for c in t['items'])\n            self.assertEqual(audioClip['duration'], '"+expected+"')\n            self.assertEqual(audioClip['sourceIn'], '0')\n            self.assertEqual(audioClip['start'], '0')\n"
+ assert text.count(needle)==1;text=text.replace(needle,needle+extra).replace("'sourceDurationSeconds':", "'exactAudioClip': audioClip, 'sourceDurationSeconds':")
+ m=types.ModuleType('fixed66_exact_'+name);m.__file__=str(S/file);exec(compile(text,m.__file__,'exec'),m.__dict__);stream=io.StringIO();result=unittest.TextTestRunner(stream=stream,verbosity=2).run(unittest.defaultTestLoader.loadTestsFromModule(m));(W/('fixed66-exact-'+name+'.private.log')).write_text(stream.getvalue());assert result.wasSuccessful() and result.testsRun==1 and not result.skipped,stream.getvalue();rows.append({'test':file,'originalTestSha256':hashlib.sha256(original).hexdigest(),'derivedQualificationSha256':hashlib.sha256(text.encode()).hexdigest(),'expectedDurationTicks':expected,'result':'PASS','scope':'Original fixed source49 test extended only with exact persisted audio duration/sourceIn/start and evidence projection; real installed66 skill cold public install/gain/tail decode'});print(name,'PASS exact ticks',flush=True)
+(W/'fixed66-exact-audio-index.private.json').write_text(json.dumps({'result':'PASS','tests':rows,'driverSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()},indent=2))

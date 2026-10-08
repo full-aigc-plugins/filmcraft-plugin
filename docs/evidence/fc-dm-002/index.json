@@ -1,0 +1,56 @@
+{
+  "requirement": "FC-DM-002",
+  "result": "PASS",
+  "fixedPluginRef": "v0.1.0-dev.66",
+  "fixedPluginSha": "992d768bcc912ec7776235560e63dc0e928a592d",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "specSha256": "19ab7a8a99b11652818869641cf559274947dea35df48a1f0ac7f6922d7addc7",
+  "scenarios": [
+    {
+      "id": "FC-DM-002-P",
+      "result": "PASS",
+      "evidence": [
+        "timeline.json",
+        "timeline_temporal.json"
+      ],
+      "observed": "Actual installed66 public CLI 24000/1001 one-frame source in trim and two-frame move; exact integer decimal persisted time fields, other tracks/source preserved, full13frame decode; ordinary12fps colored-source order and gap verified."
+    },
+    {
+      "id": "FC-DM-002-N",
+      "result": "PASS",
+      "evidence": [
+        "timeline.json",
+        "nonintegral.json",
+        "harness.json",
+        "installed-unit.txt"
+      ],
+      "observed": "Fixed65 actual explicit oversource was clamped to success; installed66 refuses float/overflow/oversource with exact clip11. Actual150percent speed/nonintegral source trim refuses ticks_not_exact. Exactu64 diagnostics, no successful manifest; one SQL attempt and no replay. Failed-stage receipt deliberately retains unknown plan identity/outputRefs empty, not successful delivery."
+    },
+    {
+      "id": "FC-DM-002-AUDIO-FRAME",
+      "result": "PASS",
+      "evidence": [
+        "exact-audio_subframe.json",
+        "installed-unit.txt"
+      ],
+      "observed": "Normal audio with561714048000 exact source ticks survives public cold creation/reopen/gain at12fps; fulltail2.17–2.20s decoded and gain matches. Installed production unit rejects invalid in, extra padding, video/non-normal speed; accepts only exact conditional nearest/minimum frame padding. Current craft.5 keeps exact audio sample ticks."
+    },
+    {
+      "id": "FC-DM-002-AUDIO-SAMPLE",
+      "result": "PASS",
+      "evidence": [
+        "exact-audio_downframe.json"
+      ],
+      "observed": "Normal audio2.20s persists duration558835200000/sourceIn0/start0 instead of dropping to26frames; fulltail actual RMS0.12478658 and gain ratio0.50119418; independent copied installed skill empty public runtime, native reopen/gain, source/audio/video/captions/skill preservation; explicit oversource rejected."
+    }
+  ],
+  "tasksQualified": [
+    "4.4",
+    "4.5",
+    "4.6"
+  ],
+  "fullV1": "OPEN",
+  "acceptanceEvidence": "docs/evidence/filmcraft66-fixed-timeline-20261009/acceptance.json",
+  "acceptanceSha256": "cb4cd3b2d015a0b0c739480ab2a332b95caacce1208ef9133fdfdc065b358648"
+}

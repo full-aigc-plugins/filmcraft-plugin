@@ -1,0 +1,130 @@
+{
+  "schema": "filmcraft-temporal-timeline-first-use/v1",
+  "initialProjectSha256": "c1f9431e6028c7c26c20559dc85e45f670ee432e8d4c44fd51900e31ca96d2b5",
+  "revisedProjectSha256": "a1ca2096a6e6efd9c57a9fe0433af9d5f7add60b59fb4339083b9cb123bb5183",
+  "editedClip": {
+    "clip": 10,
+    "duration": "254016000000",
+    "durationFrames": 12,
+    "effects": [
+      {
+        "effect": "motion",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "anchor": {
+            "keyframes": 0,
+            "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+          },
+          "anti_flicker": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          },
+          "position": {
+            "keyframes": 0,
+            "value": "Vec2(Vec2 { x: 160.0, y: 90.0 })"
+          },
+          "rotation": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          },
+          "scale": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          },
+          "scale_width": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          },
+          "uniform_scale": {
+            "keyframes": 0,
+            "value": "Bool(true)"
+          }
+        }
+      },
+      {
+        "effect": "opacity",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "blend": {
+            "keyframes": 0,
+            "value": "Choice(0)"
+          },
+          "opacity": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          }
+        }
+      },
+      {
+        "effect": "time_remap",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "speed": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          }
+        }
+      }
+    ],
+    "enabled": true,
+    "item": 8,
+    "label": "Violet",
+    "link": null,
+    "name": "shot.mp4",
+    "sourceIn": "127008000000",
+    "speed": 1.0,
+    "start": "0",
+    "startFrame": 0
+  },
+  "previewPixels": [
+    [
+      254,
+      0,
+      0
+    ],
+    [
+      1,
+      128,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      255
+    ]
+  ],
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "files": {
+    "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+    "plan.json": "f7a4d79096dfeef2609acb69fb98a8b587b4bd2448e000254af4a48502ba714a",
+    "decode.txt": "3bb0772671b90f1f25b70a55adc92a4a24f328429ac51b78ab40aaa5ee594d10",
+    "export-probe.json": "7d46097142a917ff88a3b07927057b7a1a9b2fa2bc3c359a942dd909121b32de",
+    "capabilities.json": "0227ce13b4283af27e21558c130b9ed82d280bedfdfc9cf762e0d5fc6293eafa",
+    "captions.json": "badf49e425d2cbfd8c067485092ae19826f4db2fb6b58691175c52de625406ef",
+    "exchange-loss.json": "72f5607772d68651a170021281e8a9ffb631b2a15dd90fa7a39888e1cc2e8bc0",
+    "film.mp4": "676ed61ca2c320acc1f0d53e110d85b120c95aeee710899587d2a457d1d4f508",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "f6078d42f1a619e3175aa4f540dfa6c0bdec165dc7be300586806eeae80058b4",
+    "frame-0003.png": "88f7c9a8cf5fd3194748add0e399ea33a973374d4df3bfbf8a9e7012e7f5639d",
+    "voice.wav": "2691be454f8d77f2d48ad911c9908967aa908cb899a0adf1ae7835aae8f1a03d",
+    "shot.mp4": "255b4e0a884744c9e60f9db822a0295ef916736ddafec7c32a435c2c0aafe763",
+    "frame-0002.png": "ab767868dcdeeee41249fec94c2213c03feb8287cf194e29b203700056bb993c",
+    "frame-0000.png": "b25fc0057f6d1d9e551cfc97d007bb18edd6c3b192612aa1bc6870f08f0c35d3",
+    "frame-0001.png": "3373f641d0351b0a89d370802dda0a05d6c924c1ea84c2bb197c95815d29a986",
+    "project.fcproj": "a1ca2096a6e6efd9c57a9fe0433af9d5f7add60b59fb4339083b9cb123bb5183",
+    "operations.json": "a8bc565c6da7e1001cdc79930ced065755fd3c27a1fde30857caec9dd18462a7"
+  },
+  "sourceFilesPreserved": true,
+  "otherClipPreserved": true,
+  "audioPreserved": true,
+  "captionsPreserved": true,
+  "scope": "single installed timeline skill; default public empty-runtime install; synthetic temporal colors and sine audio; no creative acceptance"
+}

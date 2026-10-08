@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "tests": [
+    {
+      "test": "tests/test_audio_subframe_first_use.py",
+      "originalTestSha256": "a511b671d6adc7f45dc0bbe5d76478a7b708ea30adc504f114cf312dae32db3f",
+      "derivedQualificationSha256": "0e3d70d83e7d03c148bfde97618932c3b6761f0fb56b1b7991163e16903104da",
+      "expectedDurationTicks": "561714048000",
+      "result": "PASS",
+      "scope": "Original fixed source49 test extended only with exact persisted audio duration/sourceIn/start and evidence projection; real installed66 skill cold public install/gain/tail decode"
+    },
+    {
+      "test": "tests/test_audio_downframe_first_use.py",
+      "originalTestSha256": "3b1cff0f69d8a37b51b7bccd216cbf1d2f7d5b1e463c4175585cd1547e1d8849",
+      "derivedQualificationSha256": "27d71fa9888db66afb97e4c9cb837acc996afede39eadd83d4a32a11202b4061",
+      "expectedDurationTicks": "558835200000",
+      "result": "PASS",
+      "scope": "Original fixed source49 test extended only with exact persisted audio duration/sourceIn/start and evidence projection; real installed66 skill cold public install/gain/tail decode"
+    }
+  ],
+  "driverSha256": "fd8ff453606db901f9880c52bfbf424430d7a33aae7119c858bcc1e26284d123"
+}

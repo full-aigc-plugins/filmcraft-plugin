@@ -1,0 +1,66 @@
+test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) ... 
+  test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta=0.1) ... FAIL
+  test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta=True) ... FAIL
+  test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta='1.5') ... FAIL
+  test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta='9223372036854775808') ... FAIL
+  test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta='-9223372036854775809') ... FAIL
+test_literal_move_time_has_target_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_move_time_has_target_identity) ... FAIL
+
+======================================================================
+FAIL: test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta=0.1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_timeline_bounds.py", line 18, in test_literal_invalid_trim_ticks_refuse_with_clip_identity
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_timeline_bounds.py", line 18, in test_literal_invalid_trim_ticks_refuse_with_clip_identity
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta='1.5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_timeline_bounds.py", line 18, in test_literal_invalid_trim_ticks_refuse_with_clip_identity
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta='9223372036854775808')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_timeline_bounds.py", line 18, in test_literal_invalid_trim_ticks_refuse_with_clip_identity
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_literal_invalid_trim_ticks_refuse_with_clip_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity) (delta='-9223372036854775809')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_timeline_bounds.py", line 18, in test_literal_invalid_trim_ticks_refuse_with_clip_identity
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_literal_move_time_has_target_identity (test_timeline_bounds.TimelineBoundsTests.test_literal_move_time_has_target_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[SOURCE_ROOT]/tests/test_timeline_bounds.py", line 47, in test_literal_move_time_has_target_identity
+    with self.assertRaisesRegex(ValueError, 'ticks_require_decimal_string') as caught:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.019s
+
+FAILED (failures=6)

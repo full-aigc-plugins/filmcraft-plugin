@@ -1,0 +1,5 @@
+{
+  "result": "FIXTURE_PRECONDITION_FAILURE",
+  "reason": "speed command needs explicit same-session clip selection",
+  "behaviorRed": false
+}

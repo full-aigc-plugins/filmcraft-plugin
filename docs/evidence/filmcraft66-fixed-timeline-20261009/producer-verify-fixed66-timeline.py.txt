@@ -1,0 +1,38 @@
+import hashlib,importlib.util,json,subprocess,sys,unittest,io
+from pathlib import Path
+sys.dont_write_bytecode=True
+BASE=Path('[HOME]/workspaces/workspace-agent-skills'); W=BASE/'.local/filmcraft-recovery-01a11a34-20261008'; P=BASE/'full-aigc-plugins-repositories/filmcraft-plugin'; S=BASE/'full-aigc-skills-repositories/filmcraft-skills'; R=W/'fixed66-timeline';R.mkdir()
+sys.path.insert(0,str(P/'scripts'));from verify_fixed_install import release_entry,owner_helper,verify_code_files
+expected=release_entry(P,'v0.1.0-dev.66');dirs={k:Path(v) for k,v in json.loads((W/'host66/installed-directories.private.json').read_text()).items()};helper,_=owner_helper(P.parent/'artcraft-plugin')
+def identity():
+ for d in dirs.values():helper.verify_installed_skill(d,expected)
+ verify_code_files(dirs['filmcraft-use'].parent.parent,expected['codeFilesSha256'])
+identity();skill=dirs['filmcraft-cli-timeline'];source=W/'plugin65-sequence-audit/moved';runtime=W/'plugin65-sequence-audit/empty-public-runtime';sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest();before={str(p.relative_to(source)):sha(p) for p in source.rglob('*') if p.is_file()}
+native=json.loads((source/'native.json').read_text());track=next(t for t in native['sequence']['video'] if any(c['clip']==11 for c in t['items']));old=next(c for c in track['items'] if c['clip']==11);unit=254016000000*1001//24000
+base={'expectedProjectSha256':sha(source/'project.fcproj'),'frames':['0'],'export':{'audioRequired':False}}
+def run(name,ops):
+ plan=base|{'operations':ops};file=R/(name+'-plan.json');file.write_text(json.dumps(plan));out=R/name
+ argv=[sys.executable,'-I','-B',str(skill/'scripts/workflow.py'),str(file),'--output',str(out),'--source',str(source),'--runtime-home',str(runtime),'--data-dir',str(R/'data')]
+ r=subprocess.run(argv,capture_output=True,text=True,timeout=180);(R/(name+'-driver.private.json')).write_text(json.dumps({'exitCode':r.returncode,'stdout':r.stdout,'stderr':r.stderr}));return r,json.loads(r.stdout),out
+r,delivery,out=run('rational-trim-move',[{'command':'timeline.trim','params':{'clip':11,'edge':'in','mode':'regular','delta':str(unit)}},{'command':'timeline.move','params':{'moves':[{'clip':11,'track':'V2','time':str(2*unit)}],'insert':False}}]);assert r.returncode==0,delivery
+new=json.loads((out/'native.json').read_text());clip=next(c for t in new['sequence']['video'] for c in t['items'] if c['clip']==11)
+assert clip['sourceIn']==str(unit) and clip['duration']==str(11*unit) and clip['start']==str(2*unit),clip
+assert new['sequence']['settings']['frame_rate']=={'num':24000,'den':1001}
+for t in native['sequence']['video']:
+ if t['id']!=track['id']:assert t==next(x for x in new['sequence']['video'] if x['id']==t['id'])
+assert native['sequence']['audio']==new['sequence']['audio']
+subprocess.run(['/opt/homebrew/bin/ffmpeg','-v','error','-i',str(out/'film.mp4'),'-f','null','-'],check=True,capture_output=True)
+probe=json.loads(subprocess.check_output(['/opt/homebrew/bin/ffprobe','-v','error','-count_frames','-show_streams','-of','json',str(out/'film.mp4')]));v=next(x for x in probe['streams'] if x['codec_type']=='video');assert v['r_frame_rate']=='24000/1001' and int(v['nb_read_frames'])==13,v
+cases=[]
+for name,delta,reason in [('invalid-float',.1,'ticks_require_decimal_string'),('overflow',str(2**63),'ticks_out_of_range'),('explicit-oversource',str(10*254016000000),'clip_out_of_range')]:
+ r,actual,o=run(name,[{'command':'timeline.trim','params':{'clip':11,'edge':'out','mode':'regular','delta':delta}}]);assert r.returncode!=0 and actual['clipTiming']=={'reason':reason,'clipIds':['11']},actual;assert not (o/'manifest.json').exists();cases.append({'name':name,'actual':actual,'successfulDelivery':False})
+# Run unchanged fixed source tests against actual installed production modules, without importing mutable source code.
+suite=unittest.TestSuite()
+for name in ['test_timeline_bounds.py','test_workflow.py']:
+ path=S/'tests'/name;data=subprocess.check_output(['git','-C',str(S),'show',expected['skillSourceSha']+':tests/'+name]);assert data==path.read_bytes()
+ mod=type(sys)('fixed66_'+name[:-3]);mod.__file__=str(skill.parent.parent/'tests'/name)
+ # tests load skills/filmcraft-use; installed plugin has that complete snapshot.
+ exec(compile(data,mod.__file__,'exec'),mod.__dict__);suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(mod))
+stream=io.StringIO();result=unittest.TextTestRunner(stream=stream,verbosity=2).run(suite);(R/'installed-unit.private.log').write_text(stream.getvalue());assert result.wasSuccessful() and not result.skipped
+assert before=={str(p.relative_to(source)):sha(p) for p in source.rglob('*') if p.is_file()};identity()
+report={'result':'PASS','plugin':expected,'driverSha256':sha(__file__),'rationalRate':{'num':24000,'den':1001},'frameTicks':str(unit),'editedClip':clip,'decodedFrames':13,'otherTracksAndSourcePreserved':True,'refusals':cases,'installedUnitPass':result.testsRun,'installedUnitSkips':0,'installedSkillsAndCodePreserved':True,'scope':'Fixed66/source49 actual installed timeline public CLI, rational trim/move, real source preservation and refusals; owned synthetic media; no GUI/creative qualification'};(R/'report.private.json').write_text(json.dumps(report,indent=2)+'\n');print('PASS',result.testsRun)

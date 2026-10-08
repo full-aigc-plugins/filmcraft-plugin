@@ -1,0 +1,91 @@
+{
+  "result": "PASS",
+  "scope": "Actual immutable66 installed Harness/skill/native range failure, SQL single attempt, separate hashed failed-stage and original preservation; owned local verification binding, not host authorization acceptance",
+  "first": {
+    "taskId": "owned-fixed66-range",
+    "attemptId": "e24dc848-3d16-4d85-9f54-c8d79f89523e",
+    "state": "failed",
+    "reused": false,
+    "process": {
+      "pid": 13375,
+      "stopped": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    "budgetReason": null,
+    "clipTiming": {
+      "reason": "clip_out_of_range",
+      "clipIds": [
+        "11"
+      ]
+    },
+    "receipt": {
+      "taskId": "owned-fixed66-range",
+      "attemptId": "e24dc848-3d16-4d85-9f54-c8d79f89523e",
+      "state": "failed",
+      "runtimeIdentity": {
+        "capabilitySnapshotSha256": "f4709654feacba4f8ecc7d7936d76c40edcb299ea8b7e906efe0f1c08a7e7681",
+        "cliVersion": "0.2.0-craft.5",
+        "mode": "headless",
+        "pluginId": "filmcraft",
+        "pluginVersion": "0.1.0-dev.66",
+        "sha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "status": "unknown",
+      "missingReceiptKinds": [],
+      "outputRefs": [],
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:failed-stage",
+          "version": "47917545b1562b8275fcf13a2c9ed1e65dfeb5a1cbdec9bf168783a5efe28816",
+          "sha256": "47917545b1562b8275fcf13a2c9ed1e65dfeb5a1cbdec9bf168783a5efe28816",
+          "location": "failure.json"
+        }
+      ],
+      "technicalAcceptance": "NOT_RUN",
+      "creativeAcceptance": "NOT_RUN",
+      "userAcceptance": "NOT_RUN",
+      "error": {
+        "code": "outcome_unknown"
+      }
+    }
+  },
+  "repeated": {
+    "taskId": "owned-fixed66-range",
+    "state": "failed",
+    "reused": true,
+    "attemptId": "e24dc848-3d16-4d85-9f54-c8d79f89523e",
+    "receipt": {
+      "taskId": "owned-fixed66-range",
+      "attemptId": "e24dc848-3d16-4d85-9f54-c8d79f89523e",
+      "state": "failed",
+      "runtimeIdentity": {
+        "capabilitySnapshotSha256": "f4709654feacba4f8ecc7d7936d76c40edcb299ea8b7e906efe0f1c08a7e7681",
+        "cliVersion": "0.2.0-craft.5",
+        "mode": "headless",
+        "pluginId": "filmcraft",
+        "pluginVersion": "0.1.0-dev.66",
+        "sha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f"
+      },
+      "status": "unknown",
+      "missingReceiptKinds": [],
+      "outputRefs": [],
+      "evidenceRefs": [
+        {
+          "assetId": "receipt:failed-stage",
+          "version": "47917545b1562b8275fcf13a2c9ed1e65dfeb5a1cbdec9bf168783a5efe28816",
+          "sha256": "47917545b1562b8275fcf13a2c9ed1e65dfeb5a1cbdec9bf168783a5efe28816",
+          "location": "failure.json"
+        }
+      ],
+      "technicalAcceptance": "NOT_RUN",
+      "creativeAcceptance": "NOT_RUN",
+      "userAcceptance": "NOT_RUN",
+      "error": {
+        "code": "outcome_unknown"
+      }
+    }
+  },
+  "attemptCount": 1,
+  "originalProjectPreserved": true
+}

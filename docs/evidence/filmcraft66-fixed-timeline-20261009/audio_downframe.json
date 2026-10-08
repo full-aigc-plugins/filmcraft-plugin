@@ -1,0 +1,38 @@
+{
+  "schema": "filmcraft-audio-downframe-first-use/v1",
+  "scope": "single copied audio skill; empty public runtime installation; synthetic existing audio; static A1 gain only; no creative or GUI acceptance",
+  "sourceDurationSeconds": 2.2,
+  "publicRuntimeDownload": true,
+  "decodedTailWindowSeconds": [
+    2.17,
+    2.2
+  ],
+  "decodedTailRms": 0.12478658344569013,
+  "oversizedExplicitRangeRejected": true,
+  "gainDb": -6,
+  "decodedRmsRatio": 0.5011941759283628,
+  "expectedRatio": 0.5011872336272722,
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sourcePreserved": true,
+  "videoAudioClipIdentityPreserved": true,
+  "captionsPreserved": true,
+  "skillFilesPreserved": true,
+  "initialProjectSha256": "73b6064285c8c096fca02a47cdb4a4065f261164568716e9e58971becdd880a2",
+  "revisedFiles": {
+    "audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+    "plan.json": "faca051166a9a1405a30024ecd70d87a623c61e038d2a9c81a4d1c7748733ae9",
+    "decode.txt": "a5abfebf4158381f347fca858b5ce9632e0e1aa4fd2c26b9942d239ee8648f3f",
+    "export-probe.json": "0a58908fbaa3f60f44e2f39ab6109f148529b2e9a1b3c0e20cb91c0cf862511f",
+    "capabilities.json": "55927a15a831e7217265604ab3ee1c609a851982db8e1c5fddabb8a0b65732d3",
+    "captions.json": "eaa0997488a6925a5367b99fd32aca0ca23be5f80bafc146ddc9f6204131d513",
+    "exchange-loss.json": "c6bda3ef13f038840f02f942e764b1f3f105bb1f43f71273b2af93fc8ca94396",
+    "film.mp4": "f610d55c8b33405ec7c2f30d606a1962864ed6d08e672c92496d07a89e2a1bfa",
+    "captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+    "native.json": "8f5f3f04d37d5c214c4e428059a1026f2043cd07803942c1d4dc168f88c2699d",
+    "voice.wav": "1b9e0969bfaeabe7587d02b644d072d4ec389835e4c5676991a94d77a02e894f",
+    "shot.mp4": "53e8909dfffc9dccb6241cd25e0bf61f1750c7b33cbb815c860667c8af69a7a8",
+    "frame-0000.png": "b25fc0057f6d1d9e551cfc97d007bb18edd6c3b192612aa1bc6870f08f0c35d3",
+    "project.fcproj": "9965c89c53648110d312433d20b1c44f87b46b31e2905979f2af9035786cc7cf",
+    "operations.json": "92e970899de9d6811c2a6df8763bfb58e00476fe5a46bc20207a815fc918b5a9"
+  }
+}

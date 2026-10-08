@@ -153,8 +153,9 @@
         "4.6"
       ],
       "owner": "Domain owner",
-      "status": "in-progress",
-      "evidence": "docs/evidence/film-workflow-tests.json"
+      "status": "verified",
+      "evidence": "docs/evidence/fc-dm-002/index.json",
+      "implementationScope": "Tasks4.4–4.6: all4 current scenarios qualified using fixed66/source49 actual isolated installed skills on macOS arm64/Codex/headless; fullV1 remains open"
     },
     {
       "requirement": "FC-DM-003",

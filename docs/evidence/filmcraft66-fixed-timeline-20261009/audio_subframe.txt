@@ -1,0 +1,6 @@
+test_gain_revision_attenuates_decoded_audio_and_preserves_source (test_audio_subframe_first_use.AudioSubframeFirstUseTests.test_gain_revision_attenuates_decoded_audio_and_preserves_source) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 8.009s
+
+OK

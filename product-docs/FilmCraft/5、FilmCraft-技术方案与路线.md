@@ -105,3 +105,5 @@
 受限修订增量：schema5唯一账本、对象／轨道／时间／字段／依赖范围、新候选独立重评与轮数／失败／预算／停滞门禁已有源码候选。详见 docs/FilmCraft-Revision-Architecture.zh_CN.md。固定dev.51安装验收待执行，9.25—9.27及完整V1保持开放。
 
 固定dev.51／源42完成OpenSpec9.25—9.27：126项安装原生／状态测试无跳过、49类矩阵含9类受限修订专项、13技能／44执行文件保全，公共协议与四次发布CI通过。创作人工复核与用户接受仍开放，完整V1余54项。docs/evidence/filmcraft51-fixed-revision-20261008.json · docs/evidence/filmcraft51-fixed-revision-20261008.json。
+
+分层发行候选dev.52／源44：强制源／插件CI、逐测试环境NOT_RUN、固定公共schema正反映射和逐场景身份／日志门禁已实现；固定安装及分层收集待执行。详见 docs/FilmCraft-Release-Architecture.zh_CN.md；9.28—9.30及完整V1保持开放。

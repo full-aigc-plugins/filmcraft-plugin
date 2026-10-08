@@ -105,3 +105,5 @@ Fixed dev.50/source42 independent quality acceptance now completes tasks9.22–9
 Bounded revision candidate: schema5 ledger, object/track/time/leaf/dependency scope, fresh independent review and round/failure/budget/stagnation gates. See docs/FilmCraft-Revision-Architecture.md. Fixed dev.51 qualification, tasks9.25–9.27 and full V1 remain open.
 
 Fixed dev.51/source42 completes OpenSpec9.25–9.27:126 installed native/state tests without skips,49 matrix records including9 bounded revision cases,13 skills/44 execution files preserved; public protocol validation and all four release CI runs pass. Creative/manual and user acceptance remain open, with54 V1 tasks remaining. docs/evidence/filmcraft51-fixed-revision-20261008.json · docs/evidence/filmcraft51-fixed-revision-20261008.json.
+
+Layered release candidate dev.52/source44 adds mandatory source/plugin CI, per-test environment NOT_RUN, fixed-schema mapping/drift checks and scenario identity/log gates. Fixed installation and layered collection remain pending. See docs/FilmCraft-Release-Architecture.md; tasks9.28–9.30 and full V1 remain open.

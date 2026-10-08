@@ -77,3 +77,5 @@ Fixed dev.50 quality qualification completes tasks9.22–9.24; see docs/evidence
 Bounded revision preserves non-targets and dependencies, never automatically replays unknown attempts, and retains verified best plus unresolved findings on stop; no qualifying best is explicitly null. Goal/rubric changes fence the old loop. Creative and user acceptance remain separate. Fixed dev.51 qualification, tasks9.25–9.27 and full V1 remain open.
 
 Fixed dev.51/source42 completes OpenSpec9.25–9.27:126 installed native/state tests without skips,49 matrix records including9 bounded revision cases,13 skills/44 execution files preserved; public protocol validation and all four release CI runs pass. Creative/manual and user acceptance remain open, with54 V1 tasks remaining. docs/evidence/filmcraft51-fixed-revision-20261008.json · docs/evidence/filmcraft51-fixed-revision-20261008.json.
+
+Layered release results bind current commits, inputs, candidates and original logs. Missing real-media, host or platform scenarios remain NOT_RUN. Dev.52/source44 still requires fixed installation and collection; green CI does not qualify user acceptance or full V1.

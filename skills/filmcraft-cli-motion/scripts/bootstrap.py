@@ -137,19 +137,20 @@ def install(lock, runtime_home, archive=None, platform_key=None):
             or not isinstance(lock.get('artifact'), str)
             or not isinstance(lock.get('resolvedVersion'), str)):
         raise ValueError('runtime_lock_invalid')
+    for expected in lock['artifacts'].values():
+        if (not isinstance(expected, dict)
+                or not isinstance(expected.get('url'), str) or not expected['url']
+                or any(not isinstance(expected.get(field), str)
+                       or not re.fullmatch(r'[a-f0-9]{64}', expected[field])
+                       for field in ('archiveSha256', 'binarySha256'))
+                or ('versionOutput' in expected and not isinstance(expected['versionOutput'], str))
+                or ('provenanceSha256' in expected and
+                    (not isinstance(expected['provenanceSha256'], str)
+                     or not re.fullmatch(r'[a-f0-9]{64}', expected['provenanceSha256'])))):
+            raise ValueError('runtime_lock_invalid')
     if key not in lock['artifacts']:
         raise ValueError('unsupported_platform: ' + key)
     expected = lock['artifacts'][key]
-    if (not isinstance(expected, dict)
-            or not isinstance(expected.get('url'), str) or not expected['url']
-            or any(not isinstance(expected.get(field), str)
-                   or not re.fullmatch(r'[a-f0-9]{64}', expected[field])
-                   for field in ('archiveSha256', 'binarySha256'))
-            or ('versionOutput' in expected and not isinstance(expected['versionOutput'], str))
-            or ('provenanceSha256' in expected and
-                (not isinstance(expected['provenanceSha256'], str)
-                 or not re.fullmatch(r'[a-f0-9]{64}', expected['provenanceSha256'])))):
-        raise ValueError('runtime_lock_invalid')
     artifact, version = lock['artifact'], lock['resolvedVersion']
     if not re.fullmatch(r'[a-z]+craft-cli', artifact) or not re.fullmatch(r'\d+\.\d+\.\d+(?:-craft\.[1-9][0-9]*)?', version):
         raise ValueError('invalid_runtime_identity')

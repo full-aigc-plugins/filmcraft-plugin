@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "scope": "source/offline contracts only; not immutable host or full domain qualification",
+  "pluginVersion": "0.1.0-dev.66",
+  "sourceRef": "v0.1.0-dev.49",
+  "sourceSha": "b1091e09cbbd7df25f6c5784343f27a414426727",
+  "pythonPass": 86,
+  "nodePass": 170,
+  "nodeNativeNotRun": 3,
+  "fullV1": "OPEN",
+  "openTasks": 23
+}

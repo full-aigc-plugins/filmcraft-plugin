@@ -150,3 +150,5 @@ Explicit audio placement duration must stay within the registered source range. 
 已登记普通素材在安装/交付目录创建前聚合缺失、摘要冲突和符号链接问题。公开失败 JSON 的可选 `assetIssues` 数组只含 `alias`、`origin`（plan/source）和 `reason`（missing_file/digest_mismatch/invalid_path），保留原错误前缀；不返回本地路径，不用同名文件替代。序列结构验证和命令行摘要登记错误仍保留各自拒绝合同。
 
 Registered ordinary media preflight aggregates missing, digest-conflicting and symlink inputs before installation/output. Optional `assetIssues` contains alias, origin and reason only; existing error prefixes remain compatible. Sequence validation and CLI digest-registration failures retain their separate refusal contracts.
+
+裁切预检在原生timeline.trim前依据当前片段与已登记素材核验请求源区间，拒绝引擎静默钳制。错误保留原前缀，公共CLI的clipTiming只含固定reason和十进制字符串clipIds；失败暂存中的clip-timing.json参与失败回执摘要，不是成功交付。合法音频尾部填充继续按原合同核验。 / Trim preflight refuses explicit out-of-source requests before native clamping;safe clipTiming uses fixed reasons and exact decimal clip IDs. Failed-stage clip-timing.json is hashed separately;existing valid audio-tail padding remains governed by its contract.

@@ -59,6 +59,19 @@ def valid_asset_issues(value):
     return [dict(row) for row in value]
 
 
+def valid_clip_timing(value):
+    """片段身份保留完整 u64 十进制字符串，拒绝路径、扩展字段及未知原因。"""
+    if (not isinstance(value, dict) or set(value) != {'reason', 'clipIds'}
+            or not isinstance(value['reason'], str)
+            or value['reason'] not in {'ticks_require_decimal_string', 'ticks_out_of_range',
+                                       'ticks_not_exact', 'clip_out_of_range', 'invalid_clip_speed'}
+            or not isinstance(value['clipIds'], list) or not value['clipIds']
+            or not all(isinstance(v, str) and re.fullmatch(r'[1-9][0-9]{0,19}', v)
+                       and int(v) <= 2**64-1 for v in value['clipIds'])):
+        return None
+    return {'reason': value['reason'], 'clipIds': list(value['clipIds'])}
+
+
 def inspect(skill, plan_path, output, runtime_home, source=None):
     def load(name):
         path = skill / 'scripts' / (name + '.py')
@@ -118,5 +131,8 @@ if __name__ == '__main__':
         issues = valid_asset_issues(getattr(error, 'asset_issues', None))
         if issues:
             failure = {'code': 'asset_preflight_failed', 'assetIssues': issues}
+        clip_timing = valid_clip_timing(getattr(error, 'clip_timing', None))
+        if clip_timing:
+            failure = {'code': 'clip_timing_failed', 'clipTiming': clip_timing}
         print(json.dumps({'schema': 'filmcraft-native-preflight-error/v1', 'error': failure}))
         sys.exit(1)

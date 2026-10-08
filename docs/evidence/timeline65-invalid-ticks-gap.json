@@ -1,0 +1,13 @@
+{
+  "schema": "filmcraft-fixed-timeline-diagnostic-gap/v1",
+  "requirement": "FC-DM-002-N",
+  "result": "FAIL",
+  "pluginRef": "v0.1.0-dev.65",
+  "expectedClipId": 11,
+  "exitCode": 1,
+  "actual": {
+    "error": "ticks_require_decimal_string"
+  },
+  "successfulDelivery": false,
+  "scope": "Actual fixed65 installed timeline workflow with owned registered source; numeric non-exact delta refuses but must identify target clip."
+}

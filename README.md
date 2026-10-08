@@ -53,7 +53,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.65` / `filmcraft-skills@v0.1.0-dev.48`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.66` / `filmcraft-skills@v0.1.0-dev.49`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -77,7 +77,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.65`; skill source: `0.1.0-dev.48`; 13 independent skills.
+Current plugin: `0.1.0-dev.66`; skill source: `0.1.0-dev.49`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -181,9 +181,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.65 |
+| Metadata version | 0.1.0-dev.66 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.48 |
+| Skills source | filmcraft-skills / v0.1.0-dev.49 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -406,3 +406,7 @@ Fixed dev.65/source48/craft.5 passes all seven real-derived/synthetic media case
 Fixed dev.65/source48 sequence subgate passes:the actual installed media skill performs a cold public craft.5 installation and12-frame transparent import at24000/1001;independent full decode confirms timing and animation. Public CLI revision after relocation yields13 frames,preserving the non-target track and all old delivery bytes. Native collection isolates two same-name sequences and verifies24 source/destination frame hashes,unchanged preferences and non-first-frame decoding with originals unavailable. Missing middle/tail frames and registered duration conflicts refuse before output creation;relocated missing/truncated/pixel-metadata conflicts also refuse. The initial verifier track-name mistake is preserved;resumption matches actual item/track IDs and reuses successful native artifacts without replay. Evidence: `docs/evidence/filmcraft65-fixed-sequence-20261009/acceptance.json`. Full FC-DM-001 HD/SEGMENT and historical behavior-red mapping remain pending;tasks4.1-4.3 stay open.
 
 Tasks4.1-4.3/FC-DM-001 now pass all seven specified scenarios at fixed dev.65/source48/craft.5:current video/image/audio registration and native references;aggregate missing/hash-conflict refusals;24000/1001 transparent sequences;24-frame isolated same-name native collection;pre-output missing-frame/duration refusals;relocated revision with old bytes and non-target tracks preserved. Exact Effect55 Git objects serve only as a real native producer reference,furnishing four30-frame1080p transparent segments. The actual installed Film65 media skill copied alone performs a public cold install and120-frame/995328000-byte logical RGBA consumption/full decode;relocated revision yields121 frames and preserves the source checkpoint. All five PNG filters/wrap/cross-row checks,11 structure/CRC/decompression/resource refusals,8 segment version/range/resource refusals and12 installed-code unit tests pass. Interior animation/revision alignment error is1/255. The unchanged169/169 installed native regression and50 rows are reused,with13 skills and execution files reverified. Index: `docs/evidence/fc-dm-001/index.json`;acceptance: `docs/evidence/filmcraft65-fixed-domain-import-20261009/acceptance.json`. Bounded macOS arm64/Codex/headless scope;Art HD,exhaustive commands/GUI/other platforms,creative/manual review and user acceptance remain separate. Full V1 has23 open tasks;no archive or immutable tag/ZIP rewrite.
+
+Development dev.66 pins source dev.49 and returns independently validated clip timing diagnostics through preflight and failed workflow results. Explicit out-of-source trims are refused before native editing. Current immutable host and full FC-DM-002 qualification remain open; historical dev.65 evidence retains its identity.
+
+[dev.66 source checks](docs/evidence/plugin66-source-checks-20261009/acceptance.json): Python86 PASS,Node170 PASS/3 declared native NOT_RUN. OpenSpec retains23 open tasks.

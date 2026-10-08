@@ -1,0 +1,87 @@
+{
+  "schema": "filmcraft-fixed-timeline-range-audit/v1",
+  "result": "FAIL",
+  "expected": "Explicit out point beyond source must refuse without clamping or successful delivery.",
+  "pluginRef": "v0.1.0-dev.65",
+  "clipId": 11,
+  "exitCode": 0,
+  "error": null,
+  "successfulDelivery": true,
+  "actualClip": {
+    "clip": 11,
+    "duration": "127135008000",
+    "durationFrames": 12,
+    "effects": [
+      {
+        "effect": "motion",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "anchor": {
+            "keyframes": 0,
+            "value": "Vec2(Vec2 { x: 32.0, y: 18.0 })"
+          },
+          "anti_flicker": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          },
+          "position": {
+            "keyframes": 0,
+            "value": "Vec2(Vec2 { x: 32.0, y: 18.0 })"
+          },
+          "rotation": {
+            "keyframes": 0,
+            "value": "Float(0.0)"
+          },
+          "scale": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          },
+          "scale_width": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          },
+          "uniform_scale": {
+            "keyframes": 0,
+            "value": "Bool(true)"
+          }
+        }
+      },
+      {
+        "effect": "opacity",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "blend": {
+            "keyframes": 0,
+            "value": "Choice(0)"
+          },
+          "opacity": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          }
+        }
+      },
+      {
+        "effect": "time_remap",
+        "enabled": true,
+        "masks": 0,
+        "params": {
+          "speed": {
+            "keyframes": 0,
+            "value": "Float(100.0)"
+          }
+        }
+      }
+    ],
+    "enabled": true,
+    "item": 9,
+    "label": "Lavender",
+    "link": null,
+    "name": "frame_00000.png",
+    "sourceIn": "0",
+    "speed": 1.0,
+    "start": "0",
+    "startFrame": 0
+  }
+}

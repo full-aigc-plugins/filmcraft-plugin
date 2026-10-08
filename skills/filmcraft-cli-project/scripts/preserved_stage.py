@@ -3,6 +3,7 @@ from contextlib import contextmanager
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import tempfile
@@ -38,6 +39,16 @@ def preserved_stage(output, prefix, state=None):
         try:
             operations = state.get('operations', [])
             _write_record(stage / 'recovery-operations.json', operations)
+            diagnostic = getattr(error, 'clip_timing', None)
+            if (isinstance(diagnostic, dict) and set(diagnostic) == {'reason', 'clipIds'}
+                    and isinstance(diagnostic['reason'], str)
+                    and diagnostic['reason'] in {'ticks_require_decimal_string', 'ticks_out_of_range',
+                                                 'ticks_not_exact', 'clip_out_of_range', 'invalid_clip_speed'}
+                    and isinstance(diagnostic['clipIds'], list) and diagnostic['clipIds']
+                    and all(isinstance(value, str) and re.fullmatch(r'[1-9][0-9]{0,19}', value)
+                            and int(value) <= 2**64-1 for value in diagnostic['clipIds'])):
+                # 单独诊断文件参与原失败回执摘要，不增加 craft-failed-stage/v1 字段。
+                _write_record(stage / 'clip-timing.json', diagnostic)
             if 'capabilitySnapshot' in state:
                 # 独立诊断文件沿用领域快照，不扩充公共失败回执的协议字段。
                 capabilities = dict(state['capabilitySnapshot'],

@@ -1,4 +1,5 @@
 import {AssetPreflightRefusal} from '../adapters/asset_refusal.ts';
+import {ClipTimingRefusal} from '../adapters/clip_refusal.ts';
 import { parseArgs } from 'node:util';
 import {existsSync} from 'node:fs';
 import {readRuntimeCandidate} from '../adapters/runtime_candidate.ts';
@@ -61,6 +62,6 @@ try { await main(); }
 catch (error) {
   console.log(JSON.stringify({ schema: 'filmcraft-workflow-admission-error/v1', replayAllowed: false,
     error: { code: error instanceof HarnessError ? error.code : 'workflow_admission_failed',
-      ...(error instanceof CapabilityRefusal&&error.diagnostic?{diagnostic:error.diagnostic}:{}),...(error instanceof AssetPreflightRefusal?{assetIssues:error.assetIssues}:{}) } }));
+      ...(error instanceof CapabilityRefusal&&error.diagnostic?{diagnostic:error.diagnostic}:{}),...(error instanceof AssetPreflightRefusal?{assetIssues:error.assetIssues}:{}),...(error instanceof ClipTimingRefusal?{clipTiming:error.clipTiming}:{}) } }));
   process.exitCode = 1;
 }

@@ -56,13 +56,82 @@ def load_module(name):
     return module
 
 
-def ticks(value):
+class ClipTimingError(ValueError):
+    """精确片段时间拒绝；公共诊断只包含固定原因和完整 u64 十进制身份。"""
+    def __init__(self, reason, clip):
+        self.clip_timing = {'reason': reason, 'clipIds': [str(clip)]}
+        super().__init__(reason + ': clip=' + str(clip))
+
+
+def timing_refusal(reason, clip=None):
+    """已有有效片段才报告其身份，不把素材 ID 或路径伪装为片段。"""
+    if type(clip) is int and 0 < clip <= 2**64-1:
+        raise ClipTimingError(reason, clip)
+    raise ValueError(reason)
+
+
+def ticks(value, clip=None):
     if not isinstance(value, str) or not re.fullmatch(r'0|[1-9][0-9]*', value):
-        raise ValueError('ticks_require_decimal_string')
+        timing_refusal('ticks_require_decimal_string', clip)
+    if len(value) > 19:
+        timing_refusal('ticks_out_of_range', clip)
     number = int(value)
     if number > 2**63 - 1:
-        raise ValueError('ticks_out_of_range')
+        timing_refusal('ticks_out_of_range', clip)
     return number
+
+
+def trim_delta(params):
+    """裁切增量允许负整数 ticks，但不接受浮点、隐式转换或 i64 溢出。"""
+    value = params.get('delta')
+    if not isinstance(value, str) or not re.fullmatch(r'-?(0|[1-9][0-9]*)', value):
+        timing_refusal('ticks_require_decimal_string', params.get('clip'))
+    if len(value.lstrip('-')) > 19:
+        timing_refusal('ticks_out_of_range', params.get('clip'))
+    number = int(value)
+    if not -2**63 <= number <= 2**63-1:
+        timing_refusal('ticks_out_of_range', params.get('clip'))
+    return number
+
+
+def preflight_trim(params, sequence, assets):
+    """先按当前原生片段核验显式请求，防止引擎钳制越界后被误判为成功。"""
+    delta = trim_delta(params)
+    identifier = params.get('clip')
+    clip = next((c for t in sequence['video']+sequence['audio'] for c in t['items'] if c['clip'] == identifier), None)
+    if clip is None:
+        raise ValueError('clip_not_found')
+    asset = next((a for a in assets.values() if a.get('item') == clip['item']), None)
+    if asset is None:
+        raise ValueError('registered_asset_and_ticks_required')
+    speed = clip.get('speed')
+    if type(speed) not in (int, float) or not math.isfinite(speed) or speed == 0:
+        timing_refusal('invalid_clip_speed', identifier)
+    rate = abs(Fraction(str(speed)))
+    start, duration = Fraction(clip['sourceIn']), Fraction(clip['duration'])
+    if params.get('edge') == 'in':
+        start += delta * rate
+        duration -= delta
+    elif params.get('edge') == 'out':
+        duration += delta
+    else:
+        raise ValueError('invalid_trim_edge')
+    if start.denominator != 1:
+        timing_refusal('ticks_not_exact', identifier)
+    available = ticks(asset['probe']['duration'])
+    end = start + duration * rate
+    if end.denominator != 1:
+        timing_refusal('ticks_not_exact', identifier)
+    if start < 0 or start >= available or duration <= 0:
+        timing_refusal('clip_out_of_range', identifier)
+    if end > available:
+        # 已有合法音频尾部填充只能随入点裁切保留，不允许新的越界出点请求。
+        unchanged_end = end == Fraction(clip['sourceIn']) + Fraction(clip['duration']) * rate
+        retained_padding = (delta == 0 or params['edge'] == 'in') and unchanged_end and source_range_valid(
+            clip, asset['probe'], sequence['settings']['frame_rate'])
+        if not retained_padding:
+            timing_refusal('clip_out_of_range', identifier)
+    return delta
 
 
 def source_range_valid(clip, probe, frame_rate):
@@ -149,6 +218,12 @@ def validate(plan, prior_assets=None):
             aliases.add(alias)
         if not isinstance(item.get('params', {}), dict):
             raise ValueError('invalid_params')
+        if item['command'] == 'timeline.trim' and type(item.get('params', {}).get('clip')) is int:
+            trim_delta(item['params'])
+        if item['command'] == 'timeline.move':
+            for move in item.get('params', {}).get('moves', []):
+                if type(move.get('clip')) is int:
+                    ticks(move.get('time'), move['clip'])
         if item['command'] in ('effects.toggleAnimation', 'effects.setParam'):
             params = item.get('params', {})
             required = {'clip', 'effect', 'param'}
@@ -498,13 +573,10 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
                     if identifier == 'effects.setParam' and 'time' in params:
                         params['time'] = ticks(params['time'])
                     if identifier == 'timeline.trim':
-                        value = params.get('delta')
-                        if not isinstance(value, str) or not re.fullmatch(r'-?(0|[1-9][0-9]*)', value):
-                            raise ValueError('ticks_require_decimal_string')
-                        params['delta'] = int(value)
+                        params['delta'] = preflight_trim(params, call('sequence_inspect', {}), assets)
                     if identifier == 'timeline.move':
                         for move in params.get('moves', []):
-                            move['time'] = ticks(move['time'])
+                            move['time'] = ticks(move['time'], move.get('clip'))
                     result = command(identifier, params)
                 if operation.get('as'):
                     if operation['as'] in bindings:
@@ -519,7 +591,7 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None):
                 for clip in track['items']:
                     asset = next((x for x in assets.values() if x.get('item') == clip['item']), None)
                     if not asset or not source_range_valid(clip, asset['probe'], sequence['settings']['frame_rate']):
-                        raise ValueError('clip_out_of_range: ' + str(clip['clip']))
+                        timing_refusal('clip_out_of_range', clip['clip'])
             caption_state = command('captions.list', {})
             families = {x['family'] for x in command('fonts.list', {'system': True})}
             for track in caption_state['tracks']:
@@ -644,6 +716,8 @@ def main():
         failure = {'error': str(error)}
         if isinstance(error, AssetPreflightError):
             failure['assetIssues'] = error.asset_issues
+        if isinstance(error, ClipTimingError):
+            failure['clipTiming'] = error.clip_timing
         print(json.dumps(failure, ensure_ascii=False))
         raise SystemExit(1)
 

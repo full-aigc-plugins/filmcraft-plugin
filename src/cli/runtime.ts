@@ -1,4 +1,5 @@
 import {AssetPreflightRefusal} from '../adapters/asset_refusal.ts';
+import {ClipTimingRefusal} from '../adapters/clip_refusal.ts';
 import { parseArgs } from 'node:util';
 import { basename, dirname, resolve } from 'node:path';
 import { RuntimeUpgrade } from '../adapters/runtime_upgrade.ts';
@@ -23,4 +24,4 @@ function main(){
  check(p[0]==='rollback'?generation!==undefined:generation===undefined,'invalid_runtime_arguments');
  console.log(JSON.stringify(service.select(probe,grant,generation)));
 }
-try{main();}catch(error){console.log(JSON.stringify({schema:'filmcraft-runtime-upgrade-error/v1',replayAllowed:false,error:{code:error instanceof HarnessError?error.code:'runtime_upgrade_failed',...(error instanceof CapabilityRefusal&&error.diagnostic?{diagnostic:error.diagnostic}:{}),...(error instanceof AssetPreflightRefusal?{assetIssues:error.assetIssues}:{})}}));process.exitCode=1;}
+try{main();}catch(error){console.log(JSON.stringify({schema:'filmcraft-runtime-upgrade-error/v1',replayAllowed:false,error:{code:error instanceof HarnessError?error.code:'runtime_upgrade_failed',...(error instanceof CapabilityRefusal&&error.diagnostic?{diagnostic:error.diagnostic}:{}),...(error instanceof AssetPreflightRefusal?{assetIssues:error.assetIssues}:{}),...(error instanceof ClipTimingRefusal?{clipTiming:error.clipTiming}:{})}}));process.exitCode=1;}

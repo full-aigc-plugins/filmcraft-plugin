@@ -53,7 +53,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.65` / `filmcraft-skills@v0.1.0-dev.48`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.66` / `filmcraft-skills@v0.1.0-dev.49`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -77,7 +77,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.65`；技能源：`0.1.0-dev.48`；13 个独立技能。
+当前插件：`0.1.0-dev.66`；技能源：`0.1.0-dev.49`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -182,9 +182,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.65 |
+| Metadata version | 0.1.0-dev.66 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.48 |
+| Skills source | filmcraft-skills / v0.1.0-dev.49 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |
@@ -405,3 +405,7 @@ dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自�
 2026-10-09 固定dev.65/source48序列专项：实际安装media技能公开空缓存安装craft.5，以24000/1001有理帧率导入12帧透明动画并独立全解码；移动后公开CLI修订为13帧，非目标轨道及旧工程全部字节保全。原生同名双序列24帧逐帧来源／目标摘要一致且目录隔离；偏好不变，断开原目录后正确解码非首帧；中间帧／尾帧／登记时长冲突在创建交付目录前拒绝；移动包缺帧、截断和像素摘要冲突拒绝。初始验证器轨道名称误用失败已保留，按真实item及track id修正后复用已完成原生产物，无重复原生写入。证据 `docs/evidence/filmcraft65-fixed-sequence-20261009/acceptance.json`。完整FC-DM-001的HD／SEGMENT及目标红灯映射仍待，不勾选4.1—4.3。
 
 2026-10-09 完成4.1—4.3／FC-DM-001：固定dev.65/source48/craft.5全部七场景逐项资格通过。实际登记视频／图片／音频摘要、流属性、时长及原生引用；完整缺失清单子修复目标红灯与固定13技能拒绝保留。24000/1001透明序列、24帧同名隔离原生收集、缺中／尾帧及登记时长冲突安装前拒绝，移动后保留非目标和旧包；缺帧／截断／像素冲突拒绝。固定Effect55 Git来源仅作真实原生生产参考，生成4×30帧1080p透明动画；固定Film65实际安装media技能独立复制、公开冷安装，收集120帧／995328000逻辑RGBA字节并全解码，移动修订121帧和源检查点保全。五PNG滤波／跨行溢出、11结构CRC解压资源拒绝、8分段版本范围资源拒绝及12安装代码专项单测通过；内部文字动画／修订帧对齐实际误差1/255。复用未变化的169/169安装原生与50矩阵，重新核验13技能及执行代码。索引 `docs/evidence/fc-dm-001/index.json`；验收 `docs/evidence/filmcraft65-fixed-domain-import-20261009/acceptance.json`。仅当前macOS arm64/Codex/headless；Art HD、全命令／GUI与其他平台、创作manual_review及用户NOT_RUN门禁仍独立开放。完整V1余23项，不归档、不改写旧标签或ZIP。
+
+开发版dev.66固定技能源dev.49，预检与工作流失败结果传递独立校验的片段时间诊断；显式越界裁切在原生编辑前拒绝。当前固定宿主及完整FC-DM-002验收仍开放，历史dev.65证据保留原身份。
+
+[dev.66源码门禁](docs/evidence/plugin66-source-checks-20261009/acceptance.json)：Python86通过，Node170通过／3项原生环境未运行；OpenSpec仍有23项开放任务。

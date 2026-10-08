@@ -1,4 +1,5 @@
 import {AssetPreflightRefusal,validateAssetIssues} from './asset_refusal.ts';
+import {ClipTimingRefusal,validateClipTiming} from './clip_refusal.ts';
 import { spawn, spawnSync } from 'node:child_process';
 import { createHash, randomUUID } from 'node:crypto';
 import { existsSync, lstatSync, readFileSync, readdirSync, realpathSync } from 'node:fs';
@@ -66,14 +67,16 @@ export class PythonWorkflowRunner {
     const result = spawnSync(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
       { encoding: 'utf8', timeout: 180_000, maxBuffer: 4 * 1024 * 1024, shell: false });
     if(result.error || result.status!==0){
-      let code='native_preflight_failed',diagnostic:unknown,assetIssues:unknown;
+      let code='native_preflight_failed',diagnostic:unknown,assetIssues:unknown,clipTiming:unknown;
       try{
         const failure=parseJson(result.stdout??'');
         if(failure.schema==='filmcraft-native-preflight-error/v1'&&failure.error?.code==='asset_preflight_failed'){assetIssues=failure.error.assetIssues;}
+        if(failure.schema==='filmcraft-native-preflight-error/v1'&&failure.error?.code==='clip_timing_failed'){clipTiming=failure.error.clipTiming;}
         if(failure.schema==='filmcraft-native-preflight-error/v1'
           &&['capability_missing','capability_unknown','capability_contract_drift','capability_identity_mismatch'].includes(failure.error?.code)){code=failure.error.code;diagnostic=failure.error.diagnostic;}
       }catch{/* 未知或畸形输出保持明确失败，不提升为能力已验证。 */}
       const issues=validateAssetIssues(assetIssues);if(issues){throw new AssetPreflightRefusal(issues);}
+      const clipDetail=validateClipTiming(clipTiming);if(clipDetail){throw new ClipTimingRefusal(clipDetail);}
       if(code!=='native_preflight_failed'){throw new CapabilityRefusal(code,diagnostic);}
       check(false,code);
     }
@@ -181,9 +184,11 @@ export class PythonWorkflowRunner {
       if (budgetReason && outcome === 'succeeded') { outcome = 'failed'; }
       this.ledger.finishAttempt(lease, { outcome, stopped: stoppedConfirmed, receiptSha256 });
       if (stoppedConfirmed && outcome !== 'unknown') { resources.settle(registered.taskId, { stopped: true, outputBytes: outputBytes(binding.outputRoot) }); }
+      let clipTiming;
+      if(end.code!==0){try{clipTiming=validateClipTiming(parseJson(log).clipTiming);}catch{/* 任意日志不作为公共片段诊断。 */}}
       return { taskId: registered.taskId, attemptId: lease.attemptId, state: this.ledger.getTask(registered.taskId).state,
         reused: false, process: { pid: child.pid ?? null, stopped: stoppedConfirmed, exitCode: end.code, signal: end.signal },
-        budgetReason, receipt: this.index.collect(registered.taskId, lease.attemptId) };
+        budgetReason, ...(clipTiming?{clipTiming}:{}), receipt: this.index.collect(registered.taskId, lease.attemptId) };
     } catch (error) {
       // 未发出进程前的冲突是已知拒绝；发出后的任何异常不能自动重放。
       if (!launched) {

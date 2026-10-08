@@ -1,3 +1,4 @@
+import { childEnvironment } from '../support/process_environment.ts';
 import {AssetPreflightRefusal,validateAssetIssues} from './asset_refusal.ts';
 import {ClipTimingRefusal,validateClipTiming} from './clip_refusal.ts';
 import { spawn, spawnSync } from 'node:child_process';
@@ -65,7 +66,7 @@ export class PythonWorkflowRunner {
     const argv = ['-I', '-B', script, '--skill-dir', root, '--plan', resolve(planFile), '--output', outputRoot, '--runtime-home', resolve(this.options.runtimeHome)];
     if (source) { argv.push('--source', resolve(source)); }
     const result = spawnSync(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
-      { encoding: 'utf8', timeout: 180_000, maxBuffer: 4 * 1024 * 1024, shell: false });
+      { encoding: 'utf8', timeout: 180_000, maxBuffer: 4 * 1024 * 1024, shell: false, env: childEnvironment() });
     if(result.error || result.status!==0){
       let code='native_preflight_failed',diagnostic:unknown,assetIssues:unknown,clipTiming:unknown;
       try{
@@ -138,7 +139,7 @@ export class PythonWorkflowRunner {
       if (source) { argv.push('--source', resolve(source)); }
       const child = spawn(this.options.python ?? process.env.FILMCRAFT_PYTHON ?? 'python3', argv,
         { shell: false, detached: true, stdio: ['ignore', 'pipe', 'pipe'],
-          env: { ...process.env, FILMCRAFT_EXECUTION_CONTEXT: JSON.stringify({ taskId: registered.taskId,
+          env: { ...childEnvironment(), FILMCRAFT_EXECUTION_CONTEXT: JSON.stringify({ taskId: registered.taskId,
             attemptId: lease.attemptId, sourceRevision: binding.sourceRevision, sourceTreeSha256: binding.sourceTreeSha256 }) } });
       launched = true;
       let log = '', spawnError: Error | null = null;

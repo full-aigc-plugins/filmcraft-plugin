@@ -1,0 +1,182 @@
+{
+  "schema": "filmcraft-native-permissions-foundation/v1",
+  "result": "PASS",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "unrestrictedActualNativeOutsideWrite": {
+    "new": {
+      "content": [
+        {
+          "type": "text",
+          "text": "null"
+        }
+      ],
+      "isError": false
+    },
+    "save": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"backup\": null,\n  \"bytes\": 4237,\n  \"ms\": 8.866291,\n  \"path\": \"[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/outside/unrestricted.fcproj\"\n}"
+        }
+      ],
+      "isError": false
+    },
+    "exists": true,
+    "allowedImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"errors\": [],\n  \"items\": [\n    1\n  ]\n}"
+        }
+      ],
+      "isError": false
+    },
+    "outsideImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"errors\": [],\n  \"items\": [\n    2\n  ]\n}"
+        }
+      ],
+      "isError": false
+    },
+    "symlinkImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"errors\": [],\n  \"items\": [\n    3\n  ]\n}"
+        }
+      ],
+      "isError": false
+    },
+    "systemDataAliasImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"errors\": [],\n  \"items\": [\n    4\n  ]\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "guardedActualNativeAllowedWrite": {
+    "new": {
+      "content": [
+        {
+          "type": "text",
+          "text": "null"
+        }
+      ],
+      "isError": false
+    },
+    "save": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"backup\": null,\n  \"bytes\": 1545,\n  \"ms\": 6.173375,\n  \"path\": \"[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/allowed/valid.fcproj\"\n}"
+        }
+      ],
+      "isError": false
+    },
+    "exists": true,
+    "allowedImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"errors\": [],\n  \"items\": [\n    1\n  ]\n}"
+        }
+      ],
+      "isError": false
+    },
+    "outsideImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/outside/shot.mp4: Operation not permitted (os error 1)"
+        }
+      ],
+      "isError": true
+    },
+    "symlinkImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/allowed/outside-link.mp4: Operation not permitted (os error 1)"
+        }
+      ],
+      "isError": true
+    },
+    "systemDataAliasImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "/System/Volumes/Data[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/outside/shot.mp4: Operation not permitted (os error 1)"
+        }
+      ],
+      "isError": true
+    }
+  },
+  "guardedActualNativeOutsideRefusal": {
+    "new": {
+      "content": [
+        {
+          "type": "text",
+          "text": "null"
+        }
+      ],
+      "isError": false
+    },
+    "save": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/outside/escaped.fcproj: Operation not permitted (os error 1)"
+        }
+      ],
+      "isError": true
+    },
+    "exists": false,
+    "allowedImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"errors\": [],\n  \"items\": [\n    1\n  ]\n}"
+        }
+      ],
+      "isError": false
+    },
+    "outsideImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/outside/shot.mp4: Operation not permitted (os error 1)"
+        }
+      ],
+      "isError": true
+    },
+    "symlinkImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/allowed/outside-link.mp4: Operation not permitted (os error 1)"
+        }
+      ],
+      "isError": true
+    },
+    "systemDataAliasImport": {
+      "content": [
+        {
+          "type": "text",
+          "text": "/System/Volumes/Data[OWNED_EVIDENCE_ROOT]/permissions-native-foundation4/outside/shot.mp4: Operation not permitted (os error 1)"
+        }
+      ],
+      "isError": true
+    }
+  },
+  "protectedRuntimeWriteDenied": true,
+  "protectedRuntimeTreePreserved": true,
+  "systemDataAliasChecked": true,
+  "outsideCanaryPreserved": true,
+  "runtimePreserved": true,
+  "scope": "Actual unchanged public craft5 MCP save and system sandbox; public workflow/Harness/fixed-release integration not yet qualified"
+}

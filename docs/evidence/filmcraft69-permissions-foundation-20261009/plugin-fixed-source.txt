@@ -1,0 +1,2 @@
+fetched https://github.com/full-aigc-skills/filmcraft-skills.git@v0.1.0-dev.52 -> 4cab851c19bdaaf9c24911597139cf6b68e2610e
+skill vendor check: all managed skills match the lockfile

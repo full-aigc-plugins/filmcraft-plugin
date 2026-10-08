@@ -1,0 +1,93 @@
+{
+  "result": "PASS",
+  "sourceCandidate": "unreleased permissions/environment work",
+  "fixedRef": "v0.1.0-dev.68",
+  "rows": [
+    {
+      "label": "fixed68",
+      "layer": "immutable68 Python launch only",
+      "rows": [
+        {
+          "script": "plan_identity.py",
+          "secretPresent": true,
+          "proxyPresent": true,
+          "injectionPresent": true,
+          "dataDirPresent": true
+        },
+        {
+          "script": "native_preflight.py",
+          "secretPresent": true,
+          "proxyPresent": true,
+          "injectionPresent": true,
+          "dataDirPresent": true
+        }
+      ],
+      "outcome": null,
+      "sourcePreserved": true,
+      "sourceTreeSha256": "b174e45de74bf3eb6c6b72577f1efacbb3ad901141e2b5bd1f74bb8303da5ef6"
+    },
+    {
+      "label": "candidate",
+      "layer": "candidate native workflow",
+      "rows": [
+        {
+          "script": "plan_identity.py",
+          "secretPresent": false,
+          "proxyPresent": false,
+          "injectionPresent": false,
+          "dataDirPresent": true
+        },
+        {
+          "script": "native_preflight.py",
+          "secretPresent": false,
+          "proxyPresent": false,
+          "injectionPresent": false,
+          "dataDirPresent": true
+        },
+        {
+          "script": "plan_identity.py",
+          "secretPresent": false,
+          "proxyPresent": false,
+          "injectionPresent": false,
+          "dataDirPresent": true
+        },
+        {
+          "script": "native_preflight.py",
+          "secretPresent": false,
+          "proxyPresent": false,
+          "injectionPresent": false,
+          "dataDirPresent": true
+        },
+        {
+          "script": "plan_identity.py",
+          "secretPresent": false,
+          "proxyPresent": false,
+          "injectionPresent": false,
+          "dataDirPresent": true
+        },
+        {
+          "script": "workflow.py",
+          "secretPresent": false,
+          "proxyPresent": false,
+          "injectionPresent": false,
+          "dataDirPresent": true
+        },
+        {
+          "script": "process_identity.py",
+          "secretPresent": false,
+          "proxyPresent": false,
+          "injectionPresent": false,
+          "dataDirPresent": true
+        }
+      ],
+      "outcome": {
+        "state": "verifying",
+        "receipt": "linked"
+      },
+      "sourcePreserved": true,
+      "sourceTreeSha256": "b174e45de74bf3eb6c6b72577f1efacbb3ad901141e2b5bd1f74bb8303da5ef6"
+    }
+  ],
+  "fullPermissionQualification": "NOT_PROVEN",
+  "scope": "Owned Python observer delegates unchanged real interpreter and native craft5; immutable68 auxiliary inheritance red versus current actual Harness preflight/workflow green; root policy integration still pending"
+}

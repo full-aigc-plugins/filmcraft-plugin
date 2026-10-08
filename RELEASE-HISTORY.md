@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.69
+
+Development release69 pins independently published source52. Filters every Harness Python child environment, including process identity probes, and adds OpenSpec trusted-root and child-environment scenarios. Candidate native/Harness tests pass; public root authorization integration, fixed69 host qualification and eight full tasks remain open.
+
 Fixed dev.59/source46/public craft.5 qualifies all8 FC-AR-001/002 scenarios in isolated macOS arm64 Codex/headless:13 skills and62 executable files preserved,10 lineage plus15 artifact cases passed,2 public tasks/26 artifacts passed the fixed ArtCraft schemas. All135 installed regression tests pass without skips; source83 Python/132 Node pass, with3 declared source-environment checks supplemented by the installed run. OpenSpec5.1–5.3 and5.6 are complete;35 full-V1 tasks remain open. Creative acceptance is manual_review, user/other-platform acceptance is NOT_RUN. [Fixed evidence](docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json).
 
 Earlier dev.59 candidate record, superseded by the qualification above: the source candidate passes10 lineage and15 artifact cases covering all8 FC-AR-001/002 scenarios, including relocated source relinking, missing dependencies, independent native reopen and quality receipt binding. Per-scenario evidence gates reject incomplete or spliced reports. Source46/craft.5 skills are unchanged. New fixed59 installation is pending; tasks5.1–5.3/5.6 and39 full-V1 tasks remain open. [Candidate evidence](docs/evidence/filmcraft59-artifact-candidate-20261009/acceptance.json).

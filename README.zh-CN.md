@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.69清理所有Harness Python启动（含进程身份探针）继承的宿主秘密与解释器注入，锁定source52的MCP／编辑环境隔离。macOS沙箱基础具有实际原生证据；公开根策略执行及完整FC-RL-002仍未完成。[执行边界](docs/FilmCraft-Execution-Permissions.zh_CN.md)。
+
 dev.61 源码候选增加授权运行时升级入口与重新探测绑定；探测和切换分别授权，排空、身份及稳定能力错误门禁保护升级与回退。固定发布和完整 FC-RT-002 验收尚待完成，29项完整 V1 任务保持开放。[入口与边界](docs/FilmCraft-Runtime-Upgrade.zh_CN.md)。
 
 
@@ -53,7 +55,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.68` / `filmcraft-skills@v0.1.0-dev.51`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.69` / `filmcraft-skills@v0.1.0-dev.52`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -77,7 +79,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.68`；技能源：`0.1.0-dev.51`；13 个独立技能。
+当前插件：`0.1.0-dev.69`；技能源：`0.1.0-dev.52`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -182,9 +184,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.68 |
+| Metadata version | 0.1.0-dev.69 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.51 |
+| Skills source | filmcraft-skills / v0.1.0-dev.52 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

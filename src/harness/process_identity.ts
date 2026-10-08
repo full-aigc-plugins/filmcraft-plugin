@@ -1,3 +1,4 @@
+import { childEnvironment } from '../support/process_environment.ts';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { check, parseJson, stableJson } from '../support/json.ts';
@@ -7,7 +8,7 @@ export type ProcessIdentity = { pid: number; ppid: number; pgid: number; uid: nu
 export function processIdentity(pid: number, python = process.env.FILMCRAFT_PYTHON ?? 'python3'): ProcessIdentity | null {
   check(Number.isSafeInteger(pid) && pid > 0, 'invalid_process_identity');
   const script = fileURLToPath(new URL('../../scripts/process_identity.py', import.meta.url));
-  const result = spawnSync(python, ['-I', '-B', script, String(pid)], { encoding: 'utf8', timeout: 5000, maxBuffer: 32 * 1024, shell: false });
+  const result = spawnSync(python, ['-I', '-B', script, String(pid)], { encoding: 'utf8', timeout: 5000, maxBuffer: 32 * 1024, shell: false, env: childEnvironment() });
   if (result.error || result.status !== 0) { return null; }
   try {
     const value = parseJson(result.stdout);

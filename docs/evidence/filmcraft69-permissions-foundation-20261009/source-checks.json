@@ -1,0 +1,1822 @@
+{
+  "schema": "filmcraft-source-offline-checks/v1",
+  "result": "PASS",
+  "layer": "source",
+  "scope": "offline checks only; no native/host/platform acceptance",
+  "revision": "e65dc5b64da8102a242da3e94fbd83caef5a5c7a",
+  "pythonVersion": "3.13.5",
+  "checks": [
+    {
+      "id": "metadata",
+      "status": "PASS",
+      "details": {
+        "version": "0.1.0-dev.52",
+        "skills": 13
+      }
+    },
+    {
+      "id": "links",
+      "status": "PASS",
+      "checked": 285
+    },
+    {
+      "id": "resources-catalog-entry",
+      "status": "PASS",
+      "command": [
+        "python",
+        "-I",
+        "-B",
+        "scripts/sync_skill_suite.py",
+        "--check"
+      ],
+      "log": "resources.log",
+      "logSha256": "d512f0e8d9c62f17783121b909dd5470eedf6cd3c9205620ae373e1f565201eb"
+    },
+    {
+      "id": "offline-unit-scenario-contract-entry",
+      "status": "PASS",
+      "executor": "unittest.TextTestRunner discovery of tests/test_*.py",
+      "log": "unittest.log",
+      "logSha256": "c8342d592ea8f046430bc0c26efe8bdac60fc246f0aa4123f392f0f8f9f289f3"
+    }
+  ],
+  "native": "NOT_RUN",
+  "host": "NOT_RUN",
+  "realMedia": "NOT_RUN",
+  "platformAcceptance": "NOT_RUN",
+  "sourceFilesSha256": {
+    ".claude-plugin/plugin.json": "88e648f8d5cfcd1a06a3dc16c5fde1f635f87a4fe773fb183424da26b30cddcd",
+    ".github/workflows/offline.yml": "b9e16ec4308e4041116839f00f196a0e6befecee12a270d36f70cb34c41d42b4",
+    "scripts/build_audio_runtime.py": "c7fbb13a99e5f5a160eb3b0ca11354a39c1774a916694b291faa0e3729953b8e",
+    "scripts/build_caption_runtime.py": "ca38d5de6c6beb9f89884cf93e3092e88f5e5ef89b4cbcffab608f79ed444fcb",
+    "scripts/build_command_coverage.py": "daa6ff13c8ce6263d6b422239d317b0e8ba9c75ffad25c8c5b7bab6d9c148256",
+    "scripts/build_pcm_runtime.py": "bc43fc10af49d59930c14733c02a5b4c06dc4d274478d2a772d82c5a6a239321",
+    "scripts/build_scenario_catalog.py": "dca1e84fa6f4d7580e611617dc4001191e041c2b79e185755bd6b4457f2a84d6",
+    "scripts/build_sequence_runtime.py": "6fb2fafaa054e3c81413a7049d2c42232e8e98b22d6ae25b6b1266ccb5bd3d61",
+    "scripts/build_whisper_runtime.py": "74e7a61fc3251ced5925691aff7ae9de03e990195f4852b5482d25c279da4f5e",
+    "scripts/check_release.py": "7fae8be636e531d947374fe31991cd95d1d37033169bcc606e6362da00db841a",
+    "scripts/offline-test-policy.json": "ab3c0d9ec48dac1fb2f814a6555b07b512767e47b85a747d6e412ef178a49a65",
+    "scripts/sync_skill_suite.py": "ef48aa8f77112c053ab68c704c1246a4e56a7ad80f7c8a88b5e283b09e32b1c9",
+    "skill-suite.json": "f8eece11b94951a1b0845f920d86d4b21eec11f90d251e4a12af1cf50b0f30f5",
+    "skills/filmcraft-cli-audio/SKILL.md": "757557dc8e4a7624474cb6924ad1f80d516257a69b45b0ec5363a47fe358098e",
+    "skills/filmcraft-cli-audio/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-audio/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-audio/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-audio/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-audio/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-audio/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-audio/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-audio/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-audio/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-audio/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-audio/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-audio/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-audio/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-audio/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-audio/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-audio/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-audio/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-audio/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-audio/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-audio/references/commands.json": "5978aeb0e2cbb2707cfe2ba0b43fd8aacdc89c85ffa1aa669be5c80fe32c4c7f",
+    "skills/filmcraft-cli-audio/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-audio/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-audio/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-audio/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-audio/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-audio/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-audio/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-audio/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-audio/references/scenario.md": "2f8c07747b8df68b9a93a4137b851cd531c7957e9513f880503a7b9abf5a6843",
+    "skills/filmcraft-cli-audio/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-audio/references/task-scene.md": "9dea081be856b803a6f6b0cf456aebea2f478e0ab2b57af6ee20df7043ab49f6",
+    "skills/filmcraft-cli-audio/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-audio/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-audio/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-audio/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-audio/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-audio/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-audio/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-audio/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-audio/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-audio/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-audio/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-audio/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-audio/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-audio/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-audio/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-audio/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-audio/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-audio/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-audio/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-color/SKILL.md": "40cf90c5c64877ca408caf37ee2db48b3fbfa01f35875f07b0fa2f7118143c2e",
+    "skills/filmcraft-cli-color/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-color/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-color/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-color/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-color/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-color/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-color/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-color/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-color/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-color/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-color/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-color/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-color/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-color/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-color/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-color/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-color/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-color/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-color/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-color/references/commands.json": "104cd651121fb0621b8c9a4994f2072e04b890dc4fd1f93db5d7ea88510af2d9",
+    "skills/filmcraft-cli-color/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-color/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-color/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-color/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-color/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-color/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-color/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-color/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-color/references/scenario.md": "dfb7c22640658b24a311d10fd0a1b28f013ae18c9475645561007a1e75e278e9",
+    "skills/filmcraft-cli-color/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-color/references/task-scene.md": "df7dc41990a9b6dc1b219ab3be089d41125bea55ec8363cc87d5fb0d98838667",
+    "skills/filmcraft-cli-color/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-color/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-color/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-color/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-color/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-color/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-color/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-color/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-color/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-color/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-color/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-color/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-color/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-color/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-color/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-color/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-color/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-color/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-color/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-export/SKILL.md": "5639e8a31c8de62b2933898746bc45ac4c39f7bf4e0417e8afe527fa1109575c",
+    "skills/filmcraft-cli-export/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-export/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-export/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-export/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-export/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-export/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-export/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-export/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-export/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-export/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-export/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-export/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-export/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-export/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-export/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-export/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-export/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-export/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-export/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-export/references/commands.json": "e980b7796f64adcbe71d9b549b00691de7aef8f242a1f23fe68283f1b1254f82",
+    "skills/filmcraft-cli-export/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-export/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-export/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-export/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-export/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-export/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-export/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-export/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-export/references/scenario.md": "99e6c09246433d4001c91f9aa9cd54d1c592e74ba599588e3e68fb05db39d968",
+    "skills/filmcraft-cli-export/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-export/references/task-scene.md": "8387080892c179b4e5a49a03fa183094e5d19a05e32439e1a7b02b510134437c",
+    "skills/filmcraft-cli-export/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-export/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-export/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-export/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-export/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-export/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-export/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-export/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-export/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-export/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-export/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-export/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-export/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-export/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-export/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-export/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-export/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-export/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-export/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-media/SKILL.md": "426b2dacf3969682256049697a147229db1cec2cc57c1cbc8f467eb01f13bd76",
+    "skills/filmcraft-cli-media/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-media/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-media/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-media/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-media/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-media/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-media/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-media/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-media/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-media/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-media/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-media/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-media/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-media/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-media/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-media/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-media/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-media/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-media/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-media/references/commands.json": "a87bea1331c8c5f24dbdce35779b4befae4b16baa953d8d36b89fdbe9707b2ee",
+    "skills/filmcraft-cli-media/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-media/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-media/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-media/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-media/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-media/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-media/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-media/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-media/references/scenario.md": "4feeada5a3be960cb4f26fcfb2dea83502d3d4ccf4352356c1c8ac677cf154aa",
+    "skills/filmcraft-cli-media/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-media/references/task-scene.md": "d8815e691fb37e22b6277300262d9d43ba83ce6c826617c98d7654a4e865bd55",
+    "skills/filmcraft-cli-media/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-media/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-media/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-media/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-media/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-media/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-media/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-media/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-media/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-media/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-media/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-media/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-media/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-media/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-media/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-media/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-media/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-media/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-media/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-motion/SKILL.md": "7e6da69ef611fb9d2cf8b4b5224f76661cd50435908c8ae85a96c6e85eed829a",
+    "skills/filmcraft-cli-motion/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-motion/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-motion/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-motion/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-motion/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-motion/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-motion/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-motion/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-motion/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-motion/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-motion/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-motion/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-motion/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-motion/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-motion/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-motion/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-motion/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-motion/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-motion/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-motion/references/commands.json": "b5d690f0936ce39f0c24d555892d3777250f0f372f2d639e54da9ba488425081",
+    "skills/filmcraft-cli-motion/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-motion/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-motion/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-motion/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-motion/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-motion/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-motion/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-motion/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-motion/references/scenario.md": "42ece8a3fc231896ae0a5c89fcb3bfe07eae7944e92b73818e9cb8d96ac1341d",
+    "skills/filmcraft-cli-motion/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-motion/references/task-scene.md": "0eec35fac30aa51d38d772a0f544ded31aae466ff966a3d857acdd2c147b813c",
+    "skills/filmcraft-cli-motion/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-motion/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-motion/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-motion/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-motion/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-motion/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-motion/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-motion/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-motion/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-motion/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-motion/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-motion/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-motion/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-motion/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-motion/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-motion/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-motion/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-motion/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-motion/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-multicam/SKILL.md": "6b7c6ba3f6480f8b34bb39c5b3ef202b67fb864cb0aadf56566a678ced84956f",
+    "skills/filmcraft-cli-multicam/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-multicam/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-multicam/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-multicam/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-multicam/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-multicam/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-multicam/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-multicam/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-multicam/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-multicam/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-multicam/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-multicam/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-multicam/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-multicam/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-multicam/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-multicam/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-multicam/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-multicam/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-multicam/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-multicam/references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "skills/filmcraft-cli-multicam/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-multicam/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-multicam/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-multicam/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-multicam/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-multicam/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-multicam/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-multicam/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-multicam/references/scenario.md": "3bbc1215faa7862f7f0c940764cb4c1ae62e48690d9938f002d4d5f05036dda2",
+    "skills/filmcraft-cli-multicam/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-multicam/references/task-scene.md": "7ab3ab05a131de843a6371ba9f3fb62202f82e83871b31248cf507fa2855e736",
+    "skills/filmcraft-cli-multicam/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-multicam/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-multicam/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-multicam/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-multicam/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-multicam/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-multicam/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-multicam/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-multicam/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-multicam/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-multicam/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-multicam/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-multicam/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-multicam/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-multicam/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-multicam/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-multicam/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-multicam/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-multicam/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-project/SKILL.md": "85fe9dd235e87b88ced17c6b3f3da83c0f37a90356ae919d7fa26525b1dc9835",
+    "skills/filmcraft-cli-project/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-project/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-project/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-project/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-project/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-project/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-project/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-project/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-project/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-project/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-project/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-project/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-project/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-project/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-project/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-project/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-project/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-project/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-project/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-project/references/commands.json": "a7df98bf5fed3fcd4ec1372a3457420f918349c665d4c5c1e110ceded9ad563e",
+    "skills/filmcraft-cli-project/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-project/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-project/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-project/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-project/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-project/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-project/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-project/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-project/references/scenario.md": "e57d0bf7a00b020771e592d31543e066c4adc4aac465bba0e05712df1e25d54b",
+    "skills/filmcraft-cli-project/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-project/references/task-scene.md": "3ba86e8c77c2d399f6a17a2a9f5313e01dbd673272879d1088c13cbdaf1a934d",
+    "skills/filmcraft-cli-project/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-project/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-project/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-project/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-project/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-project/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-project/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-project/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-project/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-project/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-project/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-project/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-project/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-project/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-project/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-project/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-project/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-project/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-project/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-setup/SKILL.md": "8358bc3d4aeedc2b1dfc72482ff9acd768c71d78546d0fd96563a2f4197f8642",
+    "skills/filmcraft-cli-setup/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-setup/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-setup/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-setup/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-setup/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-setup/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-setup/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-setup/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-setup/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-setup/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-setup/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-setup/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-setup/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-setup/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-setup/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-setup/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-setup/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-setup/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-setup/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-setup/references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "skills/filmcraft-cli-setup/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-setup/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-setup/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-setup/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-setup/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-setup/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-setup/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-setup/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-setup/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-setup/references/task-scene.md": "1e1edb329ecd6b2ee64d5e29b94d08cd05fda10e73d31034c520571b3749d945",
+    "skills/filmcraft-cli-setup/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-setup/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-setup/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-setup/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-setup/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-setup/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-setup/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-setup/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-setup/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-setup/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-setup/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-setup/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-setup/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-setup/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-setup/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-setup/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-setup/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-setup/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-setup/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-subtitles/SKILL.md": "d9922e80214ff9bc1802c92306350b6b123ec252ad1a6b5b0a8501cc69948b88",
+    "skills/filmcraft-cli-subtitles/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-subtitles/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-subtitles/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-subtitles/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-subtitles/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-subtitles/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-subtitles/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-subtitles/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-subtitles/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-subtitles/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-subtitles/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-subtitles/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-subtitles/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-subtitles/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-subtitles/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-subtitles/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-subtitles/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-subtitles/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-subtitles/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-subtitles/references/commands.json": "246673ef65e99884b1b025d884f546c620061f67eca0417c61ade0408448c032",
+    "skills/filmcraft-cli-subtitles/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-subtitles/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-subtitles/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-subtitles/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-subtitles/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-subtitles/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-subtitles/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-subtitles/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-subtitles/references/scenario.md": "ebc938965eec8bd607716598d3da6802eeeddd4668e135060e27c5bcb52bebeb",
+    "skills/filmcraft-cli-subtitles/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-subtitles/references/task-scene.md": "91d83bedb3525f18967b66d47659477efbb37fc27a5f5ff449e507518bba95e7",
+    "skills/filmcraft-cli-subtitles/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-subtitles/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-subtitles/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-subtitles/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-subtitles/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-subtitles/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-subtitles/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-subtitles/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-subtitles/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-subtitles/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-subtitles/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-subtitles/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-subtitles/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-subtitles/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-subtitles/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-subtitles/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-subtitles/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-subtitles/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-subtitles/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-timeline/SKILL.md": "0706b5baa203ebc43440bcbcfb1294eb9735c0c094a793205ea6e05fd33ba5e3",
+    "skills/filmcraft-cli-timeline/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-timeline/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-timeline/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-timeline/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-timeline/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-timeline/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-timeline/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-timeline/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-timeline/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-timeline/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-timeline/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-timeline/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-timeline/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-timeline/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-timeline/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-timeline/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-timeline/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-timeline/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-timeline/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-timeline/references/commands.json": "fc3d72e95838d3ab105aef4aca54b82bd853fb68cd06a20e587ad36862998853",
+    "skills/filmcraft-cli-timeline/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-timeline/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-timeline/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-timeline/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-timeline/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-timeline/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-timeline/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-timeline/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-timeline/references/scenario.md": "8f2cd940dea94a3c57c8da8f5b4bf06ee13a5c43b6a9d3e6bf1aeaf7f982403b",
+    "skills/filmcraft-cli-timeline/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-timeline/references/task-scene.md": "b3514492671e95974ef9cc535dec5e8e6896dd2a2aa318ce4b1331a83801b745",
+    "skills/filmcraft-cli-timeline/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-timeline/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-timeline/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-timeline/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-timeline/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-timeline/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-timeline/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-timeline/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-timeline/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-timeline/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-timeline/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-timeline/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-timeline/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-timeline/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-timeline/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-timeline/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-timeline/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-timeline/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-timeline/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli-transcript/SKILL.md": "4e06625ec12e0e63504dacc7d95a530cbb0e486b5ace385cdc33d41603661bcb",
+    "skills/filmcraft-cli-transcript/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli-transcript/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli-transcript/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli-transcript/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-transcript/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli-transcript/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli-transcript/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli-transcript/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli-transcript/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli-transcript/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli-transcript/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli-transcript/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli-transcript/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli-transcript/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli-transcript/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli-transcript/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli-transcript/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli-transcript/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli-transcript/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli-transcript/references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "skills/filmcraft-cli-transcript/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli-transcript/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli-transcript/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli-transcript/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli-transcript/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli-transcript/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli-transcript/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli-transcript/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli-transcript/references/scenario.md": "99d635b2799ccfd2e8afc05ed136fb6f545828975895f0b9f4a77496f30a8bb2",
+    "skills/filmcraft-cli-transcript/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli-transcript/references/task-scene.md": "c8ba36431d3567192252d6a3d4026a8b3f78654a35e6f5aafa17f6de39f1d386",
+    "skills/filmcraft-cli-transcript/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli-transcript/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli-transcript/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli-transcript/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli-transcript/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli-transcript/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli-transcript/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli-transcript/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli-transcript/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli-transcript/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli-transcript/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli-transcript/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli-transcript/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli-transcript/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli-transcript/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli-transcript/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli-transcript/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli-transcript/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli-transcript/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-cli/SKILL.md": "55224f43e31f66a579b8235080c11a003fdf9d50dd66f94121b5111651bc0e32",
+    "skills/filmcraft-cli/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-cli/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-cli/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-cli/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-cli/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-cli/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-cli/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-cli/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-cli/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-cli/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-cli/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-cli/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-cli/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-cli/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-cli/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-cli/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-cli/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-cli/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-cli/references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "skills/filmcraft-cli/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-cli/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-cli/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-cli/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-cli/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-cli/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-cli/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-cli/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-cli/references/scenario.md": "c19dec3beb8e1e1c0d083ce29992cad7df7b939018f8be16cf84f9efc763ce20",
+    "skills/filmcraft-cli/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-cli/references/task-scene.md": "a0225d85e11e1e9a6ad251af4b8b756355ed53a01b7232194d0445c052d913c9",
+    "skills/filmcraft-cli/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-cli/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-cli/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-cli/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-cli/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-cli/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-cli/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-cli/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-cli/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-cli/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-cli/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-cli/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-cli/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-cli/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-cli/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-cli/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-cli/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-cli/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-cli/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "skills/filmcraft-use/SKILL.md": "d99581114f6fd977e318b0a33fe4e90d851caf4c95296cf524f296045bdc0c98",
+    "skills/filmcraft-use/examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "skills/filmcraft-use/examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "skills/filmcraft-use/examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "skills/filmcraft-use/examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-use/examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "skills/filmcraft-use/examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "skills/filmcraft-use/examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "skills/filmcraft-use/examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "skills/filmcraft-use/examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "skills/filmcraft-use/examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "skills/filmcraft-use/examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "skills/filmcraft-use/examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "skills/filmcraft-use/examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "skills/filmcraft-use/examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "skills/filmcraft-use/references/business-scenes.md": "93838bcabe0b58b748a1b11daeeb9262393425b7c557c5f049db496df48e8d92",
+    "skills/filmcraft-use/references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "skills/filmcraft-use/references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "skills/filmcraft-use/references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "skills/filmcraft-use/references/command-usage.md": "5ab521dd403d95294eb2d3409228c9b050355bb8b2500edac4e2899de46dc8dd",
+    "skills/filmcraft-use/references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "skills/filmcraft-use/references/desktop-install.md": "db2db151b0eff30a3381a03ae377fb23ac09b2b4a919859740bd9343e7f14887",
+    "skills/filmcraft-use/references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "skills/filmcraft-use/references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "skills/filmcraft-use/references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "skills/filmcraft-use/references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "skills/filmcraft-use/references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "skills/filmcraft-use/references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "skills/filmcraft-use/references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "skills/filmcraft-use/references/segmented-assets.md": "24a7a3e1813bb99b45b690577a348f364f056c5360c4ccc105fc816ceb7a2a83",
+    "skills/filmcraft-use/references/task-scene.md": "27acaa880936e82c593698daa23312c5f819452b23a8f46c34d7cde167f009ef",
+    "skills/filmcraft-use/references/transcript-scene.md": "e503b3cb5c7a6c4d927831be0c99032214160f9343e2fe2cf07c19b8f72a028c",
+    "skills/filmcraft-use/references/workflow.md": "727f21b1f4209b49d1a6f1cc8efce65f4f928fb9702f45487c947b700dcc525e",
+    "skills/filmcraft-use/scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "skills/filmcraft-use/scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "skills/filmcraft-use/scripts/cli.py": "840c0b4dd54c074ff65be8fd98444917cc2d8af81b2bb3784794bd26512d38f6",
+    "skills/filmcraft-use/scripts/commands.py": "36e05d2f6f4f3962c80a346eeb315584e7cba38bd417ac0441abacb5373edefd",
+    "skills/filmcraft-use/scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "skills/filmcraft-use/scripts/desktop.py": "24dddb82f1c51ca8e835c582d9b7228aa9d643dfcada11b570bde9191f002f0f",
+    "skills/filmcraft-use/scripts/desktop_session.py": "fec0f989fada6a6d762052fca3a020d3709a7b1108b1018f31765dd20fc3fed2",
+    "skills/filmcraft-use/scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "skills/filmcraft-use/scripts/execution_permissions.py": "aa2df171fa3c8d35f275ad5025025c028836c32025e2044fb210825239f5433f",
+    "skills/filmcraft-use/scripts/mcp_session.py": "b9ad5216231617435335a4aeaf41cd0e24cf20148691987f465262e08d2cf415",
+    "skills/filmcraft-use/scripts/native_workflow.py": "2651af9ff2d70d0834c8e1458ef284b3e85baf6b5a709ff830b16fe2aaf885a6",
+    "skills/filmcraft-use/scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "skills/filmcraft-use/scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "skills/filmcraft-use/scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "skills/filmcraft-use/scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "skills/filmcraft-use/scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "skills/filmcraft-use/scripts/workflow.py": "0cd49dfd440d5c5150630f047eb728bb4a77ec0e7c5cfba4c7a82fa01d9ce609",
+    "tests/fixtures/protocol_proxy.py": "e7ae95ae6a5a6eb11bbb90c1808bbe8d102bc06911337b9e0f31e5cb5929677f",
+    "tests/fixtures/workflow_protocol_injection.py": "adad2cbf4d75c06e2288f61858ef5f9c8a7d603f8688c315cc4361bb214a133c",
+    "tests/test_advanced_desktop_first_use.py": "7955e93e94a000be884ee1e31d9d3eae1f20151d5ce45e00a40c1b5c1999948f",
+    "tests/test_audio_downframe_first_use.py": "3b1cff0f69d8a37b51b7bccd216cbf1d2f7d5b1e463c4175585cd1547e1d8849",
+    "tests/test_audio_gain_first_use.py": "6bd06ba44b83a4f68743cc73d7808689e25d8066fde8f2d49ecd05dd705a0abe",
+    "tests/test_audio_subframe_first_use.py": "a511b671d6adc7f45dc0bbe5d76478a7b708ea30adc504f114cf312dae32db3f",
+    "tests/test_bootstrap.py": "08e6268c9dfa20a6436296207533cda2a1b6df018757a85d591dd99736b26fb1",
+    "tests/test_capabilities.py": "c2725283ff0631fb444d1950682e399cb2edfc8cacc6687b3eff83631f901b5f",
+    "tests/test_capability_evidence.py": "e34e71af14847fa01c8291a5f0945e170890b5b48529dadffcc7a313668e50dd",
+    "tests/test_caption_readability_first_use.py": "0476f832ee0f6fac5b2774a3be0c3dcceb22377b9a4e39c54454e30fe2813ab1",
+    "tests/test_catalog_identity.py": "db3bb15f237a2818267ef3178fc34b24d7cb2614154075ecf8227fd51bd0aefe",
+    "tests/test_chinese_first_use.py": "b624fa3da6174d5214fc71cf668e3c43a824196c973fe580ddf546d074441249",
+    "tests/test_command_plan_json.py": "363b4858141b7bb84e1880868200cc3a8debf48f5c4b800880cc3956a56e125b",
+    "tests/test_commands.py": "767a5fce3c15943bf2f57c12bc88795bc43267926db0f8571914e13c3448cc25",
+    "tests/test_desktop_install.py": "fa6dc6c085f2901db548e2cf96ff6e2effe17d841513616ed63c9469169926b7",
+    "tests/test_desktop_session.py": "beb9b4682b7f8e1319d962c7757a3e97974326c8983521e54e5e9306407f676e",
+    "tests/test_effect_segment_handoff.py": "406452b9ae47a97c42aff37d6fea82f7df4e88fa7ccd46f9ae7ebe2ca211c72d",
+    "tests/test_effect_sequence_handoff.py": "7d341cdcffb6d0066f788423fe9b24b84baec77079e3059a8374e76393261272",
+    "tests/test_exchange_loss.py": "ed966dfd4fb5019f208e214f885f173db0fee6172f30001481c491e0423e0261",
+    "tests/test_execution_context.py": "dd776e3fad2eb0e01097e15eccf74cbe031af761bf67b6c2dbf7048d4b775a46",
+    "tests/test_execution_permissions.py": "35815a1e906b45cf1ae02a7aebcf274302a7ab0dccceafcb3678f0364ef79d53",
+    "tests/test_first_use.py": "2bda13d2a2eeae689eb80f461560606236937de49ab0c742111b44ea05c429dc",
+    "tests/test_installed_paths.py": "5b5385c1954f18e8c85823ca691f81995e7cf694575fc896ea0bb46497d1c766",
+    "tests/test_intent_routing.py": "a5a1ca82583d4bde877fe2e699b88843e6592e2f5325b12a7bb6641c55fee1e7",
+    "tests/test_mcp_protocol_faults.py": "dc061c627b96280fe2899375a28f4ce8fbcd91b73d4419f0cd3e311dee3878fe",
+    "tests/test_missing_audio_first_use.py": "74cce7c678567efd34741c162ea9afa3b19ed682ff869ed1b3b11aaffba4696a",
+    "tests/test_motion_lut_first_use.py": "f738baaa4e98df088206e1ca751fd1f59cdecbe5f6a13c28b1172a48766f610c",
+    "tests/test_motion_lut_workflow.py": "a1c74718cc74fb05461ee9da1933b32b0ad13398ab986f94b7b059698bf4f8c0",
+    "tests/test_multicam_skill.py": "3e88c04a8b0f967588c2069d12addc1926d25bd91658df04c05b56e78710633d",
+    "tests/test_multitrack_audio_first_use.py": "41cd7ed443f10e0a729a2ef438dbfaee19b5fe873f736dc9ec3c9d5c419b9a23",
+    "tests/test_native_asr_first_use.py": "9333127b5c52d4d17ab48b184347ebebfe27fbdb97f8eb466a4d29159114c59b",
+    "tests/test_native_capabilities.py": "818e42b9dd7bf3fc27bc2c4c9042e132f3ddf62fa86d315a4e41518653d33272",
+    "tests/test_native_command_revision.py": "547b6ce97e8b2453770b3ccd7a007c4b707e942eb77cb644be4ea19de4634300",
+    "tests/test_native_commands.py": "f46cb9b1a06edbdbd641c5aeeede50cfe152a483b4245f98042c39e98f75490b",
+    "tests/test_native_entry_parity.py": "50613664eb728f82d6feb7ae51a21102a20b0fd791609226086292e2f40a3c7a",
+    "tests/test_native_preserved_stage.py": "774768c05c4df20c950f518cab95cabbdd42bd533e267bc1e09838dfde02cb6e",
+    "tests/test_native_protocol_faults.py": "2fa5ea4d65e8c240b0fb85a21fc8bf1ae3ce08aa93107b0fbf746f96c0cf008c",
+    "tests/test_native_tick_validation.py": "d4d684c8167134eef2ed7c42e919e2c863482fc13ce454cb4ccced35ad86e3e8",
+    "tests/test_native_workflow.py": "303352765dd534680f443831a68d7af192860ce9c15db6bb713a523866c69149",
+    "tests/test_native_workflow_first_use.py": "23cf7a7653b6f1899f163882daf3e93335ca8e9217c872dc48ab64633fb4d604",
+    "tests/test_native_workflow_gateway.py": "52bcbeefba720a780b29b12dcd818d7c110fb4bb443494096e63309f3e0c5dff",
+    "tests/test_output_execution_guard.py": "ef85daac6b21128cdcd8c055c11425dbfb8a4caea51c97cc334d78b291d4dcd0",
+    "tests/test_plan_field_boundary.py": "845114eaad8a063492a32ca0dd2a5742c8dea7063ea7b25de282bb54ab7d6c6d",
+    "tests/test_preserved_stage.py": "49ead9225a8b5f6a24b1e83f8f6c974e3e83a27438d46636f43a28e6f8341093",
+    "tests/test_release_checks.py": "fc076565f8752304e7cc27c40fd6baf1d4847723aa94ebe6f51125f2a8f3e6bd",
+    "tests/test_rgba_filters.py": "689497eef7963ba36c6518037c40cfbe7e43bdc7cd3b29bbdcd7a8a7b5b87ee2",
+    "tests/test_runtime_builder.py": "e0d19942fbcec40008bd7e16bd71bd7d786378f194bcc7dcdb7b5a4b7c96dbc4",
+    "tests/test_scenario_catalog.py": "0091be72531bc4acd06b21ecd1bdd140831a28e2d68808f48ce60ff52adc6618",
+    "tests/test_segmented_assets.py": "1d6ca3e04284bd948064e1ff23ee3c044b9cdf983a0b10a2d5af9875ae8c06b3",
+    "tests/test_sequence_assets.py": "cb0c040186de6f165af65bdec05072768be7adb727c0c9d1104b7c14f8cf57cf",
+    "tests/test_sequence_native_candidate.py": "cc7c5ca43ec460e01e42587fc554b54ae6ac8282145e033af61060d0c1545236",
+    "tests/test_sequence_workflow.py": "47bf63d6f7bfeb56274960df9d4ada6af1e9311985bffe48f0a30e33a56babce",
+    "tests/test_setup_diagnostics.py": "22e4ca3c9ce1eb08472b68dd1bbe4df74aa0838697225eebbb539743fc7a088d",
+    "tests/test_skill_suite.py": "cae8a08e3cebaee96b2f761f6ba7a84651d22a62f60d11c620fd772f3d6d4ab8",
+    "tests/test_task_skill_first_use.py": "0f8d03166812fabaf5f0b1bb53056025d7d07f6ef7c6c2029e47dea0a1390413",
+    "tests/test_timeline_bounds.py": "a81467f466f28aa799bfbd4d5992e4fc11ddfbf5a6ec83f91af536b8e98136a0",
+    "tests/test_timeline_temporal_first_use.py": "1ea9ff5b818cfbb286b5cd8cc319166861eea5cac203492b15fb5f142898bf2c",
+    "tests/test_transcript_skill.py": "5b21fd999bb34e0599b30c519696058437811b309a9826ddcf757987eb9371fe",
+    "tests/test_workflow.py": "3600d6923b330380a5cb219122a7a71f439b458f61bb45326f34f0c6ff2b5abe",
+    "tests/test_workflow_data_directory.py": "56d7365a049b721a44ba522cfbf098b8d492cce15b7544640329dfd620980f63",
+    "tests/test_workflow_parameter_fields.py": "8f101023388c4bdd1242152f62201597d125e7c6043c1d09ecaf143c4602549c",
+    "tests/test_workflow_tool_reply.py": "e7e42e60ee526a1cf5661779cedb39cbd3f8ef6506b09d40502af0788594a315"
+  },
+  "tests": [
+    {
+      "id": "test_advanced_desktop_first_use.AdvancedDesktopFirstUse.test_owned_gui_advanced_plan_persists_objects_and_renders",
+      "status": "NOT_RUN",
+      "reason": "native advanced desktop is opt-in"
+    },
+    {
+      "id": "test_audio_downframe_first_use.AudioDownframeFirstUseTests.test_gain_revision_attenuates_decoded_audio_and_preserves_source",
+      "status": "NOT_RUN",
+      "reason": "requires public runtime and existing ffmpeg"
+    },
+    {
+      "id": "test_audio_gain_first_use.AudioGainFirstUseTests.test_gain_revision_attenuates_decoded_audio_and_preserves_source",
+      "status": "NOT_RUN",
+      "reason": "requires public runtime and existing ffmpeg"
+    },
+    {
+      "id": "test_audio_subframe_first_use.AudioSubframeFirstUseTests.test_gain_revision_attenuates_decoded_audio_and_preserves_source",
+      "status": "NOT_RUN",
+      "reason": "requires public runtime and existing ffmpeg"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_busy_installer_timeout_preserves_existing_install",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_busy_installer_waits_for_other_process_and_reuses_verified_install",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_clean_install_and_reuse_without_network",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_corrupt_download_never_runs",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_distinct_patched_runtime_version_keeps_original_installation",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_malformed_receipt_is_refused_without_native_execution",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_native_download_retry_bound_and_nonnetwork_errors",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_pinned_build_metadata_is_accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_provenance_is_checked_before_execution_and_retained",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_receipt_evidence_description_is_not_runtime_identity",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_receipt_identity_drift_refuses_reuse_and_preserves_files",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_release_url_allows_only_named_upstream_or_maintained_runtime",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_short_download_retries_but_size_limit_is_final",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_ssl_eof_download_retries_and_discards_partial_bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_symlink_archive_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_tampered_installed_binary_is_not_overwritten",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_temporary_wrapped_network_and_http_errors_still_retry",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_traversal_rejected_before_extract",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_two_processes_first_install_once_and_share_verified_result",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_unknown_platform_fails_without_download",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_wrapped_permission_and_disk_errors_are_not_network_retries",
+      "status": "PASS"
+    },
+    {
+      "id": "test_bootstrap.BootstrapTests.test_wrong_provenance_never_executes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_absent_parameter_documentation_is_unknown_and_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_bridge_requires_actual_desktop_identity_and_compatible_parameters",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_known_parameters_are_verbatim_docs_not_invented_json_schema",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_malformed_probe_is_unknown_not_available",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_missing_command_is_not_enabled_or_available",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_missing_or_unknown_required_resources_block",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_native_resource_queries_are_readonly_and_bound_to_probe_digest",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_resource_requirements_cannot_assert_their_own_success",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_runtime_mode_platform_version_and_digest_are_bound",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.CapabilityTests.test_same_ids_with_different_parameter_types_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.PublicCapabilityGateTests.test_invalid_capability_requirement_fails_before_install_or_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capabilities.PublicCapabilityGateTests.test_native_workflow_rejects_parameter_drift_before_edit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_conflicting_native_resource_rows_are_unknown",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_failed_stage_preserves_snapshot_and_resource_check_hashes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_inferred_missing_font_is_recorded_as_blocked_without_edit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_late_parameter_drift_retains_prior_success_and_blocked_attempt",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_model_is_reprobed_after_explicit_install",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_partial_desktop_metadata_stays_unknown",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_resource_query_uses_current_contract_not_cached_catalog",
+      "status": "PASS"
+    },
+    {
+      "id": "test_capability_evidence.CapabilityEvidenceTests.test_workflow_checks_contract_again_before_first_edit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_caption_readability_first_use.CaptionReadabilityFirstUseTests.test_single_subtitle_skill_template_exports_readable_caption",
+      "status": "NOT_RUN",
+      "reason": "requires public native download, declared shot and Pillow"
+    },
+    {
+      "id": "test_catalog_identity.CatalogIdentityTests.test_ambiguous_or_malformed_rows_are_rejected_before_generation",
+      "status": "PASS"
+    },
+    {
+      "id": "test_catalog_identity.CatalogIdentityTests.test_capture_uses_actual_rows_and_lock_provenance_without_execution_claims",
+      "status": "PASS"
+    },
+    {
+      "id": "test_catalog_identity.CatalogIdentityTests.test_current_reference_binds_the_captured_binary_not_an_older_runtime",
+      "status": "PASS"
+    },
+    {
+      "id": "test_catalog_identity.CatalogIdentityTests.test_each_standalone_reference_retains_its_inventory_with_current_parameters",
+      "status": "PASS"
+    },
+    {
+      "id": "test_catalog_identity.CatalogIdentityTests.test_generation_rejects_same_identity_with_changed_parameters_or_inventory",
+      "status": "PASS"
+    },
+    {
+      "id": "test_catalog_identity.CatalogIdentityTests.test_unverified_identity_or_execution_mode_cannot_be_relabelled",
+      "status": "PASS"
+    },
+    {
+      "id": "test_chinese_first_use.ChineseFirstUseTests.test_isolated_skill_installs_renders_chinese_and_preserves_spoken_audio",
+      "status": "NOT_RUN",
+      "reason": "requires declared macOS voice, ffmpeg/ffprobe and Pillow"
+    },
+    {
+      "id": "test_chinese_first_use.ChineseTemplateContractTests.test_subtitle_skill_has_own_chinese_template",
+      "status": "PASS"
+    },
+    {
+      "id": "test_command_plan_json.CommandPlanJsonTests.test_duplicate_keys_are_rejected_by_isolated_public_check",
+      "status": "PASS"
+    },
+    {
+      "id": "test_command_plan_json.CommandPlanJsonTests.test_each_standalone_skill_rejects_duplicate_keys_before_install",
+      "status": "PASS"
+    },
+    {
+      "id": "test_command_plan_json.CommandPlanJsonTests.test_valid_unique_plan_remains_checkable",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_disabled_command_stops_before_mutation_with_native_reason",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_embedded_expression_error_is_failure_even_without_mcp_iserror",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_every_reflected_command_has_exact_parameters_and_owner",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_forward_duplicate_and_nonfinite_values_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_invalid_tool_discovery_returns_unknown_receipt",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_later_unknown_command_fails_before_install_and_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_malformed_registry_after_edit_preserves_prior_step_and_stops",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_malformed_tool_replies_are_unknown_instead_of_unhandled_errors",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_missing_bridge_and_existing_output_refused_before_install",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_native_image_and_plaintext_reply_saved_without_base64_in_receipt",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_native_tools_use_actual_advertised_argument_names",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_nested_reference_keeps_native_integer_and_list_types",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_output_references_cannot_overwrite_receipts_or_traverse",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_timeout_stops_and_records_unknown_without_replay",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_unsafe_edit_result_preserves_unknown_attempt_without_replay",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_unsafe_inner_json_is_unknown_in_command_and_tool_replies",
+      "status": "PASS"
+    },
+    {
+      "id": "test_commands.CommandsTests.test_wrapped_registry_tool_cannot_bypass_command_preflight",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_install.DesktopInstallContract.test_bad_archive_does_not_create_install",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_install.DesktopInstallContract.test_every_skill_has_own_pinned_installer_and_guide",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_install.DesktopInstallContract.test_untrusted_url_and_platform_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_install.DesktopPublicFirstUse.test_independent_cold_install_reuse_and_mutation_rejection",
+      "status": "NOT_RUN",
+      "reason": "explicit public DMG install opt-in"
+    },
+    {
+      "id": "test_desktop_install.DesktopTransportRetryTests.test_tls_retries_are_bounded_and_other_failures_not_retried",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_install.DesktopTransportRetryTests.test_transient_tls_failure_retries_before_install_with_clean_download",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_session.DesktopPlanAndInterruptTests.test_duplicate_and_nonfinite_plan_json_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_session.DesktopPlanAndInterruptTests.test_interruption_preserves_completed_step_and_unknown_request",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_session.DesktopSessionTests.test_invalid_plan_does_not_create_output_or_install",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_session.DesktopSessionTests.test_owned_session_start_failure_terminates_only_its_process",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_session.DesktopSessionTests.test_unsupported_platform_has_no_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_desktop_session.OwnedDesktopPublicFirstUse.test_single_skill_empty_cache_install_launch_save_reopen_and_cleanup",
+      "status": "NOT_RUN",
+      "reason": "native desktop first use is opt-in"
+    },
+    {
+      "id": "test_desktop_session.ReservedDesktopOutputTests.test_desktop_metadata_cannot_be_named_as_deliverable",
+      "status": "PASS"
+    },
+    {
+      "id": "test_effect_segment_handoff.EffectFilmSegmentTests.test_segmented_animation_handoff_and_moved_film_text_revision",
+      "status": "NOT_RUN",
+      "reason": "requires two domain skills, public runtime downloads, Pillow and ffmpeg"
+    },
+    {
+      "id": "test_effect_sequence_handoff.EffectFilmSequenceTests.test_actual_animation_handoff_and_moved_film_text_revision",
+      "status": "NOT_RUN",
+      "reason": "requires two domain skills, public runtime downloads, Pillow and ffmpeg"
+    },
+    {
+      "id": "test_exchange_loss.ExchangeLossTests.test_missing_native_and_escaping_export_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_exchange_loss.ExchangeLossTests.test_report_binds_native_and_exports_and_never_claims_unknown_fidelity",
+      "status": "PASS"
+    },
+    {
+      "id": "test_exchange_loss.ExchangeLossTests.test_svg_font_and_effect_fidelity_remain_explicitly_unknown",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_context.ExecutionContextTests.test_context_is_preserved_without_rewriting_plan_identity",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_context.ExecutionContextTests.test_invalid_context_fails_before_install_or_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_context.ExecutionContextTests.test_invalid_or_ambiguous_context_is_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_context.ExecutionContextTests.test_legacy_call_does_not_invent_context",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_permissions.ExecutionPermissionsTests.test_actual_child_read_write_and_environment_boundaries",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_permissions.ExecutionPermissionsTests.test_actual_mcp_session_does_not_inherit_host_secret_or_injection",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_permissions.ExecutionPermissionsTests.test_minimal_environment_excludes_host_keys_proxies_and_interpreter_injection",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_permissions.ExecutionPermissionsTests.test_parent_link_replacement_does_not_reauthorize_an_outside_root",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_permissions.ExecutionPermissionsTests.test_policy_identity_canonicalizes_roots_but_rejects_symlink_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_permissions.ExecutionPermissionsTests.test_unknown_policy_fields_and_broad_roots_fail_without_echo",
+      "status": "PASS"
+    },
+    {
+      "id": "test_execution_permissions.ExecutionPermissionsTests.test_unsupported_platform_refuses_instead_of_unisolated_fallback",
+      "status": "PASS"
+    },
+    {
+      "id": "test_first_use.FirstUseTests.test_isolated_skill_install_save_reopen_and_reuse",
+      "status": "NOT_RUN",
+      "reason": "set CRAFT_LIVE_TEST=1 for real official download and native roundtrip"
+    },
+    {
+      "id": "test_installed_paths.InstalledPathTests.test_documented_script_paths_run_in_installation_layouts",
+      "status": "PASS"
+    },
+    {
+      "id": "test_installed_paths.InstalledPathTests.test_examples_use_loaded_skill_directory",
+      "status": "PASS"
+    },
+    {
+      "id": "test_intent_routing.IntentRoutingTests.test_corpus_covers_all_skills_with_positive_and_negative_intents",
+      "status": "PASS"
+    },
+    {
+      "id": "test_intent_routing.IntentRoutingTests.test_each_skill_has_a_task_specific_local_playbook",
+      "status": "PASS"
+    },
+    {
+      "id": "test_intent_routing.IntentRoutingTests.test_generic_cli_does_not_claim_primary_multicam_intent",
+      "status": "PASS"
+    },
+    {
+      "id": "test_intent_routing.IntentRoutingTests.test_unrelated_skills_do_not_load_multicam_tail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_mcp_protocol_faults.McpProtocolFaultTests.test_closed_pipe_is_unknown_without_attempting_a_replacement_process",
+      "status": "PASS"
+    },
+    {
+      "id": "test_mcp_protocol_faults.McpProtocolFaultTests.test_invalid_responses_are_unknown_after_exactly_one_request",
+      "status": "PASS"
+    },
+    {
+      "id": "test_mcp_protocol_faults.McpProtocolFaultTests.test_valid_matching_response_remains_usable",
+      "status": "PASS"
+    },
+    {
+      "id": "test_missing_audio_first_use.MissingAudioFirstUseTests.test_required_audio_failure_preserves_movie_project_and_input",
+      "status": "NOT_RUN",
+      "reason": "requires public runtime and ffmpeg"
+    },
+    {
+      "id": "test_motion_lut_first_use.MotionLutFirstUseTests.test_motion_lut_relocation_revision_and_source_preservation",
+      "status": "NOT_RUN",
+      "reason": "requires public runtime and existing ffmpeg/Pillow"
+    },
+    {
+      "id": "test_motion_lut_workflow.MotionLutTests.test_lut_must_be_registered_and_cannot_be_imported_as_media",
+      "status": "PASS"
+    },
+    {
+      "id": "test_motion_lut_workflow.MotionLutTests.test_motion_requires_explicit_target_and_finite_values",
+      "status": "PASS"
+    },
+    {
+      "id": "test_motion_lut_workflow.MotionLutTests.test_toggle_is_explicit_and_does_not_accept_value",
+      "status": "PASS"
+    },
+    {
+      "id": "test_multicam_skill.MulticamSkillTests.test_multicam_commands_have_independent_scenario_owner",
+      "status": "PASS"
+    },
+    {
+      "id": "test_multitrack_audio_first_use.MultitrackAudioFirstUseTests.test_music_gain_preserves_voice_original_audio_and_native_project",
+      "status": "NOT_RUN",
+      "reason": "requires public native runtime and ffmpeg"
+    },
+    {
+      "id": "test_native_asr_first_use.NativeAsrFirstUseTests.test_single_skill_downloads_recognizes_reopens_and_exports_captions",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, spoken fixture, pinned model download and retained output"
+    },
+    {
+      "id": "test_native_capabilities.NativeCapabilitiesTests.test_isolated_native_snapshot_reopen_and_dependency_blocks",
+      "status": "NOT_RUN",
+      "reason": "explicit native opt-in"
+    },
+    {
+      "id": "test_native_command_revision.NativeCommandRevisionTests.test_targeted_revision_survives_reopen_without_changing_other_objects",
+      "status": "NOT_RUN",
+      "reason": "explicit native opt-in"
+    },
+    {
+      "id": "test_native_commands.NativeCommandsTests.test_advanced_plan_saved_reopened_from_one_skill",
+      "status": "NOT_RUN",
+      "reason": "explicit native opt-in"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_both_entries_reject_invalid_literal_ticks",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_entire_referenced_transcript_is_checked_after_resolution",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_exact_large_and_boundary_integers_remain_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_literal_failure_precedes_install_and_output_writes_in_each_skill",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_nested_word_ticks_share_the_same_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_reference_is_allowed_in_plan_and_rechecked_before_native_request",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_resolved_parameter_container_cannot_bypass_preflight",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_entry_parity.NativeEntryParityTests.test_wrong_plan_entry_reports_the_correct_runner",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_preserved_stage.NativePreservedStageTests.test_post_save_protocol_fault_preserves_original_stage_and_blocks_replay",
+      "status": "NOT_RUN",
+      "reason": "requires explicitly verified native runtime installation"
+    },
+    {
+      "id": "test_native_protocol_faults.NativeProtocolFaultTests.test_native_save_happens_once_unknown_reply_preserves_reopenable_project",
+      "status": "NOT_RUN",
+      "reason": "explicit public native fault-injection opt-in"
+    },
+    {
+      "id": "test_native_tick_validation.NativeTickValidationTests.test_exact_large_integer_is_preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_tick_validation.NativeTickValidationTests.test_imported_word_reference_ticks_are_rechecked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_tick_validation.NativeTickValidationTests.test_imported_word_ticks_are_checked_in_nested_transcript",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_tick_validation.NativeTickValidationTests.test_invalid_literal_ticks_are_rejected_before_execution",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_tick_validation.NativeTickValidationTests.test_resolved_reference_is_rechecked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_workflow.NativeWorkflowTests.test_editable_short_film_relocation_and_one_shot_revision",
+      "status": "NOT_RUN",
+      "reason": "requires real runtime, ffmpeg, ffprobe, Pillow"
+    },
+    {
+      "id": "test_native_workflow_first_use.NativeFirstUse.test_public_delivery_and_revision",
+      "status": "NOT_RUN",
+      "reason": "explicit native opt-in"
+    },
+    {
+      "id": "test_native_workflow_gateway.NativeWorkflowTests.test_complete_fixed_catalog_validation",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_workflow_gateway.NativeWorkflowTests.test_disabled_and_unknown_preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "test_native_workflow_gateway.NativeWorkflowTests.test_live_context_and_semantic_reply",
+      "status": "PASS"
+    },
+    {
+      "id": "test_output_execution_guard.OutputGuardTests.test_completed_owner_is_recorded_and_different_targets_are_independent",
+      "status": "PASS"
+    },
+    {
+      "id": "test_output_execution_guard.OutputGuardTests.test_exception_preserves_unknown_identity",
+      "status": "PASS"
+    },
+    {
+      "id": "test_output_execution_guard.OutputGuardTests.test_existing_output_is_not_claimed_or_modified",
+      "status": "PASS"
+    },
+    {
+      "id": "test_output_execution_guard.OutputGuardTests.test_invalid_existing_registration_is_preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "test_output_execution_guard.OutputGuardTests.test_live_owner_conflicts_and_killed_owner_requires_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "id": "test_output_execution_guard.OutputGuardTests.test_public_workflow_claims_target_before_starting_native_session",
+      "status": "PASS"
+    },
+    {
+      "id": "test_output_execution_guard.OutputGuardTests.test_registration_symlink_cannot_overwrite_user_file",
+      "status": "PASS"
+    },
+    {
+      "id": "test_plan_field_boundary.PlanFieldBoundaryTests.test_command_plan_keeps_its_existing_entry_hint",
+      "status": "PASS"
+    },
+    {
+      "id": "test_plan_field_boundary.PlanFieldBoundaryTests.test_documented_workflow_fields_keep_existing_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "test_plan_field_boundary.PlanFieldBoundaryTests.test_public_entry_returns_safe_refusal_and_preserves_existing_files",
+      "status": "PASS"
+    },
+    {
+      "id": "test_plan_field_boundary.PlanFieldBoundaryTests.test_unknown_operation_fields_refuse_without_echoing_field_or_value",
+      "status": "PASS"
+    },
+    {
+      "id": "test_plan_field_boundary.PlanFieldBoundaryTests.test_unknown_root_fields_refuse_before_any_asset_or_runtime_read",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_competing_output_is_never_overwritten",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_diagnostic_failure_never_masks_original_or_deletes_stage",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_external_symlink_is_not_followed",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_owned_partial_output_gets_recovery_record",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_replaced_owned_output_is_not_overwritten",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_success_cleans_only_stage",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_successful_stage_rename_retains_delivery",
+      "status": "PASS"
+    },
+    {
+      "id": "test_preserved_stage.PreservedStageTests.test_unknown_error_keeps_original_paths_and_successful_operations",
+      "status": "PASS"
+    },
+    {
+      "id": "test_release_checks.ReleaseChecksTests.test_failed_subtests_have_explicit_parent_failure_and_separate_event_count",
+      "status": "PASS"
+    },
+    {
+      "id": "test_release_checks.ReleaseChecksTests.test_required_skip_unknown_skip_or_missing_test_cannot_pass",
+      "status": "PASS"
+    },
+    {
+      "id": "test_release_checks.ReleaseChecksTests.test_required_workflow_is_unconditional",
+      "status": "PASS"
+    },
+    {
+      "id": "test_release_checks.ReleaseChecksTests.test_sibling_skill_link_is_refused_even_when_it_exists",
+      "status": "PASS"
+    },
+    {
+      "id": "test_rgba_filters.RgbaFilterTests.test_all_filters_with_wraparound_and_cross_row_dependencies",
+      "status": "PASS"
+    },
+    {
+      "id": "test_rgba_filters.RgbaFilterTests.test_repeated_zero_residual_rows_keep_pixels",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_audio_builder_isolated_python_entrypoint",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_audio_patch_checksum_rejected_before_native_tools",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_existing_output_is_preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_pcm_builder_isolated_entrypoint_and_cumulative_regression",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_sequence_patch_checksum_rejected_before_native_tools",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_tampered_patch_is_refused_before_git_or_cargo",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_unknown_or_option_like_features_are_refused_before_build",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_unsupported_platform_is_refused_before_source_export",
+      "status": "PASS"
+    },
+    {
+      "id": "test_runtime_builder.RuntimeBuilderTests.test_whisper_build_preserves_old_defaults_and_enables_real_feature",
+      "status": "PASS"
+    },
+    {
+      "id": "test_scenario_catalog.ScenarioCatalogTests.test_each_reflected_command_has_exactly_one_local_usage_entry",
+      "status": "PASS"
+    },
+    {
+      "id": "test_scenario_catalog.ScenarioCatalogTests.test_regeneration_is_current_and_read_only",
+      "status": "PASS"
+    },
+    {
+      "id": "test_segmented_assets.SegmentedAssetTests.test_bad_frame_symlink_and_unverified_checkpoint_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_segmented_assets.SegmentedAssetTests.test_copy_segments_normalizes_global_frames_and_preserves_source",
+      "status": "PASS"
+    },
+    {
+      "id": "test_segmented_assets.SegmentedAssetTests.test_gap_overlap_wrong_rational_and_child_digest_rejected_before_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_segmented_assets.SegmentedAssetTests.test_malformed_binding_shapes_return_domain_error_without_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_sequence_assets.SequenceAssetTests.test_budget_and_noninteger_timebase_rejected_without_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_sequence_assets.SequenceAssetTests.test_manifest_digest_and_duplicate_fields_rejected_before_copy",
+      "status": "PASS"
+    },
+    {
+      "id": "test_sequence_assets.SequenceAssetTests.test_missing_extra_symlink_and_digest_conflict_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_sequence_assets.SequenceAssetTests.test_real_frames_and_rational_timebase_and_copy",
+      "status": "PASS"
+    },
+    {
+      "id": "test_sequence_assets.SequenceAssetTests.test_single_installed_skill_has_no_sibling_resource_dependency",
+      "status": "PASS"
+    },
+    {
+      "id": "test_sequence_assets.SequenceAssetTests.test_wrong_duration_rate_pixels_and_resource_budget_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_sequence_native_candidate.NativeSequenceCandidateTests.test_candidate_collects_animation_and_renders_after_source_is_unavailable",
+      "status": "NOT_RUN",
+      "reason": "requires current checksum-bound candidate archive and Pillow"
+    },
+    {
+      "id": "test_sequence_workflow.SequenceWorkflowTests.test_sequence_import_collection_and_moved_project_revision",
+      "status": "NOT_RUN",
+      "reason": "requires sequence runtime acceptance, Pillow and ffmpeg"
+    },
+    {
+      "id": "test_setup_diagnostics.SetupFailureTests.test_malformed_lock_shapes_return_json_before_runtime_changes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_setup_diagnostics.SetupFailureTests.test_malformed_other_platform_lock_precedes_unsupported_platform",
+      "status": "PASS"
+    },
+    {
+      "id": "test_setup_diagnostics.SetupFailureTests.test_missing_bootstrap_in_single_skill_preserves_original_failure",
+      "status": "PASS"
+    },
+    {
+      "id": "test_setup_diagnostics.SetupFailureTests.test_missing_lock_in_single_skill_returns_local_diagnostic",
+      "status": "PASS"
+    },
+    {
+      "id": "test_setup_diagnostics.SetupFailureTests.test_native_failure_is_not_reported_as_missing_dependency",
+      "status": "PASS"
+    },
+    {
+      "id": "test_setup_diagnostics.SetupFailureTests.test_public_bootstrap_failure_identifies_own_setup_without_retry",
+      "status": "PASS"
+    },
+    {
+      "id": "test_skill_suite.LiveSkillSuiteTests.test_every_single_skill_discovers_pinned_runtime_and_commands",
+      "status": "NOT_RUN",
+      "reason": "requires declared native CLI platform and live runtime"
+    },
+    {
+      "id": "test_skill_suite.SkillSuiteTests.test_suite_contains_separate_cli_setup_and_task_skills",
+      "status": "PASS"
+    },
+    {
+      "id": "test_skill_suite.SkillSuiteTests.test_unknown_command_is_refused_before_installation",
+      "status": "PASS"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_audio_gain_survives_reopen_and_changes_exported_samples",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_color_lut_survives_source_removal_and_empty_library",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_export_video_preview_and_interchange_keep_native_project",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_media_probes_imports_and_preserves_existing_timeline",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_motion_keyframes_survive_reopen_and_change_rendered_frames",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_multicam_switch_reopens_renders_other_camera_and_preserves_existing_tracks",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_project_creates_and_reopens_sequence_and_bin",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_subtitles_updates_text_without_changing_timing_and_exports_srt",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_timeline_razor_preserves_audio_and_duration",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_task_skill_first_use.TaskSkillFirstUseTests.test_transcript_import_reopens_and_generates_timed_captions",
+      "status": "NOT_RUN",
+      "reason": "requires macOS arm64, public archives, ffmpeg, ffprobe and Pillow"
+    },
+    {
+      "id": "test_timeline_bounds.TimelineBoundsTests.test_exact_trim_range_and_native_audio_padding_remain_distinct",
+      "status": "PASS"
+    },
+    {
+      "id": "test_timeline_bounds.TimelineBoundsTests.test_failed_stage_has_separate_safe_clip_diagnostic_without_protocol_expansion",
+      "status": "PASS"
+    },
+    {
+      "id": "test_timeline_bounds.TimelineBoundsTests.test_literal_invalid_trim_ticks_refuse_with_clip_identity",
+      "status": "PASS"
+    },
+    {
+      "id": "test_timeline_bounds.TimelineBoundsTests.test_literal_move_time_has_target_identity",
+      "status": "PASS"
+    },
+    {
+      "id": "test_timeline_bounds.TimelineBoundsTests.test_trim_in_uses_speed_and_refuses_non_integral_source_ticks",
+      "status": "PASS"
+    },
+    {
+      "id": "test_timeline_bounds.TimelineBoundsTests.test_valid_trim_and_move_and_deferred_reference_remain_accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "test_timeline_bounds.TimelineBoundsTests.test_zero_trim_keeps_existing_audio_frame_padding",
+      "status": "PASS"
+    },
+    {
+      "id": "test_timeline_temporal_first_use.TimelineTemporalFirstUseTests.test_trim_and_move_preserve_other_clip_audio_captions_and_source",
+      "status": "NOT_RUN",
+      "reason": "requires public native runtime and existing ffmpeg/ffprobe/Pillow"
+    },
+    {
+      "id": "test_transcript_skill.TranscriptSkillTests.test_transcript_commands_have_local_scene_resources",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_all_asset_issues_reported_without_installation_or_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_audio_tail_accepts_only_exact_native_frame_padding",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_duplicate_alias_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_export_flags_require_real_booleans",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_invalid_source_asset_fails_before_install_or_recovery_directory",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_public_workflow_reports_asset_list_before_runtime_creation",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_revision_output_preserves_existing_directory",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_short_audio_native_minimum_frame_and_invalid_speed",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_side_effect_command_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_source_and_new_asset_issues_keep_origin_without_local_paths",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_static_track_gain_is_supported_and_rejects_invalid_values",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_symlink_issues_are_aggregated_without_reading_target",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_ticks_are_decimal_strings",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_unresolved_reference_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow.WorkflowTests.test_visible_captions_are_burned_unless_explicitly_disabled",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_data_directory.WorkflowDataDirectoryTests.test_auxiliary_native_process_receives_same_directory",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_data_directory.WorkflowDataDirectoryTests.test_environment_directory_reaches_mcp_without_explicit_option",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_data_directory.WorkflowDataDirectoryTests.test_explicit_directory_overrides_environment_for_mcp",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_data_directory.WorkflowDataDirectoryTests.test_unconfigured_auxiliary_process_preserves_original_arguments",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_parameter_fields.WorkflowParameterFieldTests.test_documented_examples_and_creative_text_remain_accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_parameter_fields.WorkflowParameterFieldTests.test_domain_parameter_metadata_refused_before_asset_read",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_parameter_fields.WorkflowParameterFieldTests.test_each_domain_wrapper_has_a_closed_field_boundary",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_parameter_fields.WorkflowParameterFieldTests.test_nested_move_metadata_is_refused_without_echo",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_parameter_fields.WorkflowParameterFieldTests.test_public_entry_refuses_canary_without_install_or_output",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_tool_reply.WorkflowToolReplyTests.test_bad_tool_results_are_unknown_without_python_type_errors",
+      "status": "PASS"
+    },
+    {
+      "id": "test_workflow_tool_reply.WorkflowToolReplyTests.test_valid_semantic_error_remains_a_known_reply",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "tests": 248,
+    "pass": 212,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 36
+  }
+}

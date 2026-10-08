@@ -337,7 +337,8 @@ def export_settings(plan, caption_state):
 
 def run(cli, argv, cwd=None, data_dir=None):
     prefix = [cli] + (['--data-dir', str(data_dir)] if data_dir is not None else [])
-    result = subprocess.run(prefix + argv, capture_output=True, text=True, timeout=180, cwd=cwd)
+    result = subprocess.run(prefix + argv, capture_output=True, text=True, timeout=180, cwd=cwd,
+                            env=load_module('execution_permissions').child_environment())
     if result.returncode:
         raise RuntimeError('cli_failed: ' + result.stdout[-2000:] + result.stderr[-2000:])
     return result.stdout

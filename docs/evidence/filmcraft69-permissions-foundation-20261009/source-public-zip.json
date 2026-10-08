@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "scope": "public release ZIP exact immutable tag file bytes",
+  "tag": "v0.1.0-dev.52",
+  "commit": "4cab851c19bdaaf9c24911597139cf6b68e2610e",
+  "files": 1002,
+  "zipSha256": "fd0c6a3ad5b366fe6ad9b6eaea7ffb4d15ee777dad99c0f82136e4679e1aac4b"
+}

@@ -1,0 +1,15 @@
+{
+  "sourceTag": "v0.1.0-dev.52",
+  "commit": "4cab851c19bdaaf9c24911597139cf6b68e2610e",
+  "runs": [
+    {
+      "id": 37852201541,
+      "conclusion": "success"
+    },
+    {
+      "id": 37852188515,
+      "conclusion": "success"
+    }
+  ],
+  "scope": "source CI only"
+}

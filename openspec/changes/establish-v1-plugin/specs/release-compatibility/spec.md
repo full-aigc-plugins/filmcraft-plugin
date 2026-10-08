@@ -69,6 +69,19 @@
 - **AND** 原有静态增益、运动与 LUT 专项参数错误保持兼容；既有参数、结果引用和字幕中的创作文本仍按数据处理，不通过关键词过滤删除用户文本
 - **AND** native.command 的完整注册表参数、可信素材／输出根与宿主秘密引用仍须独立验收，不能由包装操作字段校验替代。
 
+#### Scenario: FC-RL-002-TRUSTED-ROOTS 可信授权根与原生进程隔离
+
+- **WHEN** 宿主提交领域工作流并提供独立可信的读取／写入根目录策略
+- **THEN** 读取素材、源交付和计划前 SHALL 验证其授权根，根目录身份进入执行授权主体；改变或扩大根目录需要新的精确宿主授权，计划或素材元数据不得授予目录权限
+- **AND** 原生子进程 SHALL 受到同一目录边界限制，不能借完整注册表命令读取根外素材或写入根外工程；平台不支持可靠隔离时明确拒绝，不降级为无隔离成功
+- **AND** 安装器和运行时／模型缓存的维护授权与原生编辑写入授权分离；原生编辑不得修改已锁定运行时或技能目录。
+
+#### Scenario: FC-RL-002-CHILD-ENV 执行进程不得继承宿主秘密
+
+- **WHEN** 宿主环境包含未提供给本地编辑任务的凭据、代理秘密或额外解释器注入变量
+- **THEN** 原生编辑及其辅助进程 SHALL 仅接收明确允许的运行环境，不继承宿主全部环境、秘密值或解释器注入项
+- **AND** 本地原生剪辑不要求云端密钥；有凭据需求的新能力须单独定义宿主秘密引用消费合同，不能通过计划中的字面密钥或额外环境字段绕过。
+
 ## Implementation evidence (non-normative)
 
 `docs/evidence/codex-current-release.json` binds current fixed releases to two actual Codex CLI/app-server versions, five enabled namespaced skills, installed public workflow outcomes and explicit exclusions. The corresponding bilingual Host-Verification-Architecture documents specify the repeatable check. RL-001 tasks remain unchecked until their full P0 prerequisites and scenarios pass.

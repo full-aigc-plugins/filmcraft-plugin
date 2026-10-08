@@ -1,0 +1,96 @@
+{
+  "schema": "filmcraft-revision-source-candidate/v1",
+  "result": "PASS",
+  "scope": "FC-QA-002 tasks9.25-9.27 source candidate; fixed public installation pending",
+  "pluginVersion": "0.1.0-dev.51",
+  "sourceRef": "v0.1.0-dev.42",
+  "sourceSha": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+  "sourceFilesSha256": {
+    "scripts/verify_fixed_resources.py": "8396fa07b9d627d4d07c07c24822c7c8ef2de90599a7116f147b46590c8288a4",
+    "scripts/verify_fixed_revision.py": "d5cd327586a74f27de504a70076099ff4503fef46820323e6307f6160237b19f",
+    "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+    "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+    "src/adapters/python_workflow.ts": "62961a27ae80c4ec562bc2dbd722c29cb6706505869bacabb8aa396cc3ea4d94",
+    "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+    "src/cli/recovery.ts": "c4838abe071cebe0bb97befb9b3316d0338d3548845cef9b8842bc742dc8c35f",
+    "src/harness/authorization.ts": "bed45a0b6758d8a1d2e9b71a6dfdc0ee5f71436f3353c74d63269f772022ee80",
+    "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+    "src/harness/continuation.ts": "5660d11ffb5045c095b00faf7314cf1e28ae064edb65956d96da6d59a2fc83ed",
+    "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+    "src/harness/process_identity.ts": "a0e66f96d8a62953ae73d98b2de9ca683961d2b8a24e2afb70ecb6d05a0c0584",
+    "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+    "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+    "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+    "src/harness/state_maintenance.ts": "e598cce24fe11323c446eb55206f155555253c206a62734bfa2bdf13c961798a",
+    "src/harness/task_ledger.ts": "0179a2babb329b9b5641c6db4e875fbf93b04175db4a4d20bdf03e7d32e996dd",
+    "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+    "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+    "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+    "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+    "src/quality/revision_service.ts": "9972065d55744551627f94c8b8ee98139ac7f1c4e32199d479f7995833e8df66",
+    "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+    "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62",
+    "test/harness/authorization.test.ts": "89681a5e5f92e2f1676bf1ef9e238646d44084d85b91034a7214b3ba2d06eeef",
+    "test/harness/cancellation.test.ts": "ffcf0cacc3ebb94ceb5d7263e7a70ed01138b307872641789189459f952bf189",
+    "test/harness/fixtures.ts": "d1b5e2c60f0d9237b0400f6cb7e46038d6da7e245ed7c5589bf65ed474cb1039",
+    "test/harness/native_revision_fixture.ts": "f10a9cf1a6e3e5a91e181971aebf61fbd073f795c04cbc572fe544f43da56e1e",
+    "test/harness/native_workflow.test.ts": "bffe18a57b3247d89929c571c695716cec7af3db901e3e598117040ef05c47f4",
+    "test/harness/protocol_mapping.test.ts": "51a343405b131a1a195e6efe855635ac3d3a7609dd8ad6d8e96531e331f99ee8",
+    "test/harness/quality_fixtures.ts": "8f379a3d9018cd2fa17af806623c3074add5fb16ec1836be1b794e3fc2ce8aba",
+    "test/harness/quality_media_native.test.ts": "b3ae709b515eb324858b4ca7e4d23a42a2b0bed90aa75b6a01105ce6aba3838c",
+    "test/harness/quality_review.test.ts": "d0a2eca1204f6cd6de0811e2cbbf629526bfa4d19debf046c697337c382d7c55",
+    "test/harness/quality_service.test.ts": "ce024d99e76e366f02b1a6030084766350aeb0082224df554d75c886da991746",
+    "test/harness/receipt_index.test.ts": "16809c9f0abfedcb4d3fd20bbe4d73cbcdfac724578bedd7e6fbe6decce03786",
+    "test/harness/recovery.test.ts": "f299e32c38e23885166e225bdc4927c480b43a26e9a797908c9f911b62200010",
+    "test/harness/resources.test.ts": "918844302a506dd20780de70fc9a183fe2292f42c02659cbed373ab46c3da78f",
+    "test/harness/revision_loop.test.ts": "ce3f62288416f08b900068fd35cc91ad81304fe950997c550652468e221269f2",
+    "test/harness/revision_scope.test.ts": "e90b095bb4df1d01732006ceef79a2ab44870021508985a06427f6955317a8e3",
+    "test/harness/state_maintenance.test.ts": "1c5cdabc31c6f7f5abb0267d20aecf8e703158ca30630353afa19ed5e1a8b8e6",
+    "test/harness/task_ledger.test.ts": "fc4af8a587d992d4d0e93a93fc42a87998df487a1e84b0757834dbc18a476341",
+    "tests/test_fixed_revision.py": "ea1740a91f24d659c8609888b19c434397ae13ad26e8fef3f88c7e2e9465b34e"
+  },
+  "node": {
+    "tests": 126,
+    "pass": 126,
+    "fail": 0,
+    "skipped": 0
+  },
+  "python": {
+    "tests": 55,
+    "pass": 55,
+    "fail": 0
+  },
+  "matrixRecords": 49,
+  "revisionScenarios": 9,
+  "logs": {
+    "criteria-red": {
+      "path": "docs/evidence/filmcraft51-revision-criteria-red.log",
+      "originalPrivateSha256": "cb5636bf9ccfbf6810a3885eecd9b99c0f1d53bf54888cf51a81a354f19940b0",
+      "publicProjectionSha256": "cdf536f7a2084e639ec75f2dc46cc4923de175514735c0ef82b6c923bc221d53"
+    },
+    "native-pass": {
+      "path": "docs/evidence/filmcraft51-revision-native-pass.log",
+      "originalPrivateSha256": "415315129638eaf28a5f816e2978beaf5249e6304036024d14b51aea338ef48b",
+      "publicProjectionSha256": "415315129638eaf28a5f816e2978beaf5249e6304036024d14b51aea338ef48b"
+    },
+    "python-pass": {
+      "path": "docs/evidence/filmcraft51-revision-python-pass.log",
+      "originalPrivateSha256": "8af223264f11011c96543ce3e7f2bf0bad27cd9f84820dcff22e37fd1e9163d2",
+      "publicProjectionSha256": "a9ab814f072563997687a12b0a0fa34e68ea34b23d395bbc3449f9dfbe7f6395"
+    }
+  },
+  "redEvidence": {
+    "schemaBackup": "docs/evidence/filmcraft51-revision-schema-red.log",
+    "goalInvalidation": "docs/evidence/filmcraft51-revision-criteria-red.log",
+    "testFixtureRepair": "Legacy test databases now drop schema5 revision tables when modeling schema1; production compatibility checks were preserved. Native fixture moved outside the original read-only diagnosis interval."
+  },
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "limitations": [
+    "Bounded speed/duration/reverse and absolute gain compiler only; not arbitrary creative revision",
+    "POSIX macOS native proof; other platforms not qualified",
+    "Trusted host must invalidate the loop on current goal/rubric changes",
+    "Full user decision interface and V1 remain open"
+  ]
+}

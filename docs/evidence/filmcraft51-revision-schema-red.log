@@ -1,0 +1,94 @@
+✖ schema1 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (56.833875ms)
+✖ schema2 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (39.170459ms)
+✖ schema3 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (48.064042ms)
+✖ schema4 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (6.729291ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 256.07725
+
+✖ failing tests:
+
+test at test/harness/state_maintenance.test.ts:30:3
+✖ schema1 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (56.833875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 5
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:34:61)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/state_maintenance.test.ts:30:3
+✖ schema2 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (39.170459ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 5
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:34:61)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/state_maintenance.test.ts:30:3
+✖ schema3 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (48.064042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 5
+  
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:34:61)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/harness/state_maintenance.test.ts:30:3
+✖ schema4 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (6.729291ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[PLUGIN_ROOT]/test/harness/state_maintenance.test.ts:33:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ledger_upgrade_required/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+

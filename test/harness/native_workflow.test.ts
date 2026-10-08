@@ -15,6 +15,7 @@ import { CancellationService, cancellationSubject } from '../../src/harness/canc
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { ReviewService, reviewerIdentity } from '../../src/quality/review_service.ts';
 import { binding, workspace, captureEvidence } from './fixtures.ts';
+import { nativeRevisionFixture } from './native_revision_fixture.ts';
 
 test('actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt',
   { skip: process.env.FILMCRAFT_NATIVE_HARNESS !== '1', timeout: 240_000 }, async t => {
@@ -222,6 +223,10 @@ test('actual Python native workflow binds SQL attempts, preserves original proje
       cancellation:{taskId:cancelTask.taskId,attempts:1,state:cancelled.state,stopped:cancelled.process?.stopped,authorization:'actual private host LocalAuthorizationStore'}};
     captureEvidence('actual-native-budget-and-cancellation','actual Python/native output, shared continuation budget and authorized stop',resourcesEvidence);
     captureEvidence('actual-native-repair-and-continuation', 'actual Python/native create, lost reply, repair and continued editing; actual private host grants', { nativeBefore, nativeAfter: nativeFiles(), originalAttempts: db.listAttempts(lostTask.taskId), childAttempts: db.listAttempts(continuationTask.taskId), recoveryIntents: db.listRecoveryIntents(lostTask.taskId), continuationIntents: db.listContinuations(lostTask.taskId), readonlyFilesPreserved: true, originalReplayed: false, quality: 'NOT_RUN' });
+    if(process.env.FILMCRAFT_REVISION_NATIVE==='1'){
+      assert.ok(process.env.FILMCRAFT_QUALITY_TOOLS,'explicit quality measurement tools required');
+      await nativeRevisionFixture({root,db,index,options,task,planFile,grant,writeGrant,localAuthorizer});
+    }
     if (process.env.FILMCRAFT_HARNESS_REPORT) {
       // 输出协议对象不含本机绝对路径，供固定所有者 schema 另行核验。
       const report = { schema: 'filmcraft-harness-native-candidate/v1', result: 'PASS', nodeVersion: process.version,

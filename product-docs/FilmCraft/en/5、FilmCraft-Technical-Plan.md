@@ -101,3 +101,5 @@ Fixed dev49/source42 resource acceptance is now complete for tasks9.19–9.21:81
 Independent quality update: minimal context, trusted host/manual verification, version invalidation and per-channel temporal/audio checks have a source candidate. See docs/FilmCraft-Quality-Architecture.md. Fixed dev.50 installed acceptance, tasks9.22–9.24, user acceptance and full V1 remain open.
 
 Fixed dev.50/source42 independent quality acceptance now completes tasks9.22–9.24:107 installed tests without skips,40 matrix records including8 quality cases,13 skills/40 execution files preserved and four release CI runs pass. Creative review remains manual_review, user acceptance NOT_RUN and57 V1 tasks open.
+
+Bounded revision candidate: schema5 ledger, object/track/time/leaf/dependency scope, fresh independent review and round/failure/budget/stagnation gates. See docs/FilmCraft-Revision-Architecture.md. Fixed dev.51 qualification, tasks9.25–9.27 and full V1 remain open.

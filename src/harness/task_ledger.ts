@@ -6,6 +6,7 @@ import { check, HarnessError, isHash, isObject, sha256, stableJson } from '../su
 import { canonicalTarget } from '../support/paths.ts';
 import { RESOURCE_SCHEMA } from './resource_schema.ts';
 import { ResourceController } from './resources.ts';
+import { REVISION_SCHEMA, verifyRevisionIntegrity } from '../quality/revision_schema.ts';
 
 /** 仅为 ArtCraft 公共 runtimeIdentity 的领域消费类型，规范仍在固定所有者引用。 */
 export type RuntimeIdentity = { pluginId: string; pluginVersion: string; cliVersion: string; sha256: string; mode: string; capabilitySnapshotSha256: string };
@@ -67,15 +68,15 @@ export class TaskLedger {
       if (this.readOnly) {
         this.db.exec('PRAGMA query_only=ON;');
         const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-        check([1, 2, 3, 4].includes(version), 'ledger_schema_unsupported');
+        check([1, 2, 3, 4, 5].includes(version), 'ledger_schema_unsupported');
         this.verifySchema(version);
       } else {
         this.transaction(() => {
           const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-          check([0, 1, 2, 3, 4].includes(version), 'ledger_schema_unsupported');
+          check([0, 1, 2, 3, 4, 5].includes(version), 'ledger_schema_unsupported');
           if (version > 0) {
             this.verifySchema(version);
-            check(version === 4, 'ledger_upgrade_required');
+            check(version === 5, 'ledger_upgrade_required');
             return;
           }
           check(!existed, 'ledger_schema_unknown');
@@ -92,7 +93,8 @@ export class TaskLedger {
             ${RECOVERY_SCHEMA}
             ${CONTINUATION_SCHEMA}
             ${RESOURCE_SCHEMA}
-            PRAGMA user_version=4;
+            ${REVISION_SCHEMA}
+            PRAGMA user_version=5;
             PRAGMA application_id=${APPLICATION_ID};
           `);
         });
@@ -115,6 +117,10 @@ export class TaskLedger {
       expected.task_resources = 'task_id,scope_id,allocation,state,reserved_at,consumed,process_identity';
       expected.cancel_intents = 'task_id,scope_id,request,created_at,diagnosis';
     }
+    if(version>=5){
+      expected.revision_loops='loop_id,root_task_id,policy_sha256,definition,state,reason,generation,created_at';
+      expected.revision_rounds='loop_id,round_no,child_task_id,intent_sha256,intent,state,result,result_sha256';
+    }
     const tables = this.db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name").all() as Row[];
     check(tables.map(row => row.name).join(',') === Object.keys(expected).sort().join(','), 'ledger_schema_unknown');
     check(!this.db.prepare("SELECT name FROM sqlite_master WHERE type IN ('view','trigger')").get(), 'ledger_schema_unknown');
@@ -124,12 +130,13 @@ export class TaskLedger {
       const strict = this.db.prepare('SELECT strict FROM pragma_table_list WHERE name=?').get(name) as Row;
       check(strict?.strict === 1, 'ledger_schema_unknown');
       const nullable: Record<string, string[]> = { tasks: ['owner','lease_until','attempt_id'], attempts: ['pid','receipt_sha256'],
-        recovery_intents: ['completion_sha256','reason'], resource_scopes: ['reason'], task_resources: ['consumed','process_identity'] };
+        recovery_intents: ['completion_sha256','reason'], resource_scopes: ['reason'], task_resources: ['consumed','process_identity'],
+        revision_loops:['reason'],revision_rounds:['result','result_sha256'] };
       const primary: Record<string, string[]> = { tasks: ['task_id'], project_leases: ['project_key'], attempts: ['attempt_id'],
         receipts: ['attempt_id','kind'], recovery_intents: ['intent_id'], continuation_intents: ['intent_id'],
-        resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'] };
+        resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'],revision_loops:['loop_id'],revision_rounds:['loop_id','round_no'] };
       for (const column of actual) {
-        const integer = ['epoch','lease_until','pid','parent_epoch','deadline','created_at','reserved_at'].includes(column.name);
+        const integer = ['epoch','lease_until','pid','parent_epoch','deadline','created_at','reserved_at','generation','round_no'].includes(column.name);
         check(column.type === (integer ? 'INTEGER' : 'TEXT')
           && column.notnull === (nullable[name]?.includes(column.name) ? 0 : 1)
           && column.pk === Math.max(0, primary[name].indexOf(column.name) + 1), 'ledger_schema_unknown');
@@ -139,6 +146,7 @@ export class TaskLedger {
         attempts: ['attempt_id', 'task_id,operation_key'], receipts: ['attempt_id,kind'],
         recovery_intents: ['intent_id', 'task_id,epoch'], continuation_intents: ['intent_id', 'child_task_id', 'parent_task_id,child_task_id'],
         resource_scopes: ['scope_id'], task_resources: ['task_id'], cancel_intents: ['task_id'],
+        revision_loops:['loop_id','root_task_id'],revision_rounds:['loop_id,round_no','child_task_id'],
       };
       const indices = this.db.prepare('SELECT name FROM pragma_index_list(?) WHERE "unique"=1').all(name) as Row[];
       const constraints = indices.map(index => (this.db.prepare('SELECT name FROM pragma_index_info(?) ORDER BY seqno')
@@ -151,6 +159,7 @@ export class TaskLedger {
         continuation_intents: ['parent_task_id:tasks:task_id','parent_attempt_id:attempts:attempt_id','child_task_id:tasks:task_id'],
         resource_scopes: ['scope_id:tasks:task_id'], task_resources: ['task_id:tasks:task_id','scope_id:resource_scopes:scope_id'],
         cancel_intents: ['task_id:tasks:task_id','scope_id:resource_scopes:scope_id'],
+        revision_loops:['root_task_id:tasks:task_id'],revision_rounds:['loop_id:revision_loops:loop_id','child_task_id:tasks:task_id'],
       };
       const keys = (this.db.prepare('SELECT "from","table","to" FROM pragma_foreign_key_list(?)').all(name) as Row[])
         .map(key => key.from + ':' + key.table + ':' + key.to).sort();
@@ -187,6 +196,7 @@ export class TaskLedger {
         && ['linked','unknown','conflict','stale'].includes(row.status) && isObject(JSON.parse(row.summary)), 'ledger_receipt_corrupt');
     }
     if (Number(this.db.prepare('PRAGMA user_version').get()!.user_version) >= 4) { new ResourceController(this).verifyIntegrity(); }
+    if (Number(this.db.prepare('PRAGMA user_version').get()!.user_version) >= 5) { verifyRevisionIntegrity(this.db); }
   }
   close() { this.db.close(); }
   /** 同账本资源控制器使用同一原子事务；禁止在回调内启动原生副作用。 */
@@ -370,7 +380,8 @@ export class TaskLedger {
     return this.db.prepare('SELECT * FROM recovery_intents WHERE task_id=? ORDER BY epoch').all(taskId) as Row[];
   }
   /** 先登记新任务与继续意图；只接受已确认的原工程，不重用原生尝试。 */
-  beginContinuation(parentId: string, expectedEpoch: number, evidenceSha256: string, child: Binding) {
+  beginContinuation(parentId: string, expectedEpoch: number, evidenceSha256: string, child: Binding,
+    onIntent?:(intentId:string,reused:boolean)=>void) {
     validate(child); child = { ...child, outputRoot: canonicalTarget(child.outputRoot) };
     check(parentId !== child.taskId && isHash(evidenceSha256), 'invalid_continuation');
     return this.transaction(() => {
@@ -381,7 +392,7 @@ export class TaskLedger {
       if (existing) {
         check(existing.parent_task_id === parentId && existing.parent_attempt_id === parent.attemptId
           && existing.binding_sha256 === childHash, 'continuation_conflict');
-        this.getTask(child.taskId); return { intentId: existing.intent_id, reused: true };
+        this.getTask(child.taskId);onIntent?.(existing.intent_id,true); return { intentId: existing.intent_id, reused: true };
       }
       check(!this.db.prepare('SELECT task_id FROM tasks WHERE task_id=? OR (namespace=? AND idem=?)')
         .get(child.taskId, child.namespace, child.idempotencyKey), 'continuation_conflict');
@@ -391,6 +402,7 @@ export class TaskLedger {
       const intentId = randomUUID();
       this.db.prepare('INSERT INTO continuation_intents VALUES(?,?,?,?,?,?,?,?)')
         .run(intentId, parentId, parent.attemptId, parent.epoch, taskId, childHash, evidenceSha256, 'pending');
+      onIntent?.(intentId,false);
       return { intentId, reused: false };
     });
   }

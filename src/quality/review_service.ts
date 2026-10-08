@@ -131,4 +131,8 @@ export class ReviewService {
       &&['external-process','trusted-host-verifier'].includes(receipt.context?.source),'review_response_mismatch');
     return evaluateReview(request,receipt.assessment);
   }
+  /** 循环需要明确核验质量证据所属任务；返回当前请求而不提升任务状态。 */
+  readRequest(requestRef:string,criteria:ReviewCriteria){
+    const request=this.get(requestRef) as ReviewRequest;this.current(request,criteria);return request;
+  }
 }

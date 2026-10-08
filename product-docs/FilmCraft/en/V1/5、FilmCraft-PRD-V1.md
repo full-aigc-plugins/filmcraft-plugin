@@ -73,3 +73,5 @@ Fixed dev49/source42 resources and cancellation pass tasks9.19–9.21. Complete 
 The independent quality candidate separates engineering, technical, creative and user acceptance. Scores cannot override technical failures and stale candidate evidence cannot replay. Built-in measurement retains manual readability, continuity and rhythm review. Fixed dev.50 acceptance, tasks9.22–9.24 and full V1 remain open.
 
 Fixed dev.50 quality qualification completes tasks9.22–9.24; see docs/evidence/filmcraft50-fixed-quality-20261008.json. Independent engineering and bounded technical measurements pass. Creative/manual review and user acceptance remain open; this does not qualify user footage or full V1, with57 tasks remaining.
+
+Bounded revision preserves non-targets and dependencies, never automatically replays unknown attempts, and retains verified best plus unresolved findings on stop; no qualifying best is explicitly null. Goal/rubric changes fence the old loop. Creative and user acceptance remain separate. Fixed dev.51 qualification, tasks9.25–9.27 and full V1 remain open.

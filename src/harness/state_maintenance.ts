@@ -4,6 +4,7 @@ import { basename, dirname, join, resolve } from 'node:path';
 import { forensicSnapshot } from './forensic_snapshot.ts';
 import { APPLICATION_ID, CONTINUATION_SCHEMA, RECOVERY_SCHEMA } from './task_ledger.ts';
 import { RESOURCE_SCHEMA, RESOURCE_TABLES } from './resource_schema.ts';
+import { REVISION_SCHEMA, REVISION_TABLES } from '../quality/revision_schema.ts';
 import { readBoundFile } from '../artifacts/receipt_index.ts';
 import { requireAuthorization } from './authorization.ts';
 import type { Authorizer, AuthorizationRequest } from './authorization.ts';
@@ -12,7 +13,7 @@ import { check, sha256, stableJson } from '../support/json.ts';
 const tables = ['tasks', 'project_leases', 'attempts', 'receipts'];
 function records(db: DatabaseSync) {
   const result: Record<string, any> = {};
-  for (const name of [...tables, 'recovery_intents', 'continuation_intents', ...RESOURCE_TABLES]) {
+  for (const name of [...tables, 'recovery_intents', 'continuation_intents', ...RESOURCE_TABLES,...REVISION_TABLES]) {
     if (db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name=?").get(name)) {
       result[name] = db.prepare('SELECT * FROM ' + name + ' ORDER BY rowid').all();
     }
@@ -52,7 +53,7 @@ export class StateMaintenance {
     } finally { if (!committed) { try { db.exec('ROLLBACK'); } catch {} } db.close(); }
   }
   upgrade(backupRoot: string, request: AuthorizationRequest) {
-    const captured = this.inspect(); check([1, 2, 3].includes(captured.version), 'ledger_upgrade_unsupported');
+    const captured = this.inspect(); check([1, 2, 3, 4].includes(captured.version), 'ledger_upgrade_unsupported');
     const subject = { action: 'upgrade' as const, identitySha256: sha256(stableJson(captured)) };
     requireAuthorization(this.authorize, request, subject);
     backupRoot = resolve(backupRoot); check(!existsSync(backupRoot), 'backup_exists');
@@ -68,7 +69,7 @@ export class StateMaintenance {
       }
       const verified = forensicSnapshot(join(backupRoot, 'database.sqlite'), ledger => records(ledger.db));
       check(stableJson(verified) === stableJson(captured.records), 'backup_invalid');
-      const manifest = { schema: 'filmcraft-ledger-backup/v1', fromVersion: captured.version, toVersion: 4,
+      const manifest = { schema: 'filmcraft-ledger-backup/v1', fromVersion: captured.version, toVersion: 5,
         recordsSha256: sha256(stableJson(captured.records)), baseRecordsSha256: sha256(stableJson(baseRecords(captured.records))),
         files, complete: true };
       const data = stableJson(manifest) + '\n'; durable(join(backupRoot, 'manifest.json'), data);
@@ -76,17 +77,18 @@ export class StateMaintenance {
       syncDirectory(backupRoot); requireAuthorization(this.authorize, request, subject);
       if (captured.version === 1) { db.exec(RECOVERY_SCHEMA); }
       if (captured.version < 3) { db.exec(CONTINUATION_SCHEMA); }
-      db.exec(RESOURCE_SCHEMA + ' PRAGMA user_version=4;');
+      if(captured.version<4){db.exec(RESOURCE_SCHEMA);}
+      db.exec(REVISION_SCHEMA + ' PRAGMA user_version=5;');
       const after = records(db);
       check(Object.keys(captured.records).every(name => stableJson(after[name]) === stableJson(captured.records[name])), 'migration_data_changed');
-      return { fromVersion: captured.version, toVersion: 4, backupRoot, backupManifestSha256: sha256(data), recordsPreserved: true };
+      return { fromVersion: captured.version, toVersion: 5, backupRoot, backupManifestSha256: sha256(data), recordsPreserved: true };
     });
   }
   rollback(backupRoot: string, request: AuthorizationRequest) {
     backupRoot = realpathSync(backupRoot);
     const raw = readBoundFile(backupRoot, 'manifest.json'), manifest = JSON.parse(raw.toString('utf8'));
     check(manifest.schema === 'filmcraft-ledger-backup/v1' && manifest.complete === true
-      && [1, 2, 3].includes(manifest.fromVersion) && [3, 4].includes(manifest.toVersion)
+      && [1, 2, 3, 4].includes(manifest.fromVersion) && [3, 4, 5].includes(manifest.toVersion)
       && manifest.fromVersion < manifest.toVersion, 'backup_invalid');
     for (const [name, digest] of Object.entries(manifest.files)) { check(sha256(readBoundFile(backupRoot, name, 64 * 1024 * 1024)) === digest, 'backup_invalid'); }
     const restored = forensicSnapshot(join(backupRoot, 'database.sqlite'), ledger => records(ledger.db));
@@ -102,7 +104,8 @@ export class StateMaintenance {
       requireAuthorization(this.authorize, request, subject);
       durable(join(backupRoot, 'rollback-intent.json'), stableJson({ subject, ...request, currentRecordsSha256: sha256(stableJson(captured.records)) }) + '\n');
       syncDirectory(backupRoot); requireAuthorization(this.authorize, request, subject);
-      if (manifest.toVersion === 4) { db.exec('DROP TABLE cancel_intents; DROP TABLE task_resources; DROP TABLE resource_scopes;'); }
+      if(manifest.toVersion>=5){db.exec('DROP TABLE revision_rounds; DROP TABLE revision_loops;');}
+      if (manifest.fromVersion<4&&manifest.toVersion>=4) { db.exec('DROP TABLE cancel_intents; DROP TABLE task_resources; DROP TABLE resource_scopes;'); }
       if (manifest.fromVersion < 3) { db.exec('DROP TABLE continuation_intents;'); }
       if (manifest.fromVersion === 1) { db.exec('DROP TABLE recovery_intents;'); }
       db.exec('PRAGMA user_version=' + manifest.fromVersion);

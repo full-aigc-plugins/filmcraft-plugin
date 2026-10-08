@@ -1,0 +1,1 @@
+{"result": "PASS", "tests": {"tests": 60, "pass": 60, "fail": 0, "skipped": 0}, "scenarios": 14, "protocol": {"publicTasks": 3, "publicArtifacts": 26}, "reportSha256": "8ecbac79abfc81b114b3f6a38dadef9e2c70aa561c7aa584b4d5f8d175599fc2"}

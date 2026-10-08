@@ -1,6 +1,6 @@
 # FilmCraft 只读诊断、状态修复与继续执行
 
-[English](FilmCraft-Recovery-Architecture.md)。行为事实源为 `establish-v1-plugin` 的 FC-TX-002；本页解释 9.16—9.18。插件候选 dev.48 保持独立技能源 dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`，不修改固定技能中的 Python 编辑逻辑。源码候选 60 项原生及状态回归无跳过通过；发布后固定安装单独验收，任务在该验收完成前保持开放。
+[English](FilmCraft-Recovery-Architecture.md)。行为事实源为 `establish-v1-plugin` 的 FC-TX-002；本页解释 9.16—9.18。插件候选 dev.48 保持独立技能源 dev.42 / `7adfa763b161bc2ff7ef3efae702e285965bf23a`，不修改固定技能中的 Python 编辑逻辑。源码候选 60 项原生及状态回归无跳过通过；实际公开标签安装的60项回归及14类矩阵通过，任务9.16—9.18完成；完整Harness和V1保持开放。
 
 ```mermaid
 flowchart TD
@@ -57,3 +57,5 @@ flowchart TD
 采集点修正：dev.47 的60项安装回归通过，但两条用例在文件保全断言后额外读取原库，SHM 读标记变化污染后采集摘要，完整报告拒绝通过。dev.48 将公开矩阵的 after 摘要固定到原有保全断言时刻，在用例自身的补充 SQL 查询之前采集；DB/WAL/SHM 全字节比较及所有拒绝门禁保持。原 dev.47 标签与 ZIP 不变。
 
 [Current dev.48 source candidate / 当前源码候选](evidence/filmcraft48-recovery-candidate-20261008.json).
+
+[Fixed dev.48 installed acceptance / 固定安装验收](evidence/filmcraft48-fixed-recovery-20261008.json).

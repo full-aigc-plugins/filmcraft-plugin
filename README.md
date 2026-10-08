@@ -1,10 +1,8 @@
 # FilmCraft Agent Plugin
 
-Current dev.48 fixes the recovery matrix observation window: after-digests are captured before supplemental fixture SQL reads. All 60 native/state and 45 Python tests pass; seven read-only matrix rows preserve all original file bytes. Public-tag acceptance remains pending. [Candidate evidence](docs/evidence/filmcraft48-recovery-candidate-20261008.json).
+Fixed dev.48/source42 completes OpenSpec 9.16–9.18: 13 skills / 30 execution files retain identity; 60 installed tests without skips, 14 recovery scenarios, actual native continuation and schema1/2 backed upgrade/compatible rollback pass. Three tasks / 26 artifacts validate against the pinned owner; main/tag CI passes. [Fixed evidence](docs/evidence/filmcraft48-fixed-recovery-20261008.json). Full V1 remains open (63 tasks).
 
-Current dev.47 corrects relative evidence paths and preserves dangling-output-symlink refusal. 60 native/state tests and 45 Python tests pass; public-tag acceptance remains pending. [Candidate evidence](docs/evidence/filmcraft47-recovery-candidate-20261008.json).
-
-[Recovery source candidate dev.46](docs/FilmCraft-Recovery-Architecture.md): 60 native/state tests and 14 recovery scenarios pass, including actual continuation and schema 1/2 backed upgrade/compatible rollback. Skills remain source42. Public-tag installed acceptance and tasks 9.16–9.18 remain open until separately verified.
+[Recovery matrix and compatibility](docs/FilmCraft-Fixed-Recovery.md). Failed dev.46/dev.47 collection history remains in the version-bound evidence; prior tags and packages are unchanged.
 
 Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Codex discovers 13 skills; 26 installed execution files remain unchanged; 39 installed native tests and 10 lineage cases pass. Public create/revision and lineage objects validate against the pinned owner. [Evidence](docs/evidence/filmcraft45-fixed-lineage-20261008.json). Full delivery, authorization/budgets, recovery, quality and V1 remain open.
 

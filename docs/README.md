@@ -45,3 +45,5 @@ Current-source HD segmented candidate passes 1080p / 24 fps / five seconds and a
 - [Skill snapshot preflight](Skill-Snapshot-Self-Contained.md) · [技能快照预检](Skill-Snapshot-Self-Contained.zh_CN.md)
 
 [Recovery architecture and compatibility](FilmCraft-Recovery-Architecture.md)
+
+[Fixed recovery acceptance / 固定恢复验收](FilmCraft-Fixed-Recovery.md)

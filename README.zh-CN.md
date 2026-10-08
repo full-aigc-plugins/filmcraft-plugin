@@ -1,10 +1,8 @@
 # FilmCraft Agent Plugin
 
-当前 dev.48 修正恢复矩阵采集窗口，在用例补充 SQL 查询前固定 after 摘要。60项原生／状态、45项Python测试通过，7类只读矩阵原文件全字节保全；公开标签验收仍待完成。[候选证据](docs/evidence/filmcraft48-recovery-candidate-20261008.json)。
+固定 dev.48／源42 完成 OpenSpec 9.16—9.18：13技能／30执行文件身份保全，60项安装测试无跳过、14类恢复矩阵、真实原生继续及schema1/2备份升级／兼容回退通过；3任务／26产物经固定所有者schema核验，main／tag CI通过。[固定证据](docs/evidence/filmcraft48-fixed-recovery-20261008.json)。完整V1继续开放，余63项任务。
 
-当前 dev.47 修复验收证据相对路径并保留悬空输出链接拒绝：60项原生／状态测试、45项Python测试通过；公开标签验收仍待完成。[候选证据](docs/evidence/filmcraft47-recovery-candidate-20261008.json)。
-
-[恢复源码候选 dev.46](docs/FilmCraft-Recovery-Architecture.zh_CN.md)：60 项原生／状态测试及 14 类恢复场景通过，包含真实继续执行、schema 1/2 备份升级及兼容回退。技能源保持42；公开标签安装验收及9.16—9.18在独立验证前继续开放。
+[恢复矩阵与兼容边界](docs/FilmCraft-Fixed-Recovery.zh_CN.md)。dev.46／dev.47失败收集记录保留在版本证据中，旧标签及发布包不变。
 
 固定 dev.45/source42 回执验收通过并完成9.13—9.15：隔离Codex发现13技能，26安装执行文件保全；39项安装原生测试、10类血缘用例通过，创建／返工与溯源公共对象通过固定所有者schema。[证据](docs/evidence/filmcraft45-fixed-lineage-20261008.json)。完整交付、授权预算、恢复、质量与V1继续开放。
 

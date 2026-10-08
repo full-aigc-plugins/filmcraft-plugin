@@ -43,3 +43,5 @@ OpenSpec 是唯一行为事实源；本目录是解释与证据视图。
 当前源码 HD 分段候选通过 1080p／24 fps／五秒及动态标题核验；固定安装版与 Art HD 仍待完成。[架构与证据](FilmCraft-HD-Sequence-Architecture.zh_CN.md)。
 
 [恢复架构与状态兼容](FilmCraft-Recovery-Architecture.zh_CN.md)
+
+[Fixed recovery acceptance / 固定恢复验收](FilmCraft-Fixed-Recovery.zh_CN.md)

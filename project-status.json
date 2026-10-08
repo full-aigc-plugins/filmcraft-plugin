@@ -85,7 +85,10 @@
     "9.12": "docs/evidence/filmcraft44-fixed-capabilities-20261008.json",
     "9.13": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
     "9.14": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
-    "9.15": "docs/evidence/filmcraft45-fixed-lineage-20261008.json"
+    "9.15": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
+    "9.16": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
+    "9.17": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",
+    "9.18": "docs/evidence/filmcraft48-fixed-recovery-20261008.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -141,14 +144,16 @@
     "harnessEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json",
     "harnessStatus": "tasks 9.13-9.15 fixed45/source42 receipt lineage qualified; complete Harness, authorization, budgets, cancellation, quality and full V1 open",
     "releaseEvidence": "docs/evidence/filmcraft-dev42-release-20261008.json",
-    "recoveryStatus": "bounded read-only diagnosis and same-attempt repair verified; continuation, backup/rollback, authorization enforcement and full recovery acceptance open",
+    "recoveryStatus": "tasks9.16-9.18 qualified in actual installed plugin48/source42: readonly preservation, fenced repair, explicit native continuation and schema1/2 backed upgrade/compatible rollback; full Harness, runtime upgrade, budgets/cancellation and V1 remain open",
     "fixedIdentityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json",
     "fixedIdentityStatus": "task 9.6 fixed installed identity passed; full qualification remains NOT_PROVEN",
     "commandParityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json",
     "commandParityStatus": "task 9.3 fixed44 whole-parameter/tick parity and six-dimension matrix passed; exhaustive native contexts remain NOT_RUN",
     "fixedCapabilityEvidence": "docs/evidence/filmcraft44-fixed-capabilities-20261008.json",
     "fixedLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
-    "lineageStatus": "four legacy formats, original CAS, same-attempt context, stale/conflict refusal and bounded partial handoff repair passed actual fixed install"
+    "lineageStatus": "four legacy formats, original CAS, same-attempt context, stale/conflict refusal and bounded partial handoff repair passed actual fixed install",
+    "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json"
   },
-  "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json"
+  "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
+  "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json"
 }

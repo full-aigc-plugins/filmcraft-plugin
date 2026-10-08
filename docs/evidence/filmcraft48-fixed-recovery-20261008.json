@@ -1,0 +1,340 @@
+{
+  "schema": "filmcraft-fixed-recovery-delivery/v1",
+  "result": "PASS",
+  "date": "2026-10-08",
+  "change": "establish-v1-plugin",
+  "completedTasks": [
+    "9.16",
+    "9.17",
+    "9.18"
+  ],
+  "plugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.48",
+    "ref": "v0.1.0-dev.48",
+    "sha": "a891fd663667029362a3dd7982e86b88be0cf51f",
+    "skillSourceSha": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+    "skillSourceRef": "v0.1.0-dev.42",
+    "pluginManifestSha256": "2b3ea546ea4dcbf10caeced848b3274b6ec58d6541d4671eac8ff30d0059c99e",
+    "skillSha256": "e3998102798bfcb255b471c974ea04615ea3b620dd4cead8c7ee54273479402c",
+    "skills": {
+      "filmcraft-use": "e3998102798bfcb255b471c974ea04615ea3b620dd4cead8c7ee54273479402c",
+      "filmcraft-cli": "ca770f1707cd142a64cd8700941a6c566580affc43e6e7d55b5b16aab5053173",
+      "filmcraft-cli-setup": "01876458151d46e3b867c77b5286418afa8c98df19209c5a36e13d888fcf0af4",
+      "filmcraft-cli-project": "df3af20ae0154b3600ac8bd9b9927e3dfee9e44d178a7e918b08601cb072abab",
+      "filmcraft-cli-media": "ef835c9ae45c4dafd47fc3bcc49ef9fe7b7bfa14f64345cf15395135f3e18f11",
+      "filmcraft-cli-timeline": "8b57d3df8ec228d523d5a238b75fb9cf3998f70c7906675ab4a5970cc924e695",
+      "filmcraft-cli-audio": "54f4835761b5c31c6bc05a4834f07217d2113a4db93a68d4c7f0f95bf3683ab0",
+      "filmcraft-cli-subtitles": "70a0808cc125c866e49d9922b8f34382564266371d5e598fc2289b8de983b0c6",
+      "filmcraft-cli-color": "59fbd0c628e338c04d5277790e52f98558b9e7f768c81743ef9b4d27bf2c463d",
+      "filmcraft-cli-motion": "1079452b05c1503649296cd3127f3fe2975e3478dcebb1ce22f050d125ba4da1",
+      "filmcraft-cli-export": "8dafe62c23c1ea212b4d0a3eebdd86d3779edc9d9c369234f63bdab93e901d78",
+      "filmcraft-cli-multicam": "5ae6c945ef5efa4ee05288d76d4d57b39dc1fd91b42344fb40121ecf8b173260",
+      "filmcraft-cli-transcript": "6909daa42cc75c4e615c8cbf882e94948c4cecd3131286e19610c7f4185fe184"
+    },
+    "codeFilesSha256": {
+      "package.json": "d5b3d5e5753f3bf2823bbf9600731283794c443f14389d50070c65915a44c192",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "60ddb28a89e2e30df847dec658ed19cc482f994f17d7c6bdf76f2d4e24be0413",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "2b97f40437d59289099af74b454711da9c842ad771fa802600b943b910fe87e9",
+      "scripts/verify_fixed_recovery.py": "78b3d99a162511339e5c2ee5f32605c577a84e98b60a72c09b12bec93c577170",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "bb0005ac4fbf77d3f340b2fd954551ec6d6f90d74c7478b2de26b881d0cc409b",
+      "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+      "src/cli/recovery.ts": "3bda655f6afcc7696342d7bd8d91b87234474361652a4a93da59ed424764fa2c",
+      "src/harness/authorization.ts": "9f2b2ff12289f36eeab0049740218ead33cdf4e5452cca85f039c191d70ed51f",
+      "src/harness/continuation.ts": "eacf061cc42e0311886a405d9b848d02b2ffed323470dba641c63e147185f43e",
+      "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+      "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+      "src/harness/state_maintenance.ts": "1d3422a9fa9adbf6b5e0895c055f9ac81dbfcc25997433ac7f5d0c4454aa1c9b",
+      "src/harness/task_ledger.ts": "d50ed0ccb17c7c86cf5dd1ec17df9ade5f7d31c5970e7e3fbfd5a48a9110b1ab",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62"
+    }
+  },
+  "sourceCandidate": "docs/evidence/filmcraft48-recovery-candidate-20261008.json",
+  "sourceTests": {
+    "native": 60,
+    "passed": 60,
+    "skipped": 0,
+    "python": 45
+  },
+  "fixedTests": {
+    "tests": 60,
+    "pass": 60,
+    "fail": 0,
+    "skipped": 0
+  },
+  "matrixScenarios": 14,
+  "readonlyMatrixRows": 7,
+  "codexVersion": "codex-cli 0.147.0",
+  "helper": {
+    "commit": "09d4ac5b8ff82f8fe819189e4be487b45ab2472b",
+    "path": "scripts/verify_codex_host.py",
+    "sha256": "8708c984e0e64a96196eee2745a6742b0ec53a17a402bb70b92d878443a13a35"
+  },
+  "protocolValidation": {
+    "status": "passed",
+    "scope": "fixed owner schema mapping only; no host, budget or quality acceptance",
+    "authority": {
+      "repository": "https://github.com/full-aigc-plugins/artcraft-plugin.git",
+      "ref": "v0.1.0-dev.109",
+      "sha": "09d4ac5b8ff82f8fe819189e4be487b45ab2472b"
+    },
+    "schemaSha256": {
+      "taskSchema": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+      "artifactSchema": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d"
+    },
+    "validated": {
+      "publicTasks": 3,
+      "publicArtifacts": 26
+    }
+  },
+  "continuation": {
+    "state": "verifying",
+    "originalReplayed": false,
+    "originalAttemptCount": 1,
+    "childAttemptCount": 1,
+    "intentCount": 1,
+    "reused": true,
+    "intent": {
+      "intent_id": "3f3ff4ca-c656-4ba5-a894-712df4341654",
+      "parent_task_id": "lost-reply",
+      "parent_attempt_id": "0d32b35b-9a34-4271-8906-2c65554e306e",
+      "parent_epoch": 3,
+      "child_task_id": "continue-1",
+      "binding_sha256": "f8edc695dcc55ddfb0c5777979b2340c837a57acc8448b654b4b455fad89d242",
+      "evidence_sha256": "33568db82d826afe7cfce3a137529c121cd0890640d0c398acb2efc403aa1670",
+      "state": "applied"
+    }
+  },
+  "upgradeRollback": [
+    {
+      "scenario": "schema1-upgrade-rollback",
+      "version": 1,
+      "recordsPreserved": true,
+      "beforeRecordsSha256": "0d0a61270d473d7df409dc3c3592e03e2e5cbff4373255df9782bef3ff734f49",
+      "afterRecordsSha256": "0d0a61270d473d7df409dc3c3592e03e2e5cbff4373255df9782bef3ff734f49",
+      "backupManifest": {
+        "baseRecordsSha256": "0d0a61270d473d7df409dc3c3592e03e2e5cbff4373255df9782bef3ff734f49",
+        "complete": true,
+        "files": {
+          "database.sqlite": "4a014eb93584f6541b21ca458232c73c3036e1059e1f91608e25f4813fc2bfb4",
+          "database.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shm.audit": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+        },
+        "fromVersion": 1,
+        "recordsSha256": "0d0a61270d473d7df409dc3c3592e03e2e5cbff4373255df9782bef3ff734f49",
+        "schema": "filmcraft-ledger-backup/v1",
+        "toVersion": 3
+      }
+    },
+    {
+      "scenario": "schema2-upgrade-rollback",
+      "version": 2,
+      "recordsPreserved": true,
+      "beforeRecordsSha256": "b945082ac870add4741d8daf80338d254b2a991e1bbbc7618cda65e5e5b5be0b",
+      "afterRecordsSha256": "b945082ac870add4741d8daf80338d254b2a991e1bbbc7618cda65e5e5b5be0b",
+      "backupManifest": {
+        "baseRecordsSha256": "8167125d2bf735e6eb608e483e97b2fdc610926b1e8f51a2cc920b6ed8095105",
+        "complete": true,
+        "files": {
+          "database.sqlite": "0ed941c0ef47ba9f2c9b83f4104d690811e2241d7bc17c099b1312bc35a89f57",
+          "database.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shm.audit": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+        },
+        "fromVersion": 2,
+        "recordsSha256": "b945082ac870add4741d8daf80338d254b2a991e1bbbc7618cda65e5e5b5be0b",
+        "schema": "filmcraft-ledger-backup/v1",
+        "toVersion": 3
+      }
+    }
+  ],
+  "allInstalledFilesUnchanged": true,
+  "previousInstalledVersion": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.45",
+    "ref": "v0.1.0-dev.45",
+    "sha": "b622c705c305359c4ffdd1533c5c48f692200de0",
+    "skillSourceSha": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+    "skillSourceRef": "v0.1.0-dev.42",
+    "pluginManifestSha256": "aab1556208744825697654cb1e29c5f55a7083cf7e8eb29caad4f421fb9b0eaf",
+    "skillSha256": "e3998102798bfcb255b471c974ea04615ea3b620dd4cead8c7ee54273479402c",
+    "skills": {
+      "filmcraft-use": "e3998102798bfcb255b471c974ea04615ea3b620dd4cead8c7ee54273479402c",
+      "filmcraft-cli": "ca770f1707cd142a64cd8700941a6c566580affc43e6e7d55b5b16aab5053173",
+      "filmcraft-cli-setup": "01876458151d46e3b867c77b5286418afa8c98df19209c5a36e13d888fcf0af4",
+      "filmcraft-cli-project": "df3af20ae0154b3600ac8bd9b9927e3dfee9e44d178a7e918b08601cb072abab",
+      "filmcraft-cli-media": "ef835c9ae45c4dafd47fc3bcc49ef9fe7b7bfa14f64345cf15395135f3e18f11",
+      "filmcraft-cli-timeline": "8b57d3df8ec228d523d5a238b75fb9cf3998f70c7906675ab4a5970cc924e695",
+      "filmcraft-cli-audio": "54f4835761b5c31c6bc05a4834f07217d2113a4db93a68d4c7f0f95bf3683ab0",
+      "filmcraft-cli-subtitles": "70a0808cc125c866e49d9922b8f34382564266371d5e598fc2289b8de983b0c6",
+      "filmcraft-cli-color": "59fbd0c628e338c04d5277790e52f98558b9e7f768c81743ef9b4d27bf2c463d",
+      "filmcraft-cli-motion": "1079452b05c1503649296cd3127f3fe2975e3478dcebb1ce22f050d125ba4da1",
+      "filmcraft-cli-export": "8dafe62c23c1ea212b4d0a3eebdd86d3779edc9d9c369234f63bdab93e901d78",
+      "filmcraft-cli-multicam": "5ae6c945ef5efa4ee05288d76d4d57b39dc1fd91b42344fb40121ecf8b173260",
+      "filmcraft-cli-transcript": "6909daa42cc75c4e615c8cbf882e94948c4cecd3131286e19610c7f4185fe184"
+    },
+    "codeFilesSha256": {
+      "package.json": "887388030e1d41156913c74435cfb9aa6f9fb64c9fc762ae6dbe5a8e2597a736",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "60ddb28a89e2e30df847dec658ed19cc482f994f17d7c6bdf76f2d4e24be0413",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "1e9462968fbcef1b70a0837a690d6c364e6e5b2f46943dca9282eb4dae144d64",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "e203291e69ab70279f34ce62d6af298f2b6b27cda479020d5cd5f7ac61a1beea",
+      "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+      "src/cli/recovery.ts": "637e8ad0c0e623c2d5f68d8de5fb2096543a5d60d1eb977e4e6548c77701efc5",
+      "src/harness/forensic_snapshot.ts": "22a5ee297855d7121b5eeb85bb6256003ed41dbd52b86defbffb4e85f5b3e234",
+      "src/harness/recovery.ts": "a49761c0ca9740b0c43b99ebc75f541f6b96e56dfbc91e6cc734f2ae01cd23b1",
+      "src/harness/task_ledger.ts": "212f25e145066200b32c3de823f80ae092f7e6a987b80eecb8c74e9013f32371",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62"
+    }
+  },
+  "release": {
+    "assets": [
+      {
+        "apiUrl": "https://api.github.com/repos/full-aigc-plugins/filmcraft-plugin/releases/assets/621905662",
+        "contentType": "application/zip",
+        "createdAt": "2026-10-08T13:24:02Z",
+        "digest": "sha256:171794da186761cf913c711684b591a2d2e90af6b15c3f19882f0347770cb027",
+        "downloadCount": 0,
+        "id": "RA_kwDOU8SLnM4lEYb-",
+        "label": "",
+        "name": "filmcraft-plugin-0.1.0-dev.48.zip",
+        "size": 4835314,
+        "state": "uploaded",
+        "updatedAt": "2026-10-08T13:24:07Z",
+        "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/releases/download/v0.1.0-dev.48/filmcraft-plugin-0.1.0-dev.48.zip"
+      }
+    ],
+    "isPrerelease": true,
+    "publishedAt": "2026-10-08T13:24:07Z",
+    "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/releases/tag/v0.1.0-dev.48"
+  },
+  "ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 37784028194,
+      "headBranch": "main",
+      "headSha": "a891fd663667029362a3dd7982e86b88be0cf51f",
+      "name": "Documentation and specification integrity",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37784028194"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37784028206,
+      "headBranch": "main",
+      "headSha": "a891fd663667029362a3dd7982e86b88be0cf51f",
+      "name": "Skill snapshots and implementation units",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37784028206"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37784028185,
+      "headBranch": "v0.1.0-dev.48",
+      "headSha": "a891fd663667029362a3dd7982e86b88be0cf51f",
+      "name": "Skill snapshots and implementation units",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37784028185"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37784028188,
+      "headBranch": "v0.1.0-dev.48",
+      "headSha": "a891fd663667029362a3dd7982e86b88be0cf51f",
+      "name": "Documentation and specification integrity",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37784028188"
+    }
+  ],
+  "originalPrivateEvidenceSha256": {
+    "fixed-acceptance.json": "8ecbac79abfc81b114b3f6a38dadef9e2c70aa561c7aa584b4d5f8d175599fc2",
+    "fixed-native.log": "843e67c2bf70975f8fe50c6624fefc065d656631b00a7c8a13b9095c3167bb82",
+    "fixed-native.json": "cd3504804173df92c8186d5ac45ba8bb868ce10bbcdfc08512a73108082f56ff",
+    "fixed-matrix.jsonl": "63739b9743f70649702306cc510e8ff5d83dc26ea78fa264795ea9cae37d546e",
+    "producer.log": "e08db50f4963439e899ab92340246a5ad7b2e02ce2a5886060a54da367f68b9a",
+    "host-receipt.json": "385463544910626870001c3c67bebef2f2ac4ff9f01dd923a800c91f66b0173b",
+    "previous-host-receipt.json": "e978462caf36ab0e5a279cb19b39a7593aa1c51b01088cd278736953f00475e5",
+    "release.json": "bf30eb000004bcd6b1022643ec512927940d032eba411a141e53d7ebe065d2c9",
+    "ci-release.json": "87e7dfd662e7438fba27eb0ccc66fb845e7c57373754a328b7ad1fa6457489f1",
+    "ci-implementation.log": "845a3efec4d0f2a3b0dc6ceca82c0b02b964842af845907e5caa2e18fb6bba76",
+    "ci-docs.log": "da8bf2b677113599cbf378a2370f5a1bbf542b4acb89fd42437decdd96ca4aa4"
+  },
+  "evidenceFiles": {
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/ci-docs.log": "da8bf2b677113599cbf378a2370f5a1bbf542b4acb89fd42437decdd96ca4aa4",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/ci-implementation.log": "845a3efec4d0f2a3b0dc6ceca82c0b02b964842af845907e5caa2e18fb6bba76",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/ci-release.json": "87e7dfd662e7438fba27eb0ccc66fb845e7c57373754a328b7ad1fa6457489f1",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/fixed-acceptance.json": "8ecbac79abfc81b114b3f6a38dadef9e2c70aa561c7aa584b4d5f8d175599fc2",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/fixed-matrix.jsonl": "695c96b9e5063ce02379a8132f3549061fcabdc73f52b863aa2e5d5c6ba8aaea",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/fixed-native.json": "cd3504804173df92c8186d5ac45ba8bb868ce10bbcdfc08512a73108082f56ff",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/fixed-native.log": "843e67c2bf70975f8fe50c6624fefc065d656631b00a7c8a13b9095c3167bb82",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/host-receipt.json": "385463544910626870001c3c67bebef2f2ac4ff9f01dd923a800c91f66b0173b",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/previous-host-receipt.json": "e978462caf36ab0e5a279cb19b39a7593aa1c51b01088cd278736953f00475e5",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/producer.log": "e08db50f4963439e899ab92340246a5ad7b2e02ce2a5886060a54da367f68b9a",
+    "docs/evidence/filmcraft48-fixed-recovery-20261008/release.json": "bf30eb000004bcd6b1022643ec512927940d032eba411a141e53d7ebe065d2c9"
+  },
+  "digestSemantics": "Actual original bytes are compared during tests and bound to private evidence hashes. Published files are sanitized projections with independent hashes. Supplemental fixture SQL reads occur outside the diagnosis preservation window.",
+  "scope": "FC-TX-002 tasks9.16-9.18 recovery matrix on macOS arm64; actual explicit native continuation, schema1/2 backed upgrade to3 and compatible state rollback. Not complete runtime upgrade or complete Harness.",
+  "priorFailedCollections": [
+    "docs/evidence/filmcraft47-recovery-candidate-20261008.json",
+    "docs/evidence/filmcraft48-recovery-candidate-20261008.json"
+  ],
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "remainingImplementationTasks": 63,
+  "notAccepted": [
+    "complete public admission/Harness and authorization configuration",
+    "budgets/cancellation",
+    "native runtime upgrade/draining",
+    "static TypeScript type checking",
+    "other platforms/hosts and model routing",
+    "independent media quality and user acceptance",
+    "complete V1"
+  ],
+  "platform": "darwin-arm64",
+  "node": "24.18.0",
+  "python": "3.13.5",
+  "ciTestLayers": {
+    "python": {
+      "tests": 45,
+      "passed": 45
+    },
+    "node": {
+      "tests": 60,
+      "passed": 58,
+      "skipped": 2,
+      "scope": "CI offline units; native and previous public-tag tests run separately in actual installed matrix with zero skips"
+    }
+  }
+}

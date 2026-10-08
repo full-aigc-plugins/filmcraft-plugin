@@ -1,0 +1,325 @@
+implementation	Set up job	﻿2026-10-08T13:24:03.2462579Z Current runner version: '2.337.0'
+implementation	Set up job	2026-10-08T13:24:03.2488480Z ##[group]Runner Image Provisioner
+implementation	Set up job	2026-10-08T13:24:03.2489495Z Hosted Compute Agent
+implementation	Set up job	2026-10-08T13:24:03.2490164Z Version: 20261002.596
+implementation	Set up job	2026-10-08T13:24:03.2490862Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+implementation	Set up job	2026-10-08T13:24:03.2491632Z Build Date: 2026-10-02T22:28:27Z
+implementation	Set up job	2026-10-08T13:24:03.2492322Z Worker ID: {9741e766-f6d8-4418-80f6-63bcee2dfb7c}
+implementation	Set up job	2026-10-08T13:24:03.2493109Z Region: westcentralus
+implementation	Set up job	2026-10-08T13:24:03.2493748Z Cloud: Azure
+implementation	Set up job	2026-10-08T13:24:03.2494378Z ##[endgroup]
+implementation	Set up job	2026-10-08T13:24:03.2495825Z ##[group]Operating System
+implementation	Set up job	2026-10-08T13:24:03.2496805Z Ubuntu
+implementation	Set up job	2026-10-08T13:24:03.2497478Z 24.04.5
+implementation	Set up job	2026-10-08T13:24:03.2498031Z LTS
+implementation	Set up job	2026-10-08T13:24:03.2498548Z ##[endgroup]
+implementation	Set up job	2026-10-08T13:24:03.2499194Z ##[group]Runner Image
+implementation	Set up job	2026-10-08T13:24:03.2499805Z Image: ubuntu-24.04
+implementation	Set up job	2026-10-08T13:24:03.2500423Z Version: 20261004.327.1
+implementation	Set up job	2026-10-08T13:24:03.2501568Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+implementation	Set up job	2026-10-08T13:24:03.2503390Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+implementation	Set up job	2026-10-08T13:24:03.2504388Z ##[endgroup]
+implementation	Set up job	2026-10-08T13:24:03.2505998Z ##[group]GITHUB_TOKEN Permissions
+implementation	Set up job	2026-10-08T13:24:03.2508295Z Contents: read
+implementation	Set up job	2026-10-08T13:24:03.2509062Z Metadata: read
+implementation	Set up job	2026-10-08T13:24:03.2509654Z ##[endgroup]
+implementation	Set up job	2026-10-08T13:24:03.2511696Z Secret source: Actions
+implementation	Set up job	2026-10-08T13:24:03.2512786Z Cache mode: write
+implementation	Set up job	2026-10-08T13:24:03.2513713Z Prepare workflow directory
+implementation	Set up job	2026-10-08T13:24:03.2853708Z Prepare all required actions
+implementation	Set up job	2026-10-08T13:24:03.2901133Z Getting action download info
+implementation	Set up job	2026-10-08T13:24:03.6156832Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+implementation	Set up job	2026-10-08T13:24:03.6920298Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+implementation	Set up job	2026-10-08T13:24:03.8562088Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+implementation	Set up job	2026-10-08T13:24:04.0519695Z Complete job name: implementation
+implementation	Run actions/checkout@v4	﻿2026-10-08T13:24:04.1272652Z ##[group]Run actions/checkout@v4
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1273501Z with:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1274019Z   repository: full-aigc-plugins/filmcraft-plugin
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1278587Z   token: ***
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1279034Z   ssh-strict: true
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1279473Z   ssh-user: git
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1279926Z   persist-credentials: true
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1280414Z   clean: true
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1280856Z   sparse-checkout-cone-mode: true
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1281373Z   fetch-depth: 1
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1281800Z   fetch-tags: false
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1282237Z   show-progress: true
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1282683Z   lfs: false
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1283094Z   submodules: false
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1283544Z   set-safe-directory: true
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1284042Z   allow-unsafe-pr-checkout: false
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.1284813Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2300498Z Syncing repository: full-aigc-plugins/filmcraft-plugin
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2302742Z ##[group]Getting Git version info
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2303668Z Working directory is '/home/runner/work/filmcraft-plugin/filmcraft-plugin'
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2305254Z [command]/usr/bin/git version
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2377920Z git version 2.55.0
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2406048Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2414119Z Temporarily overriding HOME='/home/runner/work/_temp/41401734-6723-4209-a7b2-c85dbdf78859' before making global git config changes
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2416778Z Adding repository directory to the temporary git global config as a safe directory
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2419016Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/filmcraft-plugin/filmcraft-plugin
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2468106Z Deleting the contents of '/home/runner/work/filmcraft-plugin/filmcraft-plugin'
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2487070Z ##[group]Initializing the repository
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2497622Z [command]/usr/bin/git init /home/runner/work/filmcraft-plugin/filmcraft-plugin
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2569441Z hint: Using 'master' as the name for the initial branch. This default branch name
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2587619Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2590118Z hint: to use in all of your new repositories, which will suppress this warning,
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2591561Z hint: call:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2592803Z hint:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2593814Z hint: 	git config --global init.defaultBranch <name>
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2595057Z hint:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2596209Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2598125Z hint: 'development'. The just-created branch can be renamed via this command:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2599523Z hint:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2600380Z hint: 	git branch -m <name>
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2601384Z hint:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2602595Z hint: Disable this message with "git config set advice.defaultBranchName false"
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2604744Z Initialized empty Git repository in /home/runner/work/filmcraft-plugin/filmcraft-plugin/.git/
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2608745Z [command]/usr/bin/git remote add origin https://github.com/full-aigc-plugins/filmcraft-plugin
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2628210Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2629434Z ##[group]Disabling automatic garbage collection
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2632848Z [command]/usr/bin/git config --local gc.auto 0
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2680353Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2681505Z ##[group]Setting up auth
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2687406Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.2721007Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3073090Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3115659Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3438361Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3484693Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3753392Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3797613Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3798558Z ##[group]Fetching the repository
+implementation	Run actions/checkout@v4	2026-10-08T13:24:04.3807765Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a891fd663667029362a3dd7982e86b88be0cf51f:refs/remotes/origin/main
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6257650Z From https://github.com/full-aigc-plugins/filmcraft-plugin
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6260029Z  * [new ref]         a891fd663667029362a3dd7982e86b88be0cf51f -> origin/main
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6264444Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6265831Z ##[group]Determining the checkout info
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6267438Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6272645Z [command]/usr/bin/git sparse-checkout disable
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6325856Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6365162Z ##[group]Checking out the ref
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.6367103Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.7590944Z Switched to a new branch 'main'
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.7594462Z branch 'main' set up to track 'origin/main'.
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.7606094Z ##[endgroup]
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.7655342Z [command]/usr/bin/git log -1 --format=%H
+implementation	Run actions/checkout@v4	2026-10-08T13:24:05.7684898Z a891fd663667029362a3dd7982e86b88be0cf51f
+implementation	Run actions/setup-python@v5	﻿2026-10-08T13:24:05.8074155Z ##[group]Run actions/setup-python@v5
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8075495Z with:
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8076634Z   python-version: 3.13
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8077908Z   check-latest: false
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8088599Z   token: ***
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8089593Z   update-environment: true
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8090727Z   allow-prereleases: false
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8091832Z   freethreaded: false
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.8092831Z ##[endgroup]
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:05.9501072Z ##[group]Installed versions
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:06.0659083Z (node:2348) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:06.0660471Z (Use `node --trace-deprecation ...` to show where the warning was created)
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:06.0661228Z Successfully set up CPython (3.13.16)
+implementation	Run actions/setup-python@v5	2026-10-08T13:24:06.0662129Z ##[endgroup]
+implementation	Run python3 -m unittest discover -s tests -v	﻿2026-10-08T13:24:06.0830675Z ##[group]Run python3 -m unittest discover -s tests -v
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.0831293Z ^[[36;1mpython3 -m unittest discover -s tests -v^[[0m
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1160103Z shell: /usr/bin/bash -e {0}
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1160535Z env:
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1160886Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1161426Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1161938Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1162383Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1162833Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1163271Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:06.1163660Z ##[endgroup]
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5627372Z test_discovery_does_not_promote_other_dimensions (test_command_evidence.CommandEvidenceTests.test_discovery_does_not_promote_other_dimensions) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5629744Z test_invalid_or_duplicate_discovery_rows_are_rejected (test_command_evidence.CommandEvidenceTests.test_invalid_or_duplicate_discovery_rows_are_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5657868Z test_pass_requires_evidence_and_not_applicable_requires_reason (test_command_evidence.CommandEvidenceTests.test_pass_requires_evidence_and_not_applicable_requires_reason) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5659266Z test_positive_negative_and_persistence_are_independent (test_command_evidence.CommandEvidenceTests.test_positive_negative_and_persistence_are_independent) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5660366Z test_stale_runtime_platform_mode_or_source_is_rejected (test_command_evidence.CommandEvidenceTests.test_stale_runtime_platform_mode_or_source_is_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5661502Z test_unknown_command_dimension_and_duplicate_claim_are_rejected (test_command_evidence.CommandEvidenceTests.test_unknown_command_dimension_and_duplicate_claim_are_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5675602Z test_authority_bytes_and_tag_are_checked (test_contract_reference.ContractReferenceTests.test_authority_bytes_and_tag_are_checked) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5676910Z test_bad_digest_path_and_url_rejected (test_contract_reference.ContractReferenceTests.test_bad_digest_path_and_url_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5677778Z test_current_reference (test_contract_reference.ContractReferenceTests.test_current_reference) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5678679Z test_floating_or_inconsistent_identity_rejected (test_contract_reference.ContractReferenceTests.test_floating_or_inconsistent_identity_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5679642Z test_missing_file_or_protocol_rejected (test_contract_reference.ContractReferenceTests.test_missing_file_or_protocol_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.5811633Z test_bilingual_rendering_and_generated_snapshot_are_current (test_current_facts.CurrentFactsTests.test_bilingual_rendering_and_generated_snapshot_are_current) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.6874552Z test_each_authority_drift_is_rejected (test_current_facts.CurrentFactsTests.test_each_authority_drift_is_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.7049714Z test_generation_is_deterministic_and_does_not_promote_history (test_current_facts.CurrentFactsTests.test_generation_is_deterministic_and_does_not_promote_history) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.8030952Z test_historical_root_lock_does_not_select_active_runtime (test_current_facts.CurrentFactsTests.test_historical_root_lock_does_not_select_active_runtime) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:08.8936848Z test_reference_metadata_drift_is_visible_without_relabeling_snapshot (test_current_facts.CurrentFactsTests.test_reference_metadata_drift_is_visible_without_relabeling_snapshot) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.4955070Z test_local_docs_gate_rejects_stale_and_duplicate_current_identity (test_current_readme_identity.CurrentReadmeIdentityTests.test_local_docs_gate_rejects_stale_and_duplicate_current_identity) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.4990969Z test_ambiguous_missing_or_malformed_tag_results_are_rejected (test_fixed_install.FixedInstallTests.test_ambiguous_missing_or_malformed_tag_results_are_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.4999129Z test_existing_output_is_not_reused_or_modified (test_fixed_install.FixedInstallTests.test_existing_output_is_not_reused_or_modified) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5007568Z test_foreign_manifest_or_missing_source_digest_is_rejected (test_fixed_install.FixedInstallTests.test_foreign_manifest_or_missing_source_digest_is_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5025713Z test_installed_executable_content_and_path_escape_are_rejected_without_writes (test_fixed_install.FixedInstallTests.test_installed_executable_content_and_path_escape_are_rejected_without_writes) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5032720Z test_invalid_or_mutable_ref_fails_before_output_or_host_configuration (test_fixed_install.FixedInstallTests.test_invalid_or_mutable_ref_fails_before_output_or_host_configuration) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5038884Z test_malformed_source_objects_are_rejected_as_identity_errors (test_fixed_install.FixedInstallTests.test_malformed_source_objects_are_rejected_as_identity_errors) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5042342Z test_remote_annotated_and_lightweight_tags_resolve_to_the_commit (test_fixed_install.FixedInstallTests.test_remote_annotated_and_lightweight_tags_resolve_to_the_commit) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5524947Z test_tagged_entry_binds_manifest_source_and_all_skill_digests (test_fixed_install.FixedInstallTests.test_tagged_entry_binds_manifest_source_and_all_skill_digests) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5575208Z test_dangling_output_symlink_cannot_redirect_evidence_writes (test_fixed_recovery.FixedRecoveryTests.test_dangling_output_symlink_cannot_redirect_evidence_writes) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5603258Z test_existing_evidence_directory_is_never_overwritten (test_fixed_recovery.FixedRecoveryTests.test_existing_evidence_directory_is_never_overwritten) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5651113Z test_relative_output_remains_at_callers_location_after_installed_child_changes_directory (test_fixed_recovery.FixedRecoveryTests.test_relative_output_remains_at_callers_location_after_installed_child_changes_directory) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5655793Z test_branch_and_escaping_destination_are_rejected (test_skill_vendor.VendorTests.test_branch_and_escaping_destination_are_rejected) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.5659441Z test_development_tag_is_immutable_version (test_skill_vendor.VendorTests.test_development_tag_is_immutable_version) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6468981Z test_local_override_uses_tag_not_dirty_worktree_or_cache (test_skill_vendor.VendorTests.test_local_override_uses_tag_not_dirty_worktree_or_cache) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6478183Z test_remote_ref_race_cannot_label_new_checkout_with_old_sha (test_skill_vendor.VendorTests.test_remote_ref_race_cannot_label_new_checkout_with_old_sha) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6514007Z test_existing_link_target_is_preserved_before_any_replacement (test_skill_vendor_self_contained.SelfContainedVendorTests.test_existing_link_target_is_preserved_before_any_replacement) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6573406Z test_invalid_second_source_does_not_replace_first_target_or_lock (test_skill_vendor_self_contained.SelfContainedVendorTests.test_invalid_second_source_does_not_replace_first_target_or_lock) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6598407Z test_linked_destination_is_rejected_even_when_it_stays_inside_repository (test_skill_vendor_self_contained.SelfContainedVendorTests.test_linked_destination_is_rejected_even_when_it_stays_inside_repository) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6631886Z test_links_are_rejected_including_root_directory_and_dangling (test_skill_vendor_self_contained.SelfContainedVendorTests.test_links_are_rejected_including_root_directory_and_dangling) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6657384Z test_offline_check_rejects_content_identical_external_link (test_skill_vendor_self_contained.SelfContainedVendorTests.test_offline_check_rejects_content_identical_external_link) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.6745838Z test_offline_check_rejects_missing_commit_or_digest_before_source_use (test_skill_vendor_self_contained.SelfContainedVendorTests.test_offline_check_rejects_missing_commit_or_digest_before_source_use) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.7270413Z test_public_check_rejects_equal_content_link_without_touching_user_files (test_skill_vendor_self_contained.SelfContainedVendorTests.test_public_check_rejects_equal_content_link_without_touching_user_files) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.8354249Z test_public_update_rejects_tagged_link_before_replacing_any_skill (test_skill_vendor_self_contained.SelfContainedVendorTests.test_public_update_rejects_tagged_link_before_replacing_any_skill) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.8359663Z test_regular_payload_retains_existing_digest (test_skill_vendor_self_contained.SelfContainedVendorTests.test_regular_payload_retains_existing_digest) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.8388272Z test_snapshot_drift_fails_without_refreshing_lock_or_other_skill (test_skill_vendor_self_contained.SelfContainedVendorTests.test_snapshot_drift_fails_without_refreshing_lock_or_other_skill) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.8448973Z test_valid_update_preserves_plugin_local_skill_and_binds_new_digest (test_skill_vendor_self_contained.SelfContainedVendorTests.test_valid_update_preserves_plugin_local_skill_and_binds_new_digest) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.8701199Z test_version_named_branch_is_not_a_release_tag (test_skill_vendor_self_contained.SelfContainedVendorTests.test_version_named_branch_is_not_a_release_tag) ... fatal: couldn't find remote ref refs/tags/v1.0.0
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:11.8727685Z ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7478022Z test_current_source_plan_identity_and_stale_fields (test_source_plan_identity.SourcePlanIdentityTests.test_current_source_plan_identity_and_stale_fields) ... ok
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7478721Z 
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7478904Z ----------------------------------------------------------------------
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7479282Z Ran 45 tests in 6.187s
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7479437Z 
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7479552Z OK
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7479972Z fetched /tmp/tmpjtog3krb/source@v1.0.0 -> 9c04d178b10aa5ce5f3a111739ee887ff5cf9231
+implementation	Run python3 -m unittest discover -s tests -v	2026-10-08T13:24:14.7480642Z using local tagged source for sample-skills: /tmp/tmpjtog3krb/source @ 9c04d178b10aa5ce5f3a111739ee887ff5cf9231
+implementation	Run python3 scripts/vendor/skill_vendor.py check	﻿2026-10-08T13:24:14.7696707Z ##[group]Run python3 scripts/vendor/skill_vendor.py check
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7697154Z ^[[36;1mpython3 scripts/vendor/skill_vendor.py check^[[0m
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7768144Z shell: /usr/bin/bash -e {0}
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7768424Z env:
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7768695Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7769182Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7769611Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7769998Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7770373Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7770746Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:14.7771068Z ##[endgroup]
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:16.2263039Z fetched https://github.com/full-aigc-skills/filmcraft-skills.git@v0.1.0-dev.42 -> 7adfa763b161bc2ff7ef3efae702e285965bf23a
+implementation	Run python3 scripts/vendor/skill_vendor.py check	2026-10-08T13:24:16.2264145Z skill vendor check: all managed skills match the lockfile
+implementation	Run actions/setup-node@v4	﻿2026-10-08T13:24:16.2424101Z ##[group]Run actions/setup-node@v4
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2424400Z with:
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2424613Z   node-version: 24.21.0
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2425028Z   always-auth: false
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2425249Z   check-latest: false
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2428071Z   token: ***
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2428290Z env:
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2428553Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2428979Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2429416Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2429808Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2430172Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2430542Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.2430861Z ##[endgroup]
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.3841913Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.3846926Z (node:2474) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.3848338Z (Use `node --trace-deprecation ...` to show where the warning was created)
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.3849909Z ##[group]Environment details
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.7750660Z node: v24.21.0
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.7751272Z npm: 11.19.0
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.7751698Z yarn: 1.22.22
+implementation	Run actions/setup-node@v4	2026-10-08T13:24:16.7752887Z ##[endgroup]
+implementation	Runtime unit tests	﻿2026-10-08T13:24:16.7882198Z ##[group]Run npm test
+implementation	Runtime unit tests	2026-10-08T13:24:16.7882458Z ^[[36;1mnpm test^[[0m
+implementation	Runtime unit tests	2026-10-08T13:24:16.7953260Z shell: /usr/bin/bash -e {0}
+implementation	Runtime unit tests	2026-10-08T13:24:16.7953523Z env:
+implementation	Runtime unit tests	2026-10-08T13:24:16.7953802Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Runtime unit tests	2026-10-08T13:24:16.7954260Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+implementation	Runtime unit tests	2026-10-08T13:24:16.7954708Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Runtime unit tests	2026-10-08T13:24:16.7955086Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Runtime unit tests	2026-10-08T13:24:16.7955468Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+implementation	Runtime unit tests	2026-10-08T13:24:16.7955841Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+implementation	Runtime unit tests	2026-10-08T13:24:16.7956186Z ##[endgroup]
+implementation	Runtime unit tests	2026-10-08T13:24:17.0218299Z 
+implementation	Runtime unit tests	2026-10-08T13:24:17.0225999Z > @full-aigc-plugins/filmcraft@0.1.0-dev.48 test
+implementation	Runtime unit tests	2026-10-08T13:24:17.0227177Z > node --test test/harness/*.test.ts
+implementation	Runtime unit tests	2026-10-08T13:24:17.0227834Z 
+implementation	Runtime unit tests	2026-10-08T13:24:17.2530697Z ✔ private host grant binds the exact operation and is re-read for revocation and expiry (9.250772ms)
+implementation	Runtime unit tests	2026-10-08T13:24:17.2532840Z ✔ host grant files reject shared permissions, symlinks and ambiguous JSON (1.837792ms)
+implementation	Runtime unit tests	2026-10-08T13:24:17.2848577Z ﹣ actual Python native workflow binds SQL attempts, preserves original project and does not repeat a completed attempt (4.240557ms) # SKIP
+implementation	Runtime unit tests	2026-10-08T13:24:17.3040601Z ✔ public task mapping uses registered identity and keeps internal fields in the domain ledger (18.254055ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8188865Z ✔ legacy command receipt is linked without rewriting native integers or declaring completion (77.782461ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8221942Z ✔ conflicting identity, absent identity and duplicate JSON keys cannot become a successful receipt (64.439649ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8227817Z ✔ a moved or replaced candidate makes evidence stale and does not overwrite stored originals (66.774112ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8237699Z ✔ receipt paths reject traversal and symlinks before reading their targets (56.640528ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8239462Z ✔ strict lossless parsing preserves unsafe native integers and rejects ambiguity (1.558785ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8241307Z ✔ plan normalization keeps Python native hashes compatible and refuses duplicate or nonfinite values (185.488378ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8243230Z ✔ delivery mapping binds native project, input versions, packaged dependencies and exchange loss without quality PASS (446.263384ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8251639Z ✔ missing capability evidence remains unknown and a mismatching packaged dependency cannot be delivered (146.52895ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8359043Z ✔ legacy output execution maps declared new inputs separately from inherited project inputs (175.223132ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8388122Z ✔ failed-stage receipts retain original bytes and missing historical identities without following stage paths (44.679992ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8425296Z ✔ delivery without the same-attempt execution record remains unknown and cannot expose output artifacts (111.775579ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8447699Z ✔ execution owner PID must match the attempt and legacy missing process identity stays unknown (143.837115ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8477792Z ✔ old artifacts cannot be relabeled as a later task attempt even when plan and runtime match (327.451637ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8488001Z ✔ conflicting same-kind observations retain original CAS bytes and do not replace the original association (140.30221ms)
+implementation	Runtime unit tests	2026-10-08T13:24:19.8509906Z ✔ current missing process evidence cannot inherit an older linked conclusion from the receipt index (305.913142ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7222259Z ✔ read-only diagnosis sees committed WAL state without changing database, sidecars, projects or missing blob directories (35.413377ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7248032Z ✔ damaged database and missing receipts remain structured unknown and never create or overwrite state (6.64216ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7249835Z ✔ an actually running detached process remains occupied after its host state becomes unknown (69.274708ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7251654Z ✔ lost replies are diagnosed without writes and repaired only with fresh evidence, matching authorization and fenced intent (932.939679ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7254005Z ✔ changed candidate, missing export record or missing process identity cannot unlock or repair an unknown task (263.925261ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7255677Z ✔ recovery intent survives reopening; an active or expired old recovery owner cannot commit (145.919843ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7257809Z ✔ a partial receipt handoff remains diagnostically complete only when both current native records agree (586.826919ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7259619Z ✔ legacy ledger snapshots remain read-only and an explicit writer upgrades without replacing task or attempt identities (30.975851ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7261150Z ✔ CLI inspect and reconcile are both read-only; unknown diagnosis is explicit (313.09376ms)
+implementation	Runtime unit tests	2026-10-08T13:24:20.7262718Z ✔ freshly requested repair of an already reconciled attempt is read-only and does not create another recovery intent (696.786533ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2451585Z ✔ two actual recovery processes cannot apply the same uncertain attempt twice (654.912123ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2461457Z ✔ logical task identity corruption is diagnosed as unknown without rewriting corrupt bytes (8.383869ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2462663Z ✔ matching authorization references alone cannot authorize state repair (212.719757ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2463694Z ✔ expired or revoked host authorization cannot change an uncertain attempt (287.865003ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2464627Z ✔ legacy writer must require an explicit verified backup before migration (5.967253ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2476648Z ✔ continuation cannot substitute for independent state repair of an executed but uncertain attempt (205.625873ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2478634Z ✔ authorization revoked after recovery intent is durable abandons repair without releasing unknown occupancy (426.257335ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2485199Z ✔ an exited actual host does not imply its detached controlled child stopped (46.77581ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2487371Z ✔ CLI repair checks an actual private host grant rather than trusting reference flags (814.650296ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2604707Z ✔ schema1 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (87.68429ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2606472Z ✔ schema2 backup, upgrade and compatible rollback preserve unknown task, attempts, receipts and occupancy (70.888851ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2607515Z ✔ committed uncheckpointed WAL is preserved in backup and read-only diagnosis cannot alter any original sidecar (37.78488ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2608472Z ✔ a changed original during isolated inspection is unknown rather than a reusable old snapshot (20.232537ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2609698Z ✔ rollback refuses to discard new task records and does not overwrite the immutable old backup (30.69046ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2610542Z ✔ corrupt backups, unsupported ledgers and logical damage cannot be upgraded or claimed (37.5037ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2611363Z ✔ maintenance cannot run without authorization or while a live write lease is held (19.164964ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2617726Z ✔ an existing empty SQLite database is unknown, never an invitation to initialize FilmCraft state (2.190197ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2618704Z ✔ foreign and logically damaged ledgers are rejected before any backup or original SQLite write (18.325507ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2619604Z ✔ revocation after backup intent preserves original schema and the complete backup audit (43.318096ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2620462Z ✔ matching column names without FilmCraft structural constraints cannot claim a ledger (9.813922ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2621351Z ﹣ the actual previous installed dev45 core refuses schema3 without editing current state (0.061061ms) # SKIP
+implementation	Runtime unit tests	2026-10-08T13:24:23.2622309Z ✔ same idempotency key returns the original task; changed identity conflicts without replacing it (16.781698ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2623116Z ✔ task IDs cannot overwrite another caller and input versions remain bound (6.087087ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2624150Z ✔ project occupancy survives close/reopen and unknown execution does not free the writer (13.194065ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2625024Z ✔ expired leases are fenced without automatically taking over or accepting an old completion (10.639474ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2625902Z ✔ intent is committed before submission and accepted execution is not completed delivery (20.607601ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2627741Z ✔ missing stop confirmation remains unknown; receipts cannot be spliced across attempts (19.760363ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2629166Z ✔ deadline and unsupported state database refuse execution without editing user files (6.731734ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2629917Z ✔ two actual processes cannot acquire the same project writer (229.191449ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2631080Z ✔ aliased output parents share idempotency and occupancy even with a different project key (8.349238ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2632417Z ✔ an unrelated SQLite database with user_version 1 is rejected without changing its bytes (6.998321ms)
+implementation	Runtime unit tests	2026-10-08T13:24:23.2633170Z ℹ tests 60
+implementation	Runtime unit tests	2026-10-08T13:24:23.2633471Z ℹ suites 0
+implementation	Runtime unit tests	2026-10-08T13:24:23.2633809Z ℹ pass 58
+implementation	Runtime unit tests	2026-10-08T13:24:23.2634125Z ℹ fail 0
+implementation	Runtime unit tests	2026-10-08T13:24:23.2634463Z ℹ cancelled 0
+implementation	Runtime unit tests	2026-10-08T13:24:23.2634845Z ℹ skipped 2
+implementation	Runtime unit tests	2026-10-08T13:24:23.2635212Z ℹ todo 0
+implementation	Runtime unit tests	2026-10-08T13:24:23.2755811Z ℹ duration_ms 6202.24046
+implementation	Post Run actions/setup-node@v4	﻿2026-10-08T13:24:23.2859463Z Post job cleanup.
+implementation	Post Run actions/setup-node@v4	2026-10-08T13:24:23.4128797Z (node:2900) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+implementation	Post Run actions/setup-node@v4	2026-10-08T13:24:23.4129635Z (Use `node --trace-deprecation ...` to show where the warning was created)
+implementation	Post Run actions/setup-python@v5	﻿2026-10-08T13:24:23.4331877Z Post job cleanup.
+implementation	Post Run actions/setup-python@v5	2026-10-08T13:24:23.5624547Z (node:2908) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+implementation	Post Run actions/setup-python@v5	2026-10-08T13:24:23.5625404Z (Use `node --trace-deprecation ...` to show where the warning was created)
+implementation	Post Run actions/checkout@v4	﻿2026-10-08T13:24:23.5786824Z Post job cleanup.
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.6668253Z [command]/usr/bin/git version
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.6712720Z git version 2.55.0
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.6754323Z Temporarily overriding HOME='/home/runner/work/_temp/b4a106f4-c1f1-4ad0-b402-03de2c5a81a8' before making global git config changes
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.6755335Z Adding repository directory to the temporary git global config as a safe directory
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.6760360Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/filmcraft-plugin/filmcraft-plugin
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.6801879Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.6839186Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.7126827Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.7154495Z http.https://github.com/.extraheader
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.7167092Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.7204277Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.7473770Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+implementation	Post Run actions/checkout@v4	2026-10-08T13:24:23.7513295Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+implementation	Complete job	﻿2026-10-08T13:24:23.7925333Z Cleaning up orphan processes
+implementation	Complete job	2026-10-08T13:24:23.8220459Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

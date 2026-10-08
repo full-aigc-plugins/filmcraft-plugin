@@ -1,0 +1,455 @@
+documentation	Set up job	﻿2026-10-08T13:24:03.2698084Z Current runner version: '2.337.0'
+documentation	Set up job	2026-10-08T13:24:03.2715396Z ##[group]Runner Image Provisioner
+documentation	Set up job	2026-10-08T13:24:03.2715971Z Hosted Compute Agent
+documentation	Set up job	2026-10-08T13:24:03.2716398Z Version: 20260901.588
+documentation	Set up job	2026-10-08T13:24:03.2716809Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+documentation	Set up job	2026-10-08T13:24:03.2717303Z Build Date: 2026-09-01T19:56:44Z
+documentation	Set up job	2026-10-08T13:24:03.2717778Z Worker ID: {8084dcbb-3733-4c89-bca9-49d38b876e70}
+documentation	Set up job	2026-10-08T13:24:03.2718225Z Azure Region: centralus
+documentation	Set up job	2026-10-08T13:24:03.2718588Z ##[endgroup]
+documentation	Set up job	2026-10-08T13:24:03.2719486Z ##[group]Operating System
+documentation	Set up job	2026-10-08T13:24:03.2719906Z Ubuntu
+documentation	Set up job	2026-10-08T13:24:03.2720568Z 24.04.5
+documentation	Set up job	2026-10-08T13:24:03.2720895Z LTS
+documentation	Set up job	2026-10-08T13:24:03.2721214Z ##[endgroup]
+documentation	Set up job	2026-10-08T13:24:03.2721615Z ##[group]Runner Image
+documentation	Set up job	2026-10-08T13:24:03.2722032Z Image: ubuntu-24.04
+documentation	Set up job	2026-10-08T13:24:03.2722414Z Version: 20260927.320.1
+documentation	Set up job	2026-10-08T13:24:03.2723069Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+documentation	Set up job	2026-10-08T13:24:03.2724454Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+documentation	Set up job	2026-10-08T13:24:03.2725102Z ##[endgroup]
+documentation	Set up job	2026-10-08T13:24:03.2725809Z ##[group]GITHUB_TOKEN Permissions
+documentation	Set up job	2026-10-08T13:24:03.2727235Z Contents: read
+documentation	Set up job	2026-10-08T13:24:03.2727657Z Metadata: read
+documentation	Set up job	2026-10-08T13:24:03.2728047Z ##[endgroup]
+documentation	Set up job	2026-10-08T13:24:03.2729344Z Secret source: Actions
+documentation	Set up job	2026-10-08T13:24:03.2729994Z Cache mode: write
+documentation	Set up job	2026-10-08T13:24:03.2730740Z Prepare workflow directory
+documentation	Set up job	2026-10-08T13:24:03.2976367Z Prepare all required actions
+documentation	Set up job	2026-10-08T13:24:03.3009879Z Getting action download info
+documentation	Set up job	2026-10-08T13:24:03.5364581Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+documentation	Set up job	2026-10-08T13:24:03.6619642Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+documentation	Set up job	2026-10-08T13:24:03.7726491Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+documentation	Set up job	2026-10-08T13:24:03.9525739Z Complete job name: documentation
+documentation	Run actions/checkout@v4	﻿2026-10-08T13:24:03.9994134Z ##[group]Run actions/checkout@v4
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9994569Z with:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9994856Z   repository: full-aigc-plugins/filmcraft-plugin
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9996938Z   token: ***
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9997181Z   ssh-strict: true
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9997427Z   ssh-user: git
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9997680Z   persist-credentials: true
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9997958Z   clean: true
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9998208Z   sparse-checkout-cone-mode: true
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9998502Z   fetch-depth: 1
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9998747Z   fetch-tags: false
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9999000Z   show-progress: true
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9999250Z   lfs: false
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9999482Z   submodules: false
+documentation	Run actions/checkout@v4	2026-10-08T13:24:03.9999737Z   set-safe-directory: true
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0000025Z   allow-unsafe-pr-checkout: false
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0000525Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0670972Z Syncing repository: full-aigc-plugins/filmcraft-plugin
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0672349Z ##[group]Getting Git version info
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0672820Z Working directory is '/home/runner/work/filmcraft-plugin/filmcraft-plugin'
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0673525Z [command]/usr/bin/git version
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0745406Z git version 2.55.0
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0760526Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0775821Z Temporarily overriding HOME='/home/runner/work/_temp/532a9331-384e-4d7f-91be-f88eb53af102' before making global git config changes
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0777145Z Adding repository directory to the temporary git global config as a safe directory
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0779869Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/filmcraft-plugin/filmcraft-plugin
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0826036Z Deleting the contents of '/home/runner/work/filmcraft-plugin/filmcraft-plugin'
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0831189Z ##[group]Initializing the repository
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0832344Z [command]/usr/bin/git init /home/runner/work/filmcraft-plugin/filmcraft-plugin
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0937940Z hint: Using 'master' as the name for the initial branch. This default branch name
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0939264Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0940290Z hint: to use in all of your new repositories, which will suppress this warning,
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0941000Z hint: call:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0941365Z hint:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0941832Z hint: 	git config --global init.defaultBranch <name>
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0942458Z hint:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0943005Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0943895Z hint: 'development'. The just-created branch can be renamed via this command:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0944602Z hint:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0944979Z hint: 	git branch -m <name>
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0945417Z hint:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0946010Z hint: Disable this message with "git config set advice.defaultBranchName false"
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0947018Z Initialized empty Git repository in /home/runner/work/filmcraft-plugin/filmcraft-plugin/.git/
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.0950929Z [command]/usr/bin/git remote add origin https://github.com/full-aigc-plugins/filmcraft-plugin
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1040755Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1041539Z ##[group]Disabling automatic garbage collection
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1044716Z [command]/usr/bin/git config --local gc.auto 0
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1076883Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1077687Z ##[group]Setting up auth
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1081198Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1111013Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1427724Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1456733Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1642776Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1673254Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.1858390Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.2013750Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.2014422Z ##[group]Fetching the repository
+documentation	Run actions/checkout@v4	2026-10-08T13:24:04.2020326Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a891fd663667029362a3dd7982e86b88be0cf51f:refs/remotes/origin/main
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.2982224Z From https://github.com/full-aigc-plugins/filmcraft-plugin
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.2984377Z  * [new ref]         a891fd663667029362a3dd7982e86b88be0cf51f -> origin/main
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.2988633Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.2989962Z ##[group]Determining the checkout info
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.2991524Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.2992394Z [command]/usr/bin/git sparse-checkout disable
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.3040526Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.3066465Z ##[group]Checking out the ref
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.3069046Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.3955595Z Switched to a new branch 'main'
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.3958785Z branch 'main' set up to track 'origin/main'.
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.4006077Z ##[endgroup]
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.4008514Z [command]/usr/bin/git log -1 --format=%H
+documentation	Run actions/checkout@v4	2026-10-08T13:24:05.4029533Z a891fd663667029362a3dd7982e86b88be0cf51f
+documentation	Run actions/setup-python@v5	﻿2026-10-08T13:24:05.4371046Z ##[group]Run actions/setup-python@v5
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4371854Z with:
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4372406Z   python-version: 3.13
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4373050Z   check-latest: false
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4378806Z   token: ***
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4379388Z   update-environment: true
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4380060Z   allow-prereleases: false
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4380825Z   freethreaded: false
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.4381419Z ##[endgroup]
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.5225008Z ##[group]Installed versions
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.5295735Z (node:2081) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.5297971Z (Use `node --trace-deprecation ...` to show where the warning was created)
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.5299534Z Successfully set up CPython (3.13.15)
+documentation	Run actions/setup-python@v5	2026-10-08T13:24:05.5301435Z ##[endgroup]
+documentation	Run python3 scripts/validate_docs.py	﻿2026-10-08T13:24:05.5492037Z ##[group]Run python3 scripts/validate_docs.py
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5493442Z ^[[36;1mpython3 scripts/validate_docs.py^[[0m
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5774097Z shell: /usr/bin/bash -e {0}
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5774829Z env:
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5775548Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5776741Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5777949Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5779009Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5780078Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5781272Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:05.5782179Z ##[endgroup]
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5447217Z {
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5447936Z   "status": "passed",
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5448848Z   "scope": "documentation structure, local links, status honesty and spec/task traceability only",
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5449956Z   "markdownFiles": 357,
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5451274Z   "capabilities": 7,
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5451536Z   "requirements": 23,
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5451802Z   "scenarios": 112,
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5452099Z   "openImplementationTasks": 66,
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5452402Z   "errors": []
+documentation	Run python3 scripts/validate_docs.py	2026-10-08T13:24:06.5452630Z }
+documentation	Run actions/setup-node@v4	﻿2026-10-08T13:24:06.5584875Z ##[group]Run actions/setup-node@v4
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5585081Z with:
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5585229Z   node-version: 24
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5585386Z   always-auth: false
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5585543Z   check-latest: false
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5586941Z   token: ***
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5587085Z env:
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5587274Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5587563Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5587846Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5588105Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5588361Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5588624Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.5588842Z ##[endgroup]
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.6502749Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.6505881Z (node:2092) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.6506506Z (Use `node --trace-deprecation ...` to show where the warning was created)
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.6507984Z ##[group]Environment details
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.9513855Z node: v24.21.0
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.9514297Z npm: 11.19.0
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.9514703Z yarn: 1.22.22
+documentation	Run actions/setup-node@v4	2026-10-08T13:24:06.9515206Z ##[endgroup]
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	﻿2026-10-08T13:24:06.9617523Z ##[group]Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9617963Z ^[[36;1mnpx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive^[[0m
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9678252Z shell: /usr/bin/bash -e {0}
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9678403Z env:
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9678560Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9678814Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9679217Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9679430Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9679644Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9679865Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:06.9680063Z ##[endgroup]
+documentation	Run npx --yes @fission-ai/openspec@1.13.1 validate establish-v1-plugin --strict --no-interactive	2026-10-08T13:24:10.4113554Z Change 'establish-v1-plugin' is valid
+documentation	Check immutable public protocol owner bytes	﻿2026-10-08T13:24:10.4817162Z ##[group]Run actions/checkout@v4
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4817339Z with:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4817479Z   repository: full-aigc-plugins/artcraft-plugin
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4817666Z   ref: 09d4ac5b8ff82f8fe819189e4be487b45ab2472b
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4817830Z   path: .contract-authority
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4817963Z   fetch-depth: 0
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4819273Z   token: ***
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4819386Z   ssh-strict: true
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4819505Z   ssh-user: git
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4819627Z   persist-credentials: true
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4819760Z   clean: true
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4819903Z   sparse-checkout-cone-mode: true
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4820045Z   fetch-tags: false
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4820324Z   show-progress: true
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4820441Z   lfs: false
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4820547Z   submodules: false
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4820667Z   set-safe-directory: true
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4820807Z   allow-unsafe-pr-checkout: false
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4820943Z env:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4821091Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4821353Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4821590Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4821801Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4822012Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4822225Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.4822405Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5373772Z Syncing repository: full-aigc-plugins/artcraft-plugin
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5384283Z ##[group]Getting Git version info
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5385624Z Working directory is '/home/runner/work/filmcraft-plugin/filmcraft-plugin/.contract-authority'
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5409379Z [command]/usr/bin/git version
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5443990Z git version 2.55.0
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5460765Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5464984Z Temporarily overriding HOME='/home/runner/work/_temp/c1c838cb-2cab-4bb6-bbc4-6428c166eb22' before making global git config changes
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5465958Z Adding repository directory to the temporary git global config as a safe directory
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5469306Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/filmcraft-plugin/filmcraft-plugin/.contract-authority
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5497191Z ##[group]Initializing the repository
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5500762Z [command]/usr/bin/git init /home/runner/work/filmcraft-plugin/filmcraft-plugin/.contract-authority
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5538216Z hint: Using 'master' as the name for the initial branch. This default branch name
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5539041Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5539782Z hint: to use in all of your new repositories, which will suppress this warning,
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5540515Z hint: call:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5540733Z hint:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5561959Z hint: 	git config --global init.defaultBranch <name>
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5562295Z hint:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5562670Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5563278Z hint: 'development'. The just-created branch can be renamed via this command:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5563618Z hint:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5563819Z hint: 	git branch -m <name>
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5564041Z hint:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5564437Z hint: Disable this message with "git config set advice.defaultBranchName false"
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5565225Z Initialized empty Git repository in /home/runner/work/filmcraft-plugin/filmcraft-plugin/.contract-authority/.git/
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5566662Z [command]/usr/bin/git remote add origin https://github.com/full-aigc-plugins/artcraft-plugin
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5606083Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5606423Z ##[group]Disabling automatic garbage collection
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5609594Z [command]/usr/bin/git config --local gc.auto 0
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5635654Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5636033Z ##[group]Setting up auth
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5642001Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5670303Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5871439Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.5904844Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.6105184Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.6133835Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.6310051Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.6344235Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.6344615Z ##[group]Fetching the repository
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:10.6351103Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6604687Z From https://github.com/full-aigc-plugins/artcraft-plugin
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6605319Z  * [new branch]      main                     -> origin/main
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6605790Z  * [new tag]         v0.1.0-dev.0             -> v0.1.0-dev.0
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6606162Z  * [new tag]         v0.1.0-dev.1             -> v0.1.0-dev.1
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6606576Z  * [new tag]         v0.1.0-dev.10            -> v0.1.0-dev.10
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6606929Z  * [new tag]         v0.1.0-dev.100           -> v0.1.0-dev.100
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6607280Z  * [new tag]         v0.1.0-dev.101           -> v0.1.0-dev.101
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6607622Z  * [new tag]         v0.1.0-dev.102           -> v0.1.0-dev.102
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6607943Z  * [new tag]         v0.1.0-dev.103           -> v0.1.0-dev.103
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6608333Z  * [new tag]         v0.1.0-dev.104           -> v0.1.0-dev.104
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6608694Z  * [new tag]         v0.1.0-dev.105           -> v0.1.0-dev.105
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6609027Z  * [new tag]         v0.1.0-dev.106           -> v0.1.0-dev.106
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6609365Z  * [new tag]         v0.1.0-dev.107           -> v0.1.0-dev.107
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6609712Z  * [new tag]         v0.1.0-dev.108           -> v0.1.0-dev.108
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6610046Z  * [new tag]         v0.1.0-dev.109           -> v0.1.0-dev.109
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6610563Z  * [new tag]         v0.1.0-dev.11            -> v0.1.0-dev.11
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6610910Z  * [new tag]         v0.1.0-dev.110           -> v0.1.0-dev.110
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6611261Z  * [new tag]         v0.1.0-dev.111           -> v0.1.0-dev.111
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6611620Z  * [new tag]         v0.1.0-dev.112           -> v0.1.0-dev.112
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6611974Z  * [new tag]         v0.1.0-dev.113           -> v0.1.0-dev.113
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6612397Z  * [new tag]         v0.1.0-dev.113-runtime.1 -> v0.1.0-dev.113-runtime.1
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6612792Z  * [new tag]         v0.1.0-dev.114           -> v0.1.0-dev.114
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6613204Z  * [new tag]         v0.1.0-dev.115           -> v0.1.0-dev.115
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6613585Z  * [new tag]         v0.1.0-dev.116           -> v0.1.0-dev.116
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6614273Z  * [new tag]         v0.1.0-dev.117           -> v0.1.0-dev.117
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6614678Z  * [new tag]         v0.1.0-dev.118           -> v0.1.0-dev.118
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6615068Z  * [new tag]         v0.1.0-dev.119           -> v0.1.0-dev.119
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6615451Z  * [new tag]         v0.1.0-dev.12            -> v0.1.0-dev.12
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6615837Z  * [new tag]         v0.1.0-dev.120           -> v0.1.0-dev.120
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6616470Z  * [new tag]         v0.1.0-dev.121           -> v0.1.0-dev.121
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6616852Z  * [new tag]         v0.1.0-dev.122           -> v0.1.0-dev.122
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6617253Z  * [new tag]         v0.1.0-dev.122-runtime.1 -> v0.1.0-dev.122-runtime.1
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6617696Z  * [new tag]         v0.1.0-dev.123           -> v0.1.0-dev.123
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6618237Z  * [new tag]         v0.1.0-dev.123-runtime.1 -> v0.1.0-dev.123-runtime.1
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6618661Z  * [new tag]         v0.1.0-dev.124           -> v0.1.0-dev.124
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6619090Z  * [new tag]         v0.1.0-dev.124-runtime.1 -> v0.1.0-dev.124-runtime.1
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6619484Z  * [new tag]         v0.1.0-dev.125           -> v0.1.0-dev.125
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6619880Z  * [new tag]         v0.1.0-dev.125-runtime.1 -> v0.1.0-dev.125-runtime.1
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6620492Z  * [new tag]         v0.1.0-dev.13            -> v0.1.0-dev.13
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6620857Z  * [new tag]         v0.1.0-dev.14            -> v0.1.0-dev.14
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6621233Z  * [new tag]         v0.1.0-dev.15            -> v0.1.0-dev.15
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6621597Z  * [new tag]         v0.1.0-dev.16            -> v0.1.0-dev.16
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6621951Z  * [new tag]         v0.1.0-dev.17            -> v0.1.0-dev.17
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6622307Z  * [new tag]         v0.1.0-dev.18            -> v0.1.0-dev.18
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6622664Z  * [new tag]         v0.1.0-dev.19            -> v0.1.0-dev.19
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6623021Z  * [new tag]         v0.1.0-dev.20            -> v0.1.0-dev.20
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6623379Z  * [new tag]         v0.1.0-dev.21            -> v0.1.0-dev.21
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6623736Z  * [new tag]         v0.1.0-dev.22            -> v0.1.0-dev.22
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6624090Z  * [new tag]         v0.1.0-dev.23            -> v0.1.0-dev.23
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6624577Z  * [new tag]         v0.1.0-dev.24            -> v0.1.0-dev.24
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6624999Z  * [new tag]         v0.1.0-dev.25            -> v0.1.0-dev.25
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6625347Z  * [new tag]         v0.1.0-dev.26            -> v0.1.0-dev.26
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6625735Z  * [new tag]         v0.1.0-dev.27            -> v0.1.0-dev.27
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6626076Z  * [new tag]         v0.1.0-dev.28            -> v0.1.0-dev.28
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6626422Z  * [new tag]         v0.1.0-dev.29            -> v0.1.0-dev.29
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6626774Z  * [new tag]         v0.1.0-dev.3             -> v0.1.0-dev.3
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6627137Z  * [new tag]         v0.1.0-dev.30            -> v0.1.0-dev.30
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6627499Z  * [new tag]         v0.1.0-dev.31            -> v0.1.0-dev.31
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6627852Z  * [new tag]         v0.1.0-dev.32            -> v0.1.0-dev.32
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6628210Z  * [new tag]         v0.1.0-dev.33            -> v0.1.0-dev.33
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6628579Z  * [new tag]         v0.1.0-dev.34            -> v0.1.0-dev.34
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6628942Z  * [new tag]         v0.1.0-dev.35            -> v0.1.0-dev.35
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6629318Z  * [new tag]         v0.1.0-dev.36            -> v0.1.0-dev.36
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6629676Z  * [new tag]         v0.1.0-dev.37            -> v0.1.0-dev.37
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6630033Z  * [new tag]         v0.1.0-dev.38            -> v0.1.0-dev.38
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6630611Z  * [new tag]         v0.1.0-dev.4             -> v0.1.0-dev.4
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6631051Z  * [new tag]         v0.1.0-dev.40            -> v0.1.0-dev.40
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6631408Z  * [new tag]         v0.1.0-dev.41            -> v0.1.0-dev.41
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6631974Z  * [new tag]         v0.1.0-dev.42            -> v0.1.0-dev.42
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6632331Z  * [new tag]         v0.1.0-dev.43            -> v0.1.0-dev.43
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6632696Z  * [new tag]         v0.1.0-dev.44            -> v0.1.0-dev.44
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6633045Z  * [new tag]         v0.1.0-dev.45            -> v0.1.0-dev.45
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6633422Z  * [new tag]         v0.1.0-dev.46            -> v0.1.0-dev.46
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6633919Z  * [new tag]         v0.1.0-dev.47            -> v0.1.0-dev.47
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6634284Z  * [new tag]         v0.1.0-dev.48            -> v0.1.0-dev.48
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6634645Z  * [new tag]         v0.1.0-dev.49            -> v0.1.0-dev.49
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6635001Z  * [new tag]         v0.1.0-dev.5             -> v0.1.0-dev.5
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6635356Z  * [new tag]         v0.1.0-dev.50            -> v0.1.0-dev.50
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6635707Z  * [new tag]         v0.1.0-dev.51            -> v0.1.0-dev.51
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6636067Z  * [new tag]         v0.1.0-dev.52            -> v0.1.0-dev.52
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6636436Z  * [new tag]         v0.1.0-dev.53            -> v0.1.0-dev.53
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6636789Z  * [new tag]         v0.1.0-dev.54            -> v0.1.0-dev.54
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6637143Z  * [new tag]         v0.1.0-dev.55            -> v0.1.0-dev.55
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6637495Z  * [new tag]         v0.1.0-dev.56            -> v0.1.0-dev.56
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6637851Z  * [new tag]         v0.1.0-dev.57            -> v0.1.0-dev.57
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6638209Z  * [new tag]         v0.1.0-dev.58            -> v0.1.0-dev.58
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6638562Z  * [new tag]         v0.1.0-dev.59            -> v0.1.0-dev.59
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6638920Z  * [new tag]         v0.1.0-dev.6             -> v0.1.0-dev.6
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6639272Z  * [new tag]         v0.1.0-dev.60            -> v0.1.0-dev.60
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6639627Z  * [new tag]         v0.1.0-dev.61            -> v0.1.0-dev.61
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6639992Z  * [new tag]         v0.1.0-dev.62            -> v0.1.0-dev.62
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6640588Z  * [new tag]         v0.1.0-dev.63            -> v0.1.0-dev.63
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6640950Z  * [new tag]         v0.1.0-dev.64            -> v0.1.0-dev.64
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6641297Z  * [new tag]         v0.1.0-dev.65            -> v0.1.0-dev.65
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6641642Z  * [new tag]         v0.1.0-dev.66            -> v0.1.0-dev.66
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6642004Z  * [new tag]         v0.1.0-dev.67            -> v0.1.0-dev.67
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6642350Z  * [new tag]         v0.1.0-dev.68            -> v0.1.0-dev.68
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6642696Z  * [new tag]         v0.1.0-dev.69            -> v0.1.0-dev.69
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6643042Z  * [new tag]         v0.1.0-dev.7             -> v0.1.0-dev.7
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6643393Z  * [new tag]         v0.1.0-dev.70            -> v0.1.0-dev.70
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6643773Z  * [new tag]         v0.1.0-dev.71            -> v0.1.0-dev.71
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6644123Z  * [new tag]         v0.1.0-dev.72            -> v0.1.0-dev.72
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6644461Z  * [new tag]         v0.1.0-dev.73            -> v0.1.0-dev.73
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6644791Z  * [new tag]         v0.1.0-dev.74            -> v0.1.0-dev.74
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6645128Z  * [new tag]         v0.1.0-dev.75            -> v0.1.0-dev.75
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6645475Z  * [new tag]         v0.1.0-dev.76            -> v0.1.0-dev.76
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6645850Z  * [new tag]         v0.1.0-dev.77            -> v0.1.0-dev.77
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6646232Z  * [new tag]         v0.1.0-dev.78            -> v0.1.0-dev.78
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6646588Z  * [new tag]         v0.1.0-dev.79            -> v0.1.0-dev.79
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6646952Z  * [new tag]         v0.1.0-dev.8             -> v0.1.0-dev.8
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6647303Z  * [new tag]         v0.1.0-dev.80            -> v0.1.0-dev.80
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6647650Z  * [new tag]         v0.1.0-dev.81            -> v0.1.0-dev.81
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6647998Z  * [new tag]         v0.1.0-dev.82            -> v0.1.0-dev.82
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6648610Z  * [new tag]         v0.1.0-dev.83            -> v0.1.0-dev.83
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6648968Z  * [new tag]         v0.1.0-dev.84            -> v0.1.0-dev.84
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6649360Z  * [new tag]         v0.1.0-dev.85            -> v0.1.0-dev.85
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6649776Z  * [new tag]         v0.1.0-dev.86            -> v0.1.0-dev.86
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6650565Z  * [new tag]         v0.1.0-dev.87            -> v0.1.0-dev.87
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6651232Z  * [new tag]         v0.1.0-dev.88            -> v0.1.0-dev.88
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6651628Z  * [new tag]         v0.1.0-dev.89            -> v0.1.0-dev.89
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6652002Z  * [new tag]         v0.1.0-dev.9             -> v0.1.0-dev.9
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6652356Z  * [new tag]         v0.1.0-dev.90            -> v0.1.0-dev.90
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6652986Z  * [new tag]         v0.1.0-dev.91            -> v0.1.0-dev.91
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6653403Z  * [new tag]         v0.1.0-dev.92            -> v0.1.0-dev.92
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6653857Z  * [new tag]         v0.1.0-dev.93            -> v0.1.0-dev.93
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6654238Z  * [new tag]         v0.1.0-dev.94            -> v0.1.0-dev.94
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6654640Z  * [new tag]         v0.1.0-dev.95            -> v0.1.0-dev.95
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6655012Z  * [new tag]         v0.1.0-dev.96            -> v0.1.0-dev.96
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6655364Z  * [new tag]         v0.1.0-dev.97            -> v0.1.0-dev.97
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6655729Z  * [new tag]         v0.1.0-dev.98            -> v0.1.0-dev.98
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6656089Z  * [new tag]         v0.1.0-dev.99            -> v0.1.0-dev.99
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6657158Z [command]/usr/bin/git rev-parse --verify --quiet 09d4ac5b8ff82f8fe819189e4be487b45ab2472b^{object}
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6657693Z 09d4ac5b8ff82f8fe819189e4be487b45ab2472b
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6658466Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6661015Z ##[group]Determining the checkout info
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6661572Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6661953Z [command]/usr/bin/git sparse-checkout disable
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6702618Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6727986Z ##[group]Checking out the ref
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.6731075Z [command]/usr/bin/git checkout --progress --force 09d4ac5b8ff82f8fe819189e4be487b45ab2472b
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7583254Z Note: switching to '09d4ac5b8ff82f8fe819189e4be487b45ab2472b'.
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7583657Z 
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7583910Z You are in 'detached HEAD' state. You can look around, make experimental
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7584400Z changes and commit them, and you can discard any commits you make in this
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7584861Z state without impacting any branches by switching back to a branch.
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7585094Z 
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7585320Z If you want to create a new branch to retain commits you create, you may
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7585761Z do so (now or later) by using -c with the switch command. Example:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7585993Z 
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7586106Z   git switch -c <new-branch-name>
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7586260Z 
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7586365Z Or undo this operation with:
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7586502Z 
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7586582Z   git switch -
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7586688Z 
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7586937Z Turn off this advice by setting config variable advice.detachedHead to false
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7587202Z 
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7587840Z HEAD is now at 09d4ac5 修复固定领域归档前缀并同步独立技能源 dev.81
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7601631Z ##[endgroup]
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7642259Z [command]/usr/bin/git log -1 --format=%H
+documentation	Check immutable public protocol owner bytes	2026-10-08T13:24:11.7666876Z 09d4ac5b8ff82f8fe819189e4be487b45ab2472b
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	﻿2026-10-08T13:24:11.7774889Z ##[group]Run python3 -I -B scripts/contract_reference.py --authority .contract-authority
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7775236Z ^[[36;1mpython3 -I -B scripts/contract_reference.py --authority .contract-authority^[[0m
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7829753Z shell: /usr/bin/bash -e {0}
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7829897Z env:
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7830338Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7830626Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7830876Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7831089Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7831307Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7831525Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.7831710Z ##[endgroup]
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.8195673Z {
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.8195927Z   "status": "passed",
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.8196157Z   "scope": "git-content",
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.8196402Z   "errors": []
+documentation	Run python3 -I -B scripts/contract_reference.py --authority .contract-authority	2026-10-08T13:24:11.8196517Z }
+documentation	Post Check immutable public protocol owner bytes	﻿2026-10-08T13:24:11.8292700Z Post job cleanup.
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.8835060Z [command]/usr/bin/git version
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.8867176Z git version 2.55.0
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.8891250Z Temporarily overriding HOME='/home/runner/work/_temp/84355839-c6e5-4617-97dd-546a0a2d318c' before making global git config changes
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.8892392Z Adding repository directory to the temporary git global config as a safe directory
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.8895160Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/filmcraft-plugin/filmcraft-plugin/.contract-authority
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.8926774Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.8955801Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.9162408Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.9188120Z http.https://github.com/.extraheader
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.9196736Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.9226858Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.9424302Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+documentation	Post Check immutable public protocol owner bytes	2026-10-08T13:24:11.9454467Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+documentation	Post Run actions/setup-node@v4	﻿2026-10-08T13:24:11.9740803Z Post job cleanup.
+documentation	Post Run actions/setup-node@v4	2026-10-08T13:24:12.0711152Z (node:2372) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+documentation	Post Run actions/setup-node@v4	2026-10-08T13:24:12.0739184Z (Use `node --trace-deprecation ...` to show where the warning was created)
+documentation	Post Run actions/setup-python@v5	﻿2026-10-08T13:24:12.0850487Z Post job cleanup.
+documentation	Post Run actions/setup-python@v5	2026-10-08T13:24:12.1614762Z (node:2380) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+documentation	Post Run actions/setup-python@v5	2026-10-08T13:24:12.1615301Z (Use `node --trace-deprecation ...` to show where the warning was created)
+documentation	Post Run actions/checkout@v4	﻿2026-10-08T13:24:12.1729174Z Post job cleanup.
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2486738Z [command]/usr/bin/git version
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2498699Z git version 2.55.0
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2524782Z Temporarily overriding HOME='/home/runner/work/_temp/a6dd7c05-48d4-49f5-bd98-049d81cbe66b' before making global git config changes
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2525455Z Adding repository directory to the temporary git global config as a safe directory
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2531557Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/filmcraft-plugin/filmcraft-plugin
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2564730Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2592386Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2794530Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2816096Z http.https://github.com/.extraheader
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2834108Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.2857723Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.3055587Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+documentation	Post Run actions/checkout@v4	2026-10-08T13:24:12.3085656Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+documentation	Complete job	﻿2026-10-08T13:24:12.3375224Z Cleaning up orphan processes
+documentation	Complete job	2026-10-08T13:24:12.3582640Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

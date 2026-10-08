@@ -1,4 +1,6 @@
 import { randomUUID } from 'node:crypto';
+import { requireAuthorization } from './authorization.ts';
+import type { Authorizer } from './authorization.ts';
 import { dirname } from 'node:path';
 import { TaskLedger } from './task_ledger.ts';
 import { forensicSnapshot } from './forensic_snapshot.ts';
@@ -24,7 +26,10 @@ function processState(pid: unknown): ProcessObservation {
 export class RecoveryService {
   file: string;
   blobs: string;
-  constructor(file: string, blobs: string) { this.file = file; this.blobs = blobs; }
+  authorize?: Authorizer;
+  constructor(file: string, blobs: string, options: { authorize?: Authorizer } = {}) {
+    this.file = file; this.blobs = blobs; this.authorize = options.authorize;
+  }
   inspect(taskId: string): Inspection {
     const base = { schema: 'filmcraft-inspection/v1', taskId, task: null, process: { status: 'unknown', pid: null },
       bindingSha256: null, contentSha256: null, receipts: { delivery: null, execution: null }, replayAllowed: false };
@@ -71,10 +76,13 @@ export class RecoveryService {
     check(before.evidenceSha256 === request.inspectionSha256, 'inspection_stale');
     check(before.task?.epoch === request.expectedEpoch, 'stale_epoch');
     check(before.diagnosis === 'executed' && before.process.status === 'stopped', 'outcome_unknown');
+    const subject = { action: 'repair' as const, identitySha256: before.bindingSha256! };
+    const permitted = () => requireAuthorization(this.authorize, request, subject);
     const reused = forensicSnapshot(this.file, db => {
       const task = db.getTask(taskId), binding = task.binding;
       check(task.epoch === request.expectedEpoch && sha256(stableJson(binding)) === before.bindingSha256, 'stale_epoch');
       check(request.authorizationRef === binding.authorizationRef && request.authorizationScopeSha256 === binding.authorizationScopeSha256, 'authorization_required');
+      permitted();
       if (task.state === 'verifying') {
         const index = new ReceiptIndex(db, this.blobs, { readOnly: true }), receipt = index.collect(taskId, task.attemptId!);
         check(receipt.status === 'linked', 'recovery_evidence_stale');
@@ -90,6 +98,7 @@ export class RecoveryService {
     try {
       const binding = db.getTask(taskId).binding;
       check(request.authorizationRef === binding.authorizationRef && request.authorizationScopeSha256 === binding.authorizationScopeSha256, 'authorization_required');
+      permitted();
       lease = db.beginRecovery(taskId, request.expectedEpoch, before.evidenceSha256, randomUUID());
       const current = this.inspect(taskId);
       check(current.diagnosis === 'executed' && current.contentSha256 === before.contentSha256, 'recovery_evidence_stale');
@@ -100,6 +109,7 @@ export class RecoveryService {
         && delivery.sha256 === current.receipts.delivery && execution.sha256 === current.receipts.execution, 'recovery_evidence_stale');
       const final = this.inspect(taskId);
       check(final.diagnosis === 'executed' && final.contentSha256 === before.contentSha256, 'recovery_evidence_stale');
+      permitted();
       db.finishRecovery(lease, final.evidenceSha256, delivery.sha256, execution.sha256);
       return { taskId, attemptId: lease.attemptId, state: db.getTask(taskId).state, replayed: false, reused: false, recoveryId: lease.recoveryId,
         receipt: index.collect(taskId, lease.attemptId) };

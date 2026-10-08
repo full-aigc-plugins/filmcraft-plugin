@@ -9,7 +9,7 @@ import { ReceiptIndex } from '../src/artifacts/receipt_index.ts';
 import { PythonWorkflowRunner, fingerprintSkill } from '../src/adapters/python_workflow.ts';
 import { publicTask } from '../src/adapters/protocol_mapping.ts';
 import { normalizePlan } from '../src/adapters/plan_identity.ts';
-import { parseJson, sha256 } from '../src/support/json.ts';
+import { parseJson, sha256, stableJson } from '../src/support/json.ts';
 import { RecoveryService } from '../src/harness/recovery.ts';
 
 const args = Object.fromEntries(Array.from({ length: (process.argv.length - 2) / 2 }, (_, i) =>
@@ -140,7 +140,8 @@ try {
   const lostRunner = new PythonWorkflowRunner(db, lostIndex, runner.options);
   await assert.rejects(lostRunner.run(lostTask, planFile), /injected_second_receipt_handoff_lost/);
   assert.equal(lostIndex.collect(lostTask.taskId, db.getTask(lostTask.taskId).attemptId!).status, 'unknown');
-  const service = new RecoveryService(dbFile, partialBlobs), observation = service.inspect(lostTask.taskId);
+  const service = new RecoveryService(dbFile, partialBlobs, { authorize: (subject, request) => ({ ...request,
+    expiresAt: Date.now() + 60_000, subjectSha256: sha256(stableJson(subject)) }) }), observation = service.inspect(lostTask.taskId);
   assert.equal(observation.diagnosis, 'executed');
   const repaired = service.repair(lostTask.taskId, { expectedEpoch: observation.task!.epoch,
     inspectionSha256: observation.evidenceSha256, authorizationRef: lostTask.authorizationRef,

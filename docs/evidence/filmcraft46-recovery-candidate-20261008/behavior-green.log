@@ -1,0 +1,13 @@
+✔ matching authorization references alone cannot authorize state repair (190.343625ms)
+✔ expired or revoked host authorization cannot change an uncertain attempt (238.673333ms)
+✔ legacy writer has no verified backup gate (3.982875ms)
+✔ existing empty SQLite is not owned (1.141ms)
+✔ matching columns without ownership constraints are not enough (4.768958ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 530.2475

@@ -30,7 +30,7 @@ function stopped(pid: number) {
   try { process.kill(-pid, 0); return false; }
   catch (error: any) { return error.code === 'ESRCH'; }
 }
-export type WorkflowOptions = { python?: string; skillDirectory: string; sourceRevision: string; runtimeHome: string; pluginVersion: string };
+export type WorkflowOptions = { python?: string; skillDirectory: string; sourceRevision: string; runtimeHome: string; pluginVersion: string; beforeDispatch?: () => void };
 
 /** 内部领域执行适配；宿主先验证授权范围。本适配不重试、不承担预算或用户接受。 */
 export class PythonWorkflowRunner {
@@ -71,6 +71,7 @@ export class PythonWorkflowRunner {
         mode: 'headless', capabilitySnapshotSha256: sha256(stableJson(snapshot)) } };
   }
   async run(binding: Binding, planFile: string, source?: string) {
+    this.options.beforeDispatch?.();
     binding = { ...binding, outputRoot: canonicalTarget(binding.outputRoot) };
     if (source) { source = realpathSync(source); }
     const prepared = this.prepare(planFile, binding.outputRoot, source);
@@ -82,6 +83,7 @@ export class PythonWorkflowRunner {
     check(prepared.sourceTreeSha256 === binding.sourceTreeSha256
       && this.options.sourceRevision === binding.sourceRevision, 'source_identity_conflict');
     check(stableJson(prepared.runtimeIdentity) === stableJson(binding.runtimeIdentity), 'runtime_identity_conflict');
+    this.options.beforeDispatch?.();
     const registered = this.ledger.register(binding);
     // 同一幂等身份已运行过时只返回原任务，不启动第二次 Python 原生执行。
     if (registered.state !== 'planned' && registered.state !== 'ready') {
@@ -99,6 +101,7 @@ export class PythonWorkflowRunner {
       check(fingerprintSkill(this.options.skillDirectory) === binding.sourceTreeSha256, 'source_changed');
       const attempt = this.ledger.beginAttempt(lease, 'workflow:' + binding.nativePlanHash);
       check(attempt.fresh, 'outcome_unknown');
+      this.options.beforeDispatch?.();
       const argv = ['-I', '-B', join(resolve(this.options.skillDirectory), 'scripts/workflow.py'), resolve(planFile),
         '--output', binding.outputRoot, '--runtime-home', resolve(this.options.runtimeHome)];
       if (source) { argv.push('--source', resolve(source)); }

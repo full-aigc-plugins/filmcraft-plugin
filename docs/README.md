@@ -43,3 +43,5 @@ OpenSpec is the sole behavioral authority; this documentation provides explanati
 Current-source HD segmented candidate passes 1080p / 24 fps / five seconds and animated-title checks; immutable installed releases and Art HD remain pending. [Architecture and evidence](FilmCraft-HD-Sequence-Architecture.md).
 
 - [Skill snapshot preflight](Skill-Snapshot-Self-Contained.md) · [技能快照预检](Skill-Snapshot-Self-Contained.zh_CN.md)
+
+[Recovery architecture and compatibility](FilmCraft-Recovery-Architecture.md)

@@ -1,36 +1,63 @@
 import { parseArgs } from 'node:util';
+import { dirname, basename, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { LocalAuthorizationStore } from '../harness/authorization.ts';
 import { RecoveryService } from '../harness/recovery.ts';
-import { check, HarnessError } from '../support/json.ts';
+import { ContinuationService } from '../harness/continuation.ts';
+import { StateMaintenance } from '../harness/state_maintenance.ts';
+import { readBoundFile } from '../artifacts/receipt_index.ts';
+import { check, HarnessError, parseJson } from '../support/json.ts';
 
-/** 显式区分只读诊断与账本修复；不提供删除锁或重放编辑的快捷入口。 */
-function main() {
+/** 只读诊断、状态修复、原生继续及状态维护各走独立门禁。 */
+async function main() {
   const { values, positionals } = parseArgs({ allowPositionals: true, options: {
     ledger: { type: 'string' }, blobs: { type: 'string' }, task: { type: 'string' }, help: { type: 'boolean' },
-    'expected-epoch': { type: 'string' }, 'inspection-sha256': { type: 'string' },
-    'authorization-ref': { type: 'string' }, 'authorization-scope-sha256': { type: 'string' },
+    'authorization-root': { type: 'string' }, 'expected-epoch': { type: 'string' }, 'inspection-sha256': { type: 'string' },
+    'authorization-ref': { type: 'string' }, 'authorization-scope-sha256': { type: 'string' }, backup: { type: 'string' },
+    'child-binding': { type: 'string' }, plan: { type: 'string' }, 'runtime-home': { type: 'string' }, python: { type: 'string' },
   } });
   if (values.help) {
-    console.log('node src/cli/recovery.ts inspect|reconcile|repair --ledger FILE --blobs DIRECTORY --task ID\n'
-      + 'inspect and reconcile are read-only. repair additionally requires --expected-epoch, --inspection-sha256, --authorization-ref and --authorization-scope-sha256.');
+    console.log('node src/cli/recovery.ts inspect|reconcile|repair|continue|upgrade|rollback --ledger FILE\n'
+      + 'inspect/reconcile: read-only; --blobs DIRECTORY --task ID.\n'
+      + 'repair/continue: additionally --expected-epoch --inspection-sha256 --authorization-ref --authorization-scope-sha256 --authorization-root.\n'
+      + 'continue: additionally --child-binding FILE --plan FILE --runtime-home DIRECTORY [--python FILE]. Original task must be independently repaired to verifying.\n'
+      + 'upgrade/rollback: --backup DIRECTORY --authorization-ref --authorization-scope-sha256 --authorization-root. Private host grants are never created by this CLI.');
     return;
   }
   const action = positionals[0];
-  check(positionals.length === 1 && ['inspect', 'reconcile', 'repair'].includes(action)
-    && values.ledger && values.blobs && values.task, 'invalid_recovery_arguments');
-  const service = new RecoveryService(values.ledger, values.blobs);
-  if (action !== 'repair') {
+  check(positionals.length === 1 && ['inspect','reconcile','repair','continue','upgrade','rollback'].includes(action)
+    && values.ledger, 'invalid_recovery_arguments');
+  const authorize = !['inspect','reconcile'].includes(action) && values['authorization-root']
+    ? new LocalAuthorizationStore(values['authorization-root']).authorize : undefined;
+  const authorization = { authorizationRef: values['authorization-ref']!, authorizationScopeSha256: values['authorization-scope-sha256']! };
+  if (action === 'upgrade' || action === 'rollback') {
+    check(values.backup && authorization.authorizationRef && authorization.authorizationScopeSha256, 'invalid_recovery_arguments');
+    const service = new StateMaintenance(values.ledger, { authorize });
+    console.log(JSON.stringify(action === 'upgrade' ? service.upgrade(values.backup, authorization) : service.rollback(values.backup, authorization)));
+    return;
+  }
+  check(values.blobs && values.task, 'invalid_recovery_arguments');
+  const service = new RecoveryService(values.ledger, values.blobs, { authorize });
+  if (action === 'inspect' || action === 'reconcile') {
     const report = service.inspect(values.task); console.log(JSON.stringify(report));
     process.exitCode = report.diagnosis === 'unknown' ? 2 : 0; return;
   }
   check(values['expected-epoch'] !== undefined && /^[0-9]+$/.test(values['expected-epoch'])
     && Number.isSafeInteger(Number(values['expected-epoch'])) && values['inspection-sha256']
-    && values['authorization-ref'] && values['authorization-scope-sha256'], 'invalid_recovery_arguments');
-  const report = service.repair(values.task, { expectedEpoch: Number(values['expected-epoch']),
-    inspectionSha256: values['inspection-sha256'], authorizationRef: values['authorization-ref'],
-    authorizationScopeSha256: values['authorization-scope-sha256'] });
+    && authorization.authorizationRef && authorization.authorizationScopeSha256, 'invalid_recovery_arguments');
+  const request = { ...authorization, expectedEpoch: Number(values['expected-epoch']), inspectionSha256: values['inspection-sha256'] };
+  if (action === 'repair') { console.log(JSON.stringify(service.repair(values.task, request))); return; }
+  check(values['child-binding'] && values.plan && values['runtime-home'], 'invalid_recovery_arguments');
+  const bindingPath = resolve(values['child-binding']), child = parseJson(readBoundFile(dirname(bindingPath), basename(bindingPath)).toString('utf8'));
+  const plugin = fileURLToPath(new URL('../../', import.meta.url));
+  const manifest = parseJson(readBoundFile(plugin, 'plugin.json').toString('utf8'));
+  const lock = parseJson(readBoundFile(plugin, 'skills.lock.json').toString('utf8'));
+  const report = await new ContinuationService(values.ledger, values.blobs, { authorize }).continue(values.task, request,
+    child, values.plan, { skillDirectory: join(plugin, 'skills/filmcraft-use'), sourceRevision: lock.sources[0].sha,
+      pluginVersion: manifest.version, runtimeHome: values['runtime-home'], python: values.python });
   console.log(JSON.stringify(report));
 }
-try { main(); }
+try { await main(); }
 catch (error) {
   console.log(JSON.stringify({ schema: 'filmcraft-recovery-error/v1', replayAllowed: false,
     error: { code: error instanceof HarnessError ? error.code : 'recovery_failed' } }));

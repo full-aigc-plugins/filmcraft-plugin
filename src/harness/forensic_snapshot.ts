@@ -30,6 +30,7 @@ export function forensicSnapshot<T>(file: string, observe: (ledger: TaskLedger, 
     db = new TaskLedger(copied, { readOnly: true });
     check(Object.values(db.db.prepare('PRAGMA quick_check').get() ?? {})[0] === 'ok', 'ledger_integrity_failed');
     check(db.db.prepare('PRAGMA foreign_key_check').all().length === 0, 'ledger_integrity_failed');
+    db.verifyIntegrity();
     // SHM 的活动读锁不参与任务版本；本函数既不读取也不打开原 SHM。
     const result = observe(db, { database: captured.database, wal: captured['-wal'] });
     check(stableJson(identity(read())) === stableJson(captured), 'ledger_changed');

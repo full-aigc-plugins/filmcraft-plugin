@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { randomUUID } from 'node:crypto';
 import { isAbsolute, normalize } from 'node:path';
@@ -16,10 +17,14 @@ export type Binding = {
 export type Lease = { taskId: string; attemptId: string; owner: string; epoch: number; expiresAt: number };
 export type RecoveryLease = Lease & { recoveryId: string };
 type Row = Record<string, any>;
-const APPLICATION_ID = 0x46434c47;
-const RECOVERY_SCHEMA = `CREATE TABLE recovery_intents(intent_id TEXT PRIMARY KEY, task_id TEXT NOT NULL REFERENCES tasks(task_id),
+export const APPLICATION_ID = 0x46434c47;
+export const RECOVERY_SCHEMA = `CREATE TABLE recovery_intents(intent_id TEXT PRIMARY KEY, task_id TEXT NOT NULL REFERENCES tasks(task_id),
   attempt_id TEXT NOT NULL REFERENCES attempts(attempt_id), epoch INTEGER NOT NULL, owner TEXT NOT NULL, lease_until INTEGER NOT NULL,
   evidence_sha256 TEXT NOT NULL, state TEXT NOT NULL, completion_sha256 TEXT, reason TEXT, UNIQUE(task_id,epoch)) STRICT;`;
+export const CONTINUATION_SCHEMA = `CREATE TABLE continuation_intents(intent_id TEXT PRIMARY KEY,
+  parent_task_id TEXT NOT NULL REFERENCES tasks(task_id), parent_attempt_id TEXT NOT NULL REFERENCES attempts(attempt_id),
+  parent_epoch INTEGER NOT NULL, child_task_id TEXT NOT NULL UNIQUE REFERENCES tasks(task_id),
+  binding_sha256 TEXT NOT NULL, evidence_sha256 TEXT NOT NULL, state TEXT NOT NULL, UNIQUE(parent_task_id,child_task_id)) STRICT;`;
 function identifier(value: unknown) { return typeof value === 'string' && value.length > 0 && value.length <= 256; }
 function validate(binding: Binding) {
   check(isObject(binding), 'invalid_task_binding');
@@ -52,6 +57,7 @@ export class TaskLedger {
   db: DatabaseSync;
   readOnly: boolean;
   constructor(file: string, options: { readOnly?: boolean } = {}) {
+    const existed = existsSync(file);
     this.readOnly = options.readOnly === true;
     this.db = new DatabaseSync(file, { readOnly: this.readOnly });
     try {
@@ -59,17 +65,18 @@ export class TaskLedger {
       if (this.readOnly) {
         this.db.exec('PRAGMA query_only=ON;');
         const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-        check(version === 1 || version === 2, 'ledger_schema_unsupported');
+        check(version === 1 || version === 2 || version === 3, 'ledger_schema_unsupported');
         this.verifySchema(version);
       } else {
         this.transaction(() => {
           const version = (this.db.prepare('PRAGMA user_version').get() as Row).user_version;
-          check(version === 0 || version === 1 || version === 2, 'ledger_schema_unsupported');
+          check(version === 0 || version === 1 || version === 2 || version === 3, 'ledger_schema_unsupported');
           if (version > 0) {
             this.verifySchema(version);
-            if (version === 1) { this.db.exec(RECOVERY_SCHEMA + ' PRAGMA user_version=2;'); }
+            check(version === 3, 'ledger_upgrade_required');
             return;
           }
+          check(!existed, 'ledger_schema_unknown');
           check(!this.db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'").get(), 'ledger_schema_unknown');
           this.db.exec(`
             CREATE TABLE tasks(task_id TEXT PRIMARY KEY, namespace TEXT NOT NULL, idem TEXT NOT NULL,
@@ -81,7 +88,8 @@ export class TaskLedger {
             CREATE TABLE receipts(task_id TEXT NOT NULL REFERENCES tasks(task_id), attempt_id TEXT NOT NULL REFERENCES attempts(attempt_id),
               kind TEXT NOT NULL, sha256 TEXT NOT NULL, summary TEXT NOT NULL, status TEXT NOT NULL, PRIMARY KEY(attempt_id, kind)) STRICT;
             ${RECOVERY_SCHEMA}
-            PRAGMA user_version=2;
+            ${CONTINUATION_SCHEMA}
+            PRAGMA user_version=3;
             PRAGMA application_id=${APPLICATION_ID};
           `);
         });
@@ -97,12 +105,74 @@ export class TaskLedger {
       attempts: 'attempt_id,task_id,epoch,operation_key,state,pid,receipt_sha256',
       receipts: 'task_id,attempt_id,kind,sha256,summary,status',
     };
-    if (version === 2) { expected.recovery_intents = 'intent_id,task_id,attempt_id,epoch,owner,lease_until,evidence_sha256,state,completion_sha256,reason'; }
+    if (version >= 2) { expected.recovery_intents = 'intent_id,task_id,attempt_id,epoch,owner,lease_until,evidence_sha256,state,completion_sha256,reason'; }
+    if (version >= 3) { expected.continuation_intents = 'intent_id,parent_task_id,parent_attempt_id,parent_epoch,child_task_id,binding_sha256,evidence_sha256,state'; }
     const tables = this.db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name").all() as Row[];
     check(tables.map(row => row.name).join(',') === Object.keys(expected).sort().join(','), 'ledger_schema_unknown');
+    check(!this.db.prepare("SELECT name FROM sqlite_master WHERE type IN ('view','trigger')").get(), 'ledger_schema_unknown');
     for (const [name, columns] of Object.entries(expected)) {
-      const actual = this.db.prepare('SELECT name FROM pragma_table_info(?)').all(name) as Row[];
+      const actual = this.db.prepare('SELECT name,type,"notnull",pk FROM pragma_table_info(?)').all(name) as Row[];
       check(actual.map(row => row.name).join(',') === columns, 'ledger_schema_unknown');
+      const strict = this.db.prepare('SELECT strict FROM pragma_table_list WHERE name=?').get(name) as Row;
+      check(strict?.strict === 1, 'ledger_schema_unknown');
+      const nullable: Record<string, string[]> = { tasks: ['owner','lease_until','attempt_id'], attempts: ['pid','receipt_sha256'],
+        recovery_intents: ['completion_sha256','reason'] };
+      const primary: Record<string, string[]> = { tasks: ['task_id'], project_leases: ['project_key'], attempts: ['attempt_id'],
+        receipts: ['attempt_id','kind'], recovery_intents: ['intent_id'], continuation_intents: ['intent_id'] };
+      for (const column of actual) {
+        const integer = ['epoch','lease_until','pid','parent_epoch'].includes(column.name);
+        check(column.type === (integer ? 'INTEGER' : 'TEXT')
+          && column.notnull === (nullable[name]?.includes(column.name) ? 0 : 1)
+          && column.pk === Math.max(0, primary[name].indexOf(column.name) + 1), 'ledger_schema_unknown');
+      }
+      const unique: Record<string, string[]> = {
+        tasks: ['task_id', 'namespace,idem'], project_leases: ['project_key', 'task_id', 'output_root'],
+        attempts: ['attempt_id', 'task_id,operation_key'], receipts: ['attempt_id,kind'],
+        recovery_intents: ['intent_id', 'task_id,epoch'], continuation_intents: ['intent_id', 'child_task_id', 'parent_task_id,child_task_id'],
+      };
+      const indices = this.db.prepare('SELECT name FROM pragma_index_list(?) WHERE "unique"=1').all(name) as Row[];
+      const constraints = indices.map(index => (this.db.prepare('SELECT name FROM pragma_index_info(?) ORDER BY seqno')
+        .all(index.name) as Row[]).map(column => column.name).join(',')).sort();
+      check(stableJson(constraints) === stableJson(unique[name].sort()), 'ledger_schema_unknown');
+      const foreign: Record<string, string[]> = {
+        tasks: [], project_leases: ['task_id:tasks:task_id'], attempts: ['task_id:tasks:task_id'],
+        receipts: ['task_id:tasks:task_id','attempt_id:attempts:attempt_id'],
+        recovery_intents: ['task_id:tasks:task_id','attempt_id:attempts:attempt_id'],
+        continuation_intents: ['parent_task_id:tasks:task_id','parent_attempt_id:attempts:attempt_id','child_task_id:tasks:task_id'],
+      };
+      const keys = (this.db.prepare('SELECT "from","table","to" FROM pragma_foreign_key_list(?)').all(name) as Row[])
+        .map(key => key.from + ':' + key.table + ':' + key.to).sort();
+      check(stableJson(keys) === stableJson(foreign[name].sort()), 'ledger_schema_unknown');
+    }
+  }
+  /** 全表逻辑检查用于隔离诊断和升级预检；不修改旧结构或记录。 */
+  verifyIntegrity() {
+    const tasks = this.db.prepare('SELECT task_id FROM tasks').all() as Row[];
+    for (const row of tasks) {
+      const task = this.getTask(row.task_id);
+      if (task.attemptId && task.state !== 'running') { this.verifyAttempt(task.taskId, task.attemptId); }
+    }
+    for (const row of this.db.prepare('SELECT * FROM attempts').all() as Row[]) {
+      const task = this.getTask(row.task_id);
+      check(identifier(row.operation_key) && Number.isSafeInteger(row.epoch) && row.epoch > 0 && row.epoch <= task.epoch
+        && ['intent','submitted','unknown','succeeded','failed'].includes(row.state)
+        && (row.pid === null || Number.isSafeInteger(row.pid) && row.pid > 0), 'ledger_state_corrupt');
+    }
+    for (const row of this.db.prepare('SELECT * FROM project_leases').all() as Row[]) {
+      const task = this.getTask(row.task_id);
+      check(row.project_key === task.binding.projectKey && row.output_root === task.binding.outputRoot
+        && ['running','reconciling','cancel_requested'].includes(task.state), 'ledger_occupancy_corrupt');
+    }
+    for (const row of tasks) {
+      const task = this.getTask(row.task_id);
+      if (['running','reconciling','cancel_requested'].includes(task.state)) {
+        check(this.db.prepare('SELECT task_id FROM project_leases WHERE task_id=?').get(task.taskId), 'ledger_occupancy_corrupt');
+      }
+    }
+    for (const row of this.db.prepare('SELECT * FROM receipts').all() as Row[]) {
+      this.verifyAttempt(row.task_id, row.attempt_id);
+      check(['command','delivery','failed-stage','output-execution'].includes(row.kind) && isHash(row.sha256)
+        && ['linked','unknown','conflict','stale'].includes(row.status) && isObject(JSON.parse(row.summary)), 'ledger_receipt_corrupt');
     }
   }
   close() { this.db.close(); }
@@ -284,4 +354,44 @@ export class TaskLedger {
     if (!(this.db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='recovery_intents'").get())) { return []; }
     return this.db.prepare('SELECT * FROM recovery_intents WHERE task_id=? ORDER BY epoch').all(taskId) as Row[];
   }
+  /** 先登记新任务与继续意图；只接受已确认的原工程，不重用原生尝试。 */
+  beginContinuation(parentId: string, expectedEpoch: number, evidenceSha256: string, child: Binding) {
+    validate(child); child = { ...child, outputRoot: canonicalTarget(child.outputRoot) };
+    check(parentId !== child.taskId && isHash(evidenceSha256), 'invalid_continuation');
+    return this.transaction(() => {
+      const parent = this.getTask(parentId);
+      check(parent.epoch === expectedEpoch && parent.state === 'verifying' && parent.attemptId, 'stale_epoch');
+      const childHash = sha256(stableJson(child));
+      const existing = this.db.prepare('SELECT * FROM continuation_intents WHERE child_task_id=?').get(child.taskId) as Row | undefined;
+      if (existing) {
+        check(existing.parent_task_id === parentId && existing.parent_attempt_id === parent.attemptId
+          && existing.binding_sha256 === childHash, 'continuation_conflict');
+        this.getTask(child.taskId); return { intentId: existing.intent_id, reused: true };
+      }
+      check(!this.db.prepare('SELECT task_id FROM tasks WHERE task_id=? OR (namespace=? AND idem=?)')
+        .get(child.taskId, child.namespace, child.idempotencyKey), 'continuation_conflict');
+      const { taskId, ...identity } = child;
+      this.db.prepare('INSERT INTO tasks(task_id,namespace,idem,identity_hash,binding,state) VALUES(?,?,?,?,?,?)')
+        .run(taskId, child.namespace, child.idempotencyKey, sha256(stableJson(identity)), stableJson(child), 'planned');
+      const intentId = randomUUID();
+      this.db.prepare('INSERT INTO continuation_intents VALUES(?,?,?,?,?,?,?,?)')
+        .run(intentId, parentId, parent.attemptId, parent.epoch, taskId, childHash, evidenceSha256, 'pending');
+      return { intentId, reused: false };
+    });
+  }
+  /** 原子登记继续执行的观察状态；不把未知结果提升为完成。 */
+  observeContinuation(intentId: string) {
+    return this.transaction(() => {
+      const row = this.db.prepare('SELECT * FROM continuation_intents WHERE intent_id=?').get(intentId) as Row | undefined;
+      check(row, 'continuation_missing'); const child = this.getTask(row.child_task_id);
+      const state = child.state === 'verifying' ? 'applied' : child.state === 'failed' ? 'failed' : 'pending';
+      if (row.state !== state) { this.db.prepare('UPDATE continuation_intents SET state=? WHERE intent_id=?').run(state, intentId); }
+      return { intentId, state, childTaskId: child.taskId, childAttemptId: child.attemptId };
+    });
+  }
+  listContinuations(parentId: string) {
+    this.getTask(parentId);
+    return this.db.prepare('SELECT * FROM continuation_intents WHERE parent_task_id=? ORDER BY rowid').all(parentId) as Row[];
+  }
+
 }

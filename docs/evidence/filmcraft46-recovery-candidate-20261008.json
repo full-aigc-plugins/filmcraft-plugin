@@ -1,0 +1,121 @@
+{
+  "schema": "filmcraft-recovery-candidate/v1",
+  "result": "PASS",
+  "date": "2026-10-08",
+  "pluginVersion": "0.1.0-dev.46",
+  "sourceRef": "v0.1.0-dev.42",
+  "sourceSha": "7adfa763b161bc2ff7ef3efae702e285965bf23a",
+  "platform": "darwin-arm64",
+  "node": "24.18.0",
+  "python": "3.13.5",
+  "nativeRegression": {
+    "total": 60,
+    "passed": 60,
+    "skipped": 0
+  },
+  "pythonRegression": {
+    "total": 42,
+    "passed": 42
+  },
+  "matrixScenarios": 14,
+  "protocolValidation": {
+    "status": "passed",
+    "scope": "fixed owner schema mapping only; no host, budget or quality acceptance",
+    "authority": {
+      "repository": "https://github.com/full-aigc-plugins/artcraft-plugin.git",
+      "ref": "v0.1.0-dev.109",
+      "sha": "09d4ac5b8ff82f8fe819189e4be487b45ab2472b"
+    },
+    "schemaSha256": {
+      "taskSchema": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+      "artifactSchema": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d"
+    },
+    "validated": {
+      "publicTasks": 3,
+      "publicArtifacts": 26
+    }
+  },
+  "redEvidence": {
+    "baselineRef": "v0.1.0-dev.45",
+    "baselineCommit": "b622c705c305359c4ffdd1533c5c48f692200de0",
+    "baselineCodeFilesVerified": 26,
+    "tests": 5,
+    "targetFailures": 5,
+    "environmentFailures": 0,
+    "sameFixtureCurrentPassed": 5,
+    "scope": "Reconstructed after temporary logs disappeared; rerun against exact immutable baseline. Actual logs retained; not inferred from historic runs."
+  },
+  "implementationFilesSha256": {
+    "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+    "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+    "src/adapters/python_workflow.ts": "bb0005ac4fbf77d3f340b2fd954551ec6d6f90d74c7478b2de26b881d0cc409b",
+    "src/artifacts/receipt_index.ts": "ee4da70b480fcb85068d3e2c7a5bd16c60b34676e4638832b3c370da395f7cd6",
+    "src/cli/recovery.ts": "3bda655f6afcc7696342d7bd8d91b87234474361652a4a93da59ed424764fa2c",
+    "src/harness/authorization.ts": "9f2b2ff12289f36eeab0049740218ead33cdf4e5452cca85f039c191d70ed51f",
+    "src/harness/continuation.ts": "eacf061cc42e0311886a405d9b848d02b2ffed323470dba641c63e147185f43e",
+    "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+    "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+    "src/harness/state_maintenance.ts": "1d3422a9fa9adbf6b5e0895c055f9ac81dbfcc25997433ac7f5d0c4454aa1c9b",
+    "src/harness/task_ledger.ts": "d50ed0ccb17c7c86cf5dd1ec17df9ade5f7d31c5970e7e3fbfd5a48a9110b1ab",
+    "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+    "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62",
+    "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+    "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+    "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+    "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+    "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+    "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+    "scripts/validate_protocol_mapping.py": "60ddb28a89e2e30df847dec658ed19cc482f994f17d7c6bdf76f2d4e24be0413",
+    "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+    "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+    "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+    "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+    "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+    "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+    "scripts/verify_fixed_lineage.ts": "2b97f40437d59289099af74b454711da9c842ad771fa802600b943b910fe87e9",
+    "scripts/verify_fixed_recovery.py": "c156a0fe755f7f7e7019103bfa2c086e5c2548d748cfdc4f609d944dbc70d0d1",
+    "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+    "test/harness/authorization.test.ts": "89681a5e5f92e2f1676bf1ef9e238646d44084d85b91034a7214b3ba2d06eeef",
+    "test/harness/fixtures.ts": "d1b5e2c60f0d9237b0400f6cb7e46038d6da7e245ed7c5589bf65ed474cb1039",
+    "test/harness/native_workflow.test.ts": "a189aac0cc34d4c621ea7df8bfe6253a979645844fb0506e7de8baf4c3529608",
+    "test/harness/protocol_mapping.test.ts": "51a343405b131a1a195e6efe855635ac3d3a7609dd8ad6d8e96531e331f99ee8",
+    "test/harness/receipt_index.test.ts": "16809c9f0abfedcb4d3fd20bbe4d73cbcdfac724578bedd7e6fbe6decce03786",
+    "test/harness/recovery.test.ts": "6fafcb59a662b199f645c9913ecec68fc4bc27af0233dfd10c4b7b04f7f9e80e",
+    "test/harness/state_maintenance.test.ts": "a02af7a59f1676369c3a9c5cdb0ced096717fbbb6a0af8bf0c229807c863f983",
+    "test/harness/task_ledger.test.ts": "fc4af8a587d992d4d0e93a93fc42a87998df487a1e84b0757834dbc18a476341"
+  },
+  "originalPrivateEvidenceSha256": {
+    "native.log": "2fb27f7d8fa5f00565d34f6c7af7c03e6f5df351770bdd500d6657c35302088d",
+    "python.log": "fcc2689bb6c30356f67453fe186923b18aba82a1cf94c70f9a07ed0023f611cd",
+    "behavior-red.log": "14da20ade8f0ce0dfb109e17715ac0092f98d128e2cb3915c441567379569ae2",
+    "behavior-green.log": "0e8d998e104a2099948b4bc0bc3d2fbc110017273b2498c9e318390a9c2217a7",
+    "behavior-fixture.ts": "847ffb5b9f12151a53cfbdc46f74b20b04c5701867ff5ea88c6a5c650fb186e2",
+    "native.json": "f3517b89ed3b2935c216ae99d0334304c37ff16c2563849385b8ae9715029b29",
+    "matrix.jsonl": "33d5c27e66198fcca591403e1a16d9b3a5b995c1fa1f8f6e30dea460b3415e6e"
+  },
+  "evidenceFiles": {
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/behavior-fixture.ts": "847ffb5b9f12151a53cfbdc46f74b20b04c5701867ff5ea88c6a5c650fb186e2",
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/behavior-green.log": "0e8d998e104a2099948b4bc0bc3d2fbc110017273b2498c9e318390a9c2217a7",
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/behavior-red.log": "e4d18f67ea3e72a8e597731d0591837cf05dde3a002bad9f66b0e8de901008c7",
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/matrix.jsonl": "b2169e8dd073aafba3acc2667bed9874d6ba46ff4a0b9c5bfe513b0fa5f991d4",
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/native.json": "f3517b89ed3b2935c216ae99d0334304c37ff16c2563849385b8ae9715029b29",
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/native.log": "2fb27f7d8fa5f00565d34f6c7af7c03e6f5df351770bdd500d6657c35302088d",
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/protocol.json": "297770bce5dfa8aa8788751bd9b6b0b182a7e17490decfa5ec39c2d6ed5882f8",
+    "docs/evidence/filmcraft46-recovery-candidate-20261008/python.log": "be97c63bef856d3715d0ae9e3ec7f72f736d9dd52c72d73de5fdd1ab8f372186"
+  },
+  "digestSemantics": "Original digests identify private run bytes. Public evidence paths are redacted projections and have independent hashes. Assertions used original file manifests before projection.",
+  "fixedInstall": "NOT_RUN for dev46; actual immutable public-tag install required before tasks 9.16-9.18 close",
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN",
+  "fullV1": "INCOMPLETE",
+  "notAccepted": [
+    "complete Harness/public admission",
+    "full authorization configuration",
+    "budgets/cancellation",
+    "native runtime upgrades/draining",
+    "static TypeScript type checking",
+    "other platforms/hosts",
+    "independent quality and user acceptance"
+  ]
+}

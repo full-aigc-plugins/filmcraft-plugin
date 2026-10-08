@@ -1,0 +1,103 @@
+✖ matching authorization references alone cannot authorize state repair (391.697458ms)
+✖ expired or revoked host authorization cannot change an uncertain attempt (375.215125ms)
+✖ legacy writer has no verified backup gate (3.609709ms)
+✖ existing empty SQLite is not owned (1.73075ms)
+✖ matching columns without ownership constraints are not enough (3.693083ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 860.756042
+
+✖ failing tests:
+
+test at ../../.local/filmcraft-recovery-01a11a34-20261008/reconstructed-red-portable.test.ts:48:1
+✖ matching authorization references alone cannot authorize state repair (391.697458ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[PRIVATE_WORK]/reconstructed-red-portable.test.ts:52:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /authorization_verifier_required/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../../.local/filmcraft-recovery-01a11a34-20261008/reconstructed-red-portable.test.ts:58:1
+✖ expired or revoked host authorization cannot change an uncertain attempt (375.215125ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[PRIVATE_WORK]/reconstructed-red-portable.test.ts:62:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /authorization_expired/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../../.local/filmcraft-recovery-01a11a34-20261008/reconstructed-red-portable.test.ts:72:1
+✖ legacy writer has no verified backup gate (3.609709ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[PRIVATE_WORK]/reconstructed-red-portable.test.ts:72:285)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ledger_upgrade_required/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../../.local/filmcraft-recovery-01a11a34-20261008/reconstructed-red-portable.test.ts:73:1
+✖ existing empty SQLite is not owned (1.73075ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[PRIVATE_WORK]/reconstructed-red-portable.test.ts:73:179)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ledger_schema_unknown/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../../.local/filmcraft-recovery-01a11a34-20261008/reconstructed-red-portable.test.ts:74:1
+✖ matching columns without ownership constraints are not enough (3.693083ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file://[PRIVATE_WORK]/reconstructed-red-portable.test.ts:74:386)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ledger_schema_unknown/,
+    operator: 'throws',
+    diff: 'simple'
+  }

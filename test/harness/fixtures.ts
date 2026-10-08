@@ -1,3 +1,5 @@
+import { appendFileSync } from 'node:fs';
+import { sha256, stableJson } from '../../src/support/json.ts';
 import { mkdtempSync, realpathSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -19,4 +21,15 @@ export function binding(root: string, extra = {}) {
     authorizationRef: 'grant-1', authorizationScopeSha256: hash('b'),
     deadline: Date.now() + 3600_000, ...extra,
   };
+}
+
+/** 仅供合成测试的可信宿主授权；实际使用 LocalAuthorizationStore 或宿主自己的查询器。 */
+export function fixtureAuthorizer(subject: any, request: any) {
+  return { ...request, expiresAt: Date.now() + 60_000, subjectSha256: sha256(stableJson(subject)) };
+}
+
+/** 私有逐场景取证；无配置时不写文件，不替代行为断言。 */
+export function captureEvidence(scenario: string, layer: string, data: Record<string, unknown>) {
+  const file = process.env.FILMCRAFT_RECOVERY_EVIDENCE;
+  if (file) { appendFileSync(file, JSON.stringify({ scenario, layer, ...data }) + '\n', { mode: 0o600 }); }
 }

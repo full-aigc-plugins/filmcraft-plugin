@@ -4,7 +4,7 @@
 
 已有素材与剪辑需求进入，交付可重开的 `.fcproj`、素材清单、预览和成片。
 
-当前插件：`0.1.0-dev.40`；技能源：`0.1.0-dev.37`；13 个独立技能。
+当前插件：`0.1.0-dev.41`；技能源：`0.1.0-dev.38`；13 个独立技能。
 
 已验证首次使用平台：macOS arm64、Python 3.11+。固定运行时安装在用户数据目录，技能文件保留在宿主加载目录。当前为开发版本；完整首版验收及通用 Skills CLI 实际安装仍未完成。
 
@@ -105,9 +105,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.40 |
+| Metadata version | 0.1.0-dev.41 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.37 |
+| Skills source | filmcraft-skills / v0.1.0-dev.38 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

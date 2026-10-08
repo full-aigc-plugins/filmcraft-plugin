@@ -4,7 +4,7 @@ Four-domain RT-001 runtime source/integrity acceptance now covers every current 
 
 Edit existing media into a reopenable `.fcproj`, asset inventory, previews and a finished video.
 
-Current plugin: `0.1.0-dev.40`; skill source: `0.1.0-dev.37`; 13 independent skills.
+Current plugin: `0.1.0-dev.41`; skill source: `0.1.0-dev.38`; 13 independent skills.
 
 Verified first-use platform: macOS arm64 and Python 3.11+. Pinned runtimes install into the user data directory; skill files stay in their host-loaded directory. These are development releases; complete V1 acceptance and generic Skills CLI installation remain open.
 
@@ -104,9 +104,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.40 |
+| Metadata version | 0.1.0-dev.41 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.37 |
+| Skills source | filmcraft-skills / v0.1.0-dev.38 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

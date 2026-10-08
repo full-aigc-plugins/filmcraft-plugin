@@ -27,6 +27,43 @@ ALLOWED = {'native.command', 'asset.import', 'timeline.place', 'timeline.trim', 
            'captions.setText', 'captions.delete', 'captions.setTrack', 'mixer.setStrip',
            'effects.toggleAnimation', 'effects.setParam', 'lumetri.setInputLut'}
 
+
+# 领域包装操作的稳定字段合同；完整注册表 native.command 另行校验。
+PARAMETER_FIELDS = {
+    'asset.import': {'asset'},
+    'timeline.place': {'item', 'track', 'audioTrack', 'time', 'frame', 'seconds', 'insert', 'sourceIn', 'duration'},
+    'timeline.trim': {'clip', 'edge', 'mode', 'delta', 'deltaFrames'},
+    'timeline.move': {'moves', 'insert'},
+    'timeline.setTrack': {'track', 'locked', 'syncLock', 'enabled', 'muted', 'solo', 'name', 'volumeDb', 'pan'},
+    'timeline.select': {'clips', 'add', 'toggle'},
+    'clip.replaceFromBin': {'clips', 'item'},
+    'captions.newTrack': {'format', 'name', 'language'},
+    'captions.setStyle': {'track', 'font', 'size', 'color', 'background', 'backgroundColor', 'align',
+                          'anchor', 'margin', 'lineSpacing', 'outline', 'outlineColor', 'reset'},
+    'caption.add': {'track', 'text', 'startTicks', 'durationTicks'},
+    'captions.setText': {'caption', 'text', 'speaker'},
+    'captions.delete': {'captions', 'ripple'},
+    'captions.setTrack': {'track', 'name', 'format', 'language', 'enabled', 'locked', 'syncLock'},
+    'mixer.setStrip': {'strip', 'volumeDb'},
+    'effects.toggleAnimation': {'clip', 'effect', 'param', 'mask'},
+    'effects.setParam': {'clip', 'effect', 'param', 'mask', 'value', 'time'},
+    'lumetri.setInputLut': {'clip', 'asset'},
+}
+
+
+def validate_parameter_fields(command, params):
+    """未知字段拒绝且不回显；文本值保持原样，不能作为授权或额外命令。"""
+    if command == 'native.command':
+        return
+    if set(params) - PARAMETER_FIELDS[command]:
+        raise ValueError('invalid_workflow_parameters')
+    if command == 'timeline.move':
+        moves = params.get('moves', [])
+        if not isinstance(moves, list) or any(not isinstance(move, dict)
+                or set(move) - {'clip', 'track', 'time'} for move in moves):
+            raise ValueError('invalid_workflow_parameters')
+
+
 def sha(path):
     with Path(path).open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
@@ -226,6 +263,7 @@ def validate(plan, prior_assets=None):
         if item['command'] == 'timeline.trim' and type(item.get('params', {}).get('clip')) is int:
             trim_delta(item['params'])
         if item['command'] == 'timeline.move':
+            validate_parameter_fields(item['command'], item.get('params', {}))
             for move in item.get('params', {}).get('moves', []):
                 if type(move.get('clip')) is int:
                     ticks(move.get('time'), move['clip'])
@@ -270,6 +308,7 @@ def validate(plan, prior_assets=None):
                     or type(value) not in (int, float)
                     or abs(value) > sys.float_info.max or not math.isfinite(value)):
                 raise ValueError('invalid_track_gain')
+        validate_parameter_fields(item['command'], item.get('params', {}))
     if not isinstance(plan.get('assets',{}),dict):
         raise ValueError('invalid_assets')
     for asset in plan.get('assets',{}).values():

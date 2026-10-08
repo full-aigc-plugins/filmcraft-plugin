@@ -61,6 +61,14 @@
 - **AND** 顶层仅接受既有 document、assets、operations、frames、export、expectedProjectSha256、requires；操作对象仅接受 command、params、as；既有完整命令计划入口提示保持兼容
 - **AND** 原生参数、用户创作文本、宿主秘密引用和读取／写入根授权分别验证，不把该字段边界修复当作完整权限与秘密验收。
 
+
+#### Scenario: FC-RL-002-DOMAIN-PARAMETERS 领域包装操作拒绝未定义参数
+
+- **WHEN** 不可信领域工作流在既有包装操作的 params 或 timeline.move.moves 对象中加入未定义字段
+- **THEN** 公开入口 SHALL 在素材读取、运行时安装及输出创建前拒绝，返回固定 invalid_workflow_parameters，不回显未知字段名称或值
+- **AND** 原有静态增益、运动与 LUT 专项参数错误保持兼容；既有参数、结果引用和字幕中的创作文本仍按数据处理，不通过关键词过滤删除用户文本
+- **AND** native.command 的完整注册表参数、可信素材／输出根与宿主秘密引用仍须独立验收，不能由包装操作字段校验替代。
+
 ## Implementation evidence (non-normative)
 
 `docs/evidence/codex-current-release.json` binds current fixed releases to two actual Codex CLI/app-server versions, five enabled namespaced skills, installed public workflow outcomes and explicit exclusions. The corresponding bilingual Host-Verification-Architecture documents specify the repeatable check. RL-001 tasks remain unchecked until their full P0 prerequisites and scenarios pass.

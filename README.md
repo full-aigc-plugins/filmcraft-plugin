@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed dev.54/source46/public craft.5 passes all seven native media cases in an actual isolated Codex installation, preserving all13 skill and executable identities. OpenSpec9.32 and9.33 are complete;48 full-V1 tasks remain open. Scope is bounded to current macOS arm64, Codex and codecs; creative, user and other-platform acceptance remain open. [Fixed evidence](docs/evidence/filmcraft54-fixed-media-20261009/report.json).
+
 Fixed dev.51/source42 completes OpenSpec9.25–9.27:126 installed native/state tests without skips,49 matrix records including9 bounded revision cases,13 skills/44 execution files preserved; public protocol validation and all four release CI runs pass. Creative/manual and user acceptance remain open, with54 V1 tasks remaining. [Revision architecture](docs/FilmCraft-Revision-Architecture.md) · [Fixed evidence](docs/evidence/filmcraft51-fixed-revision-20261008.json).
 
 Fixed dev.50/source42 completes OpenSpec9.22–9.24:13 skills/40 execution files preserved,107 installed tests without skips,40 matrix records including8 independent quality cases, native reopen and temporal/audio calibration pass. All four release CI runs succeed. Creative review remains manual_review and user acceptance NOT_RUN. [Architecture](docs/FilmCraft-Quality-Architecture.md) · [Fixed evidence](docs/evidence/filmcraft50-fixed-quality-20261008.json). Complete V1 remains open (57 tasks).

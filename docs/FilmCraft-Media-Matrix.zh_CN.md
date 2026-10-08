@@ -1,5 +1,7 @@
 # 真实媒体矩阵
 
+固定 dev.54／source46／公开 craft.5 在真实隔离 Codex 安装完成七类原生媒体矩阵，13项技能与执行代码摘要保持不变；OpenSpec 9.32、9.33 已完成，完整 V1 仍有48项开放。验证仅覆盖当前 macOS arm64、Codex 和编码范围；创意、用户及其他平台验收仍开放。[固定安装证据](evidence/filmcraft54-fixed-media-20261009/report.json)。
+
 OpenSpec9.31已完成输入准备；9.32原生实现和9.33固定安装矩阵仍未完成。此处的PASS只证明输入、来源和预期完整，不能证明成片通过。
 
 ```mermaid

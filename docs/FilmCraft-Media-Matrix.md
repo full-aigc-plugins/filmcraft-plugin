@@ -1,6 +1,8 @@
 # Real media matrix
 
-OpenSpec9.31 input preparation is complete. Native implementation9.32 and fixed installed execution9.33 remain open. Preparation PASS proves input identity and declared expectations only.
+Fixed dev.54/source46/public craft.5 passes all seven native media cases in an actual isolated Codex installation, preserving all13 skill and executable identities. OpenSpec9.32 and9.33 are complete;48 full-V1 tasks remain open. Scope is bounded to current macOS arm64, Codex and codecs; creative, user and other-platform acceptance remain open. [Fixed evidence](evidence/filmcraft54-fixed-media-20261009/report.json).
+
+OpenSpec9.31–9.33 are complete within the fixed dev.54 evidence scope. Preparation alone proves input identity; native execution is separately measured below.
 
 ```mermaid
 flowchart LR
@@ -10,7 +12,7 @@ flowchart LR
     D --> M[7 cases and18 inputs]
     P --> M
     M --> E[Expected observations and known failures]
-    E --> N[Pending fixed native save reopen and export]
+    E --> N[Fixed native save reopen and export]
     N --> R[Per-case measurements and installed identity preservation]
 ```
 

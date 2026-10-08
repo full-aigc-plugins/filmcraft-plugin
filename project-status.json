@@ -101,7 +101,9 @@
     "9.28": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
     "9.29": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
     "9.30": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
-    "9.31": "docs/evidence/filmcraft-media-fixtures-20261008/summary.json"
+    "9.31": "docs/evidence/filmcraft-media-fixtures-20261008/summary.json",
+    "9.32": "docs/evidence/filmcraft54-fixed-media-20261009/report.json",
+    "9.33": "docs/evidence/filmcraft54-fixed-media-20261009/report.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -189,5 +191,7 @@
   "fixedRevisionEvidence": "docs/evidence/filmcraft51-fixed-revision-20261008.json",
   "fixedLayeredReleaseEvidence": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
   "mediaMatrixCandidateEvidence": "docs/evidence/filmcraft54-media-candidate-20261009/report.json",
-  "mediaMatrixCandidateStatus": "7/7 private craft.5 candidate media cases PASS; public runtime and source46 published; new fixed54 installation and matrix pending; tasks9.32/9.33 remain open"
+  "mediaMatrixCandidateStatus": "7/7 private candidate PASS; superseded for bounded acceptance by actual fixed54 public-runtime matrix",
+  "mediaMatrixFixedEvidence": "docs/evidence/filmcraft54-fixed-media-20261009/report.json",
+  "mediaMatrixFixedStatus": "tasks9.32/9.33 qualified: fixed54/source46/public craft.5;7/7 cases PASS;13 installed skills and code identities preserved; bounded macOS arm64 Codex/codecs only; full V1 remains48 tasks open"
 }

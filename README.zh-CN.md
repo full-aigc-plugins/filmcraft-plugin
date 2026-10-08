@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定 dev.54／source46／公开 craft.5 在真实隔离 Codex 安装完成七类原生媒体矩阵，13项技能与执行代码摘要保持不变；OpenSpec 9.32、9.33 已完成，完整 V1 仍有48项开放。验证仅覆盖当前 macOS arm64、Codex 和编码范围；创意、用户及其他平台验收仍开放。[固定安装证据](docs/evidence/filmcraft54-fixed-media-20261009/report.json)。
+
 固定dev.51／源42完成OpenSpec9.25—9.27：126项安装原生／状态测试无跳过、49类矩阵含9类受限修订专项、13技能／44执行文件保全，公共协议与四次发布CI通过。创作人工复核与用户接受仍开放，完整V1余54项。[修订架构](docs/FilmCraft-Revision-Architecture.zh_CN.md) · [固定证据](docs/evidence/filmcraft51-fixed-revision-20261008.json)。
 
 固定dev.50／源42完成OpenSpec9.22—9.24：13技能／40执行文件保全，107项安装测试无跳过、40类矩阵记录含8类独立质量专项、原生重开与时序音频校准通过；发布提交四次CI成功。创作仍manual_review，用户接受NOT_RUN。[架构](docs/FilmCraft-Quality-Architecture.zh_CN.md) · [固定证据](docs/evidence/filmcraft50-fixed-quality-20261008.json)。完整V1余57项开放。

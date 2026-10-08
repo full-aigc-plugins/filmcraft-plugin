@@ -1,5 +1,7 @@
 # Version-bound release records
 
+Fixed dev.54/source46/public craft.5 passes all seven native media cases in an actual isolated Codex installation, preserving all13 skill and executable identities. OpenSpec9.32 and9.33 are complete;48 full-V1 tasks remain open. Scope is bounded to current macOS arm64, Codex and codecs; creative, user and other-platform acceptance remain open. [Fixed evidence](docs/evidence/filmcraft54-fixed-media-20261009/report.json).
+
 ## 0.1.0-dev.54
 
 Pins source dev.46 and public craft.5, adding seven-case native media and fixed-host verifiers. Candidate matrix/actual Whisper/public native first use pass; new fixed-host/media qualification follows publication. Full V1 remains open.

@@ -116,7 +116,13 @@
     "5.1": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json",
     "5.2": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json",
     "5.3": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json",
-    "5.6": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json"
+    "5.6": "docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json",
+    "6.1": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+    "6.2": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+    "6.3": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+    "6.4": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+    "6.5": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+    "6.6": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -218,5 +224,7 @@
   "recoveryContractStatus": "tasks3.4-3.6 qualified: actual fixed58/source46/craft.5;133/133 installed tests without skips,14 required recovery rows among47 total rows and10/10 FC-TX-002 scenarios;13 installed skills and code preserved; bounded macOS arm64 Codex/headless only;42 V1 tasks remain open",
   "recoveryContractFixedEvidence": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json",
   "resourceContractFixedEvidence": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json",
-  "resourceContractStatus": "tasks3.7-3.9 qualified: all4 FC-TX-003 scenarios,16 required resource cases plus private CLI case, same fixed58/source46/craft.5 actual133/133 native/state run reused;13 skills/executable/test identities rechecked;39 V1 tasks open"
+  "resourceContractStatus": "tasks3.7-3.9 qualified: all4 FC-TX-003 scenarios,16 required resource cases plus private CLI case, same fixed58/source46/craft.5 actual133/133 native/state run reused;13 skills/executable/test identities rechecked;39 V1 tasks open",
+  "qualityRevisionContractEvidence": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+  "qualityRevisionContractStatus": "FC-QA-001/002 eight scenarios qualified in fixed59/source46/craft.5,135/135 installed tests and49 matrix rows. Native revision and budget stop verified; creative manual_review/user NOT_RUN/other platforms and full V1 remain open."
 }

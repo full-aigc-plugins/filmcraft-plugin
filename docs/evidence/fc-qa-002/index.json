@@ -1,0 +1,147 @@
+{
+  "requirement": "FC-QA-002",
+  "result": "PASS",
+  "fixedPlugin": {
+    "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
+    "version": "0.1.0-dev.59",
+    "ref": "v0.1.0-dev.59",
+    "sha": "f2b0fea4a35249bec87c6f6f7b43366f91fd8dfc",
+    "skillSourceSha": "472289353c4e08c58dab75b9cb994c3c526431b7",
+    "skillSourceRef": "v0.1.0-dev.46",
+    "pluginManifestSha256": "d27fd5e4c981e942af2d632ad7423dcfb47c00394b21028e158fa57a70a3f19c",
+    "skillSha256": "781563b33d3f20ed1f1077feac417c13c8230796d7de9bdb438633f4a4a7d29d",
+    "skills": {
+      "filmcraft-use": "781563b33d3f20ed1f1077feac417c13c8230796d7de9bdb438633f4a4a7d29d",
+      "filmcraft-cli": "20959a9da1fe17ad4b3db0df00b1788ed654ff25b2d5f88f61dbc617fdda64cf",
+      "filmcraft-cli-setup": "1a0ac5eea2c0008d26266263f0f3f39d590339e452bc56a4579632f05271df30",
+      "filmcraft-cli-project": "93ed9a47ba55e5de9dea0a2c2f8bad96e05dc1076232feca441c2c54989bbffe",
+      "filmcraft-cli-media": "2e7f5aed842f95049976ecf20e9482207884a00506a77c047a3cc1feb624fc51",
+      "filmcraft-cli-timeline": "e54947eaaf9614d59e067769c8d39611773f75b2ee4383538a6c5558870cce42",
+      "filmcraft-cli-audio": "1dbdd446efaa76f7f229a12ea4cf27dac638719a3fa5d0032aafc077537e2842",
+      "filmcraft-cli-subtitles": "c1571185f80b06d974be2a62d6d6539ed9292756818a8c1398c5a3e8917901c4",
+      "filmcraft-cli-color": "eafb41cb2ba8e515d4ef127df5f3db40c48054d06f983e60b0df568a029731a5",
+      "filmcraft-cli-motion": "6d2e229066ab58d98ec52ae3304963b8cda8830822840c1f9a268aa2d6e18d83",
+      "filmcraft-cli-export": "874d1bd07c99622237221bad11d226deadea62aa6b7cf5c07e11fd986ac355f8",
+      "filmcraft-cli-multicam": "6e1ee65ada297cd9f49bfa5c4e6803fb391981017537301f3d8a68b70090e166",
+      "filmcraft-cli-transcript": "e5fb5c70f9390a6248bb5653dea23a5fc7a6b8a9ffbc38a2c6ab6f6d294afc8f"
+    },
+    "codeFilesSha256": {
+      "package.json": "4bb522af3561800bf5a08c270bd4ac4966efc5e233079b1033de1016df7e5774",
+      "scripts/check_release.py": "2c56885534cf63b5d2fc063f9c1bed320d0a9002e7662c3ed4a522b83cc0b1f3",
+      "scripts/collect_release_layers.py": "064b89ad37ae1156bff782fd0e70666ce24e5794ed97c8e8ae1444de26d891f7",
+      "scripts/command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54",
+      "scripts/contract_reference.py": "442a6ceb3a1b03251a6d15cac5eef22536df08ee3fa52d86cdbbd04ac96118ff",
+      "scripts/current_facts.py": "2a0616bba27ff371cd605caf645283aca0965871106c68ed343cdf4f051ec67b",
+      "scripts/media_matrix.py": "762e9047131b4e41a8ccbaf7413442686cafb77f4b2e6645f982ca1d403e15d9",
+      "scripts/native_preflight.py": "478c2cfdc50949694eefd37768c04e069215d36bb2c2507391a3129a65760760",
+      "scripts/plan_identity.py": "b231ba959c56f5fe9ea157fccb511ec444d257824e4d098a66c20843c1c1085b",
+      "scripts/probe_workflow_writer.py": "27126388902856a91d2c443570fb33f4af2eb4dcdceba30942309afd90ac0570",
+      "scripts/process_identity.py": "2d239b424b34092e32b8c8105b71672511ad3253ccf177f9b633618e98bd1ae8",
+      "scripts/protocol_fixture.ts": "4729d8ccbb4f9718e00451f02ee1352a4b8484fe0b56ac0846e42fe9fd26fccb",
+      "scripts/release_evidence.py": "05b06b6cc5c7c7536f0067a3d103596026ddba83e553046c40970a79b0450008",
+      "scripts/review_media.py": "2b8b55958a032fc6a625c280a5a9f74bd3ee78ff0a17343ca36d69967fbf033b",
+      "scripts/validate_docs.py": "a32236bc7e7ce0b2ef0f4fcab3b267db56cb17b8509996d8a12e7f2b657058d0",
+      "scripts/validate_protocol_mapping.py": "fe8d39c98acaa8334c9576f842b850c2cb2f86932ddc4ce64c9c4ef2dd5edcc7",
+      "scripts/vendor/skill_vendor.py": "ce99651896676f7c64b0075fce0f6589c28f03954c39480d11b27aa158801570",
+      "scripts/verify_artifact_contract.ts": "3f3c0c3e6e5c6b5aa337ca7e7a7617e3ac16e1b354968d4333d5388e3b0a9694",
+      "scripts/verify_command_parity.py": "3d2794c71b3456a27c70f50e26b3b7b93acdd7859afed8b69ac0eddc809f802f",
+      "scripts/verify_fixed_admission.py": "5316d5e6622d1f28ba688ff0762c6116da8b005986b2ab190e4ee06d80dcd5c4",
+      "scripts/verify_fixed_artifacts.py": "6008c8e599465bd89ed26fe2b97b89245a934685152997278757dfd68262e78f",
+      "scripts/verify_fixed_capabilities.py": "7e61a155ae77de3361c18f78e004d831bdc8ab2d8a30ead3e007905a0ddbbbbd",
+      "scripts/verify_fixed_identity.py": "f10727c65fc87eb3a126d0fc0906a5845587ffefc8f036e16d9518d55306245f",
+      "scripts/verify_fixed_install.py": "fa52c0a5e7ad76c1294569ba912e3412cfa04618ef8a844e0257ed8f2f6e8485",
+      "scripts/verify_fixed_lineage.py": "496b242fc7848b5800b7b5bbebd2289a5310e2a51c61bce8c5149d6a71acefb7",
+      "scripts/verify_fixed_lineage.ts": "37aef833272f99d6f9c3a4e53cdbe86946302f2a063d55be1c3d0c59ec15faa1",
+      "scripts/verify_fixed_media.py": "bdf14e498066b979b95707d507937e75943d060eacae06b182ea40854c3c4421",
+      "scripts/verify_fixed_quality.py": "840f59f78cafbff9cff1f6a7bebdc80f97123ac152ed3979fc3e8bb69bd5bf1d",
+      "scripts/verify_fixed_recovery.py": "e7225bb0a35fbea4d5bfe689148909cb3abecc7e2b22c074aca6debe9fb59c8b",
+      "scripts/verify_fixed_resources.py": "8396fa07b9d627d4d07c07c24822c7c8ef2de90599a7116f147b46590c8288a4",
+      "scripts/verify_fixed_revision.py": "d5cd327586a74f27de504a70076099ff4503fef46820323e6307f6160237b19f",
+      "scripts/verify_media_matrix.py": "80fd452e32d27f0ecd0d75cea2afc3643c30909ccdb59ec5a879b9008811aee4",
+      "scripts/verify_protocol_gate.py": "3388c8654f6239a775748ac450ac0e9653a88cbc37672811330dc89e0c9a3ea5",
+      "scripts/verify_recovery_contract.py": "34b9b9c7b976ff5677fcd53127e9c14bebc31ed45c682599773bddba1186b9d6",
+      "scripts/verify_workflow_admission.ts": "7c24b8d3540df1f8250046d82da2ac25ce698ed3400877d8359558ac1dcf7414",
+      "scripts/verify_workflow_capabilities.py": "68faef451080328705003addc76c0aeb3cd7a94491ad7ed2cf592e40cdec9b1c",
+      "scripts/verify_writer_boundaries.py": "b5936502c52ed7f60b7be2e3eaf1693b9f654a20e2869a7dbc437053751174a4",
+      "src/adapters/plan_identity.ts": "5a39ced92088a97fadda2e90f47653e336fcdda2d0c09100f56fa3ebff1b7a89",
+      "src/adapters/protocol_mapping.ts": "24427fa37a7f19a6e258aa57c7d610a683670fcced4ae0612873b230c862e5a1",
+      "src/adapters/python_workflow.ts": "62961a27ae80c4ec562bc2dbd722c29cb6706505869bacabb8aa396cc3ea4d94",
+      "src/artifacts/exchange_loss.ts": "213bf786ec7be2c2c462900ebdb5e5a29ffcbc6e278230cc6137453e43581cff",
+      "src/artifacts/receipt_index.ts": "d93cda02a97852345005e0a7ed57663a47ed319dda8b7749a508287ff9c0c090",
+      "src/cli/recovery.ts": "c4838abe071cebe0bb97befb9b3316d0338d3548845cef9b8842bc742dc8c35f",
+      "src/cli/workflow.ts": "dcf6803877cd94b1c623e7766cf50b92e5a7e1845e9ef15b59b646b7dd310968",
+      "src/harness/authorization.ts": "dcf9f031e6a00c1249b39beff99d627cbf82a50730595c9d63d873c287ab3dfb",
+      "src/harness/cancellation.ts": "1cc300a4dfdc62dff137f1cbc3052a533f14307ed6d4c4c7d61d61f6c733b206",
+      "src/harness/continuation.ts": "5660d11ffb5045c095b00faf7314cf1e28ae064edb65956d96da6d59a2fc83ed",
+      "src/harness/forensic_snapshot.ts": "9286faf139aef81900d11693bd1de695e4cef48633a7f6277dd40ff43bb711b6",
+      "src/harness/process_identity.ts": "a0e66f96d8a62953ae73d98b2de9ca683961d2b8a24e2afb70ecb6d05a0c0584",
+      "src/harness/recovery.ts": "238173d38eeea4be173bb3b952fcdc64ed7ba17693f01f5b32d82badd504cd24",
+      "src/harness/resource_schema.ts": "6883104ecf3905a2488af8973d9462c40493403328a80f956ae4470a4c6ab010",
+      "src/harness/resources.ts": "9a02f1c595eb6e92455d45836c61f70e008bdcfc6ed0c8c6b10fc7937666479a",
+      "src/harness/state_maintenance.ts": "e598cce24fe11323c446eb55206f155555253c206a62734bfa2bdf13c961798a",
+      "src/harness/task_ledger.ts": "0179a2babb329b9b5641c6db4e875fbf93b04175db4a4d20bdf03e7d32e996dd",
+      "src/harness/workflow_admission.ts": "f441f5f10027926e6f3328e35c5436bde258714b6e1c1d30b9a45e276e7637b8",
+      "src/quality/native_revision_scope.ts": "bafc29e75fb2a533e2f2a35ba726f3bf1fdee2f40f294ea7b4dc5170a5368b52",
+      "src/quality/review_contract.ts": "745ae182cd5c1c837ef17639bc3da52c61b4f688cb6ec2b1e4cea25474202157",
+      "src/quality/review_service.ts": "27d821bec7e6ed3b06489df96688840f42a3536f46de04ca4f51fa7e20edd7d4",
+      "src/quality/revision_schema.ts": "52137d623f9c4f2d4875091ca0e04e6f9881c343d7d1a250196b65fc79e6cfe0",
+      "src/quality/revision_service.ts": "9972065d55744551627f94c8b8ee98139ac7f1c4e32199d479f7995833e8df66",
+      "src/support/json.ts": "787c3387b37adeb0edfb6d249151f260137b2e5940b8f896b92dde170c49ae4d",
+      "src/support/paths.ts": "c2a3cf91130ff53de7d69944467833d2d66c9d5f14645c11882a5acab9a83f62"
+    }
+  },
+  "scenarios": {
+    "FC-QA-002-P": {
+      "matrix": [
+        "actual-native-scoped-revision",
+        "revision-policy-restart"
+      ],
+      "passedTests": [
+        "persisted policy cannot reset rounds or expand field/goal scope; original authorization reference is reused",
+        "a new candidate needs its own review; old task PASS cannot be relabeled"
+      ]
+    },
+    "FC-QA-002-N": {
+      "matrix": [
+        "actual-native-revision-budget-best",
+        "revision-stagnation_limit",
+        "revision-failure-limit"
+      ],
+      "passedTests": [
+        "budget stop and stale best remain explicit; no last candidate is promoted"
+      ]
+    },
+    "FC-QA-002-REVISION-SCOPE": {
+      "matrix": [
+        "actual-native-scoped-revision",
+        "revision-scope-rejection"
+      ],
+      "passedTests": [
+        "stale project and unknown target reject before a native plan can be used",
+        "unsupported operation, ripple, owner, broad object field and dependency scope are refused",
+        "revision rejects field drift rather than approving the candidate",
+        "revision rejects track drift rather than approving the candidate",
+        "revision rejects dependency drift rather than approving the candidate",
+        "revision rejects interval drift rather than approving the candidate",
+        "revision rejects wrong-result drift rather than approving the candidate"
+      ]
+    },
+    "FC-QA-002-BOUNDED-LOOP": {
+      "matrix": [
+        "actual-native-revision-budget-best",
+        "revision-stagnation_limit",
+        "revision-round_limit",
+        "revision-failure-limit",
+        "revision-criteria-invalidated"
+      ],
+      "passedTests": [
+        "goal or rubric change invalidates all previous best evidence and permanently fences dispatch",
+        "unknown pending round blocks dispatch and cannot reuse its slot after a restart"
+      ]
+    }
+  },
+  "evidence": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+  "evidenceSha256": "df4739c4e09fae48e7d7cd762361dc382cbc6d41643ff48132685423c77478c3",
+  "scope": "Current fixed59/source46/craft.5 installed tests and native speed/duration revision, exact source and non-target preservation, independent measured review and durable budget/stop gates. Fixture identity/replay/scope tests are distinguished from actual native rows. Not arbitrary creative revision, other platforms, or user footage acceptance.",
+  "fullV1": "INCOMPLETE"
+}

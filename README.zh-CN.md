@@ -1,5 +1,8 @@
 # FilmCraft Agent Plugin
 
+固定 dev.59 质量与返工合同验收完成 OpenSpec6.1—6.6：FC-QA-001/002 全八场景绑定135/135实际安装测试及49条场景记录，包含真实原生局部修订与预算停止时最佳已验证版本保全。创作接受仍为 manual_review，用户与其他平台接受为 NOT_RUN，完整 V1 仍有29项开放。[证据](docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json)。
+
+
 固定dev.59／源46／公开craft.5在macOS arm64隔离Codex／headless验收FC-AR-001/002全部8场景：13技能／62执行文件保全，10类血缘＋15类产物用例通过，2公共任务／26产物通过固定ArtCraft schema。135项安装回归全部通过、零跳过；源码83项Python／132项Node通过，3项声明环境检查由安装运行补证。OpenSpec5.1—5.3及5.6完成，完整V1剩35项。创作manual_review，用户／其他平台NOT_RUN。[固定证据](docs/evidence/filmcraft59-fixed-artifact-contract-20261009/acceptance.json)。
 
 dev.59先前候选记录（已由上方固定验收补证）：源码候选10类血缘／15类产物用例覆盖FC-AR-001/002全部8场景，包含工程迁移重关联、缺失依赖、独立原生重开及质量回执身份。逐场景门禁拒绝证据缺失或拼接。源46／craft.5技能快照不变；新固定59安装待验收，5.1—5.3／5.6与39项完整V1任务仍开放。[候选证据](docs/evidence/filmcraft59-artifact-candidate-20261009/acceptance.json)。

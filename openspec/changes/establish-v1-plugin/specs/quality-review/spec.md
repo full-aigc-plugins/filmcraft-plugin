@@ -2,7 +2,7 @@
 
 ## Purpose
 
-本能力定义 FilmCraft 在 quality-review 范围内对用户、宿主与下游系统承诺的可观察行为、失败语义和验收证据，确保规划、执行与实际交付之间保持可验证的边界。当前为目标规范，尚未实现。
+本能力定义 FilmCraft 在 quality-review 范围内对用户、宿主与下游系统承诺的可观察行为、失败语义和验收证据，确保规划、执行与实际交付之间保持可验证的边界。当前 FC-QA-001/002 八个合同场景已在固定 dev.59/source46/craft.5 的 macOS arm64 隔离 Codex/headless 副本验收：135/135 测试、49 条场景记录，证据见 `docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json`。原生返工验证限于已支持的速度/时长等受限编译器，创作接受为 manual_review，用户接受及其他平台为 NOT_RUN；完整 V1 尚未完成。
 
 ## ADDED Requirements
 

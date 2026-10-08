@@ -57,3 +57,5 @@ python3 -I -B "$SKILL_DIR/scripts/workflow.py" /absolute/plan.json \
 [固定版本证据](evidence/craft-fixed-segmented-hd-refresh-20261008.json)：实际安装的 Film40/source37、Effect38/source34 和 Art117/source89 完成验证。Art 单技能从空运行时公开安装四领域及 Node/core，交付 1920×1080、24 fps、5 秒、120 帧、四段动画；独立解码全部 120 帧。Logo 替换只重建受影响任务，损坏帧拒绝、原字节恢复不重复扣预算，五子工程移动包通过。另一个双领域冷安装用例验证十二帧分段交接、文字返工时非目标动画关键帧不变、移动工程重开和旧交付保全。两个原生用例分别耗时 255.657 秒与 26.797 秒。首次双领域尝试因磁盘满在安装阶段失败，保留诊断，清理关闭缓存后另建空目录成功。
 
 以上补充了前文历史候选阶段缺失的固定发行和 HD 证据；前文未完成说明属于其当时版本。当前修改的指南尚待独立新发行安装验证；本报告不证明新版本、通用 Skills CLI、GUI、创意质量或完整 V1。
+
+固定 Film41/source38 与 Art118/source90 现已通过本分发门禁：23项新独立冷安装、64项安装身份、120帧HD混合返工／恢复／五子工程迁移，以及公开CLI帧率兼容／保存重开。仅关闭Art4.15和Film4.30／4.31／4.43，完整需求和V1仍开放。 [Evidence](evidence/craft-art118-segment-guide-fixed-first-use-20261008.json).

@@ -312,3 +312,5 @@ Film35固定标签宿主验收：五插件64技能身份与加载通过，错误
 固定发行 Film38／Effect38／Photo37／Vector35／Art109 已通过实际隔离 Codex 安装和发现 64 项技能、16 项安装副本协议文件摘要核对、五个全新领域缓存下的 64 项 CLI 探测。十项 ArtCraft 技能分别从空缓存完成原生 Photo 蒙版调整、源工程返工与迁移打包；另外 54 项技能仅复用整个技能摘要一致的历史原生证据。默认维护验收矩阵已更新；通用 Skills CLI 安装、模型调度、GUI 和完整 V1／协议验收仍开放。[本次固定证据](docs/evidence/craft-archive-prefix-fixed-first-use-20261008.json)。
 
 dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自含字号换算。源码原生首用通过；新固定插件安装另验。[证据](docs/Caption-Size-First-Use.zh_CN.md)。
+
+固定 Film41/source38 与 Art118/source90 首用通过：64项安装身份一致；Film13和Art10分别独立冷安装，41项未变技能仅复用摘要匹配的历史冷安装证据。新Art安装副本通过1080p／24fps／120帧混合创建、Logo依赖返工、坏帧恢复及五子工程迁移；Film通过移动工程文字返工与关键帧保全。完整V1仍开放。 [Evidence](docs/evidence/craft-art118-segment-guide-fixed-first-use-20261008.json).

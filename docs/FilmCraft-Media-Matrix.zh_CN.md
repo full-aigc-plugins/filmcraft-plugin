@@ -29,3 +29,5 @@ flowchart LR
 | 依赖移动 | 收集文件摘要保全，源目录不可用后原生重开；再缺少收集依赖应拒绝 | NOT_RUN |
 
 输入验证64项Python测试通过。准备证据及来源摘要见[记录](evidence/filmcraft-media-fixtures-20261008/summary.json)和[完整清单](evidence/filmcraft-media-fixtures-20261008/manifest.json)。下一步执行固定安装副本，保存原生回执、逐帧／采样断言与失败路径；不以文件存在、合成样例、截图或结构评分代替验收。完整V1仍有50项开放。
+
+9.32首个固定52／源44真实派生VFR探针：原生保存／导出及完整解码通过，3.008秒成片，但独立8kHz单声道音频归一化相关性0.49865，低于0.98预期。分窗相关性也下降，根因待查；不关闭9.32或9.33，不降低验收阈值。证据 docs/evidence/filmcraft-media-fixtures-20261008/vfr-native-probe.json。

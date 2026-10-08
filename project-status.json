@@ -178,7 +178,9 @@
     "fixedLayeredReleaseEvidence": "docs/evidence/filmcraft52-layered-release-20261008/report.json",
     "layeredReleaseStatus": "tasks9.28-9.30 qualified for current fixed plugin52/source44: mandatory source/plugin CI; installed126/126,273 preflight and32 bounded headless/bridge cases;11 groups30 scenarios180 layer records (28 PASS,152 NOT_RUN); collection PASS, overall NOT_PROVEN, full V1 remains51 tasks open",
     "realMediaFixtureEvidence": "docs/evidence/filmcraft-media-fixtures-20261008/summary.json",
-    "realMediaStatus": "task9.31 prepared7 source/license/hash-bound cases and18 inputs;64 Python pass; real-derived video/audio and explicitly synthetic alpha/corruption separated; native9.32/fixed9.33 NOT_RUN; full V1 remains50 tasks open"
+    "realMediaStatus": "task9.31 prepared7 source/license/hash-bound cases and18 inputs;64 Python pass; real-derived video/audio and explicitly synthetic alpha/corruption separated; native9.32/fixed9.33 NOT_RUN; full V1 remains50 tasks open",
+    "realMediaNativeProbeEvidence": "docs/evidence/filmcraft-media-fixtures-20261008/vfr-native-probe.json",
+    "realMediaNativeProbeStatus": "FAIL audio correlation0.49865 below0.98; current fixed52/source44 saves/exports/decodes; root cause unconfirmed;9.32/9.33 and50 full V1 tasks remain open"
   },
   "fixedReceiptLineageEvidence": "docs/evidence/filmcraft45-fixed-lineage-20261008.json",
   "fixedRecoveryEvidence": "docs/evidence/filmcraft48-fixed-recovery-20261008.json",

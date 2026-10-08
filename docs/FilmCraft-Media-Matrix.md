@@ -29,3 +29,5 @@ The complete720p Tears of Steel movie comes from Blender Foundation. The [offici
 | Moved dependencies |Collected dependency digests preserved; native reopen with source unavailable; subsequent missing collected dependency refused | NOT_RUN |
 
 All64 Python tests pass. See the [preparation evidence](evidence/filmcraft-media-fixtures-20261008/summary.json) and [input manifest](evidence/filmcraft-media-fixtures-20261008/manifest.json). Fixed installed native receipts, frame/sample assertions and failure paths remain required. File existence, synthetic calibration, screenshots and structural scores cannot replace acceptance. Full V1 still has50 open tasks.
+
+First fixed52/source44 real-derived VFR probe for9.32 saves/exports and fully decodes a3.008-second movie, but independent8kHz mono normalized audio correlation is0.49865, below0.98. Window diagnostics also degrade; root cause remains unconfirmed. Tasks9.32/9.33 stay open and thresholds remain unchanged. Evidence: docs/evidence/filmcraft-media-fixtures-20261008/vfr-native-probe.json.

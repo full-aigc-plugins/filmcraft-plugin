@@ -425,3 +425,5 @@ dev.42 发行进展：已实现只读诊断和原尝试状态修复；本地原�
 2026-10-08 固定分层发行验收完成9.28—9.30：插件dev.52（cd2eefe63b5b995683275cca9ff88d9aba23cf15）／源dev.44（3912bdacb588f1088aa0fbd322de4807b6298adb）。源真实CI181 PASS／36环境NOT_RUN；插件真实CI全部必需门禁通过，普通Node123 PASS／3环境NOT_RUN；固定安装126/126零跳过，13技能保全、273前置检查及32双模式场景。分层报告覆盖11组30场景／180记录：28 PASS、152 NOT_RUN、0 FAIL，收集完整性PASS但整体qualification仍NOT_PROVEN；真实媒体、其他宿主／平台、完整命令覆盖、创作与用户接受、完整V1继续开放，余51项。逐场景身份及原始日志见 docs/evidence/filmcraft52-layered-release-20261008/report.json。
 
 2026-10-08 完成9.31素材准备：Tears of Steel官方完整影片及Noto Sans／OFL许可下载摘要固定；7场景18输入分别记录来源、许可、父输入、变换、摘要、可观察预期和已知失败。实测VFR54帧、多档PTS间隔；181.211333秒48000Hz双声道8698144采样，末544采样RMS0.2182。透明序列与坏字节明确合成；影片派生VFR不是原生VFR摄影。64项Python通过；9.32—9.33原生矩阵与固定安装未执行，不提升完整V1，余50项。证据 docs/evidence/filmcraft-media-fixtures-20261008/summary.json。
+
+9.32首个固定52／源44真实派生VFR探针：原生保存／导出及完整解码通过，3.008秒成片，但独立8kHz单声道音频归一化相关性0.49865，低于0.98预期。分窗相关性也下降，根因待查；不关闭9.32或9.33，不降低验收阈值。证据 docs/evidence/filmcraft-media-fixtures-20261008/vfr-native-probe.json。

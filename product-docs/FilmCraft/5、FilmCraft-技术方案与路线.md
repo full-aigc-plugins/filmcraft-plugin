@@ -112,3 +112,5 @@
 证据 / Evidence: docs/evidence/filmcraft52-layered-release-20261008/report.json。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
+
+9.32首个固定52／源44真实派生VFR探针：原生保存／导出及完整解码通过，3.008秒成片，但独立8kHz单声道音频归一化相关性0.49865，低于0.98预期。分窗相关性也下降，根因待查；不关闭9.32或9.33，不降低验收阈值。证据 docs/evidence/filmcraft-media-fixtures-20261008/vfr-native-probe.json。

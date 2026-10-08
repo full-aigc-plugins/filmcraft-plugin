@@ -1,0 +1,51 @@
+{
+  "schema": "filmcraft-real-derived-vfr-native-probe/v1",
+  "result": "FAIL",
+  "scope": "one actual installed52/source44 VFR workflow and independent full decode/audio alignment; not full7-case matrix",
+  "pluginSha": "cd2eefe63b5b995683275cca9ff88d9aba23cf15",
+  "skillSourceSha": "3912bdacb588f1088aa0fbd322de4807b6298adb",
+  "runtimeSha256": "80dfc579f7639dc1d182c4dc9ab9cd834beaa234e6144e664757d40632f36893",
+  "inputSha256": "b9908226c67fff95fdb56441e55fe8af483ab18035344008efcddd0f0de49754",
+  "outputSha256": "7699ce86f35f2355e028a63336231a7d61c368eafe0e4f669cd34827b7a0453e",
+  "outputDuration": "3.008000",
+  "audioCorrelation": 0.4986478484086186,
+  "audioLagSamplesAt8000Hz": 1,
+  "fullDecode": "PASS",
+  "otherCases": "NOT_RUN",
+  "creativeAcceptance": "manual_review",
+  "userAcceptance": "NOT_RUN",
+  "projectSha256": "52177309f1a0d51e8a2ffc1e27f8af1b3d06abd6c1d8678095fb34e72e2c986a",
+  "expected": {
+    "audioCorrelationMinimum": 0.98,
+    "lagMaximumSeconds": 0.08333333333333333,
+    "nativeMatrixComplete": false
+  },
+  "measurementNote": "Independent ffmpeg decode to8000Hz mono PCM; normalized cross-correlation across lags -800..800 samples. Native output AAC is lossy; low correlation is a failed probe requiring investigation, not yet attributed to a root cause.",
+  "windowDiagnostics": [
+    {
+      "startSeconds": 0,
+      "bestCorrelation": 0.8416890925515251,
+      "bestLagSamples": -1
+    },
+    {
+      "startSeconds": 0.5,
+      "bestCorrelation": 0.5714591263216072,
+      "bestLagSamples": 0
+    },
+    {
+      "startSeconds": 1,
+      "bestCorrelation": 0.8258620277680737,
+      "bestLagSamples": 1
+    },
+    {
+      "startSeconds": 1.5,
+      "bestCorrelation": 0.5613512981782808,
+      "bestLagSamples": 25
+    },
+    {
+      "startSeconds": 2,
+      "bestCorrelation": 0.46530121298541244,
+      "bestLagSamples": 87
+    }
+  ]
+}

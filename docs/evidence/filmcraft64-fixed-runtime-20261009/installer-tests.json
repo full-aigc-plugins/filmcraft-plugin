@@ -1,0 +1,114 @@
+{
+  "schema": "filmcraft-fixed-installer-behavior/v1",
+  "pluginRef": "v0.1.0-dev.64",
+  "result": "PASS",
+  "sourceRevision": "0cb4c59de5e54cc34594b9374a6bf1cb86a19e33",
+  "testFileSha256": "08e6268c9dfa20a6436296207533cda2a1b6df018757a85d591dd99736b26fb1",
+  "scope": "All22 pinned installer tests against each actual installed bootstrap; synthetic archives/network faults distinguished from real public cold downloads.",
+  "rows": [
+    {
+      "skill": "filmcraft-cli",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    },
+    {
+      "skill": "filmcraft-use",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bootstrapSha256": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a"
+    }
+  ]
+}

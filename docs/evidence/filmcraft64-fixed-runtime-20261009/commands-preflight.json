@@ -1,0 +1,2459 @@
+[
+  {
+    "skill": "filmcraft-cli",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-audio",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-color",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-export",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-media",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-motion",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-multicam",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-project",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-setup",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-subtitles",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-timeline",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-cli-transcript",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "commands",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "commands",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "commands",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "commands",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "commands",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "commands",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "commands",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "workflow",
+    "case": 1,
+    "planSha256": "0069d8b7285b5f4eeb60c5d9de5ec4d9ef993baabce2882fa163e194533c4c7c",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "workflow",
+    "case": 2,
+    "planSha256": "d9c23176c2d08129d11fb24be704c092135179ee1607797d8477db09ca98eccc",
+    "error": "invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "workflow",
+    "case": 3,
+    "planSha256": "37d3eedb35b7b2650bad018077c47a23ba93126eecd267a26e73acfdfcc279e6",
+    "error": "invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "workflow",
+    "case": 4,
+    "planSha256": "d4cf30d19bd38ac5b225c180a1aa360253978ad5b895e6bc6c585223ee7a2027",
+    "error": "invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "workflow",
+    "case": 5,
+    "planSha256": "139cd284a1245febd0409a7c7bd7eb537ae1615c6a32fc71800fbd2b6431ebf5",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "workflow",
+    "case": 6,
+    "planSha256": "93ec41151c6243195a64f49f61df336a60b80d3fc3f917bc131ae0bf5237e389",
+    "error": "invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "workflow",
+    "case": 7,
+    "planSha256": "5b0769bdc9fc8caa890e18bf3a659aff005967bd86f0612ec6fc60ce05474cd1",
+    "error": "invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "desktop",
+    "case": 1,
+    "planSha256": "f67139983a673dad5c84070ba06100d5831eb3dc885612c932fcecc176519f26",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "desktop",
+    "case": 2,
+    "planSha256": "7060312813cc44a02c27e0ba3bdbc2f460f628e39fb73813f5e2bef7134504ba",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "desktop",
+    "case": 3,
+    "planSha256": "6055e5c00bde6ef28fe80222579503d94fce14a76a94aa6db109b41bd3c72a9b",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: mode",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "desktop",
+    "case": 4,
+    "planSha256": "fa225a6218fdb861bd55c09aae5c172266d2df75e9b81a6dfb702393d7113c3d",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: runtimeSha256",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "desktop",
+    "case": 5,
+    "planSha256": "aae3118eb7e2733e51b0e24d93661b0d87f3d064df817ddf5aa67a809794545a",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "desktop",
+    "case": 6,
+    "planSha256": "cb55b2d77e528ab80a4cf9041a6976cfea47357bc250e5cc965783cf2b4486aa",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: resources",
+    "outputCreated": false,
+    "runtimeCreated": false
+  },
+  {
+    "skill": "filmcraft-use",
+    "entry": "desktop",
+    "case": 7,
+    "planSha256": "8babf65032b2e3abaafd8144b1c47048de366614186269190bb193c942a3acc1",
+    "error": "desktop_install_failed: ValueError: invalid_capability_requirements: duplicate_resource",
+    "outputCreated": false,
+    "runtimeCreated": false
+  }
+]

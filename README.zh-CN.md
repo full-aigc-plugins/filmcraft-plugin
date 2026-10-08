@@ -392,4 +392,6 @@ dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自�
 
 固定 Film41/source38 与 Art118/source90 首用通过：64项安装身份一致；Film13和Art10分别独立冷安装，41项未变技能仅复用摘要匹配的历史冷安装证据。新Art安装副本通过1080p／24fps／120帧混合创建、Logo依赖返工、坏帧恢复及五子工程迁移；Film通过移动工程文字返工与关键帧保全。完整V1仍开放。 [Evidence](docs/evidence/craft-art118-segment-guide-fixed-first-use-20261008.json).
 
-开发版64补齐保留技能源的公开工作流CLI路由，严格核验绑定、既有执行授权及账本激活选择；真实回退执行与解码、164/164源码原生回归通过。固定64及完整V1资格仍待验收（29项开放）。 Evidence: `docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json`.
+历史源码候选检查点：开发版64补齐保留技能源的公开工作流CLI路由，严格核验绑定、既有执行授权及账本激活选择；真实回退执行与解码、164/164源码原生回归通过。固定64及完整V1资格仍待验收（29项开放）。 Evidence: `docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json`.
+
+固定dev.64/source47在macOS arm64完成FC-RT-002七场景验收：164/164安装原生回归、286安装器用例及13实际安装技能空缓存公开CLI首用通过；2.4—2.6已完成，完整V1余26项。其他平台、全量命令与创作接受继续开放。 Evidence: `docs/evidence/fc-rt-002/index.json`.

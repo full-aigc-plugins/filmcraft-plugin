@@ -1,0 +1,14 @@
+filmcraft-use PASS
+filmcraft-cli PASS
+filmcraft-cli-setup PASS
+filmcraft-cli-project PASS
+filmcraft-cli-media PASS
+filmcraft-cli-timeline PASS
+filmcraft-cli-audio PASS
+filmcraft-cli-subtitles PASS
+filmcraft-cli-color PASS
+filmcraft-cli-motion PASS
+filmcraft-cli-export PASS
+filmcraft-cli-multicam PASS
+filmcraft-cli-transcript PASS
+{"result": "PASS", "skills": 13, "elapsedSeconds": 149.02048712500255}

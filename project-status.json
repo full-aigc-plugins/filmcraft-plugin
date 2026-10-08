@@ -122,7 +122,10 @@
     "6.3": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
     "6.4": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
     "6.5": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
-    "6.6": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json"
+    "6.6": "docs/evidence/filmcraft59-fixed-quality-revision-20261009/acceptance.json",
+    "2.4": "docs/evidence/fc-rt-002/index.json",
+    "2.5": "docs/evidence/fc-rt-002/index.json",
+    "2.6": "docs/evidence/fc-rt-002/index.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -238,5 +241,7 @@
   "runtimeDownloadErrorCandidateEvidence": "docs/evidence/filmcraft63-download-error-candidate-20261009/acceptance.json",
   "runtimeDownloadErrorCandidateStatus": "dev.63 pins published source47 wrapped permission/disk/certificate nonretry fix across13 installers;86 Python,154/157 source Node with3 declared native gaps,157/157 actual native and13 independent public cold CLI copies pass. Fixed62 bounded modes/transition pass but wrapped download audit FAIL; all failed/verifier records preserved. Fixed63 and full FC-RT-002 qualification pending;29 tasks open.",
   "runtimeRollbackWorkflowCandidateEvidence": "docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json",
-  "runtimeRollbackWorkflowCandidateStatus": "dev.64 source candidate: strict retained-source public CLI route, existing exact grant and active ledger selection required;26 target tests,86 Python,161/164 Node with3 declared gaps,164/164 actual native and50 matrix rows PASS. Actual craft.5 and rollback craft.4 each execute once and decode independently; new project and old binary preserved. Fixed64/full FC-RT-002 pending;29 tasks open."
+  "runtimeRollbackWorkflowCandidateStatus": "dev.64 source candidate: strict retained-source public CLI route, existing exact grant and active ledger selection required;26 target tests,86 Python,161/164 Node with3 declared gaps,164/164 actual native and50 matrix rows PASS. Actual craft.5 and rollback craft.4 each execute once and decode independently; new project and old binary preserved. Fixed64/full FC-RT-002 pending;29 tasks open.",
+  "runtimeContractFixedEvidence": "docs/evidence/filmcraft64-fixed-runtime-20261009/acceptance.json",
+  "runtimeContractStatus": "FC-RT-002 all7 scenarios qualified for fixed64/source47 macOS arm64, Codex/headless and owned command bridge;164/164 installed native,286 installer tests,13 actual installed public cold CLI starts,273 preflights,32 command and13 workflow cases. Real craft.4->craft.5->craft.4 public workflow execution with2 independent decodes;2.4-2.6 complete,26 V1 tasks remain. Other platforms/full commands/model inference/creative acceptance unqualified."
 }

@@ -81,6 +81,7 @@
     "docs/evidence/filmcraft62-capability-diagnostic-20261009/acceptance.json",
     "docs/evidence/filmcraft62-fixed-runtime-20261009/acceptance.json",
     "docs/evidence/filmcraft63-download-error-candidate-20261009/acceptance.json",
+    "docs/evidence/filmcraft64-fixed-runtime-20261009/acceptance.json",
     "docs/evidence/filmcraft64-rollback-workflow-candidate-20261009/acceptance.json",
     "docs/evidence/motion-lut-workflow-candidate-20261006.json",
     "docs/evidence/protocol-fault-first-use-20261007.json",

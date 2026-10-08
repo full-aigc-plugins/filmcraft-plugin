@@ -19,4 +19,4 @@ flowchart TD
   V --> P[Preserve original and AV]
 ```
 
-[Bounded evidence](evidence/asr-caption-handoff-first-use-20261008.json). New fixed-host/native acceptance is separate. Full V1, generic Skills CLI, every command context, other platforms and human creative acceptance remain open.
+[Bounded evidence](evidence/asr-caption-handoff-first-use-20261008.json). Fixed Film40 passed isolated public-tag installation:64 discovered skills, no loading errors and64 copied single-skill CLI entries with5 fresh domain caches and subsequent reuse. The actual installed transcript skill passed first public model download and inference in52.981s; all64 installed trees remain intact. Four CI runs passed at the release commit. Only this handoff gate is closed. All current Film role scenarios, Art mixed-ASR styling, full V1, generic Skills CLI, every command context, other platforms and human creative acceptance remain open.

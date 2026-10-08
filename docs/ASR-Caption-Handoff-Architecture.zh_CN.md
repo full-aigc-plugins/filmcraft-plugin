@@ -19,4 +19,4 @@ flowchart TD
   V --> P[原工程和音画保全]
 ```
 
-[限定证据](evidence/asr-caption-handoff-first-use-20261008.json)。新固定宿主安装与原生执行仍需另验，完整V1、通用Skills CLI、所有命令上下文、其他平台和人工创作验收未关闭。
+[限定证据](evidence/asr-caption-handoff-first-use-20261008.json)。固定Film40已通过公开标签隔离安装：64项发现、零加载错误、64个独立复制CLI入口（5领域新缓存，其余复用），实际安装转录技能首次模型下载与识别52.981秒通过；操作后64项整树摘要匹配。Film40发行提交4项CI成功。仅关闭此交接门禁；当前全部Film领域角色、Art混合样式、完整V1、通用Skills CLI、所有命令上下文、其他平台和人工创作验收未关闭。

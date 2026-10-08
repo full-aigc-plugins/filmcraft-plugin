@@ -33,9 +33,49 @@
     "logSha256": "d27a124be991a10610e2d6dd15429fe399ab047d145de9b4574e2f50b1a972f8"
   },
   "pending": [
-    "new fixed plugin host and native acceptance",
     "generic Skills CLI installation",
     "full V1",
+    "all changed Film role scenarios on current content",
+    "Art mixed-ASR style handoff update",
     "human creative acceptance"
-  ]
+  ],
+  "fixedInstallation": {
+    "pluginRef": "v0.1.0-dev.40",
+    "pluginSha": "b6af09516771f6c2a1dc3f5fcc841195d54c582a",
+    "hostLockSha256": "da5a939519721efe25de4d9b27e7ae04aafdda2b376c4ccbd7366b19c153faf1",
+    "hostReceiptSha256": "937fb3c2632bcc8f7b99823a9318a5b5e482b38c9d9274cf71eeda0be5443322",
+    "skillsDiscovered": 64,
+    "loadingErrors": 0,
+    "cliProbes": 64,
+    "freshDomainCaches": 5,
+    "remainingCliCacheReuse": 59,
+    "installedTreeHashesAfterUse": "PASS",
+    "realAsr": {
+      "result": "PASS",
+      "firstPublicModelDownload": true,
+      "proofSha256": "0e2c8d58531fb174b5f62afe4bd21abcb31ed8013b3d0b2622a1f247abe721e8",
+      "logSha256": "170cad70cb67dbf0554eb6dcf0250e968291cab9ceb9962ad4452f2707a97a2d",
+      "visibleCaptionTracks": 1,
+      "size": 84,
+      "captionSegments": 3,
+      "wordCount": 28,
+      "sourcePreserved": true,
+      "audioVideoPreserved": true
+    },
+    "archives": {
+      "filmcraft-skills-0.1.0-dev.37.zip": "1ae6f8165d5b0bae4df975dd36775a6c062599cfbe123169e9e327800202c37d",
+      "filmcraft-plugin-0.1.0-dev.40.zip": "7b43ca20d2c2fc1353fa62b747438d7725185a820a073294981e05677f9c0bdb"
+    },
+    "publicArchiveBytesMatchTaggedArchive": true
+  },
+  "ciAtPluginRelease": {
+    "commit": "b6af09516771f6c2a1dc3f5fcc841195d54c582a",
+    "runs": [
+      37707814275,
+      37707814320,
+      37707814483,
+      37707814572
+    ],
+    "conclusion": "success"
+  }
 }

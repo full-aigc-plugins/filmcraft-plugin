@@ -77,7 +77,9 @@
       "owner": "Harness owner",
       "status": "planned",
       "candidateStatus": "bounded-source-candidate; full single-writer and fixed-release acceptance open",
-      "candidateEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json"
+      "candidateEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json",
+      "implementationEvidence": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
+      "implementationScope": "tasks3.1/3.2 tests and minimum implementation complete; full acceptance3.3 remains open"
     },
     {
       "requirement": "FC-TX-002",

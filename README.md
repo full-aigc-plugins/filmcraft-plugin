@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed dev.56/source46/craft.5 passes seven actual-native host admission cases, preserving13 skills and all executable identities. OpenSpec3.1 and3.2 tests/minimum implementation are complete; full version-binding/writer acceptance3.3, other dispatch paths/platforms and full V1 remain open, with46 tasks remaining. The dev.55 verifier failure is preserved. [Evidence](docs/evidence/filmcraft56-fixed-admission-20261009/report.json).
+
 dev.56 independently verifies adapter raw-byte tree and vendor file-digest tree identities, with explicit algorithm labels. Fixed dev.55 passed seven native cases but failed final qualification because its verifier mixed these algorithms. Failure evidence and the old tag are preserved; fixed dev.56 acceptance is pending, with no task closed.
 
 dev.55 adds trusted host admission for initial workflows: execute subjects bind the complete task and resource policy; authority is re-read before preflight and native submission. Missing, expired, revoked or mismatched decisions refuse execution. Seven unit and seven actual-native candidate cases pass; fixed installation and full V1 remain open.

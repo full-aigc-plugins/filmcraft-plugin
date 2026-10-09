@@ -1,0 +1,213 @@
+{
+  "binding": {
+    "pluginSha": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+    "sourceSha": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+    "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "runtimeVersion": "0.2.0-craft.5",
+    "platform": "darwin-arm64",
+    "mode": "headless"
+  },
+  "commands": [
+    "markers.add",
+    "markers.addChapter",
+    "markers.addFlashCue",
+    "markers.addRange",
+    "markers.addRangeInOut",
+    "markers.clearAll",
+    "markers.clearCurrent",
+    "markers.clearIn",
+    "markers.clearInOut",
+    "markers.clearOut",
+    "markers.edit",
+    "markers.goNext",
+    "markers.goPrev",
+    "markers.goToIn",
+    "markers.goToOut",
+    "markers.goToSplitAudioIn",
+    "markers.goToSplitAudioOut",
+    "markers.goToSplitVideoIn",
+    "markers.goToSplitVideoOut",
+    "markers.markClip",
+    "markers.markIn",
+    "markers.markOut",
+    "markers.markSelection",
+    "markers.markSplitAudioIn",
+    "markers.markSplitAudioOut",
+    "markers.markSplitVideoIn",
+    "markers.markSplitVideoOut",
+    "sequence.colorSettings",
+    "sequence.settings"
+  ],
+  "assertions": [
+    {
+      "phase": "create",
+      "fullSequenceComparisons": 121
+    },
+    {
+      "phase": "revision",
+      "fullSequenceComparisons": 121
+    }
+  ],
+  "negatives": [
+    {
+      "command": "markers.add",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.addChapter",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.addFlashCue",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.addRange",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.addRangeInOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.clearAll",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.clearCurrent",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.clearIn",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.clearInOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.clearOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.edit",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goNext",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goPrev",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goToIn",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goToOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goToSplitAudioIn",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goToSplitAudioOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goToSplitVideoIn",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.goToSplitVideoOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.markClip",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.markIn",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": false
+    },
+    {
+      "command": "markers.markOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": false
+    },
+    {
+      "command": "markers.markSelection",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "markers.markSplitAudioIn",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": false
+    },
+    {
+      "command": "markers.markSplitAudioOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": false
+    },
+    {
+      "command": "markers.markSplitVideoIn",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": false
+    },
+    {
+      "command": "markers.markSplitVideoOut",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": false
+    },
+    {
+      "command": "sequence.colorSettings",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "sequence.settings",
+      "unknownParameterRejectedBeforeOutput": true,
+      "emptyContextBlocked": true
+    }
+  ],
+  "sourceProjectSha256": "fde6dee174b39ba6dd6fee488923597867816d65b24afda70eca9e79304cda5b",
+  "changedProjectSha256": "4156bf83b8060f4b51f7ed52297e64974293421bfcf26cf5e6bd145cc84e014c",
+  "sourceInputsPreserved": true,
+  "transientSuiteWholeProjectPreserved": true,
+  "declaredFinalAllocatorAdvance": 1,
+  "finalProjectOtherwiseExactBaseline": true,
+  "receipts": {
+    "create": "8aeec4e3d6079832c86d508e78890fba30fb24d1c2a25eab5ca471e0f6e42939",
+    "revision": "33010103acb26023280fb1466f2fce2a742aac534e9a12041db6980de4e69bef"
+  },
+  "artifacts": {
+    "create/preserved.fcproj": "9b2ed4762160578968380b11def5bbd55602cc2de674846ba8a546f8c06942a1",
+    "create/changed.fcproj": "4156bf83b8060f4b51f7ed52297e64974293421bfcf26cf5e6bd145cc84e014c",
+    "revision/restored.fcproj": "dbce2670231310879d81fdc9e03ff3c63e148c848c37c97f1cf2418455f851c6"
+  }
+}

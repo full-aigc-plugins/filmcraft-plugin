@@ -1,0 +1,70 @@
+{
+  "schema": "filmcraft-fixed-markers-settings-audit/v1",
+  "result": "PASS",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 29,
+      "matrixSha256": "ea70eb2c868b8d90be60ba3fde91cad9c5a5efdbcba4865ef2523f807c55aa8e",
+      "observationsSha256": "4fa642f1b792767a54e2c80722545c13d2b03ee629ad889c297df50bb4492b5d",
+      "sessionSha256": "41c6cea3ba89579bdeb7d6ebfe89d4f492b9d7b7b57813af2d3cf9186e1f60c7"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 29,
+      "matrixSha256": "7dd1ea098f33b10a6d9593b5946e51058b62db25a515d157106b07728ffe2600",
+      "observationsSha256": "30152cb9a31cd4c3f4e06519507682cac816dfcdf221bacebda0ccdafae78454",
+      "sessionSha256": "54923537eacf171d4a3633668e13c476375dbe0c20049376c6cd11088acdf650"
+    }
+  ],
+  "driverSha256": "16c9fdd944b2ba3c9ba21312cd48730ce0fc9011e6049026c998fbb24bfe13bd",
+  "sessionHelperSha256": "394302ced9de2a963292107bbd3ee118902fb036292e23edd925ab4748b536fb",
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3",
+  "pluginRef": "v0.1.0-dev.76",
+  "sourceRef": "v0.1.0-dev.57",
+  "distinctBoundedCommands": 115,
+  "unobservedBeyondDiscovery": 551,
+  "negativeParameterRefusals": 58,
+  "emptyContextRefusals": 46,
+  "sequenceComparisons": 484,
+  "serializedMarkerStateSnapshots": 80,
+  "fullV1": "NOT_PROVEN",
+  "remainingFullTasks": 7,
+  "initialFailure": {
+    "kind": "QA_READBACK_ASSUMPTION",
+    "receiptSha256": "b4766ee1d3cb8c9ebd1938c89025f0e2d62ab71dae944b791e1dfbf979187f00",
+    "preservedProjectSha256": "9b2ed4762160578968380b11def5bbd55602cc2de674846ba8a546f8c06942a1",
+    "changedProjectSha256": "4156bf83b8060f4b51f7ed52297e64974293421bfcf26cf5e6bd145cc84e014c",
+    "reason": "Frozen craft.5 sequence.inspect omits marker comment; verifier expected it. Serialized project preserved comment. Failed observation retained privately; final verifier additionally saves and checks every nonempty marker state."
+  },
+  "oracleTests": {
+    "passed": 4,
+    "checks": [
+      "missing serialized evidence refused",
+      "comment corruption refused even though query omits comment",
+      "non-target one-tick duration change refused",
+      "exact query and serialized metadata accepted"
+    ]
+  },
+  "sourceTests": {
+    "pythonPassed": 99,
+    "node": "CI_PENDING; previous unchanged Node source gate passed185/3envNOT_RUN at47f4322"
+  },
+  "helperSourcesSha256": {
+    "verify_installed_timeline_edits.py": "dcc072c40f1bbd8333d8f266396965cb86f79c015faeee306b1c1ace24aad9ab",
+    "owned_empty_batch.py": "394302ced9de2a963292107bbd3ee118902fb036292e23edd925ab4748b536fb",
+    "command_evidence.py": "f1b7a41090279f31cc97b9d2252cc04ef300f9e4199861462c7a93d476c97d54"
+  },
+  "scope": "29 new bounded commands in program monitor target and procedural fixture. Complete persistent sequence fields compared, excluding ephemeral selection/playhead except exact navigation. Comment validated through80 native serialized marker-state snapshots. Whole-project preservation and explicit final allocator+1 checked. No source monitor, exhaustive parameters/states, rendering, GUI gestures or creative/full V1 qualification.",
+  "filesSha256": {
+    "bridge/matrix.json": "7dd1ea098f33b10a6d9593b5946e51058b62db25a515d157106b07728ffe2600",
+    "bridge/observations.json": "30152cb9a31cd4c3f4e06519507682cac816dfcdf221bacebda0ccdafae78454",
+    "bridge/session.json": "54923537eacf171d4a3633668e13c476375dbe0c20049376c6cd11088acdf650",
+    "headless/matrix.json": "ea70eb2c868b8d90be60ba3fde91cad9c5a5efdbcba4865ef2523f807c55aa8e",
+    "headless/observations.json": "4fa642f1b792767a54e2c80722545c13d2b03ee629ad889c297df50bb4492b5d",
+    "headless/session.json": "41c6cea3ba89579bdeb7d6ebfe89d4f492b9d7b7b57813af2d3cf9186e1f60c7"
+  }
+}

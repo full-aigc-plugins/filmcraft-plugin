@@ -104,6 +104,13 @@
 - **AND** 模型维护 SHALL 使用独立 --model-maintenance 标志，仅接受 exec transcript.downloadModel、唯一合法 model 字段和显式 --data-dir；数据目录须已存在且具有独立写入授权，不得位于技能、运行时或解释器目录
 - **AND** 模型维护原生进程仅可写该数据目录，使用独立限定网络出站权限；普通编辑不获得该权限，维护入口不得组合工程或编辑参数。既有损坏安装诊断、原错误及未知结果不重放语义保持兼容。
 
+#### Scenario: FC-RL-002-REGISTRY-PARAMETERS 完整命令参数不接受未定义字段
+
+- **WHEN** 不可信完整命令计划、领域 native.command 或 cli.py exec 的注册表命令 params 含有未在固定原生参数合同定义的顶层字段
+- **THEN** 公开入口 SHALL 在素材读取、运行时安装、原生执行及输出创建前拒绝，返回固定 invalid_native_parameters，不回显字段名称或值，也不写入计划／执行回执
+- **AND** 校验覆盖全部666个固定注册表命令，准确处理原生别名、联合参数及已有匹配选项；合法字幕、路径和创作文本按数据保留，不通过秘密关键词过滤替代合同校验
+- **AND** 解析后的参数容器及结果引用继续满足既有验证，不能用本项顶层字段校验替代嵌套类型、目录沙箱、宿主秘密引用或全命令上下文验收。
+
 ## Implementation evidence (non-normative)
 
 `docs/evidence/codex-current-release.json` binds current fixed releases to two actual Codex CLI/app-server versions, five enabled namespaced skills, installed public workflow outcomes and explicit exclusions. The corresponding bilingual Host-Verification-Architecture documents specify the repeatable check. RL-001 tasks remain unchecked until their full P0 prerequisites and scenarios pass.

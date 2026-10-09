@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "tag": "v0.1.0-dev.73",
+  "installedFilesPreserved": 1793,
+  "installedNativeTests": {
+    "pass": 185,
+    "fail": 0,
+    "skip": 0
+  },
+  "rawNativeBoundaryCases": 39,
+  "fullFC_RL_002": "NOT_PROVEN",
+  "fixed73RawUndefinedParameterFailureRetained": true,
+  "fullPreservationReportSha256": "d4631deacf51f9d18e6fd7de7a368e480b52492aa979ca8d3de34668e2877759",
+  "initialEnvironmentFailure": {
+    "reason": "driver used default Python without Pillow and omitted quality tools",
+    "counts": {
+      "pass": 183,
+      "fail": 1,
+      "skip": 1
+    },
+    "logSha256": "0847b4539e0cca8196b4e1a37a191e014a12840d7673a6fe4677318717e4f539"
+  },
+  "successfulLogSha256": "006dc2aca395cea1c5082f2d140cc9d35180db05a02dfebb9f7c8ca5d722dcef"
+}

@@ -1,0 +1,111 @@
+{
+  "result": "PASS",
+  "layer": "source57 candidate 13 public complete-command CLIs",
+  "cases": [
+    {
+      "skill": "filmcraft-cli",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "result": "PASS",
+      "error": "invalid_native_parameters",
+      "installed": false,
+      "outputCreated": false,
+      "canaryEchoed": false
+    }
+  ],
+  "fullFC_RL_002": "NOT_PROVEN"
+}

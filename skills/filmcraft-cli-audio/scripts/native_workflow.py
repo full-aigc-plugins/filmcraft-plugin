@@ -22,6 +22,8 @@ def validate(params, allow_references=False):
     except (ValueError, TypeError):
         raise ValueError('invalid_native_parameters') from None
     # 两类公开入口共享原生 tick 合同；解析后的参数在 execute 中再次核验。
+    commands.validate_native_parameters(params['command'], params['params'],
+                                        allow_references=allow_references)
     row = next(row for row in catalog['commands'] if row['id'] == params['command'])
     commands.validate_tick_parameters(params['command'], params['params'],
                                       allow_references=allow_references, contract=row)

@@ -77,6 +77,57 @@ def validate_tick_parameters(command, params, allow_references=False, contract=N
             raise ValueError("invalid_tick_parameter: " + command + "." + field + "; use an exact signed 64-bit JSON integer")
 
 
+def native_parameter_fields(identifier, rows, seen=()):
+    """读取固定反射合同的顶层字段；别名和原生联合参数不提升嵌套字段权限。"""
+    if identifier in seen or identifier not in rows:
+        raise ValueError('native_parameter_contract_unavailable')
+    contract = rows[identifier].get('params')
+    if not isinstance(contract, str):
+        raise ValueError('native_parameter_contract_unavailable')
+    if contract.startswith('as '):
+        return native_parameter_fields(contract[3:].strip(), rows, (*seen, identifier))
+    if not contract.startswith('{'):
+        raise ValueError('native_parameter_contract_unavailable')
+    fields, stack, index = set(), [], 0
+    decoder = json.JSONDecoder()
+    while index < len(contract):
+        char = contract[index]
+        if char == '"':
+            try:
+                value, length = decoder.raw_decode(contract[index:])
+            except ValueError:
+                raise ValueError('native_parameter_contract_unavailable') from None
+            end = index + length
+            if stack == ['{'] and contract[end:].lstrip().startswith(':'):
+                fields.add(value)
+            index = end
+            continue
+        if char in '{[':
+            stack.append(char)
+        elif char in '}]':
+            if stack and stack[-1] == ('{' if char == '}' else '['):
+                stack.pop()
+        index += 1
+    # 两个反射合同使用文字补充／根对象之外的字段；对应固定引擎
+    # relink.rs::MatchOptions::from_params、proxies.rs::commands 的实际消费。
+    if identifier == 'media.autoRelink':
+        fields.update(('match', 'relinkOthers', 'alignTimecode'))
+    if identifier == 'media.attachProxies':
+        fields.add('force')
+    return fields
+
+
+def validate_native_parameters(identifier, params, rows=None, allow_references=False):
+    """拒绝未定义顶层参数，固定诊断不回显不可信字段或值。"""
+    rows = rows if rows is not None else {row['id']: row for row in catalog()['commands']}
+    if not isinstance(params, dict):
+        raise ValueError('invalid_command_parameters')
+    if allow_references and set(params) == {'$ref'}:
+        return
+    if set(params) - native_parameter_fields(identifier, rows):
+        raise ValueError('invalid_native_parameters')
+
+
 def validate(plan, input_names=()):
     if (not isinstance(plan, dict) or not {"schema", "operations"}.issubset(plan)
             or set(plan) - {"schema", "operations", "requires"}
@@ -103,6 +154,8 @@ def validate(plan, input_names=()):
             raise ValueError("invalid_json_parameters: " + str(index)) from None
         if key == "tool" and step[key] == ROUTES[DOMAIN][1]:
             raise ValueError("use_command_operation_for_native_registry")
+        if key == "command":
+            validate_native_parameters(step[key], step["params"], rows, allow_references=True)
         references(step["params"], aliases)
         if key == "command":
             validate_tick_parameters(step[key], step["params"], allow_references=True, contract=rows[step[key]])
@@ -295,6 +348,7 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
         load('execution_permissions').ensure_available()
     if not isinstance(inputs, dict) or any(not isinstance(k, str) or not re.fullmatch(r"[a-zA-Z][\w-]*", k) or k == "output" for k in inputs):
         raise ValueError("invalid_input_name")
+    validate(plan, inputs)
     sources = {}
     for name, value in inputs.items():
         source = Path(value)
@@ -381,6 +435,7 @@ def execute(plan, output, runtime_home=None, mode="headless", connect=None, toke
             for index, step in enumerate(plan["operations"]):
                 params = resolve(step["params"], bindings)
                 if "command" in step:
+                    validate_native_parameters(step["command"], params)
                     validate_tick_parameters(step["command"], params)
                 record = {"index": index, "command": step.get("command"), "tool": step.get("tool"),
                           "params": params, "state": "started"}

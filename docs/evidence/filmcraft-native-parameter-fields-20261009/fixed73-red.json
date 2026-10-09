@@ -1,0 +1,8 @@
+{
+  "result": "FAIL",
+  "expected": "unknown native parameter refused before installation/output",
+  "actualExit": 0,
+  "projectCreated": false,
+  "undefinedCanaryInJournal": true,
+  "pluginRef": "v0.1.0-dev.73"
+}

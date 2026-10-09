@@ -1,0 +1,293 @@
+{
+  "schema": "filmcraft-raw-cli-native-boundaries/v1",
+  "result": "PASS",
+  "layer": "fixed73 installed public cli.py actual pinned native CLI and system sandbox",
+  "cases": [
+    {
+      "skill": "filmcraft-cli",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "missing",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "allowed",
+      "result": "PASS",
+      "exit": 0,
+      "projectCreated": true
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "outside",
+      "result": "PASS",
+      "exit": 1,
+      "projectCreated": false
+    }
+  ],
+  "modelMaintenance": {
+    "result": "PASS",
+    "scope": "explicit cached tiny model reuse, no model download requested",
+    "modelFilesSha256": {
+      "models/whisper-tiny/model.safetensors": "7ebd0e69e78190ffe1438491fa05cc1f5c1aa3a4c4db3bc1723adbb551ea2395",
+      "models/whisper-tiny/config.json": "ffdccec4f3211f4c63310f2b7098f309fe70f3952cedc5e4d11e43f5b2379b98",
+      "models/whisper-tiny/tokenizer.json": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566",
+      "models/whisper-tiny/generation_config.json": "a5d5325911f16e74001a72fa13d6e208eee51548f994646de1f4b4cc8b35b512"
+    },
+    "modelsPreserved": true
+  },
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "fullFC_RL_002": "NOT_PROVEN"
+}

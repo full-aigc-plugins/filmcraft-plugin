@@ -1,0 +1,39 @@
+test_all_666_commands_reject_unknown_fields_without_echo (test_native_parameter_fields.NativeParameterFieldTests.test_all_666_commands_reject_unknown_fields_without_echo) ... ok
+test_creative_text_and_native_alias_and_union_fields_remain_valid (test_native_parameter_fields.NativeParameterFieldTests.test_creative_text_and_native_alias_and_union_fields_remain_valid) ... ok
+test_domain_native_wrapper_rejects_unknown_parameter_before_session (test_native_parameter_fields.NativeParameterFieldTests.test_domain_native_wrapper_rejects_unknown_parameter_before_session) ... ERROR
+test_nested_fields_do_not_become_top_level_permissions (test_native_parameter_fields.NativeParameterFieldTests.test_nested_fields_do_not_become_top_level_permissions) ... ok
+test_parameter_object_reference_validates_again_after_resolution (test_native_parameter_fields.NativeParameterFieldTests.test_parameter_object_reference_validates_again_after_resolution) ... ok
+test_raw_exec_rejects_unknown_parameter_before_installer_and_output (test_native_parameter_fields.NativeParameterFieldTests.test_raw_exec_rejects_unknown_parameter_before_installer_and_output) ... FAIL
+test_rejection_precedes_input_read_installer_and_output (test_native_parameter_fields.NativeParameterFieldTests.test_rejection_precedes_input_read_installer_and_output) ... ok
+
+======================================================================
+ERROR: test_domain_native_wrapper_rejects_unknown_parameter_before_session (test_native_parameter_fields.NativeParameterFieldTests.test_domain_native_wrapper_rejects_unknown_parameter_before_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_parameter_fields.py", line 52, in test_domain_native_wrapper_rejects_unknown_parameter_before_session
+    n.execute(session,{'command':'file.newProject','params':{'OWNED_UNKNOWN_FIELD':'OWNED_CREDENTIAL_CANARY'}},{},[],ROOT)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/native_workflow.py", line 33, in execute
+    rows = commands.runtime_rows(session)
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 299, in runtime_rows
+    result = parse_reply(reply)
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/skills/filmcraft-use/scripts/commands.py", line 214, in parse_reply
+    raise RuntimeError('outcome_unknown: invalid_tool_reply')
+RuntimeError: outcome_unknown: invalid_tool_reply
+
+======================================================================
+FAIL: test_raw_exec_rejects_unknown_parameter_before_installer_and_output (test_native_parameter_fields.NativeParameterFieldTests.test_raw_exec_rejects_unknown_parameter_before_installer_and_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[WORKSPACE]/full-aigc-skills-repositories/filmcraft-skills/tests/test_native_parameter_fields.py", line 63, in test_raw_exec_rejects_unknown_parameter_before_installer_and_output
+    self.assertEqual(result.returncode,1);self.assertEqual(json.loads(result.stdout)['error'],'invalid_native_parameters')
+                                          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'owned_installer_would_run' != 'invalid_native_parameters'
+- owned_installer_would_run
++ invalid_native_parameters
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.893s
+
+FAILED (failures=1, errors=1)

@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.74
+
+dev.74 pins published source57, sharing fixed native top-level parameter validation across complete-command, domain native.command and legacy exec. Undefined fields refuse before inputs, installation and output without echoing names/values; aliases, unions and whole-object references remain supported.241 source tests,39 public entry refusals,39 native root cases and thirteen real candidate business tasks pass. Fixed73 has185 installed native passes and all1793 frozen files preserved, but its original undefined-parameter red remains. Fixed74 and full permissions, command contexts and host intent routing remain open; eight V1 tasks are unchecked. [Evidence](docs/evidence/filmcraft-native-parameter-fields-20261009/report.json).
+
 ## 0.1.0-dev.73
 
 dev.73 pins published source56, enforcing trusted roots and filtered child environments at the legacy raw CLI. Model download has a separate validated maintenance mode with data-directory-only writes and outbound-only network permission. Three target reds become six passes;39 actual raw entry cases, cold model download/28-word recognition/reopen/SRT and thirteen independently copied candidate skill tasks pass. Fixed72 evidence remains version-bound, including185 installed native tests and all1775 frozen files preserved. Full host intent routing, permission/command qualification and eight V1 tasks remain open; fixed73 qualification is NOT_RUN. [Evidence](docs/evidence/filmcraft56-raw-launcher-candidate-20261009/report.json).

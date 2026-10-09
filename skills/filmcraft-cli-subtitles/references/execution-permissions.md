@@ -27,3 +27,7 @@ Installer maintenance and editor access are separate: explicitly authorize the r
 `cli.py` 的工程读取、exec/run/render/export/import/MCP 等入口同样要求在 `--` 前提供 `--read-root`、`--write-root` 和 `--runtime-home`；原生进程保护源工程、技能与固定运行时，所有子进程均过滤宿主环境。仅精确 `--version`、`help`、`commands`、`commands --json` 无工程查询保留旧调用方式，附加工程参数不属于豁免。
 
 模型下载必须单独使用 `--model-maintenance -- exec transcript.downloadModel '{"model":"whisper-tiny"}' --data-dir "$MODEL_DATA_DIR"`；该目录须已存在并有独立可信写入授权，不能位于技能、运行时或解释器目录。维护进程的写根缩小为该目录，独立开放网络出站；不允许混合工程参数或其他命令，普通编辑不获得模型维护权限。完整示例见 [转录场景](transcript-scene.md)。
+
+完整注册表计划的命令params仅接受固定参数合同已定义的顶层字段；别名、联合参数及原生匹配选项保留，嵌套字段不能成为顶层参数。未知字段以固定invalid_native_parameters在读取素材、安装和创建输出前拒绝，字段名与值不进入诊断／回执；整体结果引用在解析后再次核验，合法字幕和创作文本不按关键词删改。本项不替代嵌套类型、原生上下文或秘密引用的完整验收。
+
+Complete native command plans reject undefined top-level parameter fields before inputs, installation or output. Fixed aliases, unions and native match options remain supported; whole-object references are rechecked after resolution. Creative text remains data. Nested typing, native contexts and full secret-reference qualification remain separate.

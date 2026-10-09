@@ -87,6 +87,14 @@ def main():
                 helper.ensure_available()
             else:
                 if argv[:2] == ['exec', 'transcript.downloadModel']: raise ValueError('model_maintenance_required')
+                if argv[0] == 'exec' and len(argv) > 1:
+                    spec = importlib.util.spec_from_file_location('raw_cli_commands', Path(__file__).with_name('commands.py'))
+                    commands = importlib.util.module_from_spec(spec); spec.loader.exec_module(commands)
+                    try:
+                        params = commands.reply_json(argv[2]) if len(argv) > 2 and not argv[2].startswith('--') else {}
+                    except (ValueError, TypeError):
+                        raise ValueError('invalid_native_parameters') from None
+                    commands.validate_native_parameters(argv[1], params)
                 for name in ('--project', '--data-dir'):
                     for path in option_paths(argv, name):
                         helper.require_read(path, policy)

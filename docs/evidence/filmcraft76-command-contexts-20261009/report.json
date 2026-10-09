@@ -1,0 +1,54 @@
+{
+  "schema": "filmcraft-fixed-command-context-supplement/v1",
+  "result": "PASS_WITH_OPEN_COMMAND_QUALIFICATION",
+  "pluginRef": "v0.1.0-dev.76",
+  "pluginCommit": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "fixedInstallationZipFilesPreserved": 1853,
+  "zipSha256": "acc1a8ea0071adb4005f6bf0096ab6a2f95fa51cd13a04d60afa1563ddb2658f",
+  "targetCommands": 27,
+  "readonlyCommands": 15,
+  "distinctObservedCommands": 42,
+  "contexts": [
+    {
+      "mode": "headless",
+      "observedCommands": 42,
+      "unobservedCommands": 624,
+      "matrixSha256": "75069a5439936965fa5e51cc4e41ae4dc92bcdbaba28f4711263c8aed15470b8"
+    },
+    {
+      "mode": "bridge",
+      "observedCommands": 42,
+      "unobservedCommands": 624,
+      "matrixSha256": "742e06140421babb01258bb3126acfdc447c83e6191bd8b67a5f2c3f1ed540fe"
+    }
+  ],
+  "targetNegativeContexts": 54,
+  "readonlyQueryCalls": 60,
+  "readonlyPublicParameterRefusals": 30,
+  "targetAssertionsPerPositivePhase": 50,
+  "targetCreateAndReopenPhases": 4,
+  "initialFailuresRetained": [
+    {
+      "kind": "QA_FIXTURE_ERROR",
+      "driverSha256": "79198024d7efd0778983e026bf950acbc5a8afb8d5f929d2e70aa390fe4223f4",
+      "receiptSha256": "a21cddf4850d088b30c89a58e05957cd90346095a075293417106ab0393305e6",
+      "reason": "Verifier expected invented command_disabled; existing public contract is precondition_failed. Product refusal was correct."
+    },
+    {
+      "kind": "INCOMPLETE_PROCESS",
+      "exitCode": 120,
+      "driverSha256": "c80c41b55e12b22cce601858cdc0180bd490eef4f3ebe470773441c668e91bff",
+      "logSha256": "e0cfd51147a6cf9dfecbe31e85b994e5e8a168a8babc0773beb1579d1c3ea808",
+      "lastIncompleteJournalSha256": "3e3b3041ffe7e41ce7461efee15fe78753f2c2210c49c4c3e42c9e3eefb4c7e3",
+      "reason": "Process ended without traceback before final bridge negative/report; no surviving owned process. Cause unknown. Entire unchanged QA driver rerun in fresh private directory passed; prior incomplete run not accepted."
+    }
+  ],
+  "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "desktopBinarySha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa",
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "fullV1": "NOT_PROVEN",
+  "remainingTasks": 7,
+  "scope": "Current fixed installation native command state/preservation checks in headless and signed owned desktop bridge. No GUI gestures/rendering, full666contexts or creative acceptance. QA producer is on main, outside frozen ZIP."
+}

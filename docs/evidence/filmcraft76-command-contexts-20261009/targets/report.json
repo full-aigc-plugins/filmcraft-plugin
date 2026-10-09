@@ -1,0 +1,25 @@
+{
+  "schema": "filmcraft-target-command-contexts/v1",
+  "result": "PASS",
+  "driverSha256": "c80c41b55e12b22cce601858cdc0180bd490eef4f3ebe470773441c668e91bff",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 27,
+      "negativeCases": 27,
+      "matrixSha256": "18bf7eaef66400e5696e72a35b1c77c6e4bf09072c9344fd32ef2d526b6f4121",
+      "observationsSha256": "1c843ff1163a793e2d8fe4ae7e3104d249669f1d1562816e051fa7c2db4427c0"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 27,
+      "negativeCases": 27,
+      "matrixSha256": "4dee289e1eccd9b28fb53c7fd9714935ffd0883d42619d52e6cd1a77bbba0322",
+      "observationsSha256": "4c9a92e34c0100f08c602c7703bd77adf2a049ee872b2289ba3b5ec3e03c02bd"
+    }
+  ],
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3"
+}

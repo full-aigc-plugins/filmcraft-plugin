@@ -1,0 +1,26 @@
+{
+  "schema": "filmcraft-readonly-command-contexts/v1",
+  "result": "PASS",
+  "driverSha256": "8de5afb2a413b9dcfe5ef89f17e7232256c815819cdca152485f2eb93351e425",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "queries": 15,
+      "nativeQueryCalls": 30,
+      "matrixSha256": "0f05a3303f2749d98b86ffdcba22dac13d52aaf5995c10dd32777713d37a6d3e",
+      "observationsSha256": "a0fb994f061c0c49ccfea778d6059a7e420c26c92cc7b77fdb2a8b783d391bc7"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "queries": 15,
+      "nativeQueryCalls": 30,
+      "matrixSha256": "bf82c603fa59bc70fa3bdf3c8e71d10275e70ee23da7bd8688ff5e91d03d4a46",
+      "observationsSha256": "ea8a50e294170ae0e1c4b3db54948705fd24e6317e83434e813c9cd58f4a2602"
+    }
+  ],
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3",
+  "scope": "Fifteen read-only commands in two contexts, separate six-dimension matrices over all666rows; other commands unexecuted in this audit. No GUI gesture, visual creative quality or ASR inference claim."
+}

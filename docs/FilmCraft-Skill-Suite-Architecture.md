@@ -87,3 +87,5 @@ flowchart LR
 ```
 
 Repeatable driver: `scripts/verify_host_skill_routing.py --codex CLIENT --installed-plugin FIXED_ROOT --source-repository SOURCE_GIT --output NEW_PRIVATE_DIRECTORY`. The corpus is read from the installed lock's immutable skill-source Git object. Host selection and native business results remain separate.
+
+Fixed76 command-context supplement:27 targeting/source-patch/target-move/mute-solo-output commands pass create and reopen in headless and owned signed desktop bridge, with50 semantic assertions per phase,54 empty-native-context precondition refusals and whole-project/source preservation.15 readonly commands are requalified at the same frozen version, yielding bounded current observations for42 distinct commands. Each context matrix keeps other624 execution dimensions NOT_RUN; task8.3 and seven full-V1 tasks remain open. No GUI gestures, rendering or creative acceptance is claimed. [Evidence](evidence/filmcraft76-command-contexts-20261009/report.json).

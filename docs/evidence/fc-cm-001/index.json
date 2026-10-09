@@ -3,9 +3,10 @@
   "result": "PARTIAL",
   "task": "8.3",
   "evidence": [
-    "../filmcraft75-readonly-commands-20261009/report.json"
+    "../filmcraft75-readonly-commands-20261009/report.json",
+    "../filmcraft76-command-contexts-20261009/report.json"
   ],
-  "scope": "15 commands in headless and bridge,60 query calls,30 adapter parameter refusals and actual desktop contract drift refusal. Context matrices retain NOT_RUN for untested commands and dimensions. This audit does not replace historical editing evidence or prove666contexts/GUI/creative completion.",
+  "scope": "Fixed76 adds27 target/source-patch/move/track-flag commands in headless and signed owned desktop bridge, with50 semantic assertions in each create/reopen phase,54 actual native-context public refusals, persistent mute/solo/output and whole-project preservation. Fixed76 requalifies prior15 readonly commands (60 queries/30 parameter refusals). Separate merged context indexes record bounded observations for42 distinct commands; other624 remain NOT_RUN outside discovery. No full GUI/creative or exhaustive state/parameter qualification.",
   "observedContractDifference": {
     "command": "file.importImageSequence",
     "headless": "frameRate supported by contract",

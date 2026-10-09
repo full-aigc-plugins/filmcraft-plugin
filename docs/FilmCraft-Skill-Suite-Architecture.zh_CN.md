@@ -87,3 +87,5 @@ flowchart LR
 ```
 
 可复验脚本：`scripts/verify_host_skill_routing.py --codex CLIENT --installed-plugin FIXED_ROOT --source-repository SOURCE_GIT --output NEW_PRIVATE_DIRECTORY`。语料从安装锁定的技能源Git对象读取；结果与原生业务分别记录。
+
+固定76命令上下文补证：27条轨道目标／源补丁／目标移动／静音独奏输出切换命令在headless和所属签名桌面桥完成创建及重开；每阶段50项语义断言、54项原生空会话前置拒绝、整工程与源输入保全通过。15条只读命令在同一固定版本重新验收，合计42条命令具有限定范围的当前证据。各上下文矩阵保留其余624条未执行维度，8.3及七项完整V1任务继续开放；不宣称GUI手势、渲染或创作通过。 [Evidence](evidence/filmcraft76-command-contexts-20261009/report.json).

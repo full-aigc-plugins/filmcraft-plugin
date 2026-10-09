@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定76命令上下文补证：27条轨道目标／源补丁／目标移动／静音独奏输出切换命令在headless和所属签名桌面桥完成创建及重开；每阶段50项语义断言、54项原生空会话前置拒绝、整工程与源输入保全通过。15条只读命令在同一固定版本重新验收，合计42条命令具有限定范围的当前证据。各上下文矩阵保留其余624条未执行维度，8.3及七项完整V1任务继续开放；不宣称GUI手势、渲染或创作通过。 [Evidence](docs/evidence/filmcraft76-command-contexts-20261009/report.json).
+
 固定76最新补证：13技能共494项公开读取根／平台拒绝通过（390项实际macOS入口，104项Linux／Windows分支模拟，不代表目标系统运行）。默认临时目录重新执行13项目标测试及真实原生只读账本／精确授权激活均通过，未修改产品代码；旧SQLite I/O失败保留，根因仍未知。1853个安装文件再次与发布ZIP逐字节一致，完整V1剩余七项任务仍开放。 [Evidence](docs/evidence/filmcraft76-read-boundaries-20261009/report.json).
 
 固定76验收：实际安装13技能零加载错误；13项目标测试、真实授权原生维护及只读账本拒绝在本任务独立TMPDIR下通过。默认临时目录SQLite I/O失败保留，根因未定。安装副本及ZIP全部字节与固定标签一致；MAINTENANCE-ROOTS在所述环境通过，剩余七项完整V1任务仍开放。见[证据](docs/evidence/filmcraft76-maintenance-fixed-20261009/report.json)。

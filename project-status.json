@@ -277,5 +277,7 @@
   "skillRoutingContractEvidence": "docs/evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json",
   "skillRoutingContractStatus": "Task9.9 qualified for fixed75/source57:15 actual ephemeral Codex0.162.0-alpha.2 intent selections with matching installed skill reads,13 independent native business tasks,232 Markdown/337 confined local links and deterministic resources. Extra-root source skill loading is scoped; other hosts/plugin namespace routing/full666 native contexts and complete release/permissions remain open. Seven V1 tasks remain.",
   "maintenancePathRootsEvidence": "docs/evidence/filmcraft76-read-boundaries-20261009/report.json",
-  "maintenancePathRootsStatus": "Fixed76 MAINTENANCE-ROOTS:13 tests and actual native positive/refusal flows pass both owned-TMPDIR and fresh default-temp executions. Original default-temp SQLite I/O failure preserved; cause unknown. Adds494 public root/platform refusals (390 actual macOS,104 simulated branches). Seven V1 tasks remain open."
+  "maintenancePathRootsStatus": "Fixed76 MAINTENANCE-ROOTS:13 tests and actual native positive/refusal flows pass both owned-TMPDIR and fresh default-temp executions. Original default-temp SQLite I/O failure preserved; cause unknown. Adds494 public root/platform refusals (390 actual macOS,104 simulated branches). Seven V1 tasks remain open.",
+  "currentCommandContextsEvidence": "docs/evidence/filmcraft76-command-contexts-20261009/report.json",
+  "currentCommandContextsStatus": "Fixed76 bounded42 commands in headless/owned signed desktop bridge:27 targeting plus15 readonly. Whole-project/reopen and54 native-disabled/30 parameter refusals pass. Remaining624 commands, GUI and exhaustive contexts NOT_PROVEN; task8.3 and seven fullV1 tasks stay open."
 }

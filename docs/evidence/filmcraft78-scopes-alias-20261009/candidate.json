@@ -1,0 +1,49 @@
+{
+  "schema": "filmcraft-scopes-alias-candidate/v1",
+  "result": "PASS",
+  "sourceRef": "v0.1.0-dev.59",
+  "sourceSha": "7a2c7bb75d346abd2d41c708f26b4baf8dba43d1",
+  "oldFixedPlugin": "v0.1.0-dev.77",
+  "oldSource": "v0.1.0-dev.58",
+  "oldInstalledFailure": {
+    "result": "FAIL",
+    "error": "invalid_native_parameters",
+    "sessionsStarted": 0,
+    "receiptSha256": "1f27a5b87df2b7aa21509236b92a0864303ac152f563384ab36343206cdd0a38",
+    "sessionProofSha256": "4b8a5f38a2817f626242cf90e505c3f28d06225864cdb5185e56c44a00de8198"
+  },
+  "targetRed": {
+    "tests": 9,
+    "failureEvents": 3,
+    "reason": "All three declared aliases rejected by the shared parameter guard",
+    "logSha256": "3c24402c92727ee54d00e509ca56c6b1496691ac65ad152528fa4b7b1d1230cd"
+  },
+  "targetGreen": {
+    "tests": 9,
+    "result": "PASS",
+    "logSha256": "bf6fd29a73e72abbab45d67e28af3928613f4fb79ac8dcd7ad981535d1a9a082"
+  },
+  "sourceOffline": {
+    "tests": 295,
+    "pass": 256,
+    "environmentNotRun": 39,
+    "reportSha256": "e41d1013091147a4678c29237c58fa303269e9beaa2d1552178eeb099becd220"
+  },
+  "primarySource": [
+    {
+      "path": "crates/engine/src/scopes.rs",
+      "sha256": "b5227157bc1253b4899452dfdbe21dcd76738a3cb2de8d743173cb6abd57be5a",
+      "url": "https://github.com/storytold/filmcraft/blob/adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6/crates/engine/src/scopes.rs"
+    },
+    {
+      "path": "crates/engine/src/commands.rs",
+      "sha256": "fba912cc8a7a8a91da77cd60ef462b401bc53f2056724ada7a1dc1d2f59171f9",
+      "url": "https://github.com/storytold/filmcraft/blob/adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6/crates/engine/src/commands.rs"
+    }
+  ],
+  "fixed78HostNative": "NOT_RUN",
+  "task": "9.37",
+  "taskStatus": "OPEN",
+  "fullV1": "NOT_PROVEN",
+  "remainingFullTasks": 7
+}

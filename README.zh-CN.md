@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.78锁定已发布source59，修复scopes.read的frame／seconds／timecode简写时间字段被共享参数守卫误拒绝的问题。三个目标红灯转为九项目标测试通过，源码256通过／39环境NOT_RUN。固定78安装／原生复验及9.37仍待，七项完整V1门禁保持开放。 [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/candidate.json).
+
 固定77工程素材箱／搜索箱增量：10条新增有界命令、162次完整工程和28次精确搜索结果核验通过；每模式一个持续实例，1974个安装文件保全。保存重开、源入出ticks、撤销重做和组合返工通过。历史固定76／77合计153条，固定77累计23条、其余643条尚未在该版本观察；完整8.3及七项V1任务保持开放。 [Evidence](docs/evidence/filmcraft77-project-bins-20261009/report.json).
 
 固定77效果／关键帧增量：13条新增有界命令、348次完整工程比较及18张原生PNG独立RGBA逐像素验证通过；每模式只启动一个任务会话，1974个安装文件保全。七种插值仅存储验收，Linear／Hold另有画面证据。历史固定76／77合计143条；固定77本轮仅13条、其余653条仍未在该版本执行。完整8.3和七项V1任务保持开放。 [Evidence](docs/evidence/filmcraft77-effects-20261009/report.json).
@@ -95,7 +97,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.77` / `filmcraft-skills@v0.1.0-dev.58`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.78` / `filmcraft-skills@v0.1.0-dev.59`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -119,7 +121,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.77`；技能源：`0.1.0-dev.58`；13 个独立技能。
+当前插件：`0.1.0-dev.78`；技能源：`0.1.0-dev.59`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -224,9 +226,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.77 |
+| Metadata version | 0.1.0-dev.78 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.58 |
+| Skills source | filmcraft-skills / v0.1.0-dev.59 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

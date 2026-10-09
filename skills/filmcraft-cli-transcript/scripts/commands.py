@@ -114,6 +114,10 @@ def native_parameter_fields(identifier, rows, seen=()):
         fields.update(('match', 'relinkOthers', 'alignTimecode'))
     if identifier == 'media.attachProxies':
         fields.add('force')
+    # scopes.read在根对象内将时间别名写为无冒号简写；原生time_p逐项消费。
+    # 仅补该固定命令的合同字段，不把枚举值或嵌套键当作顶层权限。
+    if identifier == 'scopes.read':
+        fields.update(('frame', 'seconds', 'timecode'))
     return fields
 
 

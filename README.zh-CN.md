@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定77效果／关键帧增量：13条新增有界命令、348次完整工程比较及18张原生PNG独立RGBA逐像素验证通过；每模式只启动一个任务会话，1974个安装文件保全。七种插值仅存储验收，Linear／Hold另有画面证据。历史固定76／77合计143条；固定77本轮仅13条、其余653条仍未在该版本执行。完整8.3和七项V1任务保持开放。 [Evidence](docs/evidence/filmcraft77-effects-20261009/report.json).
+
 dev.77 锁定源58，新增公开任务级JSONL／Python会话：连续计划共享同一所属MCP与可选签名桌面，保留逐计划检查和回执，失败／unknown／身份变化后停止且不重放。固定77实际安装副本headless／bridge各四个连续计划、固定PID与完整工程／源保全通过，1974个发布文件字节不变；9.36完成，七项完整V1门禁仍开放。[任务会话](skills/filmcraft-use/references/task-session.md)。
 
 固定76片段属性增量新增15条有界命令观察：累计130条，536条仍仅发现。300个完整原生工程检查点核验撤销重做、组合属性重开返工及非目标保全；六个WAV独立验证-3dB音频增益和恢复PCM一致。光流与场处理画面算法继续未验收。[证据](docs/evidence/filmcraft76-clip-properties-20261009/report.json)。

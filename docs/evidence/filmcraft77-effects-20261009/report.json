@@ -1,0 +1,77 @@
+{
+  "schema": "filmcraft-fixed-effect-commands/v1",
+  "result": "PASS",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 13,
+      "completeProjectComparisons": 174,
+      "pngOutputs": 9,
+      "matrixSha256": "33a6d8cbf7a9cb6d0af070f72e1b537c4be20402dea03e2406004d29fed7c9f2",
+      "observationsSha256": "dd2a9808693574b6b85df9321177d447e59f912b1d0d5afc29e19391150e4435",
+      "sessionSha256": "f33187a7c693cbf7f7f68ffe52a09d72bcdcaed448d961678a4975b88b9aacde"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 13,
+      "completeProjectComparisons": 174,
+      "pngOutputs": 9,
+      "matrixSha256": "8fe10744db4d11820b0fdaf5f8f346be3b5fd35e96aabd440f4c9472ab654b94",
+      "observationsSha256": "56b57b47b76f1026db344f4f0cab5bac99139343ae81bc130f315b5d2585f31d",
+      "sessionSha256": "16217d1652b3b3b5aec806f2b4080712692fe410fc847aaa1117d9f7b288e9a8"
+    }
+  ],
+  "driverSha256": "1dd18dfa2efcde38f6dfee346346e2a38f5dac5c994295951d2b0c65af602349",
+  "taskSessionSha256": "2a149a3e20f6f61cb12d282c9dc54602e94b889bc94f7b8126a3468e12c93ce2",
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3",
+  "renderAcceptance": "PASS independent full RGBA decoding; linear/hold/motion/reopen/revision only",
+  "pluginRef": "v0.1.0-dev.77",
+  "pluginSha": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+  "sourceRef": "v0.1.0-dev.58",
+  "sourceSha": "3a2cc1568c2e23fdd1fabaea24c44bf94f932be7",
+  "currentFixedBoundedCommands": 13,
+  "currentFixedNotObservedBeyondDiscovery": 653,
+  "historicalDistinctBoundedCommands": 143,
+  "historicalNeverBounded": 523,
+  "historicalScope": "130 prior fixed76 commands + 13 disjoint fixed77 effects/export commands; fixed76 observations are not requalified at fixed77.",
+  "fullProjectComparisons": 348,
+  "nativePngOutputs": 18,
+  "pixelsCompared": 18432,
+  "unknownParameterRefusals": 26,
+  "actualEmptyContextRefusals": 2,
+  "oracleTestsPassed": 10,
+  "pythonTestsPassed": 114,
+  "pythonTestsLogSha256": "eed49345031eec2fffe9ee09d1db0256d1f3b6716f2f7e1cc429ed4686409d87",
+  "remainingFullTasks": 7,
+  "fullV1": "NOT_PROVEN",
+  "scope": "Seven interpolation enum storage and exact source media ticks. Only linear/hold rendered; no Bezier/easing visual algorithm, all-effects, exhaustive command applicability, GUI gestures, other platforms or creative acceptance.",
+  "initialVerifierFailures": [
+    {
+      "kind": "QA_UNKNOWN_PLAYHEAD_COMMAND",
+      "reason": "timeline.seek is unregistered; corrected to playhead.set before native startup. Original private attempt retained."
+    },
+    {
+      "kind": "QA_VIEWPORT_AS_NATIVE_FRAME",
+      "producerReportSha256": "a73a87d4c82a92dc275065d2c65c1903efc819ce65ac0fb9cc01e57ab86c17f0",
+      "reason": "Bridge render_frame returns 32x26 program viewport, headless32x32. Replaced QA output capture with file.exportFrame; original artifacts retained."
+    },
+    {
+      "kind": "QA_STRAIGHT_ALPHA_EXPECTATION",
+      "reason": "PNG50percent opacity preserves straight RGB230/85/39 with alpha128. Corrected independent decoder; no native replay."
+    }
+  ],
+  "filesSha256": {
+    "bridge/matrix.json": "8fe10744db4d11820b0fdaf5f8f346be3b5fd35e96aabd440f4c9472ab654b94",
+    "bridge/observations.json": "56b57b47b76f1026db344f4f0cab5bac99139343ae81bc130f315b5d2585f31d",
+    "bridge/session.json": "16217d1652b3b3b5aec806f2b4080712692fe410fc847aaa1117d9f7b288e9a8",
+    "headless/matrix.json": "33a6d8cbf7a9cb6d0af070f72e1b537c4be20402dea03e2406004d29fed7c9f2",
+    "headless/observations.json": "dd2a9808693574b6b85df9321177d447e59f912b1d0d5afc29e19391150e4435",
+    "headless/session.json": "f33187a7c693cbf7f7f68ffe52a09d72bcdcaed448d961678a4975b88b9aacde",
+    "installed-preservation.json": "dd7e4cb49d1b7d0fb65504cbbcd343650e4373a2aa3372aa87373879b44b2b60",
+    "native-report.json": "ae3fa4ee9b49d8a9469e8b3b073084b494bb7d410001798a0aca3ce817c47b30",
+    "pixels.json": "8162b0e9b43bcaa3babfd8b80ff2bfd8997eaff879b2df2859dbf01b592fb613"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "filmcraft-effect-pixels/v1",
+  "result": "PASS",
+  "sourceAuditSha256": "ae3fa4ee9b49d8a9469e8b3b073084b494bb7d410001798a0aca3ce817c47b30",
+  "driverSha256": "09b829aa511d3182d7ab186a6a7b93a90c99e615cf3047b40080aef4f1302603",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "images": [
+        {
+          "label": "baseline",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "shifted",
+          "fileSha256": "5564b045eb1c3ac835499dc295647a73658208901811c46f36bcae48e1618b1a",
+          "rgbaSha256": "98580e6c6bcf67ccaa8b92c522632bf84924e8c9965d8b33fd540c5aa4d1f9e0",
+          "pixels": 1024
+        },
+        {
+          "label": "linear_start",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "linear_half",
+          "fileSha256": "763b51a0af0c8b7cfa0aae33732aaf5c47632943bf1953c6473c9659e191c5fc",
+          "rgbaSha256": "56357f6234356c2c5cd96f219c0a6ea0099c0f1e9f3b2cfc8ceb464a9bca950f",
+          "pixels": 1024
+        },
+        {
+          "label": "linear_end",
+          "fileSha256": "bea01d5399433c63fc88795f9de1ada2c6ed538940babf97ede4065139520030",
+          "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+          "pixels": 1024
+        },
+        {
+          "label": "hold_half",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "reopened_half",
+          "fileSha256": "763b51a0af0c8b7cfa0aae33732aaf5c47632943bf1953c6473c9659e191c5fc",
+          "rgbaSha256": "56357f6234356c2c5cd96f219c0a6ea0099c0f1e9f3b2cfc8ceb464a9bca950f",
+          "pixels": 1024
+        },
+        {
+          "label": "revised_half",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "restored",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        }
+      ],
+      "queries": [
+        {
+          "phase": "create",
+          "effects": 130,
+          "gaussianDefaults": "PASS",
+          "receiptSha256": "7454e1f7f8cd9bd5af724cde3b2c8e5a431b877a46cb944ec39947c90c3f9e10"
+        },
+        {
+          "phase": "revision",
+          "effects": 130,
+          "gaussianDefaults": "PASS",
+          "receiptSha256": "6fc40b546ba67528118dc4b8788e59ca62a181a8b9afa02aa71cc73e595a71a6"
+        }
+      ],
+      "maxChannelError": 0,
+      "baselineRgba": [
+        230,
+        85,
+        39,
+        255
+      ],
+      "expectedHalfRgba": [
+        230,
+        85,
+        39,
+        128
+      ],
+      "actualHalfRgba": [
+        230,
+        85,
+        39,
+        128
+      ],
+      "comparisons": {
+        "baseline": 0,
+        "shifted": 0,
+        "linear_start": 0,
+        "linear_half": 0,
+        "linear_end": 0,
+        "hold_half": 0,
+        "reopened_half": 0,
+        "revised_half": 0,
+        "restored": 0
+      },
+      "rgbaSamplesCompared": 36864
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "images": [
+        {
+          "label": "baseline",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "shifted",
+          "fileSha256": "5564b045eb1c3ac835499dc295647a73658208901811c46f36bcae48e1618b1a",
+          "rgbaSha256": "98580e6c6bcf67ccaa8b92c522632bf84924e8c9965d8b33fd540c5aa4d1f9e0",
+          "pixels": 1024
+        },
+        {
+          "label": "linear_start",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "linear_half",
+          "fileSha256": "763b51a0af0c8b7cfa0aae33732aaf5c47632943bf1953c6473c9659e191c5fc",
+          "rgbaSha256": "56357f6234356c2c5cd96f219c0a6ea0099c0f1e9f3b2cfc8ceb464a9bca950f",
+          "pixels": 1024
+        },
+        {
+          "label": "linear_end",
+          "fileSha256": "bea01d5399433c63fc88795f9de1ada2c6ed538940babf97ede4065139520030",
+          "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+          "pixels": 1024
+        },
+        {
+          "label": "hold_half",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "reopened_half",
+          "fileSha256": "763b51a0af0c8b7cfa0aae33732aaf5c47632943bf1953c6473c9659e191c5fc",
+          "rgbaSha256": "56357f6234356c2c5cd96f219c0a6ea0099c0f1e9f3b2cfc8ceb464a9bca950f",
+          "pixels": 1024
+        },
+        {
+          "label": "revised_half",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        },
+        {
+          "label": "restored",
+          "fileSha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+          "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+          "pixels": 1024
+        }
+      ],
+      "queries": [
+        {
+          "phase": "create",
+          "effects": 130,
+          "gaussianDefaults": "PASS",
+          "receiptSha256": "4c9b4865cc0a8d6404221e7ab3eb268223a5ec13cf0d73d6ad9b0e3672a88f9a"
+        },
+        {
+          "phase": "revision",
+          "effects": 130,
+          "gaussianDefaults": "PASS",
+          "receiptSha256": "573764ea0eb818dc47af37c4eec6838ac1a1d6f57ee707c3fd19584a2674d202"
+        }
+      ],
+      "maxChannelError": 0,
+      "baselineRgba": [
+        230,
+        85,
+        39,
+        255
+      ],
+      "expectedHalfRgba": [
+        230,
+        85,
+        39,
+        128
+      ],
+      "actualHalfRgba": [
+        230,
+        85,
+        39,
+        128
+      ],
+      "comparisons": {
+        "baseline": 0,
+        "shifted": 0,
+        "linear_start": 0,
+        "linear_half": 0,
+        "linear_end": 0,
+        "hold_half": 0,
+        "reopened_half": 0,
+        "revised_half": 0,
+        "restored": 0
+      },
+      "rgbaSamplesCompared": 36864
+    }
+  ],
+  "tools": {
+    "ffmpeg": {
+      "binarySha256": "415cb0fb0bc26652f2416d6516fcb646379281a4dbb032121db8ef46aec5afad",
+      "version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "binarySha256": "88e98406604ed4a81a03efdd7e9c057992e79197b18b500fbc3f273444d26d1b",
+      "version": "ffprobe version 9.0.1 Copyright (c) 2007-2026 the FFmpeg developers"
+    }
+  },
+  "scope": "18 actual native PNGs/18432 pixels decoded. All RGBA channels compared: integer8px motion and transparent exposed region, straight-alpha PNG opacity100/50/0 (alpha255/128/0), hold, saved/reopened keyframes, revised endpoint and baseline restore. RGB tolerance1 code unit; alpha exact. Headless/bridge decoded bytes equal. No Bezier/easing visual algorithm or all-effects/GUI/full V1 qualification."
+}

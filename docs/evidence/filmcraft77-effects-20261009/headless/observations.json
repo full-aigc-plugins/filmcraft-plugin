@@ -1,0 +1,103 @@
+{
+  "binding": {
+    "pluginSha": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+    "sourceSha": "3a2cc1568c2e23fdd1fabaea24c44bf94f932be7",
+    "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "runtimeVersion": "0.2.0-craft.5",
+    "platform": "darwin-arm64",
+    "mode": "headless"
+  },
+  "commands": [
+    "effects.addKeyframe",
+    "effects.apply",
+    "effects.deleteKeyframe",
+    "effects.list",
+    "effects.moveKeyframe",
+    "effects.remove",
+    "effects.reset",
+    "effects.setInterpolation",
+    "effects.setKeyframe",
+    "effects.setParam",
+    "effects.toggleAnimation",
+    "effects.toggleEnabled",
+    "file.exportFrame"
+  ],
+  "comparisons": [
+    {
+      "phase": "create",
+      "completeProjects": 85
+    },
+    {
+      "phase": "revision",
+      "completeProjects": 85
+    }
+  ],
+  "sourceSha256": "fde6dee174b39ba6dd6fee488923597867816d65b24afda70eca9e79304cda5b",
+  "savedInputSha256": "2c05edbd1b30ad6a05b3b5870db77a4a9d06f6ff664e6273643292bae2634a33",
+  "receiptsSha256": {
+    "create": "7454e1f7f8cd9bd5af724cde3b2c8e5a431b877a46cb944ec39947c90c3f9e10",
+    "reopen": "16f936cc5224ca225e3f6532fb72fe54807044d11d67f83926bff183731709ad",
+    "revision": "6fc40b546ba67528118dc4b8788e59ca62a181a8b9afa02aa71cc73e595a71a6",
+    "discovery": "3a23872512e98a15fbdfa9453b3b947f31584d173b6e8c6207c90973eeac0372",
+    "close_project": "359ad8194f78a0662a4c654ae30ecdaa66d1d11207eb764ebd77b1bc7e634fc4"
+  },
+  "renderImages": {
+    "baseline": {
+      "path": "create/baseline.png",
+      "sha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f"
+    },
+    "shifted": {
+      "path": "create/shifted.png",
+      "sha256": "5564b045eb1c3ac835499dc295647a73658208901811c46f36bcae48e1618b1a"
+    },
+    "linear_start": {
+      "path": "create/linear_start.png",
+      "sha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f"
+    },
+    "linear_half": {
+      "path": "create/linear_half.png",
+      "sha256": "763b51a0af0c8b7cfa0aae33732aaf5c47632943bf1953c6473c9659e191c5fc"
+    },
+    "linear_end": {
+      "path": "create/linear_end.png",
+      "sha256": "bea01d5399433c63fc88795f9de1ada2c6ed538940babf97ede4065139520030"
+    },
+    "hold_half": {
+      "path": "create/hold_half.png",
+      "sha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f"
+    },
+    "reopened_half": {
+      "path": "revision/reopened_half.png",
+      "sha256": "763b51a0af0c8b7cfa0aae33732aaf5c47632943bf1953c6473c9659e191c5fc"
+    },
+    "revised_half": {
+      "path": "revision/revised_half.png",
+      "sha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f"
+    },
+    "restored": {
+      "path": "revision/restored.png",
+      "sha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f"
+    }
+  },
+  "unknownFieldRefusals": [
+    "effects.addKeyframe",
+    "effects.apply",
+    "effects.deleteKeyframe",
+    "effects.list",
+    "effects.moveKeyframe",
+    "effects.remove",
+    "effects.reset",
+    "effects.setInterpolation",
+    "effects.setKeyframe",
+    "effects.setParam",
+    "effects.toggleAnimation",
+    "effects.toggleEnabled",
+    "file.exportFrame"
+  ],
+  "emptyNativeRefusal": {
+    "command": "effects.apply",
+    "receiptSha256": "dced953ec2a127359ef9fc9355e00c3a133e34d42b7e865e2f8d104cf074eee2"
+  },
+  "keyframeScope": "mediaTime/to are exact source media ticks; time/playhead converted from timeline. Seven interpolation modes stored; only linear/hold output independently tested.",
+  "fullV1": "NOT_PROVEN"
+}

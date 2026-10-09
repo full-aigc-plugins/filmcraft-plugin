@@ -142,3 +142,23 @@ FC-DM-002-N 裁切边界细化：固定dev.65审计证实原生会静默钳制�
 2026-10-09 领域操作参数边界增量：固定67/source50实际原生修订接受 captions.setText.params.metadata，合成凭据标记随原始plan.json进入交付；元数据没有被执行，原交付保全。补充包装操作字段集合和移动项字段检查，保留专用错误、用户创作文本及合法引用。该增量不关闭7.4—7.6，也不替代native.command完整参数、可信根与宿主秘密引用验收。
 
 2026-10-09 可信根设计推进：既有TaskLedger授权主体绑定任务但尚未绑定目录策略，PythonWorkflowRunner对子进程继承整个process.env。单靠参数路径过滤不能覆盖完整注册表内部读写。以可信宿主目录策略＋原生进程系统沙箱限制实际文件访问；安装器维护、锁定运行时读取与编辑写入权限分离，清理未授权宿主环境。首先验证macOS当前系统实际隔离；不支持的目标平台必须拒绝而非无隔离回退。原7.4—7.6保持未完成，需完成公开入口、Harness及固定安装集成后才能关闭。
+
+
+## 公开任务会话生命周期（FC-CM-001-TASK-SESSION）
+
+独立技能源 task_session.py 为前台JSONL入口和Python上下文管理器。调用者持有同一进程句柄，逐计划使用commands.execute的既有校验／回执；借用包装器退出阶段不关闭原生连接。首次有效计划安装校验一次并延迟启动，后续计划核对固定源码、原生二进制、授权／保护根和模型身份，实时查询enabled。任务结束才清理本次拥有的MCP与可选签名桌面。旧单次run继续结束即退出，跨任务／授权变化不隐式附着用户实例。
+
+```mermaid
+stateDiagram-v2
+    [*] --> Ready: 独立授权与新任务目录
+    Ready --> Active: 第一份合法计划 / 启动一次
+    Active --> Active: 后续计划 / 校验与逐阶段回执
+    Active --> Stopped: 失败或unknown或身份变化
+    Ready --> Stopped: 非法请求
+    Active --> Closed: close或EOF
+    Stopped --> Closed: 清理所属进程
+    Ready --> Closed: EOF
+    Closed --> [*]
+```
+
+中断时已写journal保留unknown和最后started步骤的unknown，不重放；外部输入在启动前显式保护为只读，任务内生成物保留写根语义。跨计划不暗中继承as别名，调用者从真实回执获取ID。固定发布安装复验为独立门禁；持续会话不代替独立恢复或全部命令／GUI验收。

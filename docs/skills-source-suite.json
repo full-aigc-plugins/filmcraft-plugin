@@ -1,11 +1,11 @@
 {
-  "sourceRef": "v0.1.0-dev.57",
-  "sourceSha": "abbd7bf984312c72f065b6a4c96e8816389f0183",
-  "suiteSha256": "eb9d63950ae419f732b448fc221b442e0f23f0d07366f733a77d3a91a327963d",
+  "sourceRef": "v0.1.0-dev.58",
+  "sourceSha": "3a2cc1568c2e23fdd1fabaea24c44bf94f932be7",
+  "suiteSha256": "d092f41c057b35665fc5fce61f9c174aad581d3cdc1a5e5b02fccd13469fcb57",
   "suite": {
     "schema": "craft-skill-suite/v1",
     "pluginId": "filmcraft",
-    "version": "0.1.0-dev.57",
+    "version": "0.1.0-dev.58",
     "source": {
       "repository": "https://github.com/storytold/filmcraft",
       "commit": "adfd9a66de2bebc764c7f57435ccdf0f1d2e1df6",

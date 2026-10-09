@@ -1,0 +1,172 @@
+{
+  "schema": "filmcraft-public-task-session-native/v1",
+  "result": "PASS",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "stages": 4,
+      "cliPid": 73284,
+      "session": {
+        "schema": "filmcraft-task-session/v1",
+        "mode": "headless",
+        "identityBindingSha256": "ac7c384604b866a7965408ede6109665a33461f8e7adc611c100d0db9a832638",
+        "sessionsStarted": 1,
+        "pids": [
+          [
+            73285
+          ],
+          [
+            73285
+          ],
+          [
+            73285
+          ],
+          [
+            73285
+          ]
+        ],
+        "singleProcessIdentity": true,
+        "plans": [
+          {
+            "name": "open",
+            "result": "PASS",
+            "planSha256": "b4caffaf6f7b8a15b5a153e23ad3b866c42f2b51cc405ec2bbbbc377d9d1949a"
+          },
+          {
+            "name": "edit",
+            "result": "PASS",
+            "planSha256": "048411b75fe8f659ab0884ff99bc4bbbbdf35e835ad95e5373643b58e9415234"
+          },
+          {
+            "name": "reopen",
+            "result": "PASS",
+            "planSha256": "3318b6af0adaaa7af0027cc7d792235a2b919f296d174cab3aac274e20f85636"
+          },
+          {
+            "name": "restore",
+            "result": "PASS",
+            "planSha256": "4511c8a0d0ec5a8c9970a7d614ca878bebd9344500c7be6fc60356828d21b132"
+          }
+        ],
+        "stopped": false,
+        "closed": true,
+        "ownedProcessesStopped": true
+      },
+      "sourceSha256": "fde6dee174b39ba6dd6fee488923597867816d65b24afda70eca9e79304cda5b",
+      "baselineSha256": "fde6dee174b39ba6dd6fee488923597867816d65b24afda70eca9e79304cda5b",
+      "changedSha256": "16e17e6ca2b88c2efd63db37f62dbe2e19911d785b83edd83f4d9c63ca1c9af6",
+      "reopenedSha256": "ac6e38400e8c78e74b6d3d7b4883311910073a9b19262b46185f534d51385135",
+      "restoredSha256": "5779b06d78361d50dad4aa016cd039e296ec44388ee97783298fac0d3be42009"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "stages": 4,
+      "cliPid": 73286,
+      "session": {
+        "schema": "filmcraft-task-session/v1",
+        "mode": "bridge",
+        "identityBindingSha256": "a1e8fb5c8defe551eb3236c95f68f5979a6e4a2d1cb6be0bc5b4b8472790327c",
+        "sessionsStarted": 1,
+        "pids": [
+          [
+            73304,
+            73292
+          ],
+          [
+            73304,
+            73292
+          ],
+          [
+            73304,
+            73292
+          ],
+          [
+            73304,
+            73292
+          ]
+        ],
+        "singleProcessIdentity": true,
+        "plans": [
+          {
+            "name": "open",
+            "result": "PASS",
+            "planSha256": "b4caffaf6f7b8a15b5a153e23ad3b866c42f2b51cc405ec2bbbbc377d9d1949a"
+          },
+          {
+            "name": "edit",
+            "result": "PASS",
+            "planSha256": "048411b75fe8f659ab0884ff99bc4bbbbdf35e835ad95e5373643b58e9415234"
+          },
+          {
+            "name": "reopen",
+            "result": "PASS",
+            "planSha256": "3318b6af0adaaa7af0027cc7d792235a2b919f296d174cab3aac274e20f85636"
+          },
+          {
+            "name": "restore",
+            "result": "PASS",
+            "planSha256": "61c7361e11504dc975c7eaed989bd5ca425a3fcc39c44eda738a238ea7dae9df"
+          }
+        ],
+        "stopped": false,
+        "closed": true,
+        "ownedProcessesStopped": true
+      },
+      "sourceSha256": "b64a19df814e44700ac0005e9b647ba55146077e5b752e13d953d66daef6086c",
+      "baselineSha256": "b64a19df814e44700ac0005e9b647ba55146077e5b752e13d953d66daef6086c",
+      "changedSha256": "ed412e3112898ca22d76e292790c31d140c7caf1527132fb467580d93ec79c92",
+      "reopenedSha256": "71aecf34e08087263da8e5e17180acd9d8c61ea5f2c3c193b1c6f25b859fdb8f",
+      "restoredSha256": "b62a04621008d992b73dce44e4c63a731e444c596a1f42b66eba6b84d8d75db3"
+    }
+  ],
+  "skillFilesSha256": {
+    "scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "scripts/cli.py": "2db49f81ee149ffd4a32bf24e9ff22d54b4546ce292d1d35351c36645b2c8433",
+    "scripts/commands.py": "e45a1b219ee78d7bdd73bbab831de3de99ed4464651bb08d8298e8c840c5e649",
+    "scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "scripts/desktop.py": "d8b7e7b9a8aaccbadcb8b01dd61e5201f05a9be70bb93bf1bab60556fb0232e9",
+    "scripts/desktop_session.py": "539fe3fcac12e6d9da288273b0765e92eb93d52606c299ae553263b2b82a56ae",
+    "scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "scripts/execution_permissions.py": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6",
+    "scripts/mcp_session.py": "d5d21de30f0b000fbe971e4d20d158890f3ea4beb8c39e80c78e04665a232f00",
+    "scripts/native_workflow.py": "95c97a398bbff07e8197d28ceeb7de34218d9e83426a05b0a129cf2ddbdc9855",
+    "scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "scripts/task_session.py": "2a149a3e20f6f61cb12d282c9dc54602e94b889bc94f7b8126a3468e12c93ce2",
+    "scripts/workflow.py": "b1ec238f50c3b4e6213c74df0893fb0d37a8e2f0de232b685818502fa950f14c"
+  },
+  "driverSha256": "eb8e0c744bfe3681a1aa61baee90b53a5d42ae9345feba629fbc5964b032f330",
+  "fullV1": "NOT_PROVEN",
+  "scope": "Candidate public JSONL entry; 4 continuous plans per mode, one MCP and optional signed desktop. Full project comparison normalizes only saveAs project/root names; original fixture hash unchanged. EOF and explicit close clean owned processes. Fixed-release installation acceptance separate.",
+  "regressions": {
+    "targetTests": 13,
+    "missingEntryRedLogSha256": "5b77b758f065f839c62bb539defd75761bd6c696f567f9021333f67480162049",
+    "interruptRedLogSha256": "30471a24341f8303d55f9c10fdcd8c56d6499102fff689185c1c0e2272332485",
+    "greenLogSha256": "7448a56350f33175126ca5fae786c5a3bd2dbc6d084057ab4d776bbb4dd2dffb"
+  },
+  "initialQaFailures": [
+    {
+      "kind": "VERIFY_INSPECT_CLIP_FIELD",
+      "receiptSha256": "b941ab7798567d5f29ee8000f536c320364994b02d1640bfc99a2ace9a82339b",
+      "reason": "Verifier incorrectly read id; live native sequence.inspect returns clip. No edit was submitted."
+    },
+    {
+      "kind": "VERIFY_RENAME_CONTRACT",
+      "receiptSha256": "af3a532e27744a68670b0a102ce2a6b93a8e876ab78970788b3a299c95b4d00d",
+      "reason": "Verifier used clips for clip.rename; fixed native contract requires clip. Rejected before stage output or edit."
+    }
+  ],
+  "sourceOfflineCounts": {
+    "tests": 293,
+    "pass": 254,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 39
+  }
+}

@@ -105,3 +105,5 @@ GUI任务可先使用本技能自带的 [固定桌面安装](references/desktop-
 口播转录、说话人或按文字剪辑任务，交给 **filmcraft-cli-transcript**。安装：`npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。参数与场景步骤见本技能自带 [转录指南](references/transcript-scene.md)。
 
 同目标执行竞争与中断登记见本技能 [执行登记](references/output-execution.md)；技能源dev.29收录实现，插件固定安装验收单独记录。
+
+连续操作优先使用本技能自带的 [任务级会话](references/task-session.md)：启动一次，逐计划检查、保存和返工，共享同一FilmCraft实例；任务结束才退出。单次run仍保持原兼容行为。

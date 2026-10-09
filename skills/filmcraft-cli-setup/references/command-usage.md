@@ -21,6 +21,10 @@ Queries require no installation. Parameter documentation is native syntax, not e
 
 ## 2. 同会话计划 / Persistent-session plans
 
+跨多份计划的连续编辑使用 [任务级实例复用](task-session.md)：启动一次，后续计划发送到同一运行句柄。单份plan内多步仍共享同一会话；单次run结束后会退出。
+
+For incremental plans across one task, use [task-level instance reuse](task-session.md); keep its foreground process alive and send later requests to the same handle.
+
 计划只包含 schema 和 operations，schema 为 craft-command-plan/v1；每步必须提供 params 对象，并且恰好有 command 或 tool。command 使用完整命令目录中的 ID；tool 使用实际 MCP 快照中的工具名，可创建／打开／检查／保存／导出文档。
 
 ```json

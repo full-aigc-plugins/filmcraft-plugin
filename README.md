@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.77 pins source58 and adds a public task-level JSONL/Python command session. Continuous plans share one owned MCP and optional signed desktop; per-plan checks and receipts remain, while failure/unknown/identity change stops without replay. Candidate native headless/bridge pass; fixed77 installation qualification is pending. [Task sessions](skills/filmcraft-use/references/task-session.md).
+
 Fixed76 clip-property supplement adds15 disjoint bounded commands:130 total,536 still NOT_RUN beyond discovery.300 complete native-project checkpoints prove undo/redo, combined-property reopen/revision and non-target preservation. Six WAV outputs independently verify -3dB clip gain and exact restored PCM. Optical-flow and field-processing video algorithms remain unqualified. [Evidence](docs/evidence/filmcraft76-clip-properties-20261009/report.json).
 
 Fixed76 marker/settings supplement adds29 disjoint bounded command observations in both contexts:115 commands total,551 still NOT_RUN beyond discovery.484 persistent-sequence comparisons and80 actual saved marker states verify metadata absent from inspect, undo/redo, reopen/revision and non-target preservation. Each mode uses one owned instance. Full8.3 and seven V1 tasks stay open. [Evidence](docs/evidence/filmcraft76-markers-settings-20261009/report.json).
@@ -89,7 +91,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.76` / `filmcraft-skills@v0.1.0-dev.57`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.77` / `filmcraft-skills@v0.1.0-dev.58`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -113,7 +115,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.76`; skill source: `0.1.0-dev.57`; 13 independent skills.
+Current plugin: `0.1.0-dev.77`; skill source: `0.1.0-dev.58`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -217,9 +219,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.76 |
+| Metadata version | 0.1.0-dev.77 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.57 |
+| Skills source | filmcraft-skills / v0.1.0-dev.58 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

@@ -86,3 +86,5 @@ GUI任务可先使用本技能自带的 [固定桌面安装](references/desktop-
 多机位访谈、演出与主录音连续性任务，读取 [多机位场景](references/multicam-scene.md)，核对机位编号、同步依据和切点验收。
 
 同目标执行竞争与中断登记见本技能 [执行登记](references/output-execution.md)；技能源dev.29收录实现，插件固定安装验收单独记录。
+
+连续操作优先使用本技能自带的 [任务级会话](references/task-session.md)：启动一次，逐计划检查、保存和返工，共享同一FilmCraft实例；任务结束才退出。单次run仍保持原兼容行为。

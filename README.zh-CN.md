@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.79锁定source60，修复保存重开比较误纳入顶层临时播放头；持久字段及嵌套字段继续严格比较。技能源本地260通过／39环境NOT_RUN，CI257通过／42未运行。固定79原生交付待9.38验收；领域入口持续实例复用另由9.39跟踪。七项完整V1门禁仍开放。
+
 固定78/source59示波器别名子门禁9.37通过：实际隔离安装、32视图／24576个RGB直方桶、保存重开与13独立守卫。领域native.command八视图一致，但整体工作流因临时播放头重开比较错误而FAIL，单独跟踪9.38；七项完整V1门禁仍开放。 [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/report.json).
 
 dev.78锁定已发布source59，修复scopes.read的frame／seconds／timecode简写时间字段被共享参数守卫误拒绝的问题。三个目标红灯转为九项目标测试通过，源码256通过／39环境NOT_RUN。固定78安装／原生复验及9.37仍待，七项完整V1门禁保持开放。 [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/candidate.json).
@@ -99,7 +101,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.78` / `filmcraft-skills@v0.1.0-dev.59`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.79` / `filmcraft-skills@v0.1.0-dev.60`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -123,7 +125,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.78`；技能源：`0.1.0-dev.59`；13 个独立技能。
+当前插件：`0.1.0-dev.79`；技能源：`0.1.0-dev.60`；13 个独立技能。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -228,9 +230,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.78 |
+| Metadata version | 0.1.0-dev.79 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.59 |
+| Skills source | filmcraft-skills / v0.1.0-dev.60 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

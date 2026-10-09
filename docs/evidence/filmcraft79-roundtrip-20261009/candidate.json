@@ -1,0 +1,31 @@
+{
+  "schema": "filmcraft-roundtrip-source-candidate/v1",
+  "result": "PASS",
+  "scope": "source regression only; fixed79 host/native delivery NOT_RUN",
+  "sourceRef": "v0.1.0-dev.60",
+  "sourceSha": "476639661a61cc70c396d7955ea0ef3c96b39d42",
+  "sourceCiRunId": 37882389512,
+  "sourceCiCounts": {
+    "tests": 299,
+    "pass": 257,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 42
+  },
+  "sourceLocalCounts": {
+    "tests": 299,
+    "pass": 260,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 39
+  },
+  "testMethods": 4,
+  "redErrorEvents": 4,
+  "greenErrors": 0,
+  "redSha256": "498965aa8d7183b83c50877322ef258fb01ad3d47fbbfbbac7ae066bcbb05fa3",
+  "greenSha256": "9ce318ccc785f5f0ff538a0ee713e83863be453715a4de8be399fc7427b21c67",
+  "persistentMutationCases": 10,
+  "task9.38": "OPEN",
+  "task9.39": "OPEN",
+  "fullV1": "NOT_PROVEN"
+}

@@ -16,6 +16,12 @@ import subprocess
 import tempfile
 
 TICKS = 254016000000
+def validate_sequence_roundtrip(actual, expected):
+    """校验保存重开后的工程序列；仅顶层选择与播放头属于临时会话状态。"""
+    if {k: v for k, v in actual.items() if k not in ('selection', 'playhead')} != {k: v for k, v in expected.items() if k not in ('selection', 'playhead')}:
+        raise ValueError('sequence_roundtrip_mismatch')
+
+
 def exchange_report(root,outputs,warnings):
     spec=importlib.util.spec_from_file_location('craft_exchange_loss',Path(__file__).with_name('exchange_loss.py'))
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
@@ -711,9 +717,7 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
                     del asset['staging']
                 reopened = json.loads(native_run(['--project', str(output / 'project.fcproj'), 'inspect']))
                 captions = json.loads(native_run(['--project', str(output / 'project.fcproj'), 'exec', 'captions.list']))
-                # 选择状态属于会话，不是原生工程持久化内容。
-                if {k: v for k, v in reopened['sequence'].items() if k != 'selection'} != {k: v for k, v in sequence.items() if k != 'selection'}:
-                    raise ValueError('sequence_roundtrip_mismatch')
+                validate_sequence_roundtrip(reopened['sequence'], sequence)
                 for index, time in enumerate(plan.get('frames', ['0'])):
                     native_run(['--project', str(output / 'project.fcproj'), 'render', '--seconds', str(ticks(time) / TICKS), '--out', str(output / f'frame-{index:04d}.png')])
                 native_run(['--project', str(output / 'project.fcproj'), 'export', str(output / 'film.mp4'), '--format', 'h264', '--settings', json.dumps(export_settings(plan, captions))])

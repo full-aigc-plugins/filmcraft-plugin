@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed76 acceptance:13 installed skills/no loading errors,13 target tests and actual authorized native maintenance/readonly-ledger refusals pass using an owned private TMPDIR. Default-temp SQLite disk I/O failures remain recorded with unknown root cause. All frozen installation/ZIP bytes match the immutable tag. MAINTENANCE-ROOTS qualifies in this stated environment; seven full-V1 tasks remain open. [Evidence](docs/evidence/filmcraft76-maintenance-fixed-20261009/report.json).
+
 dev.76 adds maintenance candidate/ledger/probe read-root checks and activation/rollback ledger write-root checks before parsing or authorization. Actual fixed75 read-only-ledger mutation is retained as behavior red;13 target tests and candidate native positive/refusal flows pass. Source57 is unchanged. Fixed76 installation acceptance and all7 remaining full-V1 tasks stay open. [Candidate evidence](docs/evidence/maintenance-path-roots-candidate-20261009/report.json).
 
 2026-10-09: task9.9 is complete for fixed75/source57. Actual authenticated Codex0.162.0-alpha.2 selects and reads the expected installed skill in all15 fresh read-only routing cases;13 independent native businesses pass in102.290s. All232 skill Markdown files,337 local links and deterministic shared resources pass. CLI147 model incompatibility is retained as an environment refusal. Connection-scoped extra-root loading does not qualify all plugin host namespaces. Seven full-V1 tasks remain open. [Acceptance](docs/evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json).

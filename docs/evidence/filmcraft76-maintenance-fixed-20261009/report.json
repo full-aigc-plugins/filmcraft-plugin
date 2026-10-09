@@ -1,0 +1,128 @@
+{
+  "schema": "filmcraft-fixed-maintenance-acceptance/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.76",
+  "pluginCommit": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "scenario": "FC-RL-002-MAINTENANCE-ROOTS",
+  "hostReceiptSha256": "f5b769c88830b1c8320820c02deae87b1a521693720bcf6888452c50d09f1e20",
+  "installedSkillCount": 13,
+  "installedLoadingErrors": 0,
+  "installedFilesPreserved": 1853,
+  "zipSha256": "acc1a8ea0071adb4005f6bf0096ab6a2f95fa51cd13a04d60afa1563ddb2658f",
+  "zipFilesVerified": 1853,
+  "targetTests": 13,
+  "targetTestsSkipped": 0,
+  "targetTestsLogSha256": "a3d215c0b744a0926c528fed89dc8ca37e28d1690e599c78b5803f9746e1fd1b",
+  "requiredTemporaryEnvironment": "Owned private TMPDIR; default temporary location observed SQLite disk I/O error. Root cause not established. No product fix claimed for default temp failure.",
+  "defaultTemporaryFailure": {
+    "result": "ENVIRONMENT_FAILURE",
+    "sqliteCode": "ERR_SQLITE_ERROR",
+    "sqliteErrcode": 4874,
+    "testLogSha256": "0b927bf3b3505ec21a0fd526a7138cb803efdd1fb46a6fb001e8152149dd78aa",
+    "readonlyDriverLogSha256": "aea23970ae8508640ef73fa8644a442f0871b795c4670542495a0bce4eea1755",
+    "positiveDriverLogSha256": "aea23970ae8508640ef73fa8644a442f0871b795c4670542495a0bce4eea1755"
+  },
+  "observations": {
+    "readonlyLedger": {
+      "schema": "filmcraft-maintenance-readonly-ledger-audit/v1",
+      "result": "PASS",
+      "sourceRevision": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+      "actualNativeProbe": true,
+      "readonlyLedgerProbePreserved": true,
+      "activation": "permission_write_denied",
+      "ledgerPreserved": true,
+      "skillPreserved": true,
+      "runtimeBinaryPreserved": true,
+      "inputPreserved": true,
+      "scope": "Actual owned fixture grants and ledger; source candidate is not fixed new-release acceptance."
+    },
+    "positiveMaintenance": {
+      "result": "PASS",
+      "layer": "current candidate actual public runtime upgrade CLI, private owned exact grants and pinned native MCP sandbox probe",
+      "sourceRevision": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+      "expandedRootsRefused": true,
+      "revokedGrantRefused": true,
+      "probeLedgerUnchanged": true,
+      "activatedGeneration": 1,
+      "skillPreserved": true,
+      "runtimeBinaryPreserved": true,
+      "inputPreserved": true,
+      "executionPermissionsSha256": "c24c2a26f0b27d17709b8910eef1a227fcbced75d3dff344ef59088f92e7c3a6",
+      "fullFC_RL_002": "NOT_PROVEN",
+      "fixedHostQualification": "NOT_RUN"
+    },
+    "publicPathRefusals": {
+      "schema": "filmcraft-fixed-maintenance-path-refusals/v1",
+      "result": "PASS",
+      "pluginRef": "v0.1.0-dev.76",
+      "cases": [
+        {
+          "case": "candidate-read",
+          "result": "PASS",
+          "error": "permission_read_denied",
+          "ledgerPreserved": true,
+          "runtimeCreated": false,
+          "privatePathEchoed": false
+        },
+        {
+          "case": "ledger-read",
+          "result": "PASS",
+          "error": "permission_read_denied",
+          "ledgerPreserved": true,
+          "runtimeCreated": false,
+          "privatePathEchoed": false
+        },
+        {
+          "case": "probe-read",
+          "result": "PASS",
+          "error": "permission_read_denied",
+          "ledgerPreserved": true,
+          "runtimeCreated": false,
+          "privatePathEchoed": false
+        },
+        {
+          "case": "activation-before-probe-read",
+          "result": "PASS",
+          "error": "permission_write_denied",
+          "ledgerPreserved": true,
+          "runtimeCreated": false,
+          "privatePathEchoed": false
+        },
+        {
+          "case": "rollback-before-probe-read",
+          "result": "PASS",
+          "error": "permission_write_denied",
+          "ledgerPreserved": true,
+          "runtimeCreated": false,
+          "privatePathEchoed": false
+        },
+        {
+          "case": "plan-read",
+          "result": "PASS",
+          "error": "permission_read_denied",
+          "ledgerPreserved": true,
+          "runtimeCreated": false,
+          "privatePathEchoed": false
+        },
+        {
+          "case": "runtime-write",
+          "result": "PASS",
+          "error": "permission_write_denied",
+          "ledgerPreserved": true,
+          "runtimeCreated": false,
+          "privatePathEchoed": false
+        }
+      ],
+      "driverSha256": "ecc8c0d39b04ceb25cb4e68f7528cbf8f5872e66783fb933225276ffedfafa61",
+      "scope": "Actual fixed installed public runtime CLI with malformed outside descriptors/receipts and own ledger fixtures; refusals precede parsing, grant lookup and runtime installation."
+    }
+  },
+  "originalDriverLabels": "Original inherited reports mention candidate/NOT_RUN; wrapper binds actual installed target to immutable dev.76 bytes and private execution records, preserving originals.",
+  "sourceGateReportSha256": "3158e65b765372a4e5422e01fee78ff497e63987224e0d1a2624e7e38ea9014b",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "fullV1": "NOT_PROVEN",
+  "remainingTasks": 7,
+  "scope": "Fixed installed public maintenance CLI, read-only subject/native capability probe, exact grants, activation and refusals. No full permissions, other platforms or complete command/GUI qualification."
+}

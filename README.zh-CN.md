@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定76验收：实际安装13技能零加载错误；13项目标测试、真实授权原生维护及只读账本拒绝在本任务独立TMPDIR下通过。默认临时目录SQLite I/O失败保留，根因未定。安装副本及ZIP全部字节与固定标签一致；MAINTENANCE-ROOTS在所述环境通过，剩余七项完整V1任务仍开放。见[证据](docs/evidence/filmcraft76-maintenance-fixed-20261009/report.json)。
+
 dev.76补齐维护候选／账本／回执读取根，以及激活／回滚在解析及授权前的账本写入根检查。固定75真实修改只读账本的行为红灯保留；13项目标测试及候选原生正向／拒绝流程通过。源57保持不变，固定76安装验收及剩余七项完整V1任务仍开放。见[候选证据](docs/evidence/maintenance-path-roots-candidate-20261009/report.json)。
 
 2026-10-09完成9.9：固定75/source57在已登录Codex0.162.0-alpha.2的15个全新只读临时会话中正确选择并读取对应安装技能；十三独立原生业务102.290秒全部通过，232技能Markdown／337本地链接及确定性共享资源通过。CLI147模型不兼容拒绝保留为环境失败；连接内额外技能根加载不代表全部插件宿主命名空间资格。完整V1余7项开放。[验收](docs/evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json)。

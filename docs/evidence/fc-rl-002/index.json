@@ -1,6 +1,6 @@
 {
   "schema": "filmcraft-permission-scenario-audit/v1",
-  "pluginRef": "v0.1.0-dev.75",
+  "pluginRef": "v0.1.0-dev.76",
   "sourceRef": "v0.1.0-dev.57",
   "result": "PARTIAL",
   "requirements": "FC-RL-002",
@@ -62,11 +62,12 @@
     },
     {
       "id": "FC-RL-002-MAINTENANCE-ROOTS",
-      "status": "PARTIAL",
+      "status": "PASS",
       "evidence": [
-        "../filmcraft74-fixed-supplement-20261009/maintenance-roots-fixed74.json"
+        "../filmcraft74-fixed-supplement-20261009/maintenance-roots-fixed74.json",
+        "../filmcraft76-maintenance-fixed-20261009/report.json"
       ],
-      "scopeOrGap": "Actual installed maintenance probe/activation, expanded roots/revocation refusal and ledger preservation; original driver label retained, full scenario evidence mapping still pending."
+      "scopeOrGap": "Fixed76 actual installed public probe/activation passes exact grants, expanded-root/revoked grant refusals and original ledger preservation during probe. Actual fixed75 read-only-ledger mutation red is fixed; candidate/ledger/probe reads and activation/rollback ledger writes refuse before parsing/grant lookup.13 installed target tests pass with owned private TMPDIR; default SQLite I/O failure retained. Full permissions/secret consumer remain open."
     },
     {
       "id": "FC-RL-002-READONLY-MODELS",
@@ -108,5 +109,11 @@
     "sharedFilesRechecked": 711,
     "sharedFileInventorySha256": "1924aba691a56bc13289b325d595cb42d45eecae4dc7682f5622f0c008895470",
     "scope": "All source57 installed skill bytes, Harness src and three execution/preflight helpers match old fixed74 evidence. Fixed75 builtin admission is separately passed; old builtin failure remains preserved."
-  }
+  },
+  "currentSupplementScope": "Fixed76 maintenance only; prior fixed75/74 scenarios retain their original version-bound evidence and are not newly requalified.",
+  "currentPluginCodeChanges": [
+    "src/adapters/runtime_upgrade.ts",
+    "src/cli/runtime.ts"
+  ],
+  "otherScenariosCurrent76Qualification": "NOT_REQUALIFIED; previous PASS/PARTIAL observations remain scoped to original fixed74/75 identities."
 }

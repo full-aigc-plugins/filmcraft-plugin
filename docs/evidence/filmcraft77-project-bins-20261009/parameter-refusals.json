@@ -1,0 +1,66 @@
+{
+  "result": "PASS",
+  "layer": "installed public pre-native validation; shared by modes, not ten actual native-context refusals",
+  "results": [
+    {
+      "command": "file.newBin",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "file.newBinFromSelection",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "project.renameBin",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "project.moveToBin",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "project.setMarks",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "project.delete",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "file.newSearchBin",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "project.searchBinItems",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "project.editSearchBin",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    },
+    {
+      "command": "project.deleteSearchBin",
+      "status": "PASS",
+      "error": "invalid_native_parameters",
+      "outputCreated": false
+    }
+  ]
+}

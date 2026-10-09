@@ -1,0 +1,77 @@
+{
+  "schema": "filmcraft-fixed-project-bins/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.77",
+  "pluginSha": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+  "sourceRef": "v0.1.0-dev.58",
+  "sourceSha": "3a2cc1568c2e23fdd1fabaea24c44bf94f932be7",
+  "verifierSha256": "9dc28be1269258e5e9a206eb1c40918d25a44e88236bbb3351183d6c6f535326",
+  "installedTaskSessionSha256": "2a149a3e20f6f61cb12d282c9dc54602e94b889bc94f7b8126a3468e12c93ce2",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "fullProjectComparisons": 81,
+      "searchResultComparisons": 14,
+      "sessionsStarted": 1,
+      "plans": 8,
+      "matrixSha256": "9940c36d2d897ee07cc86dd441f01b81a21361931bf96711adc00cee32d02d3c",
+      "observationsSha256": "535f8499be5c9b61f8a3010b9bed638e417380b5e909420fd60c962c18c52801",
+      "sessionSha256": "23007e2645b58a5378dffb076c8b7ecce7d70b375a35d41e5ed57a350ce2bd99"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "fullProjectComparisons": 81,
+      "searchResultComparisons": 14,
+      "sessionsStarted": 1,
+      "plans": 6,
+      "matrixSha256": "44d057e928c027eb990cb3e3f02ca448979a841203817e9956077814255ce521",
+      "observationsSha256": "ffe6a89afb667b384b31167e8333a048ed4d941e2195279edeb43e64017684d1",
+      "sessionSha256": "421f115d607eaea4328d17370ed67891977df1ae98e3473b58a24a79036725c6"
+    }
+  ],
+  "newDistinctBoundedCommands": 10,
+  "historicalDistinctBoundedCommands": 153,
+  "historicalNeverBounded": 513,
+  "currentFixed77DistinctBoundedCommands": 23,
+  "currentFixed77NotObservedBeyondDiscovery": 643,
+  "matrixLocalObservedCommands": 10,
+  "matrixLocalNotObservedBeyondDiscovery": 656,
+  "countsScope": "143 historical fixed76/77 +10 disjoint commands; fixed77 has13 effects +10 bins. Prior130 fixed76 commands are not requalified at fixed77.",
+  "fullProjectComparisons": 162,
+  "searchResultComparisons": 28,
+  "unknownParameterRefusals": 10,
+  "actualEmptyContextRefusals": 2,
+  "oracleTestsPassed": 5,
+  "pythonTestsPassed": 119,
+  "pythonTestsLogSha256": "85ba325fb8735a56a7711eeef3edcb69f40ef224fe02af81949e894e5852b349",
+  "initialQaIssues": [
+    {
+      "kind": "QA_TERMINAL_LONG_LINE",
+      "reason": "Second stage was not delivered by canonical TTY. Verified only create stage in proof and live original PID; cleared pending terminal line, changed same TTY to noncanonical, delivered once. No native restart/replay."
+    },
+    {
+      "kind": "QA_SEARCH_DEFAULT_COLUMN",
+      "reason": "Omitted column in editSearchBin becomes All rather than retaining Name. Original native receipts/requests/artifacts retained. Added explicit Name/contains fields and repeated only affected search tests in same headless process; original reopened bin/combined revision checkpoints reused.",
+      "originalVerifierSha256": "bceb1de364b98fe5a01042e0c91b0d60bad54dd01f4843165b887acac495e00a",
+      "originalSearchRequestSha256": "c61860906c71052560bfa625b5990edc1464d89a2ec2f4a9c48fd84b9b40fced",
+      "originalReopenRequestSha256": "d968f384dc14e7261fcbb98cdf7d0b48330f0c49c71ed13e8c3b413fcdfb828f"
+    }
+  ],
+  "fullV1": "NOT_PROVEN",
+  "remainingFullTasks": 7,
+  "task": "8.3",
+  "taskStatus": "OPEN",
+  "scope": "Procedural project bins/search bins, exact source marks/allocator, unused-media deletion, undo/redo, saved reopen and combined revision. Native .fcproj and actual query evidence; no GUI gesture, native PNG, exhaustive query/operator/freeform/preset or full command/creative qualification.",
+  "filesSha256": {
+    "bridge/matrix.json": "44d057e928c027eb990cb3e3f02ca448979a841203817e9956077814255ce521",
+    "bridge/observations.json": "ffe6a89afb667b384b31167e8333a048ed4d941e2195279edeb43e64017684d1",
+    "bridge/session.json": "421f115d607eaea4328d17370ed67891977df1ae98e3473b58a24a79036725c6",
+    "headless/matrix.json": "9940c36d2d897ee07cc86dd441f01b81a21361931bf96711adc00cee32d02d3c",
+    "headless/observations.json": "535f8499be5c9b61f8a3010b9bed638e417380b5e909420fd60c962c18c52801",
+    "headless/session.json": "23007e2645b58a5378dffb076c8b7ecce7d70b375a35d41e5ed57a350ce2bd99",
+    "installed-preservation.json": "0963c32a599357722ada8ff8c49189a2a8a614262679d35f1f2f624115daa7ff",
+    "parameter-refusals.json": "880824324dbfc55ada88ea3d3cd512d011244c695aee9106e83e8330982edf71"
+  }
+}

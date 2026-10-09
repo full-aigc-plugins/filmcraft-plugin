@@ -1,0 +1,68 @@
+{
+  "schema": "filmcraft-task-session/v1",
+  "mode": "bridge",
+  "identityBindingSha256": "0213d10f6ec348bb4aa098fc4cee814f52497d57a8d4367f17990dcf2de8a81a",
+  "sessionsStarted": 1,
+  "pids": [
+    [
+      3858,
+      3841
+    ],
+    [
+      3858,
+      3841
+    ],
+    [
+      3858,
+      3841
+    ],
+    [
+      3858,
+      3841
+    ],
+    [
+      3858,
+      3841
+    ],
+    [
+      3858,
+      3841
+    ]
+  ],
+  "singleProcessIdentity": true,
+  "plans": [
+    {
+      "name": "create",
+      "result": "PASS",
+      "planSha256": "7ad34c492e965d7950c6ee98c407984a0b63686d8cd253cfd48492ff0755616a"
+    },
+    {
+      "name": "bin_cases",
+      "result": "PASS",
+      "planSha256": "d2949cdebfe897cfb654c405cda0381f4c4fddbdf97474ddf6e184f1abdf6ff4"
+    },
+    {
+      "name": "search_create",
+      "result": "PASS",
+      "planSha256": "eb436e7833cb5dcc11ede3e1dd3cd7360f9353d533a9c64991c875bac0166f2d"
+    },
+    {
+      "name": "search_cases",
+      "result": "PASS",
+      "planSha256": "3802107a4ab3b24c86fc647083d483906851fe2d213c9a63130d228146d94c0e"
+    },
+    {
+      "name": "reopen_revision",
+      "result": "PASS",
+      "planSha256": "5951f01e527e6ce69ec46d2217cb8c72e31411569e0d390593ad8afec7c0d6fd"
+    },
+    {
+      "name": "empty_refusal",
+      "result": "FAIL",
+      "planSha256": "13ea00dec71259629f82a6b03d0bd5660da53f91f807ffa65a6b47c32dee56ff"
+    }
+  ],
+  "stopped": true,
+  "closed": true,
+  "ownedProcessesStopped": true
+}

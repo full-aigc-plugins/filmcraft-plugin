@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed77 project/search bins:10 new bounded commands,162 full-project and28 exact search-result comparisons pass with one continuous instance per mode and1974 installed files preserved. Save/reopen, source marks, undo/redo and combined revision pass. Historical fixed76/77 union153; current fixed77 union23 leaves643 unobserved beyond discovery. Full8.3 and seven V1 tasks remain open. [Evidence](docs/evidence/filmcraft77-project-bins-20261009/report.json).
+
 Fixed77 effects/keyframes:13 new bounded commands,348 complete-project comparisons and18 independently decoded native RGBA PNGs pass, using one TaskSession per mode; all1974 installed files remain unchanged. Seven interpolation enums are storage-qualified; only Linear/Hold have rendered evidence. Historical fixed76/77 union143 does not requalify fixed76 at fixed77: this fixed77 matrix observes13 and leaves653 unexecuted beyond discovery. Full8.3 and seven V1 tasks remain open. [Evidence](docs/evidence/filmcraft77-effects-20261009/report.json).
 
 dev.77 pins source58 and adds a public task-level JSONL/Python command session. Continuous plans share one owned MCP and optional signed desktop; per-plan checks and receipts remain, while failure/unknown/identity change stops without replay. Fixed77 installed headless/bridge each pass four continuous plans, stable PID and full project/source preservation;1974 ZIP files remain byte-identical. Task9.36 is complete; seven full V1 gates remain open. [Task sessions](skills/filmcraft-use/references/task-session.md).

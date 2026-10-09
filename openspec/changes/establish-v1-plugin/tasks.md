@@ -178,6 +178,8 @@
 - [x] 8.2 [FC-CM-001] 在独立技能源实现完整命令参数说明、技能路由、同会话调用、实时状态检查及逐步回执；同步独立技能资源并验证固定目录覆盖。
 - [ ] 8.3 [FC-CM-001] 完成逐命令适用上下文、GUI／原生输出与局部修订验收；固定发布及实际安装副本复验。仅目录和代表调用通过不得关闭此任务。
 
+固定80／source61增量：实际安装副本在一个公开 TaskSession 中重开既有原生工程，连续执行 sequence.inspect、color.spaces、fonts.list、media.findMissing；同一编辑器PID、输入工程与交付文件保全及最终进程停止通过。证据 `docs/evidence/filmcraft80-readonly-command-increment-20261009.json`。这只增加四条headless只读命令的有界正向观察；负向参数、GUI、其他上下文及完整666命令验收仍开放，8.3保持未完成。
+
 - [x] 8.4 [FC-CM-001] 固定技能源与插件公开发行后，真实隔离 Codex 安装／发现全部 58 项；本领域安装副本新入口公开冷安装、原生重开／渲染代表样例及全部技能独立冷启动通过，核对全部安装摘要。仅关闭固定首用子门禁，8.3 全量命令／GUI／修订验收保持开放。证据 `docs/evidence/codex-complete-command-first-use-20261007.json`。
 
 - [x] 8.5 [FC-CM-001] 为每个独立技能补充配套创建／局部返工示例，明确重开后选择前置条件；从空运行时公开安装，直接执行文档计划，检查目标保存重开、非目标对象／像素及原交付／技能摘要。证据 `docs/evidence/complete-command-revision-first-use-20261007.json`；仅代表返工子门禁，8.3 保持开放。

@@ -1,0 +1,53 @@
+{
+  "schema": "filmcraft-readonly-command-increment/v1",
+  "result": "PASS_WITH_OPEN_COMMAND_QUALIFICATION",
+  "plugin": {
+    "version": "0.1.0-dev.80",
+    "tagCommit": "6d87be1abf604c58e8cab6ed515b67065985e551",
+    "archiveSha256": "cc7c0c0e9be438c5e470abbb586c85650b60536488b83b5ea8f0a3215cf13978",
+    "installedPackageFiles": 2020,
+    "allPackageFilesMatchArchive": true
+  },
+  "skillSource": {
+    "version": "v0.1.0-dev.61",
+    "tagCommit": "2e78802cfde198885a584248e0def9289c555f4e"
+  },
+  "runtime": {
+    "version": "0.2.0-craft.5",
+    "mode": "headless",
+    "platform": "darwin-arm64"
+  },
+  "session": {
+    "entry": "installed skills/filmcraft-cli/scripts/task_session.py",
+    "sessionsStarted": 1,
+    "editorPidStable": true,
+    "ownedProcessesStopped": true,
+    "stageResult": "PASS",
+    "stageCommands": [
+      "file.open",
+      "sequence.inspect",
+      "color.spaces",
+      "fonts.list",
+      "media.findMissing",
+      "state.inspect"
+    ],
+    "privateReceiptSha256": "d8cfbc61e1c0519d20b111794664d85e56a8b4e44deee1c018813c66e388637f",
+    "planSha256": "7d5b46a4a83b0373cfa6c67eee1b31f26dbf0c20c68d843736cf258f396ddc30"
+  },
+  "observations": {
+    "fileOpenMigrated": false,
+    "fileOpenMissingMedia": 0,
+    "sequenceDurationFrames": 24,
+    "activeSequenceMatchesInspectedSequence": true,
+    "colorSpaces": 16,
+    "workingSpaces": 3,
+    "fontsWithoutSystemScan": 3,
+    "missingMedia": 0,
+    "sourceProjectSha256": "79cf197abc1694298b1a99a82a3eb49bfdd15eb042a8f762bb60f1ba6b0d712f",
+    "sourceDeliveryFilesUnchanged": true
+  },
+  "sourceDeliveryEvidence": "filmcraft80-domain-session-20261009/report.json",
+  "scope": "Four read-only commands absent from the older 42-command positive-execution matrix were called against one previously saved native project in one installed task session. This is a bounded headless observation, not a new six-dimension matrix. No bridge, GUI gesture, negative-parameter, visual-quality or complete 666-command claim.",
+  "remainingTask": "8.3",
+  "completeCommandAcceptance": "NOT_PROVEN"
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "filmcraft-installed-volume-pcm-audit/v1",
+  "result": "PASS",
+  "driverSha256": "badfa7efff8c28a0ca6ba01727ad6082f18d517ad0fec35394330c389799e8aa",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 8,
+      "nativeWavOutputs": 10,
+      "observationsSha256": "d9df86613050c032450dfd6a9cbfbbb9566783b913a730a440caf8cc5d8751bc"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 8,
+      "nativeWavOutputs": 10,
+      "observationsSha256": "b2b7420b2e76c2942fc2375f87f2c2a7379b1077b005bb8de0ee48e2b1ec114b"
+    }
+  ],
+  "measurementTools": {
+    "ffmpeg": {
+      "sha256": "415cb0fb0bc26652f2416d6516fcb646379281a4dbb032121db8ef46aec5afad",
+      "version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "sha256": "88e98406604ed4a81a03efdd7e9c057992e79197b18b500fbc3f273444d26d1b",
+      "version": "ffprobe version 9.0.1 Copyright (c) 2007-2026 the FFmpeg developers"
+    }
+  },
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "filmcraft-installed-timeline-edit-audit/v1",
+  "result": "PASS",
+  "driverSha256": "a5af7eb0743728571571d8e453bdf3deeebe41b503e6ef1af3ba6570b21516f7",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 44,
+      "negativeContexts": 44,
+      "matrixSha256": "e76703033ae05d0ef1509b88273a76ec268b87eeb8820ce7cca810de9a9b6fd0",
+      "observationsSha256": "c699a12d99c3a63436ec3ba0e616f3066e2876f6ba9393d2ffc4cefb2dabc210"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 44,
+      "negativeContexts": 44,
+      "matrixSha256": "f70bfbdb607ae9ac73ca480576af9bd8615f7cc9cbffa5d1c0a86987d9350dc4",
+      "observationsSha256": "5f36d7f1d631d9d1f9000b57efe97001dd85e6f092c75add1f7fb5c698a3a52c"
+    }
+  ],
+  "remainingTask": "8.3",
+  "fullCommandAcceptance": "NOT_PROVEN"
+}

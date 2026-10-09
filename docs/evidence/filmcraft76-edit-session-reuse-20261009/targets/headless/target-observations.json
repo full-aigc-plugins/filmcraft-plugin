@@ -1,0 +1,268 @@
+{
+  "binding": {
+    "pluginSha": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+    "sourceSha": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+    "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "runtimeVersion": "0.2.0-craft.5",
+    "platform": "darwin-arm64",
+    "mode": "headless"
+  },
+  "commands": [
+    "timeline.toggleTargetV1",
+    "timeline.toggleTargetV2",
+    "timeline.toggleTargetV3",
+    "timeline.toggleTargetV4",
+    "timeline.toggleTargetV5",
+    "timeline.toggleTargetV6",
+    "timeline.toggleTargetV7",
+    "timeline.toggleTargetV8",
+    "timeline.toggleTargetA1",
+    "timeline.toggleTargetA2",
+    "timeline.toggleTargetA3",
+    "timeline.toggleTargetA4",
+    "timeline.toggleTargetA5",
+    "timeline.toggleTargetA6",
+    "timeline.toggleTargetA7",
+    "timeline.toggleTargetA8",
+    "timeline.toggleAllVideoTargets",
+    "timeline.toggleAllAudioTargets",
+    "timeline.toggleAllSourceVideo",
+    "timeline.toggleAllSourceAudio",
+    "timeline.moveVideoTargetsUp",
+    "timeline.moveVideoTargetsDown",
+    "timeline.moveAudioTargetsUp",
+    "timeline.moveAudioTargetsDown",
+    "timeline.toggleMuteTargetedAudio",
+    "timeline.toggleSoloTargetedAudio",
+    "timeline.toggleOutputTargetedVideo"
+  ],
+  "semanticAssertions": 50,
+  "populatedTracks": {
+    "video": 8,
+    "audio": 8
+  },
+  "wholeProjectPreserved": true,
+  "sourceProjectPreserved": true,
+  "persistentMuteSoloOutputReopened": true,
+  "negativeCases": [
+    {
+      "command": "timeline.toggleTargetV1",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "a21cddf4850d088b30c89a58e05957cd90346095a075293417106ab0393305e6"
+    },
+    {
+      "command": "timeline.toggleTargetV2",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "788a192f07a819f0fc3ceaa5e7720695a58db934e8c589a32a2840ec00580b25"
+    },
+    {
+      "command": "timeline.toggleTargetV3",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "ccc0a3c8fc69b016e1d2610c33a4580e71341633a5c2b8b9034b49adbc547721"
+    },
+    {
+      "command": "timeline.toggleTargetV4",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "ad2dcd4af5068a61d461e0be232d36152fe11c5a1f4e588df54170bc463afd43"
+    },
+    {
+      "command": "timeline.toggleTargetV5",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "4cfcbff2765a019f5265d7571c90034faefeb3e60817f231681cd3a2a258518e"
+    },
+    {
+      "command": "timeline.toggleTargetV6",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "d6241fdb1d8af2dab7128c43a1fd4bb9f7ea553725c4ec36605e0d2ace07f254"
+    },
+    {
+      "command": "timeline.toggleTargetV7",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "8e0ebedd244c8f9f8f6d32cd69f206793aa426071d42501f62e51bf1bae451ad"
+    },
+    {
+      "command": "timeline.toggleTargetV8",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "5de959e045792d26213ed41d6804d332ae7ba61993ba2886b7b6ca32821034a5"
+    },
+    {
+      "command": "timeline.toggleTargetA1",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "5d796c3de041db65d92ca10ef901c42d5631ea168aa90baff9699eb3fff17a3f"
+    },
+    {
+      "command": "timeline.toggleTargetA2",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "d18543eff271fb787906e159f1cfed88b4e4293ba4231a343dd8602df819d715"
+    },
+    {
+      "command": "timeline.toggleTargetA3",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "634b1c53b7023b58bdce02aae4ed3d25e21a3567714b077b0439086a325c7842"
+    },
+    {
+      "command": "timeline.toggleTargetA4",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "2c2b4a1f27b742709607db63772116e124e57013ab47d3b3f18bf1aeaa737da8"
+    },
+    {
+      "command": "timeline.toggleTargetA5",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "dec9a7b212a74cc4caa3bbaadd21a05b92dfbc4b662b2d06ee0db6273dfd0e95"
+    },
+    {
+      "command": "timeline.toggleTargetA6",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "0de64fee37840cdff704d4801775abd30541519ba548b004b1589bd699b0498d"
+    },
+    {
+      "command": "timeline.toggleTargetA7",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "dcbd65db327af808d4d827effd5be6ae1109c318c7ba18bdfd058ece0ffc50e2"
+    },
+    {
+      "command": "timeline.toggleTargetA8",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "caa6867d9da67bdcfd159837e2a3c71295da143d8a3759fa28e78583f0c98dce"
+    },
+    {
+      "command": "timeline.toggleAllVideoTargets",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "6b81dc9ea386061b98adc5b72b3e3febd2cb48d6b01565c9ae8f281f1e5c952c"
+    },
+    {
+      "command": "timeline.toggleAllAudioTargets",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "7fefb3446f1a5ee5db8aab2268ad4e919717847944c3a29cf2098c2e8c949419"
+    },
+    {
+      "command": "timeline.toggleAllSourceVideo",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "6592c1ebdfb6c98f4c1c9c6dcb76ce3b78c292fd6ea82c6a416492b13239c0fc"
+    },
+    {
+      "command": "timeline.toggleAllSourceAudio",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "b946bee5d431d13ef04d473d0c0617c45aa395cbb27581536df95d66a4835d9e"
+    },
+    {
+      "command": "timeline.moveVideoTargetsUp",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "80ad9605373ce2a40d3c982626c1db6ce1fed25874e3ae9057816e5dd0bfbe7f"
+    },
+    {
+      "command": "timeline.moveVideoTargetsDown",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "db9eb0ee2e3b04177da2b22e74f8a6cf16c0b0269e690db5318f04c868fb676c"
+    },
+    {
+      "command": "timeline.moveAudioTargetsUp",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "44ac70bbc6234702ac8c0f03f3b090f7ac496ed92c94fc7c70667c8b23d16105"
+    },
+    {
+      "command": "timeline.moveAudioTargetsDown",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "68c27c4df6390c258ef85ed886589b7273bc9406142d98f1db0856aef67add95"
+    },
+    {
+      "command": "timeline.toggleMuteTargetedAudio",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "25ec1b2669b478440562f24d161e3906cfc810ddb3690de12e1d64395257d905"
+    },
+    {
+      "command": "timeline.toggleSoloTargetedAudio",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "93ce920ad4025aa5144c5194e6a96e27ebe52a97b252762cd718d52a41c78993"
+    },
+    {
+      "command": "timeline.toggleOutputTargetedVideo",
+      "status": "PASS",
+      "error": "precondition_failed",
+      "context": "empty native session; missing active sequence",
+      "editingRequestSent": false,
+      "receiptSha256": "90c77632fec030796db4a2db71fcfc5505790eb61edb0a049386d8047819e3c4"
+    }
+  ],
+  "createReceiptSha256": "694955886aac42ccfed8f6831bd7c7d626947cb0ff754967da4f4420c5cc65e1",
+  "reopenReceiptSha256": "a7cd1974e932cc358f35aae38fe1cbec226abb20045a355e04d675a4e0a968b5",
+  "scope": "Actual commands through native MCP and signed owned desktop bridge, not GUI mouse/keyboard gestures, rendering or creative acceptance."
+}

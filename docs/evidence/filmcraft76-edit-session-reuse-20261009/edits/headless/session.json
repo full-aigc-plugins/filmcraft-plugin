@@ -1,0 +1,237 @@
+{
+  "schema": "filmcraft-owned-empty-batch/v1",
+  "mode": "headless",
+  "sessionsStarted": 1,
+  "caseCount": 44,
+  "cases": [
+    "timeline.nudgeLeft",
+    "timeline.nudgeRight",
+    "timeline.nudgeLeft5",
+    "timeline.nudgeRight5",
+    "timeline.nudgeUp",
+    "timeline.nudgeDown",
+    "timeline.slipLeft",
+    "timeline.slipRight",
+    "timeline.slipLeft5",
+    "timeline.slipRight5",
+    "timeline.slideLeft",
+    "timeline.slideRight",
+    "timeline.slideLeft5",
+    "timeline.slideRight5",
+    "timeline.slip",
+    "timeline.slide",
+    "clip.volumeUp",
+    "clip.volumeDown",
+    "clip.volumeUpMany",
+    "clip.volumeDownMany",
+    "clip.nudgeVolumeUp1",
+    "clip.nudgeVolumeUp3",
+    "clip.nudgeVolumeDown1",
+    "clip.nudgeVolumeDown3",
+    "playhead.set",
+    "playhead.step",
+    "playhead.stepForward",
+    "playhead.stepBack",
+    "playhead.stepForward5",
+    "playhead.stepBack5",
+    "playhead.nextEdit",
+    "playhead.prevEdit",
+    "playhead.nextEditAnyTrack",
+    "playhead.prevEditAnyTrack",
+    "playhead.start",
+    "playhead.end",
+    "playhead.selectedClipStart",
+    "playhead.selectedClipEnd",
+    "timeline.select",
+    "timeline.selectClipAtPlayhead",
+    "timeline.selectNextClip",
+    "timeline.selectPrevClip",
+    "edit.undo",
+    "edit.redo"
+  ],
+  "pids": [
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    },
+    {
+      "mcp": 98247,
+      "desktop": null
+    }
+  ],
+  "singleProcessIdentity": true,
+  "ownedProcessesStopped": true,
+  "desktopStopped": null,
+  "listenerOwnedByPID": null,
+  "tainted": false,
+  "elapsedSeconds": 2.6295850409951527,
+  "scope": "QA disabled-command batch only; no general interactive session API"
+}

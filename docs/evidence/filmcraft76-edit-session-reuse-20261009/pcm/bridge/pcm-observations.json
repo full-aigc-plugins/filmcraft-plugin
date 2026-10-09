@@ -1,0 +1,165 @@
+{
+  "result": "PASS",
+  "mode": "bridge",
+  "sourceProjectSha256": "b64a19df814e44700ac0005e9b647ba55146077e5b752e13d953d66daef6086c",
+  "sourcePreserved": true,
+  "wholeProjectPreserved": true,
+  "baseline": {
+    "sha256": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b",
+    "codec": "pcm_s16le",
+    "frames": 12000,
+    "channels": 2,
+    "sampleRate": 48000,
+    "pcmSha256": "c16557ebddbe8f792b58a3b4097a7364e5a09276f69e39fc5bc0398d1b01f3a3"
+  },
+  "restored": {
+    "sha256": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b",
+    "codec": "pcm_s16le",
+    "frames": 12000,
+    "channels": 2,
+    "sampleRate": 48000,
+    "pcmSha256": "c16557ebddbe8f792b58a3b4097a7364e5a09276f69e39fc5bc0398d1b01f3a3"
+  },
+  "restoredSamplesIdentical": true,
+  "commands": [
+    {
+      "command": "clip.volumeUp",
+      "result": "PASS",
+      "expectedDb": 1,
+      "measuredDb": 0.9998912896511393,
+      "maxAbsoluteSampleError": 3.0857595662292514e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "1c3741a9922786394a68a5d8adca3b7431089c646bbcc843da2e7ef22cd06c26",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "96587f128d3ccaa328ff209461ae7a54f956d6ac8ee9811b2189d88acfde5465"
+      }
+    },
+    {
+      "command": "clip.volumeDown",
+      "result": "PASS",
+      "expectedDb": -1,
+      "measuredDb": -1.000485259129455,
+      "maxAbsoluteSampleError": 2.58065600986096e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "c934d649aaf2bb3e65c5d3830eaa9dfbf4caeb20f52fed14a340959864561054",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "ef77a1a57f5b3f25ea3b9e880ceae16648e95066a37f0b662e3200068806deed"
+      }
+    },
+    {
+      "command": "clip.volumeUpMany",
+      "result": "PASS",
+      "expectedDb": 6,
+      "measuredDb": 5.999680560711838,
+      "maxAbsoluteSampleError": 4.415722509931719e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "38914bcf4ebb73dbf8dd655e6fb69059e63dad8b04355f8338598fe17e2a8705",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "bc02e97eead32715b5633cc557031b40e5a974c0be21d229cfc0e4380d722412"
+      }
+    },
+    {
+      "command": "clip.volumeDownMany",
+      "result": "PASS",
+      "expectedDb": -6,
+      "measuredDb": -6.001279580641086,
+      "maxAbsoluteSampleError": 1.9307133399020654e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "94282c47068a8b306d738c3973a6e4b6ecf0cb5338cde9491f5920b09c465706",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "b7620bc1a1f7e4073e4a013bde1d9703c3811ad6e8a678aa5a2fc047787556fe"
+      }
+    },
+    {
+      "command": "clip.nudgeVolumeUp1",
+      "result": "PASS",
+      "expectedDb": 1,
+      "measuredDb": 0.9998912896511393,
+      "maxAbsoluteSampleError": 3.0857595662292514e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "1c3741a9922786394a68a5d8adca3b7431089c646bbcc843da2e7ef22cd06c26",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "96587f128d3ccaa328ff209461ae7a54f956d6ac8ee9811b2189d88acfde5465"
+      }
+    },
+    {
+      "command": "clip.nudgeVolumeUp3",
+      "result": "PASS",
+      "expectedDb": 3,
+      "measuredDb": 2.999643595713769,
+      "maxAbsoluteSampleError": 3.564947997754947e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "9eb007fb0877dc625967ae07f114e2f1c089784f136c62f531e82c5a933eb0b6",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "373aa968d99b408dd8b15257fde53b85ffd737fe29a98b07c8790f92001c7c0f"
+      }
+    },
+    {
+      "command": "clip.nudgeVolumeDown1",
+      "result": "PASS",
+      "expectedDb": -1,
+      "measuredDb": -1.000485259129455,
+      "maxAbsoluteSampleError": 2.58065600986096e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "c934d649aaf2bb3e65c5d3830eaa9dfbf4caeb20f52fed14a340959864561054",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "ef77a1a57f5b3f25ea3b9e880ceae16648e95066a37f0b662e3200068806deed"
+      }
+    },
+    {
+      "command": "clip.nudgeVolumeDown3",
+      "result": "PASS",
+      "expectedDb": -3,
+      "measuredDb": -3.000286586342142,
+      "maxAbsoluteSampleError": 2.3315845266994734e-05,
+      "tolerance": 9.1552734375e-05,
+      "everySampleCompared": true,
+      "artifact": {
+        "sha256": "e8ebdf7cf9058084d18a7b0002dc4c026f0e69742d4a7bc0e75a5ee67d216548",
+        "codec": "pcm_s16le",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000,
+        "pcmSha256": "258d514c9935d0b8cbc235f2228967f0247eca3576de761773b027218b1b5eaf"
+      }
+    }
+  ],
+  "receiptSha256": "e86e6b9788c623ba986493e5b48816fb5563dde5c6ceac8cf3036a55f655262b",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "scope": "Full two-channel .25s native WAV exports of original procedural bars/tone fixture, external FFmpeg/ffprobe oracle, no external media, not perceptual/creative quality."
+}

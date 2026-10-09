@@ -1,0 +1,51 @@
+{
+  "schema": "filmcraft-edit-and-session-reuse-evidence/v1",
+  "result": "PASS_WITH_OPEN_QUALIFICATION",
+  "pluginRef": "v0.1.0-dev.76",
+  "pluginCommit": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "editCommands": 44,
+  "priorDistinctCommands": 42,
+  "totalDistinctBoundedCommands": 86,
+  "remainingUnobservedBeyondDiscovery": 580,
+  "negativeCases": 142,
+  "negativeBatchSessions": 4,
+  "bridgeNegativeDesktopStarts": 2,
+  "volumeCommandsWithEverySampleCompared": 8,
+  "nativeWavFiles": 20,
+  "sourceTests": {
+    "initialRed": "Two tests failed because batch lifecycle implementation did not exist; FileNotFoundError.",
+    "targetedPass": 5
+  },
+  "driverSha256": {
+    "owned_empty_batch.py": "ed49fb2be861884d335c352351115894d97e40e452c560e3d3ce6a891f713149",
+    "verify_installed_target_commands.py": "971dbd1e2677f78d670a9d5204d9c2cab7be92bfdbe35f526591ccc7d00d6df0",
+    "verify_installed_timeline_edits.py": "a5af7eb0743728571571d8e453bdf3deeebe41b503e6ef1af3ba6570b21516f7",
+    "verify_installed_volume_pcm.py": "badfa7efff8c28a0ca6ba01727ad6082f18d517ad0fec35394330c389799e8aa",
+    "test_owned_empty_batch.py": "ef53db73881c71e298fd8d999ec87aa185df41a13976d06ae150c46557153e21"
+  },
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "fullV1": "NOT_PROVEN",
+  "remainingFullTasks": 7,
+  "scope": "QA helper on main outside frozen ZIP; empty disabled-command batches reuse an owned instance. Positive create/reopen/revision still use separate sessions. No general interactive session API or GUI gesture/creative qualification. 86 commands have bounded state/parameter observations, not exhaustive applicability.",
+  "filesSha256": {
+    "edits/bridge/edit-observations.json": "5f36d7f1d631d9d1f9000b57efe97001dd85e6f092c75add1f7fb5c698a3a52c",
+    "edits/bridge/matrix.json": "f70bfbdb607ae9ac73ca480576af9bd8615f7cc9cbffa5d1c0a86987d9350dc4",
+    "edits/bridge/session.json": "c6199a264c58dc7602e1424c6971eb2ab37fca6b9c5e96c9f623da5eee5996b9",
+    "edits/headless/edit-observations.json": "c699a12d99c3a63436ec3ba0e616f3066e2876f6ba9393d2ffc4cefb2dabc210",
+    "edits/headless/matrix.json": "e76703033ae05d0ef1509b88273a76ec268b87eeb8820ce7cca810de9a9b6fd0",
+    "edits/headless/session.json": "a23773e080707f867a1a24117bd9bfb067d4d74191b0c1d0c184b47b426ee20b",
+    "edits/report.json": "297088e11ec7f0d6826e69f8a13329d62fed8d3ed14de184a5509bc2d7209e5c",
+    "pcm/bridge/pcm-observations.json": "b2b7420b2e76c2942fc2375f87f2c2a7379b1077b005bb8de0ee48e2b1ec114b",
+    "pcm/headless/pcm-observations.json": "d9df86613050c032450dfd6a9cbfbbb9566783b913a730a440caf8cc5d8751bc",
+    "pcm/report.json": "9e26348ae3153d2c293cb4cdeb46fcd08d327fb0a836dfbf469ed1018dfba56a",
+    "targets/bridge/matrix.json": "4dee289e1eccd9b28fb53c7fd9714935ffd0883d42619d52e6cd1a77bbba0322",
+    "targets/bridge/session.json": "c0a840d114fa96425bb8011532bb9fa7af15b2f4cbc8e18fe587808f3435a346",
+    "targets/bridge/target-observations.json": "964a7ee1b8fafe274a0ea61ec9400bce218584b3d79ff0ff6052e8cd3540f302",
+    "targets/headless/matrix.json": "18bf7eaef66400e5696e72a35b1c77c6e4bf09072c9344fd32ef2d526b6f4121",
+    "targets/headless/session.json": "332461a994a81e4f9672c6877c0a56ca5218cad553c82bc5a535bda342710bae",
+    "targets/headless/target-observations.json": "8a4657e8b59336cbadf4faed7dc6166f1c2ea3541c40a69e96ed8dadb5dc9a79",
+    "targets/report.json": "ff7873023efaa51c501a4dff6e7e265a8ee2c4551e19ea8fdc3eaef7ac2691db"
+  }
+}

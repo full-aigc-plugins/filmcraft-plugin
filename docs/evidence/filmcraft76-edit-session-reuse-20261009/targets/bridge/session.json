@@ -1,0 +1,152 @@
+{
+  "schema": "filmcraft-owned-empty-batch/v1",
+  "mode": "bridge",
+  "sessionsStarted": 1,
+  "caseCount": 27,
+  "cases": [
+    "timeline.toggleTargetV1",
+    "timeline.toggleTargetV2",
+    "timeline.toggleTargetV3",
+    "timeline.toggleTargetV4",
+    "timeline.toggleTargetV5",
+    "timeline.toggleTargetV6",
+    "timeline.toggleTargetV7",
+    "timeline.toggleTargetV8",
+    "timeline.toggleTargetA1",
+    "timeline.toggleTargetA2",
+    "timeline.toggleTargetA3",
+    "timeline.toggleTargetA4",
+    "timeline.toggleTargetA5",
+    "timeline.toggleTargetA6",
+    "timeline.toggleTargetA7",
+    "timeline.toggleTargetA8",
+    "timeline.toggleAllVideoTargets",
+    "timeline.toggleAllAudioTargets",
+    "timeline.toggleAllSourceVideo",
+    "timeline.toggleAllSourceAudio",
+    "timeline.moveVideoTargetsUp",
+    "timeline.moveVideoTargetsDown",
+    "timeline.moveAudioTargetsUp",
+    "timeline.moveAudioTargetsDown",
+    "timeline.toggleMuteTargetedAudio",
+    "timeline.toggleSoloTargetedAudio",
+    "timeline.toggleOutputTargetedVideo"
+  ],
+  "pids": [
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    },
+    {
+      "mcp": 3189,
+      "desktop": 3173
+    }
+  ],
+  "singleProcessIdentity": true,
+  "ownedProcessesStopped": true,
+  "desktopStopped": true,
+  "listenerOwnedByPID": true,
+  "tainted": false,
+  "elapsedSeconds": 3.9454597080184612,
+  "scope": "QA disabled-command batch only; no general interactive session API"
+}

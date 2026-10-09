@@ -168,14 +168,19 @@ def main():
         assert normalized_project(work / 'reopen/roundtrip.fcproj') == before
         assert digest(source) == source_digest
         negatives = []
-        for index, identifier in enumerate(tested):
-            refused = execute([op(identifier)], 'negative-' + str(index))
-            assert refused['result'] == 'FAIL' and len(refused['steps']) == 1, (identifier, refused.get('error'), refused.get('steps'))
-            assert refused['steps'][0]['state'] == 'blocked' and 'precondition_failed: ' + identifier + ':' in refused['error'], (identifier, refused.get('error'), refused.get('steps'))
-            assert not list((work / ('negative-' + str(index))).glob('*.fcproj'))
-            negatives.append({'command': identifier, 'status': 'PASS', 'error': 'precondition_failed',
-                              'context': 'empty native session; missing active sequence', 'editingRequestSent': False,
-                              'receiptSha256': digest(work / ('negative-' + str(index) + '-receipt.private.json'))})
+        batch_module = load(Path(__file__).with_name('owned_empty_batch.py'), 'owned_empty_batch')
+        with batch_module.EmptyBatch(commands, desktop, mode, work, runtime, policy) as batch:
+            for index, identifier in enumerate(tested):
+                plan = {'schema': 'craft-command-plan/v1', 'operations': [op(identifier)]}
+                write(work / ('negative-' + str(index) + '-plan.private.json'), plan)
+                refused = batch.execute(plan, work / ('negative-' + str(index)))
+                write(work / ('negative-' + str(index) + '-receipt.private.json'), refused)
+                assert refused['result'] == 'FAIL' and len(refused['steps']) == 1, (identifier, refused.get('error'), refused.get('steps'))
+                assert refused['steps'][0]['state'] == 'blocked' and 'precondition_failed: ' + identifier + ':' in refused['error'], (identifier, refused.get('error'), refused.get('steps'))
+                assert not list((work / ('negative-' + str(index))).glob('*.fcproj'))
+                negatives.append({'command': identifier, 'status': 'PASS', 'error': 'precondition_failed',
+                                  'context': 'empty native session; missing active sequence', 'editingRequestSent': False,
+                                  'receiptSha256': digest(work / ('negative-' + str(index) + '-receipt.private.json'))})
         rows = next(step['result'] for step in execute([op('command.list')], 'discovery')['steps'])
         binding = {'pluginSha': args.plugin_sha, 'sourceSha': args.source_sha,
                    'runtimeSha256': created['runtimeSha256'],

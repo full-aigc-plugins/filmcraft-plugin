@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed79/source60 qualification completes task9.38: explicit2.5s playhead, full persistent sequence equality after reopen, eight scopes, two independently decoded RGBA frames and216-frame H.264 delivery pass. All13 installed modules refuse65 persistent mutations, and2017 installed files stay identical to ZIP. Continuous domain instance reuse9.39 and seven fullV1 gates remain open. [Evidence](docs/evidence/filmcraft79-roundtrip-20261009/report.json).
+
 dev.79 pins source60 and fixes the top-level transient playhead in saved-project comparison; persistent and nested fields remain strict. Source local260 pass/39 environment NOT_RUN, CI257 pass/42 NOT_RUN. Fixed79 native delivery is pending (9.38); continuous domain entry-point reuse is tracked separately in9.39. Seven full V1 gates remain open.
 
 Fixed78/source59 scope-alias gate9.37 passes actual isolated installation,32 complete-command scope views,24576 RGB histogram buckets, save/reopen and13 independent installed guards. Eight domain native.command views match exactly, but overall workflow delivery FAILS on transient playhead roundtrip comparison; tracked separately as9.38. Seven full-V1 gates remain open. [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/report.json).

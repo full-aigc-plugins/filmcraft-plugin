@@ -1,0 +1,149 @@
+{
+  "schema": "filmcraft-fixed-roundtrip-regression/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.79",
+  "pluginSha": "f97ab0bb9638252fc62d93d9c33fcd8090251090",
+  "sourceRef": "v0.1.0-dev.60",
+  "sourceSha": "476639661a61cc70c396d7955ea0ef3c96b39d42",
+  "explicitPlayheadTicks": "635040000000",
+  "reopenedPlayhead": null,
+  "completePersistentSequenceEquality": true,
+  "installedModules": [
+    {
+      "skill": "filmcraft-cli",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    },
+    {
+      "skill": "filmcraft-use",
+      "workflowSha256": "df3c6ee567f0255da1782fe458919d027a5250b9a0d2a8e41f87c69f116a1f2d",
+      "actualPersistentMutationsRefused": 5
+    }
+  ],
+  "scopeViews": 8,
+  "fullRgbHistogramBuckets": 6144,
+  "images": [
+    {
+      "name": "frame-0000.png",
+      "sha256": "cfa564d93d79a431700d10932bd7e279cc47624b36a8632e840ff21defb3334f",
+      "rgbaSha256": "bcdad0c1dccfa02071223134d86ca99a6ccc4da3d9d8c9e62685ea1ec1209154",
+      "all1024Pixels": [
+        230,
+        85,
+        39,
+        255
+      ]
+    },
+    {
+      "name": "frame-0001.png",
+      "sha256": "cde9d45c03c92ad3429a03037182acc45f4c1ad492e513c57b905a3c836e97de",
+      "rgbaSha256": "df894663e850afa3619ed3d3825d9d1c6520f15fcd76aac25c4407c405fa8cfe",
+      "all1024Pixels": [
+        0,
+        0,
+        0,
+        255
+      ]
+    }
+  ],
+  "export": {
+    "sha256": "d338274c778ccbfaab14f71cb655e37d269151a356326f0e4fc7ec9a0975386d",
+    "frames": 216,
+    "size": [
+      32,
+      32
+    ],
+    "rate": "24/1",
+    "nativeDecodeComplete": true
+  },
+  "manifestFilesVerified": 14,
+  "manifestSha256": "cb86ddb0d29c8b3c5d08b96c87ad273243ddbadfc335c56dc5942789628f1f3e",
+  "sourceAssetPreserved": true,
+  "installedFilesPreserved": 2017,
+  "zipSha256": "2cb304663890d281a35e3f147384123fcd7510c5f906442fef04b7c0ee3641cd",
+  "verifierSha256": "516199d36c4801897b8daf9ef7b8b6a3c74b604baa431900a8a861c44971c795",
+  "scope": "FC-DM-005-ROUNDTRIP-SESSION only. Full public domain workflow succeeds with nondefault playhead; actual saved/reopened persistent sequence and all installed guards checked. Workflow still uses standalone native CLI helpers; task9.39 NOT complete. No GUI/full command/V1 qualification.",
+  "host": {
+    "version": "codex-cli 0.153.4",
+    "skills": 13,
+    "loadingErrors": 0,
+    "receiptSha256": "c9dfe75d266643e283299b91e076153346102a9b1995fd3d681512974eac1832"
+  },
+  "pluginCi": {
+    "runId": 37882657313,
+    "result": "PASS",
+    "nodeCounts": {
+      "tests": 188,
+      "pass": 185,
+      "fail": 0,
+      "skipped": 3
+    },
+    "reportSha256": "822f100e8b8ac2bd92d8a457180c79db5728558bac3bf999693fa12b9ad661e4"
+  },
+  "fullV1": "NOT_PROVEN",
+  "openTasks": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5",
+    "7.6",
+    "8.3",
+    "9.39"
+  ]
+}

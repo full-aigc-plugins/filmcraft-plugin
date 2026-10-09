@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定78/source59示波器别名子门禁9.37通过：实际隔离安装、32视图／24576个RGB直方桶、保存重开与13独立守卫。领域native.command八视图一致，但整体工作流因临时播放头重开比较错误而FAIL，单独跟踪9.38；七项完整V1门禁仍开放。 [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/report.json).
+
 dev.78锁定已发布source59，修复scopes.read的frame／seconds／timecode简写时间字段被共享参数守卫误拒绝的问题。三个目标红灯转为九项目标测试通过，源码256通过／39环境NOT_RUN。固定78安装／原生复验及9.37仍待，七项完整V1门禁保持开放。 [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/candidate.json).
 
 固定77工程素材箱／搜索箱增量：10条新增有界命令、162次完整工程和28次精确搜索结果核验通过；每模式一个持续实例，1974个安装文件保全。保存重开、源入出ticks、撤销重做和组合返工通过。历史固定76／77合计153条，固定77累计23条、其余643条尚未在该版本观察；完整8.3及七项V1任务保持开放。 [Evidence](docs/evidence/filmcraft77-project-bins-20261009/report.json).

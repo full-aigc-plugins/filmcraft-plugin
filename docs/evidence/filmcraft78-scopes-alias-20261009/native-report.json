@@ -1,0 +1,41 @@
+{
+  "schema": "filmcraft-fixed-scopes-time-alias/v1",
+  "result": "PASS",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "views": 16,
+      "fullHistogramBuckets": 12288,
+      "fullProjectComparisons": 2,
+      "sourceSha256": "fde6dee174b39ba6dd6fee488923597867816d65b24afda70eca9e79304cda5b",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "sessionSha256": "0bed76a282f3f66bc287791ca981f8e6cb2b095ccb1b3aae9fe5be9810dc694d",
+      "scopeViewsSha256": "70ba37d4de055afb3c436c9057d18d61e30f075fd72d8cc4f825950a3b9ff4f2",
+      "receiptsSha256": [
+        "cea5c69c482e7d5a5425cb492fc15c302065248400678f61a000724876e2ec3b",
+        "c40614cd6526a2cc89adf39778731b627310b4401ef421ac9a662385f7575b45",
+        "685501600c61d99c8cf7154c2e80c339b101685c667694787b85355f229ff6bd"
+      ]
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "views": 16,
+      "fullHistogramBuckets": 12288,
+      "fullProjectComparisons": 2,
+      "sourceSha256": "b64a19df814e44700ac0005e9b647ba55146077e5b752e13d953d66daef6086c",
+      "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "sessionSha256": "9110db159131b4506dcee90f7a90bfb8a35cbe0d4d5ad5712131cbe99ee473f1",
+      "scopeViewsSha256": "70ba37d4de055afb3c436c9057d18d61e30f075fd72d8cc4f825950a3b9ff4f2",
+      "receiptsSha256": [
+        "d03b3b7ef1b482196a41faa08c7902d096a7e0b9b3a2734557929dd41a12d335",
+        "741244406136fb6a2e9b40138b4c3f5562462a068d565468fb3331a6a05cb7e0",
+        "c303b24f499252827b3dd342ffb5761906023d00b8beb4c1aaf78958213e692e"
+      ]
+    }
+  ],
+  "verifierSha256": "3caf7519689183b19fd50ffb7e7a3225401a84acb5163a075e03fce4573bb1a5",
+  "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92",
+  "scope": "Three shorthand aliases and explicit ticks at two actual non-playhead frames, original/reopened project, full RGB histogram buckets. No all-scopes/types/HDR/GUI/full command or V1 qualification."
+}

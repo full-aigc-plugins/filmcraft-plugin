@@ -1,0 +1,28 @@
+{
+  "result": "FAIL",
+  "error": "sequence_roundtrip_mismatch",
+  "sourceRef": "v0.1.0-dev.59",
+  "pluginRef": "v0.1.0-dev.78",
+  "scopeAliasOperations": "PASS8",
+  "domainDelivery": "FAIL",
+  "persistentSequenceEqual": true,
+  "sessionDifferences": {
+    "selection": {
+      "before": [
+        9
+      ],
+      "reopened": []
+    },
+    "playhead": {
+      "before": 0,
+      "reopened": null
+    }
+  },
+  "failureReceiptSha256": "8e062a502581350984d069f74ef388b355fa18e8e5852f88c5bfd120719f75c1",
+  "operationsSha256": "6fd06312e89e22502a2812869dd7cb18c598100f5ef5a729355d82f99d25530c",
+  "readonlyReopenSha256": "2ebd4246a56b53061cb0f2a1979a9101a393d083c4e401c11ffee1572f0a5c29",
+  "planSha256": "fe38a1610555e734527501b9c21c9435f25c24f6ad1488cbc51a87bccc5a5310",
+  "originalUnregisteredFixtureFailureSha256": "57497f992188db5e20008b5a65f78ab06a746c1d4cfc16559e044b238a0c628f",
+  "nextTask": "9.38",
+  "replayAllowed": false
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "filmcraft-task-session/v1",
+  "mode": "bridge",
+  "identityBindingSha256": "6a6adac95608ad3757c7ad47c16f556e31b0c624bf4d3ab6156b0e8bab819f55",
+  "sessionsStarted": 1,
+  "pids": [
+    [
+      23394,
+      23368
+    ],
+    [
+      23394,
+      23368
+    ],
+    [
+      23394,
+      23368
+    ]
+  ],
+  "singleProcessIdentity": true,
+  "plans": [
+    {
+      "name": "create",
+      "result": "PASS",
+      "planSha256": "fe573a4c182680f73794e3973282750a1000ceb791f8d04a08f7d26588393cb5"
+    },
+    {
+      "name": "reopen",
+      "result": "PASS",
+      "planSha256": "4ebbf0db38dfd734b63a4647257472ad188f4dc00b217aea464ccc5e99691e7c"
+    },
+    {
+      "name": "close_project",
+      "result": "PASS",
+      "planSha256": "92ab564a68d334ee7b4ed825963250002bfdc2a3e15fcf412984ae3b4b467886"
+    }
+  ],
+  "stopped": false,
+  "closed": true,
+  "ownedProcessesStopped": true
+}

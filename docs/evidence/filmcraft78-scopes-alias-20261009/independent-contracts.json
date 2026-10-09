@@ -1,0 +1,97 @@
+{
+  "result": "PASS",
+  "scope": "13 actual installed independent modules:39 alias accepts and26 exact-field refusals; no native start implied",
+  "results": [
+    {
+      "skill": "filmcraft-cli",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    },
+    {
+      "skill": "filmcraft-use",
+      "result": "PASS",
+      "aliases": 3,
+      "unknownAndOtherCommandRefusals": 2,
+      "commandsSha256": "73e54a454e6670ae4169c42071bd54a5a6586605d0660ecf158111e8e0e97f92"
+    }
+  ]
+}

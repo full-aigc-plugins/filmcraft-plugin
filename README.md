@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed78/source59 scope-alias gate9.37 passes actual isolated installation,32 complete-command scope views,24576 RGB histogram buckets, save/reopen and13 independent installed guards. Eight domain native.command views match exactly, but overall workflow delivery FAILS on transient playhead roundtrip comparison; tracked separately as9.38. Seven full-V1 gates remain open. [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/report.json).
+
 dev.78 pins published source59 and fixes scopes.read frame/seconds/timecode shorthand fields at the shared parameter guard. Three target red events become nine passing tests;256 source tests pass with39 environment NOT_RUN. Fixed78 installation/native qualification and task9.37 remain pending; seven full-V1 gates remain open. [Evidence](docs/evidence/filmcraft78-scopes-alias-20261009/candidate.json).
 
 Fixed77 project/search bins:10 new bounded commands,162 full-project and28 exact search-result comparisons pass with one continuous instance per mode and1974 installed files preserved. Save/reopen, source marks, undo/redo and combined revision pass. Historical fixed76/77 union153; current fixed77 union23 leaves643 unobserved beyond discovery. Full8.3 and seven V1 tasks remain open. [Evidence](docs/evidence/filmcraft77-project-bins-20261009/report.json).

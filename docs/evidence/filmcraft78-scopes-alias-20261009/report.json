@@ -1,0 +1,74 @@
+{
+  "schema": "filmcraft-fixed-scopes-alias-acceptance/v1",
+  "result": "PASS",
+  "task": "9.37",
+  "taskStatus": "COMPLETE",
+  "pluginRef": "v0.1.0-dev.78",
+  "pluginSha": "54864d549dba3beb103ce559cd6562360cd0bdea",
+  "sourceRef": "v0.1.0-dev.59",
+  "sourceSha": "7a2c7bb75d346abd2d41c708f26b4baf8dba43d1",
+  "host": {
+    "version": "codex-cli 0.153.4",
+    "skills": 13,
+    "loadingErrors": 0,
+    "receiptSha256": "afc564e8686cb95ebb71cdbcaa97b86d391aa982465daf28e2b5628cedc38124"
+  },
+  "native": {
+    "result": "PASS",
+    "modes": [
+      "headless",
+      "bridge"
+    ],
+    "views": 32,
+    "allRgbHistogramBuckets": 24576,
+    "fullProjectComparisons": 4,
+    "mcpStartsPerMode": 1,
+    "savedReopenedAndSourcePreserved": true
+  },
+  "domain": {
+    "scopeAliasOperations": "PASS8",
+    "identicalToHeadless": true,
+    "overallDelivery": "FAIL",
+    "error": "sequence_roundtrip_mismatch",
+    "separateTask": "9.38"
+  },
+  "sourceLocalCounts": {
+    "tests": 295,
+    "pass": 256,
+    "environmentNotRun": 39
+  },
+  "sourceCiCounts": {
+    "tests": 295,
+    "pass": 253,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 42
+  },
+  "sourceCiRunId": 37880923849,
+  "sourceCiReportSha256": "282aea76aae7149414c1d6b43cfa791f870799a999d57685d18c2916010fd503",
+  "installedFilesPreserved": 2006,
+  "scope": "Only declared scopes.read time aliases: complete-command original/reopened headless/bridge and actual domain native.command results, exact non-playhead time and full RGB histogram. Overall domain delivery fails independently on session playhead comparison; NOT successful domain workflow/V1 qualification. Historical fixed77 command matrices are not requalified at78.",
+  "fullV1": "NOT_PROVEN",
+  "remainingFullTasks": 7,
+  "additionalOpenRegressionTask": "9.38",
+  "filesSha256": {
+    "bridge/scope-views.json": "70ba37d4de055afb3c436c9057d18d61e30f075fd72d8cc4f825950a3b9ff4f2",
+    "bridge/session.json": "9110db159131b4506dcee90f7a90bfb8a35cbe0d4d5ad5712131cbe99ee473f1",
+    "candidate.json": "579fe548c692f4e428532e6b9d4a3d82b15e217214934d0931187eb9d60125a5",
+    "domain-roundtrip-failure.json": "52268ed18c997d75014cec852b7e68895289dd5a8f7429dd6451fbccaa96a55a",
+    "domain-scope-views.json": "3e867c230c13578303258f42d76ee3cbe4249107e9d24cee0ea94aa881515011",
+    "headless/scope-views.json": "70ba37d4de055afb3c436c9057d18d61e30f075fd72d8cc4f825950a3b9ff4f2",
+    "headless/session.json": "0bed76a282f3f66bc287791ca981f8e6cb2b095ccb1b3aae9fe5be9810dc694d",
+    "independent-contracts.json": "79cd56d68b10a98419b369d020e28fd75d5b812260900483df992ac9af8dc03e",
+    "installed-preservation.json": "74f9c23d376d94da827e2cdd1b9aa8998e500e6be9d10aaeb3b405208a364bd0",
+    "native-report.json": "57e621f1ba93fe03f9997f31faeddf9d7f45d978ce0674cf957182bbc06ec10d"
+  },
+  "pluginCi": {
+    "runId": 37881431704,
+    "revision": "54864d549dba3beb103ce559cd6562360cd0bdea",
+    "reportSha256": "5453371b76e0c9211f8726fad87301097be9b7cc8f4d4c6ca52d79ecec3c6d27",
+    "pythonPass": 123,
+    "nodePass": 185,
+    "nodeEnvironmentNotRun": 3
+  }
+}

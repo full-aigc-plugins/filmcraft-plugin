@@ -1,0 +1,131 @@
+{
+  "binding": {
+    "pluginSha": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+    "sourceSha": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+    "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "runtimeVersion": "0.2.0-craft.5",
+    "platform": "darwin-arm64",
+    "mode": "bridge"
+  },
+  "commands": [
+    "clip.rename",
+    "clip.speedDuration",
+    "clip.enable",
+    "clip.frameHoldOptions",
+    "clip.frameHold",
+    "clip.fieldOptions",
+    "clip.timeInterpolation.frameSampling",
+    "clip.timeInterpolation.frameBlending",
+    "clip.timeInterpolation.opticalFlow",
+    "clip.setTimeInterpolation",
+    "clip.audioGain",
+    "clip.scaleToFrameSize",
+    "clip.group",
+    "clip.ungroup",
+    "clip.link"
+  ],
+  "assertions": [
+    {
+      "phase": "create",
+      "fullProjectComparisons": 75
+    },
+    {
+      "phase": "revision",
+      "fullProjectComparisons": 75
+    }
+  ],
+  "negatives": [
+    {
+      "command": "clip.rename",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": false
+    },
+    {
+      "command": "clip.speedDuration",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.enable",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.frameHoldOptions",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.frameHold",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.fieldOptions",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.timeInterpolation.frameSampling",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.timeInterpolation.frameBlending",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.timeInterpolation.opticalFlow",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.setTimeInterpolation",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.audioGain",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.scaleToFrameSize",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.group",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.ungroup",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    },
+    {
+      "command": "clip.link",
+      "unknownParameterRejected": true,
+      "emptyContextBlocked": true
+    }
+  ],
+  "sourceProjectSha256": "b64a19df814e44700ac0005e9b647ba55146077e5b752e13d953d66daef6086c",
+  "changedProjectSha256": "9411498e1d3324df0299d891196566e42d10ce57d9d7bad65e746dc7b75c87c3",
+  "wholeProjectAndInputsPreserved": true,
+  "receipts": {
+    "create": "f3041e522f5ba36e9ff5283451def184de68a3f93801db51df26da3f11a81ce2",
+    "revision": "b878c7b15b901f17a53c8d68a346b40b8648a89bce6b6d0024e784f9e6527ea1"
+  },
+  "artifacts": {
+    "create/preserved.fcproj": "31aedb02a94b044a4ec2930d0a9c73a422cfd836fb2a32a0301a834d1bad494d",
+    "create/changed.fcproj": "9411498e1d3324df0299d891196566e42d10ce57d9d7bad65e746dc7b75c87c3",
+    "revision/reopened.fcproj": "00c0f41876e4ff8179197a33500d00a59d4e3e6a51f165b2c8da5add8701449c",
+    "revision/restored.fcproj": "b62a04621008d992b73dce44e4c63a731e444c596a1f42b66eba6b84d8d75db3",
+    "create/baseline.wav": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b",
+    "create/gain.wav": "e8ebdf7cf9058084d18a7b0002dc4c026f0e69742d4a7bc0e75a5ee67d216548",
+    "revision/restored.wav": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b"
+  },
+  "renderScope": "Native WAV outputs generated; independent PCM measurements separate. No moving-video or optical-flow/field-processing algorithm qualification."
+}

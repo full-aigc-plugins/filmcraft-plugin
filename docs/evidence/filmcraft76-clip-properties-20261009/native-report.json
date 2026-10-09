@@ -1,0 +1,26 @@
+{
+  "schema": "filmcraft-fixed-clip-properties/v1",
+  "result": "PASS",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 15,
+      "observationsSha256": "262033d7539fed292f3bdc48775fb768103a41a0e2c581dd63126b0f66329a37",
+      "matrixSha256": "7566b99f22a2bb0bbf551e8b4f7cdb3af52eb388642ed33372c203d45425ac8a",
+      "sessionSha256": "4ba5d1203a498c63ade06f40efd9ce10c12ced150e88ab505a1d373109355a2f"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 15,
+      "observationsSha256": "85660c7a324e0262ecb84eff607f754b5e692c194d7cd531c2a4f7680d04b6b6",
+      "matrixSha256": "3ffb542ecf206b774c1bec9ff89951519b0efc15ba8830cd2da7757a34be574e",
+      "sessionSha256": "017fd836bb224c9b74b4039bbf9b36a67797b3dd864ce85152ca02b72145e9de"
+    }
+  ],
+  "driverSha256": "690b7c13613e5ef1daeff3ce805cec42c05d5554d9b37587600d82c4f7f92319",
+  "sessionHelperSha256": "394302ced9de2a963292107bbd3ee118902fb036292e23edd925ab4748b536fb",
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3"
+}

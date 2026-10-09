@@ -1,0 +1,58 @@
+{
+  "schema": "filmcraft-fixed-clip-properties/v1",
+  "result": "PASS",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 15,
+      "observationsSha256": "262033d7539fed292f3bdc48775fb768103a41a0e2c581dd63126b0f66329a37",
+      "matrixSha256": "7566b99f22a2bb0bbf551e8b4f7cdb3af52eb388642ed33372c203d45425ac8a",
+      "sessionSha256": "4ba5d1203a498c63ade06f40efd9ce10c12ced150e88ab505a1d373109355a2f"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 15,
+      "observationsSha256": "85660c7a324e0262ecb84eff607f754b5e692c194d7cd531c2a4f7680d04b6b6",
+      "matrixSha256": "3ffb542ecf206b774c1bec9ff89951519b0efc15ba8830cd2da7757a34be574e",
+      "sessionSha256": "017fd836bb224c9b74b4039bbf9b36a67797b3dd864ce85152ca02b72145e9de"
+    }
+  ],
+  "driverSha256": "690b7c13613e5ef1daeff3ce805cec42c05d5554d9b37587600d82c4f7f92319",
+  "sessionHelperSha256": "394302ced9de2a963292107bbd3ee118902fb036292e23edd925ab4748b536fb",
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3",
+  "pluginRef": "v0.1.0-dev.76",
+  "sourceRef": "v0.1.0-dev.57",
+  "distinctBoundedCommands": 130,
+  "unobservedBeyondDiscovery": 536,
+  "fullProjectComparisons": 300,
+  "nativeWavOutputs": 6,
+  "unknownParameterRefusals": 30,
+  "emptyNativeContextRefusals": 28,
+  "oracleTestsPassed": 5,
+  "pythonTestsPassed": 104,
+  "pcmEvidenceSha256": "5d9dbdce9966b4fe306da0006ca862b04f3fbebae8befd11fcb3d4848f18ebb5",
+  "pcmDriverSha256": "448593d4d9763b9e566ee515b9d8f3e5e7bca88252d9911621143ebee6d28fca",
+  "initialFailure": {
+    "kind": "QA_COMBINED_REVERSE_HOLD_EXPECTATION",
+    "receiptSha256": "6b3dd943ecbb96520198b8bb4a65961f5e2f058927733647f9237a5d4fa3c112",
+    "projectSha256": "e240e1249c7f2d06c810e257d648320534550e5d4d48fc507149328a95f6a13e",
+    "reason": "Independent75 property checkpoints passed. Combined reverse+holdOn=in verifier expected source-in; actual hold is the last consumed source frame. Static time semantics and real artifact agree: floor((source_in+source_duration-1)/frame_ticks)*frame_ticks. Corrected expected value; original receipt/project retained."
+  },
+  "remainingFullTasks": 7,
+  "fullV1": "NOT_PROVEN",
+  "scope": "15 new bounded clip commands: full serialized fields/ID allocator/link/group/default omissions, undo/redo, combined-property save/reopen and explicit full restore. Actual clip.audioGain -3dB is independently compared across all stereo samples and exact restored PCM. Only property/storage semantics for opticalFlow and field processing; no moving-video algorithm, exhaustive contexts, GUI gesture or creative/fullV1 qualification.",
+  "filesSha256": {
+    "bridge/matrix.json": "3ffb542ecf206b774c1bec9ff89951519b0efc15ba8830cd2da7757a34be574e",
+    "bridge/observations.json": "85660c7a324e0262ecb84eff607f754b5e692c194d7cd531c2a4f7680d04b6b6",
+    "bridge/session.json": "017fd836bb224c9b74b4039bbf9b36a67797b3dd864ce85152ca02b72145e9de",
+    "headless/matrix.json": "7566b99f22a2bb0bbf551e8b4f7cdb3af52eb388642ed33372c203d45425ac8a",
+    "headless/observations.json": "262033d7539fed292f3bdc48775fb768103a41a0e2c581dd63126b0f66329a37",
+    "headless/session.json": "4ba5d1203a498c63ade06f40efd9ce10c12ced150e88ab505a1d373109355a2f",
+    "native-report.json": "31866e7bf73b0852cafa5ee4bcdc3046ca79c567a0f1085fdba042ca5b2f4179",
+    "pcm.json": "5d9dbdce9966b4fe306da0006ca862b04f3fbebae8befd11fcb3d4848f18ebb5"
+  },
+  "nativeProducerReportSha256": "31866e7bf73b0852cafa5ee4bcdc3046ca79c567a0f1085fdba042ca5b2f4179"
+}

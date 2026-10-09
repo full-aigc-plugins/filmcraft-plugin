@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+Fixed76 clip-property supplement adds15 disjoint bounded commands:130 total,536 still NOT_RUN beyond discovery.300 complete native-project checkpoints prove undo/redo, combined-property reopen/revision and non-target preservation. Six WAV outputs independently verify -3dB clip gain and exact restored PCM. Optical-flow and field-processing video algorithms remain unqualified. [Evidence](docs/evidence/filmcraft76-clip-properties-20261009/report.json).
+
 Fixed76 marker/settings supplement adds29 disjoint bounded command observations in both contexts:115 commands total,551 still NOT_RUN beyond discovery.484 persistent-sequence comparisons and80 actual saved marker states verify metadata absent from inspect, undo/redo, reopen/revision and non-target preservation. Each mode uses one owned instance. Full8.3 and seven V1 tasks stay open. [Evidence](docs/evidence/filmcraft76-markers-settings-20261009/report.json).
 
 Fixed76 continuous-session followup: creation, project close/reopen, revision, disabled-command checks and discovery now share one owned instance per suite/mode. All86 bounded observations reverified; actual PIDs stay fixed and final cleanup passes. The three suites run sequentially, using3 bridge desktops in total. Task9.35 is complete; seven full-V1 tasks remain open. [Evidence](docs/evidence/filmcraft76-continuous-session-20261009/report.json).

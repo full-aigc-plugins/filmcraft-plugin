@@ -1,0 +1,544 @@
+{
+  "schema": "filmcraft-owned-plan-batch/v1",
+  "mode": "bridge",
+  "identityBindingSha256": "57eb6d0d36bbbec1edf7de0c0dd9e0edc8ef8860b25812884284d066f7d6236d",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sessionsStarted": 1,
+  "caseCount": 19,
+  "cases": [
+    {
+      "commands": [
+        "file.open",
+        "file.exportMedia",
+        "timeline.select",
+        "clip.rename",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.speedDuration",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.enable",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.frameHoldOptions",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.frameHold",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.fieldOptions",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.timeInterpolation.frameBlending",
+        "clip.timeInterpolation.frameSampling",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "timeline.select",
+        "clip.timeInterpolation.frameBlending",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.timeInterpolation.opticalFlow",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.setTimeInterpolation",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.audioGain",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.scaleToFrameSize",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.group",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.group",
+        "clip.ungroup",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "timeline.select",
+        "clip.link",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.rename",
+        "clip.speedDuration",
+        "clip.enable",
+        "clip.frameHoldOptions",
+        "clip.fieldOptions",
+        "clip.scaleToFrameSize",
+        "timeline.select",
+        "clip.audioGain",
+        "file.exportMedia",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.open",
+        "file.saveAs",
+        "timeline.select",
+        "clip.rename",
+        "clip.speedDuration",
+        "clip.enable",
+        "clip.frameHoldOptions",
+        "clip.fieldOptions",
+        "clip.scaleToFrameSize",
+        "timeline.select",
+        "clip.audioGain",
+        "timeline.select",
+        "clip.rename",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.speedDuration",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.enable",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.frameHoldOptions",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.frameHold",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.fieldOptions",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.timeInterpolation.frameBlending",
+        "clip.timeInterpolation.frameSampling",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "timeline.select",
+        "clip.timeInterpolation.frameBlending",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.timeInterpolation.opticalFlow",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.setTimeInterpolation",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.audioGain",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.scaleToFrameSize",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.group",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "timeline.select",
+        "clip.group",
+        "clip.ungroup",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "timeline.select",
+        "clip.link",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "edit.redo",
+        "file.saveAs",
+        "edit.undo",
+        "file.saveAs",
+        "file.saveAs",
+        "file.exportMedia",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "clip.speedDuration"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.enable"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.frameHoldOptions"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.frameHold"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.fieldOptions"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.timeInterpolation.frameSampling"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.timeInterpolation.frameBlending"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.timeInterpolation.opticalFlow"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.setTimeInterpolation"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.audioGain"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.scaleToFrameSize"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.group"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.ungroup"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.link"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "command.list"
+      ],
+      "expectedRefusal": false
+    }
+  ],
+  "pids": [
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    },
+    {
+      "mcp": 34506,
+      "desktop": 33749
+    }
+  ],
+  "singleProcessIdentity": true,
+  "ownedProcessesStopped": true,
+  "desktopStopped": true,
+  "listenerOwnedByPID": true,
+  "tainted": false,
+  "elapsedSeconds": 20.901553957985016,
+  "scope": "QA owned continuous plans within fixed permissions; no general interactive session API"
+}

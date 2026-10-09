@@ -1,0 +1,83 @@
+{
+  "schema": "filmcraft-clip-gain-pcm/v1",
+  "result": "PASS",
+  "results": [
+    {
+      "mode": "headless",
+      "command": "clip.audioGain",
+      "result": "PASS",
+      "expectedDb": -3,
+      "measuredDb": -3.000286586342142,
+      "everySampleCompared": true,
+      "maxAbsoluteSampleError": 2.3315845266994734e-05,
+      "tolerance": 9.1552734375e-05,
+      "restoredSamplesIdentical": true,
+      "baseline": {
+        "fileSha256": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b",
+        "pcmSha256": "c16557ebddbe8f792b58a3b4097a7364e5a09276f69e39fc5bc0398d1b01f3a3",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000
+      },
+      "changed": {
+        "fileSha256": "e8ebdf7cf9058084d18a7b0002dc4c026f0e69742d4a7bc0e75a5ee67d216548",
+        "pcmSha256": "258d514c9935d0b8cbc235f2228967f0247eca3576de761773b027218b1b5eaf",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000
+      },
+      "restored": {
+        "fileSha256": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b",
+        "pcmSha256": "c16557ebddbe8f792b58a3b4097a7364e5a09276f69e39fc5bc0398d1b01f3a3",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "mode": "bridge",
+      "command": "clip.audioGain",
+      "result": "PASS",
+      "expectedDb": -3,
+      "measuredDb": -3.000286586342142,
+      "everySampleCompared": true,
+      "maxAbsoluteSampleError": 2.3315845266994734e-05,
+      "tolerance": 9.1552734375e-05,
+      "restoredSamplesIdentical": true,
+      "baseline": {
+        "fileSha256": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b",
+        "pcmSha256": "c16557ebddbe8f792b58a3b4097a7364e5a09276f69e39fc5bc0398d1b01f3a3",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000
+      },
+      "changed": {
+        "fileSha256": "e8ebdf7cf9058084d18a7b0002dc4c026f0e69742d4a7bc0e75a5ee67d216548",
+        "pcmSha256": "258d514c9935d0b8cbc235f2228967f0247eca3576de761773b027218b1b5eaf",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000
+      },
+      "restored": {
+        "fileSha256": "1e1eb39b51a31bb527047873eca4fc4300af44144ca3cf85073fca4e1649863b",
+        "pcmSha256": "c16557ebddbe8f792b58a3b4097a7364e5a09276f69e39fc5bc0398d1b01f3a3",
+        "frames": 12000,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    }
+  ],
+  "sourceAuditSha256": "31866e7bf73b0852cafa5ee4bcdc3046ca79c567a0f1085fdba042ca5b2f4179",
+  "driverSha256": "448593d4d9763b9e566ee515b9d8f3e5e7bca88252d9911621143ebee6d28fca",
+  "tools": {
+    "ffmpeg": {
+      "sha256": "415cb0fb0bc26652f2416d6516fcb646379281a4dbb032121db8ef46aec5afad",
+      "version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "sha256": "88e98406604ed4a81a03efdd7e9c057992e79197b18b500fbc3f273444d26d1b",
+      "version": "ffprobe version 9.0.1 Copyright (c) 2007-2026 the FFmpeg developers"
+    }
+  },
+  "scope": "Six original procedural tone native WAV outputs, full stereo24000samples per file. Not video/interpolation/field-processing algorithm or creative qualification."
+}

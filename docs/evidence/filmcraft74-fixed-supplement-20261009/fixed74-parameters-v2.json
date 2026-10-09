@@ -1,0 +1,484 @@
+{
+  "schema": "filmcraft-fixed-native-parameter-acceptance/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.74",
+  "pluginCommit": "a4a55273a82ef11adb2e663970fadd8233719e26",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "platform": "darwin-arm64",
+  "frozenFilesPreserved": 1804,
+  "catalogChecks": [
+    {
+      "skill": "filmcraft-cli",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    },
+    {
+      "skill": "filmcraft-use",
+      "unknownFieldRefusals": 666,
+      "layer": "installed Python preflight, not native execution of666 commands"
+    }
+  ],
+  "publicCases": [
+    {
+      "skill": "filmcraft-cli",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "commands-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "workflow-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "raw-unknown-field",
+      "result": "PASS",
+      "beforeInstallation": true,
+      "outputCreated": false,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "creative-data-native-save",
+      "result": "PASS",
+      "projectSha256": "3798aca98ebcf98cec145fb6c7d1a34410906b4c1ed76cd0ab5dc99aa0540f20",
+      "creativeTextPreserved": true
+    }
+  ],
+  "nativeCommandContextAcceptance": "NOT_PROVEN",
+  "fullFC_RL_002": "NOT_PROVEN"
+}

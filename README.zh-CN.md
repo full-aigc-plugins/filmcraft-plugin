@@ -1,5 +1,9 @@
 # FilmCraft Agent Plugin
 
+dev.75保留已发布源57，修复准入QA驱动：独立可信根进入预检、精确授权及公开执行。dev.74已发布失败保持不变；外部修正驱动的固定74原生准入、受保护缓存写入拒绝及全新冷模型ASR补证独立记录。八项完整V1任务仍开放，固定75安装验收待执行。
+
+固定dev.74补证：185项安装原生回归、十三技能独立业务通过，1804个固定文件未变；参数、根目录和真实子进程环境探测分别记录。已发布准入验收器因遗漏可信根策略而失败，修正后的外部驱动在未修改安装副本上通过七项原生场景。冷模型ENOSPC与初次工程名称fixture失败均保留；全新目录冷下载重试通过28词ASR、重开、SRT及工作流字幕返工。完整资格与八项剩余任务仍开放。[补充证据](docs/evidence/filmcraft74-fixed-supplement-20261009/report.json)。
+
 dev.74锁定已发布源57：完整命令、领域native.command与旧exec共用固定原生顶层参数校验；未知字段在素材读取、安装和创建输出前拒绝且不回显名称／值，别名、联合参数与整体结果引用保留。241项源码、39项公开入口拒绝、39项原生根边界及十三候选真实业务通过。固定73完成185项安装原生回归与1793文件保全，但原未定义参数红灯保留。固定74与完整权限、命令上下文及宿主意图路由仍待，八项V1任务保持未完成。 [Evidence](docs/evidence/filmcraft-native-parameter-fields-20261009/report.json).
 
 dev.73锁定已发布source56：旧原生CLI强制可信根并过滤子进程环境；模型下载采用独立校验的维护模式，仅可写指定数据目录并使用网络出站。三项目标红灯转六项通过；39项真实原生入口、模型冷下载／28词识别／重开／SRT及十三个独立复制技能候选业务通过。固定72补证保留原版本身份，包括185项安装原生回归与1775文件保全。宿主意图路由、完整权限／全命令及八项V1任务仍开放；固定73验收NOT_RUN。 [Evidence](docs/evidence/filmcraft56-raw-launcher-candidate-20261009/report.json).
@@ -67,7 +71,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.74` / `filmcraft-skills@v0.1.0-dev.57`; 13 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.75` / `filmcraft-skills@v0.1.0-dev.57`; 13 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -196,7 +200,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.74 |
+| Metadata version | 0.1.0-dev.75 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.57 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |

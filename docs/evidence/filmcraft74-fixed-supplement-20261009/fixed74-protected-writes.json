@@ -1,0 +1,329 @@
+{
+  "schema": "filmcraft-fixed-protected-writes/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.74",
+  "sourceRef": "v0.1.0-dev.57",
+  "layer": "actual installed public CLI and pinned native; enclosing write grant deliberately includes all three protected locations",
+  "cases": [
+    {
+      "skill": "filmcraft-cli",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "94c975478eacfe79c233baf27f70da5bcb9a7200f5f2abcf557d4003151a4010"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "7d280ed2c56a78a9eef8cfcf1d9d4e7d65033a3a128cf9f4589e431a1231d546"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "0b2261deb8fe864ae280014c1573e135f019574b36539f63231cf9fab77cbbd3"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "acb76370ab2b60f752e76bb476dbccf52b03736cf1673b85aebc151ff6bdad40"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "6b2754d5d2058d62dba9f0bc4a2d437529c3c5a217daa91e1816028e5a79b90f"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "bd62104f456c32c2fee810e113295d6c9819591edf27e0ff62667f17e9c1cc69"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "43c95e5f6a2a1c4e4e2d9e60e03fb8ae655a462418fa1238e58d1a52a12dd2d7"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "bebbb4f424db4804b455e2a8c2c53a537040c00fd64406fefc7e6d16b47fd979"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "12d5a1f4d332187c5b55176389cd4a3628c62f5757abe5db8f75eca920660153"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "00cc5f3539d69080085a770d583a303d0b53dc63b4a6cdc32853472ebb567323"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "8b32d44191732fdff600e9b739bb8bd3745ebb42382238ca8653d96416238ded"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "ca4667a35397d2c5126b4498cd6d231361a5fb2c04c374a624d52a061962fb40"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    },
+    {
+      "skill": "filmcraft-use",
+      "protectedTarget": "skill",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "74b9f8b23310a2fe1a430f86e4699df9355a4949cc6ab2f3e1ca8ef538fc065d"
+    },
+    {
+      "skill": "filmcraft-use",
+      "protectedTarget": "runtime",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "5d7304d625f4de7341011b3cc335425541797a024f81e57d54ded8dd5f345bdd"
+    },
+    {
+      "skill": "filmcraft-use",
+      "protectedTarget": "models",
+      "status": "PASS",
+      "exit": 1,
+      "outputCreated": false,
+      "logSha256": "e5d185dadf62570feda5a025d3b4d1c9ec85e1dee132deb4ff2f6e886989a50c"
+    }
+  ],
+  "installedRuntimeModelFilesUnchanged": true,
+  "fileCounts": {
+    "installed": 1832,
+    "runtime": 10,
+    "models": 4
+  },
+  "fullFC_RL_002": "NOT_PROVEN",
+  "nativeSaveEpermLogsVerified": 39
+}

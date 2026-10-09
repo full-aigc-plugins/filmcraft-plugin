@@ -1,0 +1,100 @@
+{
+  "schema": "filmcraft-permission-scenario-audit/v1",
+  "pluginRef": "v0.1.0-dev.74",
+  "sourceRef": "v0.1.0-dev.57",
+  "result": "PARTIAL",
+  "requirements": "FC-RL-002",
+  "scenarios": [
+    {
+      "id": "FC-RL-002-P",
+      "status": "PARTIAL",
+      "evidence": [
+        "report.json"
+      ],
+      "scopeOrGap": "Local native editing uses no cloud credential; a host secret-reference consumer contract is not qualified."
+    },
+    {
+      "id": "FC-RL-002-N",
+      "status": "PARTIAL",
+      "evidence": [
+        "fixed74-plan-fields.json",
+        "fixed74-parameter-fields.json",
+        "fixed74-parameters-v2.json"
+      ],
+      "scopeOrGap": "Unknown fields and tested outside saves refuse; this does not prove every metadata and native command context."
+    },
+    {
+      "id": "FC-RL-002-PLAN-FIELDS",
+      "status": "PASS",
+      "evidence": [
+        "fixed74-plan-fields.json"
+      ],
+      "scopeOrGap": "26 installed public refusals before cache/output creation, no canary echo; valid native revision preserves source."
+    },
+    {
+      "id": "FC-RL-002-DOMAIN-PARAMETERS",
+      "status": "PASS",
+      "evidence": [
+        "fixed74-parameter-fields.json"
+      ],
+      "scopeOrGap": "26 installed public parameter/move refusals; creative caption revision and source preservation pass."
+    },
+    {
+      "id": "FC-RL-002-TRUSTED-ROOTS",
+      "status": "PARTIAL",
+      "evidence": [
+        "fixed74-public-root-matrix.json",
+        "fixed74-exact-root-admission.json",
+        "fixed74-admission-root-policy.json",
+        "fixed74-protected-writes.json"
+      ],
+      "scopeOrGap": "26 public native root cases, exact-root authorization and39 protected skill/runtime/model write refusals pass even under an enclosing write grant. Published builtin verifier still fails; malformed/source read and unsupported-platform refusal coverage mapping remains to complete."
+    },
+    {
+      "id": "FC-RL-002-CHILD-ENV",
+      "status": "PASS",
+      "evidence": [
+        "fixed74-environment.json",
+        "fixed74-native-environment.json",
+        "fixed74-desktop-environment.json"
+      ],
+      "scopeOrGap": "Seven actual auxiliary launches plus owned native, signed desktop and bridge process environment observations; dummy canaries only, no raw environment recorded."
+    },
+    {
+      "id": "FC-RL-002-MAINTENANCE-ROOTS",
+      "status": "PARTIAL",
+      "evidence": [
+        "maintenance-roots-fixed74.json"
+      ],
+      "scopeOrGap": "Actual installed maintenance probe/activation, expanded roots/revocation refusal and ledger preservation; original driver label retained, full scenario evidence mapping still pending."
+    },
+    {
+      "id": "FC-RL-002-READONLY-MODELS",
+      "status": "PARTIAL",
+      "evidence": [
+        "fixed74-readonly-models.json",
+        "cold-model-retry.json"
+      ],
+      "scopeOrGap": "Actual CLI inference and model bytes preserved; signed desktop discovery and speech-capability refusal; complete malformed/outside reference and missing-model evidence not bound here."
+    },
+    {
+      "id": "FC-RL-002-RAW-LAUNCHER",
+      "status": "PARTIAL",
+      "evidence": [
+        "fixed74-raw-cli.json",
+        "cold-model-retry.json"
+      ],
+      "scopeOrGap": "39 installed native boundary cases and actual cold model maintenance pass; complete metadata exemption and network/write isolation rejection vectors not all bound here."
+    },
+    {
+      "id": "FC-RL-002-REGISTRY-PARAMETERS",
+      "status": "PASS",
+      "evidence": [
+        "fixed74-parameters-v2.json",
+        "fixed74-late-parameter-reference.json"
+      ],
+      "scopeOrGap": "8658 installed Python contract refusals,39 public refusals,13 native creative saves and real late-reference guard; does not prove all666 native contexts."
+    }
+  ],
+  "tasks7_4_to7_6": "OPEN; scenario subsets do not establish complete requirement"
+}

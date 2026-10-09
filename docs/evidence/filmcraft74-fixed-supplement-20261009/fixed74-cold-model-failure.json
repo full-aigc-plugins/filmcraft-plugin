@@ -1,0 +1,26 @@
+{
+  "schema": "filmcraft-cold-model-failure/v1",
+  "result": "FAIL",
+  "reason": "ENOSPC while saving first model download subprocess log; native return status not retained",
+  "modelComplete": false,
+  "recognitionExecuted": false,
+  "files": {
+    "declared-data/models/whisper-tiny/config.json": {
+      "bytes": 1983,
+      "sha256": "ffdccec4f3211f4c63310f2b7098f309fe70f3952cedc5e4d11e43f5b2379b98"
+    },
+    "declared-data/models/whisper-tiny/generation_config.json": {
+      "bytes": 3747,
+      "sha256": "a5d5325911f16e74001a72fa13d6e208eee51548f994646de1f4b4cc8b35b512"
+    },
+    "declared-data/models/whisper-tiny/model.safetensors.part": {
+      "bytes": 110189519,
+      "sha256": "61fcb30c4e95ebcb089bf54f6e6fb28a8573d8646f442131c5c27e314d0be6ea"
+    },
+    "declared-data/models/whisper-tiny/tokenizer.json": {
+      "bytes": 2480466,
+      "sha256": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566"
+    }
+  },
+  "logSha256": "f6c6647cbe0db302809ebf0167fbb1bf8301d0a26c0034081eab6429766616ff"
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "filmcraft-owned-desktop-environment/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.74",
+  "sourceRef": "v0.1.0-dev.57",
+  "observationHook": "test-only process inspection after unchanged installed OwnedSession.__enter__; no source edits or synthetic native responses",
+  "observations": [
+    {
+      "process": "signed-desktop",
+      "observedOwnedPid": true,
+      "environment": {
+        "canaryPresent": false,
+        "proxyPresent": false,
+        "pythonInjectionPresent": false,
+        "nodeInjectionPresent": false,
+        "explicitModelDirectoryPresent": true
+      }
+    },
+    {
+      "process": "native-bridge-client",
+      "observedOwnedPid": true,
+      "environment": {
+        "canaryPresent": false,
+        "proxyPresent": false,
+        "pythonInjectionPresent": false,
+        "nodeInjectionPresent": false,
+        "explicitModelDirectoryPresent": true
+      }
+    }
+  ],
+  "ownedProcessesStopped": true,
+  "listenerOwnedByPID": true,
+  "nativeProjectSha256": "95d7ba9618e5febd734466e354ebd9f9ba1a7ad7068435192a275b8b73a7644a",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "desktopBinarySha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa",
+  "rawEnvironmentRecorded": false,
+  "fullFC_RL_002": "NOT_PROVEN"
+}

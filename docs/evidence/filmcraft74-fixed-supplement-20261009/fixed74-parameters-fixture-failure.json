@@ -1,0 +1,8 @@
+{
+  "result": "FAIL",
+  "layer": "verification fixture, not parameter guard regression",
+  "driverSha256": "5413f1c24940589ddb137efe3982e159418ef1d445a4ed1d6963c8b41b351625",
+  "projectSha256": "7da4ffec9f4b7d825ee851ca321fa68b7d296ddc80f38e2ea908fed2151b6085",
+  "observation": "file.newProject session name is not persisted as project creative content by the native save contract",
+  "correction": "use file.newSequence name, a persistent editable project field; preserve original artifacts and logs"
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "filmcraft-workflow-admission-verification/v1",
+  "result": "PASS",
+  "layer": "actual-native",
+  "pluginVersion": "0.1.0-dev.74",
+  "sourceRevision": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "skillSha256": "0b4000a89c79788ef8ff3f90bafcc1dedeb4f01ebf4f27d8ceb785b60405763e",
+  "skillHashAlgorithm": "path-nul-raw-bytes-nul",
+  "runtimeIdentity": {
+    "pluginId": "filmcraft",
+    "pluginVersion": "0.1.0-dev.74",
+    "cliVersion": "0.2.0-craft.5",
+    "sha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "3cc20e3118e209ee5e9b1d64c004ba92d3973f9569ca79c4073b38a28d094226"
+  },
+  "platform": "darwin-arm64",
+  "nodeVersion": "v24.18.0",
+  "cases": [
+    {
+      "id": "ungranted-exact-subject",
+      "status": "PASS",
+      "attempts": 0,
+      "outputExists": false
+    },
+    {
+      "id": "actual-cli-authorized-native-create",
+      "status": "PASS",
+      "projectSha256": "6b183a760d91ee3b3d3891a2f92a044bfd86d8e48cf23d9c2cd0e7a4fcdf875b",
+      "movieSha256": "a9f759742dcb9f87930f66ab8bdf97a6800c6ec1c8d676209b7779ad26089ec2",
+      "state": "verifying",
+      "stopped": true
+    },
+    {
+      "id": "existing-valid-grant-idempotent-reuse",
+      "status": "PASS",
+      "attempts": 1
+    },
+    {
+      "id": "revoked-grant-refuses-even-reuse",
+      "status": "PASS",
+      "attempts": 1,
+      "originalPreserved": true
+    },
+    {
+      "id": "authorized-runtime-drift-before-registration",
+      "status": "PASS",
+      "attempts": 0
+    },
+    {
+      "id": "revocation-after-intent-before-spawn",
+      "status": "PASS",
+      "attempts": 1,
+      "nativeLaunched": false,
+      "state": "failed"
+    },
+    {
+      "id": "actual-native-revision-and-stale-source-conflict",
+      "status": "PASS",
+      "originalSha256": "6b183a760d91ee3b3d3891a2f92a044bfd86d8e48cf23d9c2cd0e7a4fcdf875b",
+      "changedSha256": "1b468f3adb4f63894d40f71b5c3594b92a0783ee1f195f8f300fdd16ec5627dd",
+      "staleAttempts": 0,
+      "sourcePreserved": true
+    }
+  ],
+  "planSha256": "e82ce494b3154e8a5566efe1309a09aa64d761194d003281f8b01f520e65ba51",
+  "inputSha256": "f7c0fc9fd825f0a537427adb1869dddf4af96fb260e26cbf3d2a49edfd487c47",
+  "installedSkillPreserved": true,
+  "authorization": "private host LocalAuthorizationStore; explicit exact subjects; no production grants",
+  "executionPermissionsSha256": "5d644b8f8b3fd0a3ec6b837ec3b0715fa6cb2fcf6d56ccc8c2f6fd7f4e67e138",
+  "scope": "initial execution admission and bounded native revision/refusal; full TX-001/other routes/platforms/V1 remain unqualified",
+  "fullV1": "NOT_PROVEN",
+  "technicalAcceptance": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "userAcceptance": "NOT_RUN"
+}

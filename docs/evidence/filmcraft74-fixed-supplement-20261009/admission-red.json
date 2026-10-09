@@ -1,0 +1,9 @@
+{
+  "result": "FAIL",
+  "release": "v0.1.0-dev.74",
+  "case": "actual-cli-authorized-native-create",
+  "actualCode": "execution_permissions_required",
+  "reason": "published verifier omitted independent roots",
+  "originalLogSha256": "4b758173f1e3d1d89a5db3755e30bd0bb07b8fb1f21a8f33593fef8d2727a864",
+  "preserved": true
+}

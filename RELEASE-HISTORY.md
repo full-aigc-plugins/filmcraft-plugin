@@ -1,5 +1,9 @@
 # Version-bound release records
 
+## 0.1.0-dev.75
+
+dev.75 retains published source57 and repairs the admission QA driver to bind independent trusted roots into preparation, exact grants and public execution. The dev.74 published failure remains unchanged; corrected external fixed74 native admission, protected-cache refusal and fresh cold-model ASR evidence are recorded separately. Eight full-V1 tasks remain open; fixed75 installation verification is pending.
+
 ## 0.1.0-dev.74
 
 dev.74 pins published source57, sharing fixed native top-level parameter validation across complete-command, domain native.command and legacy exec. Undefined fields refuse before inputs, installation and output without echoing names/values; aliases, unions and whole-object references remain supported.241 source tests,39 public entry refusals,39 native root cases and thirteen real candidate business tasks pass. Fixed73 has185 installed native passes and all1793 frozen files preserved, but its original undefined-parameter red remains. Fixed74 and full permissions, command contexts and host intent routing remain open; eight V1 tasks are unchecked. [Evidence](docs/evidence/filmcraft-native-parameter-fields-20261009/report.json).

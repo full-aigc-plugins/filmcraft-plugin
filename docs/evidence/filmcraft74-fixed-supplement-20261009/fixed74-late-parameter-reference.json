@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.74",
+  "sourceRef": "v0.1.0-dev.57",
+  "layer": "actual fixed installed public complete-command CLI and native MCP session",
+  "error": "invalid_native_parameters",
+  "priorNativeStepsRetained": 2,
+  "forbiddenDerivedParameterStepSubmitted": false,
+  "successReceiptCreated": false,
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "unknownResultReplayed": false
+}

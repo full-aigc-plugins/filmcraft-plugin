@@ -1,0 +1,139 @@
+{
+  "schema": "filmcraft-single-skill-real-asr-first-use/v1",
+  "result": "PASS",
+  "installation": "public fixed runtime",
+  "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "runtimeVersion": "0.2.0-craft.5",
+  "skillFiles": {
+    "SKILL.md": "a844d35c9db2bbc35d81a074621d55db4deea791ea34b4db1646d06ee888aed2",
+    "examples/asr-captions-revision.json": "9ca7217e51646e591582cb817acc025ca5d8708ace814bb86268965c108eea3f",
+    "examples/asr-short-film.json": "b94c0f9ab4aca84621ee66a380ba8037034c964e2b8b3e2345b87c29b4257897",
+    "examples/chinese-short-film.json": "a98445ad963ffea38cfb7781c91ffbbd3f8bebea4bb77456ef0167fda324a375",
+    "examples/commands-advanced.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "examples/commands-revision-create.json": "de489d735caa481500fd0ede481d6034b9e2652eb39232541ded6a6a7b11dc1e",
+    "examples/commands-revision.json": "33d91cf6b63982dfe7fb9c75b2aec6babf4ff2184f0673dcf00e19ad72e3f611",
+    "examples/desktop-first-use.json": "3c64e48acff1905c49114b75f2ee09cb4949f64fde666970b40c12fe726980b3",
+    "examples/motion-lut-film.json": "3407f44e4a5bbde6ab8e00a993da1221b47ca6d668d7e525c6d96a595fae96f6",
+    "examples/multicam-create.json": "4c5455b691355592db0e4cebf79ac936917b77777e152e90f2eed6f44338e8e1",
+    "examples/multicam-reopen.json": "f077ccc6d3e11b83fa629bc42d3cb6581dff1bf79b4a206901713ae7287ccbd7",
+    "examples/native-workflow.json": "19818bc13fd25f02c4a0e364de7ff2901caf6e59d5d5d9e7f5ee6955ab253354",
+    "examples/short-film.json": "46574358e9d62131de4d51173f22fdf4e0dc62f9d35ccec0f3dcc9df06d5aa9e",
+    "examples/transcript-import-captions.json": "37ff3209723ed119b738003dc1d13bbed4f85f3dc0057f2eb51c2761b4463685",
+    "examples/transcript-reopen.json": "732b43c05aa089c409a4c180449bffb3c4557da5ae61b5da1786d5448eb00f82",
+    "references/business-scenes.md": "4a75fc51b206e7a032e392604f87ed5ab1c5f7c56c2ea3f90d91afdda507dfab",
+    "references/capabilities.md": "4817a5b9b802756788c66e47cf7a3c52ad1879631fc31e818fcdc0e6bf3f91ba",
+    "references/command-coverage.json": "df1a2c8c8b42d1039cc2380371d7cfe5ef16afd7001013d8f0339026b8971fae",
+    "references/command-reference.md": "96a7258924e26c60bda96db27717467ecf1f1c3f71353b59914762cbfbd3f84e",
+    "references/command-usage.md": "425dced0faaf56b9e8c28c8e03631b82423c5bbea436a2f0aeef8b5d43b2402a",
+    "references/commands.json": "e7508081387bfc78cadf5990af3d9619ee7a9713c102e082701d48f55c7e72c0",
+    "references/desktop-install.md": "b398972d0e7f1c033395ae4a5225c02048ae8c30b53e3dac86371dc48f804859",
+    "references/exchange-loss.md": "eee665f62b77274ca8ce0efc4117012ade85978905cdfd40ab488af64297b8ae",
+    "references/execution-permissions.md": "2a113ca97d498b68e83930349ea36b37474b58c19b15d5b8da290f8d7b9c694d",
+    "references/first-use-failures.md": "ce2a8d1a8ca6b8a29a084d52d105d510476de88d40b439d6c2ff79212581d61d",
+    "references/installation-concurrency.md": "69067acebcd47f1924a8d6aa9d8a4ce6f44ad0756d44888a21eb224bcdb1c215",
+    "references/multicam-scene.md": "522b52daeb6d564cf318e68ffdd839d95615b3c183af06d87674549d67007eec",
+    "references/native-command-snapshot.json": "3a5a52327ec372f748fe32e175124859c6ac3b467ebd1127e6ec0a1a7d7e09db",
+    "references/native-workflow.md": "42fee416c66a69f6f3802abe1be6f002963cf109e7e22a4d6297b6dcaf62b8e9",
+    "references/output-execution.md": "20d8aa35e82e23d755cc1572f6ee80716664f960031c58d5fc1b3cd2ce5a52e7",
+    "references/scenario.md": "bac21d4b883e1b24b062d44047a0762bfa13de7ee5ac164a2d0d8002210e96f3",
+    "references/segmented-assets.md": "8b771ad4ef3b7c5a66cb627d7d3ecf6691e359d566653495b79d83d08172c724",
+    "references/task-scene.md": "c8ba36431d3567192252d6a3d4026a8b3f78654a35e6f5aafa17f6de39f1d386",
+    "references/transcript-scene.md": "29b7a9e5a3a7d2653553a2cd63e57c9a0edba1a26eebe994dd647f24cf419e21",
+    "references/workflow.md": "a353956eb5d748363224a772fc19aab9315e7cd260c19b82995506c79d5fac39",
+    "scripts/bootstrap.py": "ec5e9509faf7bc8ede1ebd194406a8ca6514ba55c6ea1af104cd56958e9d406a",
+    "scripts/capabilities.py": "26299552136dce2430f7164e157de183abb779658936eed9b40089e10665df73",
+    "scripts/cli.py": "2db49f81ee149ffd4a32bf24e9ff22d54b4546ce292d1d35351c36645b2c8433",
+    "scripts/commands.py": "e45a1b219ee78d7bdd73bbab831de3de99ed4464651bb08d8298e8c840c5e649",
+    "scripts/desktop.lock.json": "6442756305dd763889e7130a43b324053cbd2dc1239f3c3ee622ac547e8b0d5a",
+    "scripts/desktop.py": "d8b7e7b9a8aaccbadcb8b01dd61e5201f05a9be70bb93bf1bab60556fb0232e9",
+    "scripts/desktop_session.py": "539fe3fcac12e6d9da288273b0765e92eb93d52606c299ae553263b2b82a56ae",
+    "scripts/exchange_loss.py": "374d7869082055a45d4c3eb60185dd97416b2b2428ddd562be5b062c0ced9bee",
+    "scripts/execution_permissions.py": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6",
+    "scripts/mcp_session.py": "d5d21de30f0b000fbe971e4d20d158890f3ea4beb8c39e80c78e04665a232f00",
+    "scripts/native_workflow.py": "95c97a398bbff07e8197d28ceeb7de34218d9e83426a05b0a129cf2ddbdc9855",
+    "scripts/output_guard.py": "7ebdea742931e6af14061a3c8b1349b18ca670bfd931d0943f7368bb4018687e",
+    "scripts/png_inspection.py": "0e3c50907c66c6dcc45256d045920da346ad77892e47401de3103c8f6232938d",
+    "scripts/preserved_stage.py": "e1066a0c1437327f0d7dabc2f0c0902698ecc6014a4a275d36e538c506b98c59",
+    "scripts/runtime.lock.json": "f01e568516ca76e1843c784b7aaa646b67d1e00715e66bd3e998f2a77512b11d",
+    "scripts/sequence_assets.py": "e9669276f0e98b178cc0c5e3788c3b114091c1054c5bd298c6c7c16fd45e708e",
+    "scripts/workflow.py": "b1ec238f50c3b4e6213c74df0893fb0d37a8e2f0de232b685818502fa950f14c"
+  },
+  "inputSpeechSha256": "f1e7ac960c5d42db99fa8913061dc7dd0a6aa8c6644f265584b973b3713ef03c",
+  "sourceProjectSha256": "4d9a6c24ece8520ccebaec72501bb5cc1ab5aa68ee39fd62d24a30c80177e320",
+  "sourcePreserved": true,
+  "audioVideoPreserved": true,
+  "workflowAsr": {
+    "modelsDirCorrect": true,
+    "environmentOverrideUnused": true,
+    "wordCount": 28,
+    "sourcePreserved": true,
+    "audioVideoPreserved": true,
+    "files": {
+      "project.fcproj": "04603838a5dc8ee96228233f49cadacb82881d4cc66aaf0be1ac3dbf33588325",
+      "captions.srt": "f85c702e1917ccab5a264dddebf4dc7d2c77513bb77a9ba7801bdffc16e6aae9",
+      "film.mp4": "c9a69c6e1031987831a4b5dd1bad6b6eb60a323bfa7014a551062bf2c3d69461"
+    }
+  },
+  "wordCount": 28,
+  "recognizedText": "Welcome to our Creative Studio! Today we are making a short film with Clear Sound and Simple Captions, save the project and keep every scene ready for editing.",
+  "referenceWordCoverage": 1.0,
+  "modelFiles": {
+    "config.json": "ffdccec4f3211f4c63310f2b7098f309fe70f3952cedc5e4d11e43f5b2379b98",
+    "generation_config.json": "a5d5325911f16e74001a72fa13d6e208eee51548f994646de1f4b4cc8b35b512",
+    "tokenizer.json": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566",
+    "model.safetensors": "7ebd0e69e78190ffe1438491fa05cc1f5c1aa3a4c4db3bc1723adbb551ea2395"
+  },
+  "outputSha256": {
+    "recognized.fcproj": "0f3ae9c9094f65adb201f49a0376e1f3670a947fac495094f83974820fafb633",
+    "captioned.fcproj": "1769b2cb9186061c6c1d1612fda08d52fc7a27608185c8d8369030c5a75298b1",
+    "recognized.srt": "9107116afdd33783a11e24d785483e106541e8d9f5cee864c4cd642fbc0105c6"
+  },
+  "calls": [
+    {
+      "operation": "exec",
+      "exitCode": 0,
+      "logSha256": "506b8e1dee0b217e499dd7672537664ff5c5483909387e16693f7ffb5e93daf0"
+    },
+    {
+      "operation": "exec",
+      "exitCode": 0,
+      "logSha256": "ae42964617cb1be225f86a4c177578c1ccf35cbf9a429eddd741e15881fcbe8b"
+    },
+    {
+      "operation": "exec",
+      "exitCode": 0,
+      "logSha256": "ae42964617cb1be225f86a4c177578c1ccf35cbf9a429eddd741e15881fcbe8b"
+    },
+    {
+      "operation": "inspect",
+      "exitCode": 0,
+      "logSha256": "1bdc9a3f150c4630cc84fc91c0849d1f6ba9ecb6f3bf27312e1e75c03bc7eb61"
+    },
+    {
+      "operation": "exec",
+      "exitCode": 0,
+      "logSha256": "268e18a95e3a8f2ac970003fd431f5bb9fc48a50f534700d34a5879fd9ec519e"
+    },
+    {
+      "operation": "exec",
+      "exitCode": 0,
+      "logSha256": "42537d721c93f945cadc00ec0cc5261ac109fc4cca5f133370c004c28130e2b5"
+    },
+    {
+      "operation": "exec",
+      "exitCode": 0,
+      "logSha256": "6bbd22e3bd5c11c4f5aeb11f7ba89e1bee4597324578cbc66a1311ce0a05611b"
+    },
+    {
+      "operation": "inspect",
+      "exitCode": 0,
+      "logSha256": "1df57c9d28431db4c0a0c4c0c56daf61ddee0386d6e8e0d72908004c102431ba"
+    },
+    {
+      "operation": "exec",
+      "exitCode": 0,
+      "logSha256": "492ae6666d8cbe7aff22dc05f3b4171a2632696d8c56eb2750352aae5ff0be46"
+    }
+  ],
+  "scope": "Actual speech recognition, native reopening and SRT in one isolated skill; fixed plugin/Art and general creative quality remain separate."
+}

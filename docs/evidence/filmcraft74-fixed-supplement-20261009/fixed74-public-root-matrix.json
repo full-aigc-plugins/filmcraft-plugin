@@ -1,0 +1,219 @@
+{
+  "schema": "filmcraft-fixed-public-root-matrix/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.74",
+  "sourceRef": "v0.1.0-dev.57",
+  "cases": [
+    {
+      "skill": "filmcraft-cli",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "valid",
+      "result": "PASS",
+      "nativeExit": 0,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "outside-save",
+      "result": "PASS",
+      "nativeExit": 1,
+      "inputPreserved": true,
+      "outsideNotCreated": true
+    }
+  ],
+  "scope": "all13 installed skill copies, actual public workflow native permission boundaries; generic security fixture only, not per-skill business/routing or full permissions acceptance",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "businessTask9_9": "NOT_RUN"
+}

@@ -1,0 +1,126 @@
+{
+  "schema": "filmcraft-fixed-supplement/v1",
+  "result": "PARTIAL",
+  "pluginRef": "v0.1.0-dev.74",
+  "pluginCommit": "a4a55273a82ef11adb2e663970fadd8233719e26",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "platform": "darwin-arm64",
+  "host": "isolated Codex0.147.0",
+  "hostReceiptSha256": "186a593dc44a201b35b51bf499b9214bed85e7dd02d4a8131dd059099338c23d",
+  "frozenFilesPreserved": 1804,
+  "installedFileInventorySha256": "b0047146a37469ef222bbe6121c8a86a5c655559d6e1e1154af49d05f8d81407",
+  "nativeRegression": {
+    "pass": 185,
+    "skip": 0,
+    "fail": 0,
+    "logSha256": "f667ee76a6d137235ec888b19de587d4b3d772357ab94c01f6b47e9ffa241bce"
+  },
+  "independentSkillBusinesses": {
+    "pass": 13,
+    "hostModelIntentRouting": "NOT_RUN",
+    "logSha256": "883261d9cbcc6e2b5dcb8adace50657372c0433e2070a90543570f12e6e15057"
+  },
+  "admission": {
+    "originalPublishedVerifier": "FAIL",
+    "correctedExternalDriver": "PASS",
+    "actualNativeCases": 7,
+    "driverSha256": "63e49982ffd4d256e8c160830d4b7ce9de2db8999a0e58b7c8774767b3018441",
+    "driverUses": "unchanged fixed74 installed modules, CLI and skills; external corrected QA driver, not a repaired published verifier"
+  },
+  "evidence": {
+    "fixed74-parameters-v2": {
+      "originalReportSha256": "1721ecfa6e98d87e767c5bc9c2b914bede534fb5c26843484deee26290304858",
+      "publicReportSha256": "1721ecfa6e98d87e767c5bc9c2b914bede534fb5c26843484deee26290304858"
+    },
+    "fixed74-late-parameter-reference": {
+      "originalReportSha256": "fd937edb9dc3d8d3ee05f7493b8a4d3e7efd2b32f5bb66f6a9ab960f7b2c8a26",
+      "publicReportSha256": "fd937edb9dc3d8d3ee05f7493b8a4d3e7efd2b32f5bb66f6a9ab960f7b2c8a26"
+    },
+    "fixed74-public-root-matrix": {
+      "originalReportSha256": "0c91a9563c5df0a414b3a2ff9cec90d8326ea025b52c5f3f44e8585b451ad99a",
+      "publicReportSha256": "0c91a9563c5df0a414b3a2ff9cec90d8326ea025b52c5f3f44e8585b451ad99a"
+    },
+    "fixed74-environment": {
+      "originalReportSha256": "e95c89905b788cb3d4afe417b5438b64ee6d7083165d0e34940349096f94d2ea",
+      "publicReportSha256": "e95c89905b788cb3d4afe417b5438b64ee6d7083165d0e34940349096f94d2ea"
+    },
+    "fixed74-native-environment": {
+      "originalReportSha256": "f524b1798c1995b94ef3d95f35e63259928ac2037c03fa90cbfaafdeea7a5c2e",
+      "publicReportSha256": "f524b1798c1995b94ef3d95f35e63259928ac2037c03fa90cbfaafdeea7a5c2e"
+    },
+    "fixed74-desktop-environment": {
+      "originalReportSha256": "128329cec5f1452a14f9a6af9dde4706db0a341ee51536a74d381f959c8cabaa",
+      "publicReportSha256": "128329cec5f1452a14f9a6af9dde4706db0a341ee51536a74d381f959c8cabaa"
+    },
+    "maintenance-roots-fixed74": {
+      "originalReportSha256": "c60d9a58d1ed14d0bf1226482b9202ed52a89f64395459d220f2272d098ad9f5",
+      "publicReportSha256": "c60d9a58d1ed14d0bf1226482b9202ed52a89f64395459d220f2272d098ad9f5"
+    },
+    "fixed74-readonly-models": {
+      "originalReportSha256": "aed9b3b77489e4beb171056251eb4a66b88784c52dc8325c3ba45f391a0f6a00",
+      "publicReportSha256": "aed9b3b77489e4beb171056251eb4a66b88784c52dc8325c3ba45f391a0f6a00"
+    },
+    "fixed74-plan-fields": {
+      "originalReportSha256": "ae4e00182fcde407f23a03b631c354cc8fdad8e4b40c1d4b7010762d03b7b84b",
+      "publicReportSha256": "ae4e00182fcde407f23a03b631c354cc8fdad8e4b40c1d4b7010762d03b7b84b"
+    },
+    "fixed74-parameter-fields": {
+      "originalReportSha256": "c2f63f092d8ea0a0a9d20fb3465692b218734eaa2c2910b2721cc1e3b66cfda4",
+      "publicReportSha256": "c2f63f092d8ea0a0a9d20fb3465692b218734eaa2c2910b2721cc1e3b66cfda4"
+    },
+    "fixed74-raw-cli": {
+      "originalReportSha256": "227b1ddac947dd4702fb041c2159edaa93a9303169ad032e5289c071a37ccd4a",
+      "publicReportSha256": "227b1ddac947dd4702fb041c2159edaa93a9303169ad032e5289c071a37ccd4a"
+    },
+    "fixed74-admission-root-policy": {
+      "originalReportSha256": "11abeddd8bfc44c160e2fab3cde737948259336efc9c8c7927b38bbb24140666",
+      "publicReportSha256": "11abeddd8bfc44c160e2fab3cde737948259336efc9c8c7927b38bbb24140666"
+    },
+    "fixed74-exact-root-admission": {
+      "originalReportSha256": "9b23109c09d4b6a64636cb1347bf9a6f6b1f8b647d5315ff110d9f9577618077",
+      "publicReportSha256": "9b23109c09d4b6a64636cb1347bf9a6f6b1f8b647d5315ff110d9f9577618077"
+    },
+    "fixed74-protected-writes": {
+      "originalReportSha256": "3edb02f13dfb7db39b506b7151a47a72f8f96b38126c660b5d7d1657450134f2",
+      "publicReportSha256": "656692400ba2b6bf3fea0b4f3ff0ee1b15308d2622785c63dcf011f8ee3532b1"
+    }
+  },
+  "coldModel": {
+    "initialAttempt": "FAIL_ENOSPC",
+    "freshRetry": "PASS",
+    "elapsedSeconds": 46.713,
+    "wordCount": 28,
+    "sourcePreserved": true,
+    "audioVideoPreserved": true,
+    "originalReportSha256": "af2d0cfb06dd51942ad980281ee3ca1f6aa4fd5653615e37a2bd9c6a3cbdc9e7",
+    "originalLogSha256": "d485061c9b46af31c95caacafdb8c9e953683a8683fb373ecad6ab787cbf19cf"
+  },
+  "limits": [
+    "8658 parameter checks are installed Python preflight, not native execution of all666 commands",
+    "maintenance report retains historical candidate layer label; external driver imports fixed74 installed modules",
+    "signed desktop model discovery passes but speech capability is unavailable; no GUI inference claimed",
+    "full host intent routing, all command contexts and complete permissions qualification remain unproven"
+  ],
+  "fullV1": "NOT_PROVEN",
+  "remainingTasks": 8,
+  "driversSha256": {
+    "verify-fixed74-parameters-v2.py": "2635f0f46ac63f710393117f90f02ed7c7232bfd7499fe165efd48be0e0a66ff",
+    "verify-fixed74-late-parameter-reference.py": "398247284696191294481a9e0c58671981263c7ea86d42ad57ff9263bd0b4ff8",
+    "verify-fixed74-public-roots.py": "2041755d71e72d4c143277cc22658f215b888e9175989b8712e3684fec8d458f",
+    "verify-fixed74-environment.mjs": "029c0f8dee983d00ea04c0cb2a9050c223676914e2f244e7def09cb63e172dbd",
+    "verify-fixed74-native-environment.py": "70231c2234cb9f16728d4f1041f9a61a78e1e9c2c0e82da387a878607fd0c4a1",
+    "verify-fixed74-desktop-environment.py": "4c231e093f344ca58452bc5f885355e7a2085eaf4535b201beb98e8bbb1695f9",
+    "verify-maintenance-fixed74.mjs": "c75a50fd590b6d7d5bd80e861a28c4bb125f89c239f6908dba22e319d0029953",
+    "verify-fixed74-models.py": "f42eb6d2a205ac61efe9b026041b4b7f40e46d96bd0494c0e7a53cf714480316",
+    "verify-fixed74-plan-fields.py": "9b86019e0ca06a0739e29e9e5fcd00ac4b0cf4e65fdd4837e0851182ffba431c",
+    "verify-fixed74-parameter-fields.py": "8315313094bf5b2b83f0baebea99599f80fba3c95bae05e3d65b54f41f547747",
+    "verify-fixed74-raw-cli.py": "0840e5ff73f5036494eb882d8b890c75bb60d95d0f713f24293bcf1e4306b105",
+    "verify-fixed74-admission-root-policy.ts": "63e49982ffd4d256e8c160830d4b7ce9de2db8999a0e58b7c8774767b3018441",
+    "verify-fixed74-exact-root-admission.mjs": "e1e91af3dc44c7dcaf23430a0446101c63a1f43188aa4d7b81b76c16cad727f7",
+    "source57/tests/test_native_asr_first_use.py": "e0607e56e1d9732470ffc5b47d15920eee9cf81c7ac2c703dae25ac30b2a169c",
+    "source57/tests/test_task_skill_first_use.py": "451bbd00c3bf4d64ce52719ba7ac667e600695d9a23615f3a55660e4eeb0f8b1",
+    "verify-fixed74-protected-writes.py": "49f3ad4b42d6770ef43ca6eebc2ae160bffb9bcc46fb24523a0f9513922c5f20"
+  },
+  "permissionScenarioAudit": "permission-scenarios.json"
+}

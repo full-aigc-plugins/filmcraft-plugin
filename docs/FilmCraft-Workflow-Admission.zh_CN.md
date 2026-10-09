@@ -1,5 +1,7 @@
 # 首次工作流的宿主授权准入
 
+当前验收器把私有测试目录作为调用方独立声明的读写根，传入预检、精确授权主体及公开CLI；主题计算也应提供 `--permissions FILE`。已发布dev.74验收器缺少该策略，实际报错 `execution_permissions_required`，原失败保留。修正后的外部QA驱动在未修改的dev.74安装模块上通过七项真实原生场景；另一个原生用例确认扩大根后在登记前拒绝，恢复原根后授权可正常交付。这不修复已发布验收器，也不代表完整FC-RL-002通过。[版本绑定证据](evidence/filmcraft74-fixed-supplement-20261009/report.json)。
+
 `src/cli/workflow.ts` 与 `WorkflowAdmission` 是 Harness 首次执行入口。`PythonWorkflowRunner` 保留内部适配职责；独立技能、恢复、继续和受限修订仍保留各自合同，不把它们冒充已通过本入口的宿主请求。
 
 ```mermaid
@@ -17,7 +19,7 @@ flowchart TD
     N -->|结果未知| U[保留占用 禁止重放]
 ```
 
-`subject --binding FILE --resources FILE` 仅输出授权主体，不创建授权。`run` 必须另外指定 `--plan`、`--ledger`、`--blobs`、`--authorization-root`、`--runtime-home` 与 `--resources`；可指定 `--source` 和 `--python`。预算 JSON 使用既有 `limits`／`allocation` 结构，不能在授权后替换预算。
+`subject --binding FILE --resources FILE --permissions FILE` 仅输出授权主体，不创建授权。`run` 必须另外指定 `--plan`、`--ledger`、`--blobs`、`--authorization-root`、`--runtime-home` 与 `--resources`；可指定 `--source` 和 `--python`。独立可信读写根与既有 `limits`／`allocation` 预算结构均绑定授权，不能在授权后替换。
 
 授权由宿主预先维护的私有 `filmcraft-local-authorization/v1` 记录或可信查询器提供。主体覆盖完整任务（计划/素材/原工程版本/固定来源/实际运行时/输出/截止时间/授权范围）与资源预算，输出路径规范化。原计划中的 `authorizationRef` 仅是引用；不创建授权、不接受素材元数据授予权限。查询器接收不可变授权请求和主体，执行使用独立任务及预算快照。
 

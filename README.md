@@ -1,5 +1,9 @@
 # FilmCraft Agent Plugin
 
+dev.75 retains published source57 and repairs the admission QA driver to bind independent trusted roots into preparation, exact grants and public execution. The dev.74 published failure remains unchanged; corrected external fixed74 native admission, protected-cache refusal and fresh cold-model ASR evidence are recorded separately. Eight full-V1 tasks remain open; fixed75 installation verification is pending.
+
+Fixed dev.74 supplemental evidence:185 installed native regressions and13 independent skill businesses pass; all1804 frozen files remain unchanged. Parameter, root and actual child-environment probes are recorded separately. The published admission verifier fails because it omits the trusted root policy; the corrected external driver passes seven native cases against the unchanged installation. Cold-model ENOSPC and the initial project-name fixture failure are retained; a fresh cold-download retry passes28-word ASR, reopen, SRT and workflow caption revision. Full qualification and all eight remaining tasks stay open. [Supplement](docs/evidence/filmcraft74-fixed-supplement-20261009/report.json).
+
 dev.74 pins published source57, sharing fixed native top-level parameter validation across complete-command, domain native.command and legacy exec. Undefined fields refuse before inputs, installation and output without echoing names/values; aliases, unions and whole-object references remain supported.241 source tests,39 public entry refusals,39 native root cases and thirteen real candidate business tasks pass. Fixed73 has185 installed native passes and all1793 frozen files preserved, but its original undefined-parameter red remains. Fixed74 and full permissions, command contexts and host intent routing remain open; eight V1 tasks are unchecked. [Evidence](docs/evidence/filmcraft-native-parameter-fields-20261009/report.json).
 
 dev.73 pins published source56, enforcing trusted roots and filtered child environments at the legacy raw CLI. Model download has a separate validated maintenance mode with data-directory-only writes and outbound-only network permission. Three target reds become six passes;39 actual raw entry cases, cold model download/28-word recognition/reopen/SRT and thirteen independently copied candidate skill tasks pass. Fixed72 evidence remains version-bound, including185 installed native tests and all1775 frozen files preserved. Full host intent routing, permission/command qualification and eight V1 tasks remain open; fixed73 qualification is NOT_RUN. [Evidence](docs/evidence/filmcraft56-raw-launcher-candidate-20261009/report.json).
@@ -67,7 +71,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.74` / `filmcraft-skills@v0.1.0-dev.57`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.75` / `filmcraft-skills@v0.1.0-dev.57`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -91,7 +95,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.74`; skill source: `0.1.0-dev.57`; 13 independent skills.
+Current plugin: `0.1.0-dev.75`; skill source: `0.1.0-dev.57`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -195,7 +199,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.74 |
+| Metadata version | 0.1.0-dev.75 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.57 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |

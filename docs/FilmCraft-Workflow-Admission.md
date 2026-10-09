@@ -17,7 +17,9 @@ flowchart TD
     N -->|Unknown| U[Keep occupancy and prohibit replay]
 ```
 
-`subject --binding FILE --resources FILE` reads an exact subject without creating a grant. `run` additionally requires `--plan`, `--ledger`, `--blobs`, `--authorization-root`, `--runtime-home` and `--resources`; optional `--source` and `--python` preserve existing adapter semantics. Resources use the existing `limits`/`allocation` contract and are bound to authorization.
+`subject --binding FILE --resources FILE --permissions FILE` reads an exact subject without creating a grant. `run` additionally requires `--plan`, `--ledger`, `--blobs`, `--authorization-root`, `--runtime-home` and `--resources`; optional `--source` and `--python` preserve existing adapter semantics. Independently supplied canonical read/write roots and the existing `limits`/`allocation` resource policy are bound to authorization.
+
+The current verifier supplies its private test directory as independent read/write roots to preparation, exact grants and public CLI execution. The immutable dev.74 verifier omitted this policy and fails with `execution_permissions_required`. Its failure remains recorded. A corrected external QA driver passes seven actual-native cases against unchanged dev.74 installed modules; a separate native case refuses expanded roots before registration and succeeds with the original grant. This does not repair the published verifier or qualify full FC-RL-002. [Version-bound evidence](evidence/filmcraft74-fixed-supplement-20261009/report.json).
 
 A trusted host query or private `filmcraft-local-authorization/v1` grant supplies authority. The subject binds the complete task, canonical output, source revision/tree, input/project/plan/runtime identities, deadline, authorization scope and resource policy. References inside a plan never grant permission. Immutable authorization requests and independent task/resource snapshots prevent caller mutation from changing the approved execution.
 

@@ -1,0 +1,21 @@
+{
+  "schema": "filmcraft-owned-native-environment/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.74",
+  "sourceRef": "v0.1.0-dev.57",
+  "parentCanaryPositiveControl": true,
+  "nativeObservedByOwnedParentPid": true,
+  "nativeToolsResponded": true,
+  "nativeProcessStopped": true,
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "runtimePreserved": true,
+  "nativeEnvironment": {
+    "canaryPresent": false,
+    "proxyPresent": false,
+    "pythonInjectionPresent": false,
+    "nodeInjectionPresent": false,
+    "explicitModelDirectoryPresent": true
+  },
+  "rawEnvironmentRecorded": false,
+  "fullFC_RL_002": "NOT_PROVEN"
+}

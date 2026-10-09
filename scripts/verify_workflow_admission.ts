@@ -21,7 +21,10 @@ const skillBefore = fingerprintSkill(skill), version = JSON.parse(readFileSync(j
 const resources = { limits: { timeMs: 600_000, diskBytes: 128_000_000, outputBytes: 128_000_000, slots: 2, revisions: 2 },
   allocation: { timeMs: 120_000, diskBytes: 64_000_000, outputBytes: 64_000_000, slots: 1, revisions: 0 } };
 const resourcesFile = join(root, 'resources.json'); writeFileSync(resourcesFile, JSON.stringify(resources));
-const options = { resources, python: values.python, skillDirectory: skill, sourceRevision: sourceSha,
+// 测试授权根由验收调用方独立声明；计划、素材和既有 grant 均不能扩大此范围。
+const permissions = { schema: 'filmcraft-execution-permissions/v1' as const, readRoots: [root], writeRoots: [root] };
+const permissionsFile = join(root, 'permissions.json'); writeFileSync(permissionsFile, JSON.stringify(permissions));
+const options = { resources, permissions, python: values.python, skillDirectory: skill, sourceRevision: sourceSha,
   runtimeHome: join(root, 'fresh-runtime'), pluginVersion: version };
 const image = join(root, 'still.png');
 assert.equal(spawnSync(values.python, ['-c', 'from PIL import Image; import sys; Image.new("RGBA",(32,32),(239,91,54,255)).save(sys.argv[1])', image]).status, 0);
@@ -44,14 +47,15 @@ function binding(id: string, prepared: ReturnType<PythonWorkflowRunner['prepare'
     inputRefs: Object.entries(prepared.inputHashes).map(([assetId, digest]) => ({ assetId, version: 'synthetic-v1', sha256: digest as string })),
     projectRevision: prepared.projectRevision, projectKey: prepared.projectKey, outputRoot: prepared.outputRoot,
     sourceRevision: sourceSha, sourceTreeSha256: prepared.sourceTreeSha256, runtimeIdentity: prepared.runtimeIdentity,
+    executionPermissionsSha256: sha256(stableJson(permissions)),
     authorizationRef: grant.authorizationRef, authorizationScopeSha256: grant.authorizationScopeSha256,
     deadline: Date.now() + 600_000 };
 }
-function permit(task: ReturnType<typeof binding>) { grant.subjects.push(sha256(stableJson(executionSubject(task, resources)))); writeGrant(); }
+function permit(task: ReturnType<typeof binding>) { grant.subjects.push(sha256(stableJson(executionSubject(task, resources, permissions)))); writeGrant(); }
 function cli(task: ReturnType<typeof binding>) {
   const file = join(root, task.taskId + '.binding.json'); writeFileSync(file, JSON.stringify(task));
   return spawnSync(process.execPath, [join(plugin, 'src/cli/workflow.ts'), 'run', '--binding', file,
-    '--plan', planFile, '--resources', resourcesFile, '--ledger', ledger, '--blobs', blobs, '--authorization-root', grants,
+    '--plan', planFile, '--resources', resourcesFile, '--permissions', permissionsFile, '--ledger', ledger, '--blobs', blobs, '--authorization-root', grants,
     '--runtime-home', options.runtimeHome, '--python', values.python!], { encoding: 'utf8', timeout: 180_000 });
 }
 try {
@@ -114,6 +118,7 @@ try {
     platform: process.platform + '-' + process.arch, nodeVersion: process.version, cases,
     planSha256: sha256(readFileSync(planFile)), inputSha256: sha256(readFileSync(image)),
     installedSkillPreserved: true, authorization: 'private host LocalAuthorizationStore; explicit exact subjects; no production grants',
+    executionPermissionsSha256: sha256(stableJson(permissions)),
     scope: 'initial execution admission and bounded native revision/refusal; full TX-001/other routes/platforms/V1 remain unqualified',
     fullV1: 'NOT_PROVEN', technicalAcceptance: 'NOT_RUN', creativeAcceptance: 'NOT_RUN', userAcceptance: 'NOT_RUN' };
   writeFileSync(join(root, 'report.json'), JSON.stringify(report, null, 2) + '\n');

@@ -1,0 +1,256 @@
+{
+  "schema": "filmcraft-fixed-domain-task-session/v1",
+  "result": "PASS",
+  "pluginVersion": "0.1.0-dev.80",
+  "driverSha256": "e6cc3e47183f771aa9924a5210d39cf40df8e98a81ed45565bcdf4c4a5e30a96",
+  "taskScriptSha256": "01fdb71b8ed002caf7e0d1a7b50070134d284ea672e900f01c785630e76bf9bb",
+  "workflowScriptSha256": "66fd9e2beaaf620977a29c72193661ffdbdc728bcb83cbd9b569f8f8139bc767",
+  "session": {
+    "schema": "filmcraft-task-session/v1",
+    "mode": "headless",
+    "identityBindingSha256": "5c998e0731cb08b58d533b14f42403557a3079b7470ca8e715866e6cffba7849",
+    "sessionsStarted": 1,
+    "pids": [
+      [
+        69868
+      ],
+      [
+        69868
+      ],
+      [
+        69868
+      ],
+      [
+        69868
+      ],
+      [
+        69868
+      ],
+      [
+        69868
+      ]
+    ],
+    "singleProcessIdentity": true,
+    "plans": [
+      {
+        "name": "before",
+        "result": "PASS",
+        "planSha256": "e294caf35210c6e56209a173e5f79b1a532db2e605c74553f90fd2247c06db32"
+      },
+      {
+        "name": "scopes",
+        "kind": "workflow",
+        "result": "PASS"
+      },
+      {
+        "name": "av",
+        "kind": "workflow",
+        "result": "PASS"
+      },
+      {
+        "name": "revision",
+        "kind": "workflow",
+        "result": "PASS"
+      },
+      {
+        "name": "after",
+        "result": "PASS",
+        "planSha256": "e294caf35210c6e56209a173e5f79b1a532db2e605c74553f90fd2247c06db32"
+      },
+      {
+        "name": "expected_refusal",
+        "result": "FAIL",
+        "planSha256": "fcc8e19e7861205d96b6144755abf81dd2fbd0dcc065ebd7dc64a64261d3e194"
+      }
+    ],
+    "stopped": true,
+    "closed": true,
+    "ownedProcessesStopped": true
+  },
+  "processes": [
+    {
+      "stage": "scopes",
+      "schema": "filmcraft-workflow-processes/v1",
+      "editorPid": 69868,
+      "borrowedTaskSession": true,
+      "editorRestartsForDelivery": 0,
+      "mediaHelperCalls": [
+        {
+          "subcommand": "probe",
+          "kind": "media-only",
+          "completed": true
+        },
+        {
+          "subcommand": "probe",
+          "kind": "media-only",
+          "completed": true
+        },
+        {
+          "subcommand": "bench-decode",
+          "kind": "media-only",
+          "completed": true
+        }
+      ]
+    },
+    {
+      "stage": "av",
+      "schema": "filmcraft-workflow-processes/v1",
+      "editorPid": 69868,
+      "borrowedTaskSession": true,
+      "editorRestartsForDelivery": 0,
+      "mediaHelperCalls": [
+        {
+          "subcommand": "probe",
+          "kind": "media-only",
+          "completed": true
+        },
+        {
+          "subcommand": "probe",
+          "kind": "media-only",
+          "completed": true
+        },
+        {
+          "subcommand": "probe",
+          "kind": "media-only",
+          "completed": true
+        },
+        {
+          "subcommand": "bench-decode",
+          "kind": "media-only",
+          "completed": true
+        }
+      ]
+    },
+    {
+      "stage": "revision",
+      "schema": "filmcraft-workflow-processes/v1",
+      "editorPid": 69868,
+      "borrowedTaskSession": true,
+      "editorRestartsForDelivery": 0,
+      "mediaHelperCalls": [
+        {
+          "subcommand": "probe",
+          "kind": "media-only",
+          "completed": true
+        },
+        {
+          "subcommand": "bench-decode",
+          "kind": "media-only",
+          "completed": true
+        }
+      ]
+    }
+  ],
+  "deliveries": [
+    {
+      "stage": "scopes",
+      "files": 15,
+      "manifestSha256": "dafd4f8a9a62b25b87a50b1221ec2eea6e6b2051d7e61c91272e8a0c73c5b02f",
+      "projectSha256": "d24a0239153cee4a0790813df35a162910802b7db74f5461e7b5c6d9baaa5cd9"
+    },
+    {
+      "stage": "av",
+      "files": 17,
+      "manifestSha256": "07529b989191b1eb1155f3d3599997cd2322d222fc0de9912b35ac1ec47cfc70",
+      "projectSha256": "79cf197abc1694298b1a99a82a3eb49bfdd15eb042a8f762bb60f1ba6b0d712f"
+    },
+    {
+      "stage": "revision",
+      "files": 17,
+      "manifestSha256": "6677fc6162e42c71f42734a071b847e3b12b0f26d871d4f1dbe1ae6c8775df51",
+      "projectSha256": "340ecb0cae91c95599c076235c7f30f4f86dbe8f0bb8e4deb4ef5fbada34d6fc"
+    }
+  ],
+  "independentOutputChecks": [
+    {
+      "stage": "scopes",
+      "videoFrames": 216,
+      "rate": "24/1",
+      "videoSha256": "d338274c778ccbfaab14f71cb655e37d269151a356326f0e4fc7ec9a0975386d",
+      "exactScopeRgbaPixels": 2048
+    },
+    {
+      "stage": "av",
+      "videoFrames": 24,
+      "rate": "12/1",
+      "videoSha256": "0a881635db0d4db7457437c21c0e50ba3240a6e2576abee44969cb964d7cc3c4",
+      "audioOnsetSeconds": 0.5,
+      "earlySilenceRms": 0.0,
+      "toneRms": 4242.183544430077,
+      "pcmSha256": "6dcc5563038eafc6cb72b23b4b9ef8a13219efc3c70673a2c68404f5de46f422",
+      "captionChangedPixels": 1476
+    },
+    {
+      "stage": "revision",
+      "videoFrames": 24,
+      "rate": "12/1",
+      "videoSha256": "0a881635db0d4db7457437c21c0e50ba3240a6e2576abee44969cb964d7cc3c4",
+      "audioOnsetSeconds": 0.5,
+      "earlySilenceRms": 0.0,
+      "toneRms": 4242.183544430077,
+      "pcmSha256": "6dcc5563038eafc6cb72b23b4b9ef8a13219efc3c70673a2c68404f5de46f422",
+      "captionChangedPixels": 1476
+    }
+  ],
+  "sourceAndFixturePreserved": true,
+  "completeRevisedSequenceEquality": true,
+  "scope": "Independent public JSONL source entry only; five healthy stages plus final native disabled refusal, one editor, source revision/caption/audio/export. Plugin Harness prepare/run/continuation ownership still requires integration; task9.39 OPEN. No GUI/full commands/V1 qualification.",
+  "installedPreservation": {
+    "files": 2020,
+    "zipSha256": "cc7c0c0e9be438c5e470abbb586c85650b60536488b83b5ea8f0a3215cf13978",
+    "allFilesByteIdentical": true
+  },
+  "pluginSha": "6d87be1abf604c58e8cab6ed515b67065985e551",
+  "sourceRef": "v0.1.0-dev.61",
+  "sourceSha": "2e78802cfde198885a584248e0def9289c555f4e",
+  "host": {
+    "version": "codex-cli 0.153.4",
+    "skills": 13,
+    "loadingErrors": 0,
+    "receiptSha256": "0b3a94656bf67f9018e5591700a4f3c8b13fa7d6e74bb07b85b34f504aab3b90"
+  },
+  "task9.39": "OPEN",
+  "openTasks": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5",
+    "7.6",
+    "8.3",
+    "9.39"
+  ],
+  "fullV1": "NOT_PROVEN",
+  "scopes": {
+    "views": 8,
+    "fullRgbHistogramBuckets": 6144,
+    "frames": [
+      204,
+      276
+    ],
+    "sourceOperationsSha256": "b903ccf718d7b7d73ab5d7f1f51bcb2071cf9cccc703870b5dded987e1714b70"
+  },
+  "pluginCi": {
+    "runId": 37883930607,
+    "revision": "6d87be1abf604c58e8cab6ed515b67065985e551",
+    "pythonPass": 123,
+    "nodeCounts": {
+      "tests": 188,
+      "pass": 185,
+      "fail": 0,
+      "skipped": 3
+    },
+    "reportSha256": "fbfb02a801023521b42588530ba2370b0fcbe5334ebd743a2f6730fdbbfef21e"
+  },
+  "sourceCi": {
+    "runId": 37883698700,
+    "counts": {
+      "tests": 309,
+      "pass": 267,
+      "fail": 0,
+      "failureEvents": 0,
+      "environmentNotRun": 42
+    },
+    "reportSha256": "ba6fb77aa573da8c2d333570d1e0bcd5b0264b639b26f5398b9a7c4d9f03659b"
+  }
+}

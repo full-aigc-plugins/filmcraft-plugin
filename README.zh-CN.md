@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定80／source61公开JSONL验收通过：五个正常阶段及最终disabled命令拒绝共用一个编辑器PID，覆盖示波器交付、字幕音画交付、源工程返工及前后查询。独立媒体helper共9次，单独计数。264帧视频、示波器PNG逐像素、字幕变化及0.5秒音频起点独立通过；原交付／夹具及2020个安装文件保全。Harness prepare／run／revision／continuation仍需共享所有者，9.39与七项完整V1门禁继续开放。[证据](docs/evidence/filmcraft80-domain-session-20261009/report.json)。
+
 dev.80锁定source61：公开JSONL／Python连续领域请求复用任务编辑器，保存重开、PNG渲染与导出不再启动额外编辑器。独立媒体probe／decode另行计数。技能源本地270通过／39环境NOT_RUN，LinuxCI267通过／42未运行。固定80验收待执行；Harness prepare／run／continuation尚待集成，9.39和七项完整V1门禁保持开放。
 
 固定79／source60完成9.38：显式2.5秒播放头、保存重开全部持久序列字段一致、8个示波器结果、2张独立解码RGBA帧与216帧H.264交付通过。13个实际安装模块拒绝65项持久字段篡改，2017个安装文件与ZIP一致。领域持续实例复用9.39和七项完整V1门禁仍开放。[证据](docs/evidence/filmcraft79-roundtrip-20261009/report.json)。

@@ -1,0 +1,15 @@
+{
+  "schema": "filmcraft-command-context-audit/v1",
+  "result": "PARTIAL",
+  "task": "8.3",
+  "evidence": [
+    "../filmcraft75-readonly-commands-20261009/report.json"
+  ],
+  "scope": "15 commands in headless and bridge,60 query calls,30 adapter parameter refusals and actual desktop contract drift refusal. Context matrices retain NOT_RUN for untested commands and dimensions. This audit does not replace historical editing evidence or prove666contexts/GUI/creative completion.",
+  "observedContractDifference": {
+    "command": "file.importImageSequence",
+    "headless": "frameRate supported by contract",
+    "bridge": "frameRate absent from signed desktop contract; request refused before first edit"
+  },
+  "remainingTasks": 7
+}

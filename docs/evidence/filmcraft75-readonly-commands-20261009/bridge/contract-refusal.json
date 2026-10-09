@@ -1,0 +1,12 @@
+{
+  "schema": "filmcraft-fixed-desktop-contract-refusal/v1",
+  "result": "PASS",
+  "expectedRefusal": "capability_contract_drift: file.importImageSequence",
+  "stepsExecuted": 0,
+  "ownedProcessesStopped": true,
+  "desktopBinarySha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa",
+  "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "receiptSha256": "3f04f905a07922026767a8c2b3148c1a2ea8d31b5e6f635c203effeb6fbc8781",
+  "driverSha256": "b0f19f479a82970f8ea585e23d8bf8e147f15a17112afd281c469bae4c980d15",
+  "scope": "Actual fixed75 owned signed desktop bridge refuses CLI-only frameRate parameter contract before first planned project mutation; no import or creative success claimed."
+}

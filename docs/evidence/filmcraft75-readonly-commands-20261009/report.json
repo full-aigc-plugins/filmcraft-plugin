@@ -1,0 +1,64 @@
+{
+  "schema": "filmcraft-readonly-command-contexts/v1",
+  "result": "PASS",
+  "driverSha256": "8de5afb2a413b9dcfe5ef89f17e7232256c815819cdca152485f2eb93351e425",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "queries": 15,
+      "nativeQueryCalls": 30,
+      "matrixSha256": "c48325a2e79bf8f8a2e197e009488bf7f259287a91eb01b5d50fbd0a577fa199",
+      "observationsSha256": "de6c51108eba204c502309865222ef9b2e39af7b1ca747ff667b4e729a861179"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "queries": 15,
+      "nativeQueryCalls": 30,
+      "matrixSha256": "56e3fd2d6cbd120964dccfa4099266d5713bdb2d790529b7230f4a137590935b",
+      "observationsSha256": "9c0629af70916b9ebb16c3e016cad62a876b407f441eff1e4cb30408627d39c1"
+    }
+  ],
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3",
+  "scope": "Fifteen read-only commands in two contexts, separate six-dimension matrices over all666rows; other commands unexecuted in this audit. No GUI gesture, visual creative quality or ASR inference claim.",
+  "pluginRef": "v0.1.0-dev.75",
+  "pluginCommit": "4acdc208736180937cf3f109ab888f5644130664",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "producerScope": "Current main QA driver; frozen release installation unchanged.",
+  "nativeQueryCalls": 60,
+  "preinstallationParameterRefusals": 30,
+  "fixtureFailures": [
+    {
+      "case": "first producer used absent version lock key",
+      "result": "FIXTURE_FAILURE",
+      "nativeEvidenceRetained": true
+    },
+    {
+      "case": "second producer used absent runtimeVersion lock key",
+      "result": "FIXTURE_FAILURE",
+      "nativeEvidenceRetained": true
+    },
+    {
+      "case": "unqualified equality assumption across desktop and CLI catalogs",
+      "result": "OBSERVED_CONTRACT_DIFFERENCE",
+      "command": "file.importImageSequence",
+      "rawReceiptSha256": "1aa162a15f9ab41dfd24d084909b6ac102ac645e4160638a904118f72309993a"
+    },
+    {
+      "case": "drift refusal driver expected lowercase failed rather than public FAIL status",
+      "result": "FIXTURE_FAILURE",
+      "rawReceiptSha256": "87402b3d14355a921d28cff699881d01e14902efb639f2a1508bc4813619a3bd"
+    }
+  ],
+  "frozenInstalledFilesPreserved": 1826,
+  "filesSha256": {
+    "bridge/contract-refusal.json": "c2b3a23de6e2f8e6a3f43494c2d656f6e50e5b8f575167a17d7e1b83105f4945",
+    "bridge/matrix.json": "56e3fd2d6cbd120964dccfa4099266d5713bdb2d790529b7230f4a137590935b",
+    "bridge/readonly-observations.json": "9c0629af70916b9ebb16c3e016cad62a876b407f441eff1e4cb30408627d39c1",
+    "headless/matrix.json": "c48325a2e79bf8f8a2e197e009488bf7f259287a91eb01b5d50fbd0a577fa199",
+    "headless/readonly-observations.json": "de6c51108eba204c502309865222ef9b2e39af7b1ca747ff667b4e729a861179"
+  }
+}

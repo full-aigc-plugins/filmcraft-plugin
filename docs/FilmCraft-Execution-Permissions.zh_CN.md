@@ -35,3 +35,5 @@ dev.74锁定已发布源57：完整命令、领域native.command与旧exec共用
 dev.76在维护候选、账本及探测回执打开前检查读取根，激活／回滚在解析回执及授权前检查账本写入根；只读主题／探测保持可用。固定75真实修改只读账本的行为红灯已复现，候选拒绝且保全账本，正常原生维护仍通过。13项目标测试通过；固定76及完整权限验收仍开放。见[证据](evidence/maintenance-path-roots-candidate-20261009/report.json)。
 
 固定76的MAINTENANCE-ROOTS通过：安装副本13目标测试、真实公开原生探测／切换、根扩张／撤销拒绝、只读账本激活拒绝及七项公开路径守卫。1853个安装／ZIP文件全部匹配固定标签。本证据采用独立TMPDIR，默认临时目录SQLite I/O失败保留且原因未定；完整权限及剩余七项任务保持开放。见[固定证据](evidence/filmcraft76-maintenance-fixed-20261009/report.json)。
+
+固定76最新补证：13技能共494项公开读取根／平台拒绝通过（390项实际macOS入口，104项Linux／Windows分支模拟，不代表目标系统运行）。默认临时目录重新执行13项目标测试及真实原生只读账本／精确授权激活均通过，未修改产品代码；旧SQLite I/O失败保留，根因仍未知。1853个安装文件再次与发布ZIP逐字节一致，完整V1剩余七项任务仍开放。 [Evidence](evidence/filmcraft76-read-boundaries-20261009/report.json).

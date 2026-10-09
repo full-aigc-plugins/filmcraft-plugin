@@ -1,6 +1,6 @@
 # FilmCraft Skill Suite Architecture
 
-> Updated: 2026-10-09. Current release dev.76 retains source dev.57/native CLI0.2.0-craft.5 and13 skills. Routing evidence remains fixed75-bound; fixed76 maintenance root qualification requires the stated owned temporary environment. Older dev.6 checkpoints retain their identities and do not qualify full permissions, all command contexts or host release acceptance.
+> Updated: 2026-10-09. Current release dev.76 retains source dev.57/native CLI0.2.0-craft.5 and13 skills. Routing evidence remains fixed75-bound; fixed76 maintenance roots pass owned and fresh default temporary environments; original SQLite I/O failure is retained without a root-cause claim. Public read-root refusals add390 actual macOS cases and104 platform branch simulations. Older dev.6 checkpoints retain their identities and do not qualify full permissions, all command contexts or host release acceptance.
 
 ## 1. Why a suite
 

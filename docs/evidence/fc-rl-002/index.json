@@ -46,9 +46,10 @@
         "../filmcraft74-fixed-supplement-20261009/fixed74-public-root-matrix.json",
         "../filmcraft74-fixed-supplement-20261009/fixed74-exact-root-admission.json",
         "../filmcraft74-fixed-supplement-20261009/fixed74-admission-root-policy.json",
-        "../filmcraft74-fixed-supplement-20261009/fixed74-protected-writes.json"
+        "../filmcraft74-fixed-supplement-20261009/fixed74-protected-writes.json",
+        "../filmcraft76-read-boundaries-20261009/report.json"
       ],
-      "scopeOrGap": "Fixed75 builtin exact-root admission now passes7 native cases; previous fixed74 public26 and protected39 native cases reuse identical source57 bytes. Complete malformed/source read and unsupported-platform refusal coverage mapping remains pending."
+      "scopeOrGap": "Fixed76 adds390 actual macOS public pre-install refusals for outside/symlink source, plan, input/project and malformed roots, plus104 simulated unsupported-platform refusals across13 installed skills. Prior fixed74/75 native positive/protected-write evidence retains its original identity; complete current-version cross-context/native coverage mapping remains open."
     },
     {
       "id": "FC-RL-002-CHILD-ENV",
@@ -65,9 +66,10 @@
       "status": "PASS",
       "evidence": [
         "../filmcraft74-fixed-supplement-20261009/maintenance-roots-fixed74.json",
-        "../filmcraft76-maintenance-fixed-20261009/report.json"
+        "../filmcraft76-maintenance-fixed-20261009/report.json",
+        "../filmcraft76-read-boundaries-20261009/report.json"
       ],
-      "scopeOrGap": "Fixed76 actual installed public probe/activation passes exact grants, expanded-root/revoked grant refusals and original ledger preservation during probe. Actual fixed75 read-only-ledger mutation red is fixed; candidate/ledger/probe reads and activation/rollback ledger writes refuse before parsing/grant lookup.13 installed target tests pass with owned private TMPDIR; default SQLite I/O failure retained. Full permissions/secret consumer remain open."
+      "scopeOrGap": "Fixed76 actual installed public probe/activation passes exact grants, expanded-root/revoked grant refusals and original ledger preservation during probe. Actual fixed75 read-only-ledger mutation red is fixed; candidate/ledger/probe reads and activation/rollback ledger writes refuse before parsing/grant lookup.13 installed target tests pass with owned private TMPDIR; default SQLite I/O failure retained. Full permissions/secret consumer remain open. Fresh default-temp retry now also passes13 installed tests and actual native readonly-ledger/exact-grant activation without code changes; original SQLite I/O failure remains preserved, cause unknown."
     },
     {
       "id": "FC-RL-002-READONLY-MODELS",
@@ -110,7 +112,7 @@
     "sharedFileInventorySha256": "1924aba691a56bc13289b325d595cb42d45eecae4dc7682f5622f0c008895470",
     "scope": "All source57 installed skill bytes, Harness src and three execution/preflight helpers match old fixed74 evidence. Fixed75 builtin admission is separately passed; old builtin failure remains preserved."
   },
-  "currentSupplementScope": "Fixed76 maintenance only; prior fixed75/74 scenarios retain their original version-bound evidence and are not newly requalified.",
+  "currentSupplementScope": "Fixed76 maintenance and public read-root refusals; unsupported platforms are simulated branches only. Previous fixed74/75 native evidence remains version-bound.",
   "currentPluginCodeChanges": [
     "src/adapters/runtime_upgrade.ts",
     "src/cli/runtime.ts"

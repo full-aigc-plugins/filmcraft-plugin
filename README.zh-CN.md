@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+固定76最新补证：13技能共494项公开读取根／平台拒绝通过（390项实际macOS入口，104项Linux／Windows分支模拟，不代表目标系统运行）。默认临时目录重新执行13项目标测试及真实原生只读账本／精确授权激活均通过，未修改产品代码；旧SQLite I/O失败保留，根因仍未知。1853个安装文件再次与发布ZIP逐字节一致，完整V1剩余七项任务仍开放。 [Evidence](docs/evidence/filmcraft76-read-boundaries-20261009/report.json).
+
 固定76验收：实际安装13技能零加载错误；13项目标测试、真实授权原生维护及只读账本拒绝在本任务独立TMPDIR下通过。默认临时目录SQLite I/O失败保留，根因未定。安装副本及ZIP全部字节与固定标签一致；MAINTENANCE-ROOTS在所述环境通过，剩余七项完整V1任务仍开放。见[证据](docs/evidence/filmcraft76-maintenance-fixed-20261009/report.json)。
 
 dev.76补齐维护候选／账本／回执读取根，以及激活／回滚在解析及授权前的账本写入根检查。固定75真实修改只读账本的行为红灯保留；13项目标测试及候选原生正向／拒绝流程通过。源57保持不变，固定76安装验收及剩余七项完整V1任务仍开放。见[候选证据](docs/evidence/maintenance-path-roots-candidate-20261009/report.json)。

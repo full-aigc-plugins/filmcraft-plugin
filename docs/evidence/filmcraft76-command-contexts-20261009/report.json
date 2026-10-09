@@ -50,5 +50,12 @@
   "fullCommandAcceptance": "NOT_PROVEN",
   "fullV1": "NOT_PROVEN",
   "remainingTasks": 7,
-  "scope": "Current fixed installation native command state/preservation checks in headless and signed owned desktop bridge. No GUI gestures/rendering, full666contexts or creative acceptance. QA producer is on main, outside frozen ZIP."
+  "scope": "Current fixed installation native command state/preservation checks in headless and signed owned desktop bridge. No GUI gestures/rendering, full666contexts or creative acceptance. QA producer is on main, outside frozen ZIP.",
+  "privateEvidenceAvailabilityFollowup": {
+    "priorPrivateDirectories": "EXTERNALLY_REMOVED_AFTER_OBSERVATION",
+    "originalPublicRecordsPreservedAt": "9dec4367d75b840970acadd894f3d0cbf807686c",
+    "restoredFullReplay": "restored-replay.json",
+    "restoredReplaySha256": "2693a5d3366622f50ca0bd34aea026363116ff812bf8aac4d6c85d5ba07167ab",
+    "result": "PASS"
+  }
 }

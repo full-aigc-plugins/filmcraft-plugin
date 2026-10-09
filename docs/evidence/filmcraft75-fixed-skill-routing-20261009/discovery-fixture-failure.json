@@ -1,0 +1,7 @@
+{
+  "result": "FAIL",
+  "kind": "test-driver-format-assumption",
+  "driverSha256": "2451038b70d530bccea30d3f892584142c5ebecd0ca955ae84727835d18000eb",
+  "reason": "Native commands without --json emits human text; driver incorrectly attempted JSON decoding. Native command exited0.",
+  "correction": "Only commands --json is parsed as JSON; plain commands is checked for a known ID. Original driver and output root preserved."
+}

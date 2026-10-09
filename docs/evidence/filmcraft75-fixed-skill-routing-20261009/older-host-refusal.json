@@ -1,0 +1,9 @@
+{
+  "result": "ENVIRONMENT_REFUSAL",
+  "codexVersion": "0.147.0",
+  "configuredModel": "gpt-6-astra",
+  "selectionPerformed": false,
+  "reason": "model requires a newer Codex client; repeated requests stopped; no route result inferred",
+  "originalReportSha256": "84ae1711dab5dba518ebbeff85a22ebde2b99fbdaa6bd74cc70d167016c14444",
+  "originalDriverSha256": "8a2aab690877a694cc892a227a4f9a7bdbf43eddd26b7849e771c33939aea0f1"
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "filmcraft-fixed-all-markdown-resources/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.75",
+  "sourceRef": "v0.1.0-dev.57",
+  "skillCount": 13,
+  "markdownFiles": 232,
+  "localLinks": 337,
+  "cases": [
+    {
+      "skill": "filmcraft-cli",
+      "markdownFiles": 18,
+      "localLinks": 25,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "19f0d6440c7315f652709439405253e4dea21fc9b7d308f0e77139147639abf4",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "de1dacd7c09b81eb78509e1fb6b95f995a009865a640ffa4d718c29d6100210c",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "17768e1e10022f0b79b94cf65354a9195031eebd14d1f23488809a57552c0c26",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "8e6473451cb58fe3d19173ec833ef7d181a3e5798a3a2f35558ebd15e0924882",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "markdownFiles": 18,
+      "localLinks": 27,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "f414a3a7aaf1f757dfca5004e03a8aa6e20070a402b5d698265d143689501b22",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "1feb25ba034b97e411cd811d486a8ea2117ccf45fb21b3c75eca16911d50ee71",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "markdownFiles": 18,
+      "localLinks": 27,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "f8a24f8eada6d046fd0e170bb8d5e25251f04f784972e14d1baffd27ba805662",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "10c7346291601a6c4584d27e9a23135d368ccc043a6232f0584fb20748ca1016",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "markdownFiles": 17,
+      "localLinks": 24,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 51,
+      "fileTreeSha256": "9d61d2f0d6eacb5f93e484556b98dfe8da4f1b1d5d688b2141fe41bb5fda74a0",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "2d8788bb76087aa1901f7a103bffc882038446dba299ee604a34c78f78aaec27",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "392472294920314babdf52a045819105e08ea940db6a8a0b88cb41f45356b83d",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "markdownFiles": 18,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 52,
+      "fileTreeSha256": "c48c3bed6d6371c925de99b22e03b0b30c9a03b13b0dc0b3f7f3e17db7037033",
+      "status": "PASS"
+    },
+    {
+      "skill": "filmcraft-use",
+      "markdownFiles": 17,
+      "localLinks": 26,
+      "sharedResourcesVerified": 48,
+      "filesMatchPublishedSource57": 51,
+      "fileTreeSha256": "8c0eeeedb5ba102a4b77fbfaff95c73cca66e72b376b04045d52e6631c4f30fe",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Every Markdown file in all13 fixed installed skills; relative links confined to the individual skill; all bytes match published source57; deterministic shared materialization and command subset identities verified",
+  "hostRouting": "separate actual host evaluation",
+  "nativeBusinesses": "separate independent task runs"
+}

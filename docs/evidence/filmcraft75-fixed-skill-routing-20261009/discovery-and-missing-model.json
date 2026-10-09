@@ -1,0 +1,911 @@
+{
+  "schema": "filmcraft-fixed-discovery-missing-model/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.75",
+  "sourceRef": "v0.1.0-dev.57",
+  "cases": [
+    {
+      "skill": "filmcraft-cli",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "exact-metadata-0",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "8dced4cc70dac483fc5f9cc6e9f30fdb31e9222344d86c1bcbf57120eb51ad49"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "metadata-with-project-0",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "exact-metadata-1",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "79d649bf9e70f143a86b9b023c4c975426bb5b66e47af198789dfa4339c4b6fa"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "metadata-with-project-1",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "exact-metadata-2",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "ae638fc399b6d4edf37a0ce1cabb5e5c5ecf5b0262db315638bfbcf4317ee600"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "metadata-with-project-2",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "exact-metadata-3",
+      "status": "PASS",
+      "exit": 0,
+      "outputSha256": "277bc984fba45d9927711b472a2a65a75424f96a2bca987bd8e8cebf5fde6e6a"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "metadata-with-project-3",
+      "status": "PASS",
+      "error": "execution_permissions_required",
+      "runtimeCreated": false,
+      "outputSha256": "f6252e1577c237d37a19df88a8fa8583773f225ef8a0ebcecbb35b3270a3ca54"
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "actual-native-missing-model",
+      "status": "PASS",
+      "error": "capability_missing: model:whisper-tiny",
+      "nativeEditingStepsSubmitted": 0,
+      "successReceiptCreated": false,
+      "logSha256": "5d09df877c6af56c80d5e8e54bb28e172e9bf304457496281648bb5f146f34ac"
+    }
+  ],
+  "metadataNativePass": 52,
+  "metadataAppendedProjectRefusals": 52,
+  "missingModelActualNativeRefusals": 13,
+  "emptyModelDirectoryPreserved": true,
+  "modelDownloadRequested": false,
+  "fullFC_RL_002": "NOT_PROVEN"
+}

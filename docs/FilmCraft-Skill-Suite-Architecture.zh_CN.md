@@ -1,10 +1,10 @@
 # FilmCraft CLI 场景技能架构
 
-> 更新：2026-10-06。当前技能源 dev.5；插件快照 dev.6；原生运行时 0.2.0-craft.1。下文历史检查点保留原始版本；目标行为以既有 OpenSpec 变更为事实源。
+> 更新：2026-10-09。当前验收技能源dev.57、固定插件dev.75、原生CLI0.2.0-craft.5；共13技能。旧dev.6检查点保留原身份，不替代完整权限、全部命令上下文或宿主发行资格。
 
 ## 1. 为什么拆分
 
-原有单个 use 技能提供安装和原生代表流程，但触发范围过宽、场景路由不足。本次借鉴 Dreamina 的 use / CLI / setup / 任务分层，通过源码和实际运行时命令目录决定划分，不制造虚构 auth 或生成接口。本包包含 11 项技能。
+原有单个 use 技能提供安装和原生代表流程，但触发范围过宽、场景路由不足。本次借鉴 Dreamina 的 use / CLI / setup / 任务分层，通过源码和实际运行时命令目录决定划分，不制造虚构 auth 或生成接口。本包包含13项技能。
 
 ## 2. 职责与路由
 
@@ -21,6 +21,8 @@
 | `filmcraft-cli-color` | 调整镜头色彩、使用许可明确的 LUT 与颜色预设 |
 | `filmcraft-cli-motion` | 创建文字图形、效果参数与镜头关键帧 |
 | `filmcraft-cli-export` | 导出预览帧、成片、交换文件与输出验证 |
+| `filmcraft-cli-multicam` | 已同步多机位切换与主录音保全 |
+| `filmcraft-cli-transcript` | 真实语音识别或逐词文本导入与可编辑字幕 |
 
 ```mermaid
 flowchart TD
@@ -61,6 +63,27 @@ CRAFT_LIVE_SUITE=1 python3 -B -m unittest discover -s tests -p test_skill_suite.
 
 单项安装：`npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`，使用其实际绝对路径执行，不读取兄弟技能。插件固定完整技能清单的来源标签、提交和逐项摘要；旧发布标签不可变，原 use/workflow payload 保持兼容。
 
-## 当前维护版运行时安装场景复验
+## 历史dev.6维护版运行时安装场景复验
 
 插件 dev.6／技能源 dev.5 对维护版 CLI 0.2.0-craft.1 的八类工程、素材、时间线、音频、字幕、颜色、动画、导出场景全部通过，耗时 43.688 秒。每项来自实际固定安装快照，单独复制，以自己的全新缓存公开下载安装，子进程仅使用系统 PATH。基础工程由安装的 use 技能在另一个全新缓存生成，原工程保持不变。原生断言覆盖重开、轨道保全、实际音频增益、字幕时间、删除 LUT 源后像素、关键帧像素与成片／交换导出。报告绑定安装技能、测试驱动、合成输入／原工程、原生二进制及输出摘要；全部 58 个安装摘要不变。默认回归 44 项中 32 项通过、12 项门禁跳过，不能代替八项原生用例。旧 0.2.0 证据保留原版本范围。[证据](evidence/maintained-runtime-task-first-use.json)。本 QA 未改变技能字节、原生发行版或插件版本；创作、模型及实际通用安装器门禁仍未完成。
+
+
+## 固定75路由与业务验收
+
+15个独立只读临时宿主会话全部正确选择并实际读取固定技能说明；模型使用现有登录态和默认配置gpt-6-astra，不由驱动提供预期技能。使用现有客户端0.162.0-alpha.2；旧147客户端因模型要求新版本而拒绝，失败保留，不安装升级工具、不复制凭据。额外根仅本次宿主连接指向实际固定安装技能，验证源技能名称的选择；其他宿主及插件命名空间完整资格属于FC-RL-001，未据此关闭。十三独立原生业务102.290秒通过，232 Markdown／337本地链接限定在自身目录，资源与已发布源57摘要一致。只关闭9.9，余7项；详见[验收](evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json)。
+
+```mermaid
+flowchart LR
+    C[15 fixed corpus requests] --> H[Authenticated ephemeral read-only host]
+    I[13 fixed installed skill descriptions] --> H
+    H --> L[Read selected SKILL.md]
+    L --> A[Check expected and rejected skill identities]
+    B[13 isolated native business tasks] --> Q[Scenario and preservation assertions]
+    M[All skill Markdown and shared bytes] --> R[Standalone links and resource hashes]
+    A --> E[Task9.9 evidence]
+    Q --> E
+    R --> E
+    H -->|Incompatible client or failed turn| F[Preserve environment refusal; no route result]
+```
+
+可复验脚本：`scripts/verify_host_skill_routing.py --codex CLIENT --installed-plugin FIXED_ROOT --source-repository SOURCE_GIT --output NEW_PRIVATE_DIRECTORY`。语料从安装锁定的技能源Git对象读取；结果与原生业务分别记录。

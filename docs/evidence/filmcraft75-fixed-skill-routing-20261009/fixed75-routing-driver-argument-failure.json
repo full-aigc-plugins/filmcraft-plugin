@@ -1,0 +1,6 @@
+{
+  "result": "FAIL",
+  "kind": "driver-input-error",
+  "reason": "Source repository argument pointed into plugins collection; no host or model started. Corrected to the real independent skill Git root.",
+  "logSha256": "7d4675f6a9111bcae0f150bb0885e7c30684b66d9a094f23578e2896d4496714"
+}

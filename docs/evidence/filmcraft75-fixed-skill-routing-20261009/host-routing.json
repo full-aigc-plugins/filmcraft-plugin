@@ -1,0 +1,234 @@
+{
+  "schema": "filmcraft-fixed-host-intent-routing/v1",
+  "result": "PASS",
+  "pluginRef": "v0.1.0-dev.75",
+  "sourceRef": "v0.1.0-dev.57",
+  "corpusSha256": "4ec767712adc9ca2868870d8f2df38e4f985d7a9e519816e607796f7e14af0bc",
+  "cases": [
+    {
+      "id": "route-01",
+      "expectedSkill": "filmcraft-use",
+      "selectedSkill": "filmcraft-use",
+      "rejectedSkills": [
+        "filmcraft-cli"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "6584aaed85115e04843f3effda8758df3809cfe87a19249cbda188df36fd2a13",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "8772e4c73912c6c85ee06aaa73a4b35deeef6d42122aec1c6ca9c4d39d7c3b20",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-02",
+      "expectedSkill": "filmcraft-cli",
+      "selectedSkill": "filmcraft-cli",
+      "rejectedSkills": [
+        "filmcraft-cli-timeline",
+        "filmcraft-use"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "a1cba94fa0dfd4bdd3fe7bf8364da3d9e8387dac77058ac70aa1fd28f2d01cfa",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "33dd931a425ee5b44a5e428e84af4de02b2638b5b593400276c6e58d8ea53607",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-03",
+      "expectedSkill": "filmcraft-cli-setup",
+      "selectedSkill": "filmcraft-cli-setup",
+      "rejectedSkills": [
+        "filmcraft-cli",
+        "filmcraft-cli-export"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "599c2780e04649c8acc5308bc70c42231c83038604331c56143934a630ad7d23",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "d8a3789bce02525a8452eeb96d1e13da9f56258d406c86831e88ecc3ed4ca7e3",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-04",
+      "expectedSkill": "filmcraft-cli-project",
+      "selectedSkill": "filmcraft-cli-project",
+      "rejectedSkills": [
+        "filmcraft-cli-media"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "f96527d6daeb50800cf654230546bd2fd474fb24f85094509df885b6367619ed",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "312f2f7c91b7ea7d879f05a0f3220537137a048eb2cb19d5f11844bf59253793",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-05",
+      "expectedSkill": "filmcraft-cli-media",
+      "selectedSkill": "filmcraft-cli-media",
+      "rejectedSkills": [
+        "filmcraft-cli-project"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "c770e34ccc7b83d111c77db356a86ee28c551d7f74020d18fe5644d473cb6cd9",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "590cd4c5d7c1f18074d48ab7635c03c09bb0c3674822ec2c480a7792d65ca7df",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-06",
+      "expectedSkill": "filmcraft-cli-timeline",
+      "selectedSkill": "filmcraft-cli-timeline",
+      "rejectedSkills": [
+        "filmcraft-cli-multicam"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "ab35dd3ab64b10b47faf215411aab62d15b1414154086453307d43c5976eaf2b",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "c7cfd16088ea5844867cdb873ed903299ee0cc800afc1fafe76ac0792795430f",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-07",
+      "expectedSkill": "filmcraft-cli-audio",
+      "selectedSkill": "filmcraft-cli-audio",
+      "rejectedSkills": [
+        "filmcraft-cli-subtitles"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "128084dd888939cace1e23bdfa546ea77a275f81d035fed45692585b0dbdac43",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "0496b5b024ed04547cbaf84a35eb4c0ee300ad7b3e82a6d515b09bc7bd2fc1aa",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-08",
+      "expectedSkill": "filmcraft-cli-subtitles",
+      "selectedSkill": "filmcraft-cli-subtitles",
+      "rejectedSkills": [
+        "filmcraft-cli-transcript"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "b78bccb78bc6eae9eb6e1e840e6247094c06fec00d808e3191b758266b4bda64",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "0fad43bfc9521c7e3d0b4eafe856043c64208510543ded570d6258315c081f01",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-09",
+      "expectedSkill": "filmcraft-cli-color",
+      "selectedSkill": "filmcraft-cli-color",
+      "rejectedSkills": [
+        "filmcraft-cli-motion"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "55ff786f08f16f9e0ed3dedd1a9b68e67b14a2aba1cbfcee1accad06575ea984",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "d90afb70d53d6ecd82d738f9c05f53119666c4fed926d3b1a49453c3932305bd",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-10",
+      "expectedSkill": "filmcraft-cli-motion",
+      "selectedSkill": "filmcraft-cli-motion",
+      "rejectedSkills": [
+        "filmcraft-cli-color"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "500ebc398e5baab48d56566a5f3368bfacafc95d89a48868d640863b44926f64",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "3179ebea2fe53832371e2baf6b78c838f83f88f5fc517dc2511274cf84a1feab",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-11",
+      "expectedSkill": "filmcraft-cli-export",
+      "selectedSkill": "filmcraft-cli-export",
+      "rejectedSkills": [
+        "filmcraft-cli-audio"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "dceb13b76958f2d6e7897ee9c0a79132f69e0b7b5f1e216ccae283fbc7d02290",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "fff3a0a611db77c37b5d288ea619d5aad73eb65fef80173ae7df24b1f8c451e2",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-12",
+      "expectedSkill": "filmcraft-cli-multicam",
+      "selectedSkill": "filmcraft-cli-multicam",
+      "rejectedSkills": [
+        "filmcraft-cli"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "87280143bf6aed08bc3d5f56ae84cb669c0728696e3397a1e9bce2f95dbe948b",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "2fcb71d9405ab64643980bfb000772a52eb3b9cc2ec61e4e09badf2043425ccb",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-13",
+      "expectedSkill": "filmcraft-cli-transcript",
+      "selectedSkill": "filmcraft-cli-transcript",
+      "rejectedSkills": [
+        "filmcraft-cli-subtitles",
+        "filmcraft-cli-setup"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "c474fea673f9afb44ebe2996177f63b385f3cb1eeccf88076f74398c0cad12a0",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "a844d35c9db2bbc35d81a074621d55db4deea791ea34b4db1646d06ee888aed2",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-explicit-multicam-command",
+      "expectedSkill": "filmcraft-cli",
+      "selectedSkill": "filmcraft-cli",
+      "rejectedSkills": [
+        "filmcraft-cli-multicam"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "0c1ca981d80c43530571c4a1c41b8455d003913290a034fdf096889ce77976d3",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "33dd931a425ee5b44a5e428e84af4de02b2638b5b593400276c6e58d8ea53607",
+      "skillReadExit": 0
+    },
+    {
+      "id": "route-combined-goal",
+      "expectedSkill": "filmcraft-use",
+      "selectedSkill": "filmcraft-use",
+      "rejectedSkills": [
+        "filmcraft-cli-export"
+      ],
+      "turnStatus": "completed",
+      "traceSha256": "81f32a5c3ab12b0700f79a43d80783a18dd70485ca5b190f933c06a724506212",
+      "status": "PASS",
+      "selectedSkillRead": true,
+      "selectedSkillSha256": "8772e4c73912c6c85ee06aaa73a4b35deeef6d42122aec1c6ca9c4d39d7c3b20",
+      "skillReadExit": 0
+    }
+  ],
+  "scope": "actual authenticated Codex app-server ephemeral read-only route selection using unchanged fixed-installed skill roots; independent native businesses tested separately",
+  "hostUserAgent": "Codex Desktop/0.162.0-alpha.2 (Mac OS 27.0.1; arm64) dumb (filmcraft-host-routing-eval; 0.1.0)",
+  "fixedInstalledSkillsDiscovered": 13,
+  "model": "gpt-6-astra",
+  "installedFilesUnchanged": true,
+  "hostProcessStopped": true,
+  "selectedSkillsActuallyRead": 13,
+  "driverSha256": "47b0806f2db7d7ed1537170dbe64d6306c6b955823ff5729880bd4262ee51849",
+  "pluginCommit": "4acdc208736180937cf3f109ab888f5644130664",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "routingRootRegistration": "connection-scoped skills/extraRoots/set to unchanged actual fixed75 installed skills; source skill names, not a claim of plugin namespace/model routing in other hosts",
+  "modelCredentialHandling": "existing authenticated host; no credentials copied or read by QA driver"
+}

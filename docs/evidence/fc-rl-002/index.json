@@ -1,0 +1,111 @@
+{
+  "schema": "filmcraft-permission-scenario-audit/v1",
+  "pluginRef": "v0.1.0-dev.75",
+  "sourceRef": "v0.1.0-dev.57",
+  "result": "PARTIAL",
+  "requirements": "FC-RL-002",
+  "scenarios": [
+    {
+      "id": "FC-RL-002-P",
+      "status": "PARTIAL",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/report.json"
+      ],
+      "scopeOrGap": "Local native editing uses no cloud credential; a host secret-reference consumer contract is not qualified."
+    },
+    {
+      "id": "FC-RL-002-N",
+      "status": "PARTIAL",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-plan-fields.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-parameter-fields.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-parameters-v2.json"
+      ],
+      "scopeOrGap": "Unknown fields and tested outside saves refuse; this does not prove every metadata and native command context."
+    },
+    {
+      "id": "FC-RL-002-PLAN-FIELDS",
+      "status": "PASS",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-plan-fields.json"
+      ],
+      "scopeOrGap": "26 installed public refusals before cache/output creation, no canary echo; valid native revision preserves source."
+    },
+    {
+      "id": "FC-RL-002-DOMAIN-PARAMETERS",
+      "status": "PASS",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-parameter-fields.json"
+      ],
+      "scopeOrGap": "26 installed public parameter/move refusals; creative caption revision and source preservation pass."
+    },
+    {
+      "id": "FC-RL-002-TRUSTED-ROOTS",
+      "status": "PARTIAL",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-public-root-matrix.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-exact-root-admission.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-admission-root-policy.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-protected-writes.json"
+      ],
+      "scopeOrGap": "Fixed75 builtin exact-root admission now passes7 native cases; previous fixed74 public26 and protected39 native cases reuse identical source57 bytes. Complete malformed/source read and unsupported-platform refusal coverage mapping remains pending."
+    },
+    {
+      "id": "FC-RL-002-CHILD-ENV",
+      "status": "PASS",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-environment.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-native-environment.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-desktop-environment.json"
+      ],
+      "scopeOrGap": "Seven actual auxiliary launches plus owned native, signed desktop and bridge process environment observations; dummy canaries only, no raw environment recorded."
+    },
+    {
+      "id": "FC-RL-002-MAINTENANCE-ROOTS",
+      "status": "PARTIAL",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/maintenance-roots-fixed74.json"
+      ],
+      "scopeOrGap": "Actual installed maintenance probe/activation, expanded roots/revocation refusal and ledger preservation; original driver label retained, full scenario evidence mapping still pending."
+    },
+    {
+      "id": "FC-RL-002-READONLY-MODELS",
+      "status": "PASS",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-readonly-models.json",
+        "../filmcraft74-fixed-supplement-20261009/cold-model-retry.json",
+        "../filmcraft75-fixed-skill-routing-20261009/model-refusals.json",
+        "../filmcraft75-fixed-skill-routing-20261009/discovery-and-missing-model.json"
+      ],
+      "scopeOrGap": "117 actual fixed75 public malformed/outside model reference refusals precede installer/output and missing-input processing;13 actual native missing-model admissions refuse before editing. Unchanged source57/native binary reuses fixed74 CLI inference, exact model hash preservation and signed desktop shared-directory discovery/expected unavailable speech refusal. No GUI speech inference is claimed."
+    },
+    {
+      "id": "FC-RL-002-RAW-LAUNCHER",
+      "status": "PARTIAL",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-raw-cli.json",
+        "../filmcraft74-fixed-supplement-20261009/cold-model-retry.json",
+        "../filmcraft75-fixed-skill-routing-20261009/discovery-and-missing-model.json"
+      ],
+      "scopeOrGap": "52 exact native metadata discoveries pass;52 appended-project variants refuse without roots before installation. Fixed74 raw39/native protected-write39 and cold model inference are reused only after exact source57 byte checks. Full network/write-maintenance negative vector binding still pending."
+    },
+    {
+      "id": "FC-RL-002-REGISTRY-PARAMETERS",
+      "status": "PASS",
+      "evidence": [
+        "../filmcraft74-fixed-supplement-20261009/fixed74-parameters-v2.json",
+        "../filmcraft74-fixed-supplement-20261009/fixed74-late-parameter-reference.json"
+      ],
+      "scopeOrGap": "8658 installed Python contract refusals,39 public refusals,13 native creative saves and real late-reference guard; does not prove all666 native contexts."
+    }
+  ],
+  "tasks7_4_to7_6": "OPEN; secret-reference consumer scope requested from user; no hypothetical provider or credential interface invented",
+  "equivalentCodeReuse": {
+    "originalPlugin": "v0.1.0-dev.74",
+    "sameNativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "sameSourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+    "sharedFilesRechecked": 711,
+    "sharedFileInventorySha256": "1924aba691a56bc13289b325d595cb42d45eecae4dc7682f5622f0c008895470",
+    "scope": "All source57 installed skill bytes, Harness src and three execution/preflight helpers match old fixed74 evidence. Fixed75 builtin admission is separately passed; old builtin failure remains preserved."
+  }
+}

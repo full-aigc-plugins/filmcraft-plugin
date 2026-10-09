@@ -1,0 +1,63 @@
+{
+  "schema": "filmcraft-fixed-skill-routing-acceptance/v1",
+  "result": "PASS",
+  "task": "9.9",
+  "requirement": "FC-SK-003",
+  "pluginRef": "v0.1.0-dev.75",
+  "pluginCommit": "4acdc208736180937cf3f109ab888f5644130664",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "platform": "darwin-arm64",
+  "host": "existing installed Codex0.162.0-alpha.2, authenticated ephemeral read-only routing; fixed plugin originally installed with Codex0.147.0",
+  "scenarios": {
+    "FC-SK-003-ROUTING": {
+      "result": "PASS",
+      "cases": 15,
+      "freshThreads": 15,
+      "actualSkillReads": 15,
+      "selectedSkillCount": 13,
+      "evidence": "host-routing.json"
+    },
+    "FC-SK-003-SCENARIO-ISOLATION": {
+      "result": "PASS",
+      "businessCases": 13,
+      "elapsedSeconds": 102.29,
+      "allMarkdownFiles": 232,
+      "localLinks": 337,
+      "evidence": [
+        "primary-tasks.json",
+        "resources.json"
+      ]
+    }
+  },
+  "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "hostReceiptSha256": "43705b8b71e45a1ff747a42e15142229ff3cf3aed93fa773edaa47be04cd0485",
+  "businessDriverSha256": "451bbd00c3bf4d64ce52719ba7ac667e600695d9a23615f3a55660e4eeb0f8b1",
+  "businessLogSha256": "2e8dfae3e789bf5ced9e4d4e4fa417f11c1b25aaf13f6c7fac86daddd0fc2874",
+  "resourceDriverSha256": "594834a8eabeb13403fe153864819d0ae0a70fe52a9df338699344a9201af9f6",
+  "scope": "13 skill intent boundaries,15 expected/rejected selection cases, actual reads and13 distinct independent native businesses plus every skill Markdown/resource; not all666 native contexts, all hosts/platforms or complete release/permission acceptance",
+  "setupObservationNote": "Setup business deliberately corrupts its own cache after a successful pinned install; its final cache digest is a refusal fixture, not a successful runtime identity.",
+  "fullV1": "NOT_PROVEN",
+  "remainingTasks": 7,
+  "files": {
+    "model-refusals.json": "bca2f7c91b47b8ce00f6eb4595dfd7890a808ce3138b429364804c315fd0c241",
+    "discovery-and-missing-model.json": "a9974fb8c95a248fa303b63609f89253b94f068aa9c60048d311e73d5860d5f4",
+    "repeat-host-routing.json": "35dc56a8341d21e5bb54b1486bd2fba17bdddfc73a30c90b637283e06c5ac0f6",
+    "resources.json": "56be0679a2970d32cc5551c8678c254d7a30215d56d134f5ea33aab4c0bda4c0",
+    "older-host-refusal.json": "57fc94728005e3c6b98d714672b0c852fe944486dfa7e994aec1acfcddd7f9dd",
+    "host-routing.json": "6c2298742e1a20c239d60a9061542c3d3da8db1c7a0977a090c41923d16a8c39",
+    "fixed75-routing-driver-argument-failure.json": "10ada9b773939b24474d54cbde0d84f445d4e48b8e635ba5d2e6a07f14e78774",
+    "primary-tasks.json": "adf796ca5794123d19d1baa4bc3d896043b4ca147ff0c2b562ddedf37b08625c",
+    "discovery-fixture-failure.json": "6967a3d5a6f5a485619185e76baa435055638bdfaafaa5ef29f29bc676a45805"
+  },
+  "actualReadonlyNoNetworkNeverApprovalEphemeralResponses": 15,
+  "repeatableDriverRegression": {
+    "result": "PASS",
+    "cases": 15,
+    "actualSkillReads": 15,
+    "evidence": "repeat-host-routing.json",
+    "driverSha256": "78c339a3be52b243c56bcda93e24d6471e7c7c2905be94e3d23386248409d149",
+    "sourceScope": "current main QA producer reads frozen75 skill bytes; not a script shipped inside fixed75"
+  },
+  "frozenInstalledFilesPreserved": 1826
+}

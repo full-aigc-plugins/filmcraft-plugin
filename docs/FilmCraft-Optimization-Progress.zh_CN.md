@@ -1,5 +1,7 @@
 # FilmCraft 优化实施记录
 
+2026-10-09完成9.9：固定75/source57在已登录Codex0.162.0-alpha.2的15个全新只读临时会话中正确选择并读取对应安装技能；十三独立原生业务102.290秒全部通过，232技能Markdown／337本地链接及确定性共享资源通过。CLI147模型不兼容拒绝保留为环境失败；连接内额外技能根加载不代表全部插件宿主命名空间资格。完整V1余7项开放。[验收](evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json)。
+
 本记录涵盖源码候选及后续固定安装验收，完整目标仍是完成技能与插件全部计划任务。[English](FilmCraft-Optimization-Progress.md)。正式需求与任务继续由 [现有 OpenSpec](../openspec/changes/establish-v1-plugin/tasks.md) 持有；本记录不缩小原有门禁。
 
 ## 当前固定验收

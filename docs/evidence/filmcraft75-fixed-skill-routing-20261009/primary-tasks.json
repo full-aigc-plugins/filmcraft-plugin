@@ -1,0 +1,231 @@
+{
+  "schema": "craft-native-task-observations/v1",
+  "runtimeVersion": "0.2.0-craft.5",
+  "observations": [
+    {
+      "test": "test_audio_gain_survives_reopen_and_changes_exported_samples",
+      "skill": "filmcraft-cli-audio",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "audio.fcproj": "cb4f0a2a994129029d39beddd5676b52329b749972f56ae7fd4ffc0dad136123",
+        "quieter.wav": "6f304d0f7566e22e2f862983e89ae2d2d301e0d821f414a918789839aa0612be"
+      }
+    },
+    {
+      "test": "test_cli_executes_explicit_native_plan_and_reopens_unchanged_sequence",
+      "skill": "filmcraft-cli",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "native-plan/journal.json": "77b1267b6e29064f7abfeb91a490e175d5c65b068db3a4ee9d3ac55037be31d2",
+        "native-plan/project.fcproj": "6a4d2347c32d9b989dc4a42698934e88b64e79ff53d77da54b1c961d51fe3b13",
+        "native-plan/success.json": "77b1267b6e29064f7abfeb91a490e175d5c65b068db3a4ee9d3ac55037be31d2",
+        "native-plan-plan.json": "19c650c62573fdae67ce545fc236e295a0a680468ce46eb05517df0bb6eb343c"
+      }
+    },
+    {
+      "test": "test_color_lut_survives_source_removal_and_empty_library",
+      "skill": "filmcraft-cli-color",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "color.fcproj": "af1a8f548f45fa9a219a073f6b57e84f21456225a37e03fd2bf7d4fd8092c237",
+        "colored.png": "893b024c8a02218476e78b10113693d3919541abf41893bec728260d2e80591c"
+      }
+    },
+    {
+      "test": "test_export_video_preview_and_interchange_keep_native_project",
+      "skill": "filmcraft-cli-export",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "film.mp4": "51e760919e9fb3f3a96444f41716e97325c7af5ac342ba4d1e74f7a38c1057c9",
+        "film.otio": "bf3e8c6dd259fbe16fef154a4951e93f85a01ff71be6034e23cc7883b7321899",
+        "preview.png": "4a1eead1b76a8b22b6caa4e767c499bee5888dfce11b7de85cb9caf79a293329"
+      }
+    },
+    {
+      "test": "test_media_probes_imports_and_preserves_existing_timeline",
+      "skill": "filmcraft-cli-media",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "additional.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "imported.fcproj": "fb787db7fe2442b927f6c68eaf0c98d0f5683aa3234df7bdc1d377bdd2daba3d"
+      }
+    },
+    {
+      "test": "test_motion_keyframes_survive_reopen_and_change_rendered_frames",
+      "skill": "filmcraft-cli-motion",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "after.png": "ef189bc9ba9430c4475f5e4288b961bf89e1921a91751a64ca7cde1aa8263d20",
+        "before.png": "59d511138a1f6540577a2e06d042021c4d44b1027610cc32324cdec0559b53cc",
+        "motion.fcproj": "024239e854c444150f3d15a7f4a7e6f585db1db907739a182ac5b7800a2093db",
+        "motion.jsonl": "453c4e85ecc576ff513c9099ca4fad94739367c775658c63eac553b1e4410ec4"
+      }
+    },
+    {
+      "test": "test_multicam_switch_reopens_renders_other_camera_and_preserves_existing_tracks",
+      "skill": "filmcraft-cli-multicam",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "camera-blue.mp4": "ab38e0fdad412a901bed5f5650675ddaec59aee5644b81194b74b4a80c35100c",
+        "camera-one.png": "4a1eead1b76a8b22b6caa4e767c499bee5888dfce11b7de85cb9caf79a293329",
+        "camera-two.png": "88f7c9a8cf5fd3194748add0e399ea33a973374d4df3bfbf8a9e7012e7f5639d",
+        "cameras.fcproj": "9088d6200e463e9d5f40481e961b60200eb429aebdd91278b6a67a329b4493ff",
+        "multicam-create.jsonl": "fd56caebb6a4c8450834b3fb7d872eea7a6ef56c83ea9212aaefa7ad20eea244",
+        "multicam-placed.fcproj": "77bbc0d758f39ce907900d3b485ed96a7f2208b3352332a67615c799309e7ada",
+        "multicam-source.fcproj": "948e65066e44b1d0194068d2cfddf64989d854e8967664d5d8148b2e49ebd465",
+        "multicam-switched.fcproj": "8374bc6e06073fc4f63b19c21706f48e95821f095a2a99000e9c61c0f0ef4920"
+      }
+    },
+    {
+      "test": "test_project_creates_and_reopens_sequence_and_bin",
+      "skill": "filmcraft-cli-project",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "Independent project.fcproj": "c49a29a7662aa8e5493b9b3dec8b812fa27729ed2cbdbe357ec484e637a17e59",
+        "create.jsonl": "5552d4f7b06fa0ab2be298390aad9bc21611dadbd3eb2acf12c6e774fdac0b0f"
+      }
+    },
+    {
+      "test": "test_setup_verifies_pinned_install_and_refuses_owned_corrupt_copy",
+      "skill": "filmcraft-cli-setup",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "05c5bae3daf32b31b3f1ba2cf87a627373c49ef772d3bdd0c2edfb5134d2fa2e",
+      "outputSha256": {}
+    },
+    {
+      "test": "test_subtitles_updates_text_without_changing_timing_and_exports_srt",
+      "skill": "filmcraft-cli-subtitles",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "captions.fcproj": "a67fb31cd818e12e4fd8d9f5aa1c8f73b05fcbdbec9e6f4a34156377a5c4981a",
+        "captions.srt": "f688f67dd1b56af5301663995b864493f6257ab2654e0ed8600abfae80e503a6"
+      }
+    },
+    {
+      "test": "test_timeline_razor_preserves_audio_and_duration",
+      "skill": "filmcraft-cli-timeline",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "cut.fcproj": "94431f60aa3a910e796de7c902dfa9027fd54b8797616436e51e3de45ad5930b"
+      }
+    },
+    {
+      "test": "test_transcript_import_reopens_and_generates_timed_captions",
+      "skill": "filmcraft-cli-transcript",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        "transcript-captions.fcproj": "4d5a80b31f641bf74540bac2a06fe4170ef4ea6341abd543b107b56cd95f8f8a",
+        "transcript.fcproj": "b6c436b1510bc0513f40337a8041164c55101aa12fe390b6b253ae7abe9ebe18",
+        "transcript.srt": "f48fe8fd342019373ee47846d71fcd2e9b2a53ad1d1a7895962429333274c4a2"
+      }
+    },
+    {
+      "test": "test_use_routes_composed_film_and_revises_only_requested_caption",
+      "skill": "filmcraft-use",
+      "sourceProjectSha256": "9a7b3484961e68ff75c4f19cd7f5e1aef0cc3a0b87b5810e3c9b9b8692622c79",
+      "inputSha256": {
+        "red.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517"
+      },
+      "nativeBinarySha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+      "outputSha256": {
+        ".filmcraft-execution-4096191ba3ee50210aeb4416060e0a123c2b00ef23bc0792e55d8b1ba3a7ce10.json": "f0a3e389caaa70527012356df5723de4c9f58a80a367e851a3c018ba03f47ef9",
+        ".filmcraft-execution-f519f5931d4eeaf54e0e3a998ad79ddf8031fe838138ac0381a1d8b91800315c.json": "b98014433fb0ff8d7fddefcfedf51cb85ceacc59e503e0b1e342940e0c1c3a13",
+        "composed/audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+        "composed/capabilities.json": "173bf180d82dad9e43dc2cdcb7a6f021f012032e48cd6bc6fc33256b454da08f",
+        "composed/captions.json": "eaa0997488a6925a5367b99fd32aca0ca23be5f80bafc146ddc9f6204131d513",
+        "composed/captions.srt": "9343764ccf00bdeabe065ee73d914273f6e8ef29d041d11eb6fd1a5e39c23bc5",
+        "composed/decode.txt": "dcd7557cc410ab4389356e678baab0b51908faaa596ed0c83a41aa931e610c56",
+        "composed/exchange-loss.json": "9f61b16ee191280a990fe828a86309d69cc793e08b6ce7af71e4abbc48f4b10d",
+        "composed/export-probe.json": "07e6fd0869dc97202b1ec359e4558576d6c68ff118b9fb9d83eb1108b795ce8d",
+        "composed/film.mp4": "e75e667f136137f8b4bd7f20e9f8d2a00419809f17f4d5ec37175e77a648d838",
+        "composed/frame-0000.png": "b25fc0057f6d1d9e551cfc97d007bb18edd6c3b192612aa1bc6870f08f0c35d3",
+        "composed/frame-0001.png": "4a1eead1b76a8b22b6caa4e767c499bee5888dfce11b7de85cb9caf79a293329",
+        "composed/manifest.json": "d53a48f55176e11c1afeda37e52c94a165f300941d28565a7258f22aed8d3e1b",
+        "composed/native.json": "6b5498a674c9baf093ce13105d1f1a8644625bfdaaa55fc42fd00fd59314c2ca",
+        "composed/operations.json": "bcdb4283d019095a8b9ac34e1b6f72e0e7ae3d41596f1fcabfea725f3f8f64f7",
+        "composed/plan.json": "236e437554d3535067b8b344d0941207a9c462d79e31129f5a5753f18a217660",
+        "composed/project.fcproj": "467bb28bcc4c0f2cb407cbff2f64998f4e618800375d82f79358e98dfca0457f",
+        "composed/shot.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "composed/voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517",
+        "composed-plan.json": "d1bcab587d88259ee234e65030d5c34c80d1db1a77a4074606e6a714842d9772",
+        "revised/audio-check.json": "34c3ecca733e7e1dc4e19ffbdb7cfad1ec81575a4663afb0c9f359c2c265d316",
+        "revised/capabilities.json": "21f138b06bce94e7e457687af93f8bd2813863e1150d0ed55e1cc850040ad632",
+        "revised/captions.json": "d5b5daf39dcba9c68a1f4fdd21d5be20a54b0f62b334c5d86ee1da18d36a917c",
+        "revised/captions.srt": "3ec58bf4b67377ffc707459ad8befef5ca668d4f2785c323b8f5cfd74006a8d6",
+        "revised/decode.txt": "185566fa1e98d90823bb28822911b2ce4178a9e31421597438cd900284a0f7ad",
+        "revised/exchange-loss.json": "acc1645fa0f72a7dc3bd5abcb7cd3dfec800620d421036c92e35cedd63e72d0f",
+        "revised/export-probe.json": "67bfb67ab182903f873fee4e2aa9c862b1ef27a2ae9e1d34d1ab7baa42cdbebe",
+        "revised/film.mp4": "862d4847e818a5882360970d8446544e2dcdf57fadeff9ace6cde8036ef3dce6",
+        "revised/frame-0000.png": "5d1a8fdbf7ee73bb830bfb16da9fc24d8bb9eb534ec39ae78902322744247ab2",
+        "revised/manifest.json": "7c45c216a699583b2fe0bfbe7f786b30e3fffe5ad1fe2736e4706cf4355fcee3",
+        "revised/native.json": "fb7fa48beafb4a31fdf88f77b7cda196af324cc477a7dee2bddf73eda2e703b1",
+        "revised/operations.json": "25c83187c38665556774c8f866c95d055d6944787d2fd63a635271185bb698c8",
+        "revised/plan.json": "9c4c7971d80e377a47fa9b38c071e3bbbca1f8c77cd23c0e30c745d4c13b09cd",
+        "revised/project.fcproj": "a76d07e8b74e0fc56418e7c24919f6fa73e726c6bc88daa0b037f011b1f28ad5",
+        "revised/shot.mp4": "70af40a26ac6ec4ea4d41f48ae0de626dfa0ef414421d87ac70c6a7e8901a548",
+        "revised/voice.wav": "d75e1465088be4ce1aa71b83fe4bed96f5b07e441b50c83913983951d73e7517",
+        "revised-plan.json": "601f525d783cb514e41ff2b486f50e70b639e5c6c951dab120a02102c4552d1b"
+      }
+    }
+  ]
+}

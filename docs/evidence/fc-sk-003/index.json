@@ -1,0 +1,16 @@
+{
+  "schema": "filmcraft-skill-routing-index/v1",
+  "task": "9.9",
+  "result": "PASS",
+  "acceptance": "../filmcraft75-fixed-skill-routing-20261009/acceptance.json",
+  "scenarioEvidence": {
+    "FC-SK-003-ROUTING": "../filmcraft75-fixed-skill-routing-20261009/host-routing.json",
+    "FC-SK-003-SCENARIO-ISOLATION": [
+      "../filmcraft75-fixed-skill-routing-20261009/primary-tasks.json",
+      "../filmcraft75-fixed-skill-routing-20261009/resources.json"
+    ]
+  },
+  "fullFC_RL_001": "NOT_PROVEN",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "fullFC_CM_001": "NOT_PROVEN"
+}

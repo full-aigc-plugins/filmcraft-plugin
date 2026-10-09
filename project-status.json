@@ -144,7 +144,8 @@
     "4.16": "docs/evidence/fc-dm-006/index.json",
     "4.17": "docs/evidence/fc-dm-006/index.json",
     "4.18": "docs/evidence/fc-dm-006/index.json",
-    "7.7": "docs/evidence/filmcraft68-parameter-fields-20261009/summary.json"
+    "7.7": "docs/evidence/filmcraft68-parameter-fields-20261009/summary.json",
+    "9.9": "docs/evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",
@@ -272,5 +273,7 @@
   "sequenceFixed65Evidence": "docs/evidence/filmcraft65-fixed-sequence-20261009/acceptance.json",
   "sequenceFixed65Status": "Fractional transparent import/native full collection/relocated revision and refusal subgates PASS; actual fixed65/source48/craft.5 macOS arm64; full FC-DM-001 HD/SEGMENT and behavior-red mapping pending;26 tasks remain",
   "domainImportContractEvidence": "docs/evidence/fc-dm-001/index.json",
-  "domainImportContractStatus": "Tasks4.1-4.3 qualified:actual fixed65/source48/craft.5 all7 FC-DM-001 scenarios PASS; historical behavior reds retained;12 installed-code unit tests plus actual120-frame HD/121-frame moved revision;169/169 unchanged installed native regression reused with identity recheck;23 V1 tasks remain open"
+  "domainImportContractStatus": "Tasks4.1-4.3 qualified:actual fixed65/source48/craft.5 all7 FC-DM-001 scenarios PASS; historical behavior reds retained;12 installed-code unit tests plus actual120-frame HD/121-frame moved revision;169/169 unchanged installed native regression reused with identity recheck;23 V1 tasks remain open",
+  "skillRoutingContractEvidence": "docs/evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json",
+  "skillRoutingContractStatus": "Task9.9 qualified for fixed75/source57:15 actual ephemeral Codex0.162.0-alpha.2 intent selections with matching installed skill reads,13 independent native business tasks,232 Markdown/337 confined local links and deterministic resources. Extra-root source skill loading is scoped; other hosts/plugin namespace routing/full666 native contexts and complete release/permissions remain open. Seven V1 tasks remain."
 }

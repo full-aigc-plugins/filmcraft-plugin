@@ -1,5 +1,7 @@
 # FilmCraft Optimization Implementation Record
 
+2026-10-09: task9.9 is complete for fixed75/source57. Actual authenticated Codex0.162.0-alpha.2 selects and reads the expected installed skill in all15 fresh read-only routing cases;13 independent native businesses pass in102.290s. All232 skill Markdown files,337 local links and deterministic shared resources pass. CLI147 model incompatibility is retained as an environment refusal. Connection-scoped extra-root loading does not qualify all plugin host namespaces. Seven full-V1 tasks remain open. [Acceptance](evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json).
+
 This record covers source candidates and subsequent fixed-install acceptance. The full objective remains completion of all planned skill and plugin tasks. [中文](FilmCraft-Optimization-Progress.zh_CN.md). [Existing OpenSpec tasks](../openspec/changes/establish-v1-plugin/tasks.md) remain authoritative; this record does not narrow acceptance gates.
 
 ## Current fixed acceptance

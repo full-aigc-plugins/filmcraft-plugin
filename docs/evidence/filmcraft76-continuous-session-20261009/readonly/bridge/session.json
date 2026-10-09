@@ -1,0 +1,88 @@
+{
+  "schema": "filmcraft-owned-plan-batch/v1",
+  "mode": "bridge",
+  "identityBindingSha256": "50f2cbaee439d73551eccaff54465b71110805f3e78271aeb43e1e17ee21dcce",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sessionsStarted": 1,
+  "caseCount": 3,
+  "cases": [
+    {
+      "commands": [
+        "file.newProject",
+        "file.newSequence",
+        "file.newColorMatte",
+        "timeline.place",
+        "file.newColorMatte",
+        "timeline.place",
+        "file.saveAs",
+        "jobs.list",
+        "perf.stats",
+        "source.inspect",
+        "command.list",
+        "project.inspect",
+        "state.inspect",
+        "history.list",
+        "mediaCache.info",
+        "lut.list",
+        "presets.list",
+        "export.formats",
+        "export.queue.list",
+        "transcript.models",
+        "project.columns.list",
+        "project.viewPreset.list",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.open",
+        "jobs.list",
+        "perf.stats",
+        "source.inspect",
+        "command.list",
+        "project.inspect",
+        "state.inspect",
+        "history.list",
+        "mediaCache.info",
+        "lut.list",
+        "presets.list",
+        "export.formats",
+        "export.queue.list",
+        "transcript.models",
+        "project.columns.list",
+        "project.viewPreset.list",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    }
+  ],
+  "pids": [
+    {
+      "mcp": 77397,
+      "desktop": 77385
+    },
+    {
+      "mcp": 77397,
+      "desktop": 77385
+    },
+    {
+      "mcp": 77397,
+      "desktop": 77385
+    }
+  ],
+  "singleProcessIdentity": true,
+  "ownedProcessesStopped": true,
+  "desktopStopped": true,
+  "listenerOwnedByPID": true,
+  "tainted": false,
+  "elapsedSeconds": 3.4950495829980355,
+  "scope": "QA owned continuous plans within fixed permissions; no general interactive session API"
+}

@@ -146,7 +146,8 @@
     "4.18": "docs/evidence/fc-dm-006/index.json",
     "7.7": "docs/evidence/filmcraft68-parameter-fields-20261009/summary.json",
     "9.9": "docs/evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json",
-    "9.34": "docs/evidence/filmcraft76-edit-session-reuse-20261009/report.json"
+    "9.34": "docs/evidence/filmcraft76-edit-session-reuse-20261009/report.json",
+    "9.35": "docs/evidence/filmcraft76-continuous-session-20261009/report.json"
   },
   "hostValidationEvidence": "docs/evidence/craft-full-command-fixed-first-use-20261007.json",
   "hostValidationStatus": "fixed-five-plugin58-discovery-and-standalone-desktop-passed",

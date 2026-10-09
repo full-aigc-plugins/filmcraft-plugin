@@ -1,0 +1,29 @@
+{
+  "schema": "filmcraft-readonly-command-contexts/v1",
+  "result": "PASS",
+  "driverSha256": "01554acfb70603d11abc2f7482a3871da7b52b3d0496276744cb7845c74fc9d5",
+  "sessionHelperSha256": "394302ced9de2a963292107bbd3ee118902fb036292e23edd925ab4748b536fb",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "queries": 15,
+      "nativeQueryCalls": 30,
+      "matrixSha256": "0f05a3303f2749d98b86ffdcba22dac13d52aaf5995c10dd32777713d37a6d3e",
+      "observationsSha256": "b274a8af9c2e1ce39bdfe6cc3e77a4bf879a6d88e0afcb4d1af72f2b34db9a20",
+      "sessionProofSha256": "afb971654036b704cab16231054e67c7762e2fc68abf8bcd2d9f58126237addd"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "queries": 15,
+      "nativeQueryCalls": 30,
+      "matrixSha256": "bf82c603fa59bc70fa3bdf3c8e71d10275e70ee23da7bd8688ff5e91d03d4a46",
+      "observationsSha256": "baae9395ff850e80cc64b8f4647d085da3a52c48611e84cae4624e5f0dbaa9c4",
+      "sessionProofSha256": "b999195c9bb21233842ac8f4b76c297df43afb3b37d09daba117bf277f6f8290"
+    }
+  ],
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3",
+  "scope": "Fifteen read-only commands in two contexts, separate six-dimension matrices over all666rows; other commands unexecuted in this audit. No GUI gesture, visual creative quality or ASR inference claim."
+}

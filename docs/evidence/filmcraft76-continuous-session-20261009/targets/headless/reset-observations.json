@@ -1,0 +1,32 @@
+[
+  {
+    "phase": "reset-discovery",
+    "receiptSha256": "749ba0e425f9693567f8bf99aacd1a2fed6a0c41a553487bbee11f73214f4a2e",
+    "result": "PASS",
+    "activeSequenceAfterReset": null,
+    "commands": [
+      "file.closeAllProjects",
+      "state.inspect"
+    ]
+  },
+  {
+    "phase": "reset-negatives",
+    "receiptSha256": "d44c59828c1a66e62cabe515165a2dedaabbe7735c82eb83c5fbfa59722bff54",
+    "result": "PASS",
+    "activeSequenceAfterReset": null,
+    "commands": [
+      "file.closeAllProjects",
+      "state.inspect"
+    ]
+  },
+  {
+    "phase": "reset-reopen",
+    "receiptSha256": "26f7d9118d2bf547caeadadabf8ad07356dfe96f615b2735f4b8ea5bbd7343aa",
+    "result": "PASS",
+    "activeSequenceAfterReset": null,
+    "commands": [
+      "file.closeAllProjects",
+      "state.inspect"
+    ]
+  }
+]

@@ -1,0 +1,387 @@
+{
+  "binding": {
+    "pluginSha": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+    "sourceSha": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+    "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "runtimeVersion": "0.2.0-craft.5",
+    "platform": "darwin-arm64",
+    "mode": "bridge"
+  },
+  "commands": [
+    "timeline.nudgeLeft",
+    "timeline.nudgeRight",
+    "timeline.nudgeLeft5",
+    "timeline.nudgeRight5",
+    "timeline.nudgeUp",
+    "timeline.nudgeDown",
+    "timeline.slipLeft",
+    "timeline.slipRight",
+    "timeline.slipLeft5",
+    "timeline.slipRight5",
+    "timeline.slideLeft",
+    "timeline.slideRight",
+    "timeline.slideLeft5",
+    "timeline.slideRight5",
+    "timeline.slip",
+    "timeline.slide",
+    "clip.volumeUp",
+    "clip.volumeDown",
+    "clip.volumeUpMany",
+    "clip.volumeDownMany",
+    "clip.nudgeVolumeUp1",
+    "clip.nudgeVolumeUp3",
+    "clip.nudgeVolumeDown1",
+    "clip.nudgeVolumeDown3",
+    "playhead.set",
+    "playhead.step",
+    "playhead.stepForward",
+    "playhead.stepBack",
+    "playhead.stepForward5",
+    "playhead.stepBack5",
+    "playhead.nextEdit",
+    "playhead.prevEdit",
+    "playhead.nextEditAnyTrack",
+    "playhead.prevEditAnyTrack",
+    "playhead.start",
+    "playhead.end",
+    "playhead.selectedClipStart",
+    "playhead.selectedClipEnd",
+    "timeline.select",
+    "timeline.selectClipAtPlayhead",
+    "timeline.selectNextClip",
+    "timeline.selectPrevClip",
+    "edit.undo",
+    "edit.redo"
+  ],
+  "sequenceAssertionsPerFinalPhase": 115,
+  "mutatingCommands": 24,
+  "navigationCommands": 14,
+  "selectionCommands": 4,
+  "undoRedoVerified": true,
+  "originalProjectSha256": "b64a19df814e44700ac0005e9b647ba55146077e5b752e13d953d66daef6086c",
+  "changedProjectSha256": "236c8f08c5a8c9c13abde8611144574bdc760b89711788b0e17736724e7ea016",
+  "originalAndChangedInputsPreserved": true,
+  "wholeProjectRestored": true,
+  "negativeContexts": [
+    {
+      "command": "timeline.nudgeLeft",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "bc4813d439f66827809b1b1d384cf880f4d91ace1517d04fbbc5653cea78005f"
+    },
+    {
+      "command": "timeline.nudgeRight",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "4a9ca6513c9362c0d0162a227848383899fef7b36e4e5d8967fd1499196fc907"
+    },
+    {
+      "command": "timeline.nudgeLeft5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "b95b84408028e752cb73a4c95ea9b89cd254baddd140066de82858ffb63567f5"
+    },
+    {
+      "command": "timeline.nudgeRight5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "dad846b77150b184515be292130de7f0ff39fda142870912bee1c1ca0a8c313e"
+    },
+    {
+      "command": "timeline.nudgeUp",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "d0c2f4994c20f0d3dadc3cd24652a1bcf6259c9cbb24b132e5a6d0e6768995cf"
+    },
+    {
+      "command": "timeline.nudgeDown",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "07796fac870fc1488a2f64856602a05c97385385e8158f428667e137fc023b01"
+    },
+    {
+      "command": "timeline.slipLeft",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "50349ef1bfacba2fea6a100c7befdf399b0270344be4ddacccfab488f3695a32"
+    },
+    {
+      "command": "timeline.slipRight",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "98649a6e4a62834e876f4855cbce96521cd4ed04e4cab0b05f14e58a6243742a"
+    },
+    {
+      "command": "timeline.slipLeft5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "6748618d5da24da801fd927c5f96f8703fc4ce9e0b2e2882c27cd3610d8610b9"
+    },
+    {
+      "command": "timeline.slipRight5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "449a371d57143bd2684a2425387fed3edcf3eb0b411624d287f83105423ef87d"
+    },
+    {
+      "command": "timeline.slideLeft",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "ccfe37f3bc28e02448fbf0847dc5b4a6a382be8e36f3a1a42476d20d2d648b85"
+    },
+    {
+      "command": "timeline.slideRight",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "213a8934c62c838814213a3b87c75294d7b005c4dac27e65e6ef8eda6a3abfcb"
+    },
+    {
+      "command": "timeline.slideLeft5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "68e1702cdf3ce1dde2309e2fe183e3b34f8817ab72cbf77ad6c5008021f5bd3f"
+    },
+    {
+      "command": "timeline.slideRight5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "3127a81bc8e14e4ed8d5bc7d7339dbf3d46a2f87803f4ce4ed43d8d747316d14"
+    },
+    {
+      "command": "timeline.slip",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "ebad47adcf0fae40bb8f4809b96c85c7a0e5d6f3ca53586e8ff080cd646d2f01"
+    },
+    {
+      "command": "timeline.slide",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "b3d03b56ab4c33a5a399330ee1a51b00b8adf56d383e61ba220bc5c4c958b3f3"
+    },
+    {
+      "command": "clip.volumeUp",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "ffed97755f38ec6df26fcdc871bba43a4def2fb602bec6ad5fd804e1e450d469"
+    },
+    {
+      "command": "clip.volumeDown",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "712cfc280c7aebdbd29c31ec8d968ea7503da058977cec9c20f90e6820d9c9d9"
+    },
+    {
+      "command": "clip.volumeUpMany",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "565412921f92f2e7eb4ff3b1e59ce1a36aaac967e0534d3a5b471c2e991eb15e"
+    },
+    {
+      "command": "clip.volumeDownMany",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "7c99e02eba383c635e3618c6428f72953ac78d20289fc1f98a9cba68209f4f70"
+    },
+    {
+      "command": "clip.nudgeVolumeUp1",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "2fc1bbe73b50c45fc25ed344b180e4fa43bb829d10e657eb6066a1410d3fc87b"
+    },
+    {
+      "command": "clip.nudgeVolumeUp3",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "21b6671359d8077a21f9a32a54ed1954ed8b083343d281dc852086113acd310e"
+    },
+    {
+      "command": "clip.nudgeVolumeDown1",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "bf69b29940a409af20af6f5e574f49f0bda268c40a1442e0599f566fc8714cf4"
+    },
+    {
+      "command": "clip.nudgeVolumeDown3",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "045067e83e7781f74c531298cbe4ece6a13f6a732e525001a7d68c86c98fd242"
+    },
+    {
+      "command": "playhead.set",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "b7ba9cf97269f92c82689d41a002ae8c99fe8dc759879627bb228572f8832c0f"
+    },
+    {
+      "command": "playhead.step",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "f5caddaed9fee34fd472475015db940eb4032cc95fb648eab4fe62046e318479"
+    },
+    {
+      "command": "playhead.stepForward",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "da266ab3169e0e9017d54a8761712c3e15e1fb9c8f65b91f24c6388bced3956c"
+    },
+    {
+      "command": "playhead.stepBack",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "14c0927217687e9e5b95352f188daf48c33d275a37cfdda0e03634b26a52de64"
+    },
+    {
+      "command": "playhead.stepForward5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "5946c540ed1c6b5d01db099aec367c518b8cc3eab61eaff4af06af238e71b3a3"
+    },
+    {
+      "command": "playhead.stepBack5",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "573d84fffca64407cd098a06e2aa85449e6581403eb29f5b48ff665c66099e4b"
+    },
+    {
+      "command": "playhead.nextEdit",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "7b4dc1ebc73f03c0e509cac6696110959f2c55e303ba2833519e7b584b35eab0"
+    },
+    {
+      "command": "playhead.prevEdit",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "e87515d855d52f74399804694e4e376d934d6879e3bca4626dae919a21a65395"
+    },
+    {
+      "command": "playhead.nextEditAnyTrack",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "0694d2b187079ffa4ef340f333cd874a2db70c5e9fb5b3f081b886be5dffd256"
+    },
+    {
+      "command": "playhead.prevEditAnyTrack",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "1d976dab75c3f6b60398f72ab92d40a1863ec2bb959a1eadf5fb7fced76c0c93"
+    },
+    {
+      "command": "playhead.start",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "f1976b4256590a7399693e09a31b7fdf168eb7f31e759c95b792e2d2003ecd53"
+    },
+    {
+      "command": "playhead.end",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "2690c1625dedbc0ef15463fce76c36d1d57346061e52354a2c25d4411739191f"
+    },
+    {
+      "command": "playhead.selectedClipStart",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "bae2ee78276439edfd5381a23dbf20762e529c008e683f543a26340448826f52"
+    },
+    {
+      "command": "playhead.selectedClipEnd",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "8210ed67b923a4f59362599d07662f96089102224939f6c9f23b85309b5d27f2"
+    },
+    {
+      "command": "timeline.select",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "14d3616be72898ee0dbb6556c4d063e89a5dbe43024873f3c5b8c1102c4ed81e"
+    },
+    {
+      "command": "timeline.selectClipAtPlayhead",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "af6c387e738b62cf7d7f221b75c59f69871b1dfeb14efe394fd62f9061ac2e7c"
+    },
+    {
+      "command": "timeline.selectNextClip",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "0aa603c0405b0fd3b842011989c4ef6887e20a056510d76fa3ec81b36c43ff5a"
+    },
+    {
+      "command": "timeline.selectPrevClip",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "01c8c8055f222e21dfc00bddf870482e6666e2d4f9cc2e22f768b60c0dbe75cd"
+    },
+    {
+      "command": "edit.undo",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "949979a468fe4176f8c7cedfa5272657ff1642c07e7db8981aea0d921d01d0a2"
+    },
+    {
+      "command": "edit.redo",
+      "result": "PASS",
+      "error": "precondition_failed",
+      "editingRequestSent": false,
+      "receiptSha256": "4c7de2dfafb0133a4bba5ac12af570d7612e96b057b96a30e0e3d31b5833cce1"
+    }
+  ],
+  "receipts": {
+    "fixture": "e2568bf89e0eb178ea333e0b32e8e0dd133f756b6167ec4ea4e789b31d8ff8fc",
+    "edit": "40e6dcc00f59d35ecffcbb1702c6f962171959e60663c8bfbbc2f6081a217560",
+    "revision": "5f4ec904c0ef1793b3ad641b6d079f30bde632e5e34c7671912a915e6704b3a4"
+  },
+  "artifacts": {
+    "fixture/baseline.fcproj": "b64a19df814e44700ac0005e9b647ba55146077e5b752e13d953d66daef6086c",
+    "edit/preserved.fcproj": "31aedb02a94b044a4ec2930d0a9c73a422cfd836fb2a32a0301a834d1bad494d",
+    "edit/changed.fcproj": "236c8f08c5a8c9c13abde8611144574bdc760b89711788b0e17736724e7ea016",
+    "revision/restored.fcproj": "b62a04621008d992b73dce44e4c63a731e444c596a1f42b66eba6b84d8d75db3"
+  },
+  "scope": "Actual native headless and owned signed desktop bridge; no GUI gestures, media decode/render, creative or full666 qualification."
+}

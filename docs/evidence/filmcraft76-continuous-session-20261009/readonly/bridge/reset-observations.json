@@ -1,0 +1,12 @@
+[
+  {
+    "phase": "reset-reopen",
+    "receiptSha256": "805ad389dcb4c4fd3881f7e40f906d6494b1c7315a13c9c8d1aba312cc4389ff",
+    "result": "PASS",
+    "activeSequenceAfterReset": null,
+    "commands": [
+      "file.closeAllProjects",
+      "state.inspect"
+    ]
+  }
+]

@@ -1,0 +1,494 @@
+{
+  "schema": "filmcraft-owned-plan-batch/v1",
+  "mode": "headless",
+  "identityBindingSha256": "0b74eb237c0347cfadda1a0545b176e6448c92f6d790c763529c293b45ca5d4e",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sessionsStarted": 1,
+  "caseCount": 33,
+  "cases": [
+    {
+      "commands": [
+        "file.newProject",
+        "file.newSequence",
+        "file.newColorMatte",
+        "timeline.place",
+        "file.newColorMatte",
+        "timeline.place",
+        "file.saveAs",
+        "sequence.inspect",
+        "timeline.toggleTargetV1",
+        "timeline.toggleTargetV1",
+        "timeline.toggleTargetV2",
+        "timeline.toggleTargetV2",
+        "timeline.toggleTargetV3",
+        "timeline.toggleTargetV3",
+        "timeline.toggleTargetV4",
+        "timeline.toggleTargetV4",
+        "timeline.toggleTargetV5",
+        "timeline.toggleTargetV5",
+        "timeline.toggleTargetV6",
+        "timeline.toggleTargetV6",
+        "timeline.toggleTargetV7",
+        "timeline.toggleTargetV7",
+        "timeline.toggleTargetV8",
+        "timeline.toggleTargetV8",
+        "timeline.toggleTargetA1",
+        "timeline.toggleTargetA1",
+        "timeline.toggleTargetA2",
+        "timeline.toggleTargetA2",
+        "timeline.toggleTargetA3",
+        "timeline.toggleTargetA3",
+        "timeline.toggleTargetA4",
+        "timeline.toggleTargetA4",
+        "timeline.toggleTargetA5",
+        "timeline.toggleTargetA5",
+        "timeline.toggleTargetA6",
+        "timeline.toggleTargetA6",
+        "timeline.toggleTargetA7",
+        "timeline.toggleTargetA7",
+        "timeline.toggleTargetA8",
+        "timeline.toggleTargetA8",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleAllSourceVideo",
+        "timeline.toggleAllSourceVideo",
+        "timeline.toggleAllSourceAudio",
+        "timeline.toggleAllSourceAudio",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleTargetV1",
+        "timeline.moveVideoTargetsUp",
+        "timeline.moveVideoTargetsDown",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleTargetA2",
+        "timeline.moveAudioTargetsUp",
+        "timeline.moveAudioTargetsDown",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleMuteTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleMuteTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleSoloTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleSoloTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleOutputTargetedVideo",
+        "sequence.inspect",
+        "timeline.toggleOutputTargetedVideo",
+        "sequence.inspect",
+        "file.saveAs",
+        "timeline.toggleMuteTargetedAudio",
+        "timeline.toggleSoloTargetedAudio",
+        "timeline.toggleOutputTargetedVideo",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.open",
+        "sequence.inspect",
+        "timeline.toggleMuteTargetedAudio",
+        "timeline.toggleSoloTargetedAudio",
+        "timeline.toggleOutputTargetedVideo",
+        "sequence.inspect",
+        "timeline.toggleTargetV1",
+        "timeline.toggleTargetV1",
+        "timeline.toggleTargetV2",
+        "timeline.toggleTargetV2",
+        "timeline.toggleTargetV3",
+        "timeline.toggleTargetV3",
+        "timeline.toggleTargetV4",
+        "timeline.toggleTargetV4",
+        "timeline.toggleTargetV5",
+        "timeline.toggleTargetV5",
+        "timeline.toggleTargetV6",
+        "timeline.toggleTargetV6",
+        "timeline.toggleTargetV7",
+        "timeline.toggleTargetV7",
+        "timeline.toggleTargetV8",
+        "timeline.toggleTargetV8",
+        "timeline.toggleTargetA1",
+        "timeline.toggleTargetA1",
+        "timeline.toggleTargetA2",
+        "timeline.toggleTargetA2",
+        "timeline.toggleTargetA3",
+        "timeline.toggleTargetA3",
+        "timeline.toggleTargetA4",
+        "timeline.toggleTargetA4",
+        "timeline.toggleTargetA5",
+        "timeline.toggleTargetA5",
+        "timeline.toggleTargetA6",
+        "timeline.toggleTargetA6",
+        "timeline.toggleTargetA7",
+        "timeline.toggleTargetA7",
+        "timeline.toggleTargetA8",
+        "timeline.toggleTargetA8",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleAllSourceVideo",
+        "timeline.toggleAllSourceVideo",
+        "timeline.toggleAllSourceAudio",
+        "timeline.toggleAllSourceAudio",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleTargetV1",
+        "timeline.moveVideoTargetsUp",
+        "timeline.moveVideoTargetsDown",
+        "timeline.toggleAllVideoTargets",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleTargetA2",
+        "timeline.moveAudioTargetsUp",
+        "timeline.moveAudioTargetsDown",
+        "timeline.toggleAllAudioTargets",
+        "timeline.toggleMuteTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleMuteTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleSoloTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleSoloTargetedAudio",
+        "sequence.inspect",
+        "timeline.toggleOutputTargetedVideo",
+        "sequence.inspect",
+        "timeline.toggleOutputTargetedVideo",
+        "sequence.inspect",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV1"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV2"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV3"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV4"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV6"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV7"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetV8"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA1"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA2"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA3"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA4"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA6"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA7"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleTargetA8"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleAllVideoTargets"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleAllAudioTargets"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleAllSourceVideo"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleAllSourceAudio"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.moveVideoTargetsUp"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.moveVideoTargetsDown"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.moveAudioTargetsUp"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.moveAudioTargetsDown"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleMuteTargetedAudio"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleSoloTargetedAudio"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.toggleOutputTargetedVideo"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "command.list"
+      ],
+      "expectedRefusal": false
+    }
+  ],
+  "pids": [
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    },
+    {
+      "mcp": 59947,
+      "desktop": null
+    }
+  ],
+  "singleProcessIdentity": true,
+  "ownedProcessesStopped": true,
+  "desktopStopped": null,
+  "listenerOwnedByPID": null,
+  "tainted": false,
+  "elapsedSeconds": 3.426483042014297,
+  "scope": "QA owned continuous plans within fixed permissions; no general interactive session API"
+}

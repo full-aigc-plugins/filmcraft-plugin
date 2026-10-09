@@ -1,0 +1,195 @@
+{
+  "binding": {
+    "pluginSha": "13c83990cc451c47a894763fe24ccbb9d99886c5",
+    "sourceSha": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+    "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+    "runtimeVersion": "0.2.0-craft.5",
+    "platform": "darwin-arm64",
+    "mode": "bridge"
+  },
+  "queries": [
+    {
+      "command": "jobs.list",
+      "result": "PASS",
+      "createdResultSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "reopenedResultSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "command": "perf.stats",
+      "result": "PASS",
+      "createdResultSha256": "10f5eccb07a04983a9ae77f9eed1052233066c707ab0eb916e4bf8358d87fbd6",
+      "reopenedResultSha256": "483804a2ba65be4879f79b9b3424ba8d0b3ff39d21200b1fa3a1451e8cd40b19"
+    },
+    {
+      "command": "source.inspect",
+      "result": "PASS",
+      "createdResultSha256": "4885b5b4ad6d93ad6563e1e842868b1377393dc8d8182e731ed81799dbcfdb4b",
+      "reopenedResultSha256": "4885b5b4ad6d93ad6563e1e842868b1377393dc8d8182e731ed81799dbcfdb4b"
+    },
+    {
+      "command": "command.list",
+      "result": "PASS",
+      "createdResultSha256": "cef8371e67272dd96cbe0213801ac8f23db745389c8a834747ea5ea52d843333",
+      "reopenedResultSha256": "06bc90536bea10537d2feb9ec6fba4a5d460765e241050362ee09d015e2b8cc6"
+    },
+    {
+      "command": "project.inspect",
+      "result": "PASS",
+      "createdResultSha256": "790519b336287749ea3ee4c62c42a47a7cc8ace7cf22e66facd270e4bb9e7b45",
+      "reopenedResultSha256": "680021bf127408caa4760967f3c7016b341837c10e55066b683f72c995f56251"
+    },
+    {
+      "command": "state.inspect",
+      "result": "PASS",
+      "createdResultSha256": "a1692eb4549eaf15f6b5d8f0fcc7104ec8ef756a06c44f3ec1a7797b219493d4",
+      "reopenedResultSha256": "0aea4ba3e4bc5fb702354f2a4abaa9391928e1021b85bbe3cc38a158bbe04682"
+    },
+    {
+      "command": "history.list",
+      "result": "PASS",
+      "createdResultSha256": "7dc2dde3dd019a92824b8e120fdcabc4286f2a3bbeaa1f25efa7e03e02eadee2",
+      "reopenedResultSha256": "940210a2d0d5f7c5996966909a4856d09e47766ffb59461c9e9b747c1cee91e1"
+    },
+    {
+      "command": "mediaCache.info",
+      "result": "PASS",
+      "createdResultSha256": "11afc0ec02ed3ef32800976c4cd562b03367e077bb27ea318a0ddfe6199a7d41",
+      "reopenedResultSha256": "11afc0ec02ed3ef32800976c4cd562b03367e077bb27ea318a0ddfe6199a7d41"
+    },
+    {
+      "command": "lut.list",
+      "result": "PASS",
+      "createdResultSha256": "6d305695cfcdd2976ae4c8f73389780fdab9d5fabd1c1ad6399570565a6d1736",
+      "reopenedResultSha256": "6d305695cfcdd2976ae4c8f73389780fdab9d5fabd1c1ad6399570565a6d1736"
+    },
+    {
+      "command": "presets.list",
+      "result": "PASS",
+      "createdResultSha256": "97ed000fedc2b306150048ee97a913a4e64bf54cc53721c56c0eabdd610c12ed",
+      "reopenedResultSha256": "97ed000fedc2b306150048ee97a913a4e64bf54cc53721c56c0eabdd610c12ed"
+    },
+    {
+      "command": "export.formats",
+      "result": "PASS",
+      "createdResultSha256": "5ac504ac9c7280382949c970b27babce03a7393131704a7279cb6c605adbec84",
+      "reopenedResultSha256": "5ac504ac9c7280382949c970b27babce03a7393131704a7279cb6c605adbec84"
+    },
+    {
+      "command": "export.queue.list",
+      "result": "PASS",
+      "createdResultSha256": "5295526b6cd137d484c4a25215cc3824a3ffc5da414e1b21bbf03509c3969054",
+      "reopenedResultSha256": "5295526b6cd137d484c4a25215cc3824a3ffc5da414e1b21bbf03509c3969054"
+    },
+    {
+      "command": "transcript.models",
+      "result": "PASS",
+      "createdResultSha256": "96653922482af628fadf1e0401c0577669ad4d522594d2921f1e80c710d2fac7",
+      "reopenedResultSha256": "96653922482af628fadf1e0401c0577669ad4d522594d2921f1e80c710d2fac7"
+    },
+    {
+      "command": "project.columns.list",
+      "result": "PASS",
+      "createdResultSha256": "868088e5e97d24f79507a49c266ec0f7c82c3d12c21fe3f63a9fc0ded0a697e7",
+      "reopenedResultSha256": "868088e5e97d24f79507a49c266ec0f7c82c3d12c21fe3f63a9fc0ded0a697e7"
+    },
+    {
+      "command": "project.viewPreset.list",
+      "result": "PASS",
+      "createdResultSha256": "6dab317a1a14a3163871ac946c159b1225c2b1a90dd45fbc0eedd4b2c6d1ba1e",
+      "reopenedResultSha256": "6dab317a1a14a3163871ac946c159b1225c2b1a90dd45fbc0eedd4b2c6d1ba1e"
+    }
+  ],
+  "parameterRefusals": [
+    {
+      "command": "jobs.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "perf.stats",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "source.inspect",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "command.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "project.inspect",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "state.inspect",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "history.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "mediaCache.info",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "lut.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "presets.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "export.formats",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "export.queue.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "transcript.models",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "project.columns.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    },
+    {
+      "command": "project.viewPreset.list",
+      "error": "invalid_native_parameters",
+      "beforeInstallation": true
+    }
+  ],
+  "sourceProjectSha256": "8e3dde2d93fce4f9714a7890b6b4d1733e166458fcca4a1e5d4af7e434ed2541",
+  "projectPreserved": true,
+  "normalization": "Only project.name and project.root.name, known native save-as filename behavior. No timeline/media/effect/settings normalization.",
+  "catalogContractDrift": [
+    {
+      "command": "file.importImageSequence",
+      "expected": "{\"path\":str,\"bin\":binId?,\"frameRate\":{\"num\":i64,\"den\":i64}?}",
+      "actual": "{\"path\":str,\"bin\":binId?}"
+    }
+  ],
+  "modelCapabilityAvailable": false,
+  "modelsRemainEmpty": true,
+  "ownedDesktopStopped": true,
+  "rawCreateReceiptSha256": "0faa89d3e0036dede0708979d86fd303c2e0794b965aad5d614a754fcf683df9",
+  "rawReopenReceiptSha256": "1f0ebc691b166a03559588836b265bbc96b9158da4fd9e52d118aa60e1a54ddf",
+  "desktopSha256": "f47862a07ce43aa3d3bc14344dc2d9015cc3ca5a21f9868271007cba8f7f99fa"
+}

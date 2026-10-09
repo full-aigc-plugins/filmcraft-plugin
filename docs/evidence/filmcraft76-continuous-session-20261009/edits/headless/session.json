@@ -1,0 +1,1141 @@
+{
+  "schema": "filmcraft-owned-plan-batch/v1",
+  "mode": "headless",
+  "identityBindingSha256": "9580f5dc6d7a06cc55d7a8167661cf9000a4a906f86f525584077b17380e3dc8",
+  "runtimeSha256": "b0cba926af61949ce03d9585138c30df36ab952e413d22fa3b5c4d1687867b8f",
+  "sessionsStarted": 1,
+  "caseCount": 52,
+  "cases": [
+    {
+      "commands": [
+        "file.newProject",
+        "file.newSequence",
+        "file.newColorMatte",
+        "timeline.place",
+        "timeline.place",
+        "timeline.place",
+        "timeline.place",
+        "file.newBarsAndTone",
+        "timeline.place",
+        "sequence.inspect",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.open",
+        "timeline.select",
+        "timeline.nudgeLeft",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeRight",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeLeft5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeRight5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeUp",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeDown",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipLeft",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipRight",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipLeft5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipRight5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideLeft",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideRight",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideLeft5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideRight5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slip",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slide",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeUp",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeDown",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeUpMany",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeDownMany",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeUp1",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeUp3",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeDown1",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeDown3",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.set",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.step",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepForward",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepBack",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepForward5",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepBack5",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.nextEdit",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.prevEdit",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.nextEditAnyTrack",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.prevEditAnyTrack",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.start",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.end",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.selectedClipStart",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.selectedClipEnd",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.select",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.selectClipAtPlayhead",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.selectNextClip",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.selectPrevClip",
+        "sequence.inspect",
+        "file.saveAs",
+        "timeline.select",
+        "timeline.nudgeRight",
+        "timeline.select",
+        "clip.volumeUp",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.open",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeLeft",
+        "timeline.select",
+        "clip.volumeDown",
+        "timeline.select",
+        "timeline.nudgeLeft",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeRight",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeLeft5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeRight5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeUp",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.nudgeDown",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipLeft",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipRight",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipLeft5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slipRight5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideLeft",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideRight",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideLeft5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slideRight5",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slip",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "timeline.slide",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeUp",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeDown",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeUpMany",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.volumeDownMany",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeUp1",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeUp3",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeDown1",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "clip.nudgeVolumeDown3",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "edit.redo",
+        "sequence.inspect",
+        "edit.undo",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.set",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.step",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepForward",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepBack",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepForward5",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.stepBack5",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.nextEdit",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.prevEdit",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.nextEditAnyTrack",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.prevEditAnyTrack",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.start",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.end",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.selectedClipStart",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "playhead.selectedClipEnd",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.select",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.selectClipAtPlayhead",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.selectNextClip",
+        "sequence.inspect",
+        "timeline.select",
+        "playhead.set",
+        "timeline.selectPrevClip",
+        "sequence.inspect",
+        "file.saveAs"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "timeline.nudgeLeft"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.nudgeRight"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.nudgeLeft5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.nudgeRight5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.nudgeUp"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.nudgeDown"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slipLeft"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slipRight"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slipLeft5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slipRight5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slideLeft"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slideRight"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slideLeft5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slideRight5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slip"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.slide"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.volumeUp"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.volumeDown"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.volumeUpMany"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.volumeDownMany"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.nudgeVolumeUp1"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.nudgeVolumeUp3"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.nudgeVolumeDown1"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "clip.nudgeVolumeDown3"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.set"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.step"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.stepForward"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.stepBack"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.stepForward5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.stepBack5"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.nextEdit"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.prevEdit"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.nextEditAnyTrack"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.prevEditAnyTrack"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.start"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.end"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.selectedClipStart"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "playhead.selectedClipEnd"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.select"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.selectClipAtPlayhead"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.selectNextClip"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "timeline.selectPrevClip"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "edit.undo"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "edit.redo"
+      ],
+      "expectedRefusal": true
+    },
+    {
+      "commands": [
+        "file.closeAllProjects",
+        "state.inspect"
+      ],
+      "expectedRefusal": false
+    },
+    {
+      "commands": [
+        "command.list"
+      ],
+      "expectedRefusal": false
+    }
+  ],
+  "pids": [
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    },
+    {
+      "mcp": 35132,
+      "desktop": null
+    }
+  ],
+  "singleProcessIdentity": true,
+  "ownedProcessesStopped": true,
+  "desktopStopped": null,
+  "listenerOwnedByPID": null,
+  "tainted": false,
+  "elapsedSeconds": 13.940536834008526,
+  "scope": "QA owned continuous plans within fixed permissions; no general interactive session API"
+}

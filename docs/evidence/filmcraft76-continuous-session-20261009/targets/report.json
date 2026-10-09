@@ -1,0 +1,28 @@
+{
+  "schema": "filmcraft-target-command-contexts/v1",
+  "result": "PASS",
+  "driverSha256": "cac0bd68701ac208863d437ba468396c6b5cc30f982844237b55e6d1944a3416",
+  "sessionHelperSha256": "394302ced9de2a963292107bbd3ee118902fb036292e23edd925ab4748b536fb",
+  "results": [
+    {
+      "mode": "headless",
+      "result": "PASS",
+      "commands": 27,
+      "negativeCases": 27,
+      "matrixSha256": "18bf7eaef66400e5696e72a35b1c77c6e4bf09072c9344fd32ef2d526b6f4121",
+      "observationsSha256": "4c66dbe186fd0b9ffad9a694a31d2851f904fbcafcb4c03b1c28f7807a10ff36",
+      "sessionProofSha256": "a0a4d4b0d407a5580a11b724573416f487b68859e96637dc7db2dccffac46697"
+    },
+    {
+      "mode": "bridge",
+      "result": "PASS",
+      "commands": 27,
+      "negativeCases": 27,
+      "matrixSha256": "4dee289e1eccd9b28fb53c7fd9714935ffd0883d42619d52e6cd1a77bbba0322",
+      "observationsSha256": "52b2803995696fd113be1ffa44e2bc46ff90997322c43bd448da30b748f35398",
+      "sessionProofSha256": "3bbc861a0ea9860f4a3c207f825fe97c047516abd487cebee0c2d7ff92beacf4"
+    }
+  ],
+  "fullCommandAcceptance": "NOT_PROVEN",
+  "remainingTask": "8.3"
+}

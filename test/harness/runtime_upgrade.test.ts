@@ -117,3 +117,31 @@ test('authorized maintenance passes its independent roots to native capability p
   assert.equal(existsSync(f.options.runtimeHome),false);
  } finally {PythonWorkflowRunner.prototype.prepare=original;}
 });
+
+test('maintenance candidate and ledger reads refuse outside roots before parsing or authorization',t=>{
+ const f=setup(t),outside=workspace(t);let queried=0;
+ const candidate=join(outside,'untrusted-candidate.json');writeFileSync(candidate,'not JSON');
+ const outsideLedger=join(outside,'private.sqlite');const db=new TaskLedger(outsideLedger);db.close();
+ const before=readFileSync(outsideLedger);
+ for(const patch of [{candidateFile:candidate},{ledgerFile:outsideLedger}]){
+  const service=new RuntimeUpgrade({...f.options,...patch},()=>{queried++;throw new Error('unexpected_authorization');});
+  assert.throws(()=>service.probe({authorizationRef:'grant',authorizationScopeSha256:hash()}),/permission_read_denied/);
+ }
+ assert.equal(queried,0);assert.deepEqual(readFileSync(outsideLedger),before);assert.equal(existsSync(f.options.runtimeHome),false);
+});
+test('maintenance selection requires ledger write access while read-only subject remains available',t=>{
+ const f=setup(t),outside=workspace(t),ledger=join(outside,'read-only.sqlite');new TaskLedger(ledger).close();
+ const options={...f.options,ledgerFile:ledger,permissions:{...f.options.permissions,readRoots:[f.root,outside].sort()}};
+ const before=readFileSync(ledger),service=new RuntimeUpgrade(options);
+ assert.match(service.probeSubject().identitySha256,/^[a-f0-9]{64}$/);
+ assert.throws(()=>service.select({}, {authorizationRef:'grant',authorizationScopeSha256:hash()}),/permission_write_denied/);
+ assert.deepEqual(readFileSync(ledger),before);assert.equal(existsSync(f.options.runtimeHome),false);
+});
+test('maintenance CLI refuses an outside probe receipt before reading its malformed content',t=>{
+ const f=setup(t),outside=workspace(t),probe=join(outside,'private-probe.json');writeFileSync(probe,'not JSON');
+ const policy=join(f.root,'permissions.json');writeFileSync(policy,JSON.stringify(f.options.permissions));
+ const cli=new URL('../../src/cli/runtime.ts',import.meta.url).pathname;
+ const done=spawnSync(process.execPath,[cli,'subject','--candidate',f.candidate,'--plan',f.plan,'--ledger',f.file,'--runtime-home',f.options.runtimeHome,'--permissions',policy,'--probe',probe],{encoding:'utf8'});
+ assert.equal(done.status,1);assert.equal(JSON.parse(done.stdout).error.code,'permission_read_denied');
+ assert.equal(existsSync(f.options.runtimeHome),false);
+});

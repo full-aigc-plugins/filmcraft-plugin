@@ -23,7 +23,8 @@ export class RuntimeUpgrade{
  constructor(options:UpgradeOptions,authorize?:Authorizer){this.options={...options,permissions:options.permissions?requirePermissions(options.permissions):undefined};this.authorize=authorize;}
  private context(){
   const permissions=requirePermissions(this.options.permissions);
-  requireRead(this.options.planFile,permissions);requireWrite(this.options.runtimeHome,permissions);
+  requireRead(this.options.candidateFile,permissions);requireRead(this.options.planFile,permissions);
+  requireRead(this.options.ledgerFile,permissions);requireWrite(this.options.runtimeHome,permissions);
   const c=readRuntimeCandidate(this.options.candidateFile),skill=c.skillDirectory;
   const lock=read(join(skill,'scripts/runtime.lock.json'));
   const platformKey=process.platform==='darwin'?'darwin-'+process.arch:process.platform+'-'+process.arch;
@@ -78,6 +79,7 @@ export class RuntimeUpgrade{
  }
  /** 排空事务持有期间重新实测；篡改回执、探测漂移或授权撤销均不发布新选择。 */
  select(probe:any,request:AuthorizationRequest,rollbackGeneration?:number){
+  requireWrite(this.options.ledgerFile,requirePermissions(this.options.permissions));
   const context=this.checked(probe),subject=this.selectionSubject(probe,rollbackGeneration);
   requireAuthorization(this.authorize,request,subject);
   const ledger=new TaskLedger(context.ledgerPath);

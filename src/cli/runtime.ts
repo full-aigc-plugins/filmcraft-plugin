@@ -1,4 +1,4 @@
-import { requirePermissions } from '../support/execution_permissions.ts';
+import { requirePermissions, requireRead, requireWrite } from '../support/execution_permissions.ts';
 import {AssetPreflightRefusal} from '../adapters/asset_refusal.ts';
 import {ClipTimingRefusal} from '../adapters/clip_refusal.ts';
 import { parseArgs } from 'node:util';
@@ -21,7 +21,9 @@ function main(){
  if(p[0]==='probe-subject'){console.log(JSON.stringify(service.probeSubject()));return;}
  const grant={authorizationRef:v['authorization-ref']!,authorizationScopeSha256:v['authorization-scope-sha256']!};
  if(p[0]==='probe'){console.log(JSON.stringify(service.probe(grant)));return;}
- check(v.probe,'invalid_runtime_arguments');const path=resolve(v.probe),probe=parseJson(readBoundFile(dirname(path),basename(path)).toString('utf8'));
+ check(v.probe,'invalid_runtime_arguments');
+ if(p[0]==='activate'||p[0]==='rollback'){requireWrite(v.ledger,permissions);}
+ const path=requireRead(resolve(v.probe),permissions),probe=parseJson(readBoundFile(dirname(path),basename(path)).toString('utf8'));
  const generation=v.generation===undefined?undefined:Number(v.generation);
  if(p[0]==='subject'){console.log(JSON.stringify(service.selectionSubject(probe,generation)));return;}
  check(p[0]==='rollback'?generation!==undefined:generation===undefined,'invalid_runtime_arguments');

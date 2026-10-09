@@ -1,0 +1,13 @@
+{
+  "schema": "filmcraft-maintenance-readonly-ledger-audit/v1",
+  "result": "BEHAVIOR_RED_CONFIRMED",
+  "sourceRevision": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "actualNativeProbe": true,
+  "readonlyLedgerProbePreserved": true,
+  "activation": "ledger mutated outside write root",
+  "ledgerPreserved": false,
+  "skillPreserved": true,
+  "runtimeBinaryPreserved": true,
+  "inputPreserved": true,
+  "scope": "Actual owned fixture grants and ledger; source candidate is not fixed new-release acceptance."
+}

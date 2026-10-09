@@ -1,0 +1,27 @@
+{
+  "schema": "filmcraft-maintenance-path-roots-candidate/v1",
+  "result": "PASS",
+  "layer": "candidate",
+  "fixed75BehaviorRed": "actual authorized activation writes owned read-only ledger outside write roots",
+  "targetTests": 13,
+  "targetTestsSkipped": 0,
+  "redLogSha256": "dcdfdc16cfc33acb659a967533f48304eb7d2a93096ca94e5e12f18ebb69c5c5",
+  "greenLogSha256": "470407e5918cd251f568866f480130f9b2b195c64c458ec2b2c8ddc920270c2a",
+  "filesSha256": {
+    "fixed75-behavior-red.json": "5d6dd314b4baea90eea3abdefd0a81747d83106ecf7cccad22e973500ef46ada",
+    "candidate-readonly-ledger.json": "8dcac03215d02fecbb011423a6457cd06329ce7a2dabe8ecd7196d4a12f512f7",
+    "candidate-positive-maintenance.json": "b671ba85e5d1e5330056680293d1a4774565d3ae557c244c6796bb74c4a6714f"
+  },
+  "fixed76Acceptance": "NOT_RUN",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "remainingTasks": 7,
+  "sourceFilesSha256": {
+    "src/adapters/runtime_upgrade.ts": "93dde599610d4b8680c12e19b9433f8efcb7f7342104f15a8bcb43c324a1f586",
+    "src/cli/runtime.ts": "fd51305e3bd1098e687d1212a813a86d4ff66670f601b5fa9d701b70f58be9f4",
+    "test/harness/runtime_upgrade.test.ts": "f72464acc5ff001cd238a774e6d93a5c78728940f1c5f463b8072a53b7d27f82"
+  },
+  "driverSha256": {
+    "verify-maintenance-readonly-ledger.mjs": "33a699940569258c563ba17cbc43d6d534ff2413007e5f11cd62a5fc1d4db1b8",
+    "verify-maintenance-path-positive-candidate.mjs": "d46e850a611cd73ddfc51238addaa7ce8de3b18f3e1df343bb90c75eb723965a"
+  }
+}

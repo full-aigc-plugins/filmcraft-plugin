@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.76 adds maintenance candidate/ledger/probe read-root checks and activation/rollback ledger write-root checks before parsing or authorization. Actual fixed75 read-only-ledger mutation is retained as behavior red;13 target tests and candidate native positive/refusal flows pass. Source57 is unchanged. Fixed76 installation acceptance and all7 remaining full-V1 tasks stay open. [Candidate evidence](docs/evidence/maintenance-path-roots-candidate-20261009/report.json).
+
 2026-10-09: task9.9 is complete for fixed75/source57. Actual authenticated Codex0.162.0-alpha.2 selects and reads the expected installed skill in all15 fresh read-only routing cases;13 independent native businesses pass in102.290s. All232 skill Markdown files,337 local links and deterministic shared resources pass. CLI147 model incompatibility is retained as an environment refusal. Connection-scoped extra-root loading does not qualify all plugin host namespaces. Seven full-V1 tasks remain open. [Acceptance](docs/evidence/filmcraft75-fixed-skill-routing-20261009/acceptance.json).
 
 dev.75 retains published source57 and repairs the admission QA driver to bind independent trusted roots into preparation, exact grants and public execution. The dev.74 published failure remains unchanged; corrected external fixed74 native admission, protected-cache refusal and fresh cold-model ASR evidence are recorded separately. Eight full-V1 tasks remain open; fixed75 installation verification is pending.
@@ -73,7 +75,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.75` / `filmcraft-skills@v0.1.0-dev.57`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.76` / `filmcraft-skills@v0.1.0-dev.57`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -97,7 +99,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.75`; skill source: `0.1.0-dev.57`; 13 independent skills.
+Current plugin: `0.1.0-dev.76`; skill source: `0.1.0-dev.57`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -201,7 +203,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.75 |
+| Metadata version | 0.1.0-dev.76 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.57 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |

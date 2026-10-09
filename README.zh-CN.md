@@ -1,6 +1,6 @@
 # FilmCraft Agent Plugin
 
-dev.77 锁定源58，新增公开任务级JSONL／Python会话：连续计划共享同一所属MCP与可选签名桌面，保留逐计划检查和回执，失败／unknown／身份变化后停止且不重放。源码候选headless／bridge通过；固定77安装验收待完成。[任务会话](skills/filmcraft-use/references/task-session.md)。
+dev.77 锁定源58，新增公开任务级JSONL／Python会话：连续计划共享同一所属MCP与可选签名桌面，保留逐计划检查和回执，失败／unknown／身份变化后停止且不重放。固定77实际安装副本headless／bridge各四个连续计划、固定PID与完整工程／源保全通过，1974个发布文件字节不变；9.36完成，七项完整V1门禁仍开放。[任务会话](skills/filmcraft-use/references/task-session.md)。
 
 固定76片段属性增量新增15条有界命令观察：累计130条，536条仍仅发现。300个完整原生工程检查点核验撤销重做、组合属性重开返工及非目标保全；六个WAV独立验证-3dB音频增益和恢复PCM一致。光流与场处理画面算法继续未验收。[证据](docs/evidence/filmcraft76-clip-properties-20261009/report.json)。
 

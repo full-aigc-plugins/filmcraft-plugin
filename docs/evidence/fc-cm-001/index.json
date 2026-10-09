@@ -16,5 +16,7 @@
     "headless": "frameRate supported by contract",
     "bridge": "frameRate absent from signed desktop contract; request refused before first edit"
   },
-  "remainingTasks": 7
+  "remainingTasks": 7,
+  "taskSessionEvidence": "docs/evidence/filmcraft77-task-session-20261009/report.json",
+  "taskSessionScope": "Fixed77 cross-plan instance lifetime only; does not requalify all prior fixed76 bounded command contexts or close full8.3."
 }

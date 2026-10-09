@@ -1,0 +1,87 @@
+{
+  "schema": "filmcraft-fixed-task-session-acceptance/v1",
+  "result": "PASS",
+  "tag": "v0.1.0-dev.77",
+  "commit": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+  "sourceRef": "v0.1.0-dev.58",
+  "sourceCommit": "3a2cc1568c2e23fdd1fabaea24c44bf94f932be7",
+  "zipSha256": "5b95c84361d6975c35f6c91aaf35edcf2367fe00274053b82e11aabc85e6c017",
+  "zipBytes": 9668852,
+  "ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 37876336524,
+      "headSha": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37876336524"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37876336523,
+      "headSha": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37876336523"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37876336467,
+      "headSha": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37876336467"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37876336451,
+      "headSha": "a6ae1b15640dfd6000b10b5e13b86336687286c4",
+      "status": "completed",
+      "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/actions/runs/37876336451"
+    }
+  ],
+  "host": {
+    "result": "PASS",
+    "version": "codex-cli 0.153.4",
+    "skills": 13,
+    "loadingErrors": 0,
+    "receiptSha256": "9fe95753ec66751c7e6d6ad27ba1949a2290fb483c723079b10446bce61055e6"
+  },
+  "installedPreservation": {
+    "result": "PASS",
+    "files": 1974,
+    "zipSha256": "5b95c84361d6975c35f6c91aaf35edcf2367fe00274053b82e11aabc85e6c017",
+    "scope": "all fixed tag ZIP file bytes preserved in actual installed copy after native task session checks"
+  },
+  "nativeTaskSession": {
+    "result": "PASS",
+    "modes": [
+      "headless",
+      "bridge"
+    ],
+    "plansPerMode": 4,
+    "mcpStartsPerMode": 1,
+    "bridgeDesktopStarts": 1,
+    "reportSha256": "3e2ce23173acc9dfdae29e2f66366a2b133426921caf2a05ec2d3183db3ec967",
+    "sourceFullProjectPreservation": "PASS"
+  },
+  "sourceTests": {
+    "pass": 254,
+    "environmentNotRun": 39
+  },
+  "pluginTests": {
+    "pythonPass": 104,
+    "nodePass": 185,
+    "nodeEnvironmentNotRun": 3
+  },
+  "fullV1": "NOT_PROVEN",
+  "remainingFullTasks": 7,
+  "scope": "Public cross-plan task session, isolated fixed-tag installation and real native checks. Old single-run lifecycle remains compatible. Not full command, secret-consumer, other host/platform or creative qualification.",
+  "nativeReport": "native.json",
+  "nativeReportSha256": "3e2ce23173acc9dfdae29e2f66366a2b133426921caf2a05ec2d3183db3ec967",
+  "installedEntryPoints": {
+    "result": "PASS",
+    "independentEntries": 13,
+    "identicalTaskSessionSha256": "2a149a3e20f6f61cb12d282c9dc54602e94b889bc94f7b8126a3468e12c93ce2",
+    "scope": "each installed standalone entry can load and show CLI help; no native acceptance implied"
+  },
+  "task": "9.36",
+  "taskStatus": "COMPLETE"
+}

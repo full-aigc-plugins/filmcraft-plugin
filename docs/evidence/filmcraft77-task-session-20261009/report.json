@@ -64,12 +64,14 @@
   },
   "sourceTests": {
     "pass": 254,
-    "environmentNotRun": 39
+    "environmentNotRun": 39,
+    "layer": "local macOS source gates"
   },
   "pluginTests": {
     "pythonPass": 104,
     "nodePass": 185,
-    "nodeEnvironmentNotRun": 3
+    "nodeEnvironmentNotRun": 3,
+    "layer": "local and GitHub Actions source gates"
   },
   "fullV1": "NOT_PROVEN",
   "remainingFullTasks": 7,
@@ -83,5 +85,18 @@
     "scope": "each installed standalone entry can load and show CLI help; no native acceptance implied"
   },
   "task": "9.36",
-  "taskStatus": "COMPLETE"
+  "taskStatus": "COMPLETE",
+  "sourceCiTests": {
+    "platform": "Linux GitHub Actions",
+    "counts": {
+      "tests": 293,
+      "pass": 251,
+      "fail": 0,
+      "failureEvents": 0,
+      "environmentNotRun": 42
+    },
+    "reportSha256": "9b07b1e72c377f3d5657bba0fbfaaa3bf89330b9a09356104cfeaf293b29d3b0",
+    "runId": 37876044233
+  },
+  "pluginCiReportSha256": "fe7c5995aa992b614fb82e2fc5691decab29f5a6085be370ee257c28588f9cf9"
 }

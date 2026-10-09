@@ -1,0 +1,1481 @@
+{
+  "schema": "filmcraft-fixed-maintenance-boundaries/v1",
+  "result": "PASS",
+  "pluginVersion": "0.1.0-dev.75",
+  "sourceLockSha256": "a6742f6c19b1c9fc8a4ef8ebd97e9670c799d7a9ef0f71d58fae1f6dc72ca441",
+  "publicRefusals": [
+    {
+      "skill": "filmcraft-cli",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "missing-flag",
+      "result": "PASS",
+      "error": "model_maintenance_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "wrong-command",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "extra-project",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "extra-param",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "duplicate-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "invalid-model",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "relative-data",
+      "result": "PASS",
+      "error": "invalid_model_maintenance_request",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "missing-data",
+      "result": "PASS",
+      "error": "model_maintenance_directory_required",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "ungranted-skill",
+      "result": "PASS",
+      "error": "permission_write_denied",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    },
+    {
+      "skill": "filmcraft-use",
+      "case": "protected-runtime",
+      "result": "PASS",
+      "error": "model_maintenance_protected_directory",
+      "beforeInstallation": true,
+      "canaryEchoed": false
+    }
+  ],
+  "actualSystemSandbox": [
+    {
+      "skill": "filmcraft-cli",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-audio",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-color",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-export",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-media",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-motion",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-multicam",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-project",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-setup",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-subtitles",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-timeline",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-cli-transcript",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-use",
+      "mode": "editing",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": false
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    },
+    {
+      "skill": "filmcraft-use",
+      "mode": "maintenance",
+      "result": "PASS",
+      "observed": {
+        "allowed": true,
+        "outside": false,
+        "protected": false,
+        "network": true
+      },
+      "unsupportedPlatformsRefused": [
+        "linux",
+        "win32"
+      ],
+      "helperSha256": "b710d7c9aae7d11f31fde2bb4d09bf92e13c6d866161e8b1e23b6e1ad698cbc6"
+    }
+  ],
+  "scope": "Actual frozen installed public CLI pre-install refusals plus actual macOS sandbox child-process file/network probes using installed helpers; loopback only, no external request or model download. These probes supplement rather than replace existing actual native CLI/model evidence.",
+  "driverSha256": "765c2225024e2b646109ada6fe8673594c92d0f2393333bbc38457a6e52fbad9",
+  "fullFC_RL_002": "NOT_PROVEN",
+  "pluginRef": "v0.1.0-dev.75",
+  "pluginCommit": "4acdc208736180937cf3f109ab888f5644130664",
+  "sourceRef": "v0.1.0-dev.57",
+  "sourceCommit": "abbd7bf984312c72f065b6a4c96e8816389f0183",
+  "frozenInstalledFilesPreserved": 1826,
+  "firstRun": {
+    "reportSha256": "5e9784b66858dd37789f701c9fac242068ca7734a5d09817e586c8c42328a393",
+    "publicRefusals": 130,
+    "actualSandboxCases": 26,
+    "result": "PASS"
+  },
+  "producerScope": "Current main QA driver; not included inside frozen dev.75 release ZIP."
+}

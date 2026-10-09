@@ -85,9 +85,10 @@
       "evidence": [
         "../filmcraft74-fixed-supplement-20261009/fixed74-raw-cli.json",
         "../filmcraft74-fixed-supplement-20261009/cold-model-retry.json",
-        "../filmcraft75-fixed-skill-routing-20261009/discovery-and-missing-model.json"
+        "../filmcraft75-fixed-skill-routing-20261009/discovery-and-missing-model.json",
+        "../filmcraft75-maintenance-boundaries-20261009.json"
       ],
-      "scopeOrGap": "52 exact native metadata discoveries pass;52 appended-project variants refuse without roots before installation. Fixed74 raw39/native protected-write39 and cold model inference are reused only after exact source57 byte checks. Full network/write-maintenance negative vector binding still pending."
+      "scopeOrGap": "52 exact native metadata discoveries pass;52 appended-project variants refuse without roots before installation. Fixed74 raw39/native protected-write39 and cold model inference are reused only after exact source57 byte checks. Full network/write-maintenance negative vector binding still pending. Fixed75 adds130 actual installed pre-install maintenance refusals and26 actual installed-helper system sandbox file/network probes, repeated with the checked-in QA driver; all1826 installed files match frozen tag. Full adversarial native command and maintenance-scenario mapping remains pending."
     },
     {
       "id": "FC-RL-002-REGISTRY-PARAMETERS",

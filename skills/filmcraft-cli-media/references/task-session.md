@@ -51,3 +51,17 @@ close、stdin EOF 或中断结束任务，仅清理本次所属进程。保存�
 Close, EOF and interruption clean only owned processes. Saving is explicit. A failure, unknown outcome, dead process or changed installation/permissions/model identity stops further plans without restart or replay. Inspect receipts and native files before recovery.
 
 Python调用方可从本技能脚本加载 `task_session.py`，以 `with TaskSession(work, runtime_home, permissions, mode, protected_paths) as session` 管理同一任务，调用 `session.execute(plan, stage_name, inputs)`；权限必须是独立提供的可信策略，不能从计划推导。该入口与JSONL入口使用相同的执行和停止逻辑。
+
+## 同实例领域交付 / Domain delivery in the same instance
+
+headless任务可接收 `{"action":"workflow","name":"delivery","plan":{...},"source":"可选的既有交付目录"}`；plan遵循本技能workflow合同，素材必须提供真实路径与sha256，位于启动时保护根或当前任务目录。Python调用为 `session.execute_workflow(plan, name, source=None)`。依次执行查询、领域交付、源交付局部返工、再查询，均不退出任务实例。
+
+Headless tasks accept an action=workflow request with a normal workflow plan and optional prior delivery directory. Asset paths and hashes must be supplied, and external inputs must belong to startup-protected roots. Python callers use execute_workflow. Command plans and domain deliveries share the same task instance.
+
+保存重开、完整工程检查、PNG渲染、视频及字幕导出均在所属MCP实例内完成；每阶段native-processes.json记录editorPid、是否借用任务会话、零交付编辑器重启及媒体工具调用。原生probe和bench-decode没有MCP等价接口，属于不创建编辑器Session的媒体工具，独立计数；不能把这些进程隐藏在“单实例”描述中。正常视频夹具每阶段为素材探测次数加成片probe及一次完整解码。
+
+Save/reopen, project inspection, PNG rendering, video and caption export remain in the owned MCP instance. native-processes.json records its PID and every standalone media helper. Native probe and bench-decode do not construct editor sessions and remain separate processes because the pinned MCP exposes no equivalent. A single editor does not imply zero helper processes.
+
+领域工作流当前只支持headless；bridge请求在安装／启动前拒绝，不把桌面Program截图作为原生导出PNG。失败或unknown停止整个任务，不重放、不自动替换进程。旧workflow.py单次入口保留调用兼容性，在一次交付内部也复用编辑器。
+
+Domain workflows currently require headless mode. Bridge workflow requests fail before native startup; Program screenshots are not treated as exported native PNGs. Failure or unknown stops the entire task without replay or replacement. The legacy single-run workflow.py entry remains compatible and also reuses one editor within its delivery.

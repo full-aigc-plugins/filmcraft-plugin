@@ -74,7 +74,7 @@ Default mode is explicitly headless. UI-dependent commands require the running a
 
 每步执行前／后持久化 journal.json。成功产生 success.json，失败产生 failure.json；命令超时、断开或无法确认结果时记录 unknown，不自动重放。新输出目录不能复用；再次执行前读取 journal 与实际工程，确认上次是否执行，另建修订计划。
 
-Save or export must be explicit operations in the plan. A successful command receipt alone does not prove a deliverable. Save a new native project, reopen it in a separate session, check target parameters and unrelated objects, and independently inspect rendered output. Keep original assets and projects. Media packaging and exchange-loss acceptance still use the established workflow.py contracts when applicable.
+Save or export must be explicit operations in the plan. A successful command receipt alone does not prove a deliverable. Save a new native project, close the owned project and reopen it from disk in the same task session, check target parameters and unrelated objects, and independently inspect rendered output. Keep original assets and projects. Media packaging and exchange-loss acceptance still use the established workflow.py contracts when applicable.
 
 保存和导出必须是计划中的显式步骤。success.json 只证明指定命令返回成功，不证明工程可重开、完整交付或创作通过。另存原生工程、独立会话重开、检查目标与非目标对象，实际解码或查看输出；保留原文件。需要素材打包及交换损失报告时继续使用已验收的 workflow.py 合同，不能把直接调用扩大为 ArtCraft 自动编排支持。
 
@@ -107,7 +107,7 @@ The revision recipe is paired with commands-revision-create.json. Replace EXT wi
 
 返工验收必须另起会话重开 revised.EXT：FilmCraft 检查第二镜头 speed=2、durationFrames=12、总时长60帧，第一镜头、转场、音轨与设置保持；EffectCraft 在0.5秒检查 opacity 表达式结果80，蒙版、相机及其他图层保持；PhotoCraft 检查 Subject opacity=0.5，其他层、效果与通道保持；VectorCraft 检查目标由蓝变红，对照绿矩形、三个符号实例与画板保持。比较实际渲染目标与非目标像素，原工程与技能文件保持不变。
 
-Reopen revised.EXT in a separate native session and inspect the expected target state plus untouched objects. The opt-in test tests/test_native_command_revision.py verifies these persisted settings, rendered target/control pixels, and original-delivery/skill fingerprints. These four fixture cases do not establish acceptance of every command or GUI workflow.
+Close the owned project and reopen revised.EXT from disk in the same task session and inspect the expected target state plus untouched objects. The opt-in test tests/test_native_command_revision.py verifies these persisted settings, rendered target/control pixels, and original-delivery/skill fingerprints. These four fixture cases do not establish acceptance of every command or GUI workflow.
 
 ## 8. 协议故障与不明确结果 / Protocol faults and unknown outcomes
 

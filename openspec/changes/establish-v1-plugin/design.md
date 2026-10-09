@@ -162,3 +162,13 @@ stateDiagram-v2
 ```
 
 中断时已写journal保留unknown和最后started步骤的unknown，不重放；外部输入在启动前显式保护为只读，任务内生成物保留写根语义。跨计划不暗中继承as别名，调用者从真实回执获取ID。固定发布安装复验为独立门禁；持续会话不代替独立恢复或全部命令／GUI验收。
+
+## 领域持续实例复用增量 / Continuous domain instance reuse
+
+9.39保持完整范围：独立技能JSONL／Python领域入口、完整命令入口及插件Harness实际调用路径均需纳入。独立技能源已将工程重开、PNG渲染、视频／字幕导出迁入所属MCP；外部probe与bench-decode为固定原生媒体工具，不创建编辑器Session，逐调用计数。当前领域交付仅支持headless，不能将bridge的Program截图作为原生PNG。
+
+Task9.39 covers independent JSONL/Python domain and command entry points plus the plugin Harness path. The source adapter moves reopen, PNG rendering, video and caption export into its owned MCP. Pinned probe and bench-decode remain separately counted media-only helpers. Domain delivery currently requires headless; bridge Program screenshots do not qualify as native PNGs.
+
+插件PythonWorkflowRunner.prepare当前会调用native_preflight.py启动独立能力探测会话，run又调用单次workflow.py；跨返工／continuation仍有进程生命周期、SQL attempt、预算与取消绑定需改造。因此独立技能持续会话通过不关闭9.39；适配器必须在共享任务所有者上保留原有幂等、epoch、输出占用、unknown停止和取消证据，不能把仍运行的共享进程报告为stopped后结算资源。
+
+PythonWorkflowRunner.prepare still launches native_preflight.py capability sessions and run invokes a single-run workflow. Harness revision/continuation lifecycle, SQL attempts, budgets and cancellation must be integrated. Independent source-session success alone cannot close9.39. A shared owner must preserve idempotency, epochs, output claims, stop-on-unknown and cancellation, and must not report a live process as stopped to settle resources.

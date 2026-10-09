@@ -170,3 +170,9 @@ Registered ordinary media preflight aggregates missing, digest-conflicting and s
 领域包装操作的 params 仅接受该操作已有字段；timeline.move 的 moves 项仅接受 clip、track、time。未知字段在素材读取、安装和输出之前以 invalid_workflow_parameters 拒绝，错误不回显名称或内容。字幕 text 和 speaker 保持创作数据，不按“指令”“metadata”或“apiKey”等关键词过滤。已有运动、LUT、静态增益专项错误保持原合同。完整 native.command 注册表参数、可信素材／写入根与宿主秘密引用的验收仍开放。
 
 Domain wrappers reject undefined params fields and undefined timeline.move item fields before asset reads, runtime installation or output. The fixed invalid_workflow_parameters error does not echo unknown fields or values. Caption text and speaker remain creative data, without instruction or secret keyword filtering. Existing motion, LUT and static-gain diagnostics remain compatible. Full native.command registry parameters, trusted roots and host secret references require separate qualification.
+
+## 连续任务 / Continuous tasks
+
+连续创作默认通过同技能task_session.py的action=workflow或Python execute_workflow调用；保持同一个前台句柄，保存、重开、渲染、导出后继续下一阶段，不重新启动workflow.py。单次入口仍兼容，其交付内部也复用一个编辑器。独立probe／bench-decode仅为媒体验证，不创建编辑器，详见 [任务会话](task-session.md)。
+
+For continuous work, send action=workflow requests to the same foreground task_session.py handle or call execute_workflow on the same Python task. Keep it alive across save/reopen/render/export and later revisions. The compatible single-run entry also reuses its editor internally; standalone probe/bench-decode helpers remain separately accounted media checks.

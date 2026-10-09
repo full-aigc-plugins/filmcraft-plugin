@@ -1,0 +1,30 @@
+{
+  "schema": "filmcraft-domain-task-session-candidate/v1",
+  "result": "PASS",
+  "sourceRef": "v0.1.0-dev.61",
+  "sourceSha": "2e78802cfde198885a584248e0def9289c555f4e",
+  "sourceCiRunId": 37883698700,
+  "sourceLocalCounts": {
+    "tests": 309,
+    "pass": 270,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 39
+  },
+  "sourceCiCounts": {
+    "tests": 309,
+    "pass": 267,
+    "fail": 0,
+    "failureEvents": 0,
+    "environmentNotRun": 42
+  },
+  "fixed80Native": "NOT_RUN",
+  "task9.39": "OPEN",
+  "remainingHarnessPaths": [
+    "prepare capability preflight",
+    "run persistent owner",
+    "revision/continuation ownership",
+    "SQL attempt/budget/cancellation stopped truth"
+  ],
+  "scope": "source continuous-domain implementation and one candidate real PID only; fixed qualification pending; no full task9.39/V1 completion"
+}

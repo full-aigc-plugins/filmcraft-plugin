@@ -1,11 +1,11 @@
 {
   "schema": "filmcraft-current-facts/v1",
   "pluginId": "filmcraft",
-  "pluginVersion": "0.1.0-dev.79",
+  "pluginVersion": "0.1.0-dev.80",
   "sourcePackage": "filmcraft-skills",
-  "sourceRef": "v0.1.0-dev.60",
-  "sourceSha": "476639661a61cc70c396d7955ea0ef3c96b39d42",
-  "suiteSha256": "ae554232552ffd205c04846a7d8cdb47db5892669a84d6b2a327feead6939d71",
+  "sourceRef": "v0.1.0-dev.61",
+  "sourceSha": "2e78802cfde198885a584248e0def9289c555f4e",
+  "suiteSha256": "befb88ac7ddd793fed4c90a22558e35b3ce9c2abda3fa9b6242a1dc6b623e7da",
   "skillCount": 13,
   "commandCount": 666,
   "referenceCatalogIdentity": {

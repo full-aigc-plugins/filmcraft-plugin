@@ -1,5 +1,7 @@
 # FilmCraft Agent Plugin
 
+dev.80 pins source61: public JSONL/Python continuous domain requests share the task editor; save/reopen, PNG rendering and export no longer start extra editor sessions. Standalone media probe/decode helpers are separately counted. Source local270 pass/39 environment NOT_RUN, LinuxCI267 pass/42 NOT_RUN. Fixed80 qualification is pending. Harness prepare/run/continuation still needs integration, so task9.39 and seven fullV1 gates remain open.
+
 Fixed79/source60 qualification completes task9.38: explicit2.5s playhead, full persistent sequence equality after reopen, eight scopes, two independently decoded RGBA frames and216-frame H.264 delivery pass. All13 installed modules refuse65 persistent mutations, and2017 installed files stay identical to ZIP. Continuous domain instance reuse9.39 and seven fullV1 gates remain open. [Evidence](docs/evidence/filmcraft79-roundtrip-20261009/report.json).
 
 dev.79 pins source60 and fixes the top-level transient playhead in saved-project comparison; persistent and nested fields remain strict. Source local260 pass/39 environment NOT_RUN, CI257 pass/42 NOT_RUN. Fixed79 native delivery is pending (9.38); continuous domain entry-point reuse is tracked separately in9.39. Seven full V1 gates remain open.
@@ -103,7 +105,7 @@ Fixed dev.45/source42 receipt acceptance passes tasks 9.13–9.15: isolated Code
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.79` / `filmcraft-skills@v0.1.0-dev.60`; 13 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.80` / `filmcraft-skills@v0.1.0-dev.61`; 13 / 666.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -127,7 +129,7 @@ Development dev.53 pins source dev.45 and packages real-media preparation and fa
 
 Development dev.54 pins source dev.46 and public maintained craft.5, repairing PCM timing and synchronizing the recaptured666-command identity across13 skills. Seven candidate cases and actual Whisper pass; new fixed installation remains pending, so tasks9.32/9.33 and50 full-V1 tasks are not closed. [Matrix runner](docs/FilmCraft-Media-Matrix.md).
 
-Current plugin: `0.1.0-dev.79`; skill source: `0.1.0-dev.60`; 13 independent skills.
+Current plugin: `0.1.0-dev.80`; skill source: `0.1.0-dev.61`; 13 independent skills.
 
 OpenSpec9.31 media input preparation is complete:7 cases and18 source/license/hash-bound inputs, measured VFR and181.211333-second audio;64 Python tests pass. Native matrix9.32 and fixed installed9.33 remain NOT_RUN; full V1 has50 open tasks. See docs/FilmCraft-Media-Matrix.md.
 
@@ -231,9 +233,9 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.79 |
+| Metadata version | 0.1.0-dev.80 |
 | Stage | implementation-in-progress |
-| Skills source | filmcraft-skills / v0.1.0-dev.60 |
+| Skills source | filmcraft-skills / v0.1.0-dev.61 |
 | Execution | Upstream CLI; ArtCraft uses child adapters |
 | Host compatibility | Codex dev.35 fixed-tag installation/discovery and standalone real ASR pass; Art105 mixed ASR passes; GUI pending |
 | License | Apache-2.0 (original repository content) |

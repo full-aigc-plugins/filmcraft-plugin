@@ -168,6 +168,45 @@ class TaskSession:
             self._record()
             raise
 
+    def execute_workflow(self, plan, name, source=None):
+        """在同一headless任务实例内完成领域交付；外部素材必须预先保护。"""
+        if self.closed or self.stopped: raise RuntimeError('task_session_stopped')
+        try:
+            self._assert_identity()
+            if self.mode != 'headless': raise ValueError('workflow_requires_headless_task')
+            if not isinstance(name, str) or not re.fullmatch(r'[a-zA-Z][a-zA-Z0-9_-]{0,63}', name):
+                raise ValueError('invalid_task_stage_name')
+            if not isinstance(plan, dict) or not isinstance(plan.get('assets', {}), dict):
+                raise ValueError('invalid_workflow_plan')
+            guard = self.commands.load('execution_permissions')
+            roots = (str(self.work), *self.protected)
+            for asset in plan.get('assets', {}).values():
+                if not isinstance(asset, dict) or not isinstance(asset.get('path'), str):
+                    raise ValueError('invalid_asset')
+                path = guard.require_read(asset['path'], self.permissions)
+                if not any(path.is_relative_to(root) for root in roots):
+                    raise ValueError('task_input_not_protected')
+            if source is not None:
+                source = guard.require_read(source, self.permissions)
+                if not any(source.is_relative_to(root) for root in roots):
+                    raise ValueError('task_input_not_protected')
+            workflow = self.commands.load('workflow')
+            manifest = workflow.execute(plan, self.work/name, runtime_home=self.runtime, source=source,
+                data_dir=None,
+                permissions=self.permissions, protected_paths=self.protected,
+                installer=self._install, session_factory=self._factory)
+            self._assert_identity()
+            receipt = {'result': 'PASS', 'kind': 'workflow', 'manifest': manifest}
+            self.plans.append({'name': name, 'kind': 'workflow', 'result': 'PASS'})
+            self._record()
+            return receipt
+        except BaseException as error:
+            self.stopped = True
+            self.plans.append({'name': name if isinstance(name, str) else 'invalid', 'kind': 'workflow',
+                'result': 'unknown' if isinstance(error, (KeyboardInterrupt, TimeoutError)) or 'outcome_unknown' in str(error) else 'FAIL'})
+            self._record()
+            raise
+
     def _record(self):
         proof = {'schema':'filmcraft-task-session/v1', 'mode':self.mode,
             'identityBindingSha256': hashlib.sha256(self.binding.encode()).hexdigest(),
@@ -202,14 +241,19 @@ def serve(session, incoming, outgoing):
             request = session.commands.reply_json(line)
             if request == {'action':'close'}:
                 session.close(); emit({'result':'CLOSED'}); return 0
-            if (not isinstance(request,dict) or not {'name','plan'}.issubset(request)
-                    or set(request) - {'name','plan','inputs'}): raise ValueError('invalid_task_request')
-            receipt = session.execute(request['plan'],request['name'],request.get('inputs'))
+            if not isinstance(request, dict) or not {'name', 'plan'}.issubset(request):
+                raise ValueError('invalid_task_request')
+            if request.get('action') == 'workflow':
+                if set(request) - {'action', 'name', 'plan', 'source'}: raise ValueError('invalid_task_request')
+                receipt = session.execute_workflow(request['plan'], request['name'], request.get('source'))
+            else:
+                if set(request) - {'name', 'plan', 'inputs'}: raise ValueError('invalid_task_request')
+                receipt = session.execute(request['plan'],request['name'],request.get('inputs'))
             emit(receipt)
             if receipt['result'] != 'PASS': return 1
         except (ValueError, RuntimeError, OSError, TypeError) as error:
             session.stopped = True
-            emit({'result':'FAIL','error':str(error)}); return 1
+            emit({'result':'unknown' if isinstance(error, TimeoutError) or 'outcome_unknown' in str(error) else 'FAIL','error':str(error)}); return 1
     return 0
 
 

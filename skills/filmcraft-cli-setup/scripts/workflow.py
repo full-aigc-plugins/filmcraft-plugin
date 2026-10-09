@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """原生时间线、素材收集、字幕与局部修订的独立执行入口。"""
 import argparse
+import base64
 import sys
 sys.dont_write_bytecode = True
 from fractions import Fraction
@@ -20,6 +21,39 @@ def validate_sequence_roundtrip(actual, expected):
     """校验保存重开后的工程序列；仅顶层选择与播放头属于临时会话状态。"""
     if {k: v for k, v in actual.items() if k not in ('selection', 'playhead')} != {k: v for k, v in expected.items() if k not in ('selection', 'playhead')}:
         raise ValueError('sequence_roundtrip_mismatch')
+
+
+def reopen_project(command, call, path):
+    """在所属实例内关闭工程并从持久文件重开，随后重新读取全部检查状态。"""
+    command('file.closeAllProjects', {'force': True})
+    command('file.open', {'path': str(path)})
+    return ({'project': call('project_inspect', {}), 'sequence': call('sequence_inspect', {})},
+            command('captions.list', {}))
+
+
+def render_native_frame(session, seconds, target, max_side, recovery_state):
+    """借用所属headless实例生成原生PNG；未知回复不重试、不写成功帧。"""
+    arguments = {'seconds': seconds, 'max_side': max_side}
+    recovery_state['lastAttempt'] = {'tool': 'render_frame', 'arguments': arguments, 'phase': 'submitted'}
+    reply = session.request('tools/call', {'name': 'render_frame', 'arguments': arguments})
+    if (not isinstance(reply, dict) or not isinstance(reply.get('content'), list)
+            or ('isError' in reply and not isinstance(reply['isError'], bool))):
+        raise RuntimeError('outcome_unknown: invalid_render_reply')
+    if reply.get('isError'):
+        raise RuntimeError('command_failed: render_frame')
+    images = [item for item in reply['content'] if isinstance(item, dict) and item.get('type') == 'image']
+    if (len(images) != 1 or images[0].get('mimeType') != 'image/png'
+            or any(not isinstance(item, dict) or item.get('type') not in ('text', 'image')
+                   or (item.get('type') == 'text' and not isinstance(item.get('text'), str)) for item in reply['content'])):
+        raise RuntimeError('outcome_unknown: invalid_render_reply')
+    try:
+        data = base64.b64decode(images[0]['data'], validate=True)
+    except (ValueError, KeyError, TypeError):
+        raise RuntimeError('outcome_unknown: invalid_render_image') from None
+    if not data.startswith(b'\x89PNG\r\n\x1a\n'):
+        raise RuntimeError('outcome_unknown: invalid_render_image')
+    Path(target).write_bytes(data)
+    recovery_state['lastAttempt']['phase'] = 'reply_received'
 
 
 def exchange_report(root,outputs,warnings):
@@ -397,7 +431,7 @@ def preflight_assets(new_assets, prior_assets, source):
         raise AssetPreflightError(issues, first_code)
 
 
-def execute(plan, output, runtime_home=None, source=None, data_dir=None, permissions=None, protected_paths=()):
+def execute(plan, output, runtime_home=None, source=None, data_dir=None, permissions=None, protected_paths=(), installer=None, session_factory=None):
     validate(plan)
     configured_data_dir = data_dir if data_dir is not None else os.environ.get('FILMCRAFT_DATA_DIR')
     data_dir = Path(configured_data_dir).expanduser().resolve() if configured_data_dir else None
@@ -429,7 +463,7 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
     if permissions is not None:
         load_module('execution_permissions').ensure_available()
     execution_context = load_module('output_guard').execution_context()
-    installed = load_module('bootstrap').install(
+    installed = (installer or load_module('bootstrap').install)(
         json.loads(Path(__file__).with_name('runtime.lock.json').read_text()),
         runtime_home or os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
     cli = installed['executable']
@@ -442,8 +476,16 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
         protected_roots.append(str(source))
     if data_dir is not None:
         protected_roots.append(str(data_dir))
+    helper_calls = []
     def native_run(argv):
-        return run(cli, argv, cwd=stage if permissions is not None else None, data_dir=data_dir, permissions=permissions, protected_roots=protected_roots)
+        # 只有不创建编辑器Session的媒体探测／完整解码仍使用独立原生CLI。
+        if not argv or argv[0] not in ('probe', 'bench-decode'):
+            raise ValueError('workflow_editor_restart_forbidden')
+        receipt = {'subcommand': argv[0], 'kind': 'media-only', 'completed': False}
+        helper_calls.append(receipt)
+        result = run(cli, argv, cwd=stage if permissions is not None else None, data_dir=data_dir, permissions=permissions, protected_roots=protected_roots)
+        receipt['completed'] = True
+        return result
     output.parent.mkdir(parents=True, exist_ok=True)
     recovery_state = {}
     execution_identity = {'planHash': hashlib.sha256(json.dumps(plan, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest(),
@@ -512,7 +554,7 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
         argv = [cli] + (['--data-dir', str(data_dir)] if data_dir is not None else []) + (['--project', str(source_project)] if source_project else []) + ['mcp']
         if permissions is not None:
             argv = load_module('execution_permissions').command(argv, permissions, protected_roots=protected_roots)
-        with load_module('mcp_session').Session(argv, **({'cwd':str(stage)} if permissions is not None else {})) as session:
+        with (session_factory(argv) if session_factory else load_module('mcp_session').Session(argv, **({'cwd':str(stage)} if permissions is not None else {}))) as session:
             gateway = native_module().commands
             capability_module = load_module('capabilities')
             current_rows = gateway.runtime_rows(session)
@@ -578,6 +620,9 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
                 rate = doc['frameRate']
                 bindings['sequence'] = command('file.newSequence', {'name': doc['name'], 'width': doc['width'], 'height': doc['height'], 'fps': float(Fraction(rate['num'], rate['den']))})
             else:
+                if session_factory is not None:
+                    # 借用的任务实例可能仍打开其他阶段；显式激活已核验的源工程。
+                    command('file.open', {'path': str(source_project)})
                 # 即使原目录已移动，也只对摘要一致的包内素材进行原生重关联。
                 for asset in assets.values():
                     if 'item' in asset:
@@ -715,12 +760,13 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
                         raise ValueError('collected_asset_mismatch')
                     asset['path'] = str(target.relative_to(output))
                     del asset['staging']
-                reopened = json.loads(native_run(['--project', str(output / 'project.fcproj'), 'inspect']))
-                captions = json.loads(native_run(['--project', str(output / 'project.fcproj'), 'exec', 'captions.list']))
+                reopened, captions = reopen_project(command, call, output / 'project.fcproj')
                 validate_sequence_roundtrip(reopened['sequence'], sequence)
                 for index, time in enumerate(plan.get('frames', ['0'])):
-                    native_run(['--project', str(output / 'project.fcproj'), 'render', '--seconds', str(ticks(time) / TICKS), '--out', str(output / f'frame-{index:04d}.png')])
-                native_run(['--project', str(output / 'project.fcproj'), 'export', str(output / 'film.mp4'), '--format', 'h264', '--settings', json.dumps(export_settings(plan, captions))])
+                    render_native_frame(session, ticks(time) / TICKS, output / f'frame-{index:04d}.png',
+                                        max(sequence['settings']['width'], sequence['settings']['height']), recovery_state)
+                command('file.exportMedia', {'path': str(output / 'film.mp4'), 'format': 'h264',
+                                             'settings': export_settings(plan, captions), 'wait': True})
                 exported = json.loads(native_run(['probe', str(output / 'film.mp4')]))
                 if not exported.get('video') or any(exported['video'][key] != sequence['settings'][key] for key in ('width', 'height')) or exported['video']['frame_rate'] != sequence['settings']['frame_rate']:
                     raise ValueError('export_video_mismatch')
@@ -738,7 +784,7 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
                 if not re.search(r'\b' + str(sequence['durationFrames']) + r' frames in ', decoded):
                     raise ValueError('export_decode_incomplete')
                 if captions['tracks']:
-                    native_run(['--project', str(output / 'project.fcproj'), 'exec', 'captions.export', json.dumps({'path': str(output / 'captions.srt'), 'format': 'srt'})])
+                    command('captions.export', {'path': str(output / 'captions.srt'), 'format': 'srt'})
                 if source_project and sha(source_project) != source_hash:
                     raise ValueError('revision_conflict')
                 capability_record['commandChecks'] = recovery_state.get('commandCapabilities', [])
@@ -747,6 +793,9 @@ def execute(plan, output, runtime_home=None, source=None, data_dir=None, permiss
                     (output / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
                 (output / 'decode.txt').write_text(decoded)
                 exchange_report(output,[f'frame-{index:04d}.png' for index,_ in enumerate(plan.get('frames',['0']))]+['film.mp4']+(['captions.srt'] if captions['tracks'] else []),{})
+                (output / 'native-processes.json').write_text(json.dumps({'schema':'filmcraft-workflow-processes/v1',
+                    'editorPid': session.process.pid, 'borrowedTaskSession': session_factory is not None,
+                    'editorRestartsForDelivery': 0, 'mediaHelperCalls': helper_calls}, indent=2)+'\n')
                 manifest = {'schema': 'filmcraft-delivery/v1', 'sourceProjectSha256': source_hash, 'runtimeSha256': installed['binarySha256'], 'bindings': bindings, 'assets': assets, 'files': {str(p.relative_to(output)): sha(p) for p in output.rglob('*') if p.is_file()}, 'lossReport': {'path':'exchange-loss.json','sha256':sha(output/'exchange-loss.json')}, 'acceptance': 'requires-domain-and-visual-review', 'relocation': 'Use workflow --source; hashes checked before native media.relink.'}
                 (output / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
                 return manifest

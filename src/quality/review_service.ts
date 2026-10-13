@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { lstatSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
-import type { TaskLedger } from '../harness/task_ledger.ts';
+import type { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { ReceiptIndex, readBoundFile } from '../artifacts/receipt_index.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
 import { createReviewRequest, evaluateReview, reviewRequestHash, validateCriteria } from './review_contract.ts';

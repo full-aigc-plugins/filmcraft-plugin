@@ -42,7 +42,7 @@
 : "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/workflow.py" "$SKILL_DIR/examples/chinese-short-film.json" \
+python3 -I -B "$HARNESS_DIR/scripts/workflow.py" "$SKILL_DIR/examples/chinese-short-film.json" \
   --asset "shot=$SHOT_PATH" --asset "voice=$VOICE_PATH" --output chinese-v1 --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 

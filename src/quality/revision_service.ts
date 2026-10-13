@@ -2,10 +2,10 @@ import { requirePermissions, requireRead, requireWrite } from '../support/execut
 import { randomUUID } from 'node:crypto';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import type { TaskLedger, Binding } from '../harness/task_ledger.ts';
-import { requireAuthorization } from '../harness/authorization.ts';
-import type { Authorizer } from '../harness/authorization.ts';
-import { ResourceController, outputBytes } from '../harness/resources.ts';
+import type { TaskLedger, Binding } from '../../scripts/harness/task_ledger.ts';
+import { requireAuthorization } from '../../scripts/harness/authorization.ts';
+import type { Authorizer } from '../../scripts/harness/authorization.ts';
+import { ResourceController, outputBytes } from '../../scripts/harness/resources.ts';
 import { PythonWorkflowRunner } from '../adapters/python_workflow.ts';
 import type { WorkflowOptions } from '../adapters/python_workflow.ts';
 import { readBoundFile } from '../artifacts/receipt_index.ts';

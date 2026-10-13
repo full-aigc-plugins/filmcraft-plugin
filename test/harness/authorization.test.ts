@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { chmodSync, mkdirSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { LocalAuthorizationStore, requireAuthorization } from '../../src/harness/authorization.ts';
+import { LocalAuthorizationStore, requireAuthorization } from '../../scripts/harness/authorization.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { hash, workspace } from './fixtures.ts';
 

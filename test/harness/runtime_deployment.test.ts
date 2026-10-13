@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { join } from 'node:path';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { RuntimeDeployment } from '../../src/adapters/runtime_deployment.ts';
 import { binding, workspace, fixtureAuthorizer, hash } from './fixtures.ts';
 

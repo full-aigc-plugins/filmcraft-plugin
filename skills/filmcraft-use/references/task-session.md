@@ -1,6 +1,6 @@
 # 任务级实例复用 / Task-level instance reuse
 
-连续编辑默认使用本技能的 `scripts/task_session.py`。它保持一个前台 Python 进程，在同一所属 FilmCraft MCP 和可选签名桌面内逐步接收计划。不要为每次检查、保存、关闭工程、重开或返工调用单次 `commands.py run`／`desktop.py run`；这些兼容入口仍按单次调用退出。
+连续编辑默认使用 filmcraft-harness 技能的 `scripts/task_session.py`。它保持一个前台 Python 进程，在同一所属 FilmCraft MCP 和可选签名桌面内逐步接收计划。不要为每次检查、保存、关闭工程、重开或返工调用单次 `commands.py run`／`desktop.py run`；这些兼容入口仍按单次调用退出。
 
 For continuous editing, keep one foreground task_session.py process and send subsequent plans to that same process. The single-run commands.py and desktop.py interfaces retain their existing lifecycle.
 
@@ -13,7 +13,7 @@ For continuous editing, keep one foreground task_session.py process and send sub
 : "${READ_ROOT:?Set to the existing independently authorized source directory}"
 : "${WRITE_ROOT:?Set to the existing independently authorized output parent}"
 : "${RUNTIME_HOME:?Set to the existing independently authorized runtime directory}"
-python3 -I -B -u "$SKILL_DIR/scripts/task_session.py" \
+python3 -I -B -u "$HARNESS_DIR/scripts/task_session.py" \
   --output "$WRITE_ROOT/new-task-session" --runtime-home "$RUNTIME_HOME" \
   --read-root "$SKILL_DIR" --read-root "$READ_ROOT" \
   --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" \
@@ -50,7 +50,7 @@ close、stdin EOF 或中断结束任务，仅清理本次所属进程。保存�
 
 Close, EOF and interruption clean only owned processes. Saving is explicit. A failure, unknown outcome, dead process or changed installation/permissions/model identity stops further plans without restart or replay. Inspect receipts and native files before recovery.
 
-Python调用方可从本技能脚本加载 `task_session.py`，以 `with TaskSession(work, runtime_home, permissions, mode, protected_paths) as session` 管理同一任务，调用 `session.execute(plan, stage_name, inputs)`；权限必须是独立提供的可信策略，不能从计划推导。该入口与JSONL入口使用相同的执行和停止逻辑。
+Python调用方可从 filmcraft-harness 技能脚本加载 `task_session.py`，以 `with TaskSession(work, runtime_home, permissions, mode, protected_paths) as session` 管理同一任务，调用 `session.execute(plan, stage_name, inputs)`；权限必须是独立提供的可信策略，不能从计划推导。该入口与JSONL入口使用相同的执行和停止逻辑。
 
 ## 同实例领域交付 / Domain delivery in the same instance
 

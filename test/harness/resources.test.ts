@@ -1,8 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { join } from 'node:path';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
-import { ResourceController } from '../../src/harness/resources.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
+import { ResourceController } from '../../scripts/harness/resources.ts';
 import { binding, workspace, captureEvidence } from './fixtures.ts';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
@@ -79,8 +79,8 @@ test('schema4 forensic integrity rejects altered consumed accounting before trus
 });
 test('an actual killed reservation owner cannot reset durable charges or create a second reservation', { timeout: 15_000 }, async t => {
   const root = workspace(t), file = join(root, 'crashed.sqlite'), task = binding(root);
-  const ledgerModule = new URL('../../src/harness/task_ledger.ts', import.meta.url).href;
-  const resourcesModule = new URL('../../src/harness/resources.ts', import.meta.url).href;
+  const ledgerModule = new URL('../../scripts/harness/task_ledger.ts', import.meta.url).href;
+  const resourcesModule = new URL('../../scripts/harness/resources.ts', import.meta.url).href;
   const program = `import {TaskLedger} from ${JSON.stringify(ledgerModule)}; import {ResourceController} from ${JSON.stringify(resourcesModule)};
     const db=new TaskLedger(process.argv[1]); const task=JSON.parse(process.argv[2]); db.register(task);
     new ResourceController(db).reserve(task.taskId,JSON.parse(process.argv[3])); console.log('reserved'); setInterval(()=>{},1000);`;

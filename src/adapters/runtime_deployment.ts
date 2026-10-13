@@ -1,8 +1,8 @@
 import { realpathSync } from 'node:fs';
 import type { DatabaseSync } from 'node:sqlite';
-import type { TaskLedger, Binding } from '../harness/task_ledger.ts';
-import type { AuthorizationRequest, Authorizer } from '../harness/authorization.ts';
-import { requireAuthorization } from '../harness/authorization.ts';
+import type { TaskLedger, Binding } from '../../scripts/harness/task_ledger.ts';
+import type { AuthorizationRequest, Authorizer } from '../../scripts/harness/authorization.ts';
+import { requireAuthorization } from '../../scripts/harness/authorization.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
 
 /** schema6 持久保存选择历史；原生制品仍由固定技能安装器保留在独立版本目录。 */

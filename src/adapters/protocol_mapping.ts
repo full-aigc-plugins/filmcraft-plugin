@@ -1,4 +1,4 @@
-import type { TaskLedger } from '../harness/task_ledger.ts';
+import type { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { check, isObject, stableJson } from '../support/json.ts';
 
 /** 公共预算的消费类型；限额由未来的宿主/预算控制器执行，本映射不授予权限。 */

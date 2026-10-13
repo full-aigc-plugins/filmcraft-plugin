@@ -30,7 +30,9 @@
       "tasks": [
         "2.1",
         "2.2",
-        "2.3"
+        "2.3",
+        "2.7",
+        "2.8"
       ],
       "owner": "Runtime owner",
       "status": "verified",
@@ -41,93 +43,13 @@
       "requirement": "FC-RT-002",
       "capability": "runtime-distribution",
       "tasks": [
-        "2.4",
-        "2.5",
-        "2.6",
         "2.9",
-        "2.10",
-        "9.10",
-        "9.11",
-        "9.12"
+        "2.10"
       ],
       "owner": "Runtime owner",
       "status": "in-progress",
       "candidateEvidence": "docs/evidence/filmcraft-native-download-candidate-20261007.json",
-      "fixedNativeDownloadEvidence": "docs/evidence/codex-native-download-first-use-20261007.json",
-      "optimizationStatus": "in-progress",
-      "optimizationTasks": [
-        "9.10",
-        "9.11",
-        "9.12"
-      ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-capability-candidate-20261008.json",
-      "fixedCapabilityEvidence": "docs/evidence/filmcraft44-fixed-capabilities-20261008.json",
-      "fixedCapabilityScope": "task 9.12 fixed44/source41 macOS arm64 headless/owned bridge and domain headless; complete upgrade/drain/rollback remains open"
-    },
-    {
-      "requirement": "FC-TX-001",
-      "capability": "task-execution",
-      "tasks": [
-        "3.1",
-        "3.2",
-        "3.3",
-        "3.13",
-        "3.14"
-      ],
-      "owner": "Harness owner",
-      "status": "verified-bounded",
-      "candidateStatus": "bounded-source-candidate; full single-writer and fixed-release acceptance open",
-      "candidateEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json",
-      "implementationEvidence": "docs/evidence/filmcraft56-fixed-admission-20261009/report.json",
-      "implementationScope": "tasks3.1/3.2 complete; task3.3 fixed57 acceptance complete in the recorded platform scope",
-      "fixedAcceptanceEvidence": "docs/evidence/filmcraft57-fixed-writer-20261009/report.json",
-      "fixedAcceptanceScope": "all5 scenarios and7 binding rejection vectors on fixed57/source46/craft.5 macOS arm64 Codex/headless and owned signed desktop bridge; other hosts/platforms and full V1 remain open"
-    },
-    {
-      "requirement": "FC-TX-002",
-      "capability": "task-execution",
-      "tasks": [
-        "3.4",
-        "3.5",
-        "3.6",
-        "9.16",
-        "9.17",
-        "9.18"
-      ],
-      "owner": "Harness owner",
-      "status": "verified-bounded",
-      "optimizationStatus": "planned",
-      "optimizationTasks": [
-        "9.16",
-        "9.17",
-        "9.18"
-      ],
-      "fixedAcceptanceEvidence": "docs/evidence/filmcraft58-fixed-recovery-20261009/acceptance.json",
-      "fixedAcceptanceScope": "All FC-TX-002 scenarios in recorded fixed installation; real native lost handoff/continuation, actual SQLite and controlled process faults are separate layers; other hosts/platforms and native binary upgrades remain open",
-      "implementationScope": "tasks3.4/3.5 existing tests and implementation verified;3.6 all10 current scenarios qualified on fixed58 macOS arm64 installation; full V1 remains open"
-    },
-    {
-      "requirement": "FC-TX-003",
-      "capability": "task-execution",
-      "tasks": [
-        "3.7",
-        "3.8",
-        "3.9",
-        "9.19",
-        "9.20",
-        "9.21"
-      ],
-      "owner": "Harness owner",
-      "status": "verified-bounded",
-      "optimizationStatus": "planned",
-      "optimizationTasks": [
-        "9.19",
-        "9.20",
-        "9.21"
-      ],
-      "fixedAcceptanceEvidence": "docs/evidence/filmcraft58-fixed-resource-contract-20261009/report.json",
-      "fixedAcceptanceScope": "all four current FC-TX-003 scenarios for macOS arm64 Codex/headless/POSIX owned process groups; quota observations stop new dependent dispatch, not OS-level CPU/disk throttling; other hosts/platforms and full V1 remain open",
-      "implementationScope": "tasks3.7/3.8 prior red/green implementation and current tests verified;3.9 all4 current scenarios qualified using actual fixed58 installed run"
+      "fixedNativeDownloadEvidence": "docs/evidence/codex-native-download-first-use-20261007.json"
     },
     {
       "requirement": "FC-DM-001",
@@ -163,7 +85,14 @@
       "tasks": [
         "4.7",
         "4.8",
-        "4.9"
+        "4.9",
+        "4.23",
+        "4.24",
+        "4.25",
+        "4.26",
+        "4.27",
+        "4.28",
+        "4.29"
       ],
       "owner": "Domain owner",
       "status": "verified",
@@ -210,42 +139,12 @@
       "tasks": [
         "4.16",
         "4.17",
-        "4.18",
-        "9.31",
-        "9.32",
-        "9.33"
+        "4.18"
       ],
       "owner": "Domain owner",
       "status": "verified",
       "evidence": "docs/evidence/fc-dm-006/index.json",
-      "optimizationStatus": "planned",
-      "optimizationTasks": [
-        "9.31",
-        "9.32",
-        "9.33"
-      ],
       "implementationScope": "Tasks4.16-4.18 all3scenarios/sevenmedia cases fixed66/source49 actualmacOSarm64/Codex/headless; Art/fullV1 separate"
-    },
-    {
-      "requirement": "FC-AR-001",
-      "capability": "artifact-delivery",
-      "tasks": [
-        "5.1",
-        "5.2",
-        "5.3",
-        "9.13",
-        "9.14",
-        "9.15"
-      ],
-      "owner": "Harness owner",
-      "status": "planned",
-      "optimizationStatus": "in-progress",
-      "optimizationTasks": [
-        "9.13",
-        "9.14",
-        "9.15"
-      ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-harness-candidate-20261008.json"
     },
     {
       "requirement": "FC-AR-002",
@@ -259,80 +158,16 @@
       "status": "planned"
     },
     {
-      "requirement": "FC-QA-001",
-      "capability": "quality-review",
-      "tasks": [
-        "6.1",
-        "6.2",
-        "6.3",
-        "9.22",
-        "9.23",
-        "9.24"
-      ],
-      "owner": "Harness owner",
-      "status": "planned",
-      "optimizationStatus": "planned",
-      "optimizationTasks": [
-        "9.22",
-        "9.23",
-        "9.24"
-      ]
-    },
-    {
       "requirement": "FC-QA-002",
       "capability": "quality-review",
-      "tasks": [
-        "6.4",
-        "6.5",
-        "6.6",
-        "9.25",
-        "9.26",
-        "9.27"
-      ],
+      "tasks": [],
       "owner": "Harness owner",
-      "status": "planned",
-      "optimizationStatus": "planned",
-      "optimizationTasks": [
-        "9.25",
-        "9.26",
-        "9.27"
-      ]
-    },
-    {
-      "requirement": "FC-RL-001",
-      "capability": "release-compatibility",
-      "tasks": [
-        "7.1",
-        "7.2",
-        "7.3",
-        "9.4",
-        "9.5",
-        "9.6",
-        "9.28",
-        "9.29",
-        "9.30"
-      ],
-      "owner": "Release owner",
-      "status": "planned",
-      "optimizationStatus": "in-progress",
-      "optimizationTasks": [
-        "9.4",
-        "9.5",
-        "9.6",
-        "9.28",
-        "9.29",
-        "9.30"
-      ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
-      "fixedIdentityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json"
+      "status": "planned"
     },
     {
       "requirement": "FC-RL-002",
       "capability": "release-compatibility",
       "tasks": [
-        "7.4",
-        "7.5",
-        "7.6",
         "7.7"
       ],
       "owner": "Release owner",
@@ -348,20 +183,12 @@
         "1.9",
         "1.10",
         "1.11",
-        "9.7",
-        "9.8",
-        "9.9"
+        "1.13",
+        "10.2"
       ],
       "owner": "Skills owner",
       "status": "bounded-verification-passed",
-      "evidence": "docs/evidence/skill-suite.json",
-      "optimizationStatus": "in-progress",
-      "optimizationTasks": [
-        "9.7",
-        "9.8",
-        "9.9"
-      ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json"
+      "evidence": "docs/evidence/skill-suite.json"
     },
     {
       "requirement": "FC-CM-001",
@@ -369,7 +196,6 @@
       "tasks": [
         "8.1",
         "8.2",
-        "8.3",
         "8.4",
         "8.5",
         "8.6",
@@ -378,11 +204,7 @@
         "8.9",
         "8.10",
         "8.11",
-        "8.12",
-        "9.1",
-        "9.2",
-        "9.3",
-        "9.39"
+        "8.12"
       ],
       "owner": "Skills owner",
       "status": "in-progress",
@@ -394,23 +216,12 @@
       "publicWorkflowCandidateEvidence": "docs/evidence/public-workflow-session-candidate-20261007.json",
       "publicWorkflowFixedHostEvidence": "docs/evidence/codex-public-workflow-session-first-use-20261007.json",
       "fixedNativeDownloadEvidence": "docs/evidence/codex-native-download-first-use-20261007.json",
-      "optimizationStatus": "in-progress",
-      "optimizationTasks": [
-        "9.1",
-        "9.2",
-        "9.3"
-      ],
-      "optimizationCandidateEvidence": "docs/evidence/filmcraft-optimization-candidate-20261008.json",
       "fixedCommandParityEvidence": "docs/evidence/filmcraft44-command-parity-20261008.json"
     },
     {
       "requirement": "FC-TX-004",
       "capability": "task-execution",
-      "tasks": [
-        "3.10",
-        "3.11",
-        "3.12"
-      ],
+      "tasks": [],
       "owner": "Harness owner",
       "status": "verified-darwin-arm64",
       "candidateEvidence": "docs/evidence/failed-stage-candidate-20261007.json",

@@ -22,7 +22,7 @@ flowchart TD
     L -->|Existing identical task| O[Original task and attempt / fresh evidence checks]
 ```
 
-`src/harness/task_ledger.ts` owns operation state; native projects and quality conclusions retain their own authorities. The ledger uses WAL, FULL synchronization and transactions, rejecting unknown databases, versions and application_id values. Project keys and canonical output paths are independently exclusive. Parent aliases, including macOS `/var`, resolve to their real location without creating missing directories. Expired leases fence old epochs without automatically taking over unknown work.
+`scripts/harness/task_ledger.ts` owns operation state; native projects and quality conclusions retain their own authorities. The ledger uses WAL, FULL synchronization and transactions, rejecting unknown databases, versions and application_id values. Project keys and canonical output paths are independently exclusive. Parent aliases, including macOS `/var`, resolve to their real location without creating missing directories. Expired leases fence old epochs without automatically taking over unknown work.
 
 `src/adapters/python_workflow.ts` compares plans, actual inputs, source projects, skill contents and runtime identity before registration, then checks plan files, projects and skill contents again before submission. Intent commits before the existing Python process starts. Idempotent reuse returns original task/attempt identities without re-executing the workflow, while performing read-only preflight and evidence checks. Confirmed process-group termination and consistent delivery/output records permit verifying, never completed or quality PASS.
 

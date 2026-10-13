@@ -13,8 +13,8 @@
 ```bash
 : "${SKILL_DIR:?Set SKILL_DIR to the actually loaded skill directory}"
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an independently authorized runtime directory}"
-python3 -I -B "$SKILL_DIR/scripts/bootstrap.py" --runtime-home "$RUNTIME_HOME"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" -- --version
+python3 -I -B "$HARNESS_DIR/scripts/bootstrap.py" --runtime-home "$RUNTIME_HOME"
+python3 -I -B "$HARNESS_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" -- --version
 ```
 
 核对回执中的固定版本、平台和二进制摘要。损坏既有安装会被拒绝，不覆盖原目录；保留诊断后，在另一个已获授权的新缓存目录安装同一固定版本，再核对摘要。桌面创作属于另一个任务，按需读取 [固定桌面安装](desktop-install.md)。

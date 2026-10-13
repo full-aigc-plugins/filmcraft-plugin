@@ -29,10 +29,10 @@ Read `command-reference.md` for exact native parameters. View changes do not pro
 ## 参数查询与执行 / Describe and execute
 
 ```bash
-python3 -I -B "$SKILL_DIR/scripts/commands.py" list --filter multicam.
-python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.editCameras
-python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera
-python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.audioFollowsVideo
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" list --filter multicam.
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.editCameras
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.audioFollowsVideo
 ```
 
 按本技能 `command-usage.md` 的 `craft-command-plan/v1` 合同构造计划；原生参数放入对应命令步骤，不将本表直接当作可执行 JSON。打开同步序列、读取对象、选择目标片段后重新查询 enabled；禁用时报告实际上下文和原因。完成 `check` 后以新输出目录执行 `run`，在同一原生会话保存新的 `.fcproj`。
@@ -47,7 +47,7 @@ On revision, compare the target cut, adjacent clips and master audio before and 
 
 ## 已执行代表实例 / Executed representative example
 
-`examples/multicam-create.json` 接收 `--input red=/absolute/camera1.mp4 --input blue=/absolute/camera2.mp4`，显式 project.select 选择素材后建立 in-point 同步序列，以 camera1 为主录音，在1秒播放头做 videoOnly 切换。样例素材是96×64、12fps、两秒，必须适配真实素材同步依据。`examples/multicam-reopen.json` 接收 `--input project=/absolute/project.fcproj`；其中成片序列ID16只适用于本例，真实项目先查询实际序列ID并修改该步骤。重开可能默认激活源序列，必须显式 sequence.open 成片序列再检查和导出。两例使用本技能 commands.py run 和新输出目录。
+`examples/multicam-create.json` 接收 `--input red=/absolute/camera1.mp4 --input blue=/absolute/camera2.mp4`，显式 project.select 选择素材后建立 in-point 同步序列，以 camera1 为主录音，在1秒播放头做 videoOnly 切换。样例素材是96×64、12fps、两秒，必须适配真实素材同步依据。`examples/multicam-reopen.json` 接收 `--input project=/absolute/project.fcproj`；其中成片序列ID16只适用于本例，真实项目先查询实际序列ID并修改该步骤。重开可能默认激活源序列，必须显式 sequence.open 成片序列再检查和导出。两例使用 filmcraft-harness 技能 commands.py run 和新输出目录。
 
 已核验两个视频片段、一个连续音频片段、重开音轨一致，成片0.5秒红色与1.5秒蓝色，两个片段均保留440Hz主录音；不代表全部多机位命令已验收。
 

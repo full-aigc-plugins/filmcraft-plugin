@@ -8,16 +8,16 @@ import { createHash, randomUUID } from 'node:crypto';
 import { existsSync, lstatSync, readFileSync, readdirSync, realpathSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { Binding } from '../harness/task_ledger.ts';
-import { TaskLedger } from '../harness/task_ledger.ts';
+import type { Binding } from '../../scripts/harness/task_ledger.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { ReceiptIndex, readBoundFile } from '../artifacts/receipt_index.ts';
 import { normalizePlan } from './plan_identity.ts';
 import { CapabilityRefusal } from './capability_refusal.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';
 import { canonicalTarget } from '../support/paths.ts';
-import { ResourceController, outputBytes } from '../harness/resources.ts';
-import type { ResourcePolicy } from '../harness/resources.ts';
-import { CancellationService } from '../harness/cancellation.ts';
+import { ResourceController, outputBytes } from '../../scripts/harness/resources.ts';
+import type { ResourcePolicy } from '../../scripts/harness/resources.ts';
+import { CancellationService } from '../../scripts/harness/cancellation.ts';
 
 /** 自包含技能内容身份；不使用工作目录、mtime 或可变分支作为替代。 */
 export function fingerprintSkill(directory: string) {

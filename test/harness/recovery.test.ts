@@ -4,10 +4,10 @@ import assert from 'node:assert/strict';
 import { spawn, spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import { ContinuationService } from '../../src/harness/continuation.ts';
-import { StateMaintenance } from '../../src/harness/state_maintenance.ts';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
-import { RecoveryService } from '../../src/harness/recovery.ts';
+import { ContinuationService } from '../../scripts/harness/continuation.ts';
+import { StateMaintenance } from '../../scripts/harness/state_maintenance.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
+import { RecoveryService } from '../../scripts/harness/recovery.ts';
 import { ReceiptIndex } from '../../src/artifacts/receipt_index.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { normalizePlan } from '../../src/adapters/plan_identity.ts';
@@ -213,7 +213,7 @@ test('two actual recovery processes cannot apply the same uncertain attempt twic
   const { root, dbFile, db, task, service } = lostReply(t), observation = service.inspect(task.taskId);
   const request = { expectedEpoch: observation.task!.epoch, inspectionSha256: observation.evidenceSha256,
     authorizationRef: task.authorizationRef, authorizationScopeSha256: task.authorizationScopeSha256 };
-  const url = new URL('../../src/harness/recovery.ts', import.meta.url).href;
+  const url = new URL('../../scripts/harness/recovery.ts', import.meta.url).href;
   const jsonUrl = new URL('../../src/support/json.ts', import.meta.url).href;
   const code = `import {sha256,stableJson} from ${JSON.stringify(jsonUrl)};import {RecoveryService} from ${JSON.stringify(url)};const s=new RecoveryService(process.argv[1],process.argv[2],{authorize:(subject,request)=>({...request,expiresAt:Date.now()+60000,subjectSha256:sha256(stableJson(subject))})});try{s.repair(process.argv[3],JSON.parse(process.argv[4]));console.log('APPLIED')}catch(e){console.log(e.code)}`;
   function child() { return new Promise<string>((resolve, reject) => {

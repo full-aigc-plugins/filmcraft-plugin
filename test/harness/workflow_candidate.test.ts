@@ -5,8 +5,8 @@ import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {fingerprintSkill} from '../../src/adapters/python_workflow.ts';
 import {RuntimeDeployment} from '../../src/adapters/runtime_deployment.ts';
-import {TaskLedger} from '../../src/harness/task_ledger.ts';
-import {executionSubject} from '../../src/harness/workflow_admission.ts';
+import {TaskLedger} from '../../scripts/harness/task_ledger.ts';
+import {executionSubject} from '../../scripts/harness/workflow_admission.ts';
 import {sha256,stableJson} from '../../src/support/json.ts';
 import {binding,fixtureAuthorizer,workspace} from './fixtures.ts';
 function setup(t:any){

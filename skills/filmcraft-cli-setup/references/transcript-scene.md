@@ -30,11 +30,11 @@ Query each current parameter contract with `commands.py describe COMMAND_ID`. Wo
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/commands.py" list --filter transcript.
-python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.set
-python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.createCaptions
-python3 -I -B "$SKILL_DIR/scripts/commands.py" check /absolute/transcript-plan.json
-python3 -I -B "$SKILL_DIR/scripts/commands.py" run /absolute/transcript-plan.json --output /absolute/new-transcript-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" list --filter transcript.
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.set
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.createCaptions
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" check /absolute/transcript-plan.json
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" run /absolute/transcript-plan.json --output /absolute/new-transcript-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 使用本技能 command-usage.md 的计划合同，返回值通过 $ref 连接后续步骤，保存工程必须在同一会话。重新剪辑后旧词索引可能失效，必须再次 inspect。enabled 反映当前状态，不把空会话状态当作完成前置条件。失败、禁用或超时按原生回执处理；未知结果先检查原任务，不能重放删除。
@@ -57,7 +57,7 @@ The bounded example imports supplied word timings; it is not an ASR benchmark. R
 
 当前源技能锁定维护运行时 `0.2.0-craft.5`，启用真实CPU Whisper和模型下载。旧的不可变插件快照可能仍锁定craft.3，必须按自身锁和实际 `transcript.models.available` 判断，不能根据本指南推断旧安装已升级。
 
-设定 `MODEL_DATA_DIR` 为任务授权的持久数据目录（绝对路径）；模型不写入技能目录，也不纳入成片/工程交付包。以下调用只使用本技能资源；先检查原生模型目录、来源、许可和体积。tiny多语言模型约154MB，base默认模型更大；按语言、素材和任务选型，不能把一个样例识别率推广为通用准确率。
+设定 `MODEL_DATA_DIR` 为任务授权的持久数据目录（绝对路径）；模型不写入技能目录，也不纳入成片/工程交付包。以下调用的脚本来自 filmcraft-harness 技能；先检查原生模型目录、来源、许可和体积。tiny多语言模型约154MB，base默认模型更大；按语言、素材和任务选型，不能把一个样例识别率推广为通用准确率。
 
 ```bash
 : "${SKILL_DIR:?当前技能实际目录}"
@@ -65,10 +65,10 @@ The bounded example imports supplied word timings; it is not an ASR benchmark. R
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.models --data-dir "$MODEL_DATA_DIR"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$MODEL_DATA_DIR" --write-root "$MODEL_DATA_DIR" --write-root "$RUNTIME_HOME" --model-maintenance -- exec transcript.downloadModel '{"model":"whisper-tiny"}' --data-dir "$MODEL_DATA_DIR"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.generate '{"model":"whisper-tiny","language":"en"}' --project /absolute/source.fcproj --save-as /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.inspect --project /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
+python3 -I -B "$HARNESS_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.models --data-dir "$MODEL_DATA_DIR"
+python3 -I -B "$HARNESS_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$MODEL_DATA_DIR" --write-root "$MODEL_DATA_DIR" --write-root "$RUNTIME_HOME" --model-maintenance -- exec transcript.downloadModel '{"model":"whisper-tiny"}' --data-dir "$MODEL_DATA_DIR"
+python3 -I -B "$HARNESS_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.generate '{"model":"whisper-tiny","language":"en"}' --project /absolute/source.fcproj --save-as /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
+python3 -I -B "$HARNESS_DIR/scripts/cli.py" --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" --read-root "$MODEL_DATA_DIR" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME" -- exec transcript.inspect --project /absolute/recognized.fcproj --data-dir "$MODEL_DATA_DIR"
 ```
 
 下载依当前任务已授权的必要依赖范围执行；未授权且体积/来源会实质影响任务时只询问新增范围。原生下载按固定revision与SHA-256校验；模型查询的installed只反映文件体积，不能作为内容校验的替代。查询available=false时停止自动识别并报告该固定版本不支持，不用transcript.set伪装识别成功。此处省略items仅适用于活动序列已有音轨；明确媒体时传真实items，language按实际语言使用zh/en/auto。不得将参考文本输入识别器。

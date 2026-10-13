@@ -19,7 +19,7 @@ Choose capabilities using the local scenario and command references. Workflow op
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/workflow.py" \
+python3 -I -B "$HARNESS_DIR/scripts/workflow.py" \
   "$SKILL_DIR/examples/short-film.json" \
   --asset shot=/absolute/input/shot.mp4 \
   --asset voice=/absolute/input/voice.wav \

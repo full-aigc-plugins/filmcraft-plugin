@@ -41,8 +41,10 @@ def collect(root=ROOT):
     if snapshot['suiteSha256'] != digest(suite):
         raise ValueError('source_suite_digest_mismatch')
     home = root / 'skills/filmcraft-use'
-    runtime = read(home, 'scripts/runtime.lock.json')
-    desktop = read(home, 'scripts/desktop.lock.json')
+    # 执行实现收敛在 filmcraft-harness：运行时与桌面锁从 harness 读取，参考目录仍在 use 技能。
+    harness = root / 'skills/filmcraft-harness'
+    runtime = read(harness, 'scripts/runtime.lock.json')
+    desktop = read(harness, 'scripts/desktop.lock.json')
     coverage = read(home, 'references/command-coverage.json')
     commands = read(home, 'references/commands.json')
     binary = runtime['artifacts']['darwin-arm64']['binarySha256']
@@ -55,9 +57,12 @@ def collect(root=ROOT):
         raise ValueError('command_owner_mismatch')
     for name in names:
         skill = root / 'skills' / name
-        if (read(skill, 'scripts/runtime.lock.json') != runtime
-                or read(skill, 'scripts/desktop.lock.json') != desktop):
-            raise ValueError('standalone_runtime_drift: ' + name)
+        if skill == harness:
+            if (read(skill, 'scripts/runtime.lock.json') != runtime
+                    or read(skill, 'scripts/desktop.lock.json') != desktop):
+                raise ValueError('standalone_runtime_drift: ' + name)
+        elif (skill / 'scripts').exists():
+            raise ValueError('domain_skill_still_carries_scripts: ' + name)
         text = (skill / 'SKILL.md').read_text()
         if not re.search(r'^name: ' + re.escape(name) + r'\s*$', text, re.M):
             raise ValueError('skill_name_mismatch: ' + name)
@@ -77,7 +82,7 @@ def collect(root=ROOT):
             'status': 'MATCH' if (commands['runtimeSha256'] == binary
                                   and commands['runtimeVersion'] == runtime['resolvedVersion']) else 'MISMATCH'},
         'activeRuntime': {'role': 'skill-execution-authority',
-                          'path': 'skills/filmcraft-use/scripts/runtime.lock.json',
+                          'path': 'skills/filmcraft-harness/scripts/runtime.lock.json',
                           'version': runtime['resolvedVersion'], 'releaseRef': runtime['releaseRef'],
                           'platform': 'darwin-arm64', 'binarySha256': binary},
         'desktop': {'role': 'bridge-desktop-identity', 'version': desktop['version'],

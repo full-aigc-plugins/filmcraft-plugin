@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { spawn } from 'node:child_process';
 import { readFileSync, writeFileSync, mkdirSync, symlinkSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { binding, hash, workspace } from './fixtures.ts';
 
 test('same idempotency key returns the original task; changed identity conflicts without replacing it', t => {
@@ -98,7 +98,7 @@ test('deadline and unsupported state database refuse execution without editing u
 test('two actual processes cannot acquire the same project writer', async t => {
   const root = workspace(t), file = join(root, 'ledger.sqlite'), db = new TaskLedger(file);
   db.register(binding(root)); db.close();
-  const url = new URL('../../src/harness/task_ledger.ts', import.meta.url).href;
+  const url = new URL('../../scripts/harness/task_ledger.ts', import.meta.url).href;
   const code = `import {TaskLedger} from ${JSON.stringify(url)};const db=new TaskLedger(process.argv[1]);try{db.claim('task-1',process.argv[2],60000);console.log('CLAIMED')}catch(e){console.log(e.code)}finally{db.close()}`;
   function child(owner: string) { return new Promise<string>((resolve, reject) => {
     const child = spawn(process.execPath, ['--input-type=module', '-e', code, file, owner]);

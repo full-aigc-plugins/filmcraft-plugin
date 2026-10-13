@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, symlinkSync, renameSync } from 'node:fs';
 import { join } from 'node:path';
 import { workspace, binding, fixtureAuthorizer } from './fixtures.ts';
-import { executionSubject, WorkflowAdmission } from '../../src/harness/workflow_admission.ts';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { executionSubject, WorkflowAdmission } from '../../scripts/harness/workflow_admission.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { ReceiptIndex } from '../../src/artifacts/receipt_index.ts';
 import { validatePermissions, requireRead, requireWrite } from '../../src/support/execution_permissions.ts';
 

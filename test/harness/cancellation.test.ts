@@ -4,10 +4,10 @@ import { spawn, spawnSync } from 'node:child_process';
 import { once } from 'node:events';
 import { join } from 'node:path';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
-import { ResourceController } from '../../src/harness/resources.ts';
-import { CancellationService, cancellationSubject } from '../../src/harness/cancellation.ts';
-import { groupState } from '../../src/harness/process_identity.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
+import { ResourceController } from '../../scripts/harness/resources.ts';
+import { CancellationService, cancellationSubject } from '../../scripts/harness/cancellation.ts';
+import { groupState } from '../../scripts/harness/process_identity.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { binding, fixtureAuthorizer, workspace, captureEvidence } from './fixtures.ts';
 
@@ -117,7 +117,7 @@ test('revocation before the supported stop action leaves a requested cancellatio
 });
 test('an exited actual host leaves its identity-bound detached child running, budget held and cancellation unconfirmed', { timeout: 15_000 }, async t => {
   const root = workspace(t), file = join(root,'ledger.sqlite'), task = binding(root);
-  const module = (name: string) => new URL('../../src/harness/'+name+'.ts', import.meta.url).href;
+  const module = (name: string) => new URL('../../scripts/harness/'+name+'.ts', import.meta.url).href;
   const code = `import {spawn} from 'node:child_process';
     import {TaskLedger} from ${JSON.stringify(module('task_ledger'))};
     import {ResourceController} from ${JSON.stringify(module('resources'))};

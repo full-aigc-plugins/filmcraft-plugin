@@ -4,13 +4,13 @@ import { spawnSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { TaskLedger } from '../src/harness/task_ledger.ts';
+import { TaskLedger } from '../scripts/harness/task_ledger.ts';
 import { ReceiptIndex } from '../src/artifacts/receipt_index.ts';
 import { PythonWorkflowRunner, fingerprintSkill } from '../src/adapters/python_workflow.ts';
 import { publicTask } from '../src/adapters/protocol_mapping.ts';
 import { normalizePlan } from '../src/adapters/plan_identity.ts';
 import { parseJson, sha256, stableJson } from '../src/support/json.ts';
-import { RecoveryService } from '../src/harness/recovery.ts';
+import { RecoveryService } from '../scripts/harness/recovery.ts';
 
 const args = Object.fromEntries(Array.from({ length: (process.argv.length - 2) / 2 }, (_, i) =>
   [process.argv[2 + 2 * i].replace(/^--/, ''), process.argv[3 + 2 * i]]));

@@ -18,7 +18,7 @@ flowchart TD
   P --> N[New candidate verifying; quality NOT_RUN]
 ```
 
-`src/harness/forensic_snapshot.ts` reads original DB/WAL bytes and opens only a private copy for SQLite schema, integrity and logical checks. It neither opens the original SQLite connection nor reads/rebuilds original SHM. DB/WAL drift before or after observation rejects the snapshot. Fault tests compare original database, receipts, project and sidecar inventories/digests; a missing original is never created. Individual snapshot files are limited to 64 MiB; larger inputs remain unconfirmed.
+`scripts/harness/forensic_snapshot.ts` reads original DB/WAL bytes and opens only a private copy for SQLite schema, integrity and logical checks. It neither opens the original SQLite connection nor reads/rebuilds original SHM. DB/WAL drift before or after observation rejects the snapshot. Fault tests compare original database, receipts, project and sidecar inventories/digests; a missing original is never created. Individual snapshot files are limited to 64 MiB; larger inputs remain unconfirmed.
 
 `RecoveryService.repair` is separate from diagnosis. Original receipts/CAS, stopped process group, binding, epoch and current content must agree. The recovery intent commits before rechecking and applying. Two real repair executors produce only one applied intent. Repeated repair requires fresh diagnosis and reuses the original attempt/result; stale diagnosis is rejected. Lease expiry fences the former owner, while unknown process/result retains project occupancy.
 

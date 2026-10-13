@@ -14,7 +14,7 @@ Project…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newProject`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newProject`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -31,7 +31,7 @@ Demo Project
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.openDemoProject`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.openDemoProject`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -48,7 +48,7 @@ Sequence…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newSequence`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newSequence`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -65,7 +65,7 @@ Sequence From Clip
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newSequenceFromClip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newSequenceFromClip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -82,7 +82,7 @@ Bin
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newBin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newBin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -99,7 +99,7 @@ Bin From Selection
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newBinFromSelection`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newBinFromSelection`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -116,7 +116,7 @@ Search Bin
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newSearchBin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newSearchBin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -133,7 +133,7 @@ Offline File…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newOfflineFile`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newOfflineFile`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -150,7 +150,7 @@ Adjustment Layer…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newAdjustmentLayer`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newAdjustmentLayer`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -167,7 +167,7 @@ Bars and Tone…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newBarsAndTone`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newBarsAndTone`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -184,7 +184,7 @@ Black Video…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newBlackVideo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newBlackVideo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -201,7 +201,7 @@ Color Matte…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newColorMatte`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newColorMatte`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -218,7 +218,7 @@ Universal Counting Leader…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newCountingLeader`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newCountingLeader`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -235,7 +235,7 @@ Transparent Video…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newTransparentVideo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newTransparentVideo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -252,7 +252,7 @@ Demo Footage
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.importDemoFootage`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.importDemoFootage`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -269,7 +269,7 @@ Export Interchange
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportInterchange`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportInterchange`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -286,7 +286,7 @@ EDL…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportEdl`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportEdl`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -303,7 +303,7 @@ Selection as FilmCraft Project…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportSelectionProject`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportSelectionProject`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -320,7 +320,7 @@ Avid Log Exchange…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportAle`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportAle`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -337,7 +337,7 @@ OpenTimelineIO…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportOtio`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportOtio`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -354,7 +354,7 @@ Final Cut Pro XML…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportFcp7Xml`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportFcp7Xml`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -371,7 +371,7 @@ FCPXML…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportFcpxml`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportFcpxml`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -388,7 +388,7 @@ AAF…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportAaf`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportAaf`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -405,7 +405,7 @@ OMF…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportOmf`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportOmf`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -422,7 +422,7 @@ Import AAF…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.importAaf`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.importAaf`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -439,7 +439,7 @@ Open Project…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.open`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.open`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -456,7 +456,7 @@ Close
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.close`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.close`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -473,7 +473,7 @@ Close Project
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.closeProject`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.closeProject`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -490,7 +490,7 @@ Close All Projects
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.closeAllProjects`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.closeAllProjects`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -507,7 +507,7 @@ Close All Other Projects
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.closeAllOtherProjects`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.closeAllOtherProjects`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -524,7 +524,7 @@ Save
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.save`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.save`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -541,7 +541,7 @@ Save As…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.saveAs`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.saveAs`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -558,7 +558,7 @@ Save a Copy…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.saveCopy`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.saveCopy`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -575,7 +575,7 @@ Save as Template…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.saveAsTemplate`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.saveAsTemplate`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -592,7 +592,7 @@ Save All
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.saveAll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.saveAll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -609,7 +609,7 @@ Revert
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.revert`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.revert`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -626,7 +626,7 @@ Recover Unsaved Changes…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.recover`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.recover`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -643,7 +643,7 @@ Discard Unsaved Changes
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.discardRecovery`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.discardRecovery`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -660,7 +660,7 @@ List Recoverable Sessions
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.recoveryList`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.recoveryList`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -677,7 +677,7 @@ Auto Save Now
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.autoSaveNow`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.autoSaveNow`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -694,7 +694,7 @@ Auto Save Status
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.autoSaveStatus`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.autoSaveStatus`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -711,7 +711,7 @@ Browse Auto-Saves
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.listAutoSaves`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.listAutoSaves`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -728,7 +728,7 @@ Get Preferences
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe prefs.get`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe prefs.get`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -745,7 +745,7 @@ Set Preferences
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe prefs.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe prefs.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -762,7 +762,7 @@ Reset Preferences
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe prefs.reset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe prefs.reset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -779,7 +779,7 @@ Media…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportMedia`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportMedia`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -796,7 +796,7 @@ List Jobs
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe jobs.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe jobs.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -813,7 +813,7 @@ Performance Statistics
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe perf.stats`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe perf.stats`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -830,7 +830,7 @@ Cancel Job
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe jobs.cancel`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe jobs.cancel`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -847,7 +847,7 @@ Undo
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.undo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.undo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -864,7 +864,7 @@ Redo
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.redo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.redo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -881,7 +881,7 @@ Cut
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.cut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.cut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -898,7 +898,7 @@ Copy
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.copy`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.copy`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -915,7 +915,7 @@ Paste
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.paste`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.paste`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -932,7 +932,7 @@ Paste Insert
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.pasteInsert`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.pasteInsert`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -949,7 +949,7 @@ Paste Attributes…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.pasteAttributes`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.pasteAttributes`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -966,7 +966,7 @@ Remove Attributes…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.removeAttributes`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.removeAttributes`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -983,7 +983,7 @@ Clear
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.clear`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.clear`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1000,7 +1000,7 @@ Ripple Delete
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.rippleDelete`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.rippleDelete`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1017,7 +1017,7 @@ Select All
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.selectAll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.selectAll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1034,7 +1034,7 @@ Select All Matching
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.selectAllMatching`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.selectAllMatching`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1051,7 +1051,7 @@ Deselect All
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.deselectAll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.deselectAll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1068,7 +1068,7 @@ Find…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.find`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.find`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1085,7 +1085,7 @@ Find Next
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.findNext`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.findNext`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1102,7 +1102,7 @@ Duplicate
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.duplicate`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.duplicate`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1119,7 +1119,7 @@ Select Label Group
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.selectLabelGroup`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.selectLabelGroup`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1136,7 +1136,7 @@ Violet
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.violet`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.violet`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1153,7 +1153,7 @@ Iris
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.iris`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.iris`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1170,7 +1170,7 @@ Caribbean
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.caribbean`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.caribbean`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1187,7 +1187,7 @@ Lavender
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.lavender`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.lavender`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1204,7 +1204,7 @@ Cerulean
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.cerulean`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.cerulean`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1221,7 +1221,7 @@ Forest
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.forest`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.forest`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1238,7 +1238,7 @@ Rose
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.rose`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.rose`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1255,7 +1255,7 @@ Mango
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.mango`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.mango`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1272,7 +1272,7 @@ Purple
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.purple`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.purple`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1289,7 +1289,7 @@ Blue
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.blue`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.blue`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1306,7 +1306,7 @@ Teal
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.teal`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.teal`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1323,7 +1323,7 @@ Magenta
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.magenta`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.magenta`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1340,7 +1340,7 @@ Tan
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.tan`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.tan`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1357,7 +1357,7 @@ Green
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.green`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.green`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1374,7 +1374,7 @@ Brown
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.brown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.brown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1391,7 +1391,7 @@ Yellow
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label.yellow`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label.yellow`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1408,7 +1408,7 @@ Remove Unused
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.removeUnused`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.removeUnused`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1425,7 +1425,7 @@ Consolidate Duplicates
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.consolidateDuplicates`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.consolidateDuplicates`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1442,7 +1442,7 @@ Edit Original
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.editOriginal`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.editOriginal`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1459,7 +1459,7 @@ Label
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe edit.label`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe edit.label`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1476,7 +1476,7 @@ Rename…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.rename`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.rename`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1493,7 +1493,7 @@ Make Subclip…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.makeSubclip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.makeSubclip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1510,7 +1510,7 @@ Edit Subclip…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.editSubclip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.editSubclip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1527,7 +1527,7 @@ Edit Offline…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.editOffline`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.editOffline`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1544,7 +1544,7 @@ Source Settings…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.sourceSettings`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.sourceSettings`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1561,7 +1561,7 @@ Audio Channels…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.audioChannels`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.audioChannels`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1578,7 +1578,7 @@ Interpret Footage…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.interpretFootage`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.interpretFootage`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1595,7 +1595,7 @@ Timecode…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.modifyTimecode`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.modifyTimecode`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1612,7 +1612,7 @@ Frame Hold Options…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.frameHoldOptions`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.frameHoldOptions`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1629,7 +1629,7 @@ Add Frame Hold
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.frameHold`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.frameHold`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1646,7 +1646,7 @@ Insert Frame Hold Segment
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.insertFrameHoldSegment`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.insertFrameHoldSegment`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1663,7 +1663,7 @@ Field Options…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.fieldOptions`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.fieldOptions`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1680,7 +1680,7 @@ Frame Sampling
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.timeInterpolation.frameSampling`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.timeInterpolation.frameSampling`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1697,7 +1697,7 @@ Frame Blending
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.timeInterpolation.frameBlending`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.timeInterpolation.frameBlending`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1714,7 +1714,7 @@ Optical Flow
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.timeInterpolation.opticalFlow`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.timeInterpolation.opticalFlow`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1731,7 +1731,7 @@ Scale to Frame Size
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.scaleToFrameSize`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.scaleToFrameSize`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1748,7 +1748,7 @@ Fit to frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.fitToFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.fitToFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1765,7 +1765,7 @@ Fill frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.fillFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.fillFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1782,7 +1782,7 @@ Audio Gain…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.audioGain`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.audioGain`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1799,7 +1799,7 @@ Breakout to Mono
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.breakoutToMono`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.breakoutToMono`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1816,7 +1816,7 @@ Extract Audio
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.extractAudio`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.extractAudio`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1833,7 +1833,7 @@ Speed/Duration…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.speedDuration`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.speedDuration`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1850,7 +1850,7 @@ Scene Edit Detection…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.sceneEditDetection`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.sceneEditDetection`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1867,7 +1867,7 @@ Enable
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.enable`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.enable`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1884,7 +1884,7 @@ Link
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.link`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.link`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1901,7 +1901,7 @@ Group
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.group`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.group`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1918,7 +1918,7 @@ Ungroup
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.ungroup`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.ungroup`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1935,7 +1935,7 @@ Audio Clip Peak Amplitude
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.audioPeak`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.audioPeak`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1952,7 +1952,7 @@ Nest…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.nest`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.nest`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1969,7 +1969,7 @@ Open in Timeline
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.open`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.open`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -1986,7 +1986,7 @@ Close Sequence
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.close`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.close`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2003,7 +2003,7 @@ Sequence Settings…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.settings`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.settings`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2020,7 +2020,7 @@ Render Effects In to Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.renderEffectsInToOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.renderEffectsInToOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2037,7 +2037,7 @@ Render In to Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.renderInToOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.renderInToOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2054,7 +2054,7 @@ Render Selection
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.renderSelection`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.renderSelection`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2071,7 +2071,7 @@ Render Audio
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.renderAudio`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.renderAudio`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2088,7 +2088,7 @@ Delete Render Files
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.deleteRenderFiles`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.deleteRenderFiles`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2105,7 +2105,7 @@ Delete Render Files In to Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.deleteRenderFilesInToOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.deleteRenderFilesInToOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2122,7 +2122,7 @@ Match Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.matchFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.matchFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2139,7 +2139,7 @@ Reverse Match Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.reverseMatchFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.reverseMatchFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2156,7 +2156,7 @@ Add Edit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.addEdit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.addEdit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2173,7 +2173,7 @@ Add Edit to All Tracks
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.addEditAllTracks`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.addEditAllTracks`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2190,7 +2190,7 @@ Trim Edit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.edit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.edit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2207,7 +2207,7 @@ Apply Video Transition
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.applyVideoTransition`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.applyVideoTransition`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2224,7 +2224,7 @@ Apply Audio Transition
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.applyAudioTransition`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.applyAudioTransition`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2241,7 +2241,7 @@ Apply Default Transitions to Selection
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.applyDefaultTransition`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.applyDefaultTransition`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2258,7 +2258,7 @@ Lift
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.lift`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.lift`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2275,7 +2275,7 @@ Extract
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.extract`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.extract`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2292,7 +2292,7 @@ Close Gap
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.closeGap`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.closeGap`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2309,7 +2309,7 @@ Next in Sequence
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.goToNextGap`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.goToNextGap`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2326,7 +2326,7 @@ Previous in Sequence
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.goToPrevGap`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.goToPrevGap`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2343,7 +2343,7 @@ Next in Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.goToNextGapInTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.goToNextGapInTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2360,7 +2360,7 @@ Previous in Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.goToPrevGapInTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.goToPrevGapInTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2377,7 +2377,7 @@ Snap in Timeline
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.snap`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.snap`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2394,7 +2394,7 @@ Linked Selection
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.linkedSelection`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.linkedSelection`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2411,7 +2411,7 @@ Selection Follows Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.selectionFollowsPlayhead`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.selectionFollowsPlayhead`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2428,7 +2428,7 @@ Show Through Edits
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.showThroughEdits`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.showThroughEdits`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2445,7 +2445,7 @@ Normalize Mix Track…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.normalizeMixTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.normalizeMixTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2462,7 +2462,7 @@ Make Subsequence
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.makeSubsequence`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.makeSubsequence`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2479,7 +2479,7 @@ Transcribe Sequence…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.transcribe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.transcribe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2496,7 +2496,7 @@ Simplify Sequence…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.simplify`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.simplify`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2513,7 +2513,7 @@ Add Tracks…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.addTracks`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.addTracks`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2530,7 +2530,7 @@ Delete Tracks…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.deleteTracks`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.deleteTracks`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2547,7 +2547,7 @@ Color Management…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.colorSettings`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.colorSettings`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2564,7 +2564,7 @@ Add Audio Submix Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.addSubmix`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.addSubmix`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2581,7 +2581,7 @@ Edit Transition Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.setTransition`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.setTransition`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2598,7 +2598,7 @@ Join Through Edits
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.joinThroughEdits`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.joinThroughEdits`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2615,7 +2615,7 @@ List Through Edits
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.throughEdits`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.throughEdits`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2632,7 +2632,7 @@ Delete Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.deleteTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.deleteTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2649,7 +2649,7 @@ Render Bar
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.renderBar`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.renderBar`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2666,7 +2666,7 @@ Mark In
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markIn`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markIn`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2683,7 +2683,7 @@ Mark Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2700,7 +2700,7 @@ Mark Clip
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markClip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markClip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2717,7 +2717,7 @@ Mark Selection
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markSelection`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markSelection`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2734,7 +2734,7 @@ Video In
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markSplitVideoIn`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markSplitVideoIn`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2751,7 +2751,7 @@ Video Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markSplitVideoOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markSplitVideoOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2768,7 +2768,7 @@ Audio In
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markSplitAudioIn`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markSplitAudioIn`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2785,7 +2785,7 @@ Audio Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.markSplitAudioOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.markSplitAudioOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2802,7 +2802,7 @@ Go to In
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goToIn`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goToIn`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2819,7 +2819,7 @@ Go to Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goToOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goToOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2836,7 +2836,7 @@ Video In
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goToSplitVideoIn`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goToSplitVideoIn`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2853,7 +2853,7 @@ Video Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goToSplitVideoOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goToSplitVideoOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2870,7 +2870,7 @@ Audio In
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goToSplitAudioIn`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goToSplitAudioIn`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2887,7 +2887,7 @@ Audio Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goToSplitAudioOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goToSplitAudioOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2904,7 +2904,7 @@ Clear In
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.clearIn`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.clearIn`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2921,7 +2921,7 @@ Clear Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.clearOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.clearOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2938,7 +2938,7 @@ Clear In and Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.clearInOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.clearInOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2955,7 +2955,7 @@ Add Marker
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.add`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.add`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2972,7 +2972,7 @@ Add Range Marker
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.addRange`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.addRange`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -2989,7 +2989,7 @@ Add Range Marker to In and Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.addRangeInOut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.addRangeInOut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3006,7 +3006,7 @@ Go to Next Marker
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goNext`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goNext`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3023,7 +3023,7 @@ Go to Previous Marker
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.goPrev`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.goPrev`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3040,7 +3040,7 @@ Clear Selected Marker
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.clearCurrent`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.clearCurrent`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3057,7 +3057,7 @@ Clear Markers
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.clearAll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.clearAll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3074,7 +3074,7 @@ Show All Marker Colors
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.showAllMarkerColors`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.showAllMarkerColors`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3091,7 +3091,7 @@ Marker Colour Filter
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.filterColors`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.filterColors`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3108,7 +3108,7 @@ Edit Marker…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.edit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.edit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3125,7 +3125,7 @@ Add Chapter Marker…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.addChapter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.addChapter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3142,7 +3142,7 @@ Add Flash Cue Marker…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.addFlashCue`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.addFlashCue`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3159,7 +3159,7 @@ Ripple Sequence Markers
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.rippleSequenceMarkers`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.rippleSequenceMarkers`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3176,7 +3176,7 @@ Copy Paste Includes Sequence Markers
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe markers.copyPasteIncludesSequenceMarkers`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe markers.copyPasteIncludesSequenceMarkers`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3193,7 +3193,7 @@ Set Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3210,7 +3210,7 @@ Step Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.step`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.step`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3227,7 +3227,7 @@ Step Forward One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.stepForward`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.stepForward`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3244,7 +3244,7 @@ Step Back One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.stepBack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.stepBack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3261,7 +3261,7 @@ Step Forward Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.stepForward5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.stepForward5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3278,7 +3278,7 @@ Step Back Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.stepBack5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.stepBack5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3295,7 +3295,7 @@ Go to Next Edit Point
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.nextEdit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.nextEdit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3312,7 +3312,7 @@ Go to Previous Edit Point
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.prevEdit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.prevEdit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3329,7 +3329,7 @@ Go to Sequence Start
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.start`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.start`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3346,7 +3346,7 @@ Go to Sequence End
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.end`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.end`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3363,7 +3363,7 @@ Open in Source Monitor
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe source.open`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe source.open`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3380,7 +3380,7 @@ Set Source Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe source.setPlayhead`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe source.setPlayhead`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3397,7 +3397,7 @@ Inspect Source Monitor
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe source.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe source.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3414,7 +3414,7 @@ Insert
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe source.insert`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe source.insert`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3431,7 +3431,7 @@ Overwrite
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe source.overwrite`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe source.overwrite`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3448,7 +3448,7 @@ From Source Monitor
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.replaceFromSource`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.replaceFromSource`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3465,7 +3465,7 @@ From Source Monitor, Match Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.replaceFromSourceMatchFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.replaceFromSourceMatchFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3482,7 +3482,7 @@ From Bin
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.replaceFromBin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.replaceFromBin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3499,7 +3499,7 @@ Restore Captions from Source Clip
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.restoreCaptionsFromSource`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.restoreCaptionsFromSource`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3516,7 +3516,7 @@ Update Metadata…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.updateMetadata`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.updateMetadata`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3533,7 +3533,7 @@ Generate Audio Waveform
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.generateAudioWaveform`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.generateAudioWaveform`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3550,7 +3550,7 @@ Automate to Sequence…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.automateToSequence`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.automateToSequence`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3567,7 +3567,7 @@ Place Clip
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.place`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.place`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3584,7 +3584,7 @@ Select Clips
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.select`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.select`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3601,7 +3601,7 @@ Move Clips
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.move`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.move`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3618,7 +3618,7 @@ Trim Edit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.trim`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.trim`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3635,7 +3635,7 @@ Select Edit Point
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.selectEditPoint`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.selectEditPoint`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3652,7 +3652,7 @@ Select Nearest Edit Point
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.selectNearest`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.selectNearest`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3669,7 +3669,7 @@ Clear Edit Point Selection
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.clear`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.clear`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3686,7 +3686,7 @@ Toggle Trim Type
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.toggleType`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.toggleType`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3703,7 +3703,7 @@ Trim Backward
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.backward`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.backward`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3720,7 +3720,7 @@ Trim Forward
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.forward`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.forward`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3737,7 +3737,7 @@ Trim Backward Many
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.backwardMany`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.backwardMany`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3754,7 +3754,7 @@ Trim Forward Many
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.forwardMany`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.forwardMany`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3771,7 +3771,7 @@ Dynamic Trim (Shuttle)
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.shuttle`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.shuttle`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3788,7 +3788,7 @@ Dynamic Trim Stop
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.shuttleStop`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.shuttleStop`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3805,7 +3805,7 @@ Cancel Dynamic Trim
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.cancelDynamic`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.cancelDynamic`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3822,7 +3822,7 @@ Play Around Edit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.playAround`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.playAround`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3839,7 +3839,7 @@ Advance Trim Playback
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.tick`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.tick`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3856,7 +3856,7 @@ Trim Monitor State
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.monitor`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.monitor`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3873,7 +3873,7 @@ Trim by Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.nudge`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.nudge`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3890,7 +3890,7 @@ Extend Selected Edit to Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.extendToPlayhead`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.extendToPlayhead`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3907,7 +3907,7 @@ Ripple Trim Previous Edit to Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.ripplePrevious`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.ripplePrevious`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3924,7 +3924,7 @@ Ripple Trim Next Edit to Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.rippleNext`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.rippleNext`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3941,7 +3941,7 @@ Trim Previous Edit to Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.previous`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.previous`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3958,7 +3958,7 @@ Trim Next Edit to Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.next`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.next`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3975,7 +3975,7 @@ Rolling Edit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.roll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.roll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -3992,7 +3992,7 @@ Slip
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4009,7 +4009,7 @@ Slide
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slide`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slide`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4026,7 +4026,7 @@ Rate Stretch
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.rateStretch`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.rateStretch`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4043,7 +4043,7 @@ Razor
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.razor`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.razor`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4060,7 +4060,7 @@ Track Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.setTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.setTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4077,7 +4077,7 @@ Track Targeting
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.setTargeting`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.setTargeting`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4094,7 +4094,7 @@ Apply Effect
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.apply`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.apply`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4111,7 +4111,7 @@ Remove Effect
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.remove`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.remove`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4128,7 +4128,7 @@ Set Effect Parameter
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.setParam`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.setParam`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4145,7 +4145,7 @@ Toggle Animation
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.toggleAnimation`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.toggleAnimation`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4162,7 +4162,7 @@ Toggle Effect
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.toggleEnabled`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.toggleEnabled`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4179,7 +4179,7 @@ Reset Effect
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.reset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.reset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4196,7 +4196,7 @@ Add/Remove Keyframe
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.addKeyframe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.addKeyframe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4213,7 +4213,7 @@ Delete Keyframe
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.deleteKeyframe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.deleteKeyframe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4230,7 +4230,7 @@ Move Keyframe
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.moveKeyframe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.moveKeyframe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4247,7 +4247,7 @@ Keyframe Interpolation
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.setInterpolation`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.setInterpolation`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4264,7 +4264,7 @@ Edit Keyframe
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.setKeyframe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.setKeyframe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4281,7 +4281,7 @@ Select Project Items
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.select`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.select`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4298,7 +4298,7 @@ Clear
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.delete`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.delete`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4315,7 +4315,7 @@ Move to Bin
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.moveToBin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.moveToBin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4332,7 +4332,7 @@ Set Source In/Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.setMarks`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.setMarks`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4349,7 +4349,7 @@ List Commands
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe command.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe command.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4366,7 +4366,7 @@ Inspect Project
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4383,7 +4383,7 @@ Inspect Sequence
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4400,7 +4400,7 @@ Inspect Editor State
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe state.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe state.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4417,7 +4417,7 @@ List Effects
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4434,7 +4434,7 @@ List History
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe history.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe history.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4451,7 +4451,7 @@ Add New Caption Track…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.newTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.newTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4468,7 +4468,7 @@ Delete Caption Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.deleteTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.deleteTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4485,7 +4485,7 @@ Caption Track Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.setTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.setTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4502,7 +4502,7 @@ Caption Track Style
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.setStyle`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.setStyle`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4519,7 +4519,7 @@ Add Caption at Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.add`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.add`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4536,7 +4536,7 @@ Split Caption
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.split`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.split`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4553,7 +4553,7 @@ Merge Captions
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.merge`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.merge`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4570,7 +4570,7 @@ Edit Caption Text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.setText`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.setText`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4587,7 +4587,7 @@ Set Caption In/Out
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.setTimes`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.setTimes`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4604,7 +4604,7 @@ Trim Caption
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.trim`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.trim`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4621,7 +4621,7 @@ Move Captions
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.move`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.move`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4638,7 +4638,7 @@ Delete Captions
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.delete`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.delete`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4655,7 +4655,7 @@ Select Captions
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.select`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.select`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4672,7 +4672,7 @@ Go to Caption
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.goTo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.goTo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4689,7 +4689,7 @@ Go to Next Caption Segment
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.next`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.next`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4706,7 +4706,7 @@ Go to Previous Caption Segment
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.previous`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.previous`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4723,7 +4723,7 @@ Show All Caption Tracks
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.showAll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.showAll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4740,7 +4740,7 @@ Show Active Caption Tracks Only
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.showActiveOnly`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.showActiveOnly`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4757,7 +4757,7 @@ Hide All Caption Tracks
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.hideAll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.hideAll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4774,7 +4774,7 @@ Import Captions…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.import`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.import`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4791,7 +4791,7 @@ Captions…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.export`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.export`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4808,7 +4808,7 @@ List Captions
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-subtitles`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe captions.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe captions.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4825,7 +4825,7 @@ Settings Schema
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe prefs.schema`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe prefs.schema`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4842,7 +4842,7 @@ Media Cache Info
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaCache.info`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaCache.info`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4859,7 +4859,7 @@ Delete Media Cache Files
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaCache.clean`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaCache.clean`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4876,7 +4876,7 @@ Inspect Audio Track Mixer
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4893,7 +4893,7 @@ Track Mixer Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.setStrip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.setStrip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4910,7 +4910,7 @@ Set Mixer Control
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.setValue`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.setValue`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4927,7 +4927,7 @@ Touch Mixer Control
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.touch`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.touch`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4944,7 +4944,7 @@ Release Mixer Control
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.release`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.release`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4961,7 +4961,7 @@ Start Automation Pass
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.recordStart`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.recordStart`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4978,7 +4978,7 @@ Write Automation
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.recordStop`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.recordStop`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -4995,7 +4995,7 @@ Audio Clip Mixer Adjust
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clipMixer.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clipMixer.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5012,7 +5012,7 @@ Audio Clip Mixer Automation Mode
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clipMixer.setMode`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clipMixer.setMode`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5029,7 +5029,7 @@ Touch Clip Mixer Control
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clipMixer.touch`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clipMixer.touch`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5046,7 +5046,7 @@ Release Clip Mixer Control
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clipMixer.release`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clipMixer.release`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5063,7 +5063,7 @@ Set Selected as Default Transition
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe effects.setDefaultTransition`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe effects.setDefaultTransition`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5080,7 +5080,7 @@ Delete Submix Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.deleteSubmix`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.deleteSubmix`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5097,7 +5097,7 @@ Add Track Effect
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.addInsert`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.addInsert`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5114,7 +5114,7 @@ Remove Track Effect
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.removeInsert`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.removeInsert`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5131,7 +5131,7 @@ Track Effect Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.setInsert`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.setInsert`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5148,7 +5148,7 @@ Add Send
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.addSend`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.addSend`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5165,7 +5165,7 @@ Send Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.setSend`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.setSend`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5182,7 +5182,7 @@ Remove Send
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.removeSend`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.removeSend`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5199,7 +5199,7 @@ Add Track Keyframe
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.setKeyframe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.setKeyframe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5216,7 +5216,7 @@ Delete Track Keyframe
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.deleteKeyframe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.deleteKeyframe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5233,7 +5233,7 @@ Move Track Keyframe
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.moveKeyframe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.moveKeyframe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5250,7 +5250,7 @@ Clear Track Keyframes
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.clearLane`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.clearLane`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5267,7 +5267,7 @@ Write Automation Points
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mixer.writeAutomation`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mixer.writeAutomation`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5284,7 +5284,7 @@ Synchronize…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.synchronize`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.synchronize`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5301,7 +5301,7 @@ Merge Clips…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.mergeClips`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.mergeClips`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5318,7 +5318,7 @@ Create Multi-Camera Source Sequence…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.createMulticam`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.createMulticam`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5335,7 +5335,7 @@ Enable
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.multicamEnable`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.multicamEnable`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5352,7 +5352,7 @@ Flatten
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.multicamFlatten`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.multicamFlatten`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5369,7 +5369,7 @@ Switch Multi-Camera Angle
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.switchAngle`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.switchAngle`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5386,7 +5386,7 @@ Start Multi-Camera Recording
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.recordStart`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.recordStart`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5403,7 +5403,7 @@ Cut to Camera
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5420,7 +5420,7 @@ Stop Multi-Camera Recording
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.recordStop`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.recordStop`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5437,7 +5437,7 @@ Multi-Camera Audio Follows Video
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.audioFollowsVideo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.audioFollowsVideo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5454,7 +5454,7 @@ Edit Cameras…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.editCameras`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.editCameras`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5471,7 +5471,7 @@ Cut to Camera
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5488,7 +5488,7 @@ Multi-Camera Layout
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.gridLayout`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.gridLayout`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5505,7 +5505,7 @@ Multi-Camera Page
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.page`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.page`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5522,7 +5522,7 @@ Next Multi-Camera Page
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.nextPage`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.nextPage`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5539,7 +5539,7 @@ Previous Multi-Camera Page
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.prevPage`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.prevPage`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5556,7 +5556,7 @@ Multi-Camera Selection Top Down
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectionTopDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectionTopDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5573,7 +5573,7 @@ Show Multi-Camera Preview Monitor
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.showPreviewMonitor`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.showPreviewMonitor`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5590,7 +5590,7 @@ Auto-Adjust Multi-Camera Playback Quality
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.autoAdjustQuality`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.autoAdjustQuality`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5607,7 +5607,7 @@ Transmit Multi-Camera View
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.transmitView`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.transmitView`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5624,7 +5624,7 @@ Multi-Camera Grid
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.grid`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.grid`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5641,7 +5641,7 @@ Inspect Multi-Camera
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5658,7 +5658,7 @@ Select Camera 1
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera1`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera1`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5675,7 +5675,7 @@ Cut to Camera 1
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera1`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera1`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5692,7 +5692,7 @@ Select Camera 2
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera2`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera2`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5709,7 +5709,7 @@ Cut to Camera 2
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera2`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera2`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5726,7 +5726,7 @@ Select Camera 3
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera3`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera3`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5743,7 +5743,7 @@ Cut to Camera 3
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera3`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera3`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5760,7 +5760,7 @@ Select Camera 4
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera4`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera4`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5777,7 +5777,7 @@ Cut to Camera 4
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera4`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera4`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5794,7 +5794,7 @@ Select Camera 5
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5811,7 +5811,7 @@ Cut to Camera 5
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5828,7 +5828,7 @@ Select Camera 6
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera6`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera6`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5845,7 +5845,7 @@ Cut to Camera 6
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera6`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera6`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5862,7 +5862,7 @@ Select Camera 7
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera7`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera7`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5879,7 +5879,7 @@ Cut to Camera 7
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera7`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera7`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5896,7 +5896,7 @@ Select Camera 8
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera8`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera8`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5913,7 +5913,7 @@ Cut to Camera 8
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera8`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera8`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5930,7 +5930,7 @@ Select Camera 9
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.selectCamera9`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.selectCamera9`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5947,7 +5947,7 @@ Cut to Camera 9
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-multicam`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe multicam.cutToCamera9`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe multicam.cutToCamera9`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5964,7 +5964,7 @@ Inspect Essential Sound
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5981,7 +5981,7 @@ Set Audio Type
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.setType`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.setType`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -5998,7 +5998,7 @@ Clear Audio Type
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.clearType`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.clearType`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6015,7 +6015,7 @@ Essential Sound Setting
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6032,7 +6032,7 @@ Apply Sound Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.applyPreset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.applyPreset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6049,7 +6049,7 @@ Save Sound Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.savePreset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.savePreset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6066,7 +6066,7 @@ Delete Sound Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.deletePreset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.deletePreset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6083,7 +6083,7 @@ Auto-Match Loudness
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.autoMatch`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.autoMatch`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6100,7 +6100,7 @@ Generate Ducking Keyframes
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe essentialSound.generateDucking`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe essentialSound.generateDucking`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6117,7 +6117,7 @@ List Colour Spaces
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe color.spaces`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe color.spaces`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6134,7 +6134,7 @@ List Lumetri Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lumetri.presets`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lumetri.presets`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6151,7 +6151,7 @@ Apply Lumetri Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lumetri.applyPreset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lumetri.applyPreset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6168,7 +6168,7 @@ Lumetri Preset Thumbnails
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lumetri.presetThumbnails`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lumetri.presetThumbnails`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6185,7 +6185,7 @@ Media Colour Info
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.colorInfo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.colorInfo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6202,7 +6202,7 @@ Import LUT…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lut.import`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lut.import`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6219,7 +6219,7 @@ List LUTs
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lut.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lut.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6236,7 +6236,7 @@ Remove LUT
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lut.remove`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lut.remove`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6253,7 +6253,7 @@ Export LUT
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lut.export`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lut.export`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6270,7 +6270,7 @@ Set Input LUT
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: true。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lumetri.setInputLut`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lumetri.setInputLut`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6287,7 +6287,7 @@ Set Creative Look
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lumetri.setLook`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lumetri.setLook`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6304,7 +6304,7 @@ Apply Match
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lumetri.applyMatch`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lumetri.applyMatch`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6321,7 +6321,7 @@ Toggle Lumetri Section
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe lumetri.setSection`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe lumetri.setSection`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6338,7 +6338,7 @@ Text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.newText`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.newText`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6355,7 +6355,7 @@ Shape
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.newShape`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.newShape`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6372,7 +6372,7 @@ Edit Text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.setText`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.setText`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6389,7 +6389,7 @@ Set Graphic Properties
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6406,7 +6406,7 @@ Select Graphic Layer
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.selectLayer`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.selectLayer`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6423,7 +6423,7 @@ Delete Graphic Layer
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.deleteLayer`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.deleteLayer`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6440,7 +6440,7 @@ Arrange Graphic Layer
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.arrangeLayer`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.arrangeLayer`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6457,7 +6457,7 @@ Align Layers
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.align`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.align`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6474,7 +6474,7 @@ Distribute Layers
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.distribute`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.distribute`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6491,7 +6491,7 @@ List Graphic Layers
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6508,7 +6508,7 @@ List Fonts
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe fonts.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe fonts.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6525,7 +6525,7 @@ Vertical Text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.newVerticalText`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.newVerticalText`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6542,7 +6542,7 @@ Rectangle
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.newRectangle`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.newRectangle`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6559,7 +6559,7 @@ Ellipse
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.newEllipse`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.newEllipse`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6576,7 +6576,7 @@ Polygon
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.newPolygon`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.newPolygon`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6593,7 +6593,7 @@ From file…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.newFromFile`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.newFromFile`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6610,7 +6610,7 @@ Left
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignFrame.left`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignFrame.left`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6627,7 +6627,7 @@ Center Horizontally
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignFrame.hcenter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignFrame.hcenter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6644,7 +6644,7 @@ Right
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignFrame.right`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignFrame.right`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6661,7 +6661,7 @@ Top
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignFrame.top`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignFrame.top`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6678,7 +6678,7 @@ Center Vertically
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignFrame.vcenter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignFrame.vcenter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6695,7 +6695,7 @@ Bottom
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignFrame.bottom`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignFrame.bottom`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6712,7 +6712,7 @@ Left
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignGroup.left`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignGroup.left`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6729,7 +6729,7 @@ Center Horizontally
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignGroup.hcenter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignGroup.hcenter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6746,7 +6746,7 @@ Right
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignGroup.right`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignGroup.right`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6763,7 +6763,7 @@ Top
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignGroup.top`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignGroup.top`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6780,7 +6780,7 @@ Center Vertically
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignGroup.vcenter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignGroup.vcenter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6797,7 +6797,7 @@ Bottom
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignGroup.bottom`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignGroup.bottom`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6814,7 +6814,7 @@ Left
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignSelection.left`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignSelection.left`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6831,7 +6831,7 @@ Center Horizontally
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignSelection.hcenter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignSelection.hcenter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6848,7 +6848,7 @@ Right
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignSelection.right`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignSelection.right`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6865,7 +6865,7 @@ Top
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignSelection.top`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignSelection.top`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6882,7 +6882,7 @@ Center Vertically
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignSelection.vcenter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignSelection.vcenter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6899,7 +6899,7 @@ Bottom
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignSelection.bottom`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignSelection.bottom`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6916,7 +6916,7 @@ Distribute Vertically
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.distributeVertically`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.distributeVertically`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6933,7 +6933,7 @@ Distribute Space Vertically
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.distributeSpaceVertically`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.distributeSpaceVertically`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6950,7 +6950,7 @@ Distribute Horizontally
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.distributeHorizontally`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.distributeHorizontally`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6967,7 +6967,7 @@ Distribute Space Horizontally
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.distributeSpaceHorizontally`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.distributeSpaceHorizontally`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -6984,7 +6984,7 @@ Bring to Front
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.bringToFront`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.bringToFront`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7001,7 +7001,7 @@ Bring Forward
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.bringForward`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.bringForward`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7018,7 +7018,7 @@ Send Backward
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.sendBackward`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.sendBackward`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7035,7 +7035,7 @@ Send to Back
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.sendToBack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.sendToBack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7052,7 +7052,7 @@ Select Next Graphic
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.selectNextGraphic`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.selectNextGraphic`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7069,7 +7069,7 @@ Select Previous Graphic
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.selectPreviousGraphic`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.selectPreviousGraphic`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7086,7 +7086,7 @@ Select Next Layer
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.selectNextLayer`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.selectNextLayer`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7103,7 +7103,7 @@ Select Previous Layer
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.selectPreviousLayer`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.selectPreviousLayer`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7120,7 +7120,7 @@ Reset All Parameters
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.resetAllParameters`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.resetAllParameters`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7137,7 +7137,7 @@ Reset Duration
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.resetDuration`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.resetDuration`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7154,7 +7154,7 @@ List Graphics Templates
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7171,7 +7171,7 @@ Apply Graphics Template
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.apply`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.apply`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7188,7 +7188,7 @@ Export As Motion Graphics Template…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.export`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.export`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7205,7 +7205,7 @@ Motion Graphics Template…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportGraphicsTemplate`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportGraphicsTemplate`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7222,7 +7222,7 @@ Install Motion Graphics Template…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.install`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.install`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7239,7 +7239,7 @@ Remove Graphics Template
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.remove`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.remove`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7256,7 +7256,7 @@ Set Template Property
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7273,7 +7273,7 @@ List Template Properties
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.controls`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.controls`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7290,7 +7290,7 @@ Graphics Template Thumbnail
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.template.thumbnail`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.template.thumbnail`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7307,7 +7307,7 @@ Roll/Crawl Options
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.setRoll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.setRoll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7324,7 +7324,7 @@ Responsive Design - Time
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.setResponsiveTime`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.setResponsiveTime`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7341,7 +7341,7 @@ Responsive Design - Position
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.pin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.pin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7358,7 +7358,7 @@ Character Style
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.setCharStyle`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.setCharStyle`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7375,7 +7375,7 @@ Upgrade Caption to Graphic
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.upgradeCaption`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.upgradeCaption`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7392,7 +7392,7 @@ Upgrade to Source Graphic
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.upgradeToSourceGraphic`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.upgradeToSourceGraphic`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7409,7 +7409,7 @@ Replace Fonts in Projects…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.replaceFonts`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.replaceFonts`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7426,7 +7426,7 @@ List Fonts Used
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.fonts.used`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.fonts.used`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7443,7 +7443,7 @@ List Keyboard Shortcuts
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7460,7 +7460,7 @@ Get Shortcuts of a Command
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.get`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.get`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7477,7 +7477,7 @@ Assign Shortcut
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7494,7 +7494,7 @@ Clear Shortcut
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.clear`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.clear`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7511,7 +7511,7 @@ Undo Shortcut Change
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.undo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.undo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7528,7 +7528,7 @@ Redo Shortcut Change
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.redo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.redo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7545,7 +7545,7 @@ Shortcut Conflicts
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.conflicts`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.conflicts`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7562,7 +7562,7 @@ Shortcuts on a Key
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.forKey`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.forKey`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7579,7 +7579,7 @@ Resolve Shortcut
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.resolve`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.resolve`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7596,7 +7596,7 @@ Keyboard Shortcut Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.presets`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.presets`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7613,7 +7613,7 @@ Load Shortcut Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.loadPreset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.loadPreset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7630,7 +7630,7 @@ Save Shortcut Preset As
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.savePreset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.savePreset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7647,7 +7647,7 @@ Delete Shortcut Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.deletePreset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.deletePreset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7664,7 +7664,7 @@ Export Keyboard Shortcuts
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.export`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.export`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7681,7 +7681,7 @@ Import Keyboard Shortcuts
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.import`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.import`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7698,7 +7698,7 @@ Shortcut Audit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe shortcuts.audit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe shortcuts.audit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7715,7 +7715,7 @@ Find Missing Media
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.findMissing`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.findMissing`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7732,7 +7732,7 @@ Media Status
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.status`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.status`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7749,7 +7749,7 @@ Link Media…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.linkMedia`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.linkMedia`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7766,7 +7766,7 @@ Relink Media
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.relink`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.relink`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7783,7 +7783,7 @@ Replace Footage…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.replaceFootage`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.replaceFootage`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7800,7 +7800,7 @@ Relink Moved Media
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.autoRelink`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.autoRelink`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7817,7 +7817,7 @@ Search for Media
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.search`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.search`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7834,7 +7834,7 @@ Make Offline…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.makeOffline`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.makeOffline`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7851,7 +7851,7 @@ Import from Media Browser
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.importFromMediaBrowser`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.importFromMediaBrowser`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7868,7 +7868,7 @@ Import…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.import`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.import`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7885,7 +7885,7 @@ Import Image Sequence…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.importImageSequence`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.importImageSequence`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7902,7 +7902,7 @@ Offline All
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.offlineAll`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.offlineAll`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7919,7 +7919,7 @@ Create Proxies…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.createProxies`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.createProxies`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7936,7 +7936,7 @@ Attach Proxies…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.attachProxies`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.attachProxies`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7953,7 +7953,7 @@ Detach Proxies
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.detachProxies`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.detachProxies`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7970,7 +7970,7 @@ Reconnect Full Resolution Media…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.reconnectFullRes`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.reconnectFullRes`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -7987,7 +7987,7 @@ Toggle Proxies
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.toggleProxies`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.toggleProxies`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8004,7 +8004,7 @@ Proxy Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe media.proxyPresets`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe media.proxyPresets`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8021,7 +8021,7 @@ File…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.mediaPropertiesFile`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.mediaPropertiesFile`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8038,7 +8038,7 @@ Selection…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.mediaProperties`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.mediaProperties`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8055,7 +8055,7 @@ General…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.projectSettings.general`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.projectSettings.general`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8072,7 +8072,7 @@ Scratch Disks…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.projectSettings.scratchDisks`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.projectSettings.scratchDisks`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8089,7 +8089,7 @@ Ingest Settings…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.ingestSettings`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.ingestSettings`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8106,7 +8106,7 @@ Project Manager…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.projectManager`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.projectManager`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8123,7 +8123,7 @@ Create Mask
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.add`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.add`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8140,7 +8140,7 @@ Delete Mask
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.remove`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.remove`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8157,7 +8157,7 @@ Change Mask
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8174,7 +8174,7 @@ Move Mask Vertex
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.moveVertex`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.moveVertex`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8191,7 +8191,7 @@ Move Mask
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.translate`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.translate`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8208,7 +8208,7 @@ Add Mask Vertex
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.addVertex`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.addVertex`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8225,7 +8225,7 @@ Delete Mask Vertex
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.removeVertex`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.removeVertex`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8242,7 +8242,7 @@ Track Selected Mask
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.track`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.track`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8259,7 +8259,7 @@ Convert Mask Vertex
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.toggleVertexSmooth`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.toggleVertexSmooth`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8276,7 +8276,7 @@ Select Mask
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.select`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.select`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8293,7 +8293,7 @@ List Masks
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe masks.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe masks.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8310,7 +8310,7 @@ List Effect Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe presets.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe presets.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8327,7 +8327,7 @@ Save Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe presets.save`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe presets.save`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8344,7 +8344,7 @@ Apply Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe presets.apply`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe presets.apply`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8361,7 +8361,7 @@ Delete Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe presets.delete`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe presets.delete`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8378,7 +8378,7 @@ Rename Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe presets.rename`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe presets.rename`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8395,7 +8395,7 @@ Export Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe presets.export`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe presets.export`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8412,7 +8412,7 @@ Import Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe presets.import`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe presets.import`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8429,7 +8429,7 @@ List Export Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.presets.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.presets.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8446,7 +8446,7 @@ Get Export Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.presets.get`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.presets.get`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8463,7 +8463,7 @@ Save Export Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.presets.save`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.presets.save`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8480,7 +8480,7 @@ Delete Export Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.presets.delete`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.presets.delete`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8497,7 +8497,7 @@ Favorite Export Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.presets.favorite`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.presets.favorite`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8514,7 +8514,7 @@ Import Export Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.presets.import`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.presets.import`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8531,7 +8531,7 @@ Export Export Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.presets.export`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.presets.export`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8548,7 +8548,7 @@ List Export Formats
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.formats`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.formats`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8565,7 +8565,7 @@ Resolve Export Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.resolve`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.resolve`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8582,7 +8582,7 @@ Send to Export Queue
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.add`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.add`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8599,7 +8599,7 @@ List Export Queue
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8616,7 +8616,7 @@ Start Export Queue
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.start`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.start`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8633,7 +8633,7 @@ Stop Export Queue
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.stop`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.stop`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8650,7 +8650,7 @@ Cancel Queued Export
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.cancel`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.cancel`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8667,7 +8667,7 @@ Retry Queued Export
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.retry`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.retry`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8684,7 +8684,7 @@ Remove Queued Export
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.remove`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.remove`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8701,7 +8701,7 @@ Reorder Queued Export
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.move`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.move`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8718,7 +8718,7 @@ Clear Finished Exports
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.queue.clear`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.queue.clear`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8735,7 +8735,7 @@ Quick Export
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe export.quick`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe export.quick`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8752,7 +8752,7 @@ Transcribe…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.generate`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.generate`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8769,7 +8769,7 @@ Import Transcript
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8786,7 +8786,7 @@ Delete Transcript
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.delete`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.delete`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8803,7 +8803,7 @@ Inspect Transcript
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.inspect`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.inspect`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8820,7 +8820,7 @@ Search Transcript
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.search`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.search`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8837,7 +8837,7 @@ List Speech Models
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.models`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.models`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8854,7 +8854,7 @@ Download Speech Model
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.downloadModel`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.downloadModel`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8871,7 +8871,7 @@ Mark Selected Text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.select`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.select`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8888,7 +8888,7 @@ Extract Selected Text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.extract`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.extract`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8905,7 +8905,7 @@ Lift Selected Text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.lift`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.lift`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8922,7 +8922,7 @@ Rename Speaker…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.renameSpeaker`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.renameSpeaker`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8939,7 +8939,7 @@ Remove Pauses
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.removePauses`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.removePauses`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8956,7 +8956,7 @@ Remove Filler Words
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.removeFillers`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.removeFillers`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8973,7 +8973,7 @@ Create Captions from Transcript…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-transcript`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe transcript.createCaptions`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe transcript.createCaptions`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -8990,7 +8990,7 @@ List Events
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe events.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe events.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9007,7 +9007,7 @@ Clear All Events
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe events.clear`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe events.clear`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9024,7 +9024,7 @@ Get Metadata
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe metadata.get`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe metadata.get`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9041,7 +9041,7 @@ Edit Metadata
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe metadata.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe metadata.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9058,7 +9058,7 @@ Read Lumetri Scopes
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-color`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe scopes.read`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe scopes.read`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9075,7 +9075,7 @@ Enable Remix
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.remix.enable`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.remix.enable`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9092,7 +9092,7 @@ Remix Properties…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.remix.properties`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.remix.properties`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9109,7 +9109,7 @@ Revert Remix
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.remix.revert`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.remix.revert`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9126,7 +9126,7 @@ Remix
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.remix`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.remix`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9143,7 +9143,7 @@ Voice-Over Record Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe audio.voiceover.settings`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe audio.voiceover.settings`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9160,7 +9160,7 @@ Start Voice-over Recording
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe audio.voiceover.start`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe audio.voiceover.start`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9177,7 +9177,7 @@ Sync Voice-over Capture
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe audio.voiceover.sync`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe audio.voiceover.sync`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9194,7 +9194,7 @@ Stop Voice-over Recording
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe audio.voiceover.stop`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe audio.voiceover.stop`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9211,7 +9211,7 @@ Go to Next Edit Point on Any Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.nextEditAnyTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.nextEditAnyTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9228,7 +9228,7 @@ Go to Previous Edit Point on Any Track
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.prevEditAnyTrack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.prevEditAnyTrack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9245,7 +9245,7 @@ Go to Selected Clip Start
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.selectedClipStart`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.selectedClipStart`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9262,7 +9262,7 @@ Go to Selected Clip End
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe playhead.selectedClipEnd`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe playhead.selectedClipEnd`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9279,7 +9279,7 @@ Reveal Nested Sequence
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe sequence.revealNested`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe sequence.revealNested`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9296,7 +9296,7 @@ Select Clip at Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.selectClipAtPlayhead`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.selectClipAtPlayhead`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9313,7 +9313,7 @@ Select Next Clip
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.selectNextClip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.selectNextClip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9330,7 +9330,7 @@ Select Previous Clip
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.selectPrevClip`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.selectPrevClip`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9347,7 +9347,7 @@ Extend Previous Edit To Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.extendPreviousEdit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.extendPreviousEdit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9364,7 +9364,7 @@ Extend Next Edit To Playhead
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe trim.extendNextEdit`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe trim.extendNextEdit`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9381,7 +9381,7 @@ Nudge Clip Selection Left One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.nudgeLeft`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.nudgeLeft`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9398,7 +9398,7 @@ Nudge Clip Selection Right One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.nudgeRight`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.nudgeRight`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9415,7 +9415,7 @@ Nudge Clip Selection Left Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.nudgeLeft5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.nudgeLeft5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9432,7 +9432,7 @@ Nudge Clip Selection Right Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.nudgeRight5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.nudgeRight5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9449,7 +9449,7 @@ Nudge Clip Selection Up
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.nudgeUp`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.nudgeUp`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9466,7 +9466,7 @@ Nudge Clip Selection Down
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.nudgeDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.nudgeDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9483,7 +9483,7 @@ Slip Clip Selection Left One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slipLeft`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slipLeft`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9500,7 +9500,7 @@ Slip Clip Selection Right One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slipRight`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slipRight`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9517,7 +9517,7 @@ Slip Clip Selection Left Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slipLeft5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slipLeft5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9534,7 +9534,7 @@ Slip Clip Selection Right Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slipRight5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slipRight5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9551,7 +9551,7 @@ Slide Clip Selection Left One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slideLeft`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slideLeft`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9568,7 +9568,7 @@ Slide Clip Selection Right One Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slideRight`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slideRight`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9585,7 +9585,7 @@ Slide Clip Selection Left Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slideLeft5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slideLeft5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9602,7 +9602,7 @@ Slide Clip Selection Right Five Frames
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.slideRight5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.slideRight5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9619,7 +9619,7 @@ Toggle All Video Targets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleAllVideoTargets`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleAllVideoTargets`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9636,7 +9636,7 @@ Toggle All Audio Targets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleAllAudioTargets`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleAllAudioTargets`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9653,7 +9653,7 @@ Toggle All Source Video
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleAllSourceVideo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleAllSourceVideo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9670,7 +9670,7 @@ Toggle All Source Audio
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleAllSourceAudio`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleAllSourceAudio`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9687,7 +9687,7 @@ Move All Video Targets Up
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.moveVideoTargetsUp`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.moveVideoTargetsUp`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9704,7 +9704,7 @@ Move All Video Targets Down
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.moveVideoTargetsDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.moveVideoTargetsDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9721,7 +9721,7 @@ Move All Audio Targets Up
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.moveAudioTargetsUp`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.moveAudioTargetsUp`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9738,7 +9738,7 @@ Move All Audio Targets Down
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.moveAudioTargetsDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.moveAudioTargetsDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9755,7 +9755,7 @@ Toggle Mute for All Targeted Audio Tracks
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleMuteTargetedAudio`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleMuteTargetedAudio`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9772,7 +9772,7 @@ Toggle Solo for All Targeted Audio Tracks
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleSoloTargetedAudio`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleSoloTargetedAudio`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9789,7 +9789,7 @@ Toggle Track Output for All Targeted Video Tracks
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleOutputTargetedVideo`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleOutputTargetedVideo`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9806,7 +9806,7 @@ Increase Clip Volume
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.volumeUp`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.volumeUp`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9823,7 +9823,7 @@ Decrease Clip Volume
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.volumeDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.volumeDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9840,7 +9840,7 @@ Increase Clip Volume Many
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.volumeUpMany`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.volumeUpMany`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9857,7 +9857,7 @@ Decrease Clip Volume Many
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.volumeDownMany`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.volumeDownMany`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9874,7 +9874,7 @@ Nudge Volume +1dB
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.nudgeVolumeUp1`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.nudgeVolumeUp1`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9891,7 +9891,7 @@ Nudge Volume +3dB
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.nudgeVolumeUp3`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.nudgeVolumeUp3`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9908,7 +9908,7 @@ Nudge Volume -1dB
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.nudgeVolumeDown1`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.nudgeVolumeDown1`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9925,7 +9925,7 @@ Nudge Volume -3dB
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.nudgeVolumeDown3`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.nudgeVolumeDown3`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9942,7 +9942,7 @@ Toggle Audio During Scrubbing
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-audio`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe audio.toggleScrubbing`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe audio.toggleScrubbing`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9959,7 +9959,7 @@ Increase Font Size by One Unit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.fontSizeUp`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.fontSizeUp`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9976,7 +9976,7 @@ Decrease Font Size by One Unit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.fontSizeDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.fontSizeDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -9993,7 +9993,7 @@ Increase Font Size by Five Units
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.fontSizeUp5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.fontSizeUp5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10010,7 +10010,7 @@ Decrease Font Size by Five Units
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.fontSizeDown5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.fontSizeDown5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10027,7 +10027,7 @@ Increase Leading by One Unit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.leadingUp`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.leadingUp`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10044,7 +10044,7 @@ Decrease Leading by One Unit
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.leadingDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.leadingDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10061,7 +10061,7 @@ Increase Leading by Five Units
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.leadingUp5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.leadingUp5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10078,7 +10078,7 @@ Decrease Leading by Five Units
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.leadingDown5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.leadingDown5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10095,7 +10095,7 @@ Left align text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignTextLeft`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignTextLeft`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10112,7 +10112,7 @@ Center align text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignTextCenter`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignTextCenter`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10129,7 +10129,7 @@ Right align text
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.alignTextRight`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.alignTextRight`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10146,7 +10146,7 @@ Nudge Selected Object to left by one
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeLeft`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeLeft`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10163,7 +10163,7 @@ Nudge Selected Object to right by one
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeRight`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeRight`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10180,7 +10180,7 @@ Nudge Selected Object up by one
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeUp`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeUp`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10197,7 +10197,7 @@ Nudge Selected Object down by one
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeDown`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeDown`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10214,7 +10214,7 @@ Nudge Selected Object to left by five
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeLeft5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeLeft5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10231,7 +10231,7 @@ Nudge Selected Object to right by five
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeRight5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeRight5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10248,7 +10248,7 @@ Nudge Selected Object up by five
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeUp5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeUp5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10265,7 +10265,7 @@ Nudge Selected Object down by five
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-motion`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe graphics.nudgeDown5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe graphics.nudgeDown5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10282,7 +10282,7 @@ Export Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-export`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.exportFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.exportFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10299,7 +10299,7 @@ Set Poster Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.setPosterFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.setPosterFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10316,7 +10316,7 @@ Clear Poster Frame
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.clearPosterFrame`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.clearPosterFrame`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10333,7 +10333,7 @@ Toggle Target Video 1
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV1`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV1`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10350,7 +10350,7 @@ Toggle Target Video 2
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV2`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV2`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10367,7 +10367,7 @@ Toggle Target Video 3
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV3`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV3`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10384,7 +10384,7 @@ Toggle Target Video 4
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV4`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV4`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10401,7 +10401,7 @@ Toggle Target Video 5
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10418,7 +10418,7 @@ Toggle Target Video 6
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV6`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV6`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10435,7 +10435,7 @@ Toggle Target Video 7
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV7`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV7`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10452,7 +10452,7 @@ Toggle Target Video 8
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetV8`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetV8`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10469,7 +10469,7 @@ Toggle Target Audio 1
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA1`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA1`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10486,7 +10486,7 @@ Toggle Target Audio 2
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA2`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA2`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10503,7 +10503,7 @@ Toggle Target Audio 3
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA3`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA3`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10520,7 +10520,7 @@ Toggle Target Audio 4
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA4`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA4`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10537,7 +10537,7 @@ Toggle Target Audio 5
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA5`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA5`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10554,7 +10554,7 @@ Toggle Target Audio 6
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA6`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA6`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10571,7 +10571,7 @@ Toggle Target Audio 7
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA7`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA7`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10588,7 +10588,7 @@ Toggle Target Audio 8
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe timeline.toggleTargetA8`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe timeline.toggleTargetA8`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10605,7 +10605,7 @@ Project Panel View
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.view.get`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.view.get`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10622,7 +10622,7 @@ Set Project Panel View
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.view.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.view.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10639,7 +10639,7 @@ List Project Columns
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.columns.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.columns.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10656,7 +10656,7 @@ Metadata Display
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.columns.set`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.columns.set`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10673,7 +10673,7 @@ Resize Column
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.columns.resize`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.columns.resize`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10690,7 +10690,7 @@ Sort Project Items
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.sort`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.sort`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10707,7 +10707,7 @@ List Project Panel Rows
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.items`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.items`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10724,7 +10724,7 @@ List View Presets
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.viewPreset.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.viewPreset.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10741,7 +10741,7 @@ Save Current View Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.viewPreset.save`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.viewPreset.save`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10758,7 +10758,7 @@ Save As New View Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.viewPreset.saveAs`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.viewPreset.saveAs`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10775,7 +10775,7 @@ Restore View Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.viewPreset.restore`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.viewPreset.restore`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10792,7 +10792,7 @@ Rename View Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.viewPreset.rename`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.viewPreset.rename`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10809,7 +10809,7 @@ Delete View Preset
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.viewPreset.delete`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.viewPreset.delete`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10826,7 +10826,7 @@ Freeform Layout
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.layout`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.layout`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10843,7 +10843,7 @@ Move Clip Cards
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.move`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.move`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10860,7 +10860,7 @@ Clip Size
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.resize`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.resize`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10877,7 +10877,7 @@ Align to Grid
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.alignToGrid`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.alignToGrid`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10894,7 +10894,7 @@ Reset to Grid
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.reset`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.reset`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10911,7 +10911,7 @@ Stack Clips
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.stack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.stack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10928,7 +10928,7 @@ Unstack Clips
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.unstack`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.unstack`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10945,7 +10945,7 @@ Save Arrangement
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.saveArrangement`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.saveArrangement`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10962,7 +10962,7 @@ Restore Arrangement
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.restoreArrangement`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.restoreArrangement`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10979,7 +10979,7 @@ Delete Arrangement
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.deleteArrangement`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.deleteArrangement`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -10996,7 +10996,7 @@ List Arrangements
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.arrangements`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.arrangements`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11013,7 +11013,7 @@ Freeform View Options…
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.freeform.options`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.freeform.options`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11030,7 +11030,7 @@ Rename Bin
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.renameBin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.renameBin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11047,7 +11047,7 @@ Media Browser Locations
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.roots`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.roots`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11064,7 +11064,7 @@ List Directory
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.list`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.list`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11081,7 +11081,7 @@ Go to Directory
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.navigate`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.navigate`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11098,7 +11098,7 @@ Select Files
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.select`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.select`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11115,7 +11115,7 @@ Add to Favorites
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.favorite`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.favorite`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11132,7 +11132,7 @@ Clear Recent Directories
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.clearRecent`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.clearRecent`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11149,7 +11149,7 @@ Media Browser Settings
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.settings`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.settings`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11166,7 +11166,7 @@ Import
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.import`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.import`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11183,7 +11183,7 @@ Open In Source Monitor
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.openInSource`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.openInSource`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11200,7 +11200,7 @@ Media File Properties
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-media`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe mediaBrowser.probe`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe mediaBrowser.probe`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11217,7 +11217,7 @@ Set Time Interpolation
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-timeline`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: false；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe clip.setTimeInterpolation`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe clip.setTimeInterpolation`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11234,7 +11234,7 @@ Search Bin Contents
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.searchBinItems`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.searchBinItems`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11251,7 +11251,7 @@ Edit Search Bin
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.editSearchBin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.editSearchBin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11268,7 +11268,7 @@ Delete Search Bin
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe project.deleteSearchBin`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe project.deleteSearchBin`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11285,7 +11285,7 @@ List Project Templates
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.templates`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.templates`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11302,7 +11302,7 @@ New Project from Template
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli-project`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe file.newProjectFromTemplate`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe file.newProjectFromTemplate`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:
@@ -11319,7 +11319,7 @@ System Compatibility Report
 - 安装 / Install: `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-cli`。
 - 当前工作流映射 / Workflow mapped: false。
 - 空会话观察 / Empty-session observation: true；禁用原因 / reason: 目录未提供具体原因；执行时重新查询 / query live state。
-- 调用 / Invocation: `python3 -I -B "$SKILL_DIR/scripts/commands.py" describe help.systemReport`；按原生参数构造计划后执行 run。
+- 调用 / Invocation: `python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe help.systemReport`；按原生参数构造计划后执行 run。
 - 完整逐命令验收 / Full command acceptance: NOT_RUN。
 
 原生参数原文 / Verbatim native parameters:

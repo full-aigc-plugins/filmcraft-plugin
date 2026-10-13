@@ -1,0 +1,31 @@
+{
+ "schema": "filmcraft-architecture-evidence/v1",
+ "date": "2026-10-13",
+ "scope": "Task 10.2 (FC-SK-003) execution-payload convergence: upstream layout, plugin re-vendor and offline snapshot verification; no new native, creative, platform or host acceptance",
+ "change": {
+  "summary": "收敛重复执行实现为内置 filmcraft-harness：共享执行脚本只保留一份，13 个领域技能瘦身为薄文档技能并按名称路由到 harness",
+  "upstreamRepository": "https://github.com/full-aigc-skills/filmcraft-skills",
+  "upstreamTag": "v0.1.0-dev.62",
+  "upstreamCommit": "f045e9d5a8eed8b1d0abf5339310dffa1abc4da7",
+  "harnessSkill": "skills/filmcraft-harness",
+  "harnessDocumentedEntries": ["scripts/bootstrap.py", "scripts/cli.py", "scripts/commands.py", "scripts/workflow.py", "scripts/desktop.py", "scripts/task_session.py"],
+  "harnessScriptFiles": 18,
+  "harnessReferenceContracts": ["references/command-coverage.json", "references/native-command-snapshot.json", "references/task-scene.md"],
+  "domainSkillsSlimmed": 13,
+  "removedOrphanPayload": [],
+  "behaviorPreservation": "18/18 个 harness 载荷文件与 v0.1.0-dev.61 逐字节一致（git 全部识别为 100% rename）；六个文档化入口与动态依赖闭包（load()/with_name() 两遍法核对）一个不少，无孤儿模块；领域技能 examples/references 原样保留"
+ },
+ "verification": {
+  "pluginLock": {
+   "repo": "https://github.com/full-aigc-skills/filmcraft-skills.git",
+   "ref": "v0.1.0-dev.62",
+   "sha": "f045e9d5a8eed8b1d0abf5339310dffa1abc4da7",
+   "vendoredSkills": 14,
+   "vendorCheckOffline": "pass — skill vendor check: all managed skills match the lockfile (offline)"
+  },
+  "upstreamRegression": "309 项测试与迁移前同口径（267 通过、3 项 macOS seatbelt 环境预存失败、39 项显式 opt-in 跳过）；sync_skill_suite --check、build_command_coverage、check_release metadata/links/resources 全部 PASS",
+  "harnessSmoke": "六个入口 --help 全部返回 0；commands.py check 动态加载 capabilities/execution_permissions/命令目录契约通过；runtime.lock resolvedVersion 0.2.0-craft.5 与 native-command-snapshot 绑定一致；插件 vendored 副本 skills/filmcraft-harness/scripts 18 文件完整",
+  "pluginRegression": "123 项测试与迁移前同口径（3 项文档门禁失败为 2026-10-12 并行裁剪工作树的预存项，与本收敛无关）；current_facts 14 技能/666 命令一致"
+ },
+ "boundaries": "本收敛不证明任何命令的原生执行验收、目标平台验收或宿主验收；固件身份维持 current Qualification=NOT_PROVEN；上游 commit/tag 仅本地保存，发布推送与 CI 在线核验另行授权"
+}

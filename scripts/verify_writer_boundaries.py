@@ -210,7 +210,7 @@ def verify(host, repository, authority, ref, output, desktop_home, node, python)
 import {readFileSync,writeFileSync} from 'node:fs';import {join} from 'node:path';import {pathToFileURL} from 'node:url';
 const [core,plan,source,out,runtime,bindingFile,policyFile]=process.argv.slice(1);
 const {PythonWorkflowRunner}=await import(pathToFileURL(join(core,'src/adapters/python_workflow.ts')).href);
-const {executionSubject}=await import(pathToFileURL(join(core,'src/harness/workflow_admission.ts')).href);
+const {executionSubject}=await import(pathToFileURL(join(core,'scripts/harness/workflow_admission.ts')).href);
 const manifest=JSON.parse(readFileSync(join(core,'plugin.json'))),lock=JSON.parse(readFileSync(join(core,'skills.lock.json')));
 const runner=new PythonWorkflowRunner(null,null,{skillDirectory:join(core,'skills/filmcraft-use'),sourceRevision:lock.sources[0].sha,pluginVersion:manifest.version,runtimeHome:runtime,python:process.env.WRITER_QA_PYTHON});
 const p=runner.prepare(plan,out,source);const binding={taskId:'gui-stale',namespace:'writer-boundary-QA',idempotencyKey:'gui-stale',planHash:p.planIdentity.canonicalPlanSha256,nativePlanHash:p.planIdentity.workflowPlanSha256,inputHashes:p.inputHashes,inputRefs:Object.entries(p.inputHashes).map(([assetId,sha256])=>({assetId,version:'synthetic-v1',sha256})),projectRevision:p.projectRevision,projectKey:p.projectKey,outputRoot:p.outputRoot,sourceRevision:lock.sources[0].sha,sourceTreeSha256:p.sourceTreeSha256,runtimeIdentity:p.runtimeIdentity,authorizationRef:'writer-QA',authorizationScopeSha256:'a'.repeat(64),deadline:Date.now()+600000};

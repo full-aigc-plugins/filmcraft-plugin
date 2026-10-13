@@ -4,7 +4,7 @@ import { spawnSync } from 'node:child_process';
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, unlinkSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { TaskLedger } from '../src/harness/task_ledger.ts';
+import { TaskLedger } from '../scripts/harness/task_ledger.ts';
 import { ReceiptIndex } from '../src/artifacts/receipt_index.ts';
 import { PythonWorkflowRunner } from '../src/adapters/python_workflow.ts';
 import { publicTask } from '../src/adapters/protocol_mapping.ts';

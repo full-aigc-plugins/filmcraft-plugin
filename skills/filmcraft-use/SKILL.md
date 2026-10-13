@@ -16,14 +16,16 @@ license: Apache-2.0
 
 ## 首次使用
 
-1. 定位本 `SKILL.md` 的实际目录。需要 Python 3.11+；使用该目录下的 `scripts/bootstrap.py`，不要假设当前工作目录就是技能目录。
+执行实现收敛在内置的 **filmcraft-harness** 技能（随插件捆绑安装；单独安装用 `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-harness`）。将 `HARNESS_DIR` 设置为该技能实际加载目录（绝对路径）；本技能的 `SKILL_DIR` 只用于读取自身的 `examples/` 与 `references/`。
+
+1. 定位本 `SKILL.md` 的实际目录。需要 Python 3.11+；使用 filmcraft-harness 技能目录（`HARNESS_DIR`）下的 `scripts/bootstrap.py`，不要假设当前工作目录就是技能目录。
 2. 用户已要求安装或完成创作且现有授权涵盖必要依赖时，直接运行安装入口；安装范围是用户数据目录，不需要 sudo。下载固定发布制品并校验摘要，失败即停止，不删除隔离属性、不改 shell 配置。
 
 将 `SKILL_DIR` 设置为宿主实际加载的本 `SKILL.md` 所在目录（绝对路径）。用户级安装可能位于 `~/.agents/skills/filmcraft-use`，项目级可能位于 `.agents/skills/filmcraft-use`，插件可能位于其 `skills/filmcraft-use` 或宿主缓存目录；以实际加载路径为准，不按当前工作目录猜测，也不搜索后随意选择重复版本。技能目录与 CLI 的用户数据安装目录是两个独立位置。
 
 ```bash
 : "${SKILL_DIR:?请先设置为本 SKILL.md 的实际所在目录}"
-python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
+python3 -I -B "$HARNESS_DIR/scripts/bootstrap.py"
 ```
 
 安装器返回 JSON `executable`，后续将其作为 argv 的第一个元素。当前锁定平台为 macOS arm64；未支持的平台返回 `unsupported_platform`，不要安装别的平台制品。
@@ -34,7 +36,7 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 
 ## 可执行剪辑入口
 
-使用 [原生剪辑计划](references/workflow.md) 中的 `scripts/workflow.py`，从已存在的视频和配音制作带字幕短片。入口自动安装 CLI、收集素材、保存并重开工程、导出与解码检查；通过 `--source` 和原工程摘要支持单镜头修订及素材移动后的重关联。
+使用 [原生剪辑计划](references/workflow.md)，内部复用 filmcraft-harness 技能的 `scripts/workflow.py`，从已存在的视频和配音制作带字幕短片。入口自动安装 CLI、收集素材、保存并重开工程、导出与解码检查；通过 `--source` 和原工程摘要支持单镜头修订及素材移动后的重关联。
 
 ## 编辑流程
 
@@ -72,7 +74,7 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 | **filmcraft-cli-multicam** | 处理同步机位、角度切换、切点与主录音连续性 |
 | **filmcraft-cli-export** | 导出预览帧、成片、交换文件与输出验证 |
 
-缺少技能：`npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`。每项自带安装与执行资源；直接执行本技能 `scripts/cli.py` 也可查询当前 CLI，不依赖兄弟路径。
+缺少技能：`npx skills add full-aigc-skills/filmcraft-skills --skill <skill-name>`。安装与执行资源由 filmcraft-harness 技能统一提供；直接执行该技能的 `scripts/cli.py` 也可查询当前 CLI，不依赖兄弟路径。
 
 工作区分段素材消费候选见 [分段素材](references/segmented-assets.md)。固定发布及 Art 集成仍待验收，不能把候选交接当作完整五插件交付。
 
@@ -85,14 +87,14 @@ python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/commands.py" list --filter QUERY
-python3 -I -B "$SKILL_DIR/scripts/commands.py" describe COMMAND_ID
-python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-advanced.json" --output /absolute/new-command-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" list --filter QUERY
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe COMMAND_ID
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-advanced.json" --output /absolute/new-command-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 新入口执行前检查真实注册表与当前可执行状态，保留返回值引用和逐步回执；语义错误或超时不冒充成功。目录覆盖与直接原生使用不等于所有指令、GUI、交付或 Art 编排已验收。
 
-完整工作流命令网关见 [使用说明](references/native-workflow.md)。固定 CLI 的版本与制品摘要以本技能自带 `scripts/runtime.lock.json` 为准；技能包版本以对应发布标签为准。独立安装复验与全量逐命令验收分别记录，不以发布替代验收。
+完整工作流命令网关见 [使用说明](references/native-workflow.md)。固定 CLI 的版本与制品摘要以 filmcraft-harness 技能的 `scripts/runtime.lock.json` 为准；技能包版本以对应发布标签为准。独立安装复验与全量逐命令验收分别记录，不以发布替代验收。
 
 GUI任务可先使用本技能自带的 [固定桌面安装](references/desktop-install.md)；安装、启动与实际GUI编辑分别核验。
 

@@ -1,0 +1,28 @@
+{
+  "name": "filmcraft",
+  "displayName": "FilmCraft",
+  "displayName_i18n": {
+    "en": "FilmCraft",
+    "zh-CN": "FilmCraft"
+  },
+  "version": "0.1.0-dev.80",
+  "description": "FilmCraft creative workflows with pinned first-use installation and independent skill snapshots; development release, full domain and host acceptance pending.",
+  "description_i18n": {
+    "en": "FilmCraft creative workflows with pinned first-use installation and independent skill snapshots; development release, full domain and host acceptance pending.",
+    "zh-CN": "FilmCraft 创意工作流：首用固定安装与独立技能快照；开发版本，完整领域与宿主验收仍在进行。"
+  },
+  "author": {
+    "name": "Full AIGC Plugins",
+    "url": "https://github.com/full-aigc-plugins"
+  },
+  "homepage": "https://github.com/full-aigc-plugins/filmcraft-plugin",
+  "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-plugin",
+    "filmcraft",
+    "creative-workflow",
+    "development-release"
+  ],
+  "skills": "skills"
+}

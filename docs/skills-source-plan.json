@@ -15,11 +15,12 @@
     "filmcraft-cli-motion",
     "filmcraft-cli-export",
     "filmcraft-cli-multicam",
-    "filmcraft-cli-transcript"
+    "filmcraft-cli-transcript",
+    "filmcraft-harness"
   ],
   "sourceOfTruth": "independent skills repository",
-  "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums",
+  "packaging": "immutable vendored snapshot with tag, commit and whole-tree checksums; execution payload converges in the bundled filmcraft-harness skill",
   "suiteManifest": "https://github.com/full-aigc-skills/filmcraft-skills/blob/main/skill-suite.json",
-  "sourceRef": "v0.1.0-dev.61",
-  "sourceSha": "2e78802cfde198885a584248e0def9289c555f4e"
+  "sourceRef": "v0.1.0-dev.62",
+  "sourceSha": "f045e9d5a8eed8b1d0abf5339310dffa1abc4da7"
 }

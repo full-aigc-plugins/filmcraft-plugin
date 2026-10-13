@@ -9,7 +9,7 @@ Public workflow and full-command run require independent --read-root / --write-r
 : "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/workflow.py" "$PLAN" --output "$OUTPUT" \
+python3 -I -B "$HARNESS_DIR/scripts/workflow.py" "$PLAN" --output "$OUTPUT" \
   --runtime-home "$RUNTIME_HOME" --read-root "$READ_ROOT" \
   --write-root "$PROJECT_ROOT" --write-root "$RUNTIME_HOME"
 ```

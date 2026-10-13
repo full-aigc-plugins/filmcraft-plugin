@@ -1,12 +1,12 @@
 {
   "schema": "filmcraft-current-facts/v1",
   "pluginId": "filmcraft",
-  "pluginVersion": "0.1.0-dev.80",
+  "pluginVersion": "0.1.0-dev.81",
   "sourcePackage": "filmcraft-skills",
-  "sourceRef": "v0.1.0-dev.61",
-  "sourceSha": "2e78802cfde198885a584248e0def9289c555f4e",
-  "suiteSha256": "befb88ac7ddd793fed4c90a22558e35b3ce9c2abda3fa9b6242a1dc6b623e7da",
-  "skillCount": 13,
+  "sourceRef": "v0.1.0-dev.62",
+  "sourceSha": "f045e9d5a8eed8b1d0abf5339310dffa1abc4da7",
+  "suiteSha256": "8172e6600b8deef344228691a85d9f50c74de8c22711760be1d63a5c517a8d53",
+  "skillCount": 14,
   "commandCount": 666,
   "referenceCatalogIdentity": {
     "path": "skills/filmcraft-use/references/commands.json",
@@ -16,7 +16,7 @@
   },
   "activeRuntime": {
     "role": "skill-execution-authority",
-    "path": "skills/filmcraft-use/scripts/runtime.lock.json",
+    "path": "skills/filmcraft-harness/scripts/runtime.lock.json",
     "version": "0.2.0-craft.5",
     "releaseRef": "runtime-v0.2.0-craft.5",
     "platform": "darwin-arm64",

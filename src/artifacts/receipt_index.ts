@@ -1,6 +1,6 @@
 import { constants, openSync, closeSync, existsSync, fstatSync, lstatSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
-import type { TaskLedger, Binding } from '../harness/task_ledger.ts';
+import type { TaskLedger, Binding } from '../../scripts/harness/task_ledger.ts';
 import { exchangeLossStatus } from './exchange_loss.ts';
 import { normalizePlan } from '../adapters/plan_identity.ts';
 import { check, isHash, isObject, parseJson, sha256, stableJson } from '../support/json.ts';

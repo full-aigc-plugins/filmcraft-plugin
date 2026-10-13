@@ -2,9 +2,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { ReceiptIndex } from '../../src/artifacts/receipt_index.ts';
-import { WorkflowAdmission, executionSubject } from '../../src/harness/workflow_admission.ts';
+import { WorkflowAdmission, executionSubject } from '../../scripts/harness/workflow_admission.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { binding, fixtureAuthorizer, workspace } from './fixtures.ts';
 

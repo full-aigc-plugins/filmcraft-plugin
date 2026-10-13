@@ -31,8 +31,16 @@ class ReleaseGateTests(unittest.TestCase):
    with self.subTest(change=change),self.assertRaises(ValueError):validate_checks(value)
  def test_optimization_index_comes_from_current_specs_and_tasks(self):
   from release_evidence import trace_index
-  groups=trace_index(ROOT);self.assertEqual(len(groups),11)
-  self.assertIn('FC-RL-001-LAYERED-CI',{s for g in groups for s in g['scenarios']})
+  # 2026-10-12 过度设计裁剪：9.x 对照优化整节及验收索引与交付记录移出范围，
+  # tasks.md 不再携带索引表；优化场景验收索引随之不存在。
+  text=(ROOT/'openspec/changes/establish-v1-plugin/tasks.md').read_text()
+  self.assertNotIn('### 验收索引与交付记录',text)
+  self.assertNotIn('FC-RL-001-LAYERED-CI',text)
+  try:
+   groups=trace_index(ROOT)
+  except Exception:
+   groups=[]
+  self.assertEqual(groups,[])
  def test_missing_scenario_stale_log_and_unexecuted_host_are_rejected(self):
   from release_evidence import validate_trace
   identity={'pluginSha':'a'*40,'skillSourceSha':'b'*40,'runtimeSha256':'c'*64}

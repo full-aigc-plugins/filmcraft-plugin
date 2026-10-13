@@ -9,9 +9,9 @@ import { CapabilityRefusal } from '../adapters/capability_refusal.ts';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readBoundFile, ReceiptIndex } from '../artifacts/receipt_index.ts';
-import { LocalAuthorizationStore, requireAuthorization } from '../harness/authorization.ts';
-import { WorkflowAdmission, executionSubject } from '../harness/workflow_admission.ts';
-import { TaskLedger } from '../harness/task_ledger.ts';
+import { LocalAuthorizationStore, requireAuthorization } from '../../scripts/harness/authorization.ts';
+import { WorkflowAdmission, executionSubject } from '../../scripts/harness/workflow_admission.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { check, HarnessError, parseJson } from '../support/json.ts';
 
 /** 宿主首次执行入口；授权记录只能由宿主维护，本入口不创建许可。 */

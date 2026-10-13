@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { RuntimeUpgrade } from '../../src/adapters/runtime_upgrade.ts';
 import { fingerprintSkill } from '../../src/adapters/python_workflow.ts';
 import { workspace, hash } from './fixtures.ts';

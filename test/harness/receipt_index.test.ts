@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { join } from 'node:path';
 import { mkdirSync, readFileSync, writeFileSync, symlinkSync } from 'node:fs';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { ReceiptIndex } from '../../src/artifacts/receipt_index.ts';
 import { normalizePlan } from '../../src/adapters/plan_identity.ts';
 import { sha256, parseJson, stableJson } from '../../src/support/json.ts';

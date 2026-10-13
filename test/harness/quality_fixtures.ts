@@ -1,6 +1,6 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
 import { ReceiptIndex } from '../../src/artifacts/receipt_index.ts';
 import { normalizePlan } from '../../src/adapters/plan_identity.ts';
 import { ReviewService, reviewerIdentity } from '../../src/quality/review_service.ts';

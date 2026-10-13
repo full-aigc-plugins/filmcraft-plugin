@@ -28,7 +28,7 @@ test('process identity probe also excludes inherited host secrets and injection'
   const { mkdtempSync, writeFileSync, rmSync } = await import('node:fs');
   const { tmpdir } = await import('node:os');
   const { join } = await import('node:path');
-  const { processIdentity } = await import('../../src/harness/process_identity.ts');
+  const { processIdentity } = await import('../../scripts/harness/process_identity.ts');
   const directory = mkdtempSync(join(tmpdir(), 'filmcraft-probe-env-'));
   const shim = join(directory, 'python-observer');
   const keys = ['OPENAI_API_KEY', 'HTTP_PROXY', 'PYTHONPATH', 'NODE_OPTIONS'];

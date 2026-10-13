@@ -1,0 +1,24 @@
+{
+  "name": "filmcraft",
+  "version": "0.1.0-dev.80",
+  "description": "FilmCraft creative workflows with pinned first-use installation and independent skill snapshots; development release, full domain and host acceptance pending.",
+  "author": {
+    "name": "Full AIGC Plugins"
+  },
+  "homepage": "https://github.com/full-aigc-plugins/filmcraft-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-plugin",
+    "filmcraft",
+    "creative-workflow",
+    "development-release"
+  ],
+  "interface": {
+    "displayName": "FilmCraft",
+    "shortDescription": "Editable creative workflows and pinned setup",
+    "longDescription": "Use independently maintained, checksummed skills to install official CLIs and create editable native projects. Development release; complete capability and host acceptance remain in progress.",
+    "developerName": "Full AIGC Plugins",
+    "websiteURL": "https://github.com/full-aigc-plugins/filmcraft-plugin"
+  },
+  "skills": "./skills/"
+}

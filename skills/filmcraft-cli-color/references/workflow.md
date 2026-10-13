@@ -10,14 +10,14 @@ The helper bootstraps the pinned CLI, imports and arranges media in a persistent
 
 The example produces a two-second 320×180 film at 12 fps. Input footage and voice audio must be at least two seconds long. Adjust the plan to the actual request.
 
-以下 `SKILL_DIR` 沿用本技能 `SKILL.md` 的实际加载目录，脚本和示例均来自同一技能。
+以下 `SKILL_DIR` 沿用本技能 `SKILL.md` 的实际加载目录；执行脚本统一来自 filmcraft-harness 技能（`HARNESS_DIR`），示例仍取自本技能。
 
 ```bash
 : "${READ_ROOT:?Set READ_ROOT to an existing independently authorized directory}"
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
-python3 "$SKILL_DIR/scripts/workflow.py" \
+python3 "$HARNESS_DIR/scripts/workflow.py" \
   "$SKILL_DIR/examples/short-film.json" \
   --asset shot=/absolute/path/shot.mp4 \
   --asset voice=/absolute/path/voice.wav \
@@ -107,7 +107,7 @@ The candidate source workflow accepts these three commands. Immutable plugin dev
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/workflow.py" \
+python3 -I -B "$HARNESS_DIR/scripts/workflow.py" \
   "$SKILL_DIR/examples/motion-lut-film.json" \
   --asset shot=/absolute/path/shot.mp4 \
   --asset voice=/absolute/path/voice.wav \
@@ -131,7 +131,7 @@ Revisions may reuse the prior LUT alias with --source and expectedProjectSha256.
 
 公开工作流已经进入暂存后失败时，保留输出 `failure.json` 指向的 `stage`、该原位置的工程与素材，以及 `recovery-operations.json`。核对 `files` 中全部摘要及 `lastAttempt`，未知请求可能已经执行；不能自动重跑计划、移动暂存或删除失败目录。输出已有时会拒绝再次运行，成功交付才清理未使用暂存。
 
-先用本技能 `commands.py` 的新会话执行打开／检查计划，并显式登记恢复工程作为 `--input project=原暂存工程绝对路径`；按真实对象状态建立新的修改计划。`failure.json` 不是交付 manifest，不能把失败输出直接传给 `workflow.py --source`。成功保存、重开、依赖收集及派生输出检查后才形成新的交付。诊断写入权限不足时仍保留暂存并返回原异常，不能假定失败输出目录一定存在。
+先用 filmcraft-harness 技能 `commands.py` 的新会话执行打开／检查计划，并显式登记恢复工程作为 `--input project=原暂存工程绝对路径`；按真实对象状态建立新的修改计划。`failure.json` 不是交付 manifest，不能把失败输出直接传给 `workflow.py --source`。成功保存、重开、依赖收集及派生输出检查后才形成新的交付。诊断写入权限不足时仍保留暂存并返回原异常，不能假定失败输出目录一定存在。
 
 After staged failure, retain both the output recovery record and its original sibling stage. Verify all file hashes and the last submitted attempt; an unknown reply may follow a successful native operation. Open/inspect the retained project in a fresh commands.py session before an explicit new revision. Do not replay the original plan, move the stage or pass the failed directory as a successful workflow source package.
 

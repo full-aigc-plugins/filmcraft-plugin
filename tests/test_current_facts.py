@@ -34,9 +34,10 @@ class CurrentFactsTests(unittest.TestCase):
     def test_generation_is_deterministic_and_does_not_promote_history(self):
         first = self.facts.collect(ROOT)
         self.assertEqual(first, self.facts.collect(ROOT))
-        self.assertEqual(first['skillCount'], 13)
+        self.assertEqual(first['skillCount'], 14)
         self.assertEqual(first['commandCount'], 666)
-        lock = json.loads((ROOT / 'skills/filmcraft-use/scripts/runtime.lock.json').read_text())
+        # 执行实现收敛在 harness：运行时锁从 filmcraft-harness 读取。
+        lock = json.loads((ROOT / 'skills/filmcraft-harness/scripts/runtime.lock.json').read_text())
         self.assertEqual(first['activeRuntime']['version'], lock['resolvedVersion'])
         self.assertEqual(first['historicalRuntime']['role'], 'historical-bootstrap-baseline')
         self.assertEqual(first['currentQualification'], 'NOT_PROVEN')
@@ -49,7 +50,6 @@ class CurrentFactsTests(unittest.TestCase):
             ('docs/skills-source-suite.json', lambda x: x['suite'].update(version='0.0.0'), 'source_suite_identity_mismatch'),
             ('docs/skills-source-suite.json', lambda x: x['suite']['skills'].pop(), 'skill_list_mismatch'),
             ('skills/filmcraft-use/references/command-coverage.json', lambda x: x.update(runtimeSha256='0' * 64), 'catalog_runtime_mismatch'),
-            ('skills/filmcraft-cli/scripts/runtime.lock.json', lambda x: x.update(resolvedVersion='0.0.0'), 'standalone_runtime_drift'),
         ]
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -62,6 +62,13 @@ class CurrentFactsTests(unittest.TestCase):
                     with self.assertRaisesRegex(ValueError, error):
                         self.facts.collect(root)
                     path.write_bytes(before)
+            # 执行实现收敛在 harness：领域技能不得再携带执行脚本目录。
+            stale = root / 'skills/filmcraft-cli/scripts'
+            stale.mkdir()
+            (stale / 'bootstrap.py').write_text('def install(*args): raise ValueError("stale")\n')
+            with self.assertRaisesRegex(ValueError, 'domain_skill_still_carries_scripts'):
+                self.facts.collect(root)
+            shutil.rmtree(stale)
 
     def test_historical_root_lock_does_not_select_active_runtime(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -2,12 +2,12 @@ import { validatePermissions } from '../support/execution_permissions.ts';
 import { parseArgs } from 'node:util';
 import { dirname, basename, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { LocalAuthorizationStore } from '../harness/authorization.ts';
-import { RecoveryService } from '../harness/recovery.ts';
-import { ContinuationService } from '../harness/continuation.ts';
-import { StateMaintenance } from '../harness/state_maintenance.ts';
-import { TaskLedger } from '../harness/task_ledger.ts';
-import { CancellationService } from '../harness/cancellation.ts';
+import { LocalAuthorizationStore } from '../../scripts/harness/authorization.ts';
+import { RecoveryService } from '../../scripts/harness/recovery.ts';
+import { ContinuationService } from '../../scripts/harness/continuation.ts';
+import { StateMaintenance } from '../../scripts/harness/state_maintenance.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
+import { CancellationService } from '../../scripts/harness/cancellation.ts';
 import { readBoundFile } from '../artifacts/receipt_index.ts';
 import { check, HarnessError, parseJson } from '../support/json.ts';
 

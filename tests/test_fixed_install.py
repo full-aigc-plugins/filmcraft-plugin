@@ -46,7 +46,7 @@ class FixedInstallTests(unittest.TestCase):
             self.assertEqual(entry['sha'], git('rev-parse', 'HEAD'))
             self.assertEqual(entry['version'], version)
             self.assertEqual(entry['skillSourceRef'], json.loads((repo / 'skills.lock.json').read_text())['sources'][0]['ref'])
-            self.assertEqual(len(entry['skills']), 13)
+            self.assertEqual(len(entry['skills']), 14)
             self.assertIn('src/runtime.ts', entry['codeFilesSha256'])
 
     def test_malformed_source_objects_are_rejected_as_identity_errors(self):

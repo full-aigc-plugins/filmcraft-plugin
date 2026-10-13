@@ -4,9 +4,9 @@ import { spawnSync } from 'node:child_process';
 import { DatabaseSync } from 'node:sqlite';
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { StateMaintenance } from '../../src/harness/state_maintenance.ts';
-import { TaskLedger } from '../../src/harness/task_ledger.ts';
-import { forensicSnapshot } from '../../src/harness/forensic_snapshot.ts';
+import { StateMaintenance } from '../../scripts/harness/state_maintenance.ts';
+import { TaskLedger } from '../../scripts/harness/task_ledger.ts';
+import { forensicSnapshot } from '../../scripts/harness/forensic_snapshot.ts';
 import { sha256, stableJson } from '../../src/support/json.ts';
 import { binding, hash, workspace, fixtureAuthorizer, captureEvidence } from './fixtures.ts';
 

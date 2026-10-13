@@ -5,7 +5,7 @@ import { parseArgs } from 'node:util';
 import { basename, dirname, resolve } from 'node:path';
 import { RuntimeUpgrade } from '../adapters/runtime_upgrade.ts';
 import { CapabilityRefusal } from '../adapters/capability_refusal.ts';
-import { LocalAuthorizationStore } from '../harness/authorization.ts';
+import { LocalAuthorizationStore } from '../../scripts/harness/authorization.ts';
 import { readBoundFile } from '../artifacts/receipt_index.ts';
 import { check, HarnessError, parseJson } from '../support/json.ts';
 /** 宿主运行时升级入口；仅使用已有私有授权，不自行创建许可或自动重试。 */

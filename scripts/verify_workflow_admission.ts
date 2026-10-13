@@ -5,9 +5,9 @@ import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
-import { TaskLedger } from '../src/harness/task_ledger.ts';
-import { LocalAuthorizationStore } from '../src/harness/authorization.ts';
-import { WorkflowAdmission, executionSubject } from '../src/harness/workflow_admission.ts';
+import { TaskLedger } from '../scripts/harness/task_ledger.ts';
+import { LocalAuthorizationStore } from '../scripts/harness/authorization.ts';
+import { WorkflowAdmission, executionSubject } from '../scripts/harness/workflow_admission.ts';
 import { PythonWorkflowRunner, fingerprintSkill } from '../src/adapters/python_workflow.ts';
 import { ReceiptIndex } from '../src/artifacts/receipt_index.ts';
 import { sha256, stableJson } from '../src/support/json.ts';

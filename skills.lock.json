@@ -4,8 +4,8 @@
     {
       "package": "filmcraft-skills",
       "repo": "https://github.com/full-aigc-skills/filmcraft-skills.git",
-      "ref": "v0.1.0-dev.61",
-      "sha": "2e78802cfde198885a584248e0def9289c555f4e",
+      "ref": "v0.1.0-dev.62",
+      "sha": "f045e9d5a8eed8b1d0abf5339310dffa1abc4da7",
       "skills": [
         "filmcraft-use",
         "filmcraft-cli",
@@ -19,23 +19,25 @@
         "filmcraft-cli-motion",
         "filmcraft-cli-export",
         "filmcraft-cli-multicam",
-        "filmcraft-cli-transcript"
+        "filmcraft-cli-transcript",
+        "filmcraft-harness"
       ],
       "dest": "skills/",
       "sha256": {
-        "filmcraft-use": "6f84ece8ddabd6e030c407421dfe59abff3e5e2cc4a8f647f948dcaa4125f335",
-        "filmcraft-cli": "178bde061e5536338b05d1d39b97c58772c8c2246368980e142a6879f65ef0d9",
-        "filmcraft-cli-setup": "a8c77917e6582f50a8dcde9729d910de3c2af6fb9064886772a8b8c1061eb909",
-        "filmcraft-cli-project": "b9df92ae898dd9f2b54710a3dbfe98b92e0e4d08b643849a0ee7588d4f8a7bfb",
-        "filmcraft-cli-media": "cea8ad816f1e9a27bfa63f90c6e722212d995eac25b54ea563e5cc30b0953f20",
-        "filmcraft-cli-timeline": "26a590787619ce52e30763b650b3efc443dbf02b9b432f64da43b70645e0b4f1",
-        "filmcraft-cli-audio": "bd6857a0bcf8dccc974ea017ca80d9881673445a777367430a9878efce676695",
-        "filmcraft-cli-subtitles": "00b3854a571da4252e59f61abe1fc19ecc88c7cf9433ad75097fe14a8a9b0f32",
-        "filmcraft-cli-color": "82cd4088787c609e9d6d9452fe4a43e17fe839000f2676e17b93e318719f2bf2",
-        "filmcraft-cli-motion": "5398dff8ad5387560637aab314e1b4aaebb44f076600d3f9f439f4bdaf0fda66",
-        "filmcraft-cli-export": "eb858ca60e9dcd7ec352e42ca283dfdae4e6644bce391604b64ad43adb1411ae",
-        "filmcraft-cli-multicam": "504d5a09850cc94d2ad1ca175365c284dd868c9f177fe1c3e1f119d6c78ca721",
-        "filmcraft-cli-transcript": "740ac6b336784298299942325e0f4291dfba87e30d99bf4b86093b89f4c99590"
+        "filmcraft-use": "a15d470f657dae865bf423658983d103857f6e1be8c4a64497149f749302298b",
+        "filmcraft-cli": "dc96e5c636e800e2cf2cae627e8db9b7a0d001262ba4ae5580ecd797d548b5e1",
+        "filmcraft-cli-setup": "12950145f0017ad2e257446a006398f322b39689b1339a3fad52a8715e4e4607",
+        "filmcraft-cli-project": "e08503356b4a92390e9860e3ba4d82ce2b601c17475d67429517f4a1bfa97b10",
+        "filmcraft-cli-media": "0eb2eaf60d4b007df6b8fb00a83586dc8b224b35193cb3924abf088ca79c80d9",
+        "filmcraft-cli-timeline": "0979cc74237e480d4d5e4df046fce0b02d933bc523e291b3c5b52ee05a26963d",
+        "filmcraft-cli-audio": "6ab367460ea6173a5bdb1d28a1dc31924890fb3f41daa19d83145e5e40d7746b",
+        "filmcraft-cli-subtitles": "6f4a9c865a0a796f05630c0cc2893154d6ac28c407969445e2306b434f658ff3",
+        "filmcraft-cli-color": "564b887211810bbffb1b5512e6e3a54cf8361b9cb8d926ad2cdfd99ccbe48de3",
+        "filmcraft-cli-motion": "c6b8764246b1748344563aa48b7657171d298b9e9be0f2590b5321dbf889e981",
+        "filmcraft-cli-export": "3f790f68b1a81bf1b6229588812519a69f2068cfff1a40e3cb45191076c732bb",
+        "filmcraft-cli-multicam": "ff6bb7ad866ae52e2cd18cad4cf13248e8125739ec3bfdcd1259341d8b91ac4d",
+        "filmcraft-cli-transcript": "8928251b834ba369a65ea082fb15d8bcbebac5e281bbffd303ca697fa9da41d3",
+        "filmcraft-harness": "50c91368be6a9e08d586d556ad2c0b429b66e147b51bce46c4911a9b519578dd"
       }
     }
   ]

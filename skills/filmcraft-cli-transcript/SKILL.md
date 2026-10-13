@@ -20,15 +20,17 @@ license: Apache-2.0
 
 ## 首次使用与公共入口
 
-定位当前 SKILL.md 的真实目录。当前支持 macOS arm64、Python 3.11+；固定 CLI 安装到用户数据目录。已有任务授权覆盖必要依赖时直接执行本技能安装器，不另造批准流程。
+执行实现收敛在内置的 **filmcraft-harness** 技能（随插件捆绑安装；单独安装用 `npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-harness`）。将 `HARNESS_DIR` 设置为该技能实际加载目录（绝对路径）；本技能的 `SKILL_DIR` 只用于读取自身的 `examples/` 与 `references/`。
+
+定位当前 SKILL.md 的真实目录。当前支持 macOS arm64、Python 3.11+；固定 CLI 安装到用户数据目录。已有任务授权覆盖必要依赖时直接执行 filmcraft-harness 技能安装器，不另造批准流程。
 
 将 `SKILL_DIR` 设置为宿主实际加载的本 `SKILL.md` 所在目录（绝对路径）。用户级安装可能位于 `~/.agents/skills/filmcraft-cli-transcript`，项目级可能位于 `.agents/skills/filmcraft-cli-transcript`，插件可能位于其 `skills/filmcraft-cli-transcript` 或宿主缓存目录；以实际加载路径为准，不按当前工作目录猜测，也不搜索后随意选择重复版本。技能目录与 CLI 的用户数据安装目录是两个独立位置。
 
 ```bash
 : "${SKILL_DIR:?请先设置为本 SKILL.md 的实际所在目录}"
-python3 -I -B "$SKILL_DIR/scripts/bootstrap.py"
-python3 -I -B "$SKILL_DIR/scripts/cli.py" -- --version
-python3 -I -B "$SKILL_DIR/scripts/cli.py" -- commands --json
+python3 -I -B "$HARNESS_DIR/scripts/bootstrap.py"
+python3 -I -B "$HARNESS_DIR/scripts/cli.py" -- --version
+python3 -I -B "$HARNESS_DIR/scripts/cli.py" -- commands --json
 ```
 
 CLI argv 在 `--` 后，原生子命令必须放首位。安装参数放分隔符前；`--runtime-home` 可隔离缓存。锁定制品摘要失败、损坏安装或不支持平台时停止；不改 PATH、不执行浮动升级。原生帮助入口是 `help`；launcher 自身 `--help` 只说明启动参数。
@@ -43,7 +45,7 @@ CLI argv 在 `--` 后，原生子命令必须放首位。安装参数放分隔�
 
 
 
-原生组合与源工程修订使用本技能自带 `scripts/workflow.py`；读取 [工作流合同](references/workflow.md)，模板在本技能 examples 内。只修改授权对象，原生工程和依赖素材保留，派生格式损失读取 [交换报告](references/exchange-loss.md)。
+原生组合与源工程修订使用 filmcraft-harness 技能的 `scripts/workflow.py`；读取 [工作流合同](references/workflow.md)，模板在本技能 examples 内。只修改授权对象，原生工程和依赖素材保留，派生格式损失读取 [交换报告](references/exchange-loss.md)。
 
 ## 核验与恢复
 
@@ -66,18 +68,18 @@ CLI argv 在 `--` 后，原生子命令必须放首位。安装参数放分隔�
 : "${RUNTIME_HOME:?Set RUNTIME_HOME to an existing independently authorized directory}"
 : "${SKILL_DIR:?Set SKILL_DIR to an existing independently authorized directory}"
 : "${WRITE_ROOT:?Set WRITE_ROOT to an existing independently authorized directory}"
-python3 -I -B "$SKILL_DIR/scripts/commands.py" list --filter QUERY
-python3 -I -B "$SKILL_DIR/scripts/commands.py" describe COMMAND_ID
-python3 -I -B "$SKILL_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-advanced.json" --output /absolute/new-command-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" list --filter QUERY
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" describe COMMAND_ID
+python3 -I -B "$HARNESS_DIR/scripts/commands.py" run "$SKILL_DIR/examples/commands-advanced.json" --output /absolute/new-command-result --runtime-home "$RUNTIME_HOME" --read-root "$SKILL_DIR" --read-root "$READ_ROOT" --write-root "$WRITE_ROOT" --write-root "$RUNTIME_HOME"
 ```
 
 新入口执行前检查真实注册表与当前可执行状态，保留返回值引用和逐步回执；语义错误或超时不冒充成功。目录覆盖与直接原生使用不等于所有指令、GUI、交付或 Art 编排已验收。
 
-完整工作流命令网关见 [使用说明](references/native-workflow.md)。固定 CLI 的版本与制品摘要以本技能自带 `scripts/runtime.lock.json` 为准；技能包版本以对应发布标签为准。独立安装复验与全量逐命令验收分别记录，不以发布替代验收。
+完整工作流命令网关见 [使用说明](references/native-workflow.md)。固定 CLI 的版本与制品摘要以 filmcraft-harness 技能的 `scripts/runtime.lock.json` 为准；技能包版本以对应发布标签为准。独立安装复验与全量逐命令验收分别记录，不以发布替代验收。
 
 GUI任务可先使用本技能自带的 [固定桌面安装](references/desktop-install.md)；安装、启动与实际GUI编辑分别核验。
 
-完整归属命令按命令族列于 [分类使用清单](references/scenario.md)，每项可通过本技能的 `commands.py describe` 查看参数；通用 CLI 清单也保留未归入专项技能的全部命令。
+完整归属命令按命令族列于 [分类使用清单](references/scenario.md)，每项可通过 filmcraft-harness 技能的 `commands.py describe` 查看参数；通用 CLI 清单也保留未归入专项技能的全部命令。
 
 本技能任务先读取 [专项任务模板](references/task-scene.md)，按对应输入、首次任务、失败边界、局部修订和核验执行。跨能力组合时再读取 [完整业务场景](references/business-scenes.md)。
 

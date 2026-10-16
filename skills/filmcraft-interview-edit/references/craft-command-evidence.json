@@ -1,0 +1,62 @@
+{
+  "runtime": {
+    "version": "v0.8.0",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64-portable.zip",
+    "sha256": "0119afd59dfd6ecb94470ba6b3a48108ade87dabd4972898dd6c04e1db396b0b",
+    "executable": "filmcraft-cli.exe"
+  },
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "observedCommands": {
+    "file.newBin": {
+      "defaultShortcut": "Cmd+B",
+      "enabled": true,
+      "id": "file.newBin",
+      "label": "Bin",
+      "menu": [
+        "File",
+        "New"
+      ],
+      "params": "{\"name\":str,\"parent\":binId?}",
+      "shortcut": "Cmd+B",
+      "shortcuts": [
+        "Cmd+B",
+        "Cmd+B"
+      ]
+    },
+    "markers.add": {
+      "defaultShortcut": "M",
+      "enabled": true,
+      "id": "markers.add",
+      "label": "Add Marker",
+      "menu": [
+        "Markers"
+      ],
+      "params": "{\"target\":\"program|source\",\"time\":ticks?,\"name\":str?,\"comment\":str?,\"color\":label?,\"durationFrames\":i64?}",
+      "shortcut": "M",
+      "shortcuts": [
+        "M"
+      ]
+    },
+    "timeline.trim": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "timeline.trim",
+      "label": "Trim Edit",
+      "menu": [],
+      "params": "{\"clip\":id,\"edge\":\"in|out\",\"mode\":\"regular|ripple\",\"delta\":ticks|\"deltaFrames\":i64}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "sequence.inspect": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "sequence.inspect",
+      "label": "Inspect Sequence",
+      "menu": [],
+      "params": "{\"item\":id?}",
+      "shortcut": null,
+      "shortcuts": []
+    }
+  },
+  "sceneAcceptance": "NOT_RUN"
+}

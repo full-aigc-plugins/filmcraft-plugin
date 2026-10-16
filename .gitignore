@@ -10,3 +10,5 @@ __pycache__/
 .openspec-cache/
 .codex/
 .claude/
+
+ui/dist/

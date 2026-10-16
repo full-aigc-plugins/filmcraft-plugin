@@ -1,5 +1,13 @@
 {
   "version": 1,
   "dest": "skills/",
-  "skills": []
+  "skills": [
+    "filmcraft-color-match",
+    "filmcraft-editor",
+    "filmcraft-interview-edit",
+    "filmcraft-product-video",
+    "filmcraft-short-video",
+    "filmcraft-subtitle-delivery",
+    "filmcraft-video-export"
+  ]
 }

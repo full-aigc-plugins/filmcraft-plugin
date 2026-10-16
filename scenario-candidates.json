@@ -1,0 +1,34 @@
+{
+  "status": "local-unreleased",
+  "sourcePackage": "full-aigc-skills/filmcraft-skills",
+  "skills": [
+    {
+      "name": "filmcraft-editor",
+      "sha256": "75ba366343a3403ee9925fd3b1727f85d5458e124bced25a036bf5d3ccd5c224"
+    },
+    {
+      "name": "filmcraft-short-video",
+      "sha256": "7ec4949d1d8dcfe5a5853bd52a0fa4dae460bee58f2b367e379ee457ece9e4e6"
+    },
+    {
+      "name": "filmcraft-interview-edit",
+      "sha256": "110e8819420a6fb184047764627df1d67fd1700507515ae92f38a5c58dc07e81"
+    },
+    {
+      "name": "filmcraft-subtitle-delivery",
+      "sha256": "103edf2c2fab5aa044dca56a570a45599efa82c1fd467a40bafdecb1658c0264"
+    },
+    {
+      "name": "filmcraft-product-video",
+      "sha256": "bce72888420a3fe209079b0d43043d19070e18d4d1ee41bc35a5890e17ce0daa"
+    },
+    {
+      "name": "filmcraft-color-match",
+      "sha256": "890929b670fc66b284ca98ff4000f6bee849d496ffd43ee2e1951734b040b50d"
+    },
+    {
+      "name": "filmcraft-video-export",
+      "sha256": "49a975b14ee17964771b204498fd185022e1518339c98adef721195bd08e5035"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# FilmCraft Agent Plugin
+# FilmCraft Use
 
 Fixed80/source61 public JSONL qualification passes five healthy stages plus a final disabled-command refusal with one editor PID: scope delivery, caption/audio delivery, source revision and surrounding queries. Nine separately counted media helpers remain. Independent checks cover264 video frames, exact scope PNG pixels, subtitle changes and0.5s audio onset; original delivery/fixtures and2020 installed files stay unchanged. Harness prepare/run/revision/continuation still needs shared ownership, so9.39 stays OPEN alongside seven fullV1 gates. [Evidence](docs/evidence/filmcraft80-domain-session-20261009/report.json).
 
@@ -482,3 +482,13 @@ Fixed public dev.67/source50 installation passes: Codex discovers13 skills witho
 Candidate dev.68/source51 rejects undefined domain-wrapper parameter and nested move fields before assets, installation and output; creative text is preserved. Fixed68 installation and bounded parameter acceptance pass; full V1 remains open with8 tasks unchecked.
 
 Fixed68/source51 acceptance:13 installed skills load without errors;26 public and26 installed Harness parameter refusals pass before runtime/output. A valid native subtitle revision/save/reopen preserves creative text, original delivery and all13 skill bytes. Task7.7 is complete;8 original full-V1 tasks remain open. [Evidence](docs/evidence/filmcraft68-parameter-fields-20261009/summary.json).
+
+## 场景技能开发候选
+
+已增加 6 个领域场景技能及 1 个内嵌编辑器入口。详见 [场景目录](docs/scene-skills.md)。本地未发布候选，不代表全部场景的创作质量已验收。
+
+## 内嵌编辑器候选
+
+新增 MCP Apps 与宿主浏览器接入，详见 [配置与构建](docs/editor-integration.md)。`ui/dist/` 为本地生成物；首次分发须带齐生成物。
+
+Plugin display name: **FilmCraft Use**. Official upstream icon provenance and licenses are included under `assets/official-icon-source.json` and adjacent LICENSE files.

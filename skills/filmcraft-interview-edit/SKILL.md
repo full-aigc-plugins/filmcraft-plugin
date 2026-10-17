@@ -48,4 +48,4 @@ license: Apache-2.0
 
 ## main单侧选择
 
-用户要求只修改关联音视频的一侧时，先读[main linked选择参数](references/main-selection.md)，区分本次选择与全局偏好，并检查关联伙伴未被修改。新增专例尚未实测。
+用户要求只修改关联音视频的一侧时，先读[main linked选择参数](references/main-selection.md)，区分本次选择与全局偏好，并检查关联伙伴未被修改。Windows内置演示工程已验证单侧删除、伙伴保护及撤销重开；真实媒体试听与宿主同步未验收。

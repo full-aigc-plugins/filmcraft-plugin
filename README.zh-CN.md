@@ -494,6 +494,6 @@ dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自�
 
 ## main选择参数补充 / main selection parameter
 
-新增[关联音视频单侧选择](skills/filmcraft-interview-edit/references/main-selection.md)：timeline.select的linked:false只影响本次选择，不改变全局开关。旧纯视频回归不能证明新关联素材场景通过，专例仍待执行。
+新增[关联音视频单侧选择](skills/filmcraft-interview-edit/references/main-selection.md)：timeline.select的linked:false只影响本次选择，不改变全局开关。Windows main内置演示工程已验证单侧删除、伙伴保护与撤销重开；显式edit.clear目标仍会展开关联伙伴，单侧删除必须按当前精确选择执行。真实媒体试听与宿主同步未验收。
 
-The main guide distinguishes per-selection linked:false from the global linked-selection preference. Paired audio/video behavior and host synchronization still need their own runtime case.
+The main guide distinguishes per-selection linked:false from the global linked-selection preference. Windows main demo-project checks pass for isolated deletion, partner preservation, undo and native reopen. Explicit deletion targets still expand linked partners; use the precise current selection for single-side deletion. Real-media listening and host synchronization remain unverified.

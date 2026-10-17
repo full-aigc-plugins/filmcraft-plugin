@@ -6,8 +6,10 @@ host manifest; Claude Code, Codex, ZCode and Kimi keep using those.
 
 ## Install
 
+Run from the FilmCraft plugin repository root.
+
 ```sh
-dsh plugin --profile desktop add link:/Users/wandl/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/filmcraft-plugin/dsh
+dsh plugin --profile desktop add link:./dsh
 ```
 
 ## What DSH gets

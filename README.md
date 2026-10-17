@@ -534,4 +534,4 @@ The main guide distinguishes per-selection linked:false from the global linked-s
 
 ### 字幕精确偏移（开发候选）
 
-字幕交付技能新增导入精度恢复、已知恒定偏移、非目标轨道保护、副本媒体重链接和 SRT/VTT 精确导出。操作见 `skills/filmcraft-subtitle-delivery/references/constant-offset.md`。本地原生 CLI 已验证，Windows 与共享编辑器宿主验收待完成。
+字幕交付技能新增导入精度恢复、已知恒定偏移、非目标轨道保护、副本媒体重链接和 SRT/VTT 精确导出。操作见 `skills/filmcraft-subtitle-delivery/references/constant-offset.md`。macOS、Windows 原生 CLI 及限定范围的 Codex 共享编辑器时间操作已通过；中文 Web 字体显示仍未通过。

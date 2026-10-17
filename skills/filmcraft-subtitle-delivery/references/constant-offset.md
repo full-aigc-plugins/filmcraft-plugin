@@ -25,7 +25,7 @@ python3 scripts/sync_srt.py --cli /path/to/filmcraft-cli --input /path/to/input.
 
 ## 可见编辑器与验收边界
 
-需要同步画面时先读取 filmcraft-editor 的当前工具 schema，打开同一个另存工程，按真实 command_list/command_run 能力执行并检查字幕显示。不要把独立 CLI 文件改动当成已连接编辑器的内存状态变化。此精确偏移脚本目前有原生 CLI 验证，真实宿主共享会话及 Windows 本轮验证尚未完成。
+需要同步画面时先读取 filmcraft-editor 的当前工具 schema，打开同一个另存工程，按真实 command_list/command_run 能力执行并检查字幕显示。不要把独立 CLI 文件改动当成已连接编辑器的内存状态变化。精确偏移脚本已通过 macOS 和 Windows 原生 CLI 验证；真实 Codex 宿主已验证目标字幕的精度恢复、500ms 移动、同一编辑器画面更新、保存重开及 SRT 导出。宿主测试使用独立字幕序列，不代表浏览器内实际视频解码已通过。当前官方 Web 包只列出 Inter、JetBrains Mono、Noto Serif，测试中中文显示方框而导出文本保持；中文字体显示仍未通过，不能声称完整字幕排版或烧录交付通过。
 
 本地回归覆盖已有视频工程的正负 500ms、独立字幕工程、3 条包含多行中文的奇数毫秒字幕、非目标轨道保护、SRT/VTT 精确导出和跨工作目录实际渲染。35 次原生 CLI 调用通过；不代表真实语音对齐、烧录排版或任意字体已经验收。输出依赖原媒体的绝对路径，移动到其他机器仍需提供媒体并重新链接。
 

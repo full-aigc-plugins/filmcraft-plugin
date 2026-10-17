@@ -36,11 +36,7 @@ class ReleaseGateTests(unittest.TestCase):
   text=(ROOT/'openspec/changes/establish-v1-plugin/tasks.md').read_text()
   self.assertNotIn('### 验收索引与交付记录',text)
   self.assertNotIn('FC-RL-001-LAYERED-CI',text)
-  try:
-   groups=trace_index(ROOT)
-  except Exception:
-   groups=[]
-  self.assertEqual(groups,[])
+  self.assertEqual(trace_index(ROOT),[])
  def test_missing_scenario_stale_log_and_unexecuted_host_are_rejected(self):
   from release_evidence import validate_trace
   identity={'pluginSha':'a'*40,'skillSourceSha':'b'*40,'runtimeSha256':'c'*64}

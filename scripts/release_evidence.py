@@ -20,7 +20,10 @@ def validate_checks(rows):
 
 def trace_index(root):
  root=Path(root);text=(root/'openspec/changes/establish-v1-plugin/tasks.md').read_text()
- table=text.split('### 验收索引与交付记录',1)[1].split('### P0',1)[0]
+ # 已裁剪的9.x优化索引不属于当前需求；缺席时不恢复历史治理范围。
+ marker='### 验收索引与交付记录'
+ if marker not in text:return []
+ table=text.split(marker,1)[1].split('### P0',1)[0]
  known=set()
  for path in (root/'openspec/changes/establish-v1-plugin/specs').glob('*/spec.md'):
   known.update(re.findall(r'^#### Scenario: (\S+)',path.read_text(),re.M))

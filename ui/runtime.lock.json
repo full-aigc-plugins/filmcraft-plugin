@@ -1,8 +1,8 @@
 {
   "name": "filmcraft",
-  "version": "0.1.0-dev.20261017.1",
-  "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/releases/download/v0.1.0-dev.20261017.1/filmcraft-runtime.tgz",
-  "sha256": "f6d48d404a0f759df404042cf279a381b5cf46b6dd14cf8ae7ae42a9c1461477",
+  "version": "0.1.0-dev.20261017.2",
+  "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/releases/download/v0.1.0-dev.20261017.2/filmcraft-runtime.tgz",
+  "sha256": "3afd2f52c6010e377195dcc0bb332ebbe40dd51fa7d49cafbdc5cfba5b668720",
   "files": {
     "adapter.mjs": "44bf2c4cdd87d0e485c7869abfba61cfeb80fd7f5bc2342e8a8f04c52e092bc4",
     "config.json": "20880d445ebf9e09b8c193e82d12bfc38e84e4618b6a10eb983d69eb48a1f796",

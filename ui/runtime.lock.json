@@ -1,6 +1,6 @@
 {
   "name": "filmcraft",
-  "version": "0.1.0-dev.20261017.2",
+  "version": "0.1.0-dev.20261017.3",
   "url": "https://github.com/full-aigc-plugins/filmcraft-plugin/releases/download/v0.1.0-dev.20261017.2/filmcraft-runtime.tgz",
   "sha256": "3afd2f52c6010e377195dcc0bb332ebbe40dd51fa7d49cafbdc5cfba5b668720",
   "files": {
@@ -123,5 +123,6 @@
     "web-panel.js": "621747273e5fd59a133830324cbc5ddbb641c1e0ce0ea3a15369a61de9df593b",
     "web-panel.js.LEGAL.txt": "eda25878a01ef5903efe932a6e7c99e175023a47ce70b7d7f901ab2c07c06562"
   },
-  "scope": "Pinned editor artifact; bundled upstream/build provenance remains in editor/BUILD.json or config.json. This does not certify all upstream main capabilities."
+  "scope": "Pinned editor artifact; bundled upstream/build provenance remains in editor/BUILD.json or config.json. This does not certify all upstream main capabilities.",
+  "catalogSha256": "2b9233aa6a2e4f9a806e04065d8ba6ab0880a5dbea28e1e741bc58368b6f30a9"
 }

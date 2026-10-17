@@ -1,0 +1,236 @@
+{
+  "tools": [
+    {
+      "name": "_panel_poll",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string"
+          }
+        }
+      },
+      "_meta": {
+        "ui": {
+          "visibility": [
+            "app"
+          ]
+        }
+      }
+    },
+    {
+      "name": "_panel_reply",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "result": {},
+          "error": {
+            "type": "string"
+          }
+        }
+      },
+      "_meta": {
+        "ui": {
+          "visibility": [
+            "app"
+          ]
+        }
+      }
+    },
+    {
+      "name": "_panel_download",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
+      },
+      "_meta": {
+        "ui": {
+          "visibility": [
+            "app"
+          ]
+        }
+      }
+    },
+    {
+      "name": "open_editor",
+      "description": "Open the real Web editor. Set the absolute workspace before the first open. The page must load before commands work.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        }
+      },
+      "_meta": {
+        "ui": {
+          "resourceUri": "ui://filmcraft/panel.html",
+          "surface": "editor",
+          "visibility": [
+            "model",
+            "app"
+          ]
+        }
+      }
+    },
+    {
+      "name": "open_browser_editor",
+      "description": "Return the same session URL for the host built-in browser.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "editor_status",
+      "description": "Check whether the Web editor is alive and ready.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "command_list",
+      "description": "List current engine commands. LightCraft does not expose this API; use its pinned command reference.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "command_run",
+      "description": "Execute an actual engine command by id and parameters, in the visible editor.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "params": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "inspect",
+      "description": "Inspect the current visible editor or LightCraft library.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "open_file",
+      "description": "Import a workspace-relative file into the visible editor.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    {
+      "name": "save_project",
+      "description": "Save the editable project to a NEW workspace path. LightCraft uses the upstream library backup command instead.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    {
+      "name": "save_file",
+      "description": "Copy an existing browser virtual file to a NEW workspace path.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "path"
+        ]
+      }
+    },
+    {
+      "name": "list_files",
+      "description": "List files held by the actual browser editor.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "screenshot",
+      "description": "Capture the actual editor canvas as a PNG.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "resources": [
+    {
+      "uri": "ui://filmcraft/panel.html",
+      "name": "editor",
+      "mimeType": "text/html;profile=mcp-app",
+      "_meta": {
+        "ui": {
+          "resourceUri": "ui://filmcraft/panel.html",
+          "surface": "editor",
+          "visibility": [
+            "model",
+            "app"
+          ]
+        }
+      }
+    }
+  ],
+  "resourceTemplates": []
+}

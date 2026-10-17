@@ -2,7 +2,7 @@
 
 ## Installable editor development candidate
 
-`0.1.0-dev.20261017.2` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
+`0.1.0-dev.20261017.3` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
 
 
 ## Previous development candidate
@@ -508,3 +508,7 @@ Plugin display name: **FilmCraft Use**. Official upstream icon provenance and li
 新增[关联音视频单侧选择](skills/filmcraft-interview-edit/references/main-selection.md)：timeline.select的linked:false只影响本次选择，不改变全局开关。Windows main内置演示工程已验证单侧删除、伙伴保护与撤销重开；显式edit.clear目标仍会展开关联伙伴，单侧删除必须按当前精确选择执行。真实媒体试听与宿主同步未验收。
 
 The main guide distinguishes per-selection linked:false from the global linked-selection preference. Windows main demo-project checks pass for isolated deletion, partner preservation, undo and native reopen. Explicit deletion targets still expand linked partners; use the precise current selection for single-side deletion. Real-media listening and host synchronization remain unverified.
+
+### 候选启动修正
+
+本候选先完成轻量MCP握手及能力发现，在首次工具或资源调用时校验/获取固定编辑器资源。修复多个编辑器首次下载阻塞宿主握手的问题。Windows通过Git安装时须启用Git长路径支持（`git config --global core.longpaths true`）；完整ZIP不包含历史验收记录，可避免Git检出长路径的问题。运行资源沿用已核验的dev.20261017.2制品，不以入口版本号冒充上游升级。

@@ -530,3 +530,7 @@ The main guide distinguishes per-selection linked:false from the global linked-s
 - [filmcraft-freeze-explainer](skills/filmcraft-freeze-explainer/SKILL.md)
 - [filmcraft-presenter-inset](skills/filmcraft-presenter-inset/SKILL.md)
 - [filmcraft-jcut-dialogue](skills/filmcraft-jcut-dialogue/SKILL.md)
+
+### 字幕精确偏移（开发候选）
+
+字幕交付技能新增导入精度恢复、已知恒定偏移、非目标轨道保护、副本媒体重链接和 SRT/VTT 精确导出。操作见 `skills/filmcraft-subtitle-delivery/references/constant-offset.md`。本地原生 CLI 已验证，Windows 与共享编辑器宿主验收待完成。

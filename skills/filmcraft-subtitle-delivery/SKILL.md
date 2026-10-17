@@ -15,6 +15,8 @@ license: Apache-2.0
 
 需要可见编辑器时交给 **filmcraft-editor** 技能。独立安装：`npx skills add full-aigc-skills/filmcraft-skills --skill filmcraft-editor`。当前新增技能为本地候选，发布前使用本地配套插件，不把此安装命令当作已发布证明。
 
+已知字幕整体提前或延迟时，读取[恒定偏移与精确导出](references/constant-offset.md)，执行配套脚本并核对新工程和 SRT/VTT。
+
 ## 执行步骤
 
 1. 确认字幕来源和语言，校对人名数字。

@@ -18,6 +18,29 @@
         }
       ],
       "reuse": "workflow facts and original adaptation only; no upstream text, code or assets copied"
+    },
+    {
+      "repository": "SubtitleEdit/subtitleedit",
+      "commit": "eabef65b1ddb5a1c1815d8ea57d3d054526e13ac",
+      "license": "MIT",
+      "readFiles": [
+        {
+          "path": "docs/faq.md",
+          "url": "https://github.com/SubtitleEdit/subtitleedit/blob/eabef65b1ddb5a1c1815d8ea57d3d054526e13ac/docs/faq.md",
+          "sha256": "546704ef282f2c0b99304c83ae6deb5e31d597a948934d659d9205ca11aa58b1"
+        },
+        {
+          "path": "docs/reference/command-line.md",
+          "url": "https://github.com/SubtitleEdit/subtitleedit/blob/eabef65b1ddb5a1c1815d8ea57d3d054526e13ac/docs/reference/command-line.md",
+          "sha256": "fa3da5f333cbf995132b167ffc753565c519e5a153097b8bf198a2d15a6d3b6a"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/SubtitleEdit/subtitleedit/blob/eabef65b1ddb5a1c1815d8ea57d3d054526e13ac/LICENSE",
+          "sha256": "1bc4dcdb06d5507eacf67399674a5a6fa0f5f5270d15eefd7b4b2040319ceba0"
+        }
+      ],
+      "reuse": "workflow facts only; original FilmCraft CLI adaptation, no upstream code, text or assets copied"
     }
   ]
 }

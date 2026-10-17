@@ -16,7 +16,7 @@
 | --- | --- | --- |
 | 1 | `color.spaces` | `{}` |
 | 2 | `sequence.colorSettings` | `{"workingSpace":"rec709","wideGamut":false,"autoToneMap":false}` |
-| 3 | `lumetri.applyMatch` | `{"referenceFrame":0,"faceDetection":true}` |
+| 3 | `lumetri.applyMatch` | `{"referenceFrame":0,"faceDetection":true,"clip":{"$ref":"clip"}}` |
 | 4 | `sequence.inspect` | `{}` |
 
 检查：相邻镜头的主体颜色和曝光衔接正常，参考帧明确。
@@ -25,7 +25,7 @@
 
 原配方结果检查："相邻镜头反复切换比较肤色、中性物体、黑白点，不能只看一帧。"
 
-原配方限制：参考帧需换成实际镜头；HDR素材不得盲设rec709和关闭tone map。
+原配方限制：参考帧需换成实际镜头；HDR素材不得盲设rec709和关闭tone map。 参考帧必须处于另一个镜头，不能位于目标片段内部；先检查sequence.inspect的startFrame/endFrame及源素材，明确clip参数，避免重开工程后的选择丢失。
 
 ## 版本与执行
 

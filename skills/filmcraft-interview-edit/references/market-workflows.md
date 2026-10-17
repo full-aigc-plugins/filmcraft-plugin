@@ -16,7 +16,7 @@
 | --- | --- | --- |
 | 1 | `file.newBin` | `{"name":"Interview topics"}` |
 | 2 | `markers.add` | `{"target":"program","time":0,"name":"议题起点","comment":"核对原始上下文"}` |
-| 3 | `timeline.trim` | `{"clip":1,"edge":"out","mode":"regular","deltaFrames":-5}` |
+| 3 | `timeline.trim` | `{"clip":{"$ref":"clip"},"edge":"out","mode":"regular","deltaFrames":-5}` |
 | 4 | `sequence.inspect` | `{}` |
 
 检查：首尾音节完整，原素材位置可追溯，摘编不改变论点。

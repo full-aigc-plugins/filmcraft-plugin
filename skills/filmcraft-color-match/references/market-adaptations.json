@@ -57,7 +57,10 @@
             "command": "lumetri.applyMatch",
             "params": {
               "referenceFrame": 0,
-              "faceDetection": true
+              "faceDetection": true,
+              "clip": {
+                "$ref": "clip"
+              }
             }
           },
           {
@@ -67,9 +70,10 @@
           }
         ],
         "check": "相邻镜头反复切换比较肤色、中性物体、黑白点，不能只看一帧。",
-        "boundary": "参考帧需换成实际镜头；HDR素材不得盲设rec709和关闭tone map。",
+        "boundary": "参考帧需换成实际镜头；HDR素材不得盲设rec709和关闭tone map。 参考帧必须处于另一个镜头，不能位于目标片段内部；先检查sequence.inspect的startFrame/endFrame及源素材，明确clip参数，避免重开工程后的选择丢失。",
         "templateOnly": true,
-        "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+        "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。",
+        "bindings": "执行前从当前sequence.inspect取得唯一目标片段ID，替换$ref:clip整个对象为实际整数。此记号不是原生参数，不使用预设clip=1。"
       },
       "execution": "REFERENCE_ADAPTATION_NOT_NEW_RUNTIME_ACCEPTANCE"
     }

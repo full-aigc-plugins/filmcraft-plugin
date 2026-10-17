@@ -1,33 +1,35 @@
 # 本场景的 Craft 方法与参数
 
-先读取输入与当前选择。数值、路径、名称和对象编号仅为格式示例；用当前输入、实际返回ID和目标尺寸替换后执行。
+下列是实际方法与示例参数。capture/$ref是手册记号，先读取返回值，再将整个引用对象替换为真实值；不能将引用对象直接发给CLI/MCP。
 
 | 顺序与目的 | 实际方法 | 参数例子 |
 | --- | --- | --- |
-| 1. 先建立素材精选箱 | `file.newBin` | `{"name":"Selects"}` |
-| 2. 创建目标比例序列 | `file.newSequence` | `{"name":"Short","width":1080,"height":1920,"fps":30}` |
-| 3. 在已选素材与源入出点明确后插入 | `source.insert` | `{}` |
-| 4. 按需在当前实际剪辑轨做分割 | `timeline.razor` | `{"time":762048000000,"track":"V1"}` |
-| 5. 核对序列结构 | `sequence.inspect` | `{}` |
+| 1. 建立本任务素材箱并记录返回bin | `file.newBin` | `{"name":"Selects"}` |
+| 2. 导入实际素材并记录返回items | `file.import` | `{"paths":["input/short.mp4"],"bin":{"$ref":"bin.bin"}}` |
+| 3. 创建目标序列 | `file.newSequence` | `{"name":"Short","width":1080,"height":1920,"fps":30}` |
+| 4. 显式打开导入结果中的实际素材ID | `source.open` | `{"item":{"$ref":"media.items.0"}}` |
+| 5. 源入点为第0帧 | `markers.markIn` | `{"target":"source","frame":0}` |
+| 6. 含出点帧：4秒素材选择0至最后一帧 | `markers.markOut` | `{"target":"source","frame":119}` |
+| 7. 在同一源监视器会话中插入 | `source.insert` | `{}` |
+| 8. 在已插入视频轨的3秒处切开 | `timeline.razor` | `{"time":762048000000,"clip":{"$ref":"insert.clips.0"}}` |
+| 9. 检查实际序列和时长 | `sequence.inspect` | `{}` |
 
-## 如何调用
+新增插入后的尺寸适配：用 `clip.fitToFrame`，参数 `{"clips":[实际返回片段ID]}`。它保持画面完整和比例，允许黑边；要求铺满裁切时先确认主体安全区和实际变换能力，不能把适配完整画面称为自动构图。
 
-宿主内已打开编辑器时使用该同会话MCP；先等待editor_status就绪，读取实际工具schema和当前命令参数。独立CLI可用于文件任务，但新进程与已打开Web编辑器不是同一状态。
+## 返回值和会话
 
-本插件MCP包装：`command_run`，参数 `{"id": "file.newBin", "params": {"name": "Selects"}}`。后续行保持同一会话和对象选择，逐条检查实际结果。
+capture/$ref仅为手册返回值记号，不是原生CLI/MCP参数。先读取对应结果，再以实际整数替换整个$ref对象。相同batch的源打开、入出点与insert必须在同一次CLI run或同一MCP会话执行；工程重开不保留源监视器。示例输入至少4秒，需按源素材实际帧率重算出点。
 
-CLI 语法（下面是展示用写法，实际跨平台执行用argv避免shell引号差异）：
+CLI使用 `filmcraft-cli --project input.fcproj --save-as output.fcproj run steps.jsonl`，每行仅含原生 `{"id":"方法ID","params":{...}}`。本轮新建工程第一次调用省略--project；后续打开已保存的新工程。需要跨批读取返回值时，按batch依次保存中间副本，再生成下一批原生JSONL；source.open、markers.markIn/Out和source.insert必须处于同一run批次，不能靠保存重开恢复源监视器。保持素材路径相对于同一个工作目录，或运行时传入已确认的真实路径。
 
-filmcraft-cli --project input.fcproj --save-as output.fcproj run steps.jsonl；每行 {"id":"file.newBin","params":{"name":"Selects"}}。时钟tick与秒/帧参数不得混用。
+MCP先等待editor_status就绪，再在同一编辑器会话中使用command_run：`{"id":"方法ID","params":{...}}`；读取实时返回值填入下一步。独立CLI新进程不证明宿主画面同步。
 
-## 参数核对与完成标准
+## 参数核对与检查
 
-先查 [当前版本观察目录](craft-command-evidence.json) 中对应方法的完整参数，再按实际运行时查询更新。结构化步骤见 [craft-steps.json](craft-steps.json)。
+先读 [命令目录](craft-command-evidence.json) 的当前schema和 [结构化步骤](craft-steps.json)。
 
 3秒示例位置对应254016000000ticks/秒，重看开头、主体、结尾与音画连续。
 
-边界：插入前必须指定源素材和范围；示例ticks不适合任意帧率边界，要按实际帧对齐。
+边界：新建示例：先probe素材帧率和时长，4秒范围以源帧率计算含末帧的出点；本例假设源与目标帧率一致。源素材ID、片段ID从返回值取得，不猜测。素材不足4秒、帧率不同或已有序列时先重算范围，不覆盖输入。
 
-保存可编辑工程后由新进程或重新打开的同一宿主会话核对；导出格式单独解码/查看。方法存在和零退出不代表本场景已经完成。
-
-工作流来源与许可见 [workflow-sources.json](workflow-sources.json)。仅借鉴事实与方法，本文与参数例子原创编写。
+来源见 [工作流来源](workflow-sources.json)。仅借鉴事实与方法，正文和参数适配原创。

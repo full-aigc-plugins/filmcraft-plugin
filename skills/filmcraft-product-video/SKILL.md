@@ -22,6 +22,8 @@ license: Apache-2.0
 3. 添加准确的规格文字和适度转场。
 4. 匹配音乐节拍并检查结尾行动信息。
 
+插入前显式打开源素材并设置实际入出点；CLI的source.open、源入出点和source.insert须在同一次run中执行。插入后用实际返回片段ID适配画幅，保留完整画面；参数和返回值替换见上述方法手册。
+
 ## 工具落地
 
 使用 command_list 读取当前 Web 引擎命令；command_run 在可见页面执行，inspect 核对；open_file 导入素材，list_files 检查导出，save_project 或 save_file 写入工作区新路径。

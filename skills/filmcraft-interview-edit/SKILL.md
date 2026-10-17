@@ -22,6 +22,8 @@ license: Apache-2.0
 3. 用适当空镜覆盖跳切，避免遮掩改变原意的拼接。
 4. 检查说话人、字幕和声音连续性。
 
+修剪前从当前序列读取真实片段ID，不能默认clip=1；结构化步骤里的$ref是手册记号，须替换为实际整数。
+
 ## 工具落地
 
 使用 command_list 读取当前 Web 引擎命令；command_run 在可见页面执行，inspect 核对；open_file 导入素材，list_files 检查导出，save_project 或 save_file 写入工作区新路径。

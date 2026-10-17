@@ -5,43 +5,107 @@
   "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
   "steps": [
     {
-      "purpose": "先建立素材精选箱",
+      "purpose": "建立本任务素材箱并记录返回bin",
       "command": "file.newBin",
       "params": {
         "name": "Selects"
-      }
+      },
+      "batch": "bin",
+      "capture": "bin"
     },
     {
-      "purpose": "创建目标比例序列",
+      "purpose": "导入实际素材并记录返回items",
+      "command": "file.import",
+      "params": {
+        "paths": [
+          "input/short.mp4"
+        ],
+        "bin": {
+          "$ref": "bin.bin"
+        }
+      },
+      "batch": "import",
+      "capture": "media"
+    },
+    {
+      "purpose": "创建目标序列",
       "command": "file.newSequence",
       "params": {
         "name": "Short",
         "width": 1080,
         "height": 1920,
         "fps": 30
-      }
+      },
+      "batch": "edit"
     },
     {
-      "purpose": "在已选素材与源入出点明确后插入",
+      "purpose": "显式打开导入结果中的实际素材ID",
+      "command": "source.open",
+      "params": {
+        "item": {
+          "$ref": "media.items.0"
+        }
+      },
+      "batch": "edit"
+    },
+    {
+      "purpose": "源入点为第0帧",
+      "command": "markers.markIn",
+      "params": {
+        "target": "source",
+        "frame": 0
+      },
+      "batch": "edit"
+    },
+    {
+      "purpose": "含出点帧：4秒素材选择0至最后一帧",
+      "command": "markers.markOut",
+      "params": {
+        "target": "source",
+        "frame": 119
+      },
+      "batch": "edit"
+    },
+    {
+      "purpose": "在同一源监视器会话中插入",
       "command": "source.insert",
-      "params": {}
+      "params": {},
+      "batch": "edit",
+      "capture": "insert"
     },
     {
-      "purpose": "按需在当前实际剪辑轨做分割",
+      "purpose": "对返回片段完整适配序列画幅，不裁去商品细节",
+      "command": "clip.fitToFrame",
+      "params": {
+        "clips": [
+          {
+            "$ref": "insert.clips.0"
+          }
+        ]
+      },
+      "batch": "fit"
+    },
+    {
+      "purpose": "在已插入视频轨的3秒处切开",
       "command": "timeline.razor",
       "params": {
         "time": 762048000000,
-        "track": "V1"
-      }
+        "clip": {
+          "$ref": "insert.clips.0"
+        }
+      },
+      "batch": "razor"
     },
     {
-      "purpose": "核对序列结构",
+      "purpose": "检查实际序列和时长",
       "command": "sequence.inspect",
-      "params": {}
+      "params": {},
+      "batch": "inspect"
     }
   ],
   "check": "3秒示例位置对应254016000000ticks/秒，重看开头、主体、结尾与音画连续。",
-  "boundary": "插入前必须指定源素材和范围；示例ticks不适合任意帧率边界，要按实际帧对齐。",
+  "boundary": "新建示例：先probe素材帧率和时长，4秒范围以源帧率计算含末帧的出点；本例假设源与目标帧率一致。源素材ID、片段ID从返回值取得，不猜测。素材不足4秒、帧率不同或已有序列时先重算范围，不覆盖输入。 fitToFrame默认保持完整画面和比例，允许黑边；要求铺满裁切时先确认主体安全区，再按实际变换能力另行处理，不冒充自动构图。",
   "templateOnly": true,
-  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。",
+  "bindings": "capture/$ref仅为手册返回值记号，不是原生CLI/MCP参数。先读取对应结果，再以实际整数替换整个$ref对象。相同batch的源打开、入出点与insert必须在同一次CLI run或同一MCP会话执行；工程重开不保留源监视器。示例输入至少4秒，需按源素材实际帧率重算出点。"
 }

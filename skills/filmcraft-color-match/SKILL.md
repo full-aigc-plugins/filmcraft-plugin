@@ -22,6 +22,8 @@ license: Apache-2.0
 3. 最后加统一风格，避免用风格掩盖曝光问题。
 4. 在相邻镜头间反复切换检查。
 
+匹配时显式指定实际目标clip，参考帧必须属于另一个镜头；工程重开后不沿用旧选择。
+
 ## 工具落地
 
 使用 command_list 读取当前 Web 引擎命令；command_run 在可见页面执行，inspect 核对；open_file 导入素材，list_files 检查导出，save_project 或 save_file 写入工作区新路径。

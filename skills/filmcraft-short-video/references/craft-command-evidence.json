@@ -71,7 +71,78 @@
       "params": "{\"item\":id?}",
       "shortcut": null,
       "shortcuts": []
+    },
+    "file.import": {
+      "defaultShortcut": "Cmd+I",
+      "enabled": true,
+      "id": "file.import",
+      "label": "Import…",
+      "menu": [
+        "File"
+      ],
+      "params": "{\"paths\":[str],\"bin\":binId?,\"imageSequence\":bool?,\"replace\":bool?}",
+      "shortcut": "Cmd+I",
+      "shortcuts": [
+        "Cmd+I"
+      ]
+    },
+    "source.open": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "source.open",
+      "label": "Open in Source Monitor",
+      "menu": [],
+      "params": "{\"item\":id?,\"clip\":id?}",
+      "shortcut": null,
+      "shortcuts": [
+        "Shift+O"
+      ]
+    },
+    "markers.markIn": {
+      "defaultShortcut": "I",
+      "enabled": true,
+      "id": "markers.markIn",
+      "label": "Mark In",
+      "menu": [
+        "Markers"
+      ],
+      "params": "{\"time\":ticks?,\"frame\":i64?,\"seconds\":f64?,\"timecode\":str?,\"target\":\"program|source\"}",
+      "shortcut": "I",
+      "shortcuts": [
+        "I"
+      ]
+    },
+    "markers.markOut": {
+      "defaultShortcut": "O",
+      "enabled": true,
+      "id": "markers.markOut",
+      "label": "Mark Out",
+      "menu": [
+        "Markers"
+      ],
+      "params": "{\"time\":ticks?,\"frame\":i64?,\"seconds\":f64?,\"timecode\":str?,\"target\":\"program|source\"}",
+      "shortcut": "O",
+      "shortcuts": [
+        "O"
+      ]
+    },
+    "clip.fitToFrame": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "clip.fitToFrame",
+      "label": "Fit to frame",
+      "menu": [
+        "Clip",
+        "Video Options"
+      ],
+      "params": "{\"clips\":[id]?}",
+      "shortcut": null,
+      "shortcuts": []
     }
   },
-  "sceneAcceptance": "NOT_RUN"
+  "sceneAcceptance": "NOT_RUN",
+  "additionalObservation": {
+    "runtime": "filmcraft-cli 0.8.0 macOS universal",
+    "scope": "actual command catalog; scene and host acceptance separate"
+  }
 }

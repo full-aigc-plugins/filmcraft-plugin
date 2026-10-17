@@ -50,5 +50,9 @@
       "shortcuts": []
     }
   },
-  "sceneAcceptance": "NOT_RUN"
+  "sceneAcceptance": "NOT_RUN",
+  "additionalObservation": {
+    "runtime": "filmcraft-cli 0.8.0 macOS universal",
+    "scope": "actual command catalog; scene and host acceptance separate"
+  }
 }

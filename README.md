@@ -1,4 +1,14 @@
-# FilmCraft Agent Plugin
+# FilmCraft Use
+
+## Installable editor development candidate
+
+`0.1.0-dev.20261017.3` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
+
+
+## Previous development candidate
+
+`0.1.0-dev.20261017.1` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
+
 
 Fixed80/source61 public JSONL qualification passes five healthy stages plus a final disabled-command refusal with one editor PID: scope delivery, caption/audio delivery, source revision and surrounding queries. Nine separately counted media helpers remain. Independent checks cover264 video frames, exact scope PNG pixels, subtitle changes and0.5s audio onset; original delivery/fixtures and2020 installed files stay unchanged. Harness prepare/run/revision/continuation still needs shared ownership, so9.39 stays OPEN alongside seven fullV1 gates. [Evidence](docs/evidence/filmcraft80-domain-session-20261009/report.json).
 
@@ -482,3 +492,23 @@ Fixed public dev.67/source50 installation passes: Codex discovers13 skills witho
 Candidate dev.68/source51 rejects undefined domain-wrapper parameter and nested move fields before assets, installation and output; creative text is preserved. Fixed68 installation and bounded parameter acceptance pass; full V1 remains open with8 tasks unchecked.
 
 Fixed68/source51 acceptance:13 installed skills load without errors;26 public and26 installed Harness parameter refusals pass before runtime/output. A valid native subtitle revision/save/reopen preserves creative text, original delivery and all13 skill bytes. Task7.7 is complete;8 original full-V1 tasks remain open. [Evidence](docs/evidence/filmcraft68-parameter-fields-20261009/summary.json).
+
+## 场景技能开发候选
+
+已增加 6 个领域场景技能及 1 个内嵌编辑器入口。详见 [场景目录](docs/scene-skills.md)。本地未发布候选，不代表全部场景的创作质量已验收。
+
+## 内嵌编辑器候选
+
+新增 MCP Apps 与宿主浏览器接入，详见 [配置与构建](docs/editor-integration.md)。`ui/dist/` 为本地生成物；首次分发须带齐生成物。
+
+Plugin display name: **FilmCraft Use**. Official upstream icon provenance and licenses are included under `assets/official-icon-source.json` and adjacent LICENSE files.
+
+## main选择参数补充 / main selection parameter
+
+新增[关联音视频单侧选择](skills/filmcraft-interview-edit/references/main-selection.md)：timeline.select的linked:false只影响本次选择，不改变全局开关。Windows main内置演示工程已验证单侧删除、伙伴保护与撤销重开；显式edit.clear目标仍会展开关联伙伴，单侧删除必须按当前精确选择执行。真实媒体试听与宿主同步未验收。
+
+The main guide distinguishes per-selection linked:false from the global linked-selection preference. Windows main demo-project checks pass for isolated deletion, partner preservation, undo and native reopen. Explicit deletion targets still expand linked partners; use the precise current selection for single-side deletion. Real-media listening and host synchronization remain unverified.
+
+### 候选启动修正
+
+本候选先完成轻量MCP握手及能力发现，在首次工具或资源调用时校验/获取固定编辑器资源。修复多个编辑器首次下载阻塞宿主握手的问题。Windows通过Git安装时须启用Git长路径支持（`git config --global core.longpaths true`）；完整ZIP不包含历史验收记录，可避免Git检出长路径的问题。运行资源沿用已核验的dev.20261017.2制品，不以入口版本号冒充上游升级。

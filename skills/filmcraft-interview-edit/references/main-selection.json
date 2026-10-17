@@ -1,0 +1,44 @@
+{
+  "baselineCount": 701,
+  "mainCount": 701,
+  "added": [],
+  "removed": [],
+  "contractsChanged": [
+    {
+      "id": "timeline.select",
+      "baseline": {
+        "params": "{\"clips\":[id],\"transitions\":[id]?,\"add\":bool,\"toggle\":bool}"
+      },
+      "main": {
+        "params": "{\"clips\":[id],\"transitions\":[id]?,\"add\":bool,\"toggle\":bool,\"linked\":bool?}"
+      }
+    }
+  ],
+  "app": "filmcraft",
+  "run": 39007949879,
+  "sourceCommit": "09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5",
+  "baselineSha256": "515eb57e69d66b4555daab5b7d711186999c4e351a6e0a6cbf5554c74991cafc",
+  "mainSha256": "476518775b0eb720e37aa8d51d4bf362e8dc57bd7c98d6a8cbe7eea9b1a0fbac",
+  "baselineScope": "observed stable native CLI catalog; not old embedded engine",
+  "catalogKind": "native-engine-commands",
+  "calls": 59,
+  "records": 6,
+  "verifiedOutputs": 27,
+  "mainCapabilities": null,
+  "upstreamCapabilities": null,
+  "runtimeValidation": "existing six native workflows PASS; linked AV single-side deletion/undo/native reopen PASS on built-in demo model",
+  "sourceReadPath": "crates/engine/src/individual_selection_tests.rs",
+  "linkedSelectionRegression": {
+    "run": 39011329666,
+    "status": "PASS_NATIVE_WINDOWS_DEMO_PROJECT_MODEL",
+    "legacyExplicitTargetExpandsPartner": "REPRODUCED",
+    "correctedDeleteParams": {},
+    "videoOnlyDeletion": "PASS",
+    "audioOnlyDeletion": "PASS",
+    "globalLinkedSelectionPreserved": "PASS",
+    "partnerAndOtherClipsUnchanged": "PASS",
+    "undoAndNativeReopen": "PASS",
+    "realMediaAuditoryAcceptance": "NOT_TESTED",
+    "installedHostSync": "NOT_TESTED"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "craft-market-adaptations/v1",
+  "application": "filmcraft",
+  "skill": "filmcraft-subtitle-delivery",
+  "counting": "existing recipes with adapted task guidance; not additional mapped scenes",
+  "sources": [
+    {
+      "id": "affaan-m/ecc/video-editing",
+      "repository": "affaan-m/ecc",
+      "commit": "76aaa77df6adc5b889e689007bf99b9a4f74af34",
+      "path": "skills/video-editing/SKILL.md",
+      "url": "https://github.com/affaan-m/ecc/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/video-editing/SKILL.md",
+      "sha256": "4ab8c9ef5a511e8a0de9ed375b9edbbfa74f23a0881519d2aceea67e7252b197",
+      "bytes": 11754,
+      "market": "skills.sh",
+      "marketUrl": "https://skills.sh/affaan-m/ecc/video-editing",
+      "repositoryLicense": "MIT",
+      "declaredSkillLicense": "UNDECLARED",
+      "reuse": "仅借鉴操作事实并原创适配，不复制正文、代码或素材",
+      "reading": "selected sections",
+      "readExcerptSha256": "9bf1e253ea920b27592e6f7728b4cf1d361bd673f4484553078ef097e9c26c16"
+    },
+    {
+      "id": "sfkislev/flue/premiere",
+      "repository": "sfkislev/flue",
+      "commit": "6c542fe2e490f47cd984abfc3b78e95021611fd2",
+      "path": "skills/premiere/SKILL.md",
+      "url": "https://github.com/sfkislev/flue/blob/6c542fe2e490f47cd984abfc3b78e95021611fd2/skills/premiere/SKILL.md",
+      "sha256": "216cb10c497e9566e9f1a1691ef40e9ff704766cb5733d3a00782126de9a60cf",
+      "bytes": 1679,
+      "market": "skills.sh",
+      "marketUrl": "https://skills.sh/sfkislev/flue/premiere",
+      "repositoryLicense": "MIT",
+      "declaredSkillLicense": "UNDECLARED",
+      "reuse": "仅借鉴操作事实并原创适配，不复制正文、代码或素材",
+      "reading": "selected sections",
+      "readExcerptSha256": "1c9da7e4e8039e46eed01da9c03f0eb6c0f1f7bb6341a26ac5f2982a740cb1fb"
+    }
+  ],
+  "adaptations": [
+    {
+      "id": "subtitle-delivery",
+      "title": "按实际台词交付字幕",
+      "sourceIds": [
+        "affaan-m/ecc/video-editing",
+        "sfkislev/flue/premiere"
+      ],
+      "adaptation": "以校对过的台词和源时间为输入，再建立字幕轨并填写起止。导出后回读SRT，抽查跨镜头、长句和人名；需要烧录时另外检查渲染能力。",
+      "taskCheck": "字幕文字与声音一致，无不合理重叠和持续时间错误。",
+      "capabilityBoundary": "导出SRT不代表已烧录，也不代表自动转录正确；不调用Premiere桥接器。",
+      "existingRecipe": "skills/filmcraft-subtitle-delivery/references/craft-steps.json",
+      "recipe": {
+        "schema": "craft-scenario-playbooks/v1",
+        "application": "filmcraft",
+        "id": "subtitle-delivery",
+        "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+        "steps": [
+          {
+            "purpose": "建立字幕轨道",
+            "command": "captions.newTrack",
+            "params": {
+              "format": "Subtitle",
+              "name": "中文校对字幕",
+              "language": "zh"
+            }
+          },
+          {
+            "purpose": "添加经过校对的字幕与时长",
+            "command": "captions.add",
+            "params": {
+              "text": "经过校对的实际台词",
+              "seconds": 1,
+              "durationSeconds": 3
+            }
+          },
+          {
+            "purpose": "核对字幕内容与范围",
+            "command": "captions.list",
+            "params": {}
+          },
+          {
+            "purpose": "导出对应SRT",
+            "command": "captions.export",
+            "params": {
+              "path": "output/captions.srt",
+              "format": "srt"
+            }
+          }
+        ],
+        "check": "人名数字、断句、重叠、首尾和阅读时间逐项检查，实际回放核对。",
+        "boundary": "没有执行ASR时不能称为自动转录；例子台词需来自真实录音或用户文案。",
+        "templateOnly": true,
+        "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+      },
+      "execution": "REFERENCE_ADAPTATION_NOT_NEW_RUNTIME_ACCEPTANCE"
+    }
+  ],
+  "observedCommands": {
+    "captions.newTrack": {
+      "defaultShortcut": "Cmd+Alt+A",
+      "enabled": false,
+      "id": "captions.newTrack",
+      "label": "Add New Caption Track…",
+      "menu": [
+        "Sequence",
+        "Captions"
+      ],
+      "params": "{\"format\":\"Subtitle|CEA-608|CEA-708|Teletext\",\"name\":str?,\"language\":str?}",
+      "shortcut": "Cmd+Alt+A",
+      "shortcuts": [
+        "Cmd+Alt+A"
+      ]
+    },
+    "captions.add": {
+      "defaultShortcut": "Cmd+Alt+C",
+      "enabled": false,
+      "id": "captions.add",
+      "label": "Add Caption at Playhead",
+      "menu": [
+        "Sequence",
+        "Captions"
+      ],
+      "params": "{\"track\":id|\"C1\"?,\"text\":str?,\"time\":ticks?,\"seconds\":f64?,\"durationSeconds\":f64=3}",
+      "shortcut": "Cmd+Alt+C",
+      "shortcuts": [
+        "Cmd+Alt+C"
+      ]
+    },
+    "captions.list": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "captions.list",
+      "label": "List Captions",
+      "menu": [],
+      "params": "{\"track\":id|\"C1\"?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "captions.export": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "captions.export",
+      "label": "Captions…",
+      "menu": [
+        "File",
+        "Export"
+      ],
+      "params": "{\"path\":str,\"format\":\"srt|vtt|scc|mcc|stl|ttml|dfxp\"? (default: from the extension),\"track\":id|\"C1\"?,\"dropFrame\":bool=true}",
+      "shortcut": null,
+      "shortcuts": []
+    }
+  }
+}

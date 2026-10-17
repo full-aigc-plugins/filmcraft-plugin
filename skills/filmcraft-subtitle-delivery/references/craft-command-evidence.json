@@ -1,0 +1,65 @@
+{
+  "runtime": {
+    "version": "v0.8.0",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64-portable.zip",
+    "sha256": "0119afd59dfd6ecb94470ba6b3a48108ade87dabd4972898dd6c04e1db396b0b",
+    "executable": "filmcraft-cli.exe"
+  },
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "observedCommands": {
+    "captions.newTrack": {
+      "defaultShortcut": "Cmd+Alt+A",
+      "enabled": false,
+      "id": "captions.newTrack",
+      "label": "Add New Caption Track…",
+      "menu": [
+        "Sequence",
+        "Captions"
+      ],
+      "params": "{\"format\":\"Subtitle|CEA-608|CEA-708|Teletext\",\"name\":str?,\"language\":str?}",
+      "shortcut": "Cmd+Alt+A",
+      "shortcuts": [
+        "Cmd+Alt+A"
+      ]
+    },
+    "captions.add": {
+      "defaultShortcut": "Cmd+Alt+C",
+      "enabled": false,
+      "id": "captions.add",
+      "label": "Add Caption at Playhead",
+      "menu": [
+        "Sequence",
+        "Captions"
+      ],
+      "params": "{\"track\":id|\"C1\"?,\"text\":str?,\"time\":ticks?,\"seconds\":f64?,\"durationSeconds\":f64=3}",
+      "shortcut": "Cmd+Alt+C",
+      "shortcuts": [
+        "Cmd+Alt+C"
+      ]
+    },
+    "captions.list": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "captions.list",
+      "label": "List Captions",
+      "menu": [],
+      "params": "{\"track\":id|\"C1\"?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "captions.export": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "captions.export",
+      "label": "Captions…",
+      "menu": [
+        "File",
+        "Export"
+      ],
+      "params": "{\"path\":str,\"format\":\"srt|vtt|scc|mcc|stl|ttml|dfxp\"? (default: from the extension),\"track\":id|\"C1\"?,\"dropFrame\":bool=true}",
+      "shortcut": null,
+      "shortcuts": []
+    }
+  },
+  "sceneAcceptance": "NOT_RUN"
+}

@@ -1,0 +1,151 @@
+{
+  "schema": "craft-market-adaptations/v1",
+  "application": "filmcraft",
+  "skill": "filmcraft-interview-edit",
+  "counting": "existing recipes with adapted task guidance; not additional mapped scenes",
+  "sources": [
+    {
+      "id": "calesthio/generative-media-skills/talking-head-podcast-recut",
+      "repository": "calesthio/generative-media-skills",
+      "commit": "8c85352d5d75d4dcbe58480bd138e37b9742bab1",
+      "path": "skills/production/content-formats/talking-head-podcast-recut/SKILL.md",
+      "url": "https://github.com/calesthio/generative-media-skills/blob/8c85352d5d75d4dcbe58480bd138e37b9742bab1/skills/production/content-formats/talking-head-podcast-recut/SKILL.md",
+      "sha256": "728a8ef37ee66a399b306d3af1cba6b7a8cf4ad505025f1325a524566abd6036",
+      "bytes": 29701,
+      "market": "skills.sh",
+      "marketUrl": "https://skills.sh/calesthio/generative-media-skills/talking-head-podcast-recut",
+      "repositoryLicense": "MIT",
+      "declaredSkillLicense": "UNDECLARED",
+      "reuse": "仅借鉴操作事实并原创适配，不复制正文、代码或素材",
+      "reading": "selected sections",
+      "readExcerptSha256": "b102a9178fecb2bdb69a6d1c03c1f43434b0f0508a872b441a90dfe9440359ec"
+    },
+    {
+      "id": "skillhub:affaan-m-ecc-video-editing",
+      "market": "SkillHub",
+      "marketUrl": "https://skillhub.cn/",
+      "downloadUrl": "https://api.skillhub.cn/api/v1/download?slug=affaan-m-ecc-video-editing",
+      "slug": "affaan-m-ecc-video-editing",
+      "version": "1.0.0",
+      "sha256": "828d210fa227d83dfdc234f89e39b0b2a5ce4883494e3a5049acea754b0986cc",
+      "bytes": 9737,
+      "declaredSkillLicense": "UNDECLARED",
+      "reuse": "仅借鉴操作事实并原创适配，不复制正文、代码或素材",
+      "reading": "selected sections"
+    }
+  ],
+  "adaptations": [
+    {
+      "id": "interview-edit",
+      "title": "保留上下文的采访摘编",
+      "sourceIds": [
+        "calesthio/generative-media-skills/talking-head-podcast-recut",
+        "skillhub:affaan-m-ecc-video-editing"
+      ],
+      "adaptation": "先读完整问题和回答，记录原始片段及起止位置，再以实际片段ID修剪。保留否定、条件和说话人上下文；字幕回听，不用截断后的语句改变原意。",
+      "taskCheck": "首尾音节完整，原素材位置可追溯，摘编不改变论点。",
+      "capabilityBoundary": "转录和说话人识别不是这组命令提供的能力；tick、秒和帧按各方法分别换算。",
+      "existingRecipe": "skills/filmcraft-interview-edit/references/craft-steps.json",
+      "recipe": {
+        "schema": "craft-scenario-playbooks/v1",
+        "application": "filmcraft",
+        "id": "interview-edit",
+        "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+        "steps": [
+          {
+            "purpose": "按议题建立素材箱",
+            "command": "file.newBin",
+            "params": {
+              "name": "Interview topics"
+            }
+          },
+          {
+            "purpose": "在可靠议题边界添加标记",
+            "command": "markers.add",
+            "params": {
+              "target": "program",
+              "time": 0,
+              "name": "议题起点",
+              "comment": "核对原始上下文"
+            }
+          },
+          {
+            "purpose": "只对明确片段ID修剪示例",
+            "command": "timeline.trim",
+            "params": {
+              "clip": {
+                "$ref": "clip"
+              },
+              "edge": "out",
+              "mode": "regular",
+              "deltaFrames": -5
+            }
+          },
+          {
+            "purpose": "检查修剪后序列",
+            "command": "sequence.inspect",
+            "params": {}
+          }
+        ],
+        "check": "首尾词完整、语义忠实、没有截断发音，字幕与说话人一致。",
+        "boundary": "clip=1是示例，必须从序列实际返回ID取得；不靠拼接改变原话含义。",
+        "templateOnly": true,
+        "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。",
+        "bindings": "执行前从当前sequence.inspect取得唯一目标片段ID，替换$ref:clip整个对象为实际整数。此记号不是原生参数，不使用预设clip=1。"
+      },
+      "execution": "REFERENCE_ADAPTATION_NOT_NEW_RUNTIME_ACCEPTANCE"
+    }
+  ],
+  "observedCommands": {
+    "file.newBin": {
+      "defaultShortcut": "Cmd+B",
+      "enabled": true,
+      "id": "file.newBin",
+      "label": "Bin",
+      "menu": [
+        "File",
+        "New"
+      ],
+      "params": "{\"name\":str,\"parent\":binId?}",
+      "shortcut": "Cmd+B",
+      "shortcuts": [
+        "Cmd+B",
+        "Cmd+B"
+      ]
+    },
+    "markers.add": {
+      "defaultShortcut": "M",
+      "enabled": true,
+      "id": "markers.add",
+      "label": "Add Marker",
+      "menu": [
+        "Markers"
+      ],
+      "params": "{\"target\":\"program|source\",\"time\":ticks?,\"name\":str?,\"comment\":str?,\"color\":label?,\"durationFrames\":i64?}",
+      "shortcut": "M",
+      "shortcuts": [
+        "M"
+      ]
+    },
+    "timeline.trim": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "timeline.trim",
+      "label": "Trim Edit",
+      "menu": [],
+      "params": "{\"clip\":id,\"edge\":\"in|out\",\"mode\":\"regular|ripple\",\"delta\":ticks|\"deltaFrames\":i64}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "sequence.inspect": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "sequence.inspect",
+      "label": "Inspect Sequence",
+      "menu": [],
+      "params": "{\"item\":id?}",
+      "shortcut": null,
+      "shortcuts": []
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# 从技能商店适配的场景方法
+
+以下内容是基于已阅读技能的原创 Craft 指导。沿用现有配方的实际命令；这里补充任务判断和结果检查，不将同一配方再计为新增场景。商店提供发现入口，原技能使用的软件、服务和依赖不会随本插件安装。
+
+示例步骤是参数模板，不能直接作为通用执行脚本。先取当前会话的文档、图层、片段或故事ID，解析所有引用，再按实际工具schema执行；尺寸、坐标、路径和文本按本次任务调整。已打开编辑器时使用同一个MCP会话；独立CLI文件编辑不能证明界面同步。
+
+## 保留上下文的采访摘编
+
+参考：[calesthio/generative-media-skills/talking-head-podcast-recut](https://github.com/calesthio/generative-media-skills/blob/8c85352d5d75d4dcbe58480bd138e37b9742bab1/skills/production/content-formats/talking-head-podcast-recut/SKILL.md)；[skillhub:affaan-m-ecc-video-editing](https://api.skillhub.cn/api/v1/download?slug=affaan-m-ecc-video-editing)。
+
+先读完整问题和回答，记录原始片段及起止位置，再以实际片段ID修剪。保留否定、条件和说话人上下文；字幕回听，不用截断后的语句改变原意。
+
+原配方：`interview-edit`。输入与边界：示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。
+
+| 顺序 | Craft 实际方法 | 参数模板 |
+| --- | --- | --- |
+| 1 | `file.newBin` | `{"name":"Interview topics"}` |
+| 2 | `markers.add` | `{"target":"program","time":0,"name":"议题起点","comment":"核对原始上下文"}` |
+| 3 | `timeline.trim` | `{"clip":{"$ref":"clip"},"edge":"out","mode":"regular","deltaFrames":-5}` |
+| 4 | `sequence.inspect` | `{}` |
+
+检查：首尾音节完整，原素材位置可追溯，摘编不改变论点。
+
+能力边界：转录和说话人识别不是这组命令提供的能力；tick、秒和帧按各方法分别换算。
+
+原配方结果检查："首尾词完整、语义忠实、没有截断发音，字幕与说话人一致。"
+
+原配方限制：clip=1是示例，必须从序列实际返回ID取得；不靠拼接改变原话含义。
+
+## 版本与执行
+
+执行包装沿用本技能主文件。先检查序列、素材与片段ID。tick、秒和帧各按对应方法换算；示例clip=1不是通用目标。 保存到未占用路径并重开，按实际产物检查；本轮文档适配未新增宿主或真实媒体验收。
+
+本技能内的[商店来源与参数记录](market-adaptations.json)记录版本、内容哈希和观察方法；没有分发第三方脚本或正文。

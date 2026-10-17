@@ -1,0 +1,43 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "filmcraft",
+  "id": "subtitle-delivery",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "建立字幕轨道",
+      "command": "captions.newTrack",
+      "params": {
+        "format": "Subtitle",
+        "name": "中文校对字幕",
+        "language": "zh"
+      }
+    },
+    {
+      "purpose": "添加经过校对的字幕与时长",
+      "command": "captions.add",
+      "params": {
+        "text": "经过校对的实际台词",
+        "seconds": 1,
+        "durationSeconds": 3
+      }
+    },
+    {
+      "purpose": "核对字幕内容与范围",
+      "command": "captions.list",
+      "params": {}
+    },
+    {
+      "purpose": "导出对应SRT",
+      "command": "captions.export",
+      "params": {
+        "path": "output/captions.srt",
+        "format": "srt"
+      }
+    }
+  ],
+  "check": "人名数字、断句、重叠、首尾和阅读时间逐项检查，实际回放核对。",
+  "boundary": "没有执行ASR时不能称为自动转录；例子台词需来自真实录音或用户文案。",
+  "templateOnly": true,
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+}

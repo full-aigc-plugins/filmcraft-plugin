@@ -1,5 +1,10 @@
 # FilmCraft Use
 
+## Installable editor development candidate
+
+`0.1.0-dev.20261017.1` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
+
+
 Fixed80/source61 public JSONL qualification passes five healthy stages plus a final disabled-command refusal with one editor PID: scope delivery, caption/audio delivery, source revision and surrounding queries. Nine separately counted media helpers remain. Independent checks cover264 video frames, exact scope PNG pixels, subtitle changes and0.5s audio onset; original delivery/fixtures and2020 installed files stay unchanged. Harness prepare/run/revision/continuation still needs shared ownership, so9.39 stays OPEN alongside seven fullV1 gates. [Evidence](docs/evidence/filmcraft80-domain-session-20261009/report.json).
 
 dev.80 pins source61: public JSONL/Python continuous domain requests share the task editor; save/reopen, PNG rendering and export no longer start extra editor sessions. Standalone media probe/decode helpers are separately counted. Source local270 pass/39 environment NOT_RUN, LinuxCI267 pass/42 NOT_RUN. The fixed80 qualification above covers this published version. Harness prepare/run/revision/continuation still needs integration, so task9.39 and seven fullV1 gates remain open.

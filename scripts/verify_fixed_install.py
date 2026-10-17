@@ -15,7 +15,7 @@ REPOSITORY = 'https://github.com/full-aigc-plugins/filmcraft-plugin.git'
 
 
 def validate_ref(ref):
-    if not isinstance(ref, str) or not re.fullmatch(r'v0\.1\.0-dev\.\d+', ref):
+    if not isinstance(ref, str) or not re.fullmatch(r'v0\.1\.0-dev\.\d+(?:\.\d+)*', ref):
         raise ValueError('immutable_filmcraft_ref_required')
 
 
@@ -51,7 +51,7 @@ def entry_from_objects(manifest_data, lock_data, commit, ref):
             or source.get('package') != 'filmcraft-skills'
             or source.get('repo') != 'https://github.com/full-aigc-skills/filmcraft-skills.git'
             or not isinstance(source.get('sha'), str) or not re.fullmatch('[a-f0-9]{40}', source['sha'])
-            or not isinstance(source.get('ref'), str) or not re.fullmatch(r'v0\.1\.0-dev\.\d+', source['ref'])
+            or not isinstance(source.get('ref'), str) or not re.fullmatch(r'v0\.1\.0-dev\.\d+(?:\.\d+)*', source['ref'])
             or not isinstance(names, list) or not names or any(not isinstance(name, str)
                 or not re.fullmatch(r'filmcraft-[a-z0-9]+(?:-[a-z0-9]+)*', name) for name in names)
             or len(set(names)) != len(names) or not isinstance(hashes, dict) or set(hashes) != set(names)

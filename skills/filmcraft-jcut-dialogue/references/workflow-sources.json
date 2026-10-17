@@ -1,0 +1,25 @@
+{
+  "policy": "仅借鉴流程事实，正文和Craft例子原创，不复制手册正文、代码或素材。",
+  "sources": [
+    {
+      "repository": "KDE/documentation-docs-kdenlive-org",
+      "commit": "50e563d80b2613328422e7d465cfa408edba520f",
+      "readFiles": [
+        {
+          "path": "cutting_and_assembling/editing.rst",
+          "url": "https://github.com/KDE/documentation-docs-kdenlive-org/blob/50e563d80b2613328422e7d465cfa408edba520f/cutting_and_assembling/editing.rst",
+          "bytes": 31683,
+          "sha256": "889e1dc409327528dbf41daca42b4eef3dc6acdb4c2b4d2b71f3345eaba4ac6d"
+        },
+        {
+          "path": "more_information/credits_and_license.rst",
+          "url": "https://github.com/KDE/documentation-docs-kdenlive-org/blob/50e563d80b2613328422e7d465cfa408edba520f/more_information/credits_and_license.rst",
+          "bytes": 3437,
+          "sha256": "ef33a09a9eb4aee4c41a4218ff4cb74cc345b530f1109494bcab26b99c2ed1ca"
+        }
+      ],
+      "reuse": "workflow facts only; original Craft prose, recipes and fixtures; no manual text, code or media redistributed",
+      "licenseEvidence": "credits_and_license.rst declares Creative Commons License SA 4.0; no upstream manual text, code or images redistributed"
+    }
+  ]
+}

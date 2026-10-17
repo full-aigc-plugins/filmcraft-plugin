@@ -8,6 +8,9 @@
     "filmcraft-product-video",
     "filmcraft-short-video",
     "filmcraft-subtitle-delivery",
-    "filmcraft-video-export"
+    "filmcraft-video-export",
+    "filmcraft-freeze-explainer",
+    "filmcraft-presenter-inset",
+    "filmcraft-jcut-dialogue"
   ]
 }

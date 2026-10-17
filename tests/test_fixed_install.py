@@ -22,6 +22,12 @@ class FixedInstallTests(unittest.TestCase):
         text = 'a' * 40 + '\t' + tag + '\n' + 'b' * 40 + '\t' + tag + '^{}\n'
         self.assertEqual(self.verifier.remote_commit(text, 'v0.1.0-dev.42'), 'b' * 40)
 
+    def test_dated_development_tag_is_immutable_and_supported(self):
+        self.verifier.validate_ref('v0.1.0-dev.20261017.6')
+        for bad in ['v0.1.0-dev.20261017.', 'v0.1.0-dev.20261017/6', 'main']:
+            with self.assertRaises(ValueError):
+                self.verifier.validate_ref(bad)
+
     def test_ambiguous_missing_or_malformed_tag_results_are_rejected(self):
         tag = 'refs/tags/v0.1.0-dev.42'
         for text in ('', 'bad\t' + tag, 'a' * 40 + '\t' + tag + '^{}',

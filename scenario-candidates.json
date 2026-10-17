@@ -29,6 +29,18 @@
     {
       "name": "filmcraft-video-export",
       "sha256": "12d661fa1a877f9201ac0c69f009dfdd41a5d659bb720b2fb0af434a58d7873a"
+    },
+    {
+      "name": "filmcraft-freeze-explainer",
+      "sha256": "f657dcb1bf9b60b21c07df3170ec17f2ad6efabd0f9825ec415e32a7a1a6a1c0"
+    },
+    {
+      "name": "filmcraft-presenter-inset",
+      "sha256": "295e16f3a929bba0db702836fe3d4c97b267a334ed662dbeb7232bc828dde06c"
+    },
+    {
+      "name": "filmcraft-jcut-dialogue",
+      "sha256": "2dd42328da496489d036a5620ed026e26d329fcace41549dfdf30bff03e53e89"
     }
   ]
 }

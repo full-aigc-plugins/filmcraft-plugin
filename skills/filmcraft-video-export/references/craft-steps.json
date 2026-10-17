@@ -1,0 +1,36 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "filmcraft",
+  "id": "video-export",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "读取当前输出预设",
+      "command": "export.presets.list",
+      "params": {}
+    },
+    {
+      "purpose": "核对当前序列结构",
+      "command": "sequence.inspect",
+      "params": {}
+    },
+    {
+      "purpose": "以明确路径排队并等待真实完成",
+      "command": "export.queue.add",
+      "params": {
+        "path": "output/review.mp4",
+        "start": true,
+        "wait": true
+      }
+    },
+    {
+      "purpose": "检查队列结果",
+      "command": "export.queue.list",
+      "params": {}
+    }
+  ],
+  "check": "新进程probe输出并实际播放首尾、总时长、帧率、音画同步。",
+  "boundary": "开始前确认实际编码参数与输出范围；队列存在或wait返回不自动证明画质正确。",
+  "templateOnly": true,
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+}

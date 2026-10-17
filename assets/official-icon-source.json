@@ -1,0 +1,10 @@
+{
+  "name": "filmcraft",
+  "source": "https://raw.githubusercontent.com/storytold/filmcraft/61238bf8fc129077fe2b7982550303be49f55a93/assets/app-icon/filmcraft-1024.png",
+  "homepage": "https://github.com/storytold/filmcraft",
+  "license": "MIT OR Apache-2.0",
+  "modifications": "None; original upstream PNG",
+  "sha256": "c3c301e00618c2ae391815cfaf330488d45bcfc79584b9680c434e4cfb99e13f",
+  "localFile": "./assets/official-logo.png",
+  "displayName": "FilmCraft Use"
+}

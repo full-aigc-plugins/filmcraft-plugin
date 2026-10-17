@@ -1,0 +1,54 @@
+{
+  "runtime": {
+    "version": "v0.8.0",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64-portable.zip",
+    "sha256": "0119afd59dfd6ecb94470ba6b3a48108ade87dabd4972898dd6c04e1db396b0b",
+    "executable": "filmcraft-cli.exe"
+  },
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "observedCommands": {
+    "export.presets.list": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "export.presets.list",
+      "label": "List Export Presets",
+      "menu": [],
+      "params": "{\"query\":str?,\"category\":str?,\"format\":str?,\"favorites\":bool?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "sequence.inspect": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "sequence.inspect",
+      "label": "Inspect Sequence",
+      "menu": [],
+      "params": "{\"item\":id?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "export.queue.add": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "export.queue.add",
+      "label": "Send to Export Queue",
+      "menu": [],
+      "params": "{…settings params,\"path\":str|dir?,\"sequences\":[id]?,\"ranges\":[range]?,\"start\":bool?,\"wait\":bool?}",
+      "shortcut": "Alt+Shift+M",
+      "shortcuts": [
+        "Alt+Shift+M"
+      ]
+    },
+    "export.queue.list": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "export.queue.list",
+      "label": "List Export Queue",
+      "menu": [],
+      "params": "{}",
+      "shortcut": null,
+      "shortcuts": []
+    }
+  },
+  "sceneAcceptance": "NOT_RUN"
+}

@@ -1,6 +1,6 @@
 {
   "name": "filmcraft",
-  "version": "0.1.0-dev.81",
+  "version": "0.1.0-dev.20261017.3",
   "description": "FilmCraft creative workflows with pinned first-use installation and independent skill snapshots; development release, full domain and host acceptance pending.",
   "author": {
     "name": "Full AIGC Plugins",
@@ -8,5 +8,6 @@
   },
   "homepage": "https://github.com/full-aigc-plugins/filmcraft-plugin",
   "repository": "https://github.com/full-aigc-plugins/filmcraft-plugin",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "skills": "./skills/"
 }

@@ -1,0 +1,148 @@
+{
+  "runtime": {
+    "version": "v0.8.0",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64-portable.zip",
+    "sha256": "0119afd59dfd6ecb94470ba6b3a48108ade87dabd4972898dd6c04e1db396b0b",
+    "executable": "filmcraft-cli.exe"
+  },
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "observedCommands": {
+    "file.newBin": {
+      "defaultShortcut": "Cmd+B",
+      "enabled": true,
+      "id": "file.newBin",
+      "label": "Bin",
+      "menu": [
+        "File",
+        "New"
+      ],
+      "params": "{\"name\":str,\"parent\":binId?}",
+      "shortcut": "Cmd+B",
+      "shortcuts": [
+        "Cmd+B",
+        "Cmd+B"
+      ]
+    },
+    "file.newSequence": {
+      "defaultShortcut": "Cmd+N",
+      "enabled": true,
+      "id": "file.newSequence",
+      "label": "Sequence…",
+      "menu": [
+        "File",
+        "New"
+      ],
+      "params": "{\"name\":str,\"width\":u32=1920,\"height\":u32=1080,\"fps\":f64=23.976,\"sampleRate\":u32=48000,\"video\":n=3,\"audio\":n=3,\"mix\":\"Stereo|Mono|5.1|Adaptive\"?,\"trackType\":\"Standard|Mono|5.1|Adaptive\"?,\"fromItem\":itemId?,\"fromItems\":[itemId]?}",
+      "shortcut": "Cmd+N",
+      "shortcuts": [
+        "Cmd+N"
+      ]
+    },
+    "source.insert": {
+      "defaultShortcut": ",",
+      "enabled": false,
+      "id": "source.insert",
+      "label": "Insert",
+      "menu": [
+        "Clip"
+      ],
+      "params": "{}",
+      "shortcut": ",",
+      "shortcuts": [
+        ","
+      ]
+    },
+    "timeline.razor": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "timeline.razor",
+      "label": "Razor",
+      "menu": [],
+      "params": "{\"time\":ticks,\"track\":\"V1\"|id?,\"clip\":id?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "sequence.inspect": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "sequence.inspect",
+      "label": "Inspect Sequence",
+      "menu": [],
+      "params": "{\"item\":id?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "file.import": {
+      "defaultShortcut": "Cmd+I",
+      "enabled": true,
+      "id": "file.import",
+      "label": "Import…",
+      "menu": [
+        "File"
+      ],
+      "params": "{\"paths\":[str],\"bin\":binId?,\"imageSequence\":bool?,\"replace\":bool?}",
+      "shortcut": "Cmd+I",
+      "shortcuts": [
+        "Cmd+I"
+      ]
+    },
+    "source.open": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "source.open",
+      "label": "Open in Source Monitor",
+      "menu": [],
+      "params": "{\"item\":id?,\"clip\":id?}",
+      "shortcut": null,
+      "shortcuts": [
+        "Shift+O"
+      ]
+    },
+    "markers.markIn": {
+      "defaultShortcut": "I",
+      "enabled": true,
+      "id": "markers.markIn",
+      "label": "Mark In",
+      "menu": [
+        "Markers"
+      ],
+      "params": "{\"time\":ticks?,\"frame\":i64?,\"seconds\":f64?,\"timecode\":str?,\"target\":\"program|source\"}",
+      "shortcut": "I",
+      "shortcuts": [
+        "I"
+      ]
+    },
+    "markers.markOut": {
+      "defaultShortcut": "O",
+      "enabled": true,
+      "id": "markers.markOut",
+      "label": "Mark Out",
+      "menu": [
+        "Markers"
+      ],
+      "params": "{\"time\":ticks?,\"frame\":i64?,\"seconds\":f64?,\"timecode\":str?,\"target\":\"program|source\"}",
+      "shortcut": "O",
+      "shortcuts": [
+        "O"
+      ]
+    },
+    "clip.fitToFrame": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "clip.fitToFrame",
+      "label": "Fit to frame",
+      "menu": [
+        "Clip",
+        "Video Options"
+      ],
+      "params": "{\"clips\":[id]?}",
+      "shortcut": null,
+      "shortcuts": []
+    }
+  },
+  "sceneAcceptance": "NOT_RUN",
+  "additionalObservation": {
+    "runtime": "filmcraft-cli 0.8.0 macOS universal",
+    "scope": "actual command catalog; scene and host acceptance separate"
+  }
+}

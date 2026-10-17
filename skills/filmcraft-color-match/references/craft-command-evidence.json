@@ -1,0 +1,58 @@
+{
+  "runtime": {
+    "version": "v0.8.0",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64-portable.zip",
+    "sha256": "0119afd59dfd6ecb94470ba6b3a48108ade87dabd4972898dd6c04e1db396b0b",
+    "executable": "filmcraft-cli.exe"
+  },
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "observedCommands": {
+    "color.spaces": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "color.spaces",
+      "label": "List Colour Spaces",
+      "menu": [],
+      "params": "{}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "sequence.colorSettings": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "sequence.colorSettings",
+      "label": "Color Management…",
+      "menu": [
+        "Sequence"
+      ],
+      "params": "{\"workingSpace\":\"rec709\"|\"rec2100-pq\"|\"rec2100-hlg\"?,\"wideGamut\":bool?,\"autoToneMap\":bool?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "lumetri.applyMatch": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "lumetri.applyMatch",
+      "label": "Apply Match",
+      "menu": [],
+      "params": "{\"clip\":id?,\"referenceTime\":ticks?|\"referenceFrame\":n?|\"referenceTimecode\":str?,\"faceDetection\":bool=true}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "sequence.inspect": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "sequence.inspect",
+      "label": "Inspect Sequence",
+      "menu": [],
+      "params": "{\"item\":id?}",
+      "shortcut": null,
+      "shortcuts": []
+    }
+  },
+  "sceneAcceptance": "NOT_RUN",
+  "additionalObservation": {
+    "runtime": "filmcraft-cli 0.8.0 macOS universal",
+    "scope": "actual command catalog; scene and host acceptance separate"
+  }
+}

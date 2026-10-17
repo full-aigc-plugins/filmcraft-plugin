@@ -1,0 +1,23 @@
+{
+  "policy": "只借鉴工作流事实，场景正文与命令例子原创编写，不复制外部代码、正文或素材。许可不明的来源仅作为参考。",
+  "sources": [
+    {
+      "repository": "docsforadobe/premiere-scripting-guide",
+      "commit": "cbe15d746c7717832a82c02c4b994f8da7d75c39",
+      "license": null,
+      "readFiles": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/docsforadobe/premiere-scripting-guide/blob/cbe15d746c7717832a82c02c4b994f8da7d75c39/README.md",
+          "bytes": 612
+        },
+        {
+          "path": "docs/item/trackitem.md",
+          "url": "https://github.com/docsforadobe/premiere-scripting-guide/blob/cbe15d746c7717832a82c02c4b994f8da7d75c39/docs/item/trackitem.md",
+          "bytes": 10453
+        }
+      ],
+      "reuse": "workflow facts and original adaptation only; no upstream text, code or assets copied"
+    }
+  ]
+}

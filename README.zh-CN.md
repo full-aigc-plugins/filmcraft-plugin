@@ -1,4 +1,14 @@
-# FilmCraft Agent Plugin
+# FilmCraft Use
+
+## Installable editor development candidate
+
+`0.1.0-dev.20261017.3` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
+
+
+## Previous development candidate
+
+`0.1.0-dev.20261017.1` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
+
 
 固定80／source61公开JSONL验收通过：五个正常阶段及最终disabled命令拒绝共用一个编辑器PID，覆盖示波器交付、字幕音画交付、源工程返工及前后查询。独立媒体helper共9次，单独计数。264帧视频、示波器PNG逐像素、字幕变化及0.5秒音频起点独立通过；原交付／夹具及2020个安装文件保全。Harness prepare／run／revision／continuation仍需共享所有者，9.39与七项完整V1门禁继续开放。[证据](docs/evidence/filmcraft80-domain-session-20261009/report.json)。
 
@@ -481,3 +491,23 @@ dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自�
 候选dev.68/source51在素材、安装和输出之前拒绝领域包装操作及移动项未知字段，保留创作文本。固定68安装与限定参数边界验收通过；完整V1仍有8项开放。
 
 固定68/source51验收：13安装技能无加载错误；26项公开与26项安装Harness参数拒绝均发生在运行时／输出之前；合法字幕原生修订／另存重开保全创作文本、原交付及13技能字节。7.7增量已完成，原有完整V1仍有8项开放。 [Evidence](docs/evidence/filmcraft68-parameter-fields-20261009/summary.json).
+
+## 场景技能开发候选
+
+已增加 6 个领域场景技能及 1 个内嵌编辑器入口。详见 [场景目录](docs/scene-skills.md)。本地未发布候选，不代表全部场景的创作质量已验收。
+
+## 内嵌编辑器候选
+
+新增 MCP Apps 与宿主浏览器接入，详见 [配置与构建](docs/editor-integration.md)。`ui/dist/` 为本地生成物；首次分发须带齐生成物。
+
+插件展示使用上游官方图标；名称为 **FilmCraft Use**。图标来源与许可证保存在 `assets/official-icon-source.json` 和相邻 LICENSE 文件中。
+
+## main选择参数补充 / main selection parameter
+
+新增[关联音视频单侧选择](skills/filmcraft-interview-edit/references/main-selection.md)：timeline.select的linked:false只影响本次选择，不改变全局开关。Windows main内置演示工程已验证单侧删除、伙伴保护与撤销重开；显式edit.clear目标仍会展开关联伙伴，单侧删除必须按当前精确选择执行。真实媒体试听与宿主同步未验收。
+
+The main guide distinguishes per-selection linked:false from the global linked-selection preference. Windows main demo-project checks pass for isolated deletion, partner preservation, undo and native reopen. Explicit deletion targets still expand linked partners; use the precise current selection for single-side deletion. Real-media listening and host synchronization remain unverified.
+
+### 候选启动修正
+
+本候选先完成轻量MCP握手及能力发现，在首次工具或资源调用时校验/获取固定编辑器资源。修复多个编辑器首次下载阻塞宿主握手的问题。Windows通过Git安装时须启用Git长路径支持（`git config --global core.longpaths true`）；完整ZIP不包含历史验收记录，可避免Git检出长路径的问题。运行资源沿用已核验的dev.20261017.2制品，不以入口版本号冒充上游升级。

@@ -13,7 +13,7 @@ function setup(t:any){
  const root=workspace(t),file=join(root,'state.sqlite'),db=new TaskLedger(file);db.close();
  // 授权/只读主题测试使用明确的合成锁，不把macOS发布制品当成Linux可执行证据。
  const skill=join(root,'synthetic-candidate');mkdirSync(join(skill,'scripts'),{recursive:true});
- const lock=JSON.parse(readFileSync(new URL('../../skills/filmcraft-use/scripts/runtime.lock.json',import.meta.url),'utf8'));
+ const lock=JSON.parse(readFileSync(new URL('../../skills/filmcraft-harness/scripts/runtime.lock.json',import.meta.url),'utf8'));
  const key=process.platform==='darwin'?'darwin-'+process.arch:process.platform+'-'+process.arch;
  lock.artifacts[key]={...Object.values(lock.artifacts)[0] as object};
  writeFileSync(join(skill,'scripts/runtime.lock.json'),JSON.stringify(lock));
@@ -61,7 +61,7 @@ test('capability refusal survives the Python preflight boundary as capability_mi
  const {mkdirSync}=await import('node:fs');const {PythonWorkflowRunner}=await import('../../src/adapters/python_workflow.ts');
  const f=setup(t),skill=join(f.root,'synthetic-skill'),scripts=join(skill,'scripts');mkdirSync(scripts,{recursive:true});
  const sources:{[key:string]:string}={
-  'runtime.lock.json':readFileSync(new URL('../../skills/filmcraft-use/scripts/runtime.lock.json',import.meta.url),'utf8'),
+  'runtime.lock.json':readFileSync(new URL('../../skills/filmcraft-harness/scripts/runtime.lock.json',import.meta.url),'utf8'),
   'commands.py':'import json\nreply_json=json.loads\ndef runtime_rows(*args): return []\ndef capability_snapshot(*args,**kwargs): return {}\n',
   'workflow.py':'def validate(*args): pass\ndef preflight_assets(*args): pass\n',
   'bootstrap.py':"def install(*args): return {'executable':'synthetic-no-native-process'}\n",

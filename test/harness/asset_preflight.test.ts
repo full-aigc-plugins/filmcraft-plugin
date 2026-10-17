@@ -10,7 +10,7 @@ function prepare(t:any,issues:unknown){
   'commands.py':'import json\nreply_json=json.loads\n',
   'workflow.py':'import json\ndef validate(*args): pass\ndef preflight_assets(*args):\n error=ValueError("asset_digest_mismatch: first")\n error.asset_issues=json.loads('+JSON.stringify(JSON.stringify(issues))+')\n raise error\n',
   'capabilities.py':'# synthetic pre-install refusal fixture\n',
-  'runtime.lock.json':readFileSync(new URL('../../skills/filmcraft-use/scripts/runtime.lock.json',import.meta.url),'utf8')};
+  'runtime.lock.json':readFileSync(new URL('../../skills/filmcraft-harness/scripts/runtime.lock.json',import.meta.url),'utf8')};
  for(const [name,value] of Object.entries(sources)){writeFileSync(join(scripts,name),value);}
  const plan=join(root,'plan.json');writeFileSync(plan,JSON.stringify({operations:[]}));
  const output=join(root,'delivery'),runtimeHome=join(root,'runtime');

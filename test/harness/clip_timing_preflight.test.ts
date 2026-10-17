@@ -10,7 +10,7 @@ function prepare(t:any,detail:unknown){
   'commands.py':'import json\nreply_json=json.loads\n',
   'workflow.py':'import json\ndef validate(*args):\n error=ValueError("ticks_require_decimal_string")\n error.clip_timing=json.loads('+JSON.stringify(JSON.stringify(detail))+')\n raise error\n',
   'capabilities.py':'# owned pre-install refusal fixture\n',
-  'runtime.lock.json':readFileSync(new URL('../../skills/filmcraft-use/scripts/runtime.lock.json',import.meta.url),'utf8')})){writeFileSync(join(scripts,name),value);}
+  'runtime.lock.json':readFileSync(new URL('../../skills/filmcraft-harness/scripts/runtime.lock.json',import.meta.url),'utf8')})){writeFileSync(join(scripts,name),value);}
  const plan=join(root,'plan.json');writeFileSync(plan,JSON.stringify({operations:[]}));
  const output=join(root,'delivery'),runtimeHome=join(root,'runtime');
  const runner=new PythonWorkflowRunner(null as any,null as any,{skillDirectory:skill,sourceRevision:'a'.repeat(40),pluginVersion:'synthetic',runtimeHome,python:process.env.FILMCRAFT_PYTHON??'python3'});

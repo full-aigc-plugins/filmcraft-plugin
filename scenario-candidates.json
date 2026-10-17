@@ -12,11 +12,11 @@
     },
     {
       "name": "filmcraft-interview-edit",
-      "sha256": "110e8819420a6fb184047764627df1d67fd1700507515ae92f38a5c58dc07e81"
+      "sha256": "f0adbaf58df4e1ae4c7a1cd4123a33cd9ed6e474f4fc5c6a700d4a597f17c1b1"
     },
     {
       "name": "filmcraft-subtitle-delivery",
-      "sha256": "103edf2c2fab5aa044dca56a570a45599efa82c1fd467a40bafdecb1658c0264"
+      "sha256": "60c58bbf0c02ac6c26ce9d07ef835eaf3cfc19f9c103fac155b9dc2b7e06da99"
     },
     {
       "name": "filmcraft-product-video",
@@ -24,7 +24,7 @@
     },
     {
       "name": "filmcraft-color-match",
-      "sha256": "890929b670fc66b284ca98ff4000f6bee849d496ffd43ee2e1951734b040b50d"
+      "sha256": "e9140a87c2183443c2853f0ac1148be99edc713fb94a04826e4ac6dfca6bfde8"
     },
     {
       "name": "filmcraft-video-export",

@@ -1,0 +1,149 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "filmcraft",
+  "id": "presenter-inset",
+  "title": "讲解视频画中画",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "templateOnly": true,
+  "steps": [
+    {
+      "command": "file.import",
+      "purpose": "导入本任务已检查的素材，核对返回items顺序与类型",
+      "params": {
+        "paths": [
+          "input/screen.avi",
+          "input/presenter.avi",
+          "input/narration.wav"
+        ]
+      },
+      "batch": "import",
+      "capture": "media"
+    },
+    {
+      "command": "file.newSequence",
+      "purpose": "建立隔离的320×240、25fps技术样例序列",
+      "params": {
+        "name": "PresenterInset",
+        "width": 320,
+        "height": 240,
+        "fps": 25
+      },
+      "batch": "sequence"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入V1",
+      "params": {
+        "item": {
+          "$ref": "media.items.0"
+        },
+        "track": "V1",
+        "seconds": 0,
+        "duration": 1016064000000,
+        "sourceIn": 0,
+        "insert": false,
+        "video": true,
+        "audio": false
+      },
+      "batch": "main-place",
+      "capture": "main"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入V2",
+      "params": {
+        "item": {
+          "$ref": "media.items.1"
+        },
+        "track": "V2",
+        "seconds": 0,
+        "duration": 1016064000000,
+        "sourceIn": 0,
+        "insert": false,
+        "video": true,
+        "audio": false
+      },
+      "batch": "inset-place",
+      "capture": "inset"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入A1",
+      "params": {
+        "item": {
+          "$ref": "media.items.2"
+        },
+        "track": "A1",
+        "seconds": 0,
+        "duration": 1016064000000,
+        "sourceIn": 0,
+        "insert": false,
+        "video": false,
+        "audio": true
+      },
+      "batch": "audio-place",
+      "capture": "voice"
+    },
+    {
+      "command": "clip.fitToFrame",
+      "purpose": "主画面完整适配，保持原始比例",
+      "params": {
+        "clips": [
+          {
+            "$ref": "main.clips.0"
+          }
+        ]
+      },
+      "batch": "layout"
+    },
+    {
+      "command": "effects.setParam",
+      "purpose": "按实际源尺寸计算讲者窗口80×60像素",
+      "params": {
+        "clip": {
+          "$ref": "inset.clips.0"
+        },
+        "effect": "motion",
+        "param": "scale",
+        "value": 125
+      },
+      "batch": "layout"
+    },
+    {
+      "command": "effects.setParam",
+      "purpose": "窗口放在右下安全范围，保留16/18像素边距",
+      "params": {
+        "clip": {
+          "$ref": "inset.clips.0"
+        },
+        "effect": "motion",
+        "param": "position",
+        "value": [
+          264,
+          192
+        ]
+      },
+      "batch": "layout"
+    },
+    {
+      "command": "sequence.inspect",
+      "purpose": "核对所有轨道、源范围与时长",
+      "params": {},
+      "batch": "inspect"
+    },
+    {
+      "command": "export.queue.add",
+      "purpose": "保存后另行确认已完成的实际编码文件",
+      "params": {
+        "path": "output/review.mp4",
+        "start": true,
+        "wait": true
+      },
+      "batch": "export"
+    }
+  ],
+  "check": "主画面在V1，讲者在V2独立变换，唯一批准讲解声轨在A1。检查讲者窗口不出界、不遮关键内容，背景保护区不变，实际导出保留声音。",
+  "boundary": "两视频及narration.wav至少4秒。125%是64×48源得到80×60窗口的样例：实际缩放=目标窗口宽/源宽×100，不能把125当通用比例。位置是序列像素，主画面比例不同允许黑边；真实声画同步和重要区域需按素材重算。",
+  "bindings": "capture/$ref只为手册记号。读取每批实际result，替换整个引用对象为返回整数ID；不把它原样发给CLI/MCP。按batch顺序保存同一工程，若导入失败/返回数量或类型不符则停止。",
+  "argumentPolicy": "254016000000 ticks/秒；seconds与durationSeconds为秒，duration/sourceIn/time使用ticks；本例fps=25，最终范围的结束点以实际API为准并检查相邻帧。"
+}

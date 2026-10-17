@@ -1,0 +1,142 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "filmcraft",
+  "id": "jcut-dialogue",
+  "title": "采访声音先入J-cut",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "templateOnly": true,
+  "steps": [
+    {
+      "command": "file.import",
+      "purpose": "导入本任务已检查的素材，核对返回items顺序与类型",
+      "params": {
+        "paths": [
+          "input/shot-a.avi",
+          "input/shot-b.avi",
+          "input/voice-a.wav",
+          "input/voice-b.wav"
+        ]
+      },
+      "batch": "import",
+      "capture": "media"
+    },
+    {
+      "command": "file.newSequence",
+      "purpose": "建立隔离的320×240、25fps技术样例序列",
+      "params": {
+        "name": "JCutDialogue",
+        "width": 320,
+        "height": 240,
+        "fps": 25
+      },
+      "batch": "sequence"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入V1",
+      "params": {
+        "item": {
+          "$ref": "media.items.0"
+        },
+        "track": "V1",
+        "seconds": 0,
+        "duration": 508032000000,
+        "sourceIn": 0,
+        "insert": false,
+        "video": true,
+        "audio": false
+      },
+      "batch": "shot-a",
+      "capture": "aVideo"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入V1",
+      "params": {
+        "item": {
+          "$ref": "media.items.1"
+        },
+        "track": "V1",
+        "seconds": 2,
+        "duration": 762048000000,
+        "sourceIn": 254016000000,
+        "insert": false,
+        "video": true,
+        "audio": false
+      },
+      "batch": "shot-b",
+      "capture": "bVideo"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入A1",
+      "params": {
+        "item": {
+          "$ref": "media.items.2"
+        },
+        "track": "A1",
+        "seconds": 0,
+        "duration": 254016000000,
+        "sourceIn": 0,
+        "insert": false,
+        "video": false,
+        "audio": true
+      },
+      "batch": "voice-a",
+      "capture": "aVoice"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入A1",
+      "params": {
+        "item": {
+          "$ref": "media.items.3"
+        },
+        "track": "A1",
+        "seconds": 1,
+        "duration": 1016064000000,
+        "sourceIn": 0,
+        "insert": false,
+        "video": false,
+        "audio": true
+      },
+      "batch": "voice-b",
+      "capture": "bVoice"
+    },
+    {
+      "command": "clip.fitToFrame",
+      "purpose": "两段画面保持完整并统一画幅",
+      "params": {
+        "clips": [
+          {
+            "$ref": "aVideo.clips.0"
+          },
+          {
+            "$ref": "bVideo.clips.0"
+          }
+        ]
+      },
+      "batch": "fit"
+    },
+    {
+      "command": "sequence.inspect",
+      "purpose": "核对所有轨道、源范围与时长",
+      "params": {},
+      "batch": "inspect"
+    },
+    {
+      "command": "export.queue.add",
+      "purpose": "保存后另行确认已完成的实际编码文件",
+      "params": {
+        "path": "output/review.mp4",
+        "start": true,
+        "wait": true
+      },
+      "batch": "export"
+    }
+  ],
+  "check": "A画面0–2秒，B画面2–5秒使用B源1–4秒；A声音0–1秒，B声音1–5秒使用B源0–4秒，使B声音提前1秒进入而露脸后仍声画对齐。",
+  "boundary": "A已确认话语在1秒结束，A后1秒是可保留反应镜头；B的音视频必须有相同源时间基准。不能为了J-cut切断词尾或让两句话无意重叠。样例是分离的无声视频与批准音轨；混合AV素材先拆分/检查对应关系和采样率，不盲复制固定时刻。",
+  "bindings": "capture/$ref只为手册记号。读取每批实际result，替换整个引用对象为返回整数ID；不把它原样发给CLI/MCP。按batch顺序保存同一工程，若导入失败/返回数量或类型不符则停止。",
+  "argumentPolicy": "254016000000 ticks/秒；seconds与durationSeconds为秒，duration/sourceIn/time使用ticks；本例fps=25，最终范围的结束点以实际API为准并检查相邻帧。"
+}

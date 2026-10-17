@@ -1,6 +1,6 @@
 # FilmCraft Use
 
-当前可安装开发候选：`0.1.0-dev.20261017.5`。补齐官方输入框图标，Codex市场使用完整薄包快照以在安装前读取列表图标；运行资源沿用已核验的dev.20261017.2，不代表上游引擎升级或全部创作验收通过。
+当前可安装开发候选：`0.1.0-dev.20261017.6`。补齐官方输入框图标，Codex市场使用完整薄包快照以在安装前读取列表图标；运行资源沿用已核验的dev.20261017.2，不代表上游引擎升级或全部创作验收通过。
 
 ## Installable editor development candidate
 
@@ -119,7 +119,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.81` / `filmcraft-skills@v0.1.0-dev.62`; 14 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.20261017.6` / `filmcraft-skills@v0.1.0-dev.62`; 14 / 666。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -143,7 +143,7 @@ dev.55 增加首次工作流可信宿主准入：完整任务与资源预算绑�
 
 开发版dev.54锁定源dev.46及公开维护版craft.5，修复PCM包时序，666命令新采集身份同步13技能。七类候选矩阵与实际Whisper通过；新固定安装矩阵仍待执行，9.32/9.33与50项完整V1任务暂不关闭。[矩阵执行器](docs/FilmCraft-Media-Matrix.zh_CN.md)。
 
-当前插件：`0.1.0-dev.81`；技能源：`0.1.0-dev.62`；14 个独立技能（13 个领域技能 + 1 个内置执行 harness）。
+当前插件：`0.1.0-dev.20261017.6`；技能源：`0.1.0-dev.62`；14 个独立技能（13 个领域技能 + 1 个内置执行 harness）。
 
 媒体矩阵输入准备已完成 OpenSpec9.31：7个场景、18项来源／许可／摘要绑定输入，VFR与181.211333秒长音频已实际测量；64项Python通过。原生矩阵9.32及固定安装9.33仍NOT_RUN，完整V1余50项。详见 docs/FilmCraft-Media-Matrix.zh_CN.md。
 
@@ -248,7 +248,7 @@ Intent + assets
 | Property | Value |
 | :--- | :--- |
 | Plugin ID | filmcraft |
-| Metadata version | 0.1.0-dev.81 |
+| Metadata version | 0.1.0-dev.20261017.6 |
 | Stage | implementation-in-progress |
 | Skills source | filmcraft-skills / v0.1.0-dev.62 |
 | Execution | 上游 CLI；ArtCraft 使用子适配器 |
@@ -521,3 +521,12 @@ The main guide distinguishes per-selection linked:false from the global linked-s
 ### 候选启动修正
 
 本候选先完成轻量MCP握手及能力发现，在首次工具或资源调用时校验/获取固定编辑器资源。修复多个编辑器首次下载阻塞宿主握手的问题。Windows通过Git安装时须启用Git长路径支持（`git config --global core.longpaths true`）；完整ZIP不包含历史验收记录，可避免Git检出长路径的问题。运行资源沿用已核验的dev.20261017.2制品，不以入口版本号冒充上游升级。
+
+
+## 具体剪辑场景候选 / Editing workflow candidates
+
+新增教学关键步骤定格、讲者画中画、声音先入J-cut三个独立技能，内含明确素材前提、真实方法和参数、时间单位、返回ID绑定、工程重开及实际编码检查。源于固定Kdenlive官方帮助的流程事实，正文、配方与夹具原创；技术样本不等于真实讲话语义、音质或宿主同步通过。冻结基础技能源和运行时锁不变。
+
+- [filmcraft-freeze-explainer](skills/filmcraft-freeze-explainer/SKILL.md)
+- [filmcraft-presenter-inset](skills/filmcraft-presenter-inset/SKILL.md)
+- [filmcraft-jcut-dialogue](skills/filmcraft-jcut-dialogue/SKILL.md)

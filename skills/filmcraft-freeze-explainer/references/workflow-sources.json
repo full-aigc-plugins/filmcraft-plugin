@@ -1,0 +1,25 @@
+{
+  "policy": "仅借鉴流程事实，正文和Craft例子原创，不复制手册正文、代码或素材。",
+  "sources": [
+    {
+      "repository": "KDE/documentation-docs-kdenlive-org",
+      "commit": "50e563d80b2613328422e7d465cfa408edba520f",
+      "readFiles": [
+        {
+          "path": "effects_and_filters/video_effects/motion/freeze.rst",
+          "url": "https://github.com/KDE/documentation-docs-kdenlive-org/blob/50e563d80b2613328422e7d465cfa408edba520f/effects_and_filters/video_effects/motion/freeze.rst",
+          "bytes": 2103,
+          "sha256": "122f5367ea640e4930bcd6d9fef28a3f1c2465ad66412c268df136fafd29b91c"
+        },
+        {
+          "path": "more_information/credits_and_license.rst",
+          "url": "https://github.com/KDE/documentation-docs-kdenlive-org/blob/50e563d80b2613328422e7d465cfa408edba520f/more_information/credits_and_license.rst",
+          "bytes": 3437,
+          "sha256": "ef33a09a9eb4aee4c41a4218ff4cb74cc345b530f1109494bcab26b99c2ed1ca"
+        }
+      ],
+      "reuse": "workflow facts only; original Craft prose, recipes and fixtures; no manual text, code or media redistributed",
+      "licenseEvidence": "credits_and_license.rst declares Creative Commons License SA 4.0; no upstream manual text, code or images redistributed"
+    }
+  ]
+}

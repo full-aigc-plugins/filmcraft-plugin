@@ -1,0 +1,124 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "filmcraft",
+  "id": "freeze-explainer",
+  "title": "教学关键步骤定格",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "templateOnly": true,
+  "steps": [
+    {
+      "command": "file.import",
+      "purpose": "导入本任务已检查的素材，核对返回items顺序与类型",
+      "params": {
+        "paths": [
+          "input/action.avi"
+        ]
+      },
+      "batch": "import",
+      "capture": "media"
+    },
+    {
+      "command": "file.newSequence",
+      "purpose": "建立隔离的320×240、25fps技术样例序列",
+      "params": {
+        "name": "FreezeExplainer",
+        "width": 320,
+        "height": 240,
+        "fps": 25
+      },
+      "batch": "sequence"
+    },
+    {
+      "command": "timeline.place",
+      "purpose": "按已确认时间放入V1",
+      "params": {
+        "item": {
+          "$ref": "media.items.0"
+        },
+        "track": "V1",
+        "seconds": 0,
+        "duration": 1016064000000,
+        "sourceIn": 0,
+        "insert": false,
+        "video": true,
+        "audio": false
+      },
+      "batch": "place",
+      "capture": "main"
+    },
+    {
+      "command": "clip.fitToFrame",
+      "purpose": "完整适配画面并保留比例",
+      "params": {
+        "clips": [
+          {
+            "$ref": "main.clips.0"
+          }
+        ]
+      },
+      "batch": "fit"
+    },
+    {
+      "command": "clip.insertFrameHoldSegment",
+      "purpose": "在2秒位置插入1秒定格并使后续内容后移",
+      "params": {
+        "clip": {
+          "$ref": "main.clips.0"
+        },
+        "time": 508032000000,
+        "seconds": 1
+      },
+      "batch": "hold",
+      "capture": "hold"
+    },
+    {
+      "command": "captions.newTrack",
+      "purpose": "创建本次说明字幕轨",
+      "params": {
+        "format": "Subtitle",
+        "name": "Confirmed explanation",
+        "language": "en"
+      },
+      "batch": "captions"
+    },
+    {
+      "command": "captions.add",
+      "purpose": "仅在定格段显示批准的提示文案",
+      "params": {
+        "text": "Confirmed step",
+        "seconds": 2,
+        "durationSeconds": 1
+      },
+      "batch": "captions"
+    },
+    {
+      "command": "captions.export",
+      "purpose": "交付可核对时间的说明SRT",
+      "params": {
+        "path": "output/freeze.srt",
+        "format": "srt"
+      },
+      "batch": "captions"
+    },
+    {
+      "command": "sequence.inspect",
+      "purpose": "核对所有轨道、源范围与时长",
+      "params": {},
+      "batch": "inspect"
+    },
+    {
+      "command": "export.queue.add",
+      "purpose": "保存后另行确认已完成的实际编码文件",
+      "params": {
+        "path": "output/review.mp4",
+        "start": true,
+        "wait": true
+      },
+      "batch": "export"
+    }
+  ],
+  "check": "4秒、25fps动作片段，在第50帧处插入1秒定格并加说明；最终5秒125帧，2–3秒保持所选帧，3秒后动作继续。",
+  "boundary": "input/action.avi至少4秒；确认需要暂停的具体源帧与说明文字，音轨另行规划，不能默认冻结声音。已有时间线插入会改变后续时间，先检查其他轨和字幕，不直接套入。",
+  "bindings": "capture/$ref只为手册记号。读取每批实际result，替换整个引用对象为返回整数ID；不把它原样发给CLI/MCP。按batch顺序保存同一工程，若导入失败/返回数量或类型不符则停止。",
+  "argumentPolicy": "254016000000 ticks/秒；seconds与durationSeconds为秒，duration/sourceIn/time使用ticks；本例fps=25，最终范围的结束点以实际API为准并检查相邻帧。"
+}

@@ -492,3 +492,9 @@ Fixed68/source51 acceptance:13 installed skills load without errors;26 public an
 新增 MCP Apps 与宿主浏览器接入，详见 [配置与构建](docs/editor-integration.md)。`ui/dist/` 为本地生成物；首次分发须带齐生成物。
 
 Plugin display name: **FilmCraft Use**. Official upstream icon provenance and licenses are included under `assets/official-icon-source.json` and adjacent LICENSE files.
+
+## main选择参数补充 / main selection parameter
+
+新增[关联音视频单侧选择](skills/filmcraft-interview-edit/references/main-selection.md)：timeline.select的linked:false只影响本次选择，不改变全局开关。旧纯视频回归不能证明新关联素材场景通过，专例仍待执行。
+
+The main guide distinguishes per-selection linked:false from the global linked-selection preference. Paired audio/video behavior and host synchronization still need their own runtime case.

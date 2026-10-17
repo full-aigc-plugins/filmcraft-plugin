@@ -491,3 +491,9 @@ dev.39 内置不可变独立技能源dev.36，修正小尺寸字幕模板并自�
 新增 MCP Apps 与宿主浏览器接入，详见 [配置与构建](docs/editor-integration.md)。`ui/dist/` 为本地生成物；首次分发须带齐生成物。
 
 插件展示使用上游官方图标；名称为 **FilmCraft Use**。图标来源与许可证保存在 `assets/official-icon-source.json` 和相邻 LICENSE 文件中。
+
+## main选择参数补充 / main selection parameter
+
+新增[关联音视频单侧选择](skills/filmcraft-interview-edit/references/main-selection.md)：timeline.select的linked:false只影响本次选择，不改变全局开关。旧纯视频回归不能证明新关联素材场景通过，专例仍待执行。
+
+The main guide distinguishes per-selection linked:false from the global linked-selection preference. Paired audio/video behavior and host synchronization still need their own runtime case.

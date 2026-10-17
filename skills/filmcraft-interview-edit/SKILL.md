@@ -45,3 +45,7 @@ license: Apache-2.0
 ## 技能商店场景经验
 
 遇到保留上下文的采访摘编时，读取[商店工作流适配](references/market-workflows.md)，使用对应的Craft方法和实际结果检查。上游技能不作为运行依赖。
+
+## main单侧选择
+
+用户要求只修改关联音视频的一侧时，先读[main linked选择参数](references/main-selection.md)，区分本次选择与全局偏好，并检查关联伙伴未被修改。新增专例尚未实测。

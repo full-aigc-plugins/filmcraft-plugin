@@ -1,0 +1,141 @@
+{
+  "runtime": {
+    "version": "0.8.0",
+    "platform": "macos-universal",
+    "archiveSha256": "54cb2d572c24cd5e32a54bedd8fdd15df86eaa66bf188a75c2de81fbd99ed90d"
+  },
+  "catalogSource": "Actual native filmcraft-cli commands --json",
+  "sceneAcceptance": "NOT_TESTED",
+  "observedCommands": {
+    "file.import": {
+      "defaultShortcut": "Cmd+I",
+      "enabled": true,
+      "id": "file.import",
+      "label": "Import…",
+      "menu": [
+        "File"
+      ],
+      "params": "{\"paths\":[str],\"bin\":binId?,\"imageSequence\":bool?,\"replace\":bool?}",
+      "shortcut": "Cmd+I",
+      "shortcuts": [
+        "Cmd+I"
+      ]
+    },
+    "file.newSequence": {
+      "defaultShortcut": "Cmd+N",
+      "enabled": true,
+      "id": "file.newSequence",
+      "label": "Sequence…",
+      "menu": [
+        "File",
+        "New"
+      ],
+      "params": "{\"name\":str,\"width\":u32=1920,\"height\":u32=1080,\"fps\":f64=23.976,\"sampleRate\":u32=48000,\"video\":n=3,\"audio\":n=3,\"mix\":\"Stereo|Mono|5.1|Adaptive\"?,\"trackType\":\"Standard|Mono|5.1|Adaptive\"?,\"fromItem\":itemId?,\"fromItems\":[itemId]?}",
+      "shortcut": "Cmd+N",
+      "shortcuts": [
+        "Cmd+N"
+      ]
+    },
+    "timeline.place": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "timeline.place",
+      "label": "Place Clip",
+      "menu": [],
+      "params": "{\"item\":id|\"items\":[id] (back to back, one undo step),\"track\":\"V1\"|id|\"A1\" (sound only)|\"new\" (a video track after the last)?,\"audioTrack\":\"A1\"|id|\"new\"?,\"time\":ticks|\"frame\":i64|\"seconds\":f64,\"insert\":bool,\"sourceIn\":ticks?,\"duration\":ticks?,\"video\":bool=true,\"audio\":bool=true}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "clip.fitToFrame": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "clip.fitToFrame",
+      "label": "Fit to frame",
+      "menu": [
+        "Clip",
+        "Video Options"
+      ],
+      "params": "{\"clips\":[id]?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "clip.insertFrameHoldSegment": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "clip.insertFrameHoldSegment",
+      "label": "Insert Frame Hold Segment",
+      "menu": [
+        "Clip",
+        "Video Options"
+      ],
+      "params": "{\"clip\":id?,\"time\":ticks?,\"seconds\":f64=2}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "captions.newTrack": {
+      "defaultShortcut": "Cmd+Alt+A",
+      "enabled": false,
+      "id": "captions.newTrack",
+      "label": "Add New Caption Track…",
+      "menu": [
+        "Sequence",
+        "Captions"
+      ],
+      "params": "{\"format\":\"Subtitle|CEA-608|CEA-708|Teletext\",\"name\":str?,\"language\":str?}",
+      "shortcut": "Cmd+Alt+A",
+      "shortcuts": [
+        "Cmd+Alt+A"
+      ]
+    },
+    "captions.add": {
+      "defaultShortcut": "Cmd+Alt+C",
+      "enabled": false,
+      "id": "captions.add",
+      "label": "Add Caption at Playhead",
+      "menu": [
+        "Sequence",
+        "Captions"
+      ],
+      "params": "{\"track\":id|\"C1\"?,\"text\":str?,\"time\":ticks?,\"seconds\":f64?,\"durationSeconds\":f64=3}",
+      "shortcut": "Cmd+Alt+C",
+      "shortcuts": [
+        "Cmd+Alt+C"
+      ]
+    },
+    "captions.export": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "captions.export",
+      "label": "Captions…",
+      "menu": [
+        "File",
+        "Export"
+      ],
+      "params": "{\"path\":str,\"format\":\"srt|vtt|scc|mcc|stl|ttml|dfxp\"? (default: from the extension),\"track\":id|\"C1\"?,\"dropFrame\":bool=true}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "sequence.inspect": {
+      "defaultShortcut": null,
+      "enabled": true,
+      "id": "sequence.inspect",
+      "label": "Inspect Sequence",
+      "menu": [],
+      "params": "{\"item\":id?}",
+      "shortcut": null,
+      "shortcuts": []
+    },
+    "export.queue.add": {
+      "defaultShortcut": null,
+      "enabled": false,
+      "id": "export.queue.add",
+      "label": "Send to Export Queue",
+      "menu": [],
+      "params": "{…settings params,\"path\":str|dir?,\"sequences\":[id]?,\"ranges\":[range]?,\"start\":bool?,\"wait\":bool?}",
+      "shortcut": "Alt+Shift+M",
+      "shortcuts": [
+        "Alt+Shift+M"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "policy": "仅借鉴流程事实，正文和Craft例子原创，不复制手册正文、代码或素材。",
+  "sources": [
+    {
+      "repository": "KDE/documentation-docs-kdenlive-org",
+      "commit": "50e563d80b2613328422e7d465cfa408edba520f",
+      "readFiles": [
+        {
+          "path": "compositing/compositions/composite_and_transform.rst",
+          "url": "https://github.com/KDE/documentation-docs-kdenlive-org/blob/50e563d80b2613328422e7d465cfa408edba520f/compositing/compositions/composite_and_transform.rst",
+          "bytes": 5432,
+          "sha256": "8ba854469de46a0364994ba8cd430f06df77516a1ad354479ee3e344fa4ef442"
+        },
+        {
+          "path": "more_information/credits_and_license.rst",
+          "url": "https://github.com/KDE/documentation-docs-kdenlive-org/blob/50e563d80b2613328422e7d465cfa408edba520f/more_information/credits_and_license.rst",
+          "bytes": 3437,
+          "sha256": "ef33a09a9eb4aee4c41a4218ff4cb74cc345b530f1109494bcab26b99c2ed1ca"
+        }
+      ],
+      "reuse": "workflow facts only; original Craft prose, recipes and fixtures; no manual text, code or media redistributed",
+      "licenseEvidence": "credits_and_license.rst declares Creative Commons License SA 4.0; no upstream manual text, code or images redistributed"
+    }
+  ]
+}

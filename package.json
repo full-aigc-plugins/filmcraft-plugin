@@ -9,5 +9,11 @@
   "scripts": {
     "test": "node --test test/harness/*.test.ts",
     "test:native": "FILMCRAFT_NATIVE_HARNESS=1 node --test --test-concurrency=1 test/harness/*.test.ts"
+  },
+  "main": "./dsh/lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
   }
 }

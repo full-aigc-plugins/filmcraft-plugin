@@ -8,7 +8,7 @@
 
     - id: mcp-filmcraft-filmcraft-editor
       name: '@deepseek-ai/dsh-mcp-client'
-      disabled: !!js "!process.env.DSH_MCP_FILMCRAFT"
+      disabled: !!js "process.env.DSH_MCP_FILMCRAFT === '0'"
       config:
         serverName: "filmcraft-editor"
         toolCallTimeoutMs: 60000

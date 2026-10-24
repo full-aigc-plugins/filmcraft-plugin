@@ -1,7 +1,7 @@
 {
   "name": "filmcraft",
-  "version": "0.1.0-dev.20261018.4",
-  "description": "FilmCraft creative workflows with pinned first-use installation and independent skill snapshots; development release, full domain and host acceptance pending.",
+  "version": "0.1.0-dev.20261018.3",
+  "description": "Multicam editing, subtitles, transcripts, grading and export. Timelines, media references and subtitle files are delivered together.",
   "author": {
     "name": "Full AIGC Plugins",
     "url": "https://github.com/full-aigc-plugins"

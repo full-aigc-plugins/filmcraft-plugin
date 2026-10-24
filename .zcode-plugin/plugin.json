@@ -1,7 +1,7 @@
 {
   "name": "filmcraft",
   "version": "0.1.0-dev.20261018.3",
-  "description": "Multicam editing, subtitles, transcripts, grading and export. Timelines, media references and subtitle files are delivered together.",
+  "description": "多机位剪辑、字幕、逐词转录、调色与导出；时间线、素材引用与字幕文件一并交付。",
   "author": {
     "name": "Full AIGC Plugins",
     "url": "https://github.com/full-aigc-plugins"
@@ -16,7 +16,7 @@
     "development-release"
   ],
   "skills": "./skills/",
-  "displayName": "FilmCraft · Video Editing",
+  "displayName": "FilmCraft（视频剪辑）",
   "icon": "./assets/official-logo.png",
   "mcpServers": {
     "filmcraft-editor": {
@@ -33,15 +33,15 @@
     }
   },
   "displayName_i18n": {
-    "en": "FilmCraft · Video Editing"
+    "zh-CN": "FilmCraft（视频剪辑）"
   },
   "ui": {
     "surfaces": [
       {
         "id": "editor",
         "title": {
-          "en-US": "FilmCraft · Video Editing",
-          "zh-CN": "FilmCraft · 视频剪辑"
+          "en-US": "FilmCraft (Video Editing)",
+          "zh-CN": "FilmCraft（视频剪辑）"
         },
         "icon": "film",
         "server": "filmcraft-editor",

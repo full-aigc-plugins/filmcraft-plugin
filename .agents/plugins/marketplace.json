@@ -23,7 +23,11 @@
         "shortDescription": "Multicam, subtitles, grading and transcripts in a reopenable project",
         "logo": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/filmcraft-plugin@v0.1.0-dev.20261018.3/assets/official-logo.png"
       },
-      "icon": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/filmcraft-plugin@v0.1.0-dev.20261018.3/assets/official-logo.png"
+      "icon": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/filmcraft-plugin@v0.1.0-dev.20261018.3/assets/official-logo.png",
+      "line": "full-aigc",
+      "componentTypes": [
+        "ui"
+      ]
     }
   ]
 }

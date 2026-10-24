@@ -18,8 +18,37 @@
   "skills": "./skills/",
   "displayName": "FilmCraft · Video Editing",
   "icon": "./assets/official-logo.png",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": {
+    "filmcraft-editor": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${ZCODE_PLUGIN_ROOT}/ui/bootstrap.mjs"
+      ],
+      "cwd": "${ZCODE_PROJECT_DIR}",
+      "env": {
+        "CRAFT_PANEL_METADATA_FILE": "${ZCODE_PLUGIN_ROOT}/.zcode-plugin/panel-meta.json",
+        "CRAFT_WORKSPACE_ROOT": "${ZCODE_PROJECT_DIR}"
+      }
+    }
+  },
   "displayName_i18n": {
     "en": "FilmCraft · Video Editing"
-  }
+  },
+  "ui": {
+    "surfaces": [
+      {
+        "id": "editor",
+        "title": {
+          "en-US": "FilmCraft · Video Editing",
+          "zh-CN": "FilmCraft · 视频剪辑"
+        },
+        "icon": "film",
+        "server": "filmcraft-editor",
+        "resourceUri": "ui://filmcraft/panel.html",
+        "availability": "session"
+      }
+    ]
+  },
+  "commands": "commands"
 }

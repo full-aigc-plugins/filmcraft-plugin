@@ -1,5 +1,17 @@
 # FilmCraft Use
 
+<!-- FILMCRAFT_CURRENT_FACTS_START -->
+
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.20261018.3` / `filmcraft-skills@v0.1.0-dev.62`; 14 / 666。
+
+执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
+
+实现状态：`in-progress`；当前完整组合验收：`NOT_PROVEN`。目录数量及历史报告不推导为当前执行或发行通过。[机器可读身份与范围](docs/current-facts.json)。
+
+参考目录身份：`MATCH`；不一致须显式保留，不能覆盖实际执行运行时锁。
+
+<!-- FILMCRAFT_CURRENT_FACTS_END -->
+
 ## 插件市场导航
 
 本插件所属分类：**AIGC 内容创作**。
@@ -14,7 +26,7 @@
 > 用已有素材剪出可重新打开的 `.fcproj` 影片：素材、轨道、音频、字幕、调色与多机位，并交付预览帧与已解码核验的成片。
 
 [![版本](https://img.shields.io/badge/release-0.1.0--dev.20261018.4-1A73E8)](.codex-plugin/plugin.json)
-[![技能数](https://img.shields.io/badge/skills-24-00A67E)](#技能)
+[![技能数](https://img.shields.io/badge/skills-14-00A67E)](#技能)
 [![MCP server](https://img.shields.io/badge/MCP%20server-1-00A67E)](#mcp-工具)
 [![许可证](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 
@@ -28,7 +40,10 @@ FilmCraft Use 把视频当作可重新打开的原生工程来剪，而不是一
 
 ## 状态与版本
 
-`0.1.0-dev.20261018.4` · 开发预览 · `docs/verification/release-candidate.json` → `releaseStatus: BLOCKED`、`installableDevelopmentCandidate: true`。
+`0.1.0-dev.20261018.3` · 开发预览 · `docs/verification/release-candidate.json` → `releaseStatus: BLOCKED`、`installableDevelopmentCandidate: true`。
+
+| Metadata version | 0.1.0-dev.20261018.3 |
+| Skills source | filmcraft-skills / 0.1.0-dev.62 |
 
 ## 安装
 

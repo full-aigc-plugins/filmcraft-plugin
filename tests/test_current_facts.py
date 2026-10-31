@@ -19,7 +19,7 @@ class CurrentFactsTests(unittest.TestCase):
     def copy_inputs(self, target):
         for relative in ('plugin.json', 'skills.lock.json', 'project-status.json',
                          'docs/skills-source-plan.json', 'docs/skills-source-suite.json',
-                         'runtime/filmcraft-cli.lock.json'):
+                         'runtime/filmcraft-cli.lock.json', 'plugin-local-skills.json'):
             path = target / relative
             path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, path)
@@ -34,7 +34,8 @@ class CurrentFactsTests(unittest.TestCase):
     def test_generation_is_deterministic_and_does_not_promote_history(self):
         first = self.facts.collect(ROOT)
         self.assertEqual(first, self.facts.collect(ROOT))
-        self.assertEqual(first['skillCount'], 14)
+        self.assertEqual(first['skillCount'], 24)
+        self.assertEqual((first['sourceSkillCount'], first['localSkillCount']), (14, 10))
         self.assertEqual(first['commandCount'], 666)
         # 执行实现收敛在 harness：运行时锁从 filmcraft-harness 读取。
         lock = json.loads((ROOT / 'skills/filmcraft-harness/scripts/runtime.lock.json').read_text())
@@ -104,6 +105,8 @@ class CurrentFactsTests(unittest.TestCase):
             text = (ROOT / filename).read_text()
             self.assertEqual(text.count(self.facts.START), 1)
             self.assertIn(rendered, text)
+            self.assertIn('badge/release-' + value['pluginVersion'].replace('-', '--') + '-1A73E8', text)
+            self.assertIn('badge/skills-' + str(value['skillCount']) + '-00A67E', text)
 
 
 if __name__ == '__main__':

@@ -2,7 +2,9 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.20261018.3` / `filmcraft-skills@v0.1.0-dev.62`; 14 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.20261018.3` / `filmcraft-skills@v0.1.0-dev.62`; 24 / 666.
+
+Skill inventory: 14 locked source skills + 10 plugin-local skills.
 
 Execution CLI / bridge desktop: `0.2.0-craft.5` / `0.2.0`; root runtime lock is historical only.
 
@@ -25,8 +27,8 @@ This plugin belongs to **AIGC content creation**.
 
 > Cut a reopened `.fcproj` film from existing footage: media, tracks, audio, captions, colour and multi-camera, with preview frames and a decoded final export.
 
-[![Version](https://img.shields.io/badge/release-0.1.0--dev.20261018.4-1A73E8)](.codex-plugin/plugin.json)
-[![Skills](https://img.shields.io/badge/skills-14-00A67E)](#skills)
+[![Version](https://img.shields.io/badge/release-0.1.0--dev.20261018.3-1A73E8)](.codex-plugin/plugin.json)
+[![Skills](https://img.shields.io/badge/skills-24-00A67E)](#skills)
 [![MCP server](https://img.shields.io/badge/MCP%20server-1-00A67E)](#mcp-tools)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 

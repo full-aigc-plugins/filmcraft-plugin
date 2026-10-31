@@ -2,7 +2,9 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.20261018.3` / `filmcraft-skills@v0.1.0-dev.62`; 14 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.20261018.3` / `filmcraft-skills@v0.1.0-dev.62`; 24 / 666。
+
+技能清单：14 个锁定源技能 + 10 个插件本地技能。
 
 执行 CLI / bridge 桌面：`0.2.0-craft.5` / `0.2.0`；根运行时锁仅作历史基线。
 
@@ -25,8 +27,8 @@
 
 > 用已有素材剪出可重新打开的 `.fcproj` 影片：素材、轨道、音频、字幕、调色与多机位，并交付预览帧与已解码核验的成片。
 
-[![版本](https://img.shields.io/badge/release-0.1.0--dev.20261018.4-1A73E8)](.codex-plugin/plugin.json)
-[![技能数](https://img.shields.io/badge/skills-14-00A67E)](#技能)
+[![版本](https://img.shields.io/badge/release-0.1.0--dev.20261018.3-1A73E8)](.codex-plugin/plugin.json)
+[![技能数](https://img.shields.io/badge/skills-24-00A67E)](#技能)
 [![MCP server](https://img.shields.io/badge/MCP%20server-1-00A67E)](#mcp-工具)
 [![许可证](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 

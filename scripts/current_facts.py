@@ -38,6 +38,14 @@ def collect(root=ROOT):
     names = [entry['name'] for entry in suite['skills']]
     if names != source['skills'] or names != plan['skills'] or len(names) != len(set(names)):
         raise ValueError('skill_list_mismatch')
+    local_policy = read(root, 'plugin-local-skills.json')
+    local_names = local_policy['skills']
+    if (local_policy['version'] != 1 or local_policy['dest'] != 'skills/'
+            or len(local_names) != len(set(local_names)) or set(local_names) & set(names)):
+        raise ValueError('local_skill_policy_mismatch')
+    installed = {entry.name for entry in (root / 'skills').iterdir() if entry.is_dir()}
+    if installed != set(names) | set(local_names):
+        raise ValueError('installed_skill_inventory_mismatch')
     if snapshot['suiteSha256'] != digest(suite):
         raise ValueError('source_suite_digest_mismatch')
     home = root / 'skills/filmcraft-use'
@@ -66,6 +74,10 @@ def collect(root=ROOT):
         text = (skill / 'SKILL.md').read_text()
         if not re.search(r'^name: ' + re.escape(name) + r'\s*$', text, re.M):
             raise ValueError('skill_name_mismatch: ' + name)
+    for name in local_names:
+        text = (root / 'skills' / name / 'SKILL.md').read_text()
+        if not re.search(r'^name: ' + re.escape(name) + r'\s*$', text, re.M):
+            raise ValueError('local_skill_name_mismatch: ' + name)
     if any(entry['commandCount'] != len(ids) for entry in suite['skills']
            if entry['kind'] in ('router', 'cli', 'setup')):
         raise ValueError('suite_command_count_mismatch')
@@ -75,7 +87,8 @@ def collect(root=ROOT):
         'schema': 'filmcraft-current-facts/v1',
         'pluginId': manifest['name'], 'pluginVersion': manifest['version'],
         'sourcePackage': source['package'], 'sourceRef': source['ref'], 'sourceSha': source['sha'],
-        'suiteSha256': snapshot['suiteSha256'], 'skillCount': len(names), 'commandCount': len(ids),
+        'suiteSha256': snapshot['suiteSha256'], 'skillCount': len(names) + len(local_names),
+        'sourceSkillCount': len(names), 'localSkillCount': len(local_names), 'commandCount': len(ids),
         'referenceCatalogIdentity': {
             'path': 'skills/filmcraft-use/references/commands.json',
             'version': commands['runtimeVersion'], 'binarySha256': commands['runtimeSha256'],
@@ -108,6 +121,7 @@ def render(value, language):
     runtime = f"`{value['activeRuntime']['version']}` / `{value['desktop']['version']}`"
     if language == 'en':
         lines = ['Generated current facts: plugin / skill source; skills / discovered commands: ' + identity + '.',
+                 f"Skill inventory: {value['sourceSkillCount']} locked source skills + {value['localSkillCount']} plugin-local skills.",
                  'Execution CLI / bridge desktop: ' + runtime + '; root runtime lock is historical only.',
                  'Implementation: `' + value['implementation'] + '`; full current-combination qualification: `NOT_PROVEN`. '
                  'Discovery counts and historical reports do not imply current execution or release acceptance. '
@@ -116,6 +130,7 @@ def render(value, language):
                  'a mismatch remains visible and does not override the execution runtime lock.']
     else:
         lines = ['生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：' + identity + '。',
+                 f"技能清单：{value['sourceSkillCount']} 个锁定源技能 + {value['localSkillCount']} 个插件本地技能。",
                  '执行 CLI / bridge 桌面：' + runtime + '；根运行时锁仅作历史基线。',
                  '实现状态：`' + value['implementation'] + '`；当前完整组合验收：`NOT_PROVEN`。'
                  '目录数量及历史报告不推导为当前执行或发行通过。'
@@ -149,6 +164,12 @@ def update(check=False, root=ROOT):
         else:
             first = text.index('\n') + 1
             desired = text[:first] + '\n' + generated + '\n' + text[first:]
+        version_badge = value['pluginVersion'].replace('-', '--')
+        for label, suffix in (('release', version_badge), ('skills', str(value['skillCount']))):
+            pattern = r'(https://img\.shields\.io/badge/' + label + r'-)[^)]+'
+            desired, count = re.subn(pattern, lambda match: match.group(1) + suffix + '-1A73E8' if label == 'release' else match.group(1) + suffix + '-00A67E', desired)
+            if count != 1:
+                raise ValueError('missing_or_duplicate_badge: ' + filename + ':' + label)
         if check:
             if text != desired:
                 errors.append('current_facts_readme_stale: ' + filename)

@@ -6,7 +6,9 @@
   "sourceRef": "v0.1.0-dev.62",
   "sourceSha": "f045e9d5a8eed8b1d0abf5339310dffa1abc4da7",
   "suiteSha256": "8172e6600b8deef344228691a85d9f50c74de8c22711760be1d63a5c517a8d53",
-  "skillCount": 14,
+  "skillCount": 24,
+  "sourceSkillCount": 14,
+  "localSkillCount": 10,
   "commandCount": 666,
   "referenceCatalogIdentity": {
     "path": "skills/filmcraft-use/references/commands.json",

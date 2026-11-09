@@ -2,7 +2,7 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.20261018.3` / `filmcraft-skills@v0.1.0-dev.62`; 24 / 666.
+Generated current facts: plugin / skill source; skills / discovered commands: `0.1.0-dev.20261018.5` / `filmcraft-skills@v0.1.0-dev.62`; 24 / 666.
 
 Skill inventory: 14 locked source skills + 10 plugin-local skills.
 
@@ -27,7 +27,7 @@ This plugin belongs to **AIGC content creation**.
 
 > Cut a reopened `.fcproj` film from existing footage: media, tracks, audio, captions, colour and multi-camera, with preview frames and a decoded final export.
 
-[![Version](https://img.shields.io/badge/release-0.1.0--dev.20261018.3-1A73E8)](.codex-plugin/plugin.json)
+[![Version](https://img.shields.io/badge/release-0.1.0--dev.20261018.5-1A73E8)](.codex-plugin/plugin.json)
 [![Skills](https://img.shields.io/badge/skills-24-00A67E)](#skills)
 [![MCP server](https://img.shields.io/badge/MCP%20server-1-00A67E)](#mcp-tools)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
@@ -42,9 +42,9 @@ The plugin plans and verifies; the pinned FilmCraft CLI performs the native edit
 
 ## Status and version
 
-`0.1.0-dev.20261018.3` · development preview · `docs/verification/release-candidate.json` → `releaseStatus: BLOCKED`, `installableDevelopmentCandidate: true`.
+`0.1.0-dev.20261018.5` · development preview · `docs/verification/release-candidate.json` → `releaseStatus: BLOCKED`, `installableDevelopmentCandidate: true`.
 
-| Metadata version | 0.1.0-dev.20261018.3 |
+| Metadata version | 0.1.0-dev.20261018.5 |
 | Skills source | filmcraft-skills / 0.1.0-dev.62 |
 
 ## Installation

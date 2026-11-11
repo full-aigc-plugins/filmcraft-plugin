@@ -9,21 +9,21 @@
       "source": {
         "source": "url",
         "url": "https://github.com/full-aigc-plugins/filmcraft-plugin.git",
-        "ref": "v0.1.0-dev.20261018.5"
+        "ref": "v0.1.0-dev.20261111.1"
       },
       "policy": {
         "installation": "AVAILABLE",
         "authentication": "ON_USE"
       },
       "category": "Creativity",
-      "version": "0.1.0-dev.20261018.5",
+      "version": "0.1.0-dev.20261111.1",
       "description": "多机位剪辑、字幕、逐词转录、调色与导出；时间线、素材引用与字幕文件一并交付。",
       "interface": {
         "displayName": "FilmCraft（视频剪辑）",
         "shortDescription": "多机位、字幕、调色与转录，可重开剪辑工程",
-        "logo": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/filmcraft-plugin@v0.1.0-dev.20261018.5/assets/official-logo.png"
+        "logo": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/filmcraft-plugin@v0.1.0-dev.20261111.1/assets/official-logo.png"
       },
-      "icon": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/filmcraft-plugin@v0.1.0-dev.20261018.5/assets/official-logo.png",
+      "icon": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/filmcraft-plugin@v0.1.0-dev.20261111.1/assets/official-logo.png",
       "line": "full-aigc",
       "componentTypes": [
         "ui"

@@ -2,7 +2,7 @@
 
 <!-- FILMCRAFT_CURRENT_FACTS_START -->
 
-生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.20261018.5` / `filmcraft-skills@v0.1.0-dev.62`; 24 / 666。
+生成的当前事实：插件 / 技能源；技能数 / 已发现命令数：`0.1.0-dev.20261111.1` / `filmcraft-skills@v0.1.0-dev.62`; 24 / 666。
 
 技能清单：14 个锁定源技能 + 10 个插件本地技能。
 
@@ -27,7 +27,7 @@
 
 > 用已有素材剪出可重新打开的 `.fcproj` 影片：素材、轨道、音频、字幕、调色与多机位，并交付预览帧与已解码核验的成片。
 
-[![版本](https://img.shields.io/badge/release-0.1.0--dev.20261018.5-1A73E8)](.codex-plugin/plugin.json)
+[![版本](https://img.shields.io/badge/release-0.1.0--dev.20261111.1-1A73E8)](.codex-plugin/plugin.json)
 [![技能数](https://img.shields.io/badge/skills-24-00A67E)](#技能)
 [![MCP server](https://img.shields.io/badge/MCP%20server-1-00A67E)](#mcp-工具)
 [![许可证](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
@@ -42,9 +42,9 @@ FilmCraft Use 把视频当作可重新打开的原生工程来剪，而不是一
 
 ## 状态与版本
 
-`0.1.0-dev.20261018.5` · 开发预览 · `docs/verification/release-candidate.json` → `releaseStatus: BLOCKED`、`installableDevelopmentCandidate: true`。
+`0.1.0-dev.20261111.1` · 开发预览 · `docs/verification/release-candidate.json` → `releaseStatus: BLOCKED`、`installableDevelopmentCandidate: true`。
 
-| Metadata version | 0.1.0-dev.20261018.5 |
+| Metadata version | 0.1.0-dev.20261111.1 |
 | Skills source | filmcraft-skills / 0.1.0-dev.62 |
 
 ## 安装
